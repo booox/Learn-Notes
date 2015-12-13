@@ -71,3 +71,53 @@
 	$ git status
 	$ git add CONTRIBUTING.md
 	$ git status
+	
+### Short Status
+	$ git status -s
+	
+### Ignoring Files
+	$ cat .gitignore
+	*.[oa]		// ignore any files ending in '.o' or '.a'.
+	*~			// ignore all files that end with a tilde (~)
+	
+	example:
+		# no .a files
+		*.a
+
+		# but do track lib.a, even though you're ignoring .a files above
+		!lib.a
+
+		# only ignore the TODO file in the current directory, not subdir/TODO
+		/TODO
+
+		# ignore all files in the build/ directory
+		build/
+
+		# ignore doc/notes.txt, but not doc/server/arch.txt
+		doc/*.txt
+
+		# ignore all .pdf files in the doc/ directory
+		doc/**/*.pdf
+		
+		
+### Committing Your Changes
+	$ git commit
+	$ git commit -m "Some comments"
+	
+	
+# Push your app to GitHub
+## Create a new repository on your GitHub
+	1. give it a name(example: git-test)
+	2. choose the "public" repo option
+	
+## 	Create 'origin' pointing to GitHub repository
+	The first time you should do this:
+		$ git remote add origin https://github.com/username/repo-name.git
+		
+## Send your commits to your GitHub repository 'master' branch
+	$ git push -u origin master
+
+## Continue do some changes, JUST need this:
+	$ git add .
+	$ git commit -m 'some commit message'
+	$ git push origin master
