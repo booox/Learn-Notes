@@ -10,6 +10,20 @@
 	
 	ref: [Getting Started - First-Time Git Setup](http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 	
+	### Keeping your email address private
+	
+	1. Tell GitHub to keep your email address private
+		Settings -> Emails -> Keep my email address private
+	2. Tell Git to use your private email address
+		- Set your email address 
+			$ git config --global user.email "username@users.noreply.github.com"
+		- Confirm your email address
+			$ git config --global user.email
+			 username@users.noreply.github.com
+	
+	### Remember the authen?
+		homeCom (56:01:21:8c:83:0b:1e:5c:0c:84:47:a7:a1:65:b3:00) ¨C unverified due to lack of use
+	
 ## Your Editor
 	
 	On a x64 System:
