@@ -172,3 +172,9 @@
 	$ git add .
 	$ git commit -m 'some commit message'
 	$ git push origin master
+    
+    
+    
+# Some Links
+    - [try Git ](https://try.github.io/levels/1/challenges/1)
+    - [Git real](http://gitreal.codeschool.com/levels/1)
