@@ -37,8 +37,11 @@
                 1. Download git-credential-winstore [git-credential-winstore](http://gitcredentialstore.codeplex.com/releases/view/106064)
                 2. Run it. (Need .net Framework v4.0)
                     + ?? Could not find Git in your PATH.
+                        1. go to the git-credential-winstore.exe folder
+                        2. cmd run: git-credential-winstore -i "C:\Program Files (x86)\Git\bin\git.exe"
+                            (CHANGE TO YOUR GIT DIRECTORY)
                 3. Git Bash Run: $ git config --global credential.helper wincred
-                4. You will be prompted for credentials the first time you access a repository
+                4. You will be prompted for credentials the first time you access a repository(NO PROMPT ?)
                 
         - Using the .netrc file
             Windows:
