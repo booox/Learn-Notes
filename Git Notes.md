@@ -28,8 +28,8 @@
 		
 		[Caching your GitHub password in Git](https://help.github.com/articles/caching-your-github-password-in-git/)
 		
-		
-		
+		$ git config --global core.editor "'D:\bak\MyDropBox\Dropbox\software\notepad++\notepad++.exe' -multiInst -nosession"
+		test
 	
 ## Your Editor
 	
