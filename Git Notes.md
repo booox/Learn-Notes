@@ -10,7 +10,7 @@
 	
 	ref: [Getting Started - First-Time Git Setup](http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 	
-	### Keeping your email address private
+### Keeping your email address private
 	
 	1. Tell GitHub to keep your email address private
 		Settings -> Emails -> Keep my email address private
@@ -21,7 +21,7 @@
 			$ git config --global user.email
 			 username@users.noreply.github.com
 	
-	### Remember the authen?
+### Remember the authen?
 		[Which remote URL should I use?](https://help.github.com/articles/which-remote-url-should-i-use/)
 		
 		
@@ -30,6 +30,33 @@
 		
 		$ git config --global core.editor "'D:\bak\MyDropBox\Dropbox\software\notepad++\notepad++.exe' -multiInst -nosession"
 		test
+        
+        
+        - Using credential caching
+            Windows:
+                1. Download git-credential-winstore [git-credential-winstore](http://gitcredentialstore.codeplex.com/releases/view/106064)
+                2. Run it. (Need .net Framework v4.0)
+                    + ?? Could not find Git in your PATH.
+                3. Git Bash Run: $ git config --global credential.helper wincred
+                4. You will be prompted for credentials the first time you access a repository
+                
+        - Using the .netrc file
+            Windows:
+                1. Create a text file called _netrc in your home directory (e.g. c:\users\kannonboy\_netrc)(NO SPACES!)
+                2. Add credentials to the file for the server or servers
+                    machine stash1.mycompany.com
+                    login myusername 
+                    password mypassword
+                    machine stash2.mycompany.com
+                    login myotherusername
+                    password myotherpassword
+                    
+        Ref: [Permanently authenticating with Git repositories](https://confluence.atlassian.com/bitbucketserver/permanently-authenticating-with-git-repositories-776639846.html)
+                [Is there a way to skip password typing when using https:// github](http://stackoverflow.com/questions/5343068/is-there-a-way-to-skip-password-typing-when-using-https-github)
+                
+                
+### Resume to ask you password everytime
+    $ git config --unset credential.helper
 	
 ## Your Editor
 	
