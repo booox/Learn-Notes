@@ -22,7 +22,14 @@
 			 username@users.noreply.github.com
 	
 	### Remember the authen?
-		homeCom (56:01:21:8c:83:0b:1e:5c:0c:84:47:a7:a1:65:b3:00) ¨C unverified due to lack of use
+		[Which remote URL should I use?](https://help.github.com/articles/which-remote-url-should-i-use/)
+		
+		
+		
+		[Caching your GitHub password in Git](https://help.github.com/articles/caching-your-github-password-in-git/)
+		
+		
+		
 	
 ## Your Editor
 	
