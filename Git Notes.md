@@ -8,9 +8,9 @@
 	$ git config --global user.name "John Doe"
 	$ git config --global user.email johndoe@example.com
 	
-	ref: [Getting Started - First-Time Git Setup](http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
+[Getting Started - First-Time Git Setup](http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 	
-	### Keeping your email address private
+### Keeping your email address private
 	
 	1. Tell GitHub to keep your email address private
 		Settings -> Emails -> Keep my email address private
@@ -21,8 +21,15 @@
 			$ git config --global user.email
 			 username@users.noreply.github.com
 	
-	### Remember the authen?
-		homeCom (56:01:21:8c:83:0b:1e:5c:0c:84:47:a7:a1:65:b3:00) ¨C unverified due to lack of use
+### Remember the authen?
+[Which remote URL should I use?](https://help.github.com/articles/which-remote-url-should-i-use/)
+		
+		
+		
+[Caching your GitHub password in Git](https://help.github.com/articles/caching-your-github-password-in-git/)
+		
+		
+		
 	
 ## Your Editor
 	
@@ -63,13 +70,13 @@
 ## Recording Changes to the Repository
 ### Recording Changes to the Repository
 	The lifecycle of the status of your files.
-	![lifecycle](lifecycle.png)
+![lifecycle](lifecycle.png)
 	
 	four states: 
-	+ Untracked
-	+ Unmodified
-	+ Modified
-	+ Staged
+		+ Untracked
+		+ Unmodified
+		+ Modified
+		+ Staged
 	
 ### Checking the Status of Your Files
 	$ git status
@@ -81,7 +88,7 @@
 	$ git status
 	
 ### Staging Modified Files
-	Let¡¯s change a file that was already tracked. CONTRIBUTING.md
+	Letâ€™s change a file that was already tracked. CONTRIBUTING.md
 	$ git status
 	$ git add CONTRIBUTING.md
 	$ git status
