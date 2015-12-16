@@ -163,8 +163,8 @@
 		
 		
 ### Committing Your Changes
-	$ git commit
-	$ git commit -m "Some comments"
+	`$ git commit`
+	`$ git commit -m "Some comments"`
 	
 	
 # Push your app to GitHub
@@ -174,18 +174,30 @@
 	
 ## 	Create 'origin' pointing to GitHub repository
 	The first time you should do this:
-		$ git remote add origin https://github.com/username/repo-name.git
+		`$ git remote add origin https://github.com/username/repo-name.git`
 		
 ## Send your commits to your GitHub repository 'master' branch
-	$ git push -u origin master
+	`$ git push -u origin master`
 
 ## Continue do some changes, JUST need this:
-	$ git add .
-	$ git commit -m 'some commit message'
-	$ git push origin master
+	`$ git add .`
+	`$ git commit -m 'some commit message'`
+	`$ git push origin master`
     
     
     
 # Some Links
     - [try Git ](https://try.github.io/levels/1/challenges/1)
     - [Git real](http://gitreal.codeschool.com/levels/1)
+    
+
+DIFFERENT WAYS TO ADD
+
++ `$ git add <list of files>`      Add the list of files
++ `$ git add --all`                   Add all files   
++ `$ git add *.txt`                   Add all txt files in current directory
++ `$ git add docs/*.txt`          Add all txt files in docs directory
++ `$ git add docs/`               Add all files in docs directory
++ `$ git add "*.txt"`             Add all txt files in the whole project
+
+
