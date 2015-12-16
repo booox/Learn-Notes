@@ -1,4 +1,5 @@
 
+
 # Git Getting Started
 
 ## Download & Install
@@ -107,6 +108,11 @@
 	
 ### Initializing a Repository in an Existing Directory
 	`$ git init`
+
+### Cloning an Existing Repository
+```
+	$ git clone https://github.com/USER_NAME/REPOS_NAME (new_directory_name)
+```
 	
 ## Recording Changes to the Repository
 ### Recording Changes to the Repository
@@ -199,5 +205,6 @@ DIFFERENT WAYS TO ADD
 + `$ git add docs/*.txt`          Add all txt files in docs directory
 + `$ git add docs/`               Add all files in docs directory
 + `$ git add "*.txt"`             Add all txt files in the whole project
+
 
 
