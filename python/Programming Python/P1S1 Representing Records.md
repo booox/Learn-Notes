@@ -120,5 +120,92 @@
 ```	
 #### Lists of dictionaries
 	
+- 	Collect our dictionary-based records into a database
+
+```
+>>> bob
+{'job': 'dev', 'pay': 30000, 'age': 42, 'name': 'Bob Smith'}
+>>> sue
+{'job': 'hdw', 'pay': 40000, 'age': 45, 'name': 'Sue Jones'}
+>>> people = [bob, sue]                         # reference in a list
+>>> for person in people:
+	print person['name'], person['pay']        # all name, pay
+
 	
+Bob Smith 30000
+Sue Jones 40000
+>>> for perpon in people:
+	if person['name'] == 'Sue Jones':           # fetch sue's pay
+		print person['pay']
+
+		
+40000
+```
+
+- Iteration tools work just as well here, but we use keys rather than obsure positions.
+
+```
+>>> names = [person['name'] for person in people]           # collect names
+>>> names
+['Bob Smith', 'Sue Jones']
+
+>>> list(map((lambda x: x['name']), people))                    # ditto, generate
+['Bob Smith', 'Sue Jones']
+
+>>> sum(person['pay'] for person in people)                     # sum all pay
+70000
 	
+```	
+    
+- SQL queries
+
+```
+>>> [rec['name'] for rec in people if rec['age'] >= 45]
+['Sue Jones']
+
+>>> [(rec['pay'] + 5000 if rec['pay'] < 40000 else rec['pay']) for rec in people]
+[35000, 40000]
+
+>>> G = [rec['name'] for rec in people if rec['age'] >= 45]     # Error
+>>> next(G)
+
+Traceback (most recent call last):
+  File "<pyshell#9>", line 1, in <module>
+    next(G)
+TypeError: list object is not an iterator
+>>> G = (rec['name'] for rec in people if rec['age'] >= 45)     # Notice: **Here is a Generator, not a list .**
+>>> next(G)
+'Sue Jones'
+
+>>> G = ((rec['pay'] + 5000 if rec['pay'] < 40000 else rec['pay']) for rec in people)
+>>> G.__next__()                                                            # Error : **for python 3.x**
+Traceback (most recent call last):          
+  File "<pyshell#13>", line 1, in <module>
+    G.__next__()
+AttributeError: 'generator' object has no attribute '__next__'
+>>> G.next
+<method-wrapper 'next' of generator object at 0x0000000002B14090>
+>>> G.next()
+35000
+
+    
+```    
+
+- Update records
+
+```
+>>> for person in people:
+	print (person['name'].split()[-1])
+	person['pay'] *= 1.10
+
+	
+Smith
+Jones
+>>> for person in people: print person['pay']
+
+33000.0
+44000.0
+
+```
+
+#### Nested structures
