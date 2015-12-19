@@ -209,3 +209,21 @@ Jones
 ```
 
 #### Nested structures
+
+```
+    >>> bob2 = {'name': {'first': 'Bob', 'last': 'Smith'},
+                          'age': 42,
+                          'job': ['software', 'writing'],
+                          'pay': (40000, 50000)}
+                          
+    >>> bob2['name']
+```
+
+
+
+
+
+
+
+
+
