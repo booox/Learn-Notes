@@ -211,6 +211,7 @@ Jones
 #### Nested structures
 
 
+
 #### Dictionaries of dictionaries
 
 - The outer dictionary is the database, and the nested dictionaries are the records within it.
@@ -331,3 +332,134 @@ Jones
 	- On windows: add an input() call to the bottom of the script to keep the output window up.
 
 #### Data format script
+=======
+```
+    >>> bob2 = {'name': {'first': 'Bob', 'last': 'Smith'},
+                          'age': 42,
+                          'job': ['software', 'writing'],
+                          'pay': (40000, 50000)}
+                          
+    >>> bob2['name']
+```
+
+
+
+
+## Step 2: Storing Records Persistently
+
+### Using Formatted Files
+
+> One way to keep our data around between program runs is to write all the data out to a simple text file, in a formatted way.
+
+#### Test data script
+
+> Example 1-1: create a database with dictionary.
+
+```
+    # Example 1-1
+    # records
+    bob = {'job': 'dev', 'pay': 30000, 'age': 42, 'name': 'Bob Smith'}
+    sue = {'job': 'hdw', 'pay': 40000, 'age': 45, 'name': 'Sue Jones'}
+    tom = {'job': None, 'pay': 0, 'age': 50, 'name': 'Tom'}
+
+    #database
+    db = {}
+    db['bob'] = bob
+    db['sue'] = sue
+    db['tom'] = tom
+
+    if __name__ == '__main__':      # when run as a script
+        print type(db)
+        print db
+        print 
+        for value in db.values():
+            # print(key, '=>\n    ', db[key])
+            # print key, '=>\n    ', db[key]
+            print value
+```
+
+
+#### Script start-up pointers
+
+- On most Windows system you can just type the file's name to run it.
+- Add an *input()* call to the bottom of the script to keep the output window up.
+
+#### Data format script
+
+> Example 1-2 writes the database (Example 1-1) out to a flat file.
+
+```
+    # # Example 1-2
+from __future__ import print_function
+
+dbfilename = 'people-file.txt'
+ENDDB = 'enddb.'
+ENDREC = 'endrec.'
+RECSEP = '=>'
+
+def storeDbase(db, dbfilename=dbfilename):
+    "formatted dump of database to flat file"
+    
+    dbfile = open(dbfilename, 'w')
+    
+    for key in db.keys():
+        print(key, file=dbfile)     # key
+        
+        for (k, v) in db[key].items():
+            print (k, '=>', v, file=dbfile) # loop value
+        print ('endrec.', file=dbfile)
+        
+    print ('enddb.', file=dbfile)
+    
+
+def loadDbase(dbfilename=dbfilename):
+    "parse data to reconstruct database"
+    
+    dbfile = open(dbfilename)
+    import sys
+    sys.stdin = dbfile
+    db = {}
+    key = input()
+    while key != ENDDB:
+        rec = {}
+        field = input()
+        while field != ENDREC:
+            name, value = field.split(RECSEP)
+            rec[name] = eval(value)
+            field = input()
+        db[key] = rec
+        key = input()
+        
+    return db
+
+
+
+
+
+if __name__ == '__main__':
+    from initdata import db
+    storeDbase(db)
+
+```
+
+#### Utility scripts
+
+> Example 1-3 reloads the database from a file each time it is run.
+
+```
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
