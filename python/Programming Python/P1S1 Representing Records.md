@@ -209,3 +209,125 @@ Jones
 ```
 
 #### Nested structures
+
+
+#### Dictionaries of dictionaries
+
+- The outer dictionary is the database, and the nested dictionaries are the records within it.
+	**We can access a record directly by indexing on key,  without a loop**
+
+```
+	>>> bob = dict(name='Bob Smith', age=42, pay=30000, job='dev')
+	>>> sue = dict(name='Sue Jones', age=45, pay=40000, job='hdw')
+	>>> bob
+	{'pay': 30000, 'job': 'dev', 'age': 42, 'name': 'Bob Smith'}
+	>>> db = {}
+	>>> db['bob'] = bob
+	>>> db['sue'] = sue
+	>>> 
+	>>> db['bob']['name']
+	'Bob Smith'
+	>>> db['sue']['pay'] = 50000
+	>>> db['sue']['pay']
+	50000
+
+```
+
+- *pprint* pretty-printer module
+
+```
+	>>> db
+	{'bob': {'pay': 30000, 'job': 'dev', 'age': 42, 'name': 'Bob Smith'}, 'sue': {'pay': 50000, 'job': 'hdw', 'age': 45, 'name': 'Sue Jones'}}
+	>>> import pprint
+	>>> pprint.pprint(db)
+	{'bob': {'age': 42, 'job': 'dev', 'name': 'Bob Smith', 'pay': 30000},
+	 'sue': {'age': 45, 'job': 'hdw', 'name': 'Sue Jones', 'pay': 50000}}
+```
+
+- Through dictionary iterators, step through the database one record at a time.
+
+```
+	>>> for key in db:
+				print key, '=>', db[key]['name']
+
+	bob => Bob Smith
+	sue => Sue Jones
+	
+	
+	>>> for key in db:
+		print db[key]['name'].split()[-1]
+		db[key]['pay'] *= 1.10
+
+		
+	Smith
+	Jones	
+```
+
+- Step through the dictionary's values
+
+```
+	>>> for record in db.values(): print record['pay']
+
+	33000.0
+	55000.0
+	>>> x = [db[key]['name'] for key in db]
+	>>> x
+	['Bob Smith', 'Sue Jones']
+	>>> x = [rec['name'] for rec in db.values()]
+	>>> x
+	['Bob Smith', 'Sue Jones']
+
+```
+
+- Add a new record
+
+```
+	>>> db['tom'] = dict(name='Tom', age=50, job=None, pay=0)
+	>>> db['tom']
+	{'pay': 0, 'job': None, 'age': 50, 'name': 'Tom'}
+	>>> db['tom']['name']
+	'Tom'
+	>>> list(db.keys())
+	['bob', 'sue', 'tom']
+	>>> len(db)
+	3
+	>>> [rec['age'] for rec in db.values()]
+	[42, 45, 50]
+	>>> [rec['name'] for rec in db.values() if rec['age'] >= 45]
+	['Sue Jones', 'Tom']
+```
+
+
+## STep 2 : Storing Records Persistently
+
+### Using Formatted Files
+
+#### Test data script
+
+- Initialize data to be stored in files, pickles, shelves
+
+```
+	# records
+	bob = {'pay': 30000, 'job': 'dev', 'age': 42, 'name': 'Bob Smith'}
+	sue = {'job': 'hdw', 'pay': 40000, 'age': 45, 'name': 'Sue Jones'}
+	tom = {'pay': 0, 'job': None, 'age': 50, 'name': 'Tom'}
+
+	#database
+	db = {}
+	db['bob'] = bob
+	db['sue'] = sue
+	db['tom'] = tom
+
+	if __name__ == '__main__':          # When run as a script
+		for key in db:
+			print key, '=>\n    ', db[key]
+			
+```
+
+	** __name__** : when this file is run, not when it is imported
+
+ - Script start-up pointers
+	- On most Windows: you can just type the file's name to run it
+	- On windows: add an input() call to the bottom of the script to keep the output window up.
+
+#### Data format script
