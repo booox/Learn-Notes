@@ -9,4 +9,23 @@
     * 另：使用`help(__builtins__)`可以查看一些内置函数的帮助，但`print`这个在python2.x中却帮了倒忙。
 
     
-    
+* sys.stdout, sys.stdin
+	* sys.stdout与print 
+		* 当我们在 Python 中打印对象调用 print obj 时候，事实上是调用了 sys.stdout.write(obj+'\n')
+		* print 将你需要的内容打印到了控制台，然后追加了一个换行符
+		* print 会调用 sys.stdout 的 write 方法
+		* 以下两行在事实上等价：
+			* `sys.stdout.write('hello'+'\n') `
+			* `print 'hello'`
+	
+	* sys.stdin 与 raw_input
+		* 当我们用 raw_input('Input promption: ') 时，事实上是先把提示信息输出，然后捕获输入
+		* 以下两组在事实上等价：
+			* `hi=raw_input('hello? ') `
+			* `print 'hello? ', #comma to stay in the same line `
+			* `hi=sys.stdin.readline()[:-1] # -1 to discard the '\n' in input stream`
+	* 引自：[ Python的sys.stdout、sys.stdin重定向](http://blog.csdn.net/sxhlovehmm/article/details/41479005)
+	
+* raw_input() 与 input()
+	* raw_input() 	-- python 2.x
+	* input() 			-- python 3.x

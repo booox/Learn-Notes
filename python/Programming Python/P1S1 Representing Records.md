@@ -356,7 +356,7 @@ Jones
 > Example 1-1: create a database with dictionary.
 
 ```
-    # Example 1-1
+    # Example 1-1 : initdata.py
     # records
     bob = {'job': 'dev', 'pay': 30000, 'age': 42, 'name': 'Bob Smith'}
     sue = {'job': 'hdw', 'pay': 40000, 'age': 45, 'name': 'Sue Jones'}
@@ -389,7 +389,7 @@ Jones
 > Example 1-2 writes the database (Example 1-1) out to a flat file.
 
 ```
-    # # Example 1-2
+    # # Example 1-2: make_db_file.py
 from __future__ import print_function
 
 dbfilename = 'people-file.txt'
@@ -419,16 +419,16 @@ def loadDbase(dbfilename=dbfilename):
     import sys
     sys.stdin = dbfile
     db = {}
-    key = input()
+    key = raw_input()						# NOTICE: input()  -- python 3.x
     while key != ENDDB:
         rec = {}
-        field = input()
+        field = raw_input()
         while field != ENDREC:
             name, value = field.split(RECSEP)
             rec[name] = eval(value)
-            field = input()
+            field = raw_input()
         db[key] = rec
-        key = input()
+        key = raw_input()
         
     return db
 
@@ -447,6 +447,16 @@ if __name__ == '__main__':
 > Example 1-3 reloads the database from a file each time it is run.
 
 ```
+	## Example 1-3:: dump_db_file.py
+	import make_db_file
+
+	# make_db_file.loadDbase2()
+
+	db = make_db_file.loadDbase()
+	for key in db:
+		print key, '=>\n  ', db[key]
+	print db['sue']['name']
+	
 
 
 ```
