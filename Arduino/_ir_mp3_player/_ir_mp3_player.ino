@@ -48,7 +48,7 @@ decode_results results;
 // mp3 player v
 int mp3Volume = 15;
 boolean playFlag = true;
-boolean singleAllMode = true;
+boolean singleLoopFlag = true;
 
 
 //
@@ -57,7 +57,7 @@ void setup () {
 	mp3_set_serial (Serial);	//set Serial for DFPlayer-mini mp3 module 
 	delay(1);  //wait 1ms for mp3 module to set volume
 	mp3_set_volume (mp3Volume);
-	mp3_all_loop(singleAllMode);
+	mp3_single_loop(singleLoopFlag);
 	irrecv.enableIRIn(); // Start the receiver
 }
 
@@ -83,13 +83,13 @@ void loop () {
 		
 		// single mode & all mode
 		if(results.value == FUNC){
-			if(singleAllMode){
-				mp3_all_loop(singleAllMode);
+			if(singleLoopFlag){
+				mp3_all_loop(singleLoopFlag);
 			}
 			else{
-				mp3_single_loop(!singleAllMode);
+				mp3_single_loop(!singleLoopFlag);
 			}
-			playFlag = ! singleAllMode;
+			singleLoopFlag = ! singleLoopFlag;
 			
 		}
 		
