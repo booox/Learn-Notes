@@ -5,7 +5,7 @@ age=>42
 name=>'Bob Smith'
 endrec.
 sue
-pay=>40000
+pay=>44000.0
 job=>'hdw'
 age=>45
 name=>'Sue Jones'
@@ -14,6 +14,6 @@ tom
 pay=>0
 job=>None
 age=>50
-name=>'Tom'
+name=>'Tom Tom'
 endrec.
 enddb.

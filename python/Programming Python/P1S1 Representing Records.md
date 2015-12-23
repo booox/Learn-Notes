@@ -433,9 +433,6 @@ def loadDbase(dbfilename=dbfilename):
     return db
 
 
-
-
-
 if __name__ == '__main__':
     from initdata import db
     storeDbase(db)
@@ -448,28 +445,152 @@ if __name__ == '__main__':
 
 ```
 	## Example 1-3:: dump_db_file.py
+    
 	import make_db_file
-
-	# make_db_file.loadDbase2()
 
 	db = make_db_file.loadDbase()
 	for key in db:
 		print key, '=>\n  ', db[key]
 	print db['sue']['name']
 	
+    
 
+```
+> Run 
+
+```
+    > dump_db_file.py
+    bob =>
+       {'pay': 30000, 'job': 'dev', 'age': 42, 'name': 'Bob Smith'}
+    sue =>
+       {'pay': 40000, 'job': 'hdw', 'age': 45, 'name': 'Sue Jones'}
+    tom =>
+       {'pay': 0, 'job': None, 'age': 50, 'name': 'Tom'}
+    Sue Jones
 
 ```
 
+> Example 1-4 makes changes by loading, updating, and storing again.
+
+```
+	## Example 1-3:: update_db_file.py
+    
+    import make_db_file
+
+    db = make_db_file.loadDbase()
+
+    db['sue']['pay'] *= 1.10
+    db['tom']['name'] = 'Tom Tom'
+
+    make_db_file.storeDbase(db)
+
+```
+
+```
+    > update_db_file.py
+
+    > dump_db_file.py
+    bob =>
+       {'pay': 30000, 'job': 'dev', 'age': 42, 'name': 'Bob Smith'}
+    sue =>
+       {'pay': 44000.0, 'job': 'hdw', 'age': 45, 'name': 'Sue Jones'}
+    tom =>
+       {'pay': 0, 'job': None, 'age': 50, 'name': 'Tom Tom'}
+    Sue Jones
+
+```
+
+#### Utility Pickle Files
+
+> Limitations of the formatted text file scheme
+    
+    * Has to read the entire database from the file just to fetch one record
+    * Must write the entire database back to the file after each set of updates.
+    * Separators will not appear in the data to be stored ( `"=>"`)
+    
+> The `pickle` module translates an in-memory Python object into a serialized byte stream -- a string of bytes that can be written to any file-like object.
 
 
 
+* Shows how to store our records in a flat file, using pickle.
 
+```
+	## Example 1-5:: make_db_pickle.py
+    
+    from initdata import db
+    import pickle
 
+    dbfile = open('people-pickle', 'w')     # use `wb` binary mode in 3.x
+    pickle.dump(db, dbfile)
+    dbfile.close()
 
+```
 
+* Shows how to access the pickled database after it has been created
+    
+```
+	## Example 1-6:: dump_db_pickle.py
+    
+    import pickle
 
+    dbfile = open('people-pickle', 'r')     # use `rb` binary mode in 3.x
+    db = pickle.load(dbfile)
 
+    for key in db:
+        print key, '=>\n   ', db[key]
+        
+    print db['sue']['name']
 
+```
 
+* Updating with a pickle file
+    
+```
+	## Example 1-7:: update_db_pickle.py
+    
+    import pickle
 
+    dbfile = open('people-pickle', 'r')     # use `rb` binary mode in 3.x
+    db = pickle.load(dbfile)
+    dbfile.close()
+
+    db['sue']['pay'] *= 1.10
+    db['tom']['name'] = 'Tom Tom'
+
+    dbfile = open('people-pickle', 'w')
+    pickle.dump(db, dbfile)
+    dbfile.close()
+    
+```
+
+#### Using Per-Record Pickle Files
+
+* Stores each record in its own flat file, using each record's original key as its filename with a .pkl appended
+
+    ```
+    # Example 1-8. PP4E\Preview\make_db_pickle_recs.py
+    
+    from initdata import bob, sue, tom
+    import pickle
+
+    for (key, record) in [('bob', bob), ('tom', tom), ('sue', sue)]:
+        recfile = open(key + '.pkl', 'w')
+        pickle.dump(record, recfile)
+        recfile.close()
+
+    ```
+
+* Dumps the entire database by using the standard library's `glob` module to do filename expansion and thus collect all the files in this directory with a `.pkl` extension.
+
+    ```
+    # Example 1-9. PP4E\Preview\dump_db_pickle_recs.py
+    
+    import pickle, glob
+    for filename in glob.glob('*.pkl'):         # for 'bob','sue','tom'
+        recfile = open(filename, 'rb')
+        record  = pickle.load(recfile)
+        print(filename, '=>\n  ', record)
+    suefile = open('sue.pkl', 'rb')
+    print(pickle.load(suefile)['name'])         # fetch sue's name
+
+    ```
