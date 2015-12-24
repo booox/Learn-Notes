@@ -29,3 +29,13 @@
 * raw_input() 与 input()
 	* raw_input() 	-- python 2.x
 	* input() 			-- python 3.x
+	
+* Check Python in 32 bit mode
+	```
+		>>> import sys, platform
+		>>> platform.architecture()
+		('64bit', 'WindowsPE')
+		>>> sys.maxint
+		2147483647				# 64bit: 9223372036854775807
+		[Ref](http://stackoverflow.com/questions/3411079/why-does-the-python-2-7-amd-64-installer-seem-to-run-python-in-32-bit-mode)
+	```
