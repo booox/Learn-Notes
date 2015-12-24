@@ -594,3 +594,207 @@ if __name__ == '__main__':
     print(pickle.load(suefile)['name'])         # fetch sue's name
 
     ```
+
+* Updates the database by fetching a record from its file, changing it in memory, and then writing it back to its pickle file.
+
+```
+    # Example 1-10. PP4E\Preview\update_db_pickle_recs.py
+    
+    import pickle
+
+    suefile = open('sue.pkl', 'r')
+    sue = pickle.load(suefile)
+    suefile.close()
+
+    sue['pay'] *= 1.10
+
+    suefile = open('sue.pkl', 'w')
+    pickle.dump(sue, suefile)
+    suefile.close()
+
+```    
+
+> The filesystem becomes our top-level dictionary -- filenames provide direct access to each record.
+
+
+#### Using Shelves
+
+> Shelves automatically pickle objects to and from a keyed-access filesystem.The shelve system automatically splits up stored records and fetches and updates only those records that are accessed and changed. In this way, shelves provide utility similar to per-record pickle files, but they are usually easier to code.
+
+* Store our in-memory dictionary objects in a shelve for permanent keeping.
+
+```
+    # Example 1-11. PP4E\Preview\make_db_shelve.py
+    
+    from initdata import bob, sue
+    import shelve
+
+    db = shelve.open('people-shelve')
+    db['bob'] = bob
+    db['sue'] = sue
+    db.close()
+
+```
+> This script creates one or more files in the current directory with the name `people-shelve` as a prefix (such as: `people-shelve.bak`, `people-shelve.dat`, `people-shelve.dir`.)
+
+
+* Reopen the shelve and indexes it by key to fetch its stored records.
+
+```
+    # Example 1-12. PP4E\Preview\dump_db_shelve.py
+    
+    import shelve
+
+    db = shelve.open('people-shelve')
+
+    for key in db:
+        print key, '=>\n    ', db[key]
+        
+    print db['sue']['name']
+    db.close()
+```
+
+> We still have a dictionary of dictionaries here, but the top-level dictionary is really a shelve mapped onto a file.
+
+* Shelve Update
+
+```
+    # Example 1-13. PP4E\Preview\update_db_shelve.py
+    
+    from initdata import tom
+    import shelve
+
+    db = shelve.open('people-shelve')
+    sue = db['sue']                                 # fetch sue
+    sue['pay'] *= 1.50
+    db['sue'] = sue                                 # update sue
+    db['tom'] = tom                                 # add a new record
+    db.close()
+
+
+```
+    
+
+## Step 2: Stepping Up to OOP
+
+> What we'd like is a way to bind processing logic with the data stored in the database in order to make it easier to understand, debug, and reuse.
+
+* OOP attractive things:
+    * **Structure** : We can naturally associate processing logic with record data -- classes.
+    * **Encapsulation** : Wrap up details such as name processing behind method functions.
+    * **Customization** : Natural growth path. Classes can be extended and customized by coding new subclasses, without changing or breaking already working code.
+    
+> Under OOP, we program by customizing and reusing, not by rewriting.
+
+### Using Classes
+
+* Implements our database records as class instances rather than as dictionaries.
+
+```
+    # Example 1-14. PP4E\Preview\person_start.py
+    
+    class Person:
+        def __init__(self, name, age, pay=0, job=None):
+            self.name = name
+            self.age = age
+            self.pay = pay
+            self.job = job
+            
+    if __name__ == '__main__':
+        bob = Person('Bob Smith', 42, 30000, 'software')
+        sue = Person('Sue Jones', 45, 40000, 'hardware')
+        print bob.name, sue.pay
+        
+        print bob.name.split()[-1]
+        sue.pay *= 1.10
+        print sue.pay
+        
+```
+
+* This isn't a database yet, but we could stuff these objects into a list or dictionary as before in order to collect them as a unit.
+
+```
+    >>> from person_start import Person
+    >>> bob = Person('Bob Smith', 42)
+    >>> sue = Person('Sue Jones', 45, 40000)
+    >>> people = [bob, sue]                          # a "database" list
+    >>> for person in people:
+            print(person.name, person.pay)
+    Bob Smith 0
+    Sue Jones 40000
+    >>> x = [(person.name, person.pay) for person in people]
+    >>> x
+    [('Bob Smith', 0), ('Sue Jones', 40000)]
+    >>> [rec.name for rec in people if rec.age >= 45]     # SQL-ish query
+    ['Sue Jones']
+    >>> [(rec.age ** 2 if rec.age >= 45 else rec.age) for rec in people]
+    [42, 2025]
+
+```
+    
+### Adding Behavior
+
+> To really leverage the power of classes, we need to add some behavior.    
+  
+* Adds the last-name and raise logic as class methods
+* Methods use the `self` argument to access or update the instance(record) being processed.
+
+```
+    # Example 1-15. PP4E\Preview\person.py
+    
+    class Person:
+        def __init__(self, name, age, pay=0, job=None):
+            self.name = name
+            self.age = age
+            self.pay = pay
+            self.job = job
+            
+        def lastName(self):
+            return self.name.split()[-1]
+        def giveRaise(self, percent):
+            self.pay *= (1.0 + percent)
+            
+    if __name__ == '__main__':
+        bob = Person('Bob Smith', 42, 30000, 'software')
+        sue = Person('Sue Jones', 45, 40000, 'hardware')
+        print bob.name, sue.pay
+        
+        print bob.lastName()
+        sue.giveRaise(.10)
+        print sue.pay
+        
+```
+
+### Adding Inheritance
+
+* Customizes the last section's Person class in order to give a 10 percent bonus by default to managers whenever they receive a raise.
+
+```
+    # Example 1-16. PP4E\Preview\manager.py
+    
+    from person import Person
+
+    class Manager(Person):
+        def giveRaise(self, percent, bonus=0.1):
+            self.pay *= (1.0 + percent + bonus)
+            
+    if __name__ == '__main__':
+        tom = Manager('Tom Doe', age=50, pay=50000)
+        print tom.lastName()
+        tom.giveRaise(.20)
+        print tom.pay    
+```    
+
+> * The `Manager` class appears in a module of its own, but it could have been added to the Person module instead.(Python doesn't requires just one class per file).
+    * It inherits the constuctor and last-name methods from its superclass
+    * It customizes just the `giveRaise` method.
+    
+> In OOP, we program by customizing, not by changing.
+
+
+### Refactoring Code
+
+
+
+    
+    

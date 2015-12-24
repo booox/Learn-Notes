@@ -1,7 +1,7 @@
 (dp0
 S'pay'
 p1
-I40000
+F44000.0
 sS'job'
 p2
 S'hdw'
