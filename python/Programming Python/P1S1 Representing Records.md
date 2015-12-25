@@ -674,8 +674,7 @@ if __name__ == '__main__':
 
 ```
     
-
-## Step 2: Stepping Up to OOP
+## Step 3: Stepping Up to OOP
 
 > What we'd like is a way to bind processing logic with the data stored in the database in order to make it easier to understand, debug, and reuse.
 
@@ -794,7 +793,188 @@ if __name__ == '__main__':
 
 ### Refactoring Code
 
+#### Augmenting Methods
+
+* Implemented the customized `Manager` class by `augmenting` the inherited raise method instead of replacing it completely.
+
+```
+
+    class Manager(Person):
+        def giveRaise(self, percent, bonus=0.1):
+            Person.giveRaise(self, percent + bonus)
+            
+```
+
+#### Display format
+
+```
+    class Person:
+        def __str__(self):
+            return '<%s => %s>' % (self.__class__.__name__, self.name)
+    tom = Manager('Tom Jones', 50)
+    print(tom)                               # prints: <Manager => Tom Jones>
+
+```
+#### Constructor customization
+
+* We didn't pass the `job` argument when making a manager in Example 1-16; if we had, it would look like this with keyword arguments:
+    `tom = Manager('Tom Doe', age=50, pay=50000, jog='manager')`
+    
+* Provide an explicit constructor for managers, when a manager is created, its job is filled in automatically.
+
+```
+    class Manager(Person):
+        def __init__(self, name, age, pay):
+            Person.__init__(self, name, age, pay, 'manager')
+
+```
+#### Alternative classes
+
+```
+    # Example 1-17. PP4E\Preview\person_alternative.py
+    
+    """
+    Alternative implementation of person classes, with data, behavior,
+    and operator overloading (not used for objects stored persistently)
+    """
+
+    class Person:
+        """
+            a general person: data + logic
+        """
+        
+        def __init__(self, name, age, pay=0, job=None):
+            self.name = name
+            self.age = age
+            self.pay = pay
+            self.job = job
+        
+        def lastName(self):
+            return self.name.split()[-1]
+        def giveRaise(self, percent):
+            self.pay *= (1.0 + percent)
+            
+        def __str__(self):
+            return ( '<%s => %s: %s, %s>' %
+                        (self.__class__.__name__, self.name, self.job, self.pay))
+                        
+    class Manager(Person):
+        """
+        a person with custom raise inherits general lastname, str
+        """
+        def __init__(self, name, age, pay):
+            Person.__init__(self, name, age, pay, 'manager')
+        def giveRaise(self, percent, bonus=0.1):
+            Person.giveRaise(self, percent + bonus)
+            
+
+    if __name__ == '__main__':
+        bob = Person('Bob Smith', 44)
+        sue = Person('Sue Jones', 47, 40000, 'hardware')
+        tom = Manager(name='Tom Doe', age=50, pay=50000)
+        print sue, sue.pay, sue.lastName()
+        
+        for obj in (bob, sue, tom):
+            obj.giveRaise(.10)
+            print obj
+
+```
+
+#### Adding Persistence
+
+* Store records in per-record pickle files
+
+```
+    # Example 1-18. PP4E\Preview\make_db_classes.py
+    
+    import shelve
+    from person import Person
+    from manager import Manager
+
+    bob = Person('Bob Smith', 42, 30000, 'software')
+    sue = Person('Sue Jones', 45, 40000, 'hardware')
+    tom = Manager('Tom Doe', 50, 50000)
+
+    db = shelve.open('class-shelve')
+    db['bob'] = bob
+    db['sue'] = sue
+    db['tom'] = tom
+    db.close()
+```
+
+* Read the shelve and prints fields of its records
+
+```
+    # Example 1-19. PP4E\Preview\dump_db_classes.py
+    
+    import shelve
+
+    db = shelve.open('class-shelve')
+
+    for key in db:
+        print key, '=>\n    ', db[key].name, db[key].pay
+        
+    bob = db['bob']
+    print bob.lastName()
+    print db['tom'].lastName()    
+
+```
+* Update the records
+
+```
+    # Example 1-20. PP4E\Preview\update_db_classes.py
+    
+    import shelve
+
+    db = shelve.open('class-shelve')
+
+    sue = db['sue']
+    sue.giveRaise(.25)
+    db['sue'] = sue
+
+    tom = db['tom']
+    tom.giveRaise(.20)
+    db['tom'] = tom
+
+    db.close()    
+
+```
+    
+## Step 4: Adding Console Interaction
+
+### A Console Shelve Interface
+
+* A simple interactive loop that allows a user to query multiple record objects in the shelve by key.
+
+```
+    # Example 1-21. PP4E\Preview\peopleinteract_query.py
+    
+    # interactive queries
+
+    import shelve
+
+    fieldnames = ('name', 'age', 'job', 'pay')
+    maxfield = max(len(f) for f in fieldnames)
+    db = shelve.open('class-shelve')
+
+    while True:
+        key = raw_input('\nKey? => ')
+        if not key:break
+        try:
+            record = db[key]
+        except:
+            print 'No such key "%s"! ' % key
+        else:
+            for field in fieldnames:
+                print field.ljust(maxfield), ' => ', getattr(record, field)    
+```    
 
 
+    
+    
+    
+    
+    
+    
     
     

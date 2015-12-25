@@ -39,3 +39,7 @@
 		2147483647				# 64bit: 9223372036854775807
 		[Ref](http://stackoverflow.com/questions/3411079/why-does-the-python-2-7-amd-64-installer-seem-to-run-python-in-32-bit-mode)
 	```
+    
+* SQL,
+    * `INSERT OR IGNORE INTO` 忽略重复数据的插入
+    * `INSERT OR REPLACE INTO ` 如果有此行数据，则先删除后再插入；否则直接插入

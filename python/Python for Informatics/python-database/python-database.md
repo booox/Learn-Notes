@@ -35,3 +35,22 @@
 
 
 
+### Many-to-Many Relationships in SQL
+> How to model situations like students enrolling in courses :
+    * each course has many students
+    * each student is enrolled in many courses
+    
+    
+
+
+
+
+### Databases and Visualization
+> In this section, we put it all together, retrieve and process some data and then use the Google Maps API to visualize our data.
+
+
+
+
+
+
+
