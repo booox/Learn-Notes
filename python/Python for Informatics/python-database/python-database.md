@@ -48,7 +48,11 @@
 ### Databases and Visualization
 > In this section, we put it all together, retrieve and process some data and then use the Google Maps API to visualize our data.
 
-
+* Web Crawling Policy
+	* `selection policy`: which pages to download
+	* `re-visit policy`: when to check for changes to the pages
+	* `politeness policy`: how to avoid overloading Web sites
+	* `parallelization policy`: how to coordinate distributed Web crawlers
 
 
 
