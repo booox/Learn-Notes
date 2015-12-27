@@ -43,3 +43,26 @@
 * SQL,
     * `INSERT OR IGNORE INTO` 忽略重复数据的插入
     * `INSERT OR REPLACE INTO ` 如果有此行数据，则先删除后再插入；否则直接插入
+	
+* buffer(), memoryview()
+	* buffer()用在2.x，memoryview()用在python3(python 2.7中也添加了此用法)
+	* 在使用很大的数据时，应该使用此函数
+	* 作用：引用了支持buffer/memoryview的对象（如string）的一个切片，但不占用额外的内存空间
+	* 示例：
+		```
+			>>> s = 'Hello world'
+			>>> t = buffer(s, 6, 5)
+			>>> t
+			<read-only buffer for 0x10064a4b0, size 5, offset 6 at 0x100634ab0>
+			>>> print t
+			world
+			
+			>>> s = 'Hello world'
+			>>> t = memoryview(s)
+			>>> t
+			<memory at 0x0000000002CE3438>
+			>>> print t[6:].tobytes()
+			world			
+		
+		```
+	* [What is Python buffer type for?](http://stackoverflow.com/questions/3422685/what-is-python-buffer-type-for)
