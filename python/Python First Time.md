@@ -42,7 +42,8 @@
     
 * SQL,
     * `INSERT OR IGNORE INTO` 忽略重复数据的插入
-    * `INSERT OR REPLACE INTO ` 如果有此行数据，则先删除后再插入；否则直接插入
+    * `INSERT OR REPLACE INTO ` 如果该行不存在，则插入；如果存在，则替换之
+        * 这比`UPDATE`要好一些：因为当该行不存在时，则`UPDATE`不会有任何操作
 	
 * buffer(), memoryview()
 	* buffer()用在2.x，memoryview()用在python3(python 2.7中也添加了此用法)
@@ -66,3 +67,26 @@
 		
 		```
 	* [What is Python buffer type for?](http://stackoverflow.com/questions/3422685/what-is-python-buffer-type-for)
+    
+    
+* BeautifulSoup()
+    * You can add, remove, and modify a tag’s attributes. Treat the tag as a dictionary.
+        ```
+            tag['class'] = 'verybold'
+            tag['id'] = 1
+            tag
+            # <blockquote class="verybold" id="1">Extremely bold</blockquote>
+
+            del tag['class']
+            del tag['id']
+            tag
+            # <blockquote>Extremely bold</blockquote>
+
+            tag['class']
+            # KeyError: 'class'
+            print(tag.get('class'))
+            # None        
+        ```
+    * tag_wrap = soup.find('div', class_='wrapper')
+    * tag_wrap = soup.find_all('li')
+    
