@@ -1,59 +1,69 @@
 #coding=utf-8
 import sqlite3
+import re
+
+
 HOME_URL = 'http://www.ximalaya.com'
 DATA_BASE = 'xmly.sqlite'
 
 
 
-
 class Zhubo(object):
     def __init__(self, 
-            zbid      = None,
+            zhubo_id      = None,
             name = None,
             url         = None,
             fans        = 0,
             follow   = 0,
             sound      = 0,
             favorites   = 0,
-            album_ids   = None,
             album_url   = None,
+            album_ids   = None,
+            album_count   = 0,
+            sound_ids   = None,
+            sound_count   = 0,
             desc        = None ):
         
-        self.zbid = zbid
+        self.zhubo_id = zhubo_id
         self.name = name
         self.url = url
         self.fans = fans
         self.follow = follow
         self.sound = sound
         self.favorites = favorites
-        self.album_ids = album_ids
         self.album_url = album_url
+        self.album_ids = album_ids
+        self.album_count = album_count
+        self.sound_ids = sound_ids
+        self.sound_count = sound_count
         self.desc = desc
         
         
 class Album(object):
     def __init__(self,
-            aid              = None,
+            album_id              = None,
             name        =   None,
             url             =   None,
             category   =   None,
             tag             =   None,
             playcount   =  0,
             sound_ids      =   None,
+            sound_count      =   0,
             update_time =   None):
             
-        self.aid         =   aid
+        self.album_id         =   album_id
         self.name   =   name
         self.url   =   url
         self.category   =   category
         self.tag   =   tag
         self.playcount   =   playcount
         self.sound_ids   =   sound_ids
+        self.sound_count   =   sound_count
         self.update_time   =   update_time
         
 class Sound(object):
     def __init__(self,
-            sid      =   None,
+            sound_id      =   None,
             name    =   None,
             url         =   None,
             playcount  =   0,
@@ -63,7 +73,7 @@ class Sound(object):
             forward         =   0
             ):
         
-        self.sid                 =    sid
+        self.sound_id                 =    sound_id
         self.name           =   name
         self.url                =   url
         self.playcount     =   playcount
@@ -80,6 +90,7 @@ def openDB(db=DATA_BASE):
     conn = sqlite3.connect(db)
     cur = conn.cursor()
     return conn, cur
+    
 def closeDB(conn):
     ''' close database '''
     conn.close()
@@ -90,33 +101,37 @@ def initDB(cur):
     cur.executescript('''
         CREATE TABLE IF NOT EXISTS Zhubo (
             id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-            zbid TEXT UNIQUE,
+            zhubo_id TEXT UNIQUE,
             name TEXT,
             url TEXT,
             fans INTEGER,
             follow INTEGER,
             sound INTEGER,
             favorites INTEGER,
-            album_ids BLOB,
             album_url TEXT,
+            album_ids BLOB,
+            album_count INTEGER,
+            sound_ids BLOB,
+            sound_count INTEGER,
             desc TEXT
         );
         
         CREATE TABLE IF NOT EXISTS Album (
             id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-            aid TEXT UNIQUE,
+            album_id TEXT UNIQUE,
             name TEXT,
             url TEXT,
             category TEXT,
             tag BLOB,
             playcount INTEGER,
             sound_ids BLOB,
+            sound_count INTEGER,
             update_time TEXT
         );
         
         CREATE TABLE IF NOT EXISTS Sound (
             id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-            sid TEXT UNIQUE,
+            sound_id TEXT UNIQUE,
             name TEXT,
             url TEXT,
             playcount INTEGER,
@@ -146,40 +161,46 @@ def checkURL(url):
     ''' simple check zhubo url '''
     
     # url = 'http://www.ximalaya.com/zhubo/1000120/'      
-                # zhubo: ¿…œÃ∆ΩÀµ
+                # zhubo: ÈÉéÂí∏Âπ≥ËØ¥
+    # url = 'http://www.ximalaya.com/1000120/album/327780/'   
+                # album : Ë¥¢ÁªèÈÉéÁúº 2015
+    # url = 'http://www.ximalaya.com/1162654/sound/11011001/'     
+                # sound : ÈÉéÂí∏Âπ≥ËØ¥
+                
     # url = 'http://www.ximalaya.com/8889234/album/'   
-                # albums : –ªÃŒÃ˝ ¿ΩÁ
-    # url = 'http://www.ximalaya.com/1000120/album/327780'   
-                # album : ≤∆æ≠¿…—€ 2015
+                # albums : Ë∞¢Ê∂õÂê¨‰∏ñÁïå
     # url = 'http://www.ximalaya.com/1000120/sound/'                   
-                # sounds : ¿…œÃ∆ΩÀµ
-    # url = 'http://www.ximalaya.com/1162654/sound/11011001'     
-                # sound : ¿…œÃ∆ΩÀµ
+                # sounds : ÈÉéÂí∏Âπ≥ËØ¥
     
-    url = url.lstrip('/')
+    pattern_zhubo = 'http://www\.ximalaya\.com/zhubo/(\d+)/'
+    pattern_album = 'http://www\.ximalaya\.com/(\d+)/album/(\d+)/'
+    pattern_sound = 'http://www\.ximalaya\.com/(\d+)/sound/(\d+)/'
     
-    # sounds: 
-    _type = None    # url type: zhubo, albums, album, sounds, sound
-        
+    patterns = [pattern_zhubo, pattern_album, pattern_sound]
     
-    if not url.startswith(HOME_URL):
-        print "[URL ERROR] : The url outside of xmly."
-        exit(1)
-        
-    # zhubo
-    if 'zhubo' in url:
-        zbid = url.split('/')[-1]       
-        if not zbid.isdigit():
-            print "[URL ERROR] : check Zhubo url."
-            exit(1)
-        _type = 'zhubo'
-    elif 'album' in url:
-        if url.endswith('album'):   # url = 'http://www.ximalaya.com/8889234/album/'  
-            pass
+    result = {}    # url type: zhubo, album, sound
 
+    match_zhubo = re.search(pattern_zhubo, url)
+    match_album = re.search(pattern_album , url)
+    match_sound = re.search(pattern_sound , url)
+    if match_zhubo:
+        result["url_type"] = 'zhubo'
+        result["zhubo_id"] = match_zhubo.group(1)
         
-    pass
+    elif match_album:
+        result["url_type"] = 'album'
+        result["zhubo_id"] = match_album.group(1)
+        result["album_id"] = match_album.group(2)
+    elif match_sound:
+        result["url_type"] = 'sound'
+        result["zhubo_id"] = match_sound.group(1)
+        result["sound_id"] = match_sound.group(2)
+    else:
+        result["url_type"] = None
         
+    return result
+    
+    
         
         
         

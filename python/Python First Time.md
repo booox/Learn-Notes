@@ -90,3 +90,59 @@
     * tag_wrap = soup.find('div', class_='wrapper')
     * tag_wrap = soup.find_all('li')
     
+* try...except...finally...raise,  [python try/except/finally](http://blog.csdn.net/spch2008/article/details/9343207#)
+    *  try不仅捕获异常，而且会恢复执行
+    ```
+        def catcher():
+            try:
+                fetcher(x, 4)
+            except:
+                print "got exception"
+            print "continuing"    
+    ```
+    
+    * 无论try是否发生异常，finally总会执行
+    
+    ```
+        def catcher():
+            try:
+                fetcher(x, 4)
+            finally:
+                print 'after fecth'    
+    ```
+    
+    *  try无异常，才会执行else
+    ```
+        def catcher():
+            try:
+                fetcher(x, 4)
+            except:
+                print "got exception"
+            else:
+                print "not exception"    
+    ```
+    > else作用：没有else语句，当执行完try语句后，无法知道是没有发生异常，还是发生了异常并被处理过了。通过else可以清楚的区分开。
+    
+    *  利用raise传递异常
+    ```
+        def catcher():
+            try:
+                fetcher(x, 4)
+            except:
+                print "got exception"
+                raise    
+    ```
+    > raise语句不包括异常名称或额外资料时，会重新引发当前异常。如果希望捕获处理一个异常，而又不希望
+异常在程序代码中消失，可以通过raise重新引发该异常。
+
+    *  except(name1, name2)
+    ```
+        def catcher():
+            try:
+                fetcher(x, 4)
+            except(TypeError, IndexError):
+                print "got exception"
+            else:
+                print "not exception"
+    ```
+    > 捕获列表列出的异常，进行处理。若except后无任何参数，则捕获所有异常。
