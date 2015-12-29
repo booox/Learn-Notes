@@ -12,7 +12,8 @@ if __name__ == '__main__':
     xmly.initDB(cur)
     
     session = XMLYSession()
-    url = 'http://www.ximalaya.com/zhubo/1000120/'      
+    url = 'http://www.ximalaya.com/zhubo/1012757/'      
+    # url = 'http://www.ximalaya.com/zhubo/1000120/'      
                 # zhubo: 郎咸平说
     # url = 'http://www.ximalaya.com/8889234/album/'   
                 # albums : 谢涛听世界
@@ -24,13 +25,15 @@ if __name__ == '__main__':
                 # sound : 郎咸平说
     
     zhubo = session.getZhuboProfile(url)
-    print zhubo.url
-    print zhubo.follow, zhubo.fans 
+    # print zhubo.url
+    # print zhubo.follow, zhubo.fans 
     print zhubo.album_url, zhubo.album_ids
-    print type(zhubo.album_ids)
-    print 'sound:', zhubo.sound, 'favorites:', zhubo.favorites
+    # print type(zhubo.album_ids)
+    # print 'sound:', zhubo.sound, 'favorites:', zhubo.favorites
     # print zhubo.name.decode('utf-8')
     # print zhubo.desc.decode('utf-8')
+    
+    print 'Start Write into db.'
     
     # buffer album_ids for BLOB
     zhubo.album_ids = buffer(pickle.dumps(zhubo.album_ids, pickle.HIGHEST_PROTOCOL))
@@ -46,17 +49,13 @@ if __name__ == '__main__':
     
     
     # Fetch vars
-    # cursor.execute("""
-        # SELECT * FROM trials WHERE timestamp = ?""", (timestamp,))
-    # out = cursor.fetchone()
-    # s1 = out[1] 
-    # emg1 = pickle.loads(s1)
-
-    # print emg1
-    # print emg1[0], emg1[:5]
-    # print 15 in emg1
-    # print 'abc' in emg1    
+    cur.execute("""SELECT album_ids FROM Zhubo""")
+    out = cur.fetchone()
+    album_id = out[0] 
+    album_id = pickle.loads(album_id)
     
+    print album_id, type(album_id)
+
     
     
     # close database

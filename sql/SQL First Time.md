@@ -7,7 +7,10 @@
         * 这比`UPDATE`要好一些：因为当该行不存在时，则`UPDATE`不会有任何操作
 	
 * Sqlite3处理Blob
-    * `stuff = buffer(pickle.dumps(range(50), pickle.HIGHEST_PROTOCOL))`
-        * [Store sequences of data in sqllite3 (blob)](http://stackoverflow.com/questions/18080081/store-sequences-of-data-in-sqllite3-blob)
-        * [sqlite3二进制文件存储问题](http://www.tuicool.com/articles/viaUne)
-    * `stuff = sqlite3.Binary(range(50))`
+    * Write into Sqlite3:
+        * `stuff = buffer(pickle.dumps(range(50), pickle.HIGHEST_PROTOCOL))`
+            * [Store sequences of data in sqllite3 (blob)](http://stackoverflow.com/questions/18080081/store-sequences-of-data-in-sqllite3-blob)
+            * [sqlite3二进制文件存储问题](http://www.tuicool.com/articles/viaUne)
+        * `stuff = sqlite3.Binary(range(50))`
+    * Read from Sqlite3
+        * `stuff = pickle.loads(something_from_sqlite3)`

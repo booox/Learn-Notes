@@ -58,6 +58,7 @@ class XMLYSession(requests.Session):
     def getItemsOnPages(self, url=None, _type='album'):
         '''   get album id or sound ids on all pages  '''
         
+        print '\t Start get ', _type, 'on pages'
         item_list = []
         
         res = self.getData(url)
@@ -72,6 +73,8 @@ class XMLYSession(requests.Session):
                 next = soup.find('a', rel='next')
                 page_count = int(next.previous_element.previous_element)
             
+            print '\t Start retrive the first page, total:', page_count
+            
             if _type == 'album' or _type == 0:
                 tag_wrap = soup.find('ul', class_='album_list')
                 albums = tag_wrap.find_all('li')
@@ -85,10 +88,13 @@ class XMLYSession(requests.Session):
                 
                 item_list.extend(sound_ids)
                 
+            print '\t End retrive the first page'
+                
             if page_count > 1:
                 page = 2
                 while page <= page_count:
-                    res = self.getData(url=url.lstrip('/') + '/p' + page)
+                    print '\t Start retrive No.', page, ' page'
+                    res = self.getData(url=url.lstrip('/') + '/p' + str(page))
                     soup = BeautifulSoup(res.text, 'lxml')
                     
                     if _type == 'album' or _type == 0:
@@ -97,7 +103,7 @@ class XMLYSession(requests.Session):
                         albums = tag_wrap.find_all('li')
                         
                         for album in albums:
-                            album_list.append(album["album_id"])            # 327780
+                            item_list.append(album["album_id"])            # 327780
                             
                     elif _type == "sound" or _type == 1:
                         
@@ -105,7 +111,13 @@ class XMLYSession(requests.Session):
                         sound_ids = tag_wrap['sound_ids'].split(',')        # ['11011001','10859773','10669099']
                         
                         item_list.extend(sound_ids)
-            
+                    print '\t End retrive No,' , page, ' page'
+                    
+                    page = page + 1
+
+                    # print '+',
+                    
+            print '\n\t Done get ', _type, 'on pages'
         except:
             raise
             
@@ -115,7 +127,7 @@ class XMLYSession(requests.Session):
     def getZhuboProfile(self, url=None):
         """   Get a zhubo's profile, url is the zhubo's homepage url  """
         
-
+        print 'Retrive Start:', url
         zhubo = xmly.Zhubo()    # create a Zhubo instance
         
         zhubo.url  = url
@@ -142,7 +154,7 @@ class XMLYSession(requests.Session):
                          
             zhubo.album_ids = self.getItemsOnPages(album_url, 'album')       
             zhubo.desc = tag_zhubo.find('div', class_='elli mgtb-10').span.string
-            
+            print 'Retrive Done', url
             
         except:
             raise
@@ -150,26 +162,6 @@ class XMLYSession(requests.Session):
         return zhubo
             
         
-    def getItems(self, url=None):
-        '''  '''
-        
-        # 先判断数据库中是否有对应的zhubo/album/sound
-        # 若没有则获取相关信息
-        
-        # http://www.ximalaya.com/1162654/sound/11011001
-        # http://www.ximalaya.com/8889234/album/3286899
-        # http://www.ximalaya.com/zhubo/1012757/
-        # 
-        
-        
-        # if url:
-            # zhubo = 
-            
-            
-            
-            
-            
-        pass
             
             
             
