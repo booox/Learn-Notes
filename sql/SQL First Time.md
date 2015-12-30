@@ -14,3 +14,34 @@
         * `stuff = sqlite3.Binary(range(50))`
     * Read from Sqlite3
         * `stuff = pickle.loads(something_from_sqlite3)`
+        
+        ```
+            # Create DB
+            dbpath = './test.db'
+            db = sqlite3.connect(dbpath)
+            cursor=db.cursor()
+            cursor.execute("""           
+                CREATE TABLE IF NOT EXISTS trials (
+                timestamp INTEGER PRIMARY KEY, emg BLOB) """)
+            cursor.execute ('DELETE FROM trials')
+            # Define vars
+            now = datetime.datetime.now()
+            timestamp = time.mktime(now.timetuple())
+            emg = list(range(200))
+            s = pickle.dumps(emg, pickle.HIGHEST_PROTOCOL)
+
+            # Store vars
+            cursor.execute("""
+                INSERT INTO trials VALUES (?,?)""", (timestamp,s))
+            db.commit()
+
+            # Fetch vars
+            cursor.execute("""
+                SELECT * FROM trials WHERE timestamp = ?""", (timestamp,))
+            out = cursor.fetchone()
+            s1 = out[1] 
+            emg1 = pickle.loads(s1)
+
+            # Test equality
+            print(emg1 == emg)        
+        ```

@@ -1,22 +1,22 @@
-﻿import requests
-from bs4 import BeautifulSoup
-import codecs
+﻿import sqlite3
+import pickle
 
-def main():
-    url = 'http://www.ximalaya.com/zhubo/8889234/'
-    url = 'http://www.ximalaya.com/zhubo/10936615/'
+conn = sqlite3.connect("xmly.sqlite")
+cur = conn.cursor()
 
-    r = requests.get(url)
+zhubo_id = '36774850'
+cur.execute("SELECT zhubo_id, album_count, album_ids, sound_count, sound_ids FROM Zhubo WHERE zhubo_id = ?",(zhubo_id, ))
 
-    # with codecs.open('test.html', 'w', 'utf-8') as fh:
-        # fh.write(r.text)
-        
-    soup = BeautifulSoup(r.text, 'lxml')
-
-    tag_warp = soup.find('div', class_='index_sounds_wrap'). \
-            find('ul', class_='body_list mg10')
-    # tag_warp["sound_ids"]
+data = cur.fetchone()
+zhubo_id = data[0]
 
 
-if __name__ == '__main__':
-    main()
+zhubo_id = data[0]
+album_count = data[1]
+album_ids = pickle.loads(data[2])
+sound_count = data[3]
+sound_ids = pickle.loads(data[4])
+print "\tzhubo_id in database ", zhubo_id
+print zhubo_id, album_count, sound_count
+print 'Album ids:', album_ids
+print 'Sound ids:', sound_ids

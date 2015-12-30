@@ -49,59 +49,85 @@ class XMLYSession(requests.Session):
             if not pagingBar:
                 page_count = 1
             else:
-                next = soup.find('a', rel='next')
-                page_count = int(next.previous_element.previous_element)
+                page_count = int(soup.find_all('a', class_='pagingBar_page')[-2].string)
             
         except:
             raise
             
         return page_count
+    
+    def getTagOnPage(self, soup):
+        tag_list = []
         
+        try:
+            tag_wrap = soup.find_all('a', class_='tagBtn2')
+            for tag in tag_wrap:
+                tag_list.append(tag.span.string)
+                
+        # except:
+            # pass
+        except Exception, x:
+            print x
+            raise
+            
+        return tag_list
         
-    def getItemsOnPages(self, url=None, _type='album'):
-        '''   get album id or sound ids on all pages  '''
+    def getItemsOnPages(self, url=None, _type='allAlbum'):
+        '''   get album id or sound ids on all pages  
+            _type: allAlbum, Zhubo's all albums page
+            _type: allSound, Zhubo's all sounds page
+            _type: albumSound, Album's all sounds
+        '''
         
-        print '\t Start get ', _type, 'on pages. From : ', url
+        print '\t Start getItemsOnPages _type= ', _type, 'From : ', url
         item_list = []
         
         res = self.getData(url)
         soup = BeautifulSoup(res.content, 'lxml')
-        print 'test'
         try:
             pagingBar = soup.find('div', class_='pagingBar_wrapper')
             
             if not pagingBar:
                 page_count = 1
             else:
-                next = soup.find('a', rel='next')
-                page_count = int(next.previous_element.previous_element)
+                page_count = int(soup.find_all('a', class_='pagingBar_page')[-2].string)
             
-            print '\t Start retrieve the first page, total:', page_count
+            print '\t getItemsOnPages retrieve the first page, total:', page_count
             
-            if _type == 'album' or _type == 0:
+            if _type == 'allAlbum':
                 tag_wrap = soup.find('ul', class_='album_list')
                 albums = tag_wrap.find_all('li')
             
                 for album in albums:
                     item_list.append(album["album_id"])     # 327780
                     
-            elif _type == 'sound' or _type == 1:
+            elif _type == 'allSound':
                 tag_wrap = soup.find('div', class_='body_list_wrap').find('ul', class_='body_list') 
                 sound_ids = tag_wrap['sound_ids'].split(',')        # ['11011001','10859773','10669099']
                 
                 item_list.extend(sound_ids)
                 
-            print '\t End retrive the first page'
+            elif _type == 'albumSound':
+                tag_wrap = soup.find('div', class_='personal_body')
+                sound_ids = tag_wrap['sound_ids'].split(',')
+                
+                for sound_id in sound_ids:
+                    item_list.append(sound_id)
+                
+            print '\t getItemsOnPages retrive the first page done.'
+            print '\t getItemsOnPages retrive multi pages start.'
                 
             if page_count > 1:
                 page = 2
                 while page <= page_count:
                     page_url = url.rstrip('/') + '/p' + str(page)
-                    print '\t Retriving page ', page, '/', page_count, ':', page_url,
+                    if _type == 'albumSound': page_url = url.rstrip('/') + '?page=' + str(page)
+                    print '\t Retriving page ', page, '/', page_count
+                    print '\t Page url: ', page_url,
                     
                     res = self.getData(page_url)
-                    soup = BeautifulSoup(res.text, 'lxml')
-                    if _type == 'album' or _type == 0:
+                    soup = BeautifulSoup(res.content, 'lxml')
+                    if _type == 'allAlbum':
                     
                         tag_wrap = soup.find('ul', class_='album_list')
                         albums = tag_wrap.find_all('li')
@@ -109,19 +135,26 @@ class XMLYSession(requests.Session):
                         for album in albums:
                             item_list.append(album["album_id"])            # 327780
                             
-                    elif _type == "sound" or _type == 1:
+                    elif _type == "allSound":
                         
                         tag_wrap = soup.find('div', class_='body_list_wrap').find('ul', class_='body_list')
                         sound_ids = tag_wrap['sound_ids'].split(',')        # ['11011001','10859773','10669099']
                         
                         item_list.extend(sound_ids)
-                    print '\t Done.'
-                    
+                        
+                    elif _type == 'albumSound':
+                        tag_wrap = soup.find('div', class_='personal_body')
+                        sound_ids = tag_wrap['sound_ids'].split(',')
+                        
+                        for sound_id in sound_ids:
+                            item_list.append(sound_id)
+                        
+                    print '\t Retriving page done ', page, '/', page_count
                     page = page + 1
 
-                    # print '+',
+            print '\t getItemsOnPages retrive multi pages Done.'
                     
-            print '\n\t Done : get ', _type, 'from', page_count, 'pages'
+            print '\n\t getItemsOnPages Done : get ', _type, 'from', page_count, 'pages'
         except:
             raise
             
@@ -131,7 +164,7 @@ class XMLYSession(requests.Session):
     def getZhuboProfile(self, url=None):
         """   Get a zhubo's profile, url is the zhubo's homepage url  """
         
-        print '\tRetrive Start:', url
+        print '\t Retrive Start:', url
         zhubo = xmly.Zhubo()    # create a Zhubo instance
         
         zhubo.url  = url
@@ -143,7 +176,7 @@ class XMLYSession(requests.Session):
         zhubo.sound_url = sound_url
         
         res = self.getData(zhubo.url)
-        soup = BeautifulSoup(res.text, 'lxml')
+        soup = BeautifulSoup(res.content, 'lxml')
         
         try:
             # print soup.title
@@ -153,8 +186,8 @@ class XMLYSession(requests.Session):
                          next_sibling.next_sibling.string)
             zhubo.follow = int(tag_zhubo.find('i', class_='icon4-add'). \
                          next_sibling.next_sibling.string)
-            zhubo.sound = int(tag_zhubo.find('i', class_='icon4-sound'). \
-                         next_sibling.next_sibling.string)
+            # zhubo.sound = int(tag_zhubo.find('i', class_='icon4-sound'). \
+                         # next_sibling.next_sibling.string)
             zhubo.favorites = int(tag_zhubo.find('i', class_='icon4-heart'). \
                          next_sibling.next_sibling.string)
             zhubo.album_count = int(soup.find_all('div', class_='userCenterHd')[0]. \
@@ -163,26 +196,149 @@ class XMLYSession(requests.Session):
                         span.string.rstrip(')').split('(')[1])
                         
                          
-            zhubo.album_ids = self.getItemsOnPages(album_url, 'album')       
-            zhubo.sound_ids = self.getItemsOnPages(sound_url , 'sound')       
+            zhubo.album_ids = self.getItemsOnPages(album_url, 'allAlbum')       
+            zhubo.sound_ids = self.getItemsOnPages(sound_url , 'allSound')       
             zhubo.desc = tag_zhubo.find('div', class_='elli mgtb-10').span.string
             
-            print '\tRetrive Done', url
+            print '\t Retrive Done', url
             
         except:
             raise
             
         return zhubo
             
+    def updateZhubo(self, url=None, do='getnew'):
+        """   Get a zhubo's album & sound count , url is the zhubo's homepage url  """
         
+        print '\t Retrive Start:', url
+        zhubo = xmly.Zhubo()    # create a Zhubo instance
+        
+        zhubo.url  = url
+        zhubo_id = url.rstrip('/').split('/')[-1]
+        album_url = xmly.HOME_URL + '/' + zhubo_id + '/album/'
+        sound_url = xmly.HOME_URL + '/' + zhubo_id + '/sound/'
+        
+        res = self.getData(zhubo.url)
+        soup = BeautifulSoup(res.content, 'lxml')
+        
+        if do == 'check':
+            try:
+                print '\t Zhubo Check Start'
+                zhubo.album_count = int(soup.find_all('div', class_='userCenterHd')[0]. \
+                            span.string.rstrip(')').split('(')[1])
+                zhubo.sound_count = int(soup.find_all('div', class_='userCenterHd')[1]. \
+                            span.string.rstrip(')').split('(')[1])
+                            
+                print '\t Zhubo Check Done'
+                
+            except:
+                raise
+        elif do == 'getnew':
+            try:
+                print '\t Zhubo getnew Start'
+                zhubo.album_count = int(soup.find_all('div', class_='userCenterHd')[0]. \
+                            span.string.rstrip(')').split('(')[1])
+                zhubo.sound_count = int(soup.find_all('div', class_='userCenterHd')[1]. \
+                            span.string.rstrip(')').split('(')[1])
+                            
+                             
+                zhubo.album_ids = self.getItemsOnPages(album_url, 'album')       
+                zhubo.sound_ids = self.getItemsOnPages(sound_url , 'sound')       
+                
+                print '\t Zhubo getnew Done'
+                
+            except:
+                raise
+            
+        return zhubo
             
             
             
+    def getAlbumProfile(self, zhubo_id, album_id):
+        url = xmly.HOME_URL + '/' + zhubo_id + '/album/' + album_id + '/'
+        print url
+        album = xmly.Album()    # create a Album instance
+        
+        # album properties
+        
+        # extract info about album
+        res = self.getData(url)
+        soup = BeautifulSoup(res.content, 'lxml')
+        
+        
+        try:
+            name                =   soup.h1.string
+            category            =   soup.find('span', class_='mgr-5').previous_element.previous_element    
+            playcount          =    soup.find('div', class_='detailContent_playcountDetail').span.string
+            sound_count     =   soup.find('span', class_='albumSoundcount').string[1:-1]
+            update_time      =  soup.find('div', class_='detailContent_category').span.string.split(':')[1].strip()
+            
+            tag_list = self.getTagOnPage(soup)
+            sound_ids = self.getItemsOnPages(url , 'albumSound')       
             
             
+            album.album_id         =   album_id
+            album.zhubo_id         =   zhubo_id
+            album.url                    =   url
+            
+            album.name               =   name
+            album.category           =   category
+            album.tag                    =   tag_list
+            album.playcount          =   playcount
+            album.sound_count        =   sound_count
+            album.update_time        =   update_time            
+            album.sound_ids          =   sound_ids
+            
+        except:
+            raise
+            
+        return album
             
             
+    def updateAlbum(self, url=None, do='getnew'):
+        """   Get a zhubo's album & sound count , url is the zhubo's homepage url  """
+        
+        print '\t Retrive Start:', url
+        zhubo = xmly.Zhubo()    # create a Zhubo instance
+        
+        zhubo.url  = url
+        zhubo_id = url.rstrip('/').split('/')[-1]
+        album_url = xmly.HOME_URL + '/' + zhubo_id + '/album/'
+        sound_url = xmly.HOME_URL + '/' + zhubo_id + '/sound/'
+        
+        res = self.getData(zhubo.url)
+        soup = BeautifulSoup(res.content, 'lxml')
+        
+        if do == 'check':
+            try:
+                print '\t Zhubo Check Start'
+                zhubo.album_count = int(soup.find_all('div', class_='userCenterHd')[0]. \
+                            span.string.rstrip(')').split('(')[1])
+                zhubo.sound_count = int(soup.find_all('div', class_='userCenterHd')[1]. \
+                            span.string.rstrip(')').split('(')[1])
+                            
+                print '\t Zhubo Check Done'
+                
+            except:
+                raise
+        elif do == 'getnew':
+            try:
+                print '\t Zhubo getnew Start'
+                zhubo.album_count = int(soup.find_all('div', class_='userCenterHd')[0]. \
+                            span.string.rstrip(')').split('(')[1])
+                zhubo.sound_count = int(soup.find_all('div', class_='userCenterHd')[1]. \
+                            span.string.rstrip(')').split('(')[1])
+                            
+                             
+                zhubo.album_ids = self.getItemsOnPages(album_url, 'album')       
+                zhubo.sound_ids = self.getItemsOnPages(sound_url , 'sound')       
+                
+                print '\t Zhubo getnew Done'
+                
+            except:
+                raise
             
+        return zhubo
             
             
             

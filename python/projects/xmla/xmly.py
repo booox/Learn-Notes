@@ -15,7 +15,6 @@ class Zhubo(object):
             url         = None,
             fans        = 0,
             follow   = 0,
-            sound      = 0,
             favorites   = 0,
             album_url   = None,
             album_ids   = None,
@@ -29,7 +28,6 @@ class Zhubo(object):
         self.url = url
         self.fans = fans
         self.follow = follow
-        self.sound = sound
         self.favorites = favorites
         self.album_url = album_url
         self.album_ids = album_ids
@@ -42,6 +40,7 @@ class Zhubo(object):
 class Album(object):
     def __init__(self,
             album_id              = None,
+            zhubo_id              = None,
             name        =   None,
             url             =   None,
             category   =   None,
@@ -52,18 +51,21 @@ class Album(object):
             update_time =   None):
             
         self.album_id         =   album_id
-        self.name   =   name
-        self.url   =   url
-        self.category   =   category
-        self.tag   =   tag
-        self.playcount   =   playcount
-        self.sound_ids   =   sound_ids
-        self.sound_count   =   sound_count
-        self.update_time   =   update_time
+        self.zhubo_id         =   zhubo_id
+        self.name               =   name
+        self.url                    =   url
+        self.category           =   category
+        self.tag                    =   tag
+        self.playcount          =   playcount
+        self.sound_ids          =   sound_ids
+        self.sound_count        =   sound_count
+        self.update_time        =   update_time
         
 class Sound(object):
     def __init__(self,
             sound_id      =   None,
+            album_id      =   None,
+            zhubo_id     =   None,
             name    =   None,
             url         =   None,
             playcount  =   0,
@@ -73,7 +75,9 @@ class Sound(object):
             forward         =   0
             ):
         
-        self.sound_id                 =    sound_id
+        self.sound_id       =    sound_id
+        self.album_id       =    album_id
+        self.zhubo_id       =    zhubo_id
         self.name           =   name
         self.url                =   url
         self.playcount     =   playcount
@@ -106,7 +110,6 @@ def initDB(cur):
             url TEXT,
             fans INTEGER,
             follow INTEGER,
-            sound INTEGER,
             favorites INTEGER,
             album_url TEXT,
             album_ids BLOB,
@@ -119,6 +122,7 @@ def initDB(cur):
         CREATE TABLE IF NOT EXISTS Album (
             id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
             album_id TEXT UNIQUE,
+            zhubo_id TEXT,
             name TEXT,
             url TEXT,
             category TEXT,
@@ -132,6 +136,8 @@ def initDB(cur):
         CREATE TABLE IF NOT EXISTS Sound (
             id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
             sound_id TEXT UNIQUE,
+            album_id TEXT,
+            zhubo_id TEXT,
             name TEXT,
             url TEXT,
             playcount INTEGER,
