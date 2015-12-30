@@ -41,7 +41,7 @@ class XMLYSession(requests.Session):
         page_count = 0
         
         res = self.getData(url)
-        soup = BeautifulSoup(res.text, 'lxml')
+        soup = BeautifulSoup(res.content, 'lxml')
         
         try:
             pagingBar = soup.find('div', class_='pagingBar_wrapper')
@@ -65,7 +65,7 @@ class XMLYSession(requests.Session):
         item_list = []
         
         res = self.getData(url)
-        soup = BeautifulSoup(res.text, 'lxml')
+        soup = BeautifulSoup(res.content, 'lxml')
         print 'test'
         try:
             pagingBar = soup.find('div', class_='pagingBar_wrapper')

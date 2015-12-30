@@ -60,7 +60,7 @@ if __name__ == '__main__':
                     
                     cur.execute('''INSERT OR REPLACE INTO Zhubo(zhubo_id, name, url, fans, follow,
                         sound, favorites, album_url, desc, album_ids, album_count, sound_count, sound_ids)
-                        VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ? )''', (zhubo.zhubo_id, zhubo.name, zhubo.url,
+                        VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)''', (zhubo.zhubo_id, zhubo.name, zhubo.url,
                         zhubo.fans, zhubo.follow, zhubo.sound, zhubo.favorites, zhubo.album_url, zhubo.desc,
                          zhubo.album_ids, zhubo.album_count, zhubo.sound_count, zhubo.sound_ids))
                     
