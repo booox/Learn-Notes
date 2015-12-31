@@ -62,8 +62,8 @@ class XMLYSession(requests.Session):
         try:
             tag_wrap = soup.find_all('a', class_='tagBtn2')
             for tag in tag_wrap:
-                tag_list.append(tag.span.string)
-                
+                tag_list.append(tag.span.string.encode('utf-8'))
+                # print type(tag.span.string)
         # except:
             # pass
         except Exception, x:
@@ -270,7 +270,7 @@ class XMLYSession(requests.Session):
             name                =   soup.h1.string
             category            =   soup.find('span', class_='mgr-5').previous_element.previous_element    
             playcount          =    soup.find('div', class_='detailContent_playcountDetail').span.string
-            sound_count     =   soup.find('span', class_='albumSoundcount').string[1:-1]
+            sound_count     =   int(soup.find('span', class_='albumSoundcount').string[1:-1])
             update_time      =  soup.find('div', class_='detailContent_category').span.string.split(':')[1].strip()
             
             tag_list = self.getTagOnPage(soup)
@@ -295,50 +295,52 @@ class XMLYSession(requests.Session):
         return album
             
             
-    def updateAlbum(self, url=None, do='getnew'):
+    def updateAlbum(self, url=None, do='check'):
         """   Get a zhubo's album & sound count , url is the zhubo's homepage url  """
         
         print '\t Retrive Start:', url
-        zhubo = xmly.Zhubo()    # create a Zhubo instance
+        album = xmly.Album()    # create a Zhubo instance
         
-        zhubo.url  = url
-        zhubo_id = url.rstrip('/').split('/')[-1]
-        album_url = xmly.HOME_URL + '/' + zhubo_id + '/album/'
-        sound_url = xmly.HOME_URL + '/' + zhubo_id + '/sound/'
+        album.url  = url
+        # zhubo_id = url.rstrip('/').split('/')[-1]
+        # album_url = xmly.HOME_URL + '/' + zhubo_id + '/album/'
+        # sound_url = xmly.HOME_URL + '/' + zhubo_id + '/sound/'
         
-        res = self.getData(zhubo.url)
+        res = self.getData(album.url)
         soup = BeautifulSoup(res.content, 'lxml')
         
         if do == 'check':
             try:
-                print '\t Zhubo Check Start'
-                zhubo.album_count = int(soup.find_all('div', class_='userCenterHd')[0]. \
-                            span.string.rstrip(')').split('(')[1])
-                zhubo.sound_count = int(soup.find_all('div', class_='userCenterHd')[1]. \
-                            span.string.rstrip(')').split('(')[1])
+                print '\t Album Check Start'
+                album.sound_count = int(soup.find('span', class_='albumSoundcount').string[1:-1])
+                album.update_time = soup.find('div', class_='detailContent_category').span.string.split(':')[1].strip()
+                
                             
-                print '\t Zhubo Check Done'
+                print '\t Album Check Done'
                 
             except:
                 raise
         elif do == 'getnew':
             try:
-                print '\t Zhubo getnew Start'
-                zhubo.album_count = int(soup.find_all('div', class_='userCenterHd')[0]. \
-                            span.string.rstrip(')').split('(')[1])
-                zhubo.sound_count = int(soup.find_all('div', class_='userCenterHd')[1]. \
-                            span.string.rstrip(')').split('(')[1])
+                print '\t Album getnew Start'
+                sound_count = int(soup.find('span', class_='albumSoundcount').string[1:-1])
+                update_time = soup.find('div', class_='detailContent_category').span.string.split(':')[1].strip()
+                playcount      = soup.find('div', class_='detailContent_playcountDetail').span.string
                             
-                             
-                zhubo.album_ids = self.getItemsOnPages(album_url, 'album')       
-                zhubo.sound_ids = self.getItemsOnPages(sound_url , 'sound')       
+                sound_ids = self.getItemsOnPages(url , 'albumSound') 
+
                 
-                print '\t Zhubo getnew Done'
+                album.playcount        =   playcount              
+                album.sound_ids       =   sound_ids
+                album.sound_count   =   sound_count               
+                album.update_time    =   update_time                
+
+                print '\t Album getnew Done'
                 
             except:
                 raise
             
-        return zhubo
+        return album
             
             
             

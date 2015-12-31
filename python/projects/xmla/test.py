@@ -1,22 +1,26 @@
-﻿import sqlite3
+import sqlite3
 import pickle
 
 conn = sqlite3.connect("xmly.sqlite")
 cur = conn.cursor()
 
-zhubo_id = '36774850'
-cur.execute("SELECT zhubo_id, album_count, album_ids, sound_count, sound_ids FROM Zhubo WHERE zhubo_id = ?",(zhubo_id, ))
+album_id = '2754031'
+cur.execute("SELECT tag, sound_count, sound_ids, update_time FROM Album WHERE album_id = ?",(album_id, ))
 
 data = cur.fetchone()
-zhubo_id = data[0]
+
+tag = pickle.loads(data[0])
+sound_count = data[1]
+sound_ids = pickle.loads(data[2])
+update_time = data[3]
 
 
-zhubo_id = data[0]
-album_count = data[1]
-album_ids = pickle.loads(data[2])
-sound_count = data[3]
-sound_ids = pickle.loads(data[4])
-print "\tzhubo_id in database ", zhubo_id
-print zhubo_id, album_count, sound_count
-print 'Album ids:', album_ids
+
+
+print "\t album_id in database ", album_id
+print update_time, sound_count
+print 'tag:', tag
 print 'Sound ids:', sound_ids
+
+for t in tag:
+    print t.decode('utf-8')

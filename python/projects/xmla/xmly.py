@@ -45,7 +45,7 @@ class Album(object):
             url             =   None,
             category   =   None,
             tag             =   None,
-            playcount   =  0,
+            playcount   =  None,
             sound_ids      =   None,
             sound_count      =   0,
             update_time =   None):
@@ -127,7 +127,7 @@ def initDB(cur):
             url TEXT,
             category TEXT,
             tag BLOB,
-            playcount INTEGER,
+            playcount TEXT,
             sound_ids BLOB,
             sound_count INTEGER,
             update_time TEXT

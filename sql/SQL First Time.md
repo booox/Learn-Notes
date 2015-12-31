@@ -12,6 +12,10 @@
             * [Store sequences of data in sqllite3 (blob)](http://stackoverflow.com/questions/18080081/store-sequences-of-data-in-sqllite3-blob)
             * [sqlite3二进制文件存储问题](http://www.tuicool.com/articles/viaUne)
         * `stuff = sqlite3.Binary(range(50))`
+        * 将包含中文字符的`list`用pickle处理时一直提示:
+            * `RuntimeError: maximum recursion depth exceeded`好像是递归调用超过一定次数时触发的
+            * 解决：将中文字符用`utf-8`编码，`s.encode('utf-8')` 然后再用pickle.loads就可以了
+            * 
     * Read from Sqlite3
         * `stuff = pickle.loads(something_from_sqlite3)`
         

@@ -4,6 +4,7 @@
 import xmly
 from xmly_session import XMLYSession
 import pickle
+import sqlite3
 
 if __name__ == '__main__':
     ''' how to judge the server have been updated.???'''
@@ -12,7 +13,8 @@ if __name__ == '__main__':
         print ''
         url = raw_input('Enter a zhubo, album or sound url:')
         
-        if len(url) < 1: url = 'http://www.ximalaya.com/zhubo/1012757/'
+        # if len(url) < 1: url = 'http://www.ximalaya.com/zhubo/1012757/'
+        if len(url) < 1: url = 'http://www.ximalaya.com/29872932/album/2754031/'
         if url == 'bye': exit(1)
         print url
         result = xmly.checkURL(url)
@@ -110,26 +112,82 @@ if __name__ == '__main__':
                 album_id = result["album_id"]
                 
                 # check if album_id exists in db?
-                cur.execute("SELECT sound_count, update_time FROM Album WHERE zhubo_id = ? and album_id = ?",
-                (zhubo_id, album_id))
+                cur.execute("SELECT sound_count, update_time FROM Album WHERE album_id = ?", (album_id, ))
                 
                 try:
                     data = cur.fetchone()
                     sound_count = data[0]
                     update_time = data[1]
-                    print "Album in database ", album_id
+                    print "Album in database ", zhubo_id, '/album/', album_id
                     
+                    # check the value in web page
                     print 'Check album in webpage'
                     session = XMLYSession()
-                    album = session.getAlbumProfile(zhubo_id, album_id)
+                    album = session.updateAlbum(url, 'check')
+                    print "\t Value in DB -- sound_count:", sound_count, '\t update_time:', update_time
+                    print '\t Value in Web -- sound_count:', album.sound_count, '\t update_time:', album.update_time
                     
+                    # the value increase or fresh?
+                    if album.sound_count > sound_count or album.update_time > update_time:
+                        
+                        # update db
+                        print 'Album Nedd Update.'
+                        album = session.updateAlbum(url, 'getnew')
+                        
+                        playcount      =  album.playcount
+                        sound_ids     =  album.sound_ids 
+                        sound_count = album.sound_count   
+                        update_time  = album.update_time
+                        
+                        # buffer album_ids for BLOB
+                        sound_ids = buffer(pickle.dumps(sound_ids, pickle.HIGHEST_PROTOCOL))
+                        
+                        print 'Update album start.', zhubo_id, '/album/', album_id
+                        cur.execute('''UPDATE Album SET playcount = ?, sound_ids = ?, sound_count = ?,
+                                update_time = ? WHERE album_id = ?''', (playcount, sound_ids,
+                                sound_count, update_time, album_id))
+                                
+                        conn.commit()
+                        print 'Update album Done.', zhubo_id, '/album/', album_id
+                    else:
+                        print "NO NEED for update."
 
                     
                 except TypeError:
-                    pass
+                    print "Album  doesn't in db:", zhubo_id, '/album/', album_id
+                    
+                    # Add new Album into db
+                    session = XMLYSession()
+                    album = session.getAlbumProfile(zhubo_id, album_id)
+                    
+                    album_id       =  album.album_id
+                    zhubo_id       =  album.zhubo_id
+                    name            =  album.name
+                    url                 =  album.url
+                    category        = album.category
+                    tag                 = album.tag
+                    playcount      =  album.playcount
+                    sound_ids      = album.sound_ids
+                    sound_count  = album.sound_count
+                    update_time   = album.update_time
+                    
+                    # buffer album_ids for BLOB                    
+                    tag = buffer(pickle.dumps(tag, pickle.HIGHEST_PROTOCOL))
+                    sound_ids = buffer(pickle.dumps(sound_ids, pickle.HIGHEST_PROTOCOL))
+                    
+                    print 'Write New Album start.', zhubo_id, '/album/', album_id
+                    cur.execute('''INSERT OR REPLACE INTO Album (album_id, zhubo_id, name, url,
+                    category, tag, playcount, sound_ids, sound_count, update_time) VALUES (?, ?, ?, ?,
+                    ?, ?, ?, ?, ?, ?)''', (album_id, zhubo_id, name, url,
+                    category, tag, playcount, sound_ids, sound_count, update_time))
+                            
+                    conn.commit()
+                    print 'Write New Album Done.', zhubo_id, '/album/', album_id
+                    
                     
                 except Exception, x:
-                    print x
+                    fh = open('error', 'w')
+                    fh.write(x)
                     raise
                 
                 
