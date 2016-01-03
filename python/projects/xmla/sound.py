@@ -4,7 +4,6 @@
 import xmly
 from xmly_session import XMLYSession
 import pickle
-import sqlite3
 
 if __name__ == '__main__':
     ''' how to judge the server have been updated.???'''
@@ -186,22 +185,70 @@ if __name__ == '__main__':
                     
                     
                 except Exception, x:
-                    fh = open('error', 'w')
-                    fh.write(x)
+                    print x
                     raise
                 
-                
-                
-                
-                # print album.url, album.playcount, album.sound_count
-                # print album.update_time
-                # print album.sound_ids
-                # print album.tag
             
             # -------------- sound ------------ 
             elif result["url_type"] == "sound":
                 zhubo_id = result["zhubo_id"]
                 sound_id = result["sound_id"]
+                
+                # check if the sound exists in db ?
+                cur.execute("SELECT play_path_64, play_path_32, play_path, title FROM Track WHERE sound_id = ?", (sound_id, ))
+                
+                try:
+                    data = cur.fetchone()
+                    play_path_64 = data[0]
+                    play_path_32 = data[1]
+                    play_path = data[2]
+                    title = data[3]
+                    print 'Sound in database ', zhubo_id, '/sound/', sound_id
+                    
+                    # do download
+                    print 'Download Sound start'
+                    print 'Download Sound end...'
+                    
+                except TypeError:
+                    print "Sound  doesn't in db:", zhubo_id, '/sound/', sound_id
+                    
+                    # Add new Album into db
+                    session = XMLYSession()
+                    track = session.getTrackProfile(sound_id)
+                    
+                    album_id            =  track.album_id          
+                    zhubo_id            =   track.zhubo_id           
+                    sound_id            =   track.sound_id           
+                    title                   =  track.title                 
+                    intro                  =   track.intro                 
+                    duration             =   track.duration            
+                    play_count          =  track.play_count       
+                    play_path_32      =  track.play_path_32    
+                    play_path_64      =  track.play_path_64    
+                    play_path           =  track.play_path         
+                    category_name    =  track.category_name 
+                    shares_count       =  track.shares_count     
+                    favorites_count    =  track.favorites_count  
+                    
+                    
+
+                    print 'Write New Sound start.', zhubo_id, '/sound/', sound_id
+                    cur.execute('''INSERT OR REPLACE INTO Track (album_id, zhubo_id, sound_id, title,
+                    intro, duration, play_count, play_path_32, play_path_64, play_path, 
+                    category_name, shares_count, favorites_count) VALUES (?, ?, ?, ?,
+                    ?, ?, ?, ?, ?, ?, ?, ?, ?)''', (album_id, zhubo_id, sound_id, title,
+                    intro, duration, play_count, play_path_32, play_path_64, play_path, 
+                    category_name, shares_count, favorites_count))
+                            
+                    conn.commit()
+                    print 'Write New Sound Done.', zhubo_id, '/sound/', sound_id
+                    
+                    
+                except Exception, x:
+                    print x
+                    raise
+                    
+                    
     
     
             xmly.closeDB(conn)

@@ -146,3 +146,10 @@
                 print "not exception"
     ```
     > 捕获列表列出的异常，进行处理。若except后无任何参数，则捕获所有异常。
+    
+    
+* 执行Python的CGI脚本
+    * （Common Gateway Interface）在这里是指一种基于浏览器的输入、在Web服务器上运行的程序方法
+    * CGI脚本使你的浏览器与用户能交互.这个脚本通常象服务器和系统中其他程序如数据库的桥梁。
+    * 首先考虑到nginx作为web server
+    * 但据说，原生Nginx不能直接执行外部CGI程序，因此需要依赖spawn-fcgi来执行

@@ -342,5 +342,52 @@ class XMLYSession(requests.Session):
             
         return album
             
+
+    def getTrackProfile(self, sound_id):
+        ''' get track profile '''
+        
+        # url: http://www.ximalaya.com/tracks/10259524.json
+        url = xmly.HOME_URL + '/tracks/' + sound_id + '.json'
+        
+        res = self.getData(url)
+        data = json.loads(res.content)
+        
+        track = xmly.Track() 
+        
+        try:
+      
+            album_id            =  data['album_id']     
+            zhubo_id            =  data['uid']
+            sound_id            =  data['id']
+            title                   =  data['title']
+            intro                  =  data['intro']
+            duration             =  data['duration']
+            play_count          =  data['play_count']
+            play_path_32      =  data['play_path_32']
+            play_path_64      =  data['play_path_64']
+            play_path           =  data['play_path']
+            category_name    =  data['category_name']
+            shares_count       =  data['shares_count']
+            favorites_count    =  data['favorites_count']
+
+        
+            track.album_id       =    album_id
+            track.zhubo_id       =    zhubo_id
+            track.sound_id       =    sound_id
+            track.title                  =   title
+            track.intro              =   intro
+            track.duration           =   duration
+            track.play_count         =   play_count
+            track.play_path_32      =   play_path_32
+            track.play_path_64       =   play_path_64
+            track.play_path            =   play_path
+            track.category_name      =   category_name
+            track.shares_count        =   shares_count
+            track.favorites_count      =   favorites_count
+        
             
             
+        except:
+            raise
+            
+        return track

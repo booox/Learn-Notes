@@ -61,30 +61,36 @@ class Album(object):
         self.sound_count        =   sound_count
         self.update_time        =   update_time
         
-class Sound(object):
+class Track(object):
     def __init__(self,
-            sound_id      =   None,
-            album_id      =   None,
-            zhubo_id     =   None,
-            name    =   None,
-            url         =   None,
-            playcount  =   0,
-            createtime  =   None,
-            like        =   0,
-            comment     =   0,
-            forward         =   0
+            album_id            =   None,
+            zhubo_id            =   None,  # uid
+            sound_id            =   None,  # id
+            intro                   =   None,
+            duration             =   0,
+            title                   =   None,
+            play_count          =   0,
+            play_path_32       =   None,
+            play_path_64        =   None,
+            play_path             =   None,
+            category_name      =   None,
+            shares_count         =   0,
+            favorites_count       =   0
             ):
         
-        self.sound_id       =    sound_id
         self.album_id       =    album_id
         self.zhubo_id       =    zhubo_id
-        self.name           =   name
-        self.url                =   url
-        self.playcount     =   playcount
-        self.createtime    =   createtime
-        self.like              =   like
-        self.comment     =   comment
-        self.forward        =   forward
+        self.sound_id       =    sound_id
+        self.title                  =   title
+        self.intro              =   intro
+        self.duration           =   duration
+        self.play_count         =   play_count
+        self.play_path_32      =   play_path_32
+        self.play_path_64       =   play_path_64
+        self.play_path            =   play_path
+        self.category_name      =   category_name
+        self.shares_count        =   shares_count
+        self.favorites_count      =   favorites_count
         
 
        
@@ -133,35 +139,25 @@ def initDB(cur):
             update_time TEXT
         );
         
-        CREATE TABLE IF NOT EXISTS Sound (
+        CREATE TABLE IF NOT EXISTS Track (
             id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
             sound_id TEXT UNIQUE,
             album_id TEXT,
             zhubo_id TEXT,
-            name TEXT,
-            url TEXT,
-            playcount INTEGER,
-            createtime TEXT,
-            like INTEGER,
-            comment INTEGER,
-            forward INTEGER
+            title TEXT,
+            intro TEXT,
+            duration INTEGER,
+            play_count INTEGER,
+            play_path_32 TEXT,
+            play_path_64 TEXT,
+            play_path TEXT,
+            category_name TEXT,
+            shares_count INTEGER,
+            favorites_count INTEGER
         );
         
     ''')
         
-def queryDB(cur, column, table, field, value):          
-    ''' query database by column from table '''
-    
-    cur.execute('SELECT ? FROM ? WHERE ? = ?',
-        (column, table, field, buffer(value)))
-        
-    try:
-        data = cur.fetchone()[0]
-    except:
-        raise
-
-
-
 
 def checkURL(url):
     ''' simple check zhubo url '''
