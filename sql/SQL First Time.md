@@ -49,3 +49,38 @@
             # Test equality
             print(emg1 == emg)        
         ```
+        
+* Sqlite3存储、读取中文数据
+    *. 存储中文text时，用utf-8编码
+        ` sutff.encode('utf-8') `
+        
+    *. Text字符集？ text_factory
+        ```
+        def connect_db():
+            """Connects to the specific database."""
+            conn = sqlite3.connect(app.config['DATABASE'])
+            conn.text_factory = str
+            return conn        
+        ```
+        * 若没有设置，则在显示时会出错：
+        ```
+        sqlite3.ProgrammingError
+ProgrammingError: You must not use 8-bit bytestrings unless you use a text_factory that can interpret 8-bit bytestrings (like text_factory = str). It is highly recommended that you instead just switch your application to Unicode strings.
+        
+        ```
+        
+        
+    *. 显示时，设置页面字符集
+    ```
+        import sys
+        reload(sys)
+        sys.setdefaultencoding('utf-8')
+    
+    ```
+        * 如果没有设置此行，则提示：
+        ```
+        UnicodeDecodeError: 'ascii' codec can't decode byte 0xe5 in position 0: ordinal not in range(128)
+        
+        ```
+    
+    

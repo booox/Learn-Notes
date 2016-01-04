@@ -174,6 +174,8 @@ def hello(name=None):
             db.close()
 
 ```
+* We store our current database connection on the special `g` object that Flask provides for us.
+* This object stores information for one request only and is available from within each function.
 
 ## Step 5: The View Functions
 
