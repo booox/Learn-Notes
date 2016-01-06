@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import os
 
 URL_BASE = 'http://flask.pocoo.org/docs/0.10/'
-PATH_BASE = r'flask-doc'
+PATH_BASE = 'flask-doc\\'
 
 url = 'http://flask.pocoo.org/docs/0.10/errorhandling/#debugging-application-errors'
 url = 'http://flask.pocoo.org/docs/0.10/foreword/'
@@ -26,39 +26,52 @@ def getData(url):
     res = requests.get(url=url, headers=headers)
     soup = BeautifulSoup(res.content, 'lxml')
     data = soup.find('div', class_='bodywrapper')
-    # return str(data.contents).encode('utf-8')
     return data
 
 
-def getUrlList(url=URL_BASE):
-    url_list = []
+def getTitleList(url=URL_BASE):
+    title_list = []
     
     data = getData(url)
+    
+    # write the index.html
+    fname = PATH_BASE + '\\' + 'index.html'
+    with open(fname, 'w') as f:
+        html = HTML_PREFIX + data.renderContents() + HTML_SUFFIX
+        f.write(html)
+    
+    # extract title_list
     links = data.find_all('a')
     for link in links:
-        # print link['href']
+        print link['href']
         href = link['href']
-        if not href.startswith('#'):
+        if ( not href.startswith('#') ) and ( not href.startswith('http:') ):
             href = href.split('/')[0]
-            url_list.append(link['href'].split('/')[0])
+            title_list.append(link['href'].split('/')[0])
     
-    urls = {}
-    for url in url_list:
-        urls[url] = urls.get(url)   # default: None
+    titles = {}
+    for url in title_list:
+        titles[url] = titles.get(url)   # default: None
         
-    url_list = urls.keys()
-    return url_list
+    title_list = titles.keys()
+    return title_list
         
     
-    
-def writeHtml(url, fname):
-    data = getData(url).renderContents()
-    html = HTML_PREFIX + data + HTML_SUFFIX
-    fname = r'flask-doc\test.html'
-    with open(fname, 'w') as f:
-        f.write(html)
 
 if __name__ == '__main__':
-    url_list =  getUrlList()
-    for url in url_list:
-        print url
+    title_list =  getTitleList()
+    print title_list
+    exit(1)
+    for title in title_list:
+        fname = PATH_BASE + '\\' + title + '.html'
+        url = URL_BASE + title
+        print title, '\t', fname, '\t', url
+        
+        data = getData(url)
+        # data = str(data.contents).encode('utf-8')
+        html = HTML_PREFIX + data.renderContents() + HTML_SUFFIX
+        
+        with open(fname, 'w') as f:
+            f.write(html)
+            
+        # break

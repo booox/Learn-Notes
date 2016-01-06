@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<div class="body" role="main">
+<div class="section" id="installation">
+<span id="id1"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>Flask depends on two external libraries, <a class="reference external" href="http://werkzeug.pocoo.org/">Werkzeug</a> and <a class="reference external" href="http://jinja.pocoo.org/2/">Jinja2</a>.
+Werkzeug is a toolkit for WSGI, the standard Python interface between web
+applications and a variety of servers for both development and deployment.
+Jinja2 renders templates.</p>
+<p>So how do you get all that on your computer quickly?  There are many ways you
+could do that, but the most kick-ass method is virtualenv, so let’s have a look
+at that first.</p>
+<p>You will need Python 2.6 or higher to get started, so be sure to have an
+up-to-date Python 2.x installation.  For using Flask with Python 3 have a
+look at <a class="reference internal" href="../python3/#python3-support"><span>Python 3 Support</span></a>.</p>
+<div class="section" id="virtualenv">
+<span id="id2"></span><h2>virtualenv<a class="headerlink" href="#virtualenv" title="Permalink to this headline">¶</a></h2>
+<p>Virtualenv is probably what you want to use during development, and if you have
+shell access to your production machines, you’ll probably want to use it there,
+too.</p>
+<p>What problem does virtualenv solve?  If you like Python as much as I do,
+chances are you want to use it for other projects besides Flask-based web
+applications.  But the more projects you have, the more likely it is that you
+will be working with different versions of Python itself, or at least different
+versions of Python libraries.  Let’s face it: quite often libraries break
+backwards compatibility, and it’s unlikely that any serious application will
+have zero dependencies.  So what do you do if two or more of your projects have
+conflicting dependencies?</p>
+<p>Virtualenv to the rescue!  Virtualenv enables multiple side-by-side
+installations of Python, one for each project.  It doesn’t actually install
+separate copies of Python, but it does provide a clever way to keep different
+project environments isolated.  Let’s see how virtualenv works.</p>
+<p>If you are on Mac OS X or Linux, chances are that one of the following two
+commands will work for you:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ sudo easy_install virtualenv
+</pre></div>
+</div>
+<p>or even better:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ sudo pip install virtualenv
+</pre></div>
+</div>
+<p>One of these will probably install virtualenv on your system.  Maybe it’s even
+in your package manager.  If you use Ubuntu, try:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ sudo apt-get install python-virtualenv
+</pre></div>
+</div>
+<p>If you are on Windows and don’t have the <cite>easy_install</cite> command, you must
+install it first.  Check the <a class="reference internal" href="#windows-easy-install"><span>pip and distribute on Windows</span></a> section for more
+information about how to do that.  Once you have it installed, run the same
+commands as above, but without the <cite>sudo</cite> prefix.</p>
+<p>Once you have virtualenv installed, just fire up a shell and create
+your own environment.  I usually create a project folder and a <cite>venv</cite>
+folder within:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ mkdir myproject
+$ cd myproject
+$ virtualenv venv
+New python executable in venv/bin/python
+Installing distribute............done.
+</pre></div>
+</div>
+<p>Now, whenever you want to work on a project, you only have to activate the
+corresponding environment.  On OS X and Linux, do the following:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ . venv/bin/activate
+</pre></div>
+</div>
+<p>If you are a Windows user, the following command is for you:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ venv\scripts\activate
+</pre></div>
+</div>
+<p>Either way, you should now be using your virtualenv (notice how the prompt of
+your shell has changed to show the active environment).</p>
+<p>Now you can just enter the following command to get Flask activated in your
+virtualenv:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ pip install Flask
+</pre></div>
+</div>
+<p>A few seconds later and you are good to go.</p>
+</div>
+<div class="section" id="system-wide-installation">
+<h2>System-Wide Installation<a class="headerlink" href="#system-wide-installation" title="Permalink to this headline">¶</a></h2>
+<p>This is possible as well, though I do not recommend it.  Just run
+<cite>pip</cite> with root privileges:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ sudo pip install Flask
+</pre></div>
+</div>
+<p>(On Windows systems, run it in a command-prompt window with administrator
+privileges, and leave out <cite>sudo</cite>.)</p>
+</div>
+<div class="section" id="living-on-the-edge">
+<h2>Living on the Edge<a class="headerlink" href="#living-on-the-edge" title="Permalink to this headline">¶</a></h2>
+<p>If you want to work with the latest version of Flask, there are two ways: you
+can either let <cite>pip</cite> pull in the development version, or you can tell
+it to operate on a git checkout.  Either way, virtualenv is recommended.</p>
+<p>Get the git checkout in a new virtualenv and run in development mode:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ git clone http://github.com/mitsuhiko/flask.git
+Initialized empty Git repository in ~/dev/flask/.git/
+$ cd flask
+$ virtualenv venv --distribute
+New python executable in venv/bin/python
+Installing distribute............done.
+$ . venv/bin/activate
+$ python setup.py develop
+...
+Finished processing dependencies for Flask
+</pre></div>
+</div>
+<p>This will pull in the dependencies and activate the git head as the current
+version inside the virtualenv.  Then all you have to do is run <code class="docutils literal"><span class="pre">git</span> <span class="pre">pull</span>
+<span class="pre">origin</span></code> to update to the latest version.</p>
+<p>To just get the development version without git, do this instead:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ mkdir flask
+$ cd flask
+$ virtualenv venv --distribute
+$ . venv/bin/activate
+New python executable in venv/bin/python
+Installing distribute............done.
+$ pip install Flask==dev
+...
+Finished processing dependencies for Flask==dev
+</pre></div>
+</div>
+</div>
+<div class="section" id="pip-and-distribute-on-windows">
+<span id="windows-easy-install"></span><h2><cite>pip</cite> and <cite>distribute</cite> on Windows<a class="headerlink" href="#pip-and-distribute-on-windows" title="Permalink to this headline">¶</a></h2>
+<p>On Windows, installation of <cite>easy_install</cite> is a little bit trickier, but still
+quite easy.  The easiest way to do it is to download the
+<a class="reference external" href="http://python-distribute.org/distribute_setup.py">distribute_setup.py</a> file and run it.  The easiest way to run the file is to
+open your downloads folder and double-click on the file.</p>
+<p>Next, add the <cite>easy_install</cite> command and other Python scripts to the
+command search path, by adding your Python installation’s Scripts folder
+to the <cite>PATH</cite> environment variable.  To do that, right-click on the
+“Computer” icon on the Desktop or in the Start menu, and choose “Properties”.
+Then click on “Advanced System settings” (in Windows XP, click on the
+“Advanced” tab instead).  Then click on the “Environment variables” button.
+Finally, double-click on the “Path” variable in the “System variables” section,
+and add the path of your Python interpreter’s Scripts folder. Be sure to
+delimit it from existing values with a semicolon.  Assuming you are using
+Python 2.7 on the default path, add the following value:</p>
+<div class="highlight-python"><div class="highlight"><pre>;C:\Python27\Scripts
+</pre></div>
+</div>
+<p>And you are done!  To check that it worked, open the Command Prompt and execute
+<code class="docutils literal"><span class="pre">easy_install</span></code>.  If you have User Account Control enabled on Windows Vista or
+Windows 7, it should prompt you for administrator privileges.</p>
+<p>Now that you have <code class="docutils literal"><span class="pre">easy_install</span></code>, you can use it to install <code class="docutils literal"><span class="pre">pip</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt; easy_install pip
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</html>

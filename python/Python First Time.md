@@ -188,3 +188,27 @@
     * relative path : A string that describes where a file or directory is stored relative to the current working directory.
     * absolute path : A string that describes where a file or directory is stored that starts at the "top of the tree of directories" .
     * current working directory: The current working directory that you are **in**.
+
+* Python System Path for Windows
+    * PATH=PATH;c:\python26 => 可以在cmd中打开python shell，或使用`python file.py`来运行python程序
+    * PATHEXT=PATHEXT;.PY;.PYM => 可直接运行.py程序
+    
+## Lists
+
+* Reverse a List:   `['a', 1, '2', 'c'][::-1]`
+    * The are seven sequence types: strings, Unicode strings, lists, tuples, bytearrays, buffer, and xrange objects.
+    * The sequence operations sorted in ascending priority:
+        1 `x in s`  `2 in [1, 2, 3]`
+        2 `x not in s`  `4 not in [1, 2, 3]`
+        3 `s + t`  `'hello' + 'world'`
+        4 `s * n` or `n * s`  `'hello ' * 5`
+        5 `s[i]`  `'hello'[2]`
+        6 `s[i:j]`  `'hello'[1:2]`
+        7 `s[i:j:k]`  `'hello'[::-1]`
+        8 `len(s)`  `len('hello')`
+        9 `min(s)`  `min([2, 3, 'a', 55])`
+        10 `max(s)`  `max([2, 3, 'a', 55])`
+        11 `s.index(x)`  `[2, 3, 'a', 55].index('a')`
+        12 `s.count(x)`  `[2, 3, 'a', 55].count('a')`
+
+        
