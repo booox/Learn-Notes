@@ -153,3 +153,38 @@
     * CGI脚本使你的浏览器与用户能交互.这个脚本通常象服务器和系统中其他程序如数据库的桥梁。
     * 首先考虑到nginx作为web server
     * 但据说，原生Nginx不能直接执行外部CGI程序，因此需要依赖spawn-fcgi来执行
+    
+* Command-line arguments
+    * The list of command line arguments passed to a Python script. 
+    * argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). 
+    
+```
+    import sys
+
+    print sys.argv
+    for arg in sys.argv:
+        print arg
+        
+    fname = sys.argv[1]
+    fh = open(fname, 'r')
+    text = fh.read()
+    print fname, len(text)
+```
+
+* `os.popen(cmd)`
+    * *cmd* is a shell command.
+    * The return value is a file pointer that behaves just like an open file.
+    * You can read the output one line at a time with `readline()` or get the whole thing at once with `read()`
+    ```
+        import os
+        
+        cmd = 'ipconfig/all'
+        cp = os.popen(cmd)
+        print cp.read()
+    
+    ```
+    
+* Paths
+    * relative path : A string that describes where a file or directory is stored relative to the current working directory.
+    * absolute path : A string that describes where a file or directory is stored that starts at the "top of the tree of directories" .
+    * current working directory: The current working directory that you are **in**.

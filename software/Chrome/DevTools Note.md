@@ -64,6 +64,23 @@
 
 ## Profiles
 
+* Collect Javascript CPU Profile
+* Take Heap Snapshot
+    > What Do You Know?
+    
+* Record Heap Allocations
+
+## Memory
+
+> Finding Leaks
+
+## Styles : Editing CSS
+
+* Displays CSS rules for active elemnet
+* Enable/disable properties
+* Edit rules for psuedo-classes
+* Link directly to CSS source
+
 ## Frames
 * HTML loading
 * Javascript execution
@@ -73,5 +90,10 @@
 ## Some Other Things
 * Page Speed Plugin for Chrome
 * Google Closure Compiler - making Javascript download and run faster
+
+* Chang Value : Shift + Up/Down
     
-## 
+## Remote Debugging on Android with Chrome
+    [Remote Debugging on Android with Chrome](https://developers.google.com/web/tools/chrome-devtools/debug/remote-debugging/remote-debugging)
+    
+    
