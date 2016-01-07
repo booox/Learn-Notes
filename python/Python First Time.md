@@ -211,4 +211,12 @@
         11 `s.index(x)`  `[2, 3, 'a', 55].index('a')`
         12 `s.count(x)`  `[2, 3, 'a', 55].count('a')`
 
-        
+* Parameters and Arguments
+    * *parameter* ( *formal *parameter  ) : refers to the variable as found in the function definition
+    * *argument* ( *actual *parameter ) : refers to the actual input passed
+    * example:
+        * We defines a *add* function as `def add(x, y): return x + y`, then *x, *y are parameters
+        * While if this is called as add(2, 3), then *2 *3 are arguments
+    * [Parameter (computer programming)](https://en.wikipedia.org/wiki/Parameter_%28computer_programming%29#Parameters_and_arguments)
+    
+    

@@ -1,5 +1,13 @@
 ﻿
-## String & Console Ouutput
+## UNIT 1: Python Syntax
+### Variables 变量
+* 不论是创建Web应用、游戏都会遇到存储和处理不同类型的数据
+* 他们都使用 *variables （ *变量 ）来完成这个任务
+* Variable 就是给他一个特定的名称并使它来存储一段数据。
+* ex: `span = 5`, 这里 *spam 里就存放了数字 *5 。
+
+
+## UNIT 2: String & Console Ouutput
 
 * Three ways to create strings
 ```
@@ -52,7 +60,7 @@ print "The %s who %s %s!" % ("Knights", "say", "Ni")
 
 
 
-## Conditionals & Control Flow
+## UNIT 3: Conditionals & Control Flow
 
 ### Go With the Flow
 
@@ -211,9 +219,8 @@ def the_flying_circus():
 
 ```
 
-## PygLatin Game
+### PygLatin Game
 
-### PygLatin part 1
 * PygLatin Game:  "Python" ==> "ythonpay"
 
 * STEPS
@@ -243,4 +250,72 @@ def the_flying_circus():
             或 `new_word = word[1:] + first + pyg`
             
         
+## UNIT 4: Functions
+
+### 函数的好处在哪里？
+* 函数就是一段可以重复使用的代码，在程序中它用来完成特定的任务
+* 当你遇到这样的情形时，你要考虑定义一个函数：
+    * 你可能会重复使用一段代码，只是可能会变换很少的几个值
     
+### 函数的组成
+* 函数头（header）: 包括 `def` 关键词，函数的名称，函数可能需要的参数。
+    * `def helloWorld():`
+* 函数注释（comment）: 解释函数可以完成的功能
+    * `"""Prints 'Hello World!' to the console."""`
+    * 注意：使用三对双引号或单引号
+* 函数主体(body) : 缩进的语句块，实现函数功能
+    * `print "Hello World"`
+    
+```
+def hello_world():
+    """Prints 'Hello World!' to the console."""
+    print "Hello World!"
+
+```
+
+### Call and Response
+* 我们已经定义好了一个函数，`square`。用10来调用它（将10放在括号里）
+```
+def square(n):
+    """Returns the square of a number."""
+    squared = n**2
+    print "%d squared is %d." % (n, squared)
+    return squared
+    
+square(10)
+
+```
+### Parameters and Arguments
+* Parameter, 函数定义时使用的变量，也被称为形参
+* Argument, 函数被调用时实际的输入，也被称为实参
+* `def add(x, y): return x + y`
+    * *x *y is parameters
+    * `add(2, 3)` , *2, *y is arguments
+    
+* 在函数定义部分，将下划线替换为形参 *base *exponent ，并用 *37 和 *4 来调用。
+```
+def power(___, ___):  # Add your parameters here!
+    result = base**exponent
+    print "%d to the power of %d is %d." % (base, exponent, result)
+
+power(__, __)  # Add your arguments here!
+
+```
+### Functions Calling Functions 函数嵌套（函数里调用别的函数）
+* 函数可以实现非常复杂的功能，如一个函数可以调用其他的函数
+```
+def fun_one(n):
+    return n * 5
+
+def fun_two(m):
+    return fun_one(m) + 7
+```
+* 下面这两个函数，`one_good_turn(n)` 将给定的数加上1，`deserves_another(n)` 将给定的数加上2，修改 `deserves_another`的函数体body部分，使之调用`one_good_turn`并实现上述相同的功能
+```
+def one_good_turn(n):
+    return n + 1
+    
+def deserves_another(n):
+    return n + 2
+
+```
