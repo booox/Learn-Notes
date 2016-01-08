@@ -319,3 +319,8 @@ def deserves_another(n):
     return n + 2
 
 ```
+D:\BaiduYun\SyanDisk\Study\Calibre Library
+### What Good are Functions?
+* 减少代码量，使结构更加清晰
+* 可以被重复调用
+
