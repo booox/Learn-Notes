@@ -219,4 +219,177 @@
         * While if this is called as add(2, 3), then *2 *3 are arguments
     * [Parameter (computer programming)](https://en.wikipedia.org/wiki/Parameter_%28computer_programming%29#Parameters_and_arguments)
     
+* Function definitions: `arg`,  `*args`, `**kwargs`
+    * `arg` is the standard format for defining a function, except for one argument.
+    * `*args`, `**kwargs`  allow you to pass a variable number of arguments to a function.
+    * `*args`, one star , except for a single tuples, 
+    * `**kwargs`, two stars, is a dictionary, except for passing key/value pairs.
+    * examplse:
+        ```
+            # first with *args
+            >>> args = ("two", 3,5)
+            >>> test_args_kwargs(*args)
+            arg1: two
+            arg2: 3
+            arg3: 5
+
+            # now with **kwargs:
+            >>> kwargs = {"arg3": 3, "arg2": "two","arg1":5}
+            >>> test_args_kwargs(**kwargs)
+            arg1: 5
+            arg2: two
+            arg3: 3
+            
+            #####
+            def nostar(a): print a
+
+            def onestar(*a): print a
+
+            def twostar(**a): print a
+            
+            >>> nostar(1)
+            1
+            >>> nostar(1, 2)
+
+            Traceback (most recent call last):
+              File "<pyshell#38>", line 1, in <module>
+                nostar(1, 2)
+            TypeError: nostar() takes exactly 1 argument (2 given)
+            >>> nostar('a')
+            a
+            >>> onestar(1)
+            (1,)
+            >>> onestar(1, 2, 3, 4)
+            (1, 2, 3, 4)
+            >>> onestar(1, 2, 3, 'a', 'dd')
+            (1, 2, 3, 'a', 'dd')
+            >>> twostar(1, 2, 3)
+
+            Traceback (most recent call last):
+              File "<pyshell#43>", line 1, in <module>
+                twostar(1, 2, 3)
+            TypeError: twostar() takes exactly 0 arguments (3 given)
+            >>> twostar(a=1)
+            {'a': 1}
+            >>> twostar(a=1, tom=3)
+            {'a': 1, 'tom': 3}      
+
+        
+        ```
+    * The three forms can be combined as follows:
+    ```
+        >>> def all_in_one(a, *b, **c): print a, b, c
+
+        >>> all_in_one(1, 2, 3, 4, 'tom', 'jery', x=6, y=7, z=8, word='dev')
+        1 (2, 3, 4, 'tom', 'jery') {'y': 7, 'x': 6, 'z': 8, 'word': 'dev'}
+
+    ```
+    * What is the difference between the following calls?
+        * `test(x)`
+        * `test(*x)`
+        * `test(**x)`
+    * Here it is:
+        * `test(x)` : the function must be defined with one argument
+        * `test(*x)` : **x** must be a squence (list, tuple, etc), and the function must be defined with many arguments
+        * `test(**x)` : **x** must be a dictionary of key/value pairs, and the function must be defined with many pairs as the arguments.
+        
+        ```
+            >>> def test(a, b, c): print a, b, c
+
+            >>> test(1, 2, 3)
+            1 2 3
+            >>> x = (1, 2, 3)
+            >>> test(x)
+
+            Traceback (most recent call last):
+              File "<pyshell#53>", line 1, in <module>
+                test(x)
+            TypeError: test() takes exactly 3 arguments (1 given)
+            >>> test(*x)
+            1 2 3
+            >>> test(**x)
+
+            Traceback (most recent call last):
+              File "<pyshell#55>", line 1, in <module>
+                test(**x)
+            TypeError: test() argument after ** must be a mapping, not tuple
+            >>> x = {'a':1, 'b':2, 'c':3}
+            >>> test(**x)
+            1 2 3
+            >>> test(*x)
+            a c b
+        
+        ```
+    
+    * [Passing arguments to Python functions](https://rverzola.wordpress.com/2009/02/20/passing-arguments-to-python-functions/)
+    
+    
+* [4 Command-line tools for more Python productivity](http://pythontips.com/2015/06/21/4-command-line-tools-for-more-python-productivity/#more-639)
+    * IPython
+    * Autoenv
+    * Cookie Cutter
+    * Bash Git Prompt
+    
+* Floor Division
+    
+    ```
+    temp_Fahrenheit = 212
+
+    temp_Celsius = 5.0 / 9.0 * (temp_Fahrenheit - 32)
+
+    print temp_Celsius
+    
+    ```
+    * Don't use `5 / 9 *  (temp_Fahrenheit - 32)`
+    
+    ```
+    >>> 59 / 60
+    0
+    ```
+    * When both of the operands are integers, the result is also an integer; floor division chops off the fractional part, so in this example it truncates the answer to zero.
+    ```
+    >>> 59.0 / 60
+    0.9833333333333333
+    >>> 59 / 60.0
+    0.9833333333333333
+    ```
+    * If either of the operands is a float-point number, Python performs floating-point division, and the result is a float:
+    
+
+
+* Explain Variables:
+    1. `price = 100`
+    2. `price = 100 + 1     # price add one`
+    3. `price = price + 1     # price add one`
+    4. `price += 1     # price add one`
+    
+* Choosing mnemonic variable names
+    * Read the following three programs and try to understand them:
+    ```
+    a = 35.0
+    b = 12.50
+    c = a * b
+    print c
+    
+    
+    hours = 35.0
+    rate = 12.50
+    pay = hours * rate
+    print pay
+    
+    
+    x1q3z9ahd = 35.0
+    x1q3z9afd = 12.50
+    x1q3z9afd = x1q3z9ahd * x1q3z9afd
+    print x1q3z9afd
+    
+    ```
+    
+* The modulus operator `%`
+    * `>>> 7 % 3  # return 1`
+    * Check whether one number is divisible by another.
+        * ` if x % y == 0: print "Divisible" `
+    * Extract the right-most digit or digits from a number.
+        * ` x % 10 ` yields the right-most digit of x (in base 10).
+        * `x % 100` yields the last two digits.
     
