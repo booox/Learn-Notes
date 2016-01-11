@@ -76,7 +76,8 @@ class Track(object):
             play_path             =   None,
             category_name      =   None,
             shares_count         =   0,
-            favorites_count       =   0
+            favorites_count       =   0,
+            downloaded       =   0
             ):
         
         self.album_id       =    album_id
@@ -92,6 +93,7 @@ class Track(object):
         self.category_name      =   category_name
         self.shares_count        =   shares_count
         self.favorites_count      =   favorites_count
+        self.downloaded      =   downloaded
         
 
        
@@ -154,7 +156,8 @@ def initDB(cur):
             play_path TEXT,
             category_name TEXT,
             shares_count INTEGER,
-            favorites_count INTEGER
+            favorites_count INTEGER,
+            downloaded INTEGER DEFAULT 0
         );
         
     ''')
@@ -651,5 +654,78 @@ def writeTrackToDB(conn, cur, url, result):
         
         
         
-def downloadAlbum():
+def downloadAlbum(conn, cur, url, result):
+    "check the album status, and download all the tracks in the album."
+    
+    # check the album status
+    # writeAlbumToDB(conn, cur, url, result)
+    
+    zhubo_id = result["zhubo_id"]
+    album_id = result["album_id"]
+    
+    # do download
+    cur.execute("SELECT name, sound_count, sound_ids FROM Album  \
+            WHERE zhubo_id = ? AND album_id = ?", (zhubo_id, album_id))
+    
+    try:
+        out = cur.fetchone()
+        name = out[0] 
+        sound_count = out[1] 
+        sound_ids = out[2] 
+        sound_ids = pickle.loads(sound_ids)
+        
+        print 'this album has ', sound_count, 'tracks.'
+               
+        # write all the tracks into db.
+        for sound_id in sound_ids:
+            sound_url = HOME_URL + "/" + zhubo_id + "/sound/" + sound_id + "/"
+            
+            result = checkURL(sound_url)
+            if not result["url_type"]:
+                printUrlError()
+            else:
+                print '\nstart write the track into db. \n\t', sound_url
+                writeTrackToDB(conn, cur, sound_url, result)
+                print 'the track write into db done. \n\t', sound_url
+        print sound_count, 'tracks writed into db.'
+        
+        # get all the tracks in the album from db.
+        cur.execute("SELECT title, play_path, play_path_32, play_path_64, downloaded FROM Track \
+                        WHERE album_id = ?", (album_id))
+        try:
+            out = cur.fetchall()
+            name = out[0] 
+            sound_count = out[1] 
+            sound_ids = out[2] 
+            sound_ids = pickle.loads(sound_ids)
+        
+        
+        
+    except Exception, x:
+        print x
+        raise
+    
     pass
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

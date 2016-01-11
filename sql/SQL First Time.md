@@ -83,4 +83,8 @@ ProgrammingError: You must not use 8-bit bytestrings unless you use a text_facto
         
         ```
     
+* set default values & alter table
+    `ALTER TABLE t ADD COLUMN c INTEGER DEFAULT 0;`
     
+    * but sqlite3 doesn't support DROP A COLUMN
+       `ALTER TABLE t DROP COLUMN c` , THIS DOESN'T WORK.

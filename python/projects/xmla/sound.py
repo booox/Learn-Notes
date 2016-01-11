@@ -18,6 +18,7 @@ if __name__ == '__main__':
             url = 'http://www.ximalaya.com/zhubo/1412917/'
             # url = 'http://www.ximalaya.com/1412917/sound/11209501/'
             url = 'http://www.ximalaya.com/37310896/album/3253111/'
+            url = 'http://www.ximalaya.com/37310896/album/3253111/'
         if url == 'bye': exit(1)
             
         print url        
@@ -36,7 +37,8 @@ if __name__ == '__main__':
             
             # -------------- album ------------ 
             elif result["url_type"] == "album":
-                xmly.writeAlbumToDB(conn, cur, url, result)
+                # xmly.writeAlbumToDB(conn, cur, url, result)
+                xmly.downloadAlbum(conn, cur, url, result)
             
             # -------------- Track ------------ 
             elif result["url_type"] == "sound":

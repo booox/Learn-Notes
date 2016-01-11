@@ -393,3 +393,4 @@
         * ` x % 10 ` yields the right-most digit of x (in base 10).
         * `x % 100` yields the last two digits.
     
+* `python -i test.py` : interactive mode
