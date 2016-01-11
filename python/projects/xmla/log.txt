@@ -1,0 +1,206 @@
+Hello world !
+wrong
+Hello world !
+wrong
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\test.py", line 39, in <module>
+    print toi
+NameError: name 'toi' is not defined
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\test.py", line 39, in <module>
+    print toi
+NameError: name 'toi' is not defined
+Hello world !
+wrong
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\test.py", line 39, in <module>
+    print toi
+NameError: name 'toi' is not defined
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\test.py", line 39, in <module>
+    print toi
+NameError: name 'toi' is not defined
+Hello world !
+
+
+wrong
+
+
+Traceback (most recent call last):
+
+
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\test.py", line 39, in <module>
+
+
+    
+
+print toi
+
+
+NameError
+
+: 
+
+name 'toi' is not defined
+
+
+
+
+Traceback (most recent call last):
+
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\test.py", line 39, in <module>
+
+    
+print toi
+
+NameError
+: 
+name 'toi' is not defined
+
+
+
+Enter a zhubo, album or sound url:http://www.ximalaya.com/37310896/album/3253111/
+Album in database  37310896 /album/ 3253111
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/37310896/album/3253111/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 19 	 update_time: 2016-01-08
+	 Value in Web -- sound_count: 19 	 update_time: 2016-01-08
+NO NEED for update.
+this album has  19 tracks.
+get all the tracks error: 'ascii' codec can't encode characters in position 0-5: ordinal not in range(128)
+get album record error: 'ascii' codec can't encode characters in position 0-5: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 747, in downloadAlbum
+    print row[0], row[2], row[3], row[4]
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 21, in write
+    self.log.write(message)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-5: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 747, in downloadAlbum
+    print row[0], row[2], row[3], row[4]
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 21, in write
+    self.log.write(message)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-5: ordinal not in range(128)
+
+Enter a zhubo, album or sound url:http://www.ximalaya.com/37310896/album/3253111/
+Album in database  37310896 /album/ 3253111
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/37310896/album/3253111/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 19 	 update_time: 2016-01-08
+	 Value in Web -- sound_count: 19 	 update_time: 2016-01-08
+NO NEED for update.
+this album has  19 tracks.
+【诗歌】听雪 http://audio.xmcdn.com/group11/M05/D2/91/wKgDa1aPQ5XzkrVIAAQqfDJlh_k668.m4a http://audio.xmcdn.com/group11/M05/EB/9C/wKgDbVaPQ5Wjud-IAArg6FmHGKw196.m4a 0
+get all the tracks error: local variable 'album_name' referenced before assignment
+get album record error: local variable 'album_name' referenced before assignment
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 755, in downloadAlbum
+    album_name, album_dir = prettyAlbumDir(album_name)
+UnboundLocalError: local variable 'album_name' referenced before assignment
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 755, in downloadAlbum
+    album_name, album_dir = prettyAlbumDir(album_name)
+UnboundLocalError: local variable 'album_name' referenced before assignment
+
+Enter a zhubo, album or sound url:http://www.ximalaya.com/37310896/album/3253111/
+Album in database  37310896 /album/ 3253111
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/37310896/album/3253111/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 19 	 update_time: 2016-01-08
+	 Value in Web -- sound_count: 19 	 update_time: 2016-01-08
+NO NEED for update.
+this album has  19 tracks.
+【诗歌】听雪 http://audio.xmcdn.com/group11/M05/D2/91/wKgDa1aPQ5XzkrVIAAQqfDJlh_k668.m4a http://audio.xmcdn.com/group11/M05/EB/9C/wKgDbVaPQ5Wjud-IAArg6FmHGKw196.m4a 0
+C:\Users\ixing\读读文章\【诗歌】听雪.m4a
+【诗歌原创】一家宝贝 http://audio.xmcdn.com/group14/M09/DE/04/wKgDZFaKNdvg-H9NAAm_V0LxoGk745.m4a http://audio.xmcdn.com/group14/M09/DE/3A/wKgDY1aKNdzAA6-CABmAeTOODPo368.m4a 0
+C:\Users\ixing\读读文章\【诗歌原创】一家宝贝.m4a
+【诗歌原创】两个月亮 http://audio.xmcdn.com/group16/M03/DC/E7/wKgDbFaKNT_AZBmvAAN_ByLP5zo229.m4a http://audio.xmcdn.com/group16/M03/DC/E7/wKgDbFaKNTmzjXRVAAkgF3CkDXE199.m4a 0
+C:\Users\ixing\读读文章\【诗歌原创】两个月亮.m4a
+【诗歌】远方 http://audio.xmcdn.com/group7/M02/DE/3E/wKgDWlaKM-WxEE2hAAjBr_TGy3c988.m4a http://audio.xmcdn.com/group7/M02/DE/3E/wKgDWlaKM-ahjEwHABboXc_CX2k527.m4a 0
+C:\Users\ixing\读读文章\【诗歌】远方.m4a
+【诗歌】如果有一天 http://audio.xmcdn.com/group7/M02/DE/51/wKgDX1aKM4WQXkVWAAQRxFSnuik478.m4a http://audio.xmcdn.com/group7/M02/DE/51/wKgDX1aKM4WB8YM5AAqgZlnWfG0491.m4a 0
+C:\Users\ixing\读读文章\【诗歌】如果有一天.m4a
+【林徽因 诗歌】激昂 http://audio.xmcdn.com/group13/M04/DA/DD/wKgDXVaE0dyS_ZgVAAoHoENdOws196.m4a http://audio.xmcdn.com/group13/M04/DA/DD/wKgDXVaE0d6geemvABo_KGoMuVg167.m4a 0
+C:\Users\ixing\读读文章\【林徽因 诗歌】激昂.m4a
+【诗歌】会唱歌的鸢尾花 http://audio.xmcdn.com/group13/M05/DA/B1/wKgDXVaEkbqCz9oUAAQ_yVoNbPA038.m4a http://audio.xmcdn.com/group10/M01/D8/DC/wKgDaVaEkXHTgYewAAsaLG1uGIg092.m4a 0
+C:\Users\ixing\读读文章\【诗歌】会唱歌的鸢尾花.m4a
+【诗歌】我想和你虚度时光 http://audio.xmcdn.com/group12/M03/DA/1F/wKgDW1aEkTHwzup-AAYDCqOa7ac892.m4a http://audio.xmcdn.com/group9/M04/DA/A8/wKgDZlaEkJvgZEf2AA-3MZoJ59w856.m4a 0
+C:\Users\ixing\读读文章\【诗歌】我想和你虚度时光.m4a
+【诗歌】珍藏你的微笑 http://audio.xmcdn.com/group10/M0B/D5/A7/wKgDZ1aEjcGCKsXZAAYh0dc9L3Y359.m4a http://audio.xmcdn.com/group10/M07/D8/D9/wKgDaVaEjcLCzsxBABAIZykaDkU786.m4a 0
+C:\Users\ixing\读读文章\【诗歌】珍藏你的微笑.m4a
+【诗歌】生命就是一朵花 http://audio.xmcdn.com/group14/M00/D8/84/wKgDY1aAJtXjkYRbAAQ6pW0bcG8887.m4a http://audio.xmcdn.com/group14/M00/D8/84/wKgDY1aAJtXQU7exAAsNl-K3_ME428.m4a 0
+C:\Users\ixing\读读文章\【诗歌】生命就是一朵花.m4a
+【原创诗歌】海滩贝壳 http://audio.xmcdn.com/group12/M03/D5/CD/wKgDXFZ9i5TzBmp1AAb8AVtmNvw690.m4a http://audio.xmcdn.com/group12/M03/D5/C0/wKgDW1Z9i5fCmrTLABJEcvvdsxA530.m4a 0
+C:\Users\ixing\读读文章\【原创诗歌】海滩贝壳.m4a
+【读读文章】 蓝色的爱（原创） http://audio.xmcdn.com/group16/M0B/C7/BB/wKgDalZpx7bCxB3WABXX6HI7ga0758.m4a http://audio.xmcdn.com/group16/M0B/C7/BB/wKgDalZpx7rCl7meADk1Y_aLab0380.m4a 0
+C:\Users\ixing\读读文章\【读读文章】 蓝色的爱（原创）.m4a
+二十美金的价值 http://audio.xmcdn.com/group11/M01/B8/0F/wKgDa1ZlzCORpXA1AAidRAWYByU921.m4a http://audio.xmcdn.com/group11/M01/D1/15/wKgDbVZlzCXB_CW9ABaKu6QN8qU772.m4a 0
+C:\Users\ixing\读读文章\二十美金的价值.m4a
+讲讲故事《肚子里有个火车站》 http://audio.xmcdn.com/group16/M06/C4/F7/wKgDbFZlysGzKsy9ABpfRGV4gVc144.m4a http://audio.xmcdn.com/group16/M06/C5/12/wKgDalZlysTR3TZWAEUR1G21QgA884.m4a 0
+C:\Users\ixing\读读文章\讲讲故事《肚子里有个火车站》.m4a
+【读读文章】错过 http://audio.xmcdn.com/group15/M0B/C4/CE/wKgDaFZlx56Dmqx4ABWR7QDUxxg172.m4a http://audio.xmcdn.com/group15/M0B/C4/CE/wKgDaFZlx6GQYnrYADh-E_eJpow801.m4a 0
+C:\Users\ixing\读读文章\【读读文章】错过.m4a
+在寂寞里过冬 http://audio.xmcdn.com/group11/M01/AD/97/wKgDa1ZfNKLhOR2LABiSCMlJlv0406.m4a http://audio.xmcdn.com/group11/M01/AD/97/wKgDa1ZfNKXTusToAEBanwzC93o954.m4a 0
+C:\Users\ixing\读读文章\在寂寞里过冬.m4a
+白杨礼赞 http://audio.xmcdn.com/group14/M0B/BB/B5/wKgDY1ZfNAvyQ8xuAAkdkNyE3HM711.m4a http://audio.xmcdn.com/group14/M0B/BB/66/wKgDZFZfNAyD5QLBABfcHXg4ado978.m4a 0
+C:\Users\ixing\读读文章\白杨礼赞.m4a
+董小姐凭什么成为中国最具影响力的商界女性？ http://audio.xmcdn.com/group15/M08/A9/32/wKgDZVZUpCbT1ScxABghb-Q-wwg226.m4a http://audio.xmcdn.com/group15/M0B/A9/5B/wKgDaFZUpCmQiIiJAD8yRTyOVbw465.m4a 0
+C:\Users\ixing\读读文章\董小姐凭什么成为中国最具影响力的商界女性？.m4a
+残梦 http://audio.xmcdn.com/group12/M01/A8/6F/wKgDW1ZTONCgp-OjABH8WCDKyO8159.m4a http://audio.xmcdn.com/group12/M01/A8/44/wKgDXFZTONLw1C3WAC8Zz5gcI5A241.m4a 0
+C:\Users\ixing\读读文章\残梦.m4a
+
+Enter a zhubo, album or sound url:
+Enter a zhubo, album or sound url:http://www.ximalaya.com/37310896/album/3253111/
+Album in database  37310896 /album/ 3253111
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/37310896/album/3253111/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 19 	 update_time: 2016-01-08
+	 Value in Web -- sound_count: 19 	 update_time: 2016-01-08
+NO NEED for update.
+this album has  19 tracks.
+【诗歌】听雪 http://audio.xmcdn.com/group11/M05/D2/91/wKgDa1aPQ5XzkrVIAAQqfDJlh_k668.m4a http://audio.xmcdn.com/group11/M05/EB/9C/wKgDbVaPQ5Wjud-IAArg6FmHGKw196.m4a 0
+C:\Users\ixing\读读文章\【诗歌】听雪.m4a
+【诗歌原创】一家宝贝 http://audio.xmcdn.com/group14/M09/DE/04/wKgDZFaKNdvg-H9NAAm_V0LxoGk745.m4a http://audio.xmcdn.com/group14/M09/DE/3A/wKgDY1aKNdzAA6-CABmAeTOODPo368.m4a 0
+C:\Users\ixing\读读文章\【诗歌原创】一家宝贝.m4a
+【诗歌原创】两个月亮 http://audio.xmcdn.com/group16/M03/DC/E7/wKgDbFaKNT_AZBmvAAN_ByLP5zo229.m4a http://audio.xmcdn.com/group16/M03/DC/E7/wKgDbFaKNTmzjXRVAAkgF3CkDXE199.m4a 0
+C:\Users\ixing\读读文章\【诗歌原创】两个月亮.m4a
+【诗歌】远方 http://audio.xmcdn.com/group7/M02/DE/3E/wKgDWlaKM-WxEE2hAAjBr_TGy3c988.m4a http://audio.xmcdn.com/group7/M02/DE/3E/wKgDWlaKM-ahjEwHABboXc_CX2k527.m4a 0
+C:\Users\ixing\读读文章\【诗歌】远方.m4a
+【诗歌】如果有一天 http://audio.xmcdn.com/group7/M02/DE/51/wKgDX1aKM4WQXkVWAAQRxFSnuik478.m4a http://audio.xmcdn.com/group7/M02/DE/51/wKgDX1aKM4WB8YM5AAqgZlnWfG0491.m4a 0
+C:\Users\ixing\读读文章\【诗歌】如果有一天.m4a
+【林徽因 诗歌】激昂 http://audio.xmcdn.com/group13/M04/DA/DD/wKgDXVaE0dyS_ZgVAAoHoENdOws196.m4a http://audio.xmcdn.com/group13/M04/DA/DD/wKgDXVaE0d6geemvABo_KGoMuVg167.m4a 0
+C:\Users\ixing\读读文章\【林徽因 诗歌】激昂.m4a
+【诗歌】会唱歌的鸢尾花 http://audio.xmcdn.com/group13/M05/DA/B1/wKgDXVaEkbqCz9oUAAQ_yVoNbPA038.m4a http://audio.xmcdn.com/group10/M01/D8/DC/wKgDaVaEkXHTgYewAAsaLG1uGIg092.m4a 0
+C:\Users\ixing\读读文章\【诗歌】会唱歌的鸢尾花.m4a
+【诗歌】我想和你虚度时光 http://audio.xmcdn.com/group12/M03/DA/1F/wKgDW1aEkTHwzup-AAYDCqOa7ac892.m4a http://audio.xmcdn.com/group9/M04/DA/A8/wKgDZlaEkJvgZEf2AA-3MZoJ59w856.m4a 0
+C:\Users\ixing\读读文章\【诗歌】我想和你虚度时光.m4a
+【诗歌】珍藏你的微笑 http://audio.xmcdn.com/group10/M0B/D5/A7/wKgDZ1aEjcGCKsXZAAYh0dc9L3Y359.m4a http://audio.xmcdn.com/group10/M07/D8/D9/wKgDaVaEjcLCzsxBABAIZykaDkU786.m4a 0
+C:\Users\ixing\读读文章\【诗歌】珍藏你的微笑.m4a
+【诗歌】生命就是一朵花 http://audio.xmcdn.com/group14/M00/D8/84/wKgDY1aAJtXjkYRbAAQ6pW0bcG8887.m4a http://audio.xmcdn.com/group14/M00/D8/84/wKgDY1aAJtXQU7exAAsNl-K3_ME428.m4a 0
+C:\Users\ixing\读读文章\【诗歌】生命就是一朵花.m4a
+【原创诗歌】海滩贝壳 http://audio.xmcdn.com/group12/M03/D5/CD/wKgDXFZ9i5TzBmp1AAb8AVtmNvw690.m4a http://audio.xmcdn.com/group12/M03/D5/C0/wKgDW1Z9i5fCmrTLABJEcvvdsxA530.m4a 0
+C:\Users\ixing\读读文章\【原创诗歌】海滩贝壳.m4a
+【读读文章】 蓝色的爱（原创） http://audio.xmcdn.com/group16/M0B/C7/BB/wKgDalZpx7bCxB3WABXX6HI7ga0758.m4a http://audio.xmcdn.com/group16/M0B/C7/BB/wKgDalZpx7rCl7meADk1Y_aLab0380.m4a 0
+C:\Users\ixing\读读文章\【读读文章】 蓝色的爱（原创）.m4a
+二十美金的价值 http://audio.xmcdn.com/group11/M01/B8/0F/wKgDa1ZlzCORpXA1AAidRAWYByU921.m4a http://audio.xmcdn.com/group11/M01/D1/15/wKgDbVZlzCXB_CW9ABaKu6QN8qU772.m4a 0
+C:\Users\ixing\读读文章\二十美金的价值.m4a
+讲讲故事《肚子里有个火车站》 http://audio.xmcdn.com/group16/M06/C4/F7/wKgDbFZlysGzKsy9ABpfRGV4gVc144.m4a http://audio.xmcdn.com/group16/M06/C5/12/wKgDalZlysTR3TZWAEUR1G21QgA884.m4a 0
+C:\Users\ixing\读读文章\讲讲故事《肚子里有个火车站》.m4a
+【读读文章】错过 http://audio.xmcdn.com/group15/M0B/C4/CE/wKgDaFZlx56Dmqx4ABWR7QDUxxg172.m4a http://audio.xmcdn.com/group15/M0B/C4/CE/wKgDaFZlx6GQYnrYADh-E_eJpow801.m4a 0
+C:\Users\ixing\读读文章\【�

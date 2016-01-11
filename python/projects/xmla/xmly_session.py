@@ -74,9 +74,9 @@ class XMLYSession(requests.Session):
         
     def getItemsOnPages(self, url=None, _type='allAlbum'):
         '''   get album id or sound ids on all pages  
-            _type: allAlbum, Zhubo's all albums page
-            _type: allSound, Zhubo's all sounds page
-            _type: albumSound, Album's all sounds
+            _type( allAlbum ): Zhubo's all albums page
+            _type( allSound ): Zhubo's all sounds page
+            _type( albumSound ): Album's all sounds
         '''
         
         print '\t Start getItemsOnPages _type= ', _type, 'From : ', url

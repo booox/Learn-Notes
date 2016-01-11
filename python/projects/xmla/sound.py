@@ -4,9 +4,16 @@
 import xmly
 from xmly_session import XMLYSession
 import pickle
+import sys
+
+
 
 if __name__ == '__main__':
     ''' how to judge the server have been updated.???'''
+    
+    sys.stdout = xmly.Logger('log.txt')
+    sys.stderr = xmly.Logger('log.txt')
+    
     
     while True:
         print ''

@@ -3,11 +3,24 @@ import sqlite3
 from xmly_session import XMLYSession
 import re
 import pickle
+import requests
+import os
+import sys
+import time
 
 HOME_URL = 'http://www.ximalaya.com'
 DATA_BASE = 'xmly.sqlite'
+MP3_DIR = os.path.expanduser('~')   # 'C:\\Users\\username'
 
+class Logger(object):
+    "print to console & redirect to a file"
+    def __init__(self, filename="Default.log"):
+        self.terminal = sys.stdout
+        self.log = open(filename, "a")
 
+    def write(self, message):
+        self.terminal.write(message.encode('utf-8'))
+        self.log.write(message.encode('utf-8'))
 
 class Zhubo(object):
     def __init__(self, 
@@ -516,12 +529,13 @@ def writeAlbumToDB(conn, cur, url, result):
     album_id = result["album_id"]
     
     # check if album_id exists in db?
-    cur.execute("SELECT sound_count, update_time FROM Album WHERE album_id = ?", (album_id, ))
+    cur.execute("SELECT sound_count, update_time, sound_ids FROM Album WHERE album_id = ?", (album_id, ))
     
-    try:
+    try:        # Album in db
         data = cur.fetchone()
         sound_count = data[0]
         update_time = data[1]
+        sound_ids_db = data[2]
         print "Album in database ", zhubo_id, '/album/', album_id
         
         # check the value in web page
@@ -534,30 +548,56 @@ def writeAlbumToDB(conn, cur, url, result):
         # the value increase or fresh?
         if album.sound_count > sound_count or album.update_time > update_time:
             
+            # sound_ids: buffer --> list
+            sound_ids_db = pickle.loads(sound_ids_db)
+
+            
+            
             # update db
             print 'Album Nedd Update.'
             album = session.updateAlbum(url, 'getnew')
             
             playcount      =  album.playcount
-            sound_ids     =  album.sound_ids 
+            sound_ids_web     =  album.sound_ids 
             sound_count = album.sound_count   
             update_time  = album.update_time
             
             # buffer album_ids for BLOB
-            sound_ids = buffer(pickle.dumps(sound_ids, pickle.HIGHEST_PROTOCOL))
+            sound_ids_buffer = buffer(pickle.dumps(sound_ids_web, pickle.HIGHEST_PROTOCOL))
             
             print 'Update album start.', zhubo_id, '/album/', album_id
             cur.execute('''UPDATE Album SET playcount = ?, sound_ids = ?, sound_count = ?,
-                    update_time = ? WHERE album_id = ?''', (playcount, sound_ids,
+                    update_time = ? WHERE album_id = ?''', (playcount, sound_ids_buffer,
                     sound_count, update_time, album_id))
                     
             conn.commit()
             print 'Update album Done.', zhubo_id, '/album/', album_id
+            
+            print "Update track start."
+            # compare two sound_ids list
+            sound_ids_compare = [sid for sid in sound_ids_web if sid not in sound_ids_db]
+            if len(sound_ids_compare) > 1:
+                
+                for sound_id in sound_ids_compare:
+                # for sound_id in sound_ids:
+                    sound_url = HOME_URL + "/" + zhubo_id + "/sound/" + sound_id + "/"
+                    
+                    result = checkURL(sound_url)
+                    if not result["url_type"]:
+                        printUrlError()
+                    else:
+                        print '\nstart write the track into db. \n\t', sound_url
+                        writeTrackToDB(conn, cur, sound_url, result)
+                        print 'the track write into db done. \n\t', sound_url
+            
+            
+            print "Update track Done."
+            
         else:
             print "NO NEED for update."
 
         
-    except TypeError:
+    except TypeError:   # Album doesn't in db
         print "Album  doesn't in db:", zhubo_id, '/album/', album_id
         
         # Add new Album into db
@@ -577,16 +617,30 @@ def writeAlbumToDB(conn, cur, url, result):
         
         # buffer album_ids for BLOB                    
         tag = buffer(pickle.dumps(tag, pickle.HIGHEST_PROTOCOL))
-        sound_ids = buffer(pickle.dumps(sound_ids, pickle.HIGHEST_PROTOCOL))
+        sound_ids_buffer = buffer(pickle.dumps(sound_ids, pickle.HIGHEST_PROTOCOL))
         
         print 'Write New Album start.', zhubo_id, '/album/', album_id
         cur.execute('''INSERT OR REPLACE INTO Album (album_id, zhubo_id, name, url,
         category, tag, playcount, sound_ids, sound_count, update_time) VALUES (?, ?, ?, ?,
         ?, ?, ?, ?, ?, ?)''', (album_id, zhubo_id, name, url,
-        category, tag, playcount, sound_ids, sound_count, update_time))
+        category, tag, playcount, sound_ids_buffer, sound_count, update_time))
                 
         conn.commit()
         print 'Write New Album Done.', zhubo_id, '/album/', album_id
+        
+        print "Write Tracks of the Album Start."
+        for sound_id in sound_ids:
+            sound_url = HOME_URL + "/" + zhubo_id + "/sound/" + sound_id + "/"
+            
+            result = checkURL(sound_url)
+            if not result["url_type"]:
+                printUrlError()
+            else:
+                print '\nstart write the track into db. \n\t', sound_url
+                writeTrackToDB(conn, cur, sound_url, result)
+                print 'the track write into db done. \n\t', sound_url
+        
+        print "Write Tracks of the Album Done."
         
         
     except Exception, x:
@@ -606,14 +660,14 @@ def writeTrackToDB(conn, cur, url, result):
         play_path_32 = data[1]
         play_path = data[2]
         title = data[3]
-        print 'Track in database ', zhubo_id, '/sound/', sound_id
+        print '\tTrack in database ', zhubo_id, '/sound/', sound_id
         
         # do download
-        print 'Download Track start'
-        print 'Download Track end...'
+        print '\tcheck done'
+        
         
     except TypeError:
-        print "Track  doesn't in db:", zhubo_id, '/sound/', sound_id
+        print "\tTrack  doesn't in db:", zhubo_id, '/sound/', sound_id
         
         # Add new Album into db
         session = XMLYSession()
@@ -635,7 +689,7 @@ def writeTrackToDB(conn, cur, url, result):
         
         
 
-        print 'Write New Track start.', zhubo_id, '/sound/', sound_id
+        print '\tWrite New Track start.', zhubo_id, '/sound/', sound_id
         cur.execute('''INSERT OR REPLACE INTO Track (album_id, zhubo_id, sound_id, title,
         intro, duration, play_count, play_path_32, play_path_64, play_path, 
         category_name, shares_count, favorites_count) VALUES (?, ?, ?, ?,
@@ -644,21 +698,32 @@ def writeTrackToDB(conn, cur, url, result):
         category_name, shares_count, favorites_count))
                 
         conn.commit()
-        print 'Write New Track Done.', zhubo_id, '/sound/', sound_id
+        print '\tWrite New Track Done.', zhubo_id, '/sound/', sound_id
         
         
     except Exception, x:
         print x
         raise
     
+def prettyAlbumDir(album_name):
+    "clean the album name, create album directory"
+    
+    pattern = r'[\\/:*?"<>|]'       # strip special chars for windows filename
+    album_name = re.sub(pattern, ' ', album_name)
+    
+    # check weather the album_title dir exist?
+    album_dir = MP3_DIR + '\\' + album_name + '\\'
+    if not os.path.isdir(album_dir):
+        os.mkdir(album_dir)
         
+    return album_name, album_dir
         
         
 def downloadAlbum(conn, cur, url, result):
     "check the album status, and download all the tracks in the album."
     
     # check the album status
-    # writeAlbumToDB(conn, cur, url, result)
+    writeAlbumToDB(conn, cur, url, result)
     
     zhubo_id = result["zhubo_id"]
     album_id = result["album_id"]
@@ -676,33 +741,47 @@ def downloadAlbum(conn, cur, url, result):
         
         print 'this album has ', sound_count, 'tracks.'
                
-        # write all the tracks into db.
-        for sound_id in sound_ids:
-            sound_url = HOME_URL + "/" + zhubo_id + "/sound/" + sound_id + "/"
-            
-            result = checkURL(sound_url)
-            if not result["url_type"]:
-                printUrlError()
-            else:
-                print '\nstart write the track into db. \n\t', sound_url
-                writeTrackToDB(conn, cur, sound_url, result)
-                print 'the track write into db done. \n\t', sound_url
-        print sound_count, 'tracks writed into db.'
-        
         # get all the tracks in the album from db.
-        cur.execute("SELECT title, play_path, play_path_32, play_path_64, downloaded FROM Track \
-                        WHERE album_id = ?", (album_id))
+        cur.execute("SELECT title, play_path, play_path_32, play_path_64, downloaded, id FROM Track \
+                        WHERE album_id = ?", (album_id, ))
         try:
-            out = cur.fetchall()
-            name = out[0] 
-            sound_count = out[1] 
-            sound_ids = out[2] 
-            sound_ids = pickle.loads(sound_ids)
-        
-        
+            for row in cur:
+                print row[0], row[2], row[3], row[4]
+                title = row[0]
+                play_path = row[1]
+                play_path_32 = row[2]
+                play_path_64 = row[3]
+                downloaded = row[4]
+                track_id = row[5]
+                track_suffix = '.' + play_path_64.split('.')[-1]
+                
+                album_name, album_dir = prettyAlbumDir(name)
+                
+                track_path = album_dir + title + track_suffix
+                print track_path
+                
+                # download track with requests
+                downloaded_dict = {}
+                try:
+                    rec_track = requests.get(play_path_64)
+                    with open(track_path, "wb") as code:
+                        code.write(rec_track.content)                    
+                    time.sleep(1)
+                    
+                    downloaded_dict[track_id] = 1
+                    # update db for the flag of "downloaded"
+                    
+                except Exception, x:
+                    # write the downloaded_dict to db
+                    
+                    print 'download track error', x
+                    raise
+        except Exception, x:
+            print 'get all the tracks error:', x
+            raise
         
     except Exception, x:
-        print x
+        print 'get album record error:', x
         raise
     
     pass

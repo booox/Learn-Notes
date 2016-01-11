@@ -1,6 +1,7 @@
 # import sqlite3
 # import pickle
-
+import xmly
+import sys
 # conn = sqlite3.connect("xmly.sqlite")
 # cur = conn.cursor()
 
@@ -25,4 +26,23 @@
 # for t in tag:
     # print t.decode('utf-8')
 
+
+sys.stdout = xmly.Logger('log.txt')
+sys.stderr = xmly.Logger('log.txt')
+print "Hello world !" # this is should be saved in yourlogfilename.txt
+
+try:
+    abc
+except:
+    print 'wrong'
+    
+print toi
+
+for i in range(20):
+    print i
+    
 print 'hello world'
+
+a = raw_input('Enter word:')
+print a
+print 'dflkdfj'

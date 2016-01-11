@@ -47,8 +47,25 @@
             emg1 = pickle.loads(s1)
 
             # Test equality
-            print(emg1 == emg)        
+            print(emg1 == emg) 
+
+            # get all the records
+            # There are two ways to do this
+            # The First One is Recommanded.
+            
+            # First One
+            cur.execute("SELECT c FROM t")
+            for row in cursor:
+                print row[0]
+                
+            # Second One
+            cur.execute("SELECT c FROM t")
+            for row in cursor.fetchall():
+                print row[0]
+            
+            
         ```
+        [Is sqlite3 fetchall necessary?](http://stackoverflow.com/questions/21334767/is-sqlite3-fetchall-necessary)
         
 * Sqlite3存储、读取中文数据
     *. 存储中文text时，用utf-8编码

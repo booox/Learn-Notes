@@ -394,3 +394,95 @@
         * `x % 100` yields the last two digits.
     
 * `python -i test.py` : interactive mode
+
+* download file with Python
+    * reference : [Python 101: How to Download a File](http://www.blog.pythonlibrary.org/2012/06/07/python-101-how-to-download-a-file/)
+    * Python 2 code
+        * Using requests
+            ```
+            import requests
+            r = requests.get(url)
+            with open("FILENAME.EXT", "wb") as code:
+                code.write(r.content)            
+            ```
+            
+        * Using urllib
+            ```
+            import urllib
+            urllib.urlretrieve(url, "FILENAME.EXT")            
+            ```
+        * Using urllib2
+            ```
+            import urllib2
+            f = urllib2.urlopen(url)
+            with open("FILENAME.EXT", "wb") as code:
+                code.write(f.read())
+            ```
+    * Python 3 code
+        * Using requests
+            ```
+            import requests
+            r = requests.get(url)
+            with open("FILENAME.EXT", "wb") as code:
+                code.write(r.content)            
+            ```
+            
+        * Using urllib.request
+            ```
+            import urllib.request, urllib.parse, urllib.error
+            urllib.urlretrieve(url, "FILENAME.EXT")            
+            ```
+        * Using urllib2 (urllib2 no longer EXISTS)
+            ```
+            import urllib.request, urllib.parse, urllib.error
+            f = urllib.request.urlopen(url)
+            data = f.read()
+            with open("code2.zip", "wb") as code:
+                code.write(data)
+            ```
+* Test for performance, code for maintainability.
+
+## Lists
+
+* [Quick way to compare two python lists](http://appcrawler.com/wordpress/2010/10/22/quick-way-to-compare-two-python-lists/)
+    * Using List comprehension
+        ```
+        >>> a=[1,3,5]
+        >>> b=[1,2,3,4,5,6]
+        >>> print [c for c in b if c not in a]
+        [2, 4, 6]
+        >>>
+        
+        ```
+    * Using For Loop
+        ```
+        >>> for c in b:
+        ...   if c not in a:
+        ...     print c
+        ...
+        2
+        4
+        6
+        >>>        
+        ```
+
+    
+* Python get USER Directory
+    ```
+        >>> import os
+        >>> os.path.expanduser('~')
+        'C:\\Users\\ixing'
+        >>> os.environ['HOME']
+        'C:\\Users\\ixing'
+        >>> os.path.expandvars('$HOME')
+        'C:\\Users\\ixing'
+        >>> os.getenv('HOME')
+        'C:\\Users\\ixing'
+        >>> os.path.expanduser('~user')
+        'C:\\Users\\user'    
+    ```
+    
+* Profiling
+    * cProfile
+    * profile
+    * hotshot
