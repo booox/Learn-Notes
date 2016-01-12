@@ -712,7 +712,7 @@ def prettyAlbumDir(album_name):
     album_name = re.sub(pattern, ' ', album_name)
     
     # check weather the album_title dir exist?
-    album_dir = MP3_DIR + '\\' + album_name + '\\'
+    album_dir = MP3_DIR + '\\xmly\\' + album_name + '\\'
     if not os.path.isdir(album_dir):
         os.mkdir(album_dir)
         
@@ -739,14 +739,19 @@ def downloadAlbum(conn, cur, url, result):
         sound_ids = out[2] 
         sound_ids = pickle.loads(sound_ids)
         
-        print 'this album has ', sound_count, 'tracks.'
                
         # get all the tracks in the album from db.
         cur.execute("SELECT title, play_path, play_path_32, play_path_64, downloaded, id FROM Track \
-                        WHERE album_id = ?", (album_id, ))
+                        WHERE downloaded = 0 AND album_id = ?", (album_id, ))
+        rowcount = cur.rowcount
+        print '\n\t this album has ', sound_count, 'tracks.'
+        print '\n\t this album has ', rowcount, "tracks doesn't download."
+        
+        
         try:
+            downloaded_dict = {}    # downloaded flag dictionary
             for row in cur:
-                print row[0], row[2], row[3], row[4]
+                print '\t', row[0], row[2], row[3], row[4]
                 title = row[0]
                 play_path = row[1]
                 play_path_32 = row[2]
@@ -758,30 +763,47 @@ def downloadAlbum(conn, cur, url, result):
                 album_name, album_dir = prettyAlbumDir(name)
                 
                 track_path = album_dir + title + track_suffix
-                print track_path
+                print '\t', track_path
                 
                 # download track with requests
-                downloaded_dict = {}
                 try:
                     rec_track = requests.get(play_path_64)
                     with open(track_path, "wb") as code:
                         code.write(rec_track.content)                    
                     time.sleep(1)
                     
+                    print '\t\t track_id:', track_id
                     downloaded_dict[track_id] = 1
-                    # update db for the flag of "downloaded"
+                    print '\t\t', downloaded_dict
                     
                 except Exception, x:
-                    # write the downloaded_dict to db
+                    # write the downloaded_dict to db if download has error
+                    # try:
+                        # for track_id, downloaded in downloaded_dict.items:
+                            # cur.execute("UPDATE Track SET downloaded = ? WHERE id = ?", (downloaded, track_id))
+                    # except Exception, x:
+                        # print 'update track downloaded error:', x
+                        # raise
                     
-                    print 'download track error', x
-                    raise
+                    print '\n download track error', x
+                    # raise
+                    
+            # write the downloaded_dict to db if download hasn't error
+            try:
+                for track_id, downloaded in downloaded_dict.items():
+                    cur.execute("UPDATE Track SET downloaded = ? WHERE id = ?", (downloaded, int(track_id)))
+                conn.commit()
+            except Exception, x:
+                print '\n update track downloaded error:', x
+                raise
+                    
+                
         except Exception, x:
-            print 'get all the tracks error:', x
+            print '\n get all the tracks error:', x
             raise
         
     except Exception, x:
-        print 'get album record error:', x
+        print '\n get album record error:', x
         raise
     
     pass

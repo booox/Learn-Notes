@@ -27,22 +27,22 @@ import sys
     # print t.decode('utf-8')
 
 
-sys.stdout = xmly.Logger('log.txt')
-sys.stderr = xmly.Logger('log.txt')
+# sys.stdout = xmly.Logger('log.txt')
+# sys.stderr = xmly.Logger('log.txt')
 print "Hello world !" # this is should be saved in yourlogfilename.txt
 
-try:
-    abc
-except:
-    print 'wrong'
+# try:
+    # abc
+# except:
+    # print 'wrong'
     
-print toi
+# print toi
 
-for i in range(20):
-    print i
+# for i in range(20):
+    # print i
     
-print 'hello world'
+# print 'hello world'
 
-a = raw_input('Enter word:')
-print a
-print 'dflkdfj'
+# a = raw_input('Enter word:')
+# print a
+# print 'dflkdfj'

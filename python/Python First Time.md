@@ -190,8 +190,13 @@
     * current working directory: The current working directory that you are **in**.
 
 * Python System Path for Windows
-    * PATH=PATH;c:\python26 => 可以在cmd中打开python shell，或使用`python file.py`来运行python程序
+    * PATH=PATH;c:\python27 => 可以在cmd中打开python shell，或使用`python file.py`来运行python程序
+        * 注意：后面不要加上反斜线 (\)
+    * PATH=PATH;c:\Python27\Scripts; => 可以在CMD里直接运行 *ipython* 和 *pip*
     * PATHEXT=PATHEXT;.PY;.PYM => 可直接运行.py程序
+        * 配置这个之后，导致没有办法直接从cmd进入python shell，也没有办法打开ipython，
+        * 带来很多不方便，最后决定还是去掉了。
+        
     
 ## Lists
 
