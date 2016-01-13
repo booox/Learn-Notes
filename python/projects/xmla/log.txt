@@ -1765,3 +1765,907 @@ NO NEED for update.
 	C:\Users\lab\xmly\晓松奇谈 2015\离骚1949（上）.m4a
 		 track_id: 114
 		{63: 1, 64: 1, 65: 1, 66: 1, 67: 1, 68: 1, 69: 1, 70: 1, 71: 1, 72: 1, 73: 1, 74: 1, 75: 1, 76: 1, 77: 1, 78: 1, 79: 1, 80: 1, 81: 1, 82: 1, 83: 1, 84: 1, 85: 1, 86: 1, 87: 1, 88: 1, 89: 1, 90: 1, 91: 1, 92: 1, 93: 1, 94: 1, 95: 1, 96: 1, 97: 1, 98: 1, 99: 1, 100: 1, 101: 1, 102: 1, 103: 1, 104: 1, 10
+Enter a zhubo, album or sound url:http://www.ximalaya.com/38413391/album/3310039/
+Album  doesn't in db: 38413391 /album/ 3310039
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 753, in downloadAlbum
+    writeAlbumToDB(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 606, in writeAlbumToDB
+    session = XMLYSession()
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly_session.py", line 23, in __init__
+    r = self.get(url=xmly.HOME_URL, headers=headers)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\sessions.py", line 480, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\sessions.py", line 468, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\sessions.py", line 576, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\adapters.py", line 437, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8087): Max retries exceeded with url: http://www.ximalaya.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x0000000003481D68>: Failed to establish a new connection: [Errno 10061] ',)))
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 753, in downloadAlbum
+    writeAlbumToDB(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 606, in writeAlbumToDB
+    session = XMLYSession()
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly_session.py", line 23, in __init__
+    r = self.get(url=xmly.HOME_URL, headers=headers)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\sessions.py", line 480, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\sessions.py", line 468, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\sessions.py", line 576, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\adapters.py", line 437, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8087): Max retries exceeded with url: http://www.ximalaya.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x0000000003481D68>: Failed to establish a new connection: [Errno 10061] ',)))
+
+Enter a zhubo, album or sound url:http://www.ximalaya.com/38413391/album/3310039/
+Album  doesn't in db: 38413391 /album/ 3310039
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 753, in downloadAlbum
+    writeAlbumToDB(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 606, in writeAlbumToDB
+    session = XMLYSession()
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly_session.py", line 23, in __init__
+    r = self.get(url=xmly.HOME_URL, headers=headers)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\sessions.py", line 480, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\sessions.py", line 468, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\sessions.py", line 576, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\adapters.py", line 437, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8087): Max retries exceeded with url: http://www.ximalaya.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x000000000358DD30>: Failed to establish a new connection: [Errno 10061] ',)))
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 753, in downloadAlbum
+    writeAlbumToDB(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 606, in writeAlbumToDB
+    session = XMLYSession()
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly_session.py", line 23, in __init__
+    r = self.get(url=xmly.HOME_URL, headers=headers)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\sessions.py", line 480, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\sessions.py", line 468, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\sessions.py", line 576, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\adapters.py", line 437, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8087): Max retries exceeded with url: http://www.ximalaya.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x000000000358DD30>: Failed to establish a new connection: [Errno 10061] ',)))
+
+Enter a zhubo, album or sound url:http://www.ximalaya.com/38413391/album/3310039/
+Album  doesn't in db: 38413391 /album/ 3310039
+http://www.ximalaya.com/38413391/album/3310039/
+	 Start getItemsOnPages _type=  albumSound From :  http://www.ximalaya.com/38413391/album/3310039/
+	 getItemsOnPages retrieve the first page, total: 1
+	 getItemsOnPages retrive the first page done.
+	 getItemsOnPages retrive multi pages start.
+	 getItemsOnPages retrive multi pages Done.
+
+	 getItemsOnPages Done : get  albumSound from 1 pages
+Write New Album start. 38413391 /album/ 3310039
+Write New Album Done. 38413391 /album/ 3310039
+Write Tracks of the Album Start.
+
+start write the track into db. 
+	http://www.ximalaya.com/38413391/sound/11501185/
+	Track  doesn't in db: 38413391 /sound/ 11501185
+	Write New Track start. 38413391 /sound/ 11501185
+	Write New Track Done. 38413391 /sound/ 11501185
+the track write into db done. 
+	http://www.ximalaya.com/38413391/sound/11501185/
+
+start write the track into db. 
+	http://www.ximalaya.com/38413391/sound/10886604/
+	Track  doesn't in db: 38413391 /sound/ 10886604
+	Write New Track start. 38413391 /sound/ 10886604
+	Write New Track Done. 38413391 /sound/ 10886604
+the track write into db done. 
+	http://www.ximalaya.com/38413391/sound/10886604/
+
+start write the track into db. 
+	http://www.ximalaya.com/38413391/sound/10856373/
+	Track  doesn't in db: 38413391 /sound/ 10856373
+	Write New Track start. 38413391 /sound/ 10856373
+	Write New Track Done. 38413391 /sound/ 10856373
+the track write into db done. 
+	http://www.ximalaya.com/38413391/sound/10856373/
+
+start write the track into db. 
+	http://www.ximalaya.com/38413391/sound/10557244/
+	Track  doesn't in db: 38413391 /sound/ 10557244
+	Write New Track start. 38413391 /sound/ 10557244
+	Write New Track Done. 38413391 /sound/ 10557244
+the track write into db done. 
+	http://www.ximalaya.com/38413391/sound/10557244/
+
+start write the track into db. 
+	http://www.ximalaya.com/38413391/sound/10557243/
+	Track  doesn't in db: 38413391 /sound/ 10557243
+	Write New Track start. 38413391 /sound/ 10557243
+	Write New Track Done. 38413391 /sound/ 10557243
+the track write into db done. 
+	http://www.ximalaya.com/38413391/sound/10557243/
+
+start write the track into db. 
+	http://www.ximalaya.com/38413391/sound/10562259/
+	Track  doesn't in db: 38413391 /sound/ 10562259
+	Write New Track start. 38413391 /sound/ 10562259
+	Write New Track Done. 38413391 /sound/ 10562259
+the track write into db done. 
+	http://www.ximalaya.com/38413391/sound/10562259/
+
+start write the track into db. 
+	http://www.ximalaya.com/38413391/sound/10562261/
+	Track  doesn't in db: 38413391 /sound/ 10562261
+	Write New Track start. 38413391 /sound/ 10562261
+	Write New Track Done. 38413391 /sound/ 10562261
+the track write into db done. 
+	http://www.ximalaya.com/38413391/sound/10562261/
+
+start write the track into db. 
+	http://www.ximalaya.com/38413391/sound/10562257/
+	Track  doesn't in db: 38413391 /sound/ 10562257
+	Write New Track start. 38413391 /sound/ 10562257
+	Write New Track Done. 38413391 /sound/ 10562257
+the track write into db done. 
+	http://www.ximalaya.com/38413391/sound/10562257/
+
+start write the track into db. 
+	http://www.ximalaya.com/38413391/sound/10562256/
+	Track  doesn't in db: 38413391 /sound/ 10562256
+	Write New Track start. 38413391 /sound/ 10562256
+	Write New Track Done. 38413391 /sound/ 10562256
+the track write into db done. 
+	http://www.ximalaya.com/38413391/sound/10562256/
+
+start write the track into db. 
+	http://www.ximalaya.com/38413391/sound/10562258/
+	Track  doesn't in db: 38413391 /sound/ 10562258
+	Write New Track start. 38413391 /sound/ 10562258
+	Write New Track Done. 38413391 /sound/ 10562258
+the track write into db done. 
+	http://www.ximalaya.com/38413391/sound/10562258/
+
+start write the track into db. 
+	http://www.ximalaya.com/38413391/sound/10562260/
+	Track  doesn't in db: 38413391 /sound/ 10562260
+	Write New Track start. 38413391 /sound/ 10562260
+	Write New Track Done. 38413391 /sound/ 10562260
+the track write into db done. 
+	http://www.ximalaya.com/38413391/sound/10562260/
+
+start write the track into db. 
+	http://www.ximalaya.com/38413391/sound/10557246/
+	Track  doesn't in db: 38413391 /sound/ 10557246
+	Write New Track start. 38413391 /sound/ 10557246
+	Write New Track Done. 38413391 /sound/ 10557246
+the track write into db done. 
+	http://www.ximalaya.com/38413391/sound/10557246/
+
+start write the track into db. 
+	http://www.ximalaya.com/38413391/sound/11181592/
+	Track  doesn't in db: 38413391 /sound/ 11181592
+	Write New Track start. 38413391 /sound/ 11181592
+	Write New Track Done. 38413391 /sound/ 11181592
+the track write into db done. 
+	http://www.ximalaya.com/38413391/sound/11181592/
+Write Tracks of the Album Done.
+
+	 this album has  13 tracks.
+
+	 this album has  -1 tracks doesn't download.
+	Rolling In The Deep （令人汗颜的“牛”嘴） http://audio.xmcdn.com/group8/M04/E3/3A/wKgDYFaUvF2QeiHiAAq72JHa8q4707.m4a http://audio.xmcdn.com/group8/M04/E3/3A/wKgDYFaUvF6zrVk0ABwZmb-NLrs236.m4a 0
+	C:\Users\ixing\xmly\原来这些歌还有这样的唱法\Rolling In The Deep （令人汗颜的“牛”嘴）.m4a
+		 track_id: 116
+		{116: 1}
+	3D版魂斗罗单人纯人声演绎 http://audio.xmcdn.com/group8/M08/CE/F0/wKgDYVZzxIPAWwLdABNg971enEQ155.m4a http://audio.xmcdn.com/group10/M05/CD/63/wKgDaVZzv3-jLQFYADLAOULmfAo318.m4a 0
+	C:\Users\ixing\xmly\原来这些歌还有这样的唱法\3D版魂斗罗单人纯人声演绎.m4a
+		 track_id: 117
+		{116: 1, 117: 1}
+	《那些年的小幸运》（当《那些年》和《小幸运》完美结合） http://audio.xmcdn.com/group12/M04/CD/5B/wKgDXFZyXjiR9EAbAAubOV_0_Vo739.m4a http://audio.xmcdn.com/group10/M08/CB/FA/wKgDaVZyWF6yZeZiAB5i4Qe3aVk188.m4a 0
+	C:\Users\ixing\xmly\原来这些歌还有这样的唱法\《那些年的小幸运》（当《那些年》和《小幸运》完美结合）.m4a
+		 track_id: 118
+		{116: 1, 117: 1, 118: 1}
+	阿卡贝拉-《新不了情》 http://audio.xmcdn.com/group10/M0A/C1/D8/wKgDaVZjz3qTVQLrAAtK5RsgXWQ290.m4a http://audio.xmcdn.com/group10/M0A/C1/D8/wKgDaVZjz3uwZ7wUAB2PCQBbaMo948.m4a 0
+	C:\Users\ixing\xmly\原来这些歌还有这样的唱法\阿卡贝拉-《新不了情》.m4a
+		 track_id: 119
+		{116: 1, 117: 1, 118: 1, 119: 1}
+	阿卡贝拉-《王妃》 http://audio.xmcdn.com/group10/M0A/BE/B1/wKgDZ1Zjz22DfQa2AAqRhq_TwRo870.m4a http://audio.xmcdn.com/group10/M0A/BE/B1/wKgDZ1Zjz27zhaa_ABupb9pSuqU346.m4a 0
+	C:\Users\ixing\xmly\原来这些歌还有这样的唱法\阿卡贝拉-《王妃》.m4a
+		 track_id: 120
+		{120: 1, 116: 1, 117: 1, 118: 1, 119: 1}
+	阿卡贝拉- 《Let It Go》 http://audio.xmcdn.com/group9/M0B/C3/E5/wKgDZlZkBtjQNmpDAApoircfgus811.m4a http://audio.xmcdn.com/group16/M01/C3/1D/wKgDbFZkBpnhvuIqABs-PebJ4hw909.m4a 0
+	C:\Users\ixing\xmly\原来这些歌还有这样的唱法\阿卡贝拉- 《Let It Go》.m4a
+		 track_id: 121
+		{116: 1, 117: 1, 118: 1, 119: 1, 120: 1, 121: 1}
+	阿卡贝拉-《约定》 http://audio.xmcdn.com/group10/M08/C2/44/wKgDaVZkBuzB2OtEAAtb-UN3djc444.m4a http://audio.xmcdn.com/group9/M0B/C3/E3/wKgDZlZkBrfSrH7yAB28OxTOPQQ939.m4a 0
+	C:\Users\ixing\xmly\原来这些歌还有这样的唱法\阿卡贝拉-《约定》.m4a
+		 track_id: 122
+		{116: 1, 117: 1, 118: 1, 119: 1, 120: 1, 121: 1, 122: 1}
+	阿卡贝拉-《 Yesterday》 http://audio.xmcdn.com/group16/M01/C3/3C/wKgDalZkBquAd7QIAAjkm461uII118.m4a http://audio.xmcdn.com/group14/M03/C4/69/wKgDY1ZkBnvxCt3pABdFuytC5ds496.m4a 0
+	C:\Users\ixing\xmly\原来这些歌还有这样的唱法\阿卡贝拉-《 Yesterday》.m4a
+		 track_id: 123
+		{116: 1, 117: 1, 118: 1, 119: 1, 120: 1, 121: 1, 122: 1, 123: 1}
+	阿卡贝拉-《明天我要嫁给你》 http://audio.xmcdn.com/group16/M01/C3/1E/wKgDbFZkBqTjMHGiAAqdGbPOJAU732.m4a http://audio.xmcdn.com/group8/M08/C3/6C/wKgDYFZkBm7A8wF5ABvID9Bx25o589.m4a 0
+	C:\Users\ixing\xmly\原来这些歌还有这样的唱法\阿卡贝拉-《明天我要嫁给你》.m4a
+		 track_id: 124
+		{116: 1, 117: 1, 118: 1, 119: 1, 120: 1, 121: 1, 122: 1, 123: 1, 124: 1}
+	阿卡贝拉-《We Are Young》 http://audio.xmcdn.com/group9/M0B/C3/E4/wKgDZlZkBsOROvylAAjVDpLM87w190.m4a http://audio.xmcdn.com/group16/M01/C3/1C/wKgDbFZkBoijJ0W1ABccyfUg2kg335.m4a 0
+	C:\Users\ixing\xmly\原来这些歌还有这样的唱法\阿卡贝拉-《We Are Young》.m4a
+		 track_id: 125
+		{116: 1, 117: 1, 118: 1, 119: 1, 120: 1, 121: 1, 122: 1, 123: 1, 124: 1, 125: 1}
+	阿卡贝拉-《Somebody That I Used To Know》 http://audio.xmcdn.com/group9/M0B/C3/C1/wKgDYlZkBuDzU8bCAAlL8yDrjko934.m4a http://audio.xmcdn.com/group16/M01/C3/3C/wKgDalZkBqaSxmoeABhTEBPK6jg268.m4a 0
+	C:\Users\ixing\xmly\原来这些歌还有这样的唱法\阿卡贝拉-《Somebody That I Used To Know》.m4a
+		 track_id: 126
+		{116: 1, 117: 1, 118: 1, 119: 1, 120: 1, 121: 1, 122: 1, 123: 1, 124: 1, 125: 1, 126: 1}
+	阿卡贝拉-《那些年》 http://audio.xmcdn.com/group14/M08/C3/FC/wKgDY1Zjz6Swm3hHAA4OxuQe5XA415.m4a http://audio.xmcdn.com/group14/M08/C3/FC/wKgDY1Zjz6exXkrdACTOXvhYjsw184.m4a 0
+	C:\Users\ixing\xmly\原来这些歌还有这样的唱法\阿卡贝拉-《那些年》.m4a
+		 track_id: 127
+		{116: 1, 117: 1, 118: 1, 119: 1, 120: 1, 121: 1, 122: 1, 123: 1, 124: 1, 125: 1, 126: 1, 127: 1}
+	《月亮代表谁的心》陶吉吉的歌还能这么唱 http://audio.xmcdn.com/group13/M07/D9/C2/wKgDXVaDUNDyYlk4AAYF0Zuv6SI688.m4a http://audio.xmcdn.com/group7/M03/DA/7D/wKgDWlaDUNLg9C08AA_Aqdg1cSk401.m4a 0
+	C:\Users\ixing\xmly\原来这些歌还有这样的唱法\《月亮代表谁的心》陶吉吉的歌还能这么唱.m4a
+		 track_id: 128
+		{128: 1, 116: 1, 117: 1, 118: 1, 119: 1, 120: 1, 121: 1, 122: 1, 123: 1, 124: 1, 125: 1, 126: 1, 127: 1}
+
+
+ -------- Convert m4a to mp3 start   ----------- 
+album_dir: C:\Users\ixing\xmly\原来这些歌还有这样的唱法\
+
+
+Start
+
+ get all the tracks error: 'ascii' codec can't encode characters in position 30-41: ordinal not in range(128)
+
+ get album record error: 'ascii' codec can't encode characters in position 30-41: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 829, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 742, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4])
+  File "C:\Python27\lib\subprocess.py", line 522, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "C:\Python27\lib\subprocess.py", line 710, in __init__
+    errread, errwrite)
+  File "C:\Python27\lib\subprocess.py", line 958, in _execute_child
+    startupinfo)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 30-41: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 829, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 742, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4])
+  File "C:\Python27\lib\subprocess.py", line 522, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "C:\Python27\lib\subprocess.py", line 710, in __init__
+    errread, errwrite)
+  File "C:\Python27\lib\subprocess.py", line 958, in _execute_child
+    startupinfo)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 30-41: ordinal not in range(128)
+
+Enter a zhubo, album or sound url:http://www.ximalaya.com/38413391/album/3310039/
+Album in database  38413391 /album/ 3310039
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/38413391/album/3310039/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 13 	 update_time: 2016-01-12
+	 Value in Web -- sound_count: 13 	 update_time: 2016-01-12
+NO NEED for update.
+
+	 this album has  13 tracks.
+
+	 this album has  -1 tracks doesn't download.
+
+
+ -------- Convert m4a to mp3 start   ----------- 
+album_dir: C:\Users\ixing\xmly\原来这些歌还有这样的唱法\
+
+
+Start
+
+ get all the tracks error: 'ascii' codec can't encode characters in position 30-41: ordinal not in range(128)
+
+ get album record error: 'ascii' codec can't encode characters in position 30-41: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 829, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 742, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4])
+  File "C:\Python27\lib\subprocess.py", line 522, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "C:\Python27\lib\subprocess.py", line 710, in __init__
+    errread, errwrite)
+  File "C:\Python27\lib\subprocess.py", line 958, in _execute_child
+    startupinfo)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 30-41: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 829, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 742, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4])
+  File "C:\Python27\lib\subprocess.py", line 522, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "C:\Python27\lib\subprocess.py", line 710, in __init__
+    errread, errwrite)
+  File "C:\Python27\lib\subprocess.py", line 958, in _execute_child
+    startupinfo)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 30-41: ordinal not in range(128)
+
+Enter a zhubo, album or sound url:http://www.ximalaya.com/38413391/album/3310039/
+Album in database  38413391 /album/ 3310039
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/38413391/album/3310039/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 13 	 update_time: 2016-01-12
+	 Value in Web -- sound_count: 13 	 update_time: 2016-01-12
+NO NEED for update.
+
+	 this album has  13 tracks.
+
+	 this album has  -1 tracks doesn't download.
+
+
+ -------- Convert m4a to mp3 start   ----------- 
+album_dir: C:\Users\ixing\xmly\原来这些歌还有这样的唱法\
+
+
+Start
+
+ get all the tracks error: 'ascii' codec can't encode characters in position 30-41: ordinal not in range(128)
+
+ get album record error: 'ascii' codec can't encode characters in position 30-41: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 829, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 742, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4])
+  File "C:\Python27\lib\subprocess.py", line 522, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "C:\Python27\lib\subprocess.py", line 710, in __init__
+    errread, errwrite)
+  File "C:\Python27\lib\subprocess.py", line 958, in _execute_child
+    startupinfo)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 30-41: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 829, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 742, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4])
+  File "C:\Python27\lib\subprocess.py", line 522, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "C:\Python27\lib\subprocess.py", line 710, in __init__
+    errread, errwrite)
+  File "C:\Python27\lib\subprocess.py", line 958, in _execute_child
+    startupinfo)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 30-41: ordinal not in range(128)
+
+Enter a zhubo, album or sound url:http://www.ximalaya.com/38413391/album/3310039/
+Album in database  38413391 /album/ 3310039
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/38413391/album/3310039/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 13 	 update_time: 2016-01-12
+	 Value in Web -- sound_count: 13 	 update_time: 2016-01-12
+NO NEED for update.
+
+	 this album has  13 tracks.
+
+	 this album has  -1 tracks doesn't download.
+
+
+ -------- Convert m4a to mp3 start   ----------- 
+C:\Users\ixing\xmly\原来这些歌还有这样的唱法\
+C:\Users\ixing\xmly\原来这些歌还有这样的唱法\mp3
+
+
+Start
+
+ get all the tracks error: 'ascii' codec can't encode characters in position 30-41: ordinal not in range(128)
+
+ get album record error: 'ascii' codec can't encode characters in position 30-41: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 831, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 742, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4])
+  File "C:\Python27\lib\subprocess.py", line 522, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "C:\Python27\lib\subprocess.py", line 710, in __init__
+    errread, errwrite)
+  File "C:\Python27\lib\subprocess.py", line 958, in _execute_child
+    startupinfo)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 30-41: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 831, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 742, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4])
+  File "C:\Python27\lib\subprocess.py", line 522, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "C:\Python27\lib\subprocess.py", line 710, in __init__
+    errread, errwrite)
+  File "C:\Python27\lib\subprocess.py", line 958, in _execute_child
+    startupinfo)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 30-41: ordinal not in range(128)
+
+Enter a zhubo, album or sound url:http://www.ximalaya.com/38413391/album/3310039/
+Album in database  38413391 /album/ 3310039
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/38413391/album/3310039/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 13 	 update_time: 2016-01-12
+	 Value in Web -- sound_count: 13 	 update_time: 2016-01-12
+NO NEED for update.
+
+	 this album has  13 tracks.
+
+	 this album has  -1 tracks doesn't download.
+
+
+ -------- Convert m4a to mp3 start   ----------- 
+C:\Users\ixing\xmly\原来这些歌还有这样的唱法\
+C:\Users\ixing\xmly\原来这些歌还有这样的唱法\mp3
+
+
+Start
+
+ get all the tracks error: 'ascii' codec can't decode byte 0xe7 in position 2: ordinal not in range(128)
+
+ get album record error: 'ascii' codec can't decode byte 0xe7 in position 2: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 831, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 742, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4].encode('utf-8'))
+  File "C:\Python27\lib\ntpath.py", line 85, in join
+    result_path = result_path + p_path
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe7 in position 2: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 831, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 742, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4].encode('utf-8'))
+  File "C:\Python27\lib\ntpath.py", line 85, in join
+    result_path = result_path + p_path
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe7 in position 2: ordinal not in range(128)
+
+Enter a zhubo, album or sound url:http://www.ximalaya.com/38413391/album/3310039/
+Album in database  38413391 /album/ 3310039
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/38413391/album/3310039/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 13 	 update_time: 2016-01-12
+	 Value in Web -- sound_count: 13 	 update_time: 2016-01-12
+NO NEED for update.
+
+	 this album has  13 tracks.
+
+	 this album has  -1 tracks doesn't download.
+
+
+ -------- Convert m4a to mp3 start   ----------- 
+C:\Users\ixing\xmly\原来这些歌还有这样的唱法\
+C:\Users\ixing\xmly\原来这些歌还有这样的唱法\mp3
+
+
+Start <type 'unicode'> 3D版魂斗罗单人纯人声演绎.m4a
+
+ get all the tracks error: 'ascii' codec can't decode byte 0xe7 in position 2: ordinal not in range(128)
+
+ get album record error: 'ascii' codec can't decode byte 0xe7 in position 2: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 831, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 742, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4].encode('utf-8'))
+  File "C:\Python27\lib\ntpath.py", line 85, in join
+    result_path = result_path + p_path
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe7 in position 2: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 831, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 742, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4].encode('utf-8'))
+  File "C:\Python27\lib\ntpath.py", line 85, in join
+    result_path = result_path + p_path
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe7 in position 2: ordinal not in range(128)
+
+Enter a zhubo, album or sound url:http://www.ximalaya.com/37310896/album/3253111/
+Album in database  37310896 /album/ 3253111
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/37310896/album/3253111/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 19 	 update_time: 2016-01-08
+	 Value in Web -- sound_count: 19 	 update_time: 2016-01-08
+NO NEED for update.
+
+	 this album has  19 tracks.
+
+	 this album has  -1 tracks doesn't download.
+
+
+ -------- Convert m4a to mp3 start   ----------- 
+C:\Users\ixing\xmly\读读文章\
+C:\Users\ixing\xmly\读读文章\mp3
+
+
+Start <type 'unicode'> 【原创诗歌】海滩贝壳.m4a
+
+
+Start <type 'unicode'> C:\Users\ixing\xmly\读读文章\mp3
+
+ get all the tracks error: 'ascii' codec can't decode byte 0xe3 in position 0: ordinal not in range(128)
+
+ get album record error: 'ascii' codec can't decode byte 0xe3 in position 0: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 832, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 743, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4].encode('utf-8'))
+  File "C:\Python27\lib\ntpath.py", line 85, in join
+    result_path = result_path + p_path
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe3 in position 0: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 832, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 743, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4].encode('utf-8'))
+  File "C:\Python27\lib\ntpath.py", line 85, in join
+    result_path = result_path + p_path
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe3 in position 0: ordinal not in range(128)
+
+Enter a zhubo, album or sound url:http://www.ximalaya.com/38413391/album/3310039/
+Album in database  38413391 /album/ 3310039
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/38413391/album/3310039/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 13 	 update_time: 2016-01-12
+	 Value in Web -- sound_count: 13 	 update_time: 2016-01-12
+NO NEED for update.
+
+	 this album has  13 tracks.
+
+	 this album has  -1 tracks doesn't download.
+
+
+ -------- Convert m4a to mp3 start   ----------- 
+C:\Users\ixing\xmly\原来这些歌还有这样的唱法\
+C:\Users\ixing\xmly\原来这些歌还有这样的唱法\mp3
+
+
+Start filename: <type 'unicode'> 3D版魂斗罗单人纯人声演绎.m4a
+
+
+Start mp3_path: <type 'unicode'> C:\Users\ixing\xmly\原来这些歌还有这样的唱法\mp3
+
+
+Start m4a_path: <type 'unicode'> C:\Users\ixing\xmly\原来这些歌还有这样的唱法\
+
+ get all the tracks error: 'ascii' codec can't decode byte 0xe7 in position 2: ordinal not in range(128)
+
+ get album record error: 'ascii' codec can't decode byte 0xe7 in position 2: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 833, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 744, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4].encode('utf-8'))
+  File "C:\Python27\lib\ntpath.py", line 85, in join
+    result_path = result_path + p_path
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe7 in position 2: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 833, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 744, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4].encode('utf-8'))
+  File "C:\Python27\lib\ntpath.py", line 85, in join
+    result_path = result_path + p_path
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe7 in position 2: ordinal not in range(128)
+
+Enter a zhubo, album or sound url:http://www.ximalaya.com/37310896/album/3253111/
+Album in database  37310896 /album/ 3253111
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/37310896/album/3253111/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 19 	 update_time: 2016-01-08
+	 Value in Web -- sound_count: 19 	 update_time: 2016-01-08
+NO NEED for update.
+
+	 this album has  19 tracks.
+
+	 this album has  -1 tracks doesn't download.
+
+
+ -------- Convert m4a to mp3 start   ----------- 
+C:\Users\ixing\xmly\读读文章\
+C:\Users\ixing\xmly\读读文章\mp3
+
+
+Start filename: <type 'unicode'> 【原创诗歌】海滩贝壳.m4a
+
+
+Start mp3_path: <type 'unicode'> C:\Users\ixing\xmly\读读文章\mp3
+
+
+Start m4a_path: <type 'unicode'> C:\Users\ixing\xmly\读读文章\
+
+ get all the tracks error: 'ascii' codec can't encode characters in position 0-9: ordinal not in range(128)
+
+ get album record error: 'ascii' codec can't encode characters in position 0-9: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 833, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 744, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4].decode('utf-8'))
+  File "C:\Python27\lib\encodings\utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-9: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 833, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 744, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4].decode('utf-8'))
+  File "C:\Python27\lib\encodings\utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-9: ordinal not in range(128)
+
+Enter a zhubo, album or sound url:http://www.ximalaya.com/38413391/album/3310039/
+Album in database  38413391 /album/ 3310039
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/38413391/album/3310039/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 13 	 update_time: 2016-01-12
+	 Value in Web -- sound_count: 13 	 update_time: 2016-01-12
+NO NEED for update.
+
+	 this album has  13 tracks.
+
+	 this album has  -1 tracks doesn't download.
+
+
+ -------- Convert m4a to mp3 start   ----------- 
+C:\Users\ixing\xmly\原来这些歌还有这样的唱法\
+C:\Users\ixing\xmly\原来这些歌还有这样的唱法\mp3
+
+
+Start filename: <type 'unicode'> 3D版魂斗罗单人纯人声演绎.m4a
+
+
+Start mp3_path: <type 'unicode'> C:\Users\ixing\xmly\原来这些歌还有这样的唱法\mp3
+
+
+Start m4a_path: <type 'unicode'> C:\Users\ixing\xmly\原来这些歌还有这样的唱法\
+
+ get all the tracks error: 'ascii' codec can't encode characters in position 2-12: ordinal not in range(128)
+
+ get album record error: 'ascii' codec can't encode characters in position 2-12: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 833, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 744, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4].decode('utf-8'))
+  File "C:\Python27\lib\encodings\utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 2-12: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 833, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 744, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4].decode('utf-8'))
+  File "C:\Python27\lib\encodings\utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 2-12: ordinal not in range(128)
+
+Enter a zhubo, album or sound url:http://www.ximalaya.com/38413391/album/3310039/
+Album in database  38413391 /album/ 3310039
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/38413391/album/3310039/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 13 	 update_time: 2016-01-12
+	 Value in Web -- sound_count: 13 	 update_time: 2016-01-12
+NO NEED for update.
+
+	 this album has  13 tracks.
+
+	 this album has  -1 tracks doesn't download.
+
+
+ -------- Convert m4a to mp3 start   ----------- 
+C:\Users\ixing\xmly\原来这些歌还有这样的唱法\
+C:\Users\ixing\xmly\原来这些歌还有这样的唱法\mp3
+
+
+Start filename: <type 'unicode'> 3D版魂斗罗单人纯人声演绎.m4a
+
+
+Start mp3_path: <type 'unicode'> C:\Users\ixing\xmly\原来这些歌还有这样的唱法\mp3
+
+
+Start m4a_path: <type 'unicode'> C:\Users\ixing\xmly\原来这些歌还有这样的唱法\
+
+ get all the tracks error: 'ascii' codec can't encode characters in position 2-12: ordinal not in range(128)
+
+ get album record error: 'ascii' codec can't encode characters in position 2-12: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 833, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 744, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4].decode('utf-8').encode('gbk'))
+  File "C:\Python27\lib\encodings\utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 2-12: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 833, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 744, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4].decode('utf-8').encode('gbk'))
+  File "C:\Python27\lib\encodings\utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 2-12: ordinal not in range(128)
+
+Enter a zhubo, album or sound url:http://www.ximalaya.com/38413391/album/3310039/
+Album in database  38413391 /album/ 3310039
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/38413391/album/3310039/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 13 	 update_time: 2016-01-12
+	 Value in Web -- sound_count: 13 	 update_time: 2016-01-12
+NO NEED for update.
+
+	 this album has  13 tracks.
+
+	 this album has  -1 tracks doesn't download.
+
+
+ -------- Convert m4a to mp3 start   ----------- 
+C:\Users\ixing\xmly\原来这些歌还有这样的唱法\
+C:\Users\ixing\xmly\原来这些歌还有这样的唱法\mp3
+
+
+Start filename: <type 'unicode'> Rolling In The Deep （令人汗颜的“牛”嘴）.m4a
+
+
+Start mp3_path: <type 'unicode'> C:\Users\ixing\xmly\原来这些歌还有这样的唱法\mp3
+
+
+Start m4a_path: <type 'unicode'> C:\Users\ixing\xmly\原来这些歌还有这样的唱法\
+
+ get all the tracks error: 'ascii' codec can't encode characters in position 20-30: ordinal not in range(128)
+
+ get album record error: 'ascii' codec can't encode characters in position 20-30: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 833, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 744, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4].decode('utf-8').encode('gbk'))
+  File "C:\Python27\lib\encodings\utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 20-30: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 833, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 744, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4].decode('utf-8').encode('gbk'))
+  File "C:\Python27\lib\encodings\utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 20-30: ordinal not in range(128)
+
+Enter a zhubo, album or sound url:http://www.ximalaya.com/38413391/album/3310039/
+Album in database  38413391 /album/ 3310039
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/38413391/album/3310039/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 13 	 update_time: 2016-01-12
+	 Value in Web -- sound_count: 13 	 update_time: 2016-01-12
+NO NEED for update.
+
+	 this album has  13 tracks.
+
+	 this album has  -1 tracks doesn't download.
+
+
+ -------- Convert m4a to mp3 start   ----------- 
+C:\Users\ixing\xmly\原来这些歌还有这样的唱法\
+C:\Users\ixing\xmly\原来这些歌还有这样的唱法\mp3
+
+
+Start filename: <type 'unicode'> 《月亮代表谁的心》陶吉吉的歌还能这么唱.m4a
+
+
+Start mp3_path: <type 'unicode'> C:\Users\ixing\xmly\原来这些歌还有这样的唱法\mp3
+
+
+Start m4a_path: <type 'unicode'> C:\Users\ixing\xmly\原来这些歌还有这样的唱法\
+
+ get all the tracks error: 'ascii' codec can't encode characters in position 0-18: ordinal not in range(128)
+
+ get album record error: 'ascii' codec can't encode characters in position 0-18: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 833, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 744, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4].decode('utf-8').encode('gbk'))
+  File "C:\Python27\lib\encodings\utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-18: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 48, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 833, in downloadAlbum
+    m4aToMp3(m4a_path, mp3_path)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 744, in m4aToMp3
+    os.path.join(mp3_path, '%s.mp3' % filename[:-4].decode('utf-8').encode('gbk'))
+  File "C:\Python27\lib\encodings\utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-18: ordinal not in range(128)

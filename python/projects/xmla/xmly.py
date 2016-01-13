@@ -12,7 +12,7 @@ import subprocess
 
 HOME_URL = 'http://www.ximalaya.com'
 DATA_BASE = 'xmly.sqlite'
-MP3_DIR = os.path.expanduser('~')   # 'C:\\Users\\username'
+AUDIO_DIR = os.path.expanduser('~')   # 'C:\\Users\\username'
 
 class Logger(object):
     "print to console & redirect to a file"
@@ -714,7 +714,7 @@ def prettyAlbumDir(album_name):
     album_name = re.sub(pattern, ' ', album_name)
     
     # check weather the album_title dir exist?
-    album_dir = MP3_DIR + '\\xmly\\' + album_name + '\\'
+    album_dir = AUDIO_DIR + '\\xmly\\' + album_name + '\\'
     if not os.path.isdir(album_dir):
         os.makedirs(album_dir)
         
@@ -734,12 +734,14 @@ def m4aToMp3(m4a_path, mp3_path):
         ]
         
     for filename in filenames:
-        print '\n\nStart'
+        print '\n\nStart filename:', type(filename), filename
+        print '\n\nStart mp3_path:', type(mp3_path), mp3_path
+        print '\n\nStart m4a_path:', type(m4a_path), m4a_path
         subprocess.call([
             "ffmpeg", "-i", 
             os.path.join(m4a_path, filename), 
             "-acodec", "libmp3lame", "-ab", "256k", 
-            os.path.join(mp3_path, '%s.mp3' % filename[:-4])
+            os.path.join(mp3_path, '%s.mp3' % filename[:-4].decode('utf-8').encode('gbk'))
             ])
         print '\n\nEnd#'
     # return 0
@@ -761,7 +763,7 @@ def downloadAlbum(conn, cur, url, result):
     
     try:
         out = cur.fetchone()
-        name = out[0] 
+        album_name = out[0] 
         sound_count = out[1] 
         sound_ids = out[2] 
         sound_ids = pickle.loads(sound_ids)
@@ -777,6 +779,8 @@ def downloadAlbum(conn, cur, url, result):
         
         try:
             downloaded_dict = {}    # downloaded flag dictionary
+            album_name, album_dir = prettyAlbumDir(album_name)
+            
             for row in cur:
                 print '\t', row[0], row[2], row[3], row[4]
                 title = row[0]
@@ -787,7 +791,6 @@ def downloadAlbum(conn, cur, url, result):
                 track_id = row[5]
                 track_suffix = '.' + play_path_64.split('.')[-1]
                 
-                album_name, album_dir = prettyAlbumDir(name)
                 
                 track_path = album_dir + title + track_suffix
                 print '\t', track_path
@@ -804,18 +807,10 @@ def downloadAlbum(conn, cur, url, result):
                     print '\t\t', downloaded_dict
                     
                 except Exception, x:
-                    # write the downloaded_dict to db if download has error
-                    # try:
-                        # for track_id, downloaded in downloaded_dict.items:
-                            # cur.execute("UPDATE Track SET downloaded = ? WHERE id = ?", (downloaded, track_id))
-                    # except Exception, x:
-                        # print 'update track downloaded error:', x
-                        # raise
-                    
                     print '\n download track error', x
                     # raise
                     
-            # write the downloaded_dict to db if download hasn't error
+            # update downloaded
             try:
                 for track_id, downloaded in downloaded_dict.items():
                     cur.execute("UPDATE Track SET downloaded = ? WHERE id = ?", (downloaded, int(track_id)))
@@ -823,7 +818,20 @@ def downloadAlbum(conn, cur, url, result):
             except Exception, x:
                 print '\n update track downloaded error:', x
                 raise
-                    
+                
+            # convert m4a to mp3
+            print "\n\n -------- Convert m4a to mp3 start   ----------- "
+            # print "album_dir:", album_dir
+            
+            m4a_path = album_dir
+            mp3_path = album_dir + "mp3"
+            print m4a_path
+            print mp3_path
+            if not os.path.isdir(mp3_path):  # for m4a convert
+                os.makedirs(mp3_path)
+            
+            m4aToMp3(m4a_path, mp3_path)
+            
                 
         except Exception, x:
             print '\n get all the tracks error:', x

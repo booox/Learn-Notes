@@ -10,7 +10,7 @@
     * STEPS:
         * Download Static Version: [http://ffmpeg.zeranoe.com/builds/](http://ffmpeg.zeranoe.com/builds/)
         * Unzip to a folder that's easy to find, (and you can rename it to *ffmpeg* )
-        * Add to Windows Path : *FFMPEG_DIR\bin*
+        * Add to Windows Path and Reboot: *FFMPEG_DIR\bin* 
         * 
     * Examples
         * Make video from image sequence:
