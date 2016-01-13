@@ -1,0 +1,300 @@
+﻿ble-libtwolame --enable-libvidstab --enable-libvo-aacenc --enable-libvo-amrwbenc
+ --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enabl
+e-libx264 --enable-libx265 --enable-libxavs --enable-libxvid --enable-libzimg --
+enable-lzma --enable-decklink --enable-zlib
+  libavutil      55. 13.100 / 55. 13.100
+  libavcodec     57. 22.100 / 57. 22.100
+  libavformat    57. 21.101 / 57. 21.101
+  libavdevice    57.  0.100 / 57.  0.100
+  libavfilter     6. 23.100 /  6. 23.100
+  libswscale      4.  0.100 /  4.  0.100
+  libswresample   2.  0.101 /  2.  0.101
+  libpostproc    54.  0.100 / 54.  0.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'D:\xmly\m4a\some\ISIS鑲嗚檺涓庝腑鍥藉嚭
+鍏垫姢渚?m4a':
+  Metadata:
+    major_brand     : M4A
+    minor_version   : 512
+    compatible_brands: isomiso2
+    encoder         : Lavf56.33.101
+  Duration: 01:00:06.91, start: 0.114694, bitrate: 64 kb/s
+    Stream #0:0(und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo,
+ fltp, 63 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+Output #0, mp3, to 'D:\xmly\mp3\some\ISIS鑲嗚檺涓庝腑鍥藉嚭鍏垫姢渚?mp3':
+  Metadata:
+    major_brand     : M4A
+    minor_version   : 512
+    compatible_brands: isomiso2
+    TSSE            : Lavf57.21.101
+    Stream #0:0(und): Audio: mp3 (libmp3lame), 44100 Hz, stereo, fltp, 256 kb/s
+(default)
+    Metadata:
+      handler_name    : SoundHandler
+      encoder         : Lavc57.22.100 libmp3lame
+Stream mapping:
+  Stream #0:0 -> #0:0 (aac (native) -> mp3 (libmp3lame))
+Press [q] to stop, [?] for help
+size=  112712kB time=01:00:06.96 bitrate= 256.0kbits/s speed=45.2x
+video:0kB audio:112711kB subtitle:0kB other streams:0kB global headers:0kB muxin
+g overhead: 0.000845%
+#
+ffmpeg version N-77782-g42c54d4 Copyright (c) 2000-2016 the FFmpeg developers
+  built with gcc 5.2.0 (GCC)
+  configuration: --enable-gpl --enable-version3 --disable-w32threads --enable-av
+isynth --enable-bzlib --enable-fontconfig --enable-frei0r --enable-gnutls --enab
+le-iconv --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --
+enable-libdcadec --enable-libfreetype --enable-libgme --enable-libgsm --enable-l
+ibilbc --enable-libmodplug --enable-libmp3lame --enable-libopencore-amrnb --enab
+le-libopencore-amrwb --enable-libopenjpeg --enable-libopus --enable-librtmp --en
+able-libschroedinger --enable-libsoxr --enable-libspeex --enable-libtheora --ena
+ble-libtwolame --enable-libvidstab --enable-libvo-aacenc --enable-libvo-amrwbenc
+ --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enabl
+e-libx264 --enable-libx265 --enable-libxavs --enable-libxvid --enable-libzimg --
+enable-lzma --enable-decklink --enable-zlib
+  libavutil      55. 13.100 / 55. 13.100
+  libavcodec     57. 22.100 / 57. 22.100
+  libavformat    57. 21.101 / 57. 21.101
+  libavdevice    57.  0.100 / 57.  0.100
+  libavfilter     6. 23.100 /  6. 23.100
+  libswscale      4.  0.100 /  4.  0.100
+  libswresample   2.  0.101 /  2.  0.101
+  libpostproc    54.  0.100 / 54.  0.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'D:\xmly\m4a\some\TPP鍜屾娲查毦姘戝嵄
+鏈?m4a':
+  Metadata:
+    major_brand     : M4A
+    minor_version   : 512
+    compatible_brands: isomiso2
+    encoder         : Lavf56.18.101
+  Duration: 00:33:14.17, start: 0.114694, bitrate: 32 kb/s
+    Stream #0:0(und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo,
+ fltp, 32 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+Output #0, mp3, to 'D:\xmly\mp3\some\TPP鍜屾娲查毦姘戝嵄鏈?mp3':
+  Metadata:
+    major_brand     : M4A
+    minor_version   : 512
+    compatible_brands: isomiso2
+    TSSE            : Lavf57.21.101
+    Stream #0:0(und): Audio: mp3 (libmp3lame), 44100 Hz, stereo, fltp, 256 kb/s
+(default)
+    Metadata:
+      handler_name    : SoundHandler
+      encoder         : Lavc57.22.100 libmp3lame
+Stream mapping:
+  Stream #0:0 -> #0:0 (aac (native) -> mp3 (libmp3lame))
+Press [q] to stop, [?] for help
+size=   62320kB time=00:33:14.18 bitrate= 256.0kbits/s speed=  57x
+video:0kB audio:62319kB subtitle:0kB other streams:0kB global headers:0kB muxing
+ overhead: 0.001528%
+#
+ffmpeg version N-77782-g42c54d4 Copyright (c) 2000-2016 the FFmpeg developers
+  built with gcc 5.2.0 (GCC)
+  configuration: --enable-gpl --enable-version3 --disable-w32threads --enable-av
+isynth --enable-bzlib --enable-fontconfig --enable-frei0r --enable-gnutls --enab
+le-iconv --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --
+enable-libdcadec --enable-libfreetype --enable-libgme --enable-libgsm --enable-l
+ibilbc --enable-libmodplug --enable-libmp3lame --enable-libopencore-amrnb --enab
+le-libopencore-amrwb --enable-libopenjpeg --enable-libopus --enable-librtmp --en
+able-libschroedinger --enable-libsoxr --enable-libspeex --enable-libtheora --ena
+ble-libtwolame --enable-libvidstab --enable-libvo-aacenc --enable-libvo-amrwbenc
+ --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enabl
+e-libx264 --enable-libx265 --enable-libxavs --enable-libxvid --enable-libzimg --
+enable-lzma --enable-decklink --enable-zlib
+  libavutil      55. 13.100 / 55. 13.100
+  libavcodec     57. 22.100 / 57. 22.100
+  libavformat    57. 21.101 / 57. 21.101
+  libavdevice    57.  0.100 / 57.  0.100
+  libavfilter     6. 23.100 /  6. 23.100
+  libswscale      4.  0.100 /  4.  0.100
+  libswresample   2.  0.101 /  2.  0.101
+  libpostproc    54.  0.100 / 54.  0.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'D:\xmly\m4a\some\鎵掍竴鎵掔編鍒╁潥1.m4
+a':
+  Metadata:
+    major_brand     : M4A
+    minor_version   : 512
+    compatible_brands: isomiso2
+    encoder         : Lavf56.18.101
+  Duration: 00:37:53.82, start: 0.229388, bitrate: 64 kb/s
+    Stream #0:0(und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 22050 Hz, stereo,
+ fltp, 64 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+Output #0, mp3, to 'D:\xmly\mp3\some\鎵掍竴鎵掔編鍒╁潥1.mp3':
+  Metadata:
+    major_brand     : M4A
+    minor_version   : 512
+    compatible_brands: isomiso2
+    TSSE            : Lavf57.21.101
+    Stream #0:0(und): Audio: mp3 (libmp3lame), 22050 Hz, stereo, fltp, 256 kb/s
+(default)
+    Metadata:
+      handler_name    : SoundHandler
+      encoder         : Lavc57.22.100 libmp3lame
+Stream mapping:
+  Stream #0:0 -> #0:0 (aac (native) -> mp3 (libmp3lame))
+Press [q] to stop, [?] for help
+size=   44414kB time=00:37:53.90 bitrate= 160.0kbits/s speed=86.9x
+video:0kB audio:44413kB subtitle:0kB other streams:0kB global headers:0kB muxing
+ overhead: 0.001456%
+#
+ffmpeg version N-77782-g42c54d4 Copyright (c) 2000-2016 the FFmpeg developers
+  built with gcc 5.2.0 (GCC)
+  configuration: --enable-gpl --enable-version3 --disable-w32threads --enable-av
+isynth --enable-bzlib --enable-fontconfig --enable-frei0r --enable-gnutls --enab
+le-iconv --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --
+enable-libdcadec --enable-libfreetype --enable-libgme --enable-libgsm --enable-l
+ibilbc --enable-libmodplug --enable-libmp3lame --enable-libopencore-amrnb --enab
+le-libopencore-amrwb --enable-libopenjpeg --enable-libopus --enable-librtmp --en
+able-libschroedinger --enable-libsoxr --enable-libspeex --enable-libtheora --ena
+ble-libtwolame --enable-libvidstab --enable-libvo-aacenc --enable-libvo-amrwbenc
+ --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enabl
+e-libx264 --enable-libx265 --enable-libxavs --enable-libxvid --enable-libzimg --
+enable-lzma --enable-decklink --enable-zlib
+  libavutil      55. 13.100 / 55. 13.100
+  libavcodec     57. 22.100 / 57. 22.100
+  libavformat    57. 21.101 / 57. 21.101
+  libavdevice    57.  0.100 / 57.  0.100
+  libavfilter     6. 23.100 /  6. 23.100
+  libswscale      4.  0.100 /  4.  0.100
+  libswresample   2.  0.101 /  2.  0.101
+  libpostproc    54.  0.100 / 54.  0.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'D:\xmly\m4a\some\鎵掍竴鎵掔編鍒╁潥2.m4
+a':
+  Metadata:
+    major_brand     : M4A
+    minor_version   : 512
+    compatible_brands: isomiso2
+    encoder         : Lavf56.18.101
+  Duration: 00:41:49.13, start: 0.229388, bitrate: 64 kb/s
+    Stream #0:0(und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 22050 Hz, stereo,
+ fltp, 64 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+Output #0, mp3, to 'D:\xmly\mp3\some\鎵掍竴鎵掔編鍒╁潥2.mp3':
+  Metadata:
+    major_brand     : M4A
+    minor_version   : 512
+    compatible_brands: isomiso2
+    TSSE            : Lavf57.21.101
+    Stream #0:0(und): Audio: mp3 (libmp3lame), 22050 Hz, stereo, fltp, 256 kb/s
+(default)
+    Metadata:
+      handler_name    : SoundHandler
+      encoder         : Lavc57.22.100 libmp3lame
+Stream mapping:
+  Stream #0:0 -> #0:0 (aac (native) -> mp3 (libmp3lame))
+Press [q] to stop, [?] for help
+size=   49009kB time=00:41:49.16 bitrate= 160.0kbits/s speed=93.2x
+video:0kB audio:49008kB subtitle:0kB other streams:0kB global headers:0kB muxing
+ overhead: 0.001319%
+#
+ffmpeg version N-77782-g42c54d4 Copyright (c) 2000-2016 the FFmpeg developers
+  built with gcc 5.2.0 (GCC)
+  configuration: --enable-gpl --enable-version3 --disable-w32threads --enable-av
+isynth --enable-bzlib --enable-fontconfig --enable-frei0r --enable-gnutls --enab
+le-iconv --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --
+enable-libdcadec --enable-libfreetype --enable-libgme --enable-libgsm --enable-l
+ibilbc --enable-libmodplug --enable-libmp3lame --enable-libopencore-amrnb --enab
+le-libopencore-amrwb --enable-libopenjpeg --enable-libopus --enable-librtmp --en
+able-libschroedinger --enable-libsoxr --enable-libspeex --enable-libtheora --ena
+ble-libtwolame --enable-libvidstab --enable-libvo-aacenc --enable-libvo-amrwbenc
+ --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enabl
+e-libx264 --enable-libx265 --enable-libxavs --enable-libxvid --enable-libzimg --
+enable-lzma --enable-decklink --enable-zlib
+  libavutil      55. 13.100 / 55. 13.100
+  libavcodec     57. 22.100 / 57. 22.100
+  libavformat    57. 21.101 / 57. 21.101
+  libavdevice    57.  0.100 / 57.  0.100
+  libavfilter     6. 23.100 /  6. 23.100
+  libswscale      4.  0.100 /  4.  0.100
+  libswresample   2.  0.101 /  2.  0.101
+  libpostproc    54.  0.100 / 54.  0.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'D:\xmly\m4a\some\鎵掍竴鎵掔編鍒╁潥3.m4
+a':
+  Metadata:
+    major_brand     : M4A
+    minor_version   : 512
+    compatible_brands: isomiso2
+    encoder         : Lavf56.18.101
+  Duration: 00:41:59.77, start: 0.229388, bitrate: 64 kb/s
+    Stream #0:0(und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 22050 Hz, stereo,
+ fltp, 64 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+Output #0, mp3, to 'D:\xmly\mp3\some\鎵掍竴鎵掔編鍒╁潥3.mp3':
+  Metadata:
+    major_brand     : M4A
+    minor_version   : 512
+    compatible_brands: isomiso2
+    TSSE            : Lavf57.21.101
+    Stream #0:0(und): Audio: mp3 (libmp3lame), 22050 Hz, stereo, fltp, 256 kb/s
+(default)
+    Metadata:
+      handler_name    : SoundHandler
+      encoder         : Lavc57.22.100 libmp3lame
+Stream mapping:
+  Stream #0:0 -> #0:0 (aac (native) -> mp3 (libmp3lame))
+Press [q] to stop, [?] for help
+size=   49217kB time=00:41:59.85 bitrate= 160.0kbits/s speed=85.8x
+video:0kB audio:49217kB subtitle:0kB other streams:0kB global headers:0kB muxing
+ overhead: 0.001314%
+#
+ffmpeg version N-77782-g42c54d4 Copyright (c) 2000-2016 the FFmpeg developers
+  built with gcc 5.2.0 (GCC)
+  configuration: --enable-gpl --enable-version3 --disable-w32threads --enable-av
+isynth --enable-bzlib --enable-fontconfig --enable-frei0r --enable-gnutls --enab
+le-iconv --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --
+enable-libdcadec --enable-libfreetype --enable-libgme --enable-libgsm --enable-l
+ibilbc --enable-libmodplug --enable-libmp3lame --enable-libopencore-amrnb --enab
+le-libopencore-amrwb --enable-libopenjpeg --enable-libopus --enable-librtmp --en
+able-libschroedinger --enable-libsoxr --enable-libspeex --enable-libtheora --ena
+ble-libtwolame --enable-libvidstab --enable-libvo-aacenc --enable-libvo-amrwbenc
+ --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enabl
+e-libx264 --enable-libx265 --enable-libxavs --enable-libxvid --enable-libzimg --
+enable-lzma --enable-decklink --enable-zlib
+  libavutil      55. 13.100 / 55. 13.100
+  libavcodec     57. 22.100 / 57. 22.100
+  libavformat    57. 21.101 / 57. 21.101
+  libavdevice    57.  0.100 / 57.  0.100
+  libavfilter     6. 23.100 /  6. 23.100
+  libswscale      4.  0.100 /  4.  0.100
+  libswresample   2.  0.101 /  2.  0.101
+  libpostproc    54.  0.100 / 54.  0.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'D:\xmly\m4a\some\鎵掍竴鎵掔編鍒╁潥4鈥
+斺€旀灙涓庡爼鑳庤嵂.m4a':
+  Metadata:
+    major_brand     : M4A
+    minor_version   : 512
+    compatible_brands: isomiso2
+    encoder         : Lavf56.33.101
+  Duration: 00:43:05.49, start: 0.114694, bitrate: 64 kb/s
+    Stream #0:0(und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo,
+ fltp, 63 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+Output #0, mp3, to 'D:\xmly\mp3\some\鎵掍竴鎵掔編鍒╁潥4鈥斺€旀灙涓庡爼鑳庤嵂.mp
+3':
+  Metadata:
+    major_brand     : M4A
+    minor_version   : 512
+    compatible_brands: isomiso2
+    TSSE            : Lavf57.21.101
+    Stream #0:0(und): Audio: mp3 (libmp3lame), 44100 Hz, stereo, fltp, 256 kb/s
+(default)
+    Metadata:
+      handler_name    : SoundHandler
+      encoder         : Lavc57.22.100 libmp3lame
+Stream mapping:
+  Stream #0:0 -> #0:0 (aac (native) -> mp3 (libmp3lame))
+Press [q] to stop, [?] for help
+size=   80794kB time=00:43:05.52 bitrate= 256.0kbits/s speed=44.3x
+video:0kB audio:80793kB subtitle:0kB other streams:0kB global headers:0kB muxing
+ overhead: 0.001178%
+#
+
+D:\BaiduYun\SyanDisk\bak\Git\Learn-Notes\python\projects\xmla>

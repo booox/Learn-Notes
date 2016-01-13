@@ -7,6 +7,8 @@ import requests
 import os
 import sys
 import time
+import os.path
+import subprocess
 
 HOME_URL = 'http://www.ximalaya.com'
 DATA_BASE = 'xmly.sqlite'
@@ -714,9 +716,34 @@ def prettyAlbumDir(album_name):
     # check weather the album_title dir exist?
     album_dir = MP3_DIR + '\\xmly\\' + album_name + '\\'
     if not os.path.isdir(album_dir):
-        os.mkdir(album_dir)
+        os.makedirs(album_dir)
         
     return album_name, album_dir
+    
+        
+def m4aToMp3(m4a_path, mp3_path):
+    """ convert all the m4a to mp3 in a directory. """
+    if not os.path.isdir(m4a_path):
+        os.makedirs(m4a_path)
+    if not os.path.isdir(mp3_path):
+        os.makedirs(mp3_path)
+    
+    filenames = [
+        filename for filename in os.listdir(m4a_path)
+        if filename.endswith('.m4a')
+        ]
+        
+    for filename in filenames:
+        print '\n\nStart'
+        subprocess.call([
+            "ffmpeg", "-i", 
+            os.path.join(m4a_path, filename), 
+            "-acodec", "libmp3lame", "-ab", "256k", 
+            os.path.join(mp3_path, '%s.mp3' % filename[:-4])
+            ])
+        print '\n\nEnd#'
+    # return 0
+    
         
         
 def downloadAlbum(conn, cur, url, result):
@@ -807,8 +834,6 @@ def downloadAlbum(conn, cur, url, result):
         raise
     
     pass
-    
-    
     
     
     
