@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 import xmly
@@ -13,7 +13,7 @@ if __name__ == '__main__':
     
     sys.stdout = xmly.Logger('log.txt')
     sys.stderr = xmly.Logger('log.txt')
-    
+    sys.getfilesystemencoding()
     
     while True:
         print ''
@@ -26,6 +26,9 @@ if __name__ == '__main__':
             # url = 'http://www.ximalaya.com/1412917/sound/11209501/'
             url = 'http://www.ximalaya.com/37310896/album/3253111/'
             url = 'http://www.ximalaya.com/37310896/album/3253111/'
+            url = 'http://www.ximalaya.com/38909644/album/3376281/'
+            url = 'http://www.ximalaya.com/1412917/album/239463/'  # 罗辑思维 全集
+            # url = 'http://www.ximalaya.com/1000168/album/213506/'  # 小晓说
         if url == 'bye': exit(1)
             
         print url        
