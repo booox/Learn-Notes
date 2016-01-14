@@ -491,3 +491,8 @@
     * cProfile
     * profile
     * hotshot
+
+    
+* Unpacking values from a tuple
+    * `people = ('Bob', '23', 'Software')`
+        * `name, age, work = people`
