@@ -1,4 +1,4 @@
-#coding=utf-8
+﻿#coding=utf-8
 import sqlite3
 from xmly_session import XMLYSession
 import re
@@ -12,7 +12,12 @@ import subprocess
 
 HOME_URL = 'http://www.ximalaya.com'
 DATA_BASE = 'xmly.sqlite'
-AUDIO_DIR = os.path.expanduser('~')   # 'C:\\Users\\username'
+# AUDIO_DIR = os.path.expanduser('~')   # 'C:\\Users\\username'
+AUDIO_DIR = 'D:\\xmly'   # 'C:\\Users\\username'
+
+reload(sys)
+sys.setdefaultencoding('gb18030')
+
 
 class Logger(object):
     "print to console & redirect to a file"
@@ -714,7 +719,7 @@ def prettyAlbumDir(album_name):
     album_name = re.sub(pattern, ' ', album_name)
     
     # check weather the album_title dir exist?
-    album_dir = AUDIO_DIR + '\\xmly\\' + album_name + '\\'
+    album_dir = AUDIO_DIR + '\\' + album_name + '\\'
     if not os.path.isdir(album_dir):
         os.makedirs(album_dir)
         
@@ -722,26 +727,49 @@ def prettyAlbumDir(album_name):
     
         
 def m4aToMp3(m4a_path, mp3_path):
-    """ convert all the m4a to mp3 in a directory. """
+    """ convert all the m4a to mp3 in a directory and move all the mp3 to mp3 directory """
     if not os.path.isdir(m4a_path):
         os.makedirs(m4a_path)
     if not os.path.isdir(mp3_path):
         os.makedirs(mp3_path)
     
-    filenames = [
+    # move all the mp3 file to mp3 directory
+    filenames_mp3 = [
+        filename for filename in os.listdir(m4a_path)
+        if filename.endswith('.mp3')
+        ]
+        
+    for filename in filenames_mp3:
+        filename = filename
+        # print '\n\nStart mp3_path:', type(mp3_path), mp3_path
+        # print '\n\nStart m4a_path:', type(m4a_path), m4a_path
+        # print '\n\nStart filename:', type(filename)
+        # print repr(filename)
+        src_mp3 = os.path.join(m4a_path, filename)
+        # print src_mp3
+        dst_mp3 = os.path.join(mp3_path, '%s.mp3' % filename[:-4])
+        # print dst_mp3
+        os.rename(src_mp3, dst_mp3)
+        
+        
+    
+    
+    # convert all the m4a file to mp3 format to mp3 directory
+    
+    filenames_m4a = [
         filename for filename in os.listdir(m4a_path)
         if filename.endswith('.m4a')
         ]
         
-    for filename in filenames:
-        print '\n\nStart filename:', type(filename), filename
-        print '\n\nStart mp3_path:', type(mp3_path), mp3_path
-        print '\n\nStart m4a_path:', type(m4a_path), m4a_path
+    for filename in filenames_m4a:
+        # filename = filename
+        
+        
         subprocess.call([
             "ffmpeg", "-i", 
             os.path.join(m4a_path, filename), 
             "-acodec", "libmp3lame", "-ab", "256k", 
-            os.path.join(mp3_path, '%s.mp3' % filename[:-4].decode('utf-8').encode('gbk'))
+            os.path.join(mp3_path, '%s.mp3' % filename[:-4])
             ])
         print '\n\nEnd#'
     # return 0
@@ -781,9 +809,10 @@ def downloadAlbum(conn, cur, url, result):
             downloaded_dict = {}    # downloaded flag dictionary
             album_name, album_dir = prettyAlbumDir(album_name)
             
+            print 'Start download track...'
             for row in cur:
                 print '\t', row[0], row[2], row[3], row[4]
-                title = row[0]
+                track_title = row[0]
                 play_path = row[1]
                 play_path_32 = row[2]
                 play_path_64 = row[3]
@@ -791,8 +820,8 @@ def downloadAlbum(conn, cur, url, result):
                 track_id = row[5]
                 track_suffix = '.' + play_path_64.split('.')[-1]
                 
-                
-                track_path = album_dir + title + track_suffix
+                print "track_title:", type(track_title), track_title
+                track_path = album_dir + track_title + track_suffix
                 print '\t', track_path
                 
                 # download track with requests
@@ -825,8 +854,8 @@ def downloadAlbum(conn, cur, url, result):
             
             m4a_path = album_dir
             mp3_path = album_dir + "mp3"
-            print m4a_path
-            print mp3_path
+            # print "m4a_path:", type(m4a_path), m4a_path
+            # print "mp3_path:", type(mp3_path), mp3_path
             if not os.path.isdir(mp3_path):  # for m4a convert
                 os.makedirs(mp3_path)
             

@@ -492,7 +492,26 @@
     * profile
     * hotshot
 
+
     
 * Unpacking values from a tuple
     * `people = ('Bob', '23', 'Software')`
         * `name, age, work = people`
+
+    
+* About encode & decode
+    * [Python字符编码详解](http://www.cnblogs.com/huxi/archive/2010/12/05/1897271.html)
+        * 该博主的其他几篇与Python有关的文章也非常值得一读
+    * [Python Unicode与中文处理](http://blog.csdn.net/dao123mao/article/details/5396497)
+    * [谈谈Unicode编码，简要解释UCS、UTF、BMP、BOM等名词](http://www.pythonclub.org/python-basic/encode-detail)
+    * [http://www.pythonclub.org/python-basic/encode-detail](http://blog.csdn.net/backard/article/details/9124227)
+    * []()
+    
+* move file
+    * Using os.rename
+        `os.rename(src, dst)`
+    * Using shutil.move
+        `shutil.move(src, dst)`
+        
+        
+

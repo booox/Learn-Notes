@@ -267,7 +267,7 @@ class XMLYSession(requests.Session):
         
         
         try:
-            name                =   soup.h1.string
+            name                =   soup.find('div', class_='detailContent_title').h1.string
             category            =   soup.find('span', class_='mgr-5').previous_element.previous_element    
             playcount          =    soup.find('div', class_='detailContent_playcountDetail').span.string
             sound_count     =   int(soup.find('span', class_='albumSoundcount').string[1:-1])
