@@ -9778,3 +9778,2349 @@ track_title: <type 'unicode'> 末日启示: 向死而生 01
 
 
  -------- Convert m4a to mp3 star
+Enter a zhubo, album or sound url:http://www.ximalaya.com/11119867/album/262212/
+Album  doesn't in db: 11119867 /album/ 262212
+http://www.ximalaya.com/11119867/album/262212/
+	 Start getItemsOnPages _type=  albumSound From :  http://www.ximalaya.com/11119867/album/262212/
+	 getItemsOnPages retrieve the first page, total: 2
+	 getItemsOnPages retrive the first page done.
+	 getItemsOnPages retrive multi pages start.
+	 Retriving page  2 / 2
+	 Page url:  http://www.ximalaya.com/11119867/album/262212?page=2 	 Retriving page done  2 / 2
+	 getItemsOnPages retrive multi pages Done.
+
+	 getItemsOnPages Done : get  albumSound from 2 pages
+Write New Album start. 11119867 /album/ 262212
+Write New Album Done. 11119867 /album/ 262212
+Write Tracks of the Album Start.
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/11529909/
+	Track  doesn't in db: 11119867 /sound/ 11529909
+	Write New Track start. 11119867 /sound/ 11529909
+	Write New Track Done. 11119867 /sound/ 11529909
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/11529909/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/11478876/
+	Track  doesn't in db: 11119867 /sound/ 11478876
+	Write New Track start. 11119867 /sound/ 11478876
+	Write New Track Done. 11119867 /sound/ 11478876
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/11478876/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/11405892/
+	Track  doesn't in db: 11119867 /sound/ 11405892
+	Write New Track start. 11119867 /sound/ 11405892
+	Write New Track Done. 11119867 /sound/ 11405892
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/11405892/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/11385675/
+	Track  doesn't in db: 11119867 /sound/ 11385675
+	Write New Track start. 11119867 /sound/ 11385675
+	Write New Track Done. 11119867 /sound/ 11385675
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/11385675/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/11362443/
+	Track  doesn't in db: 11119867 /sound/ 11362443
+	Write New Track start. 11119867 /sound/ 11362443
+	Write New Track Done. 11119867 /sound/ 11362443
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/11362443/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/11300091/
+	Track  doesn't in db: 11119867 /sound/ 11300091
+	Write New Track start. 11119867 /sound/ 11300091
+	Write New Track Done. 11119867 /sound/ 11300091
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/11300091/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/11250930/
+	Track  doesn't in db: 11119867 /sound/ 11250930
+	Write New Track start. 11119867 /sound/ 11250930
+	Write New Track Done. 11119867 /sound/ 11250930
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/11250930/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/11214728/
+	Track  doesn't in db: 11119867 /sound/ 11214728
+	Write New Track start. 11119867 /sound/ 11214728
+	Write New Track Done. 11119867 /sound/ 11214728
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/11214728/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/11188673/
+	Track  doesn't in db: 11119867 /sound/ 11188673
+	Write New Track start. 11119867 /sound/ 11188673
+	Write New Track Done. 11119867 /sound/ 11188673
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/11188673/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/11160802/
+	Track  doesn't in db: 11119867 /sound/ 11160802
+	Write New Track start. 11119867 /sound/ 11160802
+	Write New Track Done. 11119867 /sound/ 11160802
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/11160802/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/11132740/
+	Track  doesn't in db: 11119867 /sound/ 11132740
+	Write New Track start. 11119867 /sound/ 11132740
+	Write New Track Done. 11119867 /sound/ 11132740
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/11132740/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/11063487/
+	Track  doesn't in db: 11119867 /sound/ 11063487
+	Write New Track start. 11119867 /sound/ 11063487
+	Write New Track Done. 11119867 /sound/ 11063487
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/11063487/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/11017786/
+	Track  doesn't in db: 11119867 /sound/ 11017786
+	Write New Track start. 11119867 /sound/ 11017786
+	Write New Track Done. 11119867 /sound/ 11017786
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/11017786/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/10994150/
+	Track  doesn't in db: 11119867 /sound/ 10994150
+	Write New Track start. 11119867 /sound/ 10994150
+	Write New Track Done. 11119867 /sound/ 10994150
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/10994150/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/10966418/
+	Track  doesn't in db: 11119867 /sound/ 10966418
+	Write New Track start. 11119867 /sound/ 10966418
+	Write New Track Done. 11119867 /sound/ 10966418
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/10966418/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/10888958/
+	Track  doesn't in db: 11119867 /sound/ 10888958
+	Write New Track start. 11119867 /sound/ 10888958
+	Write New Track Done. 11119867 /sound/ 10888958
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/10888958/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/10834888/
+	Track  doesn't in db: 11119867 /sound/ 10834888
+	Write New Track start. 11119867 /sound/ 10834888
+	Write New Track Done. 11119867 /sound/ 10834888
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/10834888/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/10807288/
+	Track  doesn't in db: 11119867 /sound/ 10807288
+	Write New Track start. 11119867 /sound/ 10807288
+	Write New Track Done. 11119867 /sound/ 10807288
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/10807288/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/10712293/
+	Track  doesn't in db: 11119867 /sound/ 10712293
+	Write New Track start. 11119867 /sound/ 10712293
+	Write New Track Done. 11119867 /sound/ 10712293
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/10712293/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/10640852/
+	Track  doesn't in db: 11119867 /sound/ 10640852
+	Write New Track start. 11119867 /sound/ 10640852
+	Write New Track Done. 11119867 /sound/ 10640852
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/10640852/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/10586049/
+	Track  doesn't in db: 11119867 /sound/ 10586049
+	Write New Track start. 11119867 /sound/ 10586049
+	Write New Track Done. 11119867 /sound/ 10586049
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/10586049/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/10511588/
+	Track  doesn't in db: 11119867 /sound/ 10511588
+	Write New Track start. 11119867 /sound/ 10511588
+	Write New Track Done. 11119867 /sound/ 10511588
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/10511588/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/10393879/
+	Track  doesn't in db: 11119867 /sound/ 10393879
+	Write New Track start. 11119867 /sound/ 10393879
+	Write New Track Done. 11119867 /sound/ 10393879
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/10393879/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/10390594/
+	Track  doesn't in db: 11119867 /sound/ 10390594
+	Write New Track start. 11119867 /sound/ 10390594
+	Write New Track Done. 11119867 /sound/ 10390594
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/10390594/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/10318626/
+	Track  doesn't in db: 11119867 /sound/ 10318626
+	Write New Track start. 11119867 /sound/ 10318626
+	Write New Track Done. 11119867 /sound/ 10318626
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/10318626/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/10256609/
+	Track  doesn't in db: 11119867 /sound/ 10256609
+	Write New Track start. 11119867 /sound/ 10256609
+	Write New Track Done. 11119867 /sound/ 10256609
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/10256609/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/10234030/
+	Track  doesn't in db: 11119867 /sound/ 10234030
+	Write New Track start. 11119867 /sound/ 10234030
+	Write New Track Done. 11119867 /sound/ 10234030
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/10234030/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/10205254/
+	Track  doesn't in db: 11119867 /sound/ 10205254
+	Write New Track start. 11119867 /sound/ 10205254
+	Write New Track Done. 11119867 /sound/ 10205254
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/10205254/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/10130324/
+	Track  doesn't in db: 11119867 /sound/ 10130324
+	Write New Track start. 11119867 /sound/ 10130324
+	Write New Track Done. 11119867 /sound/ 10130324
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/10130324/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/10071688/
+	Track  doesn't in db: 11119867 /sound/ 10071688
+	Write New Track start. 11119867 /sound/ 10071688
+	Write New Track Done. 11119867 /sound/ 10071688
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/10071688/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/10019973/
+	Track  doesn't in db: 11119867 /sound/ 10019973
+	Write New Track start. 11119867 /sound/ 10019973
+	Write New Track Done. 11119867 /sound/ 10019973
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/10019973/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/9951611/
+	Track  doesn't in db: 11119867 /sound/ 9951611
+	Write New Track start. 11119867 /sound/ 9951611
+	Write New Track Done. 11119867 /sound/ 9951611
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/9951611/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/9902246/
+	Track  doesn't in db: 11119867 /sound/ 9902246
+	Write New Track start. 11119867 /sound/ 9902246
+	Write New Track Done. 11119867 /sound/ 9902246
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/9902246/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/9854932/
+	Track  doesn't in db: 11119867 /sound/ 9854932
+	Write New Track start. 11119867 /sound/ 9854932
+	Write New Track Done. 11119867 /sound/ 9854932
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/9854932/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/9776815/
+	Track  doesn't in db: 11119867 /sound/ 9776815
+	Write New Track start. 11119867 /sound/ 9776815
+	Write New Track Done. 11119867 /sound/ 9776815
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/9776815/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/9713522/
+	Track  doesn't in db: 11119867 /sound/ 9713522
+	Write New Track start. 11119867 /sound/ 9713522
+	Write New Track Done. 11119867 /sound/ 9713522
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/9713522/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/9664243/
+	Track  doesn't in db: 11119867 /sound/ 9664243
+	Write New Track start. 11119867 /sound/ 9664243
+	Write New Track Done. 11119867 /sound/ 9664243
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/9664243/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/9602159/
+	Track  doesn't in db: 11119867 /sound/ 9602159
+	Write New Track start. 11119867 /sound/ 9602159
+	Write New Track Done. 11119867 /sound/ 9602159
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/9602159/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/9561706/
+	Track  doesn't in db: 11119867 /sound/ 9561706
+	Write New Track start. 11119867 /sound/ 9561706
+	Write New Track Done. 11119867 /sound/ 9561706
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/9561706/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/9513652/
+	Track  doesn't in db: 11119867 /sound/ 9513652
+	Write New Track start. 11119867 /sound/ 9513652
+	Write New Track Done. 11119867 /sound/ 9513652
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/9513652/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/9462741/
+	Track  doesn't in db: 11119867 /sound/ 9462741
+	Write New Track start. 11119867 /sound/ 9462741
+	Write New Track Done. 11119867 /sound/ 9462741
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/9462741/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/9401153/
+	Track  doesn't in db: 11119867 /sound/ 9401153
+	Write New Track start. 11119867 /sound/ 9401153
+	Write New Track Done. 11119867 /sound/ 9401153
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/9401153/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/9357892/
+	Track  doesn't in db: 11119867 /sound/ 9357892
+	Write New Track start. 11119867 /sound/ 9357892
+	Write New Track Done. 11119867 /sound/ 9357892
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/9357892/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/9294868/
+	Track  doesn't in db: 11119867 /sound/ 9294868
+	Write New Track start. 11119867 /sound/ 9294868
+	Write New Track Done. 11119867 /sound/ 9294868
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/9294868/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/9258199/
+	Track  doesn't in db: 11119867 /sound/ 9258199
+	Write New Track start. 11119867 /sound/ 9258199
+	Write New Track Done. 11119867 /sound/ 9258199
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/9258199/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/9220825/
+	Track  doesn't in db: 11119867 /sound/ 9220825
+	Write New Track start. 11119867 /sound/ 9220825
+	Write New Track Done. 11119867 /sound/ 9220825
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/9220825/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/9161242/
+	Track  doesn't in db: 11119867 /sound/ 9161242
+	Write New Track start. 11119867 /sound/ 9161242
+	Write New Track Done. 11119867 /sound/ 9161242
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/9161242/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/9118866/
+	Track  doesn't in db: 11119867 /sound/ 9118866
+	Write New Track start. 11119867 /sound/ 9118866
+	Write New Track Done. 11119867 /sound/ 9118866
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/9118866/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/9106005/
+	Track  doesn't in db: 11119867 /sound/ 9106005
+	Write New Track start. 11119867 /sound/ 9106005
+	Write New Track Done. 11119867 /sound/ 9106005
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/9106005/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/9048100/
+	Track  doesn't in db: 11119867 /sound/ 9048100
+	Write New Track start. 11119867 /sound/ 9048100
+	Write New Track Done. 11119867 /sound/ 9048100
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/9048100/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/9027181/
+	Track  doesn't in db: 11119867 /sound/ 9027181
+	Write New Track start. 11119867 /sound/ 9027181
+	Write New Track Done. 11119867 /sound/ 9027181
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/9027181/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8984707/
+	Track  doesn't in db: 11119867 /sound/ 8984707
+	Write New Track start. 11119867 /sound/ 8984707
+	Write New Track Done. 11119867 /sound/ 8984707
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8984707/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8937681/
+	Track  doesn't in db: 11119867 /sound/ 8937681
+	Write New Track start. 11119867 /sound/ 8937681
+	Write New Track Done. 11119867 /sound/ 8937681
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8937681/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8860288/
+	Track  doesn't in db: 11119867 /sound/ 8860288
+	Write New Track start. 11119867 /sound/ 8860288
+	Write New Track Done. 11119867 /sound/ 8860288
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8860288/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8812251/
+	Track  doesn't in db: 11119867 /sound/ 8812251
+	Write New Track start. 11119867 /sound/ 8812251
+	Write New Track Done. 11119867 /sound/ 8812251
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8812251/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8779238/
+	Track  doesn't in db: 11119867 /sound/ 8779238
+	Write New Track start. 11119867 /sound/ 8779238
+	Write New Track Done. 11119867 /sound/ 8779238
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8779238/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8752046/
+	Track  doesn't in db: 11119867 /sound/ 8752046
+	Write New Track start. 11119867 /sound/ 8752046
+	Write New Track Done. 11119867 /sound/ 8752046
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8752046/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8710464/
+	Track  doesn't in db: 11119867 /sound/ 8710464
+	Write New Track start. 11119867 /sound/ 8710464
+	Write New Track Done. 11119867 /sound/ 8710464
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8710464/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8679497/
+	Track  doesn't in db: 11119867 /sound/ 8679497
+	Write New Track start. 11119867 /sound/ 8679497
+	Write New Track Done. 11119867 /sound/ 8679497
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8679497/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8664631/
+	Track  doesn't in db: 11119867 /sound/ 8664631
+	Write New Track start. 11119867 /sound/ 8664631
+	Write New Track Done. 11119867 /sound/ 8664631
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8664631/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8648886/
+	Track  doesn't in db: 11119867 /sound/ 8648886
+	Write New Track start. 11119867 /sound/ 8648886
+	Write New Track Done. 11119867 /sound/ 8648886
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8648886/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8604322/
+	Track  doesn't in db: 11119867 /sound/ 8604322
+	Write New Track start. 11119867 /sound/ 8604322
+	Write New Track Done. 11119867 /sound/ 8604322
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8604322/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8572221/
+	Track  doesn't in db: 11119867 /sound/ 8572221
+	Write New Track start. 11119867 /sound/ 8572221
+	Write New Track Done. 11119867 /sound/ 8572221
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8572221/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8541266/
+	Track  doesn't in db: 11119867 /sound/ 8541266
+	Write New Track start. 11119867 /sound/ 8541266
+	Write New Track Done. 11119867 /sound/ 8541266
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8541266/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8493429/
+	Track  doesn't in db: 11119867 /sound/ 8493429
+	Write New Track start. 11119867 /sound/ 8493429
+	Write New Track Done. 11119867 /sound/ 8493429
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8493429/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8462762/
+	Track  doesn't in db: 11119867 /sound/ 8462762
+	Write New Track start. 11119867 /sound/ 8462762
+	Write New Track Done. 11119867 /sound/ 8462762
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8462762/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8431657/
+	Track  doesn't in db: 11119867 /sound/ 8431657
+	Write New Track start. 11119867 /sound/ 8431657
+	Write New Track Done. 11119867 /sound/ 8431657
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8431657/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8390065/
+	Track  doesn't in db: 11119867 /sound/ 8390065
+	Write New Track start. 11119867 /sound/ 8390065
+	Write New Track Done. 11119867 /sound/ 8390065
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8390065/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8353153/
+	Track  doesn't in db: 11119867 /sound/ 8353153
+	Write New Track start. 11119867 /sound/ 8353153
+	Write New Track Done. 11119867 /sound/ 8353153
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8353153/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8320247/
+	Track  doesn't in db: 11119867 /sound/ 8320247
+	Write New Track start. 11119867 /sound/ 8320247
+	Write New Track Done. 11119867 /sound/ 8320247
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8320247/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8246533/
+	Track  doesn't in db: 11119867 /sound/ 8246533
+	Write New Track start. 11119867 /sound/ 8246533
+	Write New Track Done. 11119867 /sound/ 8246533
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8246533/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8230256/
+	Track  doesn't in db: 11119867 /sound/ 8230256
+	Write New Track start. 11119867 /sound/ 8230256
+	Write New Track Done. 11119867 /sound/ 8230256
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8230256/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8214649/
+	Track  doesn't in db: 11119867 /sound/ 8214649
+	Write New Track start. 11119867 /sound/ 8214649
+	Write New Track Done. 11119867 /sound/ 8214649
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8214649/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8172761/
+	Track  doesn't in db: 11119867 /sound/ 8172761
+	Write New Track start. 11119867 /sound/ 8172761
+	Write New Track Done. 11119867 /sound/ 8172761
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8172761/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8144949/
+	Track  doesn't in db: 11119867 /sound/ 8144949
+	Write New Track start. 11119867 /sound/ 8144949
+	Write New Track Done. 11119867 /sound/ 8144949
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8144949/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8107885/
+	Track  doesn't in db: 11119867 /sound/ 8107885
+	Write New Track start. 11119867 /sound/ 8107885
+	Write New Track Done. 11119867 /sound/ 8107885
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8107885/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8070665/
+	Track  doesn't in db: 11119867 /sound/ 8070665
+	Write New Track start. 11119867 /sound/ 8070665
+	Write New Track Done. 11119867 /sound/ 8070665
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8070665/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/8032619/
+	Track  doesn't in db: 11119867 /sound/ 8032619
+	Write New Track start. 11119867 /sound/ 8032619
+	Write New Track Done. 11119867 /sound/ 8032619
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/8032619/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/7991177/
+	Track  doesn't in db: 11119867 /sound/ 7991177
+	Write New Track start. 11119867 /sound/ 7991177
+	Write New Track Done. 11119867 /sound/ 7991177
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/7991177/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/7951745/
+	Track  doesn't in db: 11119867 /sound/ 7951745
+	Write New Track start. 11119867 /sound/ 7951745
+	Write New Track Done. 11119867 /sound/ 7951745
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/7951745/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/7924782/
+	Track  doesn't in db: 11119867 /sound/ 7924782
+	Write New Track start. 11119867 /sound/ 7924782
+	Write New Track Done. 11119867 /sound/ 7924782
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/7924782/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/7897502/
+	Track  doesn't in db: 11119867 /sound/ 7897502
+	Write New Track start. 11119867 /sound/ 7897502
+	Write New Track Done. 11119867 /sound/ 7897502
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/7897502/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/7860794/
+	Track  doesn't in db: 11119867 /sound/ 7860794
+	Write New Track start. 11119867 /sound/ 7860794
+	Write New Track Done. 11119867 /sound/ 7860794
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/7860794/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/7824370/
+	Track  doesn't in db: 11119867 /sound/ 7824370
+	Write New Track start. 11119867 /sound/ 7824370
+	Write New Track Done. 11119867 /sound/ 7824370
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/7824370/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/7793161/
+	Track  doesn't in db: 11119867 /sound/ 7793161
+	Write New Track start. 11119867 /sound/ 7793161
+	Write New Track Done. 11119867 /sound/ 7793161
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/7793161/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/7752003/
+	Track  doesn't in db: 11119867 /sound/ 7752003
+	Write New Track start. 11119867 /sound/ 7752003
+	Write New Track Done. 11119867 /sound/ 7752003
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/7752003/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/7713047/
+	Track  doesn't in db: 11119867 /sound/ 7713047
+	Write New Track start. 11119867 /sound/ 7713047
+	Write New Track Done. 11119867 /sound/ 7713047
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/7713047/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/7689894/
+	Track  doesn't in db: 11119867 /sound/ 7689894
+	Write New Track start. 11119867 /sound/ 7689894
+	Write New Track Done. 11119867 /sound/ 7689894
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/7689894/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/7618021/
+	Track  doesn't in db: 11119867 /sound/ 7618021
+	Write New Track start. 11119867 /sound/ 7618021
+	Write New Track Done. 11119867 /sound/ 7618021
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/7618021/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/7577786/
+	Track  doesn't in db: 11119867 /sound/ 7577786
+	Write New Track start. 11119867 /sound/ 7577786
+	Write New Track Done. 11119867 /sound/ 7577786
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/7577786/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/7552236/
+	Track  doesn't in db: 11119867 /sound/ 7552236
+	Write New Track start. 11119867 /sound/ 7552236
+	Write New Track Done. 11119867 /sound/ 7552236
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/7552236/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/7531895/
+	Track  doesn't in db: 11119867 /sound/ 7531895
+	Write New Track start. 11119867 /sound/ 7531895
+	Write New Track Done. 11119867 /sound/ 7531895
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/7531895/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/7470277/
+	Track  doesn't in db: 11119867 /sound/ 7470277
+	Write New Track start. 11119867 /sound/ 7470277
+	Write New Track Done. 11119867 /sound/ 7470277
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/7470277/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/7373104/
+	Track  doesn't in db: 11119867 /sound/ 7373104
+	Write New Track start. 11119867 /sound/ 7373104
+	Write New Track Done. 11119867 /sound/ 7373104
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/7373104/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/7301753/
+	Track  doesn't in db: 11119867 /sound/ 7301753
+	Write New Track start. 11119867 /sound/ 7301753
+	Write New Track Done. 11119867 /sound/ 7301753
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/7301753/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/7271302/
+	Track  doesn't in db: 11119867 /sound/ 7271302
+	Write New Track start. 11119867 /sound/ 7271302
+	Write New Track Done. 11119867 /sound/ 7271302
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/7271302/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/7161737/
+	Track  doesn't in db: 11119867 /sound/ 7161737
+	Write New Track start. 11119867 /sound/ 7161737
+	Write New Track Done. 11119867 /sound/ 7161737
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/7161737/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/7142912/
+	Track  doesn't in db: 11119867 /sound/ 7142912
+	Write New Track start. 11119867 /sound/ 7142912
+	Write New Track Done. 11119867 /sound/ 7142912
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/7142912/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/7025232/
+	Track  doesn't in db: 11119867 /sound/ 7025232
+	Write New Track start. 11119867 /sound/ 7025232
+	Write New Track Done. 11119867 /sound/ 7025232
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/7025232/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/6915710/
+	Track  doesn't in db: 11119867 /sound/ 6915710
+	Write New Track start. 11119867 /sound/ 6915710
+	Write New Track Done. 11119867 /sound/ 6915710
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/6915710/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/6816226/
+	Track  doesn't in db: 11119867 /sound/ 6816226
+	Write New Track start. 11119867 /sound/ 6816226
+	Write New Track Done. 11119867 /sound/ 6816226
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/6816226/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/6799398/
+	Track  doesn't in db: 11119867 /sound/ 6799398
+	Write New Track start. 11119867 /sound/ 6799398
+	Write New Track Done. 11119867 /sound/ 6799398
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/6799398/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/6688783/
+	Track  doesn't in db: 11119867 /sound/ 6688783
+	Write New Track start. 11119867 /sound/ 6688783
+	Write New Track Done. 11119867 /sound/ 6688783
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/6688783/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/6597108/
+	Track  doesn't in db: 11119867 /sound/ 6597108
+	Write New Track start. 11119867 /sound/ 6597108
+	Write New Track Done. 11119867 /sound/ 6597108
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/6597108/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/6464548/
+	Track  doesn't in db: 11119867 /sound/ 6464548
+	Write New Track start. 11119867 /sound/ 6464548
+	Write New Track Done. 11119867 /sound/ 6464548
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/6464548/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/6286817/
+	Track  doesn't in db: 11119867 /sound/ 6286817
+	Write New Track start. 11119867 /sound/ 6286817
+	Write New Track Done. 11119867 /sound/ 6286817
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/6286817/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/6181765/
+	Track  doesn't in db: 11119867 /sound/ 6181765
+	Write New Track start. 11119867 /sound/ 6181765
+	Write New Track Done. 11119867 /sound/ 6181765
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/6181765/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/6082896/
+	Track  doesn't in db: 11119867 /sound/ 6082896
+	Write New Track start. 11119867 /sound/ 6082896
+	Write New Track Done. 11119867 /sound/ 6082896
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/6082896/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/5996634/
+	Track  doesn't in db: 11119867 /sound/ 5996634
+	Write New Track start. 11119867 /sound/ 5996634
+	Write New Track Done. 11119867 /sound/ 5996634
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/5996634/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/5996628/
+	Track  doesn't in db: 11119867 /sound/ 5996628
+	Write New Track start. 11119867 /sound/ 5996628
+	Write New Track Done. 11119867 /sound/ 5996628
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/5996628/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/5783217/
+	Track  doesn't in db: 11119867 /sound/ 5783217
+	Write New Track start. 11119867 /sound/ 5783217
+	Write New Track Done. 11119867 /sound/ 5783217
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/5783217/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/5588297/
+	Track  doesn't in db: 11119867 /sound/ 5588297
+	Write New Track start. 11119867 /sound/ 5588297
+	Write New Track Done. 11119867 /sound/ 5588297
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/5588297/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/5445732/
+	Track  doesn't in db: 11119867 /sound/ 5445732
+	Write New Track start. 11119867 /sound/ 5445732
+	Write New Track Done. 11119867 /sound/ 5445732
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/5445732/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/5266231/
+	Track  doesn't in db: 11119867 /sound/ 5266231
+	Write New Track start. 11119867 /sound/ 5266231
+	Write New Track Done. 11119867 /sound/ 5266231
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/5266231/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/5253005/
+	Track  doesn't in db: 11119867 /sound/ 5253005
+	Write New Track start. 11119867 /sound/ 5253005
+	Write New Track Done. 11119867 /sound/ 5253005
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/5253005/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/5222975/
+	Track  doesn't in db: 11119867 /sound/ 5222975
+	Write New Track start. 11119867 /sound/ 5222975
+	Write New Track Done. 11119867 /sound/ 5222975
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/5222975/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/5140748/
+	Track  doesn't in db: 11119867 /sound/ 5140748
+	Write New Track start. 11119867 /sound/ 5140748
+	Write New Track Done. 11119867 /sound/ 5140748
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/5140748/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/5140610/
+	Track  doesn't in db: 11119867 /sound/ 5140610
+	Write New Track start. 11119867 /sound/ 5140610
+	Write New Track Done. 11119867 /sound/ 5140610
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/5140610/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/5140527/
+	Track  doesn't in db: 11119867 /sound/ 5140527
+	Write New Track start. 11119867 /sound/ 5140527
+	Write New Track Done. 11119867 /sound/ 5140527
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/5140527/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/5123191/
+	Track  doesn't in db: 11119867 /sound/ 5123191
+	Write New Track start. 11119867 /sound/ 5123191
+	Write New Track Done. 11119867 /sound/ 5123191
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/5123191/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/5123190/
+	Track  doesn't in db: 11119867 /sound/ 5123190
+	Write New Track start. 11119867 /sound/ 5123190
+	Write New Track Done. 11119867 /sound/ 5123190
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/5123190/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/5123189/
+	Track  doesn't in db: 11119867 /sound/ 5123189
+	Write New Track start. 11119867 /sound/ 5123189
+	Write New Track Done. 11119867 /sound/ 5123189
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/5123189/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/5123188/
+	Track  doesn't in db: 11119867 /sound/ 5123188
+	Write New Track start. 11119867 /sound/ 5123188
+	Write New Track Done. 11119867 /sound/ 5123188
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/5123188/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/5123187/
+	Track  doesn't in db: 11119867 /sound/ 5123187
+	Write New Track start. 11119867 /sound/ 5123187
+	Write New Track Done. 11119867 /sound/ 5123187
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/5123187/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/5123186/
+	Track  doesn't in db: 11119867 /sound/ 5123186
+	Write New Track start. 11119867 /sound/ 5123186
+	Write New Track Done. 11119867 /sound/ 5123186
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/5123186/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/3775678/
+	Track  doesn't in db: 11119867 /sound/ 3775678
+	Write New Track start. 11119867 /sound/ 3775678
+	Write New Track Done. 11119867 /sound/ 3775678
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/3775678/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/3696777/
+	Track  doesn't in db: 11119867 /sound/ 3696777
+	Write New Track start. 11119867 /sound/ 3696777
+	Write New Track Done. 11119867 /sound/ 3696777
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/3696777/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/3651638/
+	Track  doesn't in db: 11119867 /sound/ 3651638
+	Write New Track start. 11119867 /sound/ 3651638
+	Write New Track Done. 11119867 /sound/ 3651638
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/3651638/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/3629251/
+	Track  doesn't in db: 11119867 /sound/ 3629251
+	Write New Track start. 11119867 /sound/ 3629251
+	Write New Track Done. 11119867 /sound/ 3629251
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/3629251/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/3577582/
+	Track  doesn't in db: 11119867 /sound/ 3577582
+	Write New Track start. 11119867 /sound/ 3577582
+	Write New Track Done. 11119867 /sound/ 3577582
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/3577582/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/3550414/
+	Track  doesn't in db: 11119867 /sound/ 3550414
+	Write New Track start. 11119867 /sound/ 3550414
+	Write New Track Done. 11119867 /sound/ 3550414
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/3550414/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/3506314/
+	Track  doesn't in db: 11119867 /sound/ 3506314
+	Write New Track start. 11119867 /sound/ 3506314
+	Write New Track Done. 11119867 /sound/ 3506314
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/3506314/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/3497372/
+	Track  doesn't in db: 11119867 /sound/ 3497372
+	Write New Track start. 11119867 /sound/ 3497372
+	Write New Track Done. 11119867 /sound/ 3497372
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/3497372/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/3459934/
+	Track  doesn't in db: 11119867 /sound/ 3459934
+	Write New Track start. 11119867 /sound/ 3459934
+	Write New Track Done. 11119867 /sound/ 3459934
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/3459934/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/3369528/
+	Track  doesn't in db: 11119867 /sound/ 3369528
+	Write New Track start. 11119867 /sound/ 3369528
+	Write New Track Done. 11119867 /sound/ 3369528
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/3369528/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/3309143/
+	Track  doesn't in db: 11119867 /sound/ 3309143
+	Write New Track start. 11119867 /sound/ 3309143
+	Write New Track Done. 11119867 /sound/ 3309143
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/3309143/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/3269700/
+	Track  doesn't in db: 11119867 /sound/ 3269700
+	Write New Track start. 11119867 /sound/ 3269700
+	Write New Track Done. 11119867 /sound/ 3269700
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/3269700/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/3252358/
+	Track  doesn't in db: 11119867 /sound/ 3252358
+	Write New Track start. 11119867 /sound/ 3252358
+	Write New Track Done. 11119867 /sound/ 3252358
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/3252358/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/3210076/
+	Track  doesn't in db: 11119867 /sound/ 3210076
+	Write New Track start. 11119867 /sound/ 3210076
+	Write New Track Done. 11119867 /sound/ 3210076
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/3210076/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/3191528/
+	Track  doesn't in db: 11119867 /sound/ 3191528
+	Write New Track start. 11119867 /sound/ 3191528
+	Write New Track Done. 11119867 /sound/ 3191528
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/3191528/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/3128599/
+	Track  doesn't in db: 11119867 /sound/ 3128599
+	Write New Track start. 11119867 /sound/ 3128599
+	Write New Track Done. 11119867 /sound/ 3128599
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/3128599/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/3093526/
+	Track  doesn't in db: 11119867 /sound/ 3093526
+	Write New Track start. 11119867 /sound/ 3093526
+	Write New Track Done. 11119867 /sound/ 3093526
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/3093526/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/3066871/
+	Track  doesn't in db: 11119867 /sound/ 3066871
+	Write New Track start. 11119867 /sound/ 3066871
+	Write New Track Done. 11119867 /sound/ 3066871
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/3066871/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/3031109/
+	Track  doesn't in db: 11119867 /sound/ 3031109
+	Write New Track start. 11119867 /sound/ 3031109
+	Write New Track Done. 11119867 /sound/ 3031109
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/3031109/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/3021711/
+	Track  doesn't in db: 11119867 /sound/ 3021711
+	Write New Track start. 11119867 /sound/ 3021711
+	Write New Track Done. 11119867 /sound/ 3021711
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/3021711/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/2968849/
+	Track  doesn't in db: 11119867 /sound/ 2968849
+	Write New Track start. 11119867 /sound/ 2968849
+	Write New Track Done. 11119867 /sound/ 2968849
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/2968849/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/2968682/
+	Track  doesn't in db: 11119867 /sound/ 2968682
+	Write New Track start. 11119867 /sound/ 2968682
+	Write New Track Done. 11119867 /sound/ 2968682
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/2968682/
+
+start write the track into db. 
+	http://www.ximalaya.com/11119867/sound/2976717/
+	Track  doesn't in db: 11119867 /sound/ 2976717
+	Write New Track start. 11119867 /sound/ 2976717
+	Write New Track Done. 11119867 /sound/ 2976717
+the track write into db done. 
+	http://www.ximalaya.com/11119867/sound/2976717/
+Write Tracks of the Album Done.
+
+	 this album has  148 tracks.
+
+	 this album has  -1 tracks doesn't download.
+Start download track...
+	默多克又结婚了，地道的“结婚”英语说法 http://audio.xmcdn.com/group15/M06/E3/28/wKgDZVaWE2niQ3I4ABPDET5owyY335.m4a http://audio.xmcdn.com/group15/M06/E3/28/wKgDZVaWE2zzNo_uADO_qYuYnrA018.m4a 0
+track_title: <type 'unicode'> 默多克又结婚了，地道的“结婚”英语说法
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\默多克又结婚了，地道的“结婚”英语说法.m4a
+		 track_id: 467
+		{467: 1}
+	美国人爱买哪些名牌？ http://audio.xmcdn.com/group10/M03/E1/32/wKgDaVaTc9ngCjmzACLlRHdOAso682.m4a http://audio.xmcdn.com/group10/M03/DE/08/wKgDZ1aTc96ijFkFAFtn3sLomoI351.m4a 0
+track_title: <type 'unicode'> 美国人爱买哪些名牌？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国人爱买哪些名牌？.m4a
+		 track_id: 468
+		{467: 1, 468: 1}
+	《星战》观影指南：Jenny混血萌娃儿子来啦 http://audio.xmcdn.com/group9/M03/E0/AA/wKgDZlaPbxrTOWbpACQBHCrc1yM730.m4a http://audio.xmcdn.com/group9/M08/E0/89/wKgDYlaPbx-B5LjBAF5PqlbtMwA602.m4a 0
+track_title: <type 'unicode'> 《星战》观影指南：Jenny混血萌娃儿子来啦
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\《星战》观影指南：Jenny混血萌娃儿子来啦.m4a
+		 track_id: 469
+		{467: 1, 468: 1, 469: 1}
+	“熔断”英语怎么说？ http://audio.xmcdn.com/group8/M02/DF/97/wKgDYFaOOL-CA5GbABICIgTpsUI806.m4a http://audio.xmcdn.com/group8/M02/DF/97/wKgDYFaOOMHBue8QAC8nKzj_jS4492.m4a 0
+track_title: <type 'unicode'> “熔断”英语怎么说？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\“熔断”英语怎么说？.m4a
+		 track_id: 470
+		{467: 1, 468: 1, 469: 1, 470: 1}
+	扎克伯格老婆丑吗？ http://audio.xmcdn.com/group15/M00/DE/11/wKgDaFaM5XigjWt1ACYn_sLcJV0135.m4a http://audio.xmcdn.com/group15/M00/DE/11/wKgDaFaM5XrACEP7AGPzFcAZ0m4551.m4a 0
+track_title: <type 'unicode'> 扎克伯格老婆丑吗？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\扎克伯格老婆丑吗？.m4a
+		 track_id: 471
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1}
+	美国人在朋友圈爱Po啥？ http://audio.xmcdn.com/group14/M0A/DE/46/wKgDY1aKQoexh3scACR2HQRJPMA563.m4a http://audio.xmcdn.com/group14/M0A/DE/0F/wKgDZFaKQovTib_0AF-CJt2VzV0755.m4a 0
+track_title: <type 'unicode'> 美国人在朋友圈爱Po啥？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国人在朋友圈爱Po啥？.m4a
+		 track_id: 472
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1}
+	完美开启2016的美图英语 http://audio2.xmcdn.com/group11/M07/E6/FF/wKgDbVaHQujDHBbFABJ8FYBheeE243.m4a http://audio2.xmcdn.com/group16/M07/DB/50/wKgDbFaHQuvAeuX5ADBm5pXEUro211.m4a 0
+track_title: <type 'unicode'> 完美开启2016的美图英语
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\完美开启2016的美图英语.m4a
+		 track_id: 473
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1}
+	美国人都趁新年来表白？ http://audio.xmcdn.com/group8/M06/DA/A2/wKgDYVaE-4njVPQnACWRZYj4kvU382.m4a http://audio.xmcdn.com/group8/M06/DA/87/wKgDYFaE-47j1Ld8AGJoZhnyp1g117.m4a 0
+track_title: <type 'unicode'> 美国人都趁新年来表白？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国人都趁新年来表白？.m4a
+		 track_id: 474
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1}
+	奥巴马跟着贝尔去冒险 http://audio.xmcdn.com/group11/M07/E5/11/wKgDbVaDnoXiHrT6ADqMi-Ut8VY286.m4a http://audio.xmcdn.com/group11/M07/E5/12/wKgDbVaDnozSwV2bAJlhzorgnNI823.m4a 0
+track_title: <type 'unicode'> 奥巴马跟着贝尔去冒险
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\奥巴马跟着贝尔去冒险.m4a
+		 track_id: 475
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1}
+	从搭讪到鸡汤都要Pick Up | 美图短语 http://audio.xmcdn.com/group14/M01/D9/CF/wKgDY1aCVefzvgkkAA_qPABWKss347.m4a http://audio.xmcdn.com/group14/M01/D9/9D/wKgDZFaCVezRAGfjACmrX3BQ1Cs887.m4a 0
+track_title: <type 'unicode'> 从搭讪到鸡汤都要Pick Up | 美图短语
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\从搭讪到鸡汤都要Pick Up | 美图短语.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'D:\\xmly\\\u6f58\u5409Jenny\u544a\u8bc9\u4f60--\u5b66\u82f1\u8bed\u804a\u7f8e\u56fd\\\u4ece\u642d\u8baa\u5230\u9e21\u6c64\u90fd\u8981Pick Up | \u7f8e\u56fe\u77ed\u8bed.m4a'
+	美国旅游有哪些坑？ http://audio.xmcdn.com/group8/M05/D7/D8/wKgDYFaA_EGwwCN8ACiKyJQ7MYA261.m4a http://audio.xmcdn.com/group8/M05/D7/FA/wKgDYVaA_ETRRYWtAGozWV0OB6E475.m4a 0
+track_title: <type 'unicode'> 美国旅游有哪些坑？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国旅游有哪些坑？.m4a
+		 track_id: 477
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1}
+	怎么跟老外解释古装剧？ http://audio.xmcdn.com/group15/M05/D4/83/wKgDZVZ8_jvBHL8hADPBHFqwTA8930.m4a http://audio.xmcdn.com/group15/M05/D4/BA/wKgDaFZ8_kHwRgkDAIeULM9xxO0707.m4a 0
+track_title: <type 'unicode'> 怎么跟老外解释古装剧？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\怎么跟老外解释古装剧？.m4a
+		 track_id: 478
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1}
+	你不知道的圣诞传统 http://audio.xmcdn.com/group13/M03/D4/0B/wKgDXVZ6bJ6jRW_MADUF0ih6Jqk341.m4a http://audio.xmcdn.com/group14/M0B/D4/A4/wKgDY1Z6bK_S9f6lAIrm9V43Wjw364.m4a 0
+track_title: <type 'unicode'> 你不知道的圣诞传统
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\你不知道的圣诞传统.m4a
+		 track_id: 479
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1}
+	年会季｜社交英语救急 http://audio.xmcdn.com/group15/M06/D1/FD/wKgDaFZ5IWWS0OV2AA770rkxu5E438.m4a http://audio.xmcdn.com/group15/M06/D1/CA/wKgDZVZ5IWrDXywgACc75yuYltY053.m4a 0
+track_title: <type 'unicode'> 年会季｜社交英语救急
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\年会季｜社交英语救急.m4a
+		 track_id: 480
+		{480: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1}
+	美国曾经也有雾霾 http://audio.xmcdn.com/group8/M03/D1/56/wKgDYFZ3zR3Qy88cAB7qYVjDQ-s564.m4a http://audio.xmcdn.com/group8/M03/D1/86/wKgDYVZ3zSSjvoYeAFD4EDm47hY758.m4a 0
+track_title: <type 'unicode'> 美国曾经也有雾霾
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国曾经也有雾霾.m4a
+		 track_id: 481
+		{480: 1, 481: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1}
+	美国单身狗的生活 http://audio.xmcdn.com/group8/M01/CF/04/wKgDYVZz3p3RUdJZAC309P550u8698.m4a http://audio.xmcdn.com/group8/M08/CE/FF/wKgDYVZz2RKjjwJNAHhjbjTWz1w449.m4a 0
+track_title: <type 'unicode'> 美国单身狗的生活
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国单身狗的生活.m4a
+		 track_id: 482
+		{480: 1, 481: 1, 482: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1}
+	今年你的表现能拿年终奖吗？ http://audio.xmcdn.com/group14/M03/CD/79/wKgDZFZxOU-BduiUADYwoptveLY978.m4a http://audio.xmcdn.com/group10/M06/C8/18/wKgDZ1ZxMqqiEBGSAI31RLxwGDY234.m4a 0
+track_title: <type 'unicode'> 今年你的表现能拿年终奖吗？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\今年你的表现能拿年终奖吗？.m4a
+		 track_id: 483
+		{480: 1, 481: 1, 482: 1, 483: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1}
+	外国人爱面子吗？ http://audio.xmcdn.com/group15/M00/CB/01/wKgDZVZv54-QSPh5ACt6poTwQ2Q105.m4a http://audio.xmcdn.com/group10/M02/C7/47/wKgDZ1Zv4VGgADTIAHHla2HRg54659.m4a 0
+track_title: <type 'unicode'> 外国人爱面子吗？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\外国人爱面子吗？.m4a
+		 track_id: 484
+		{480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1}
+	美国富豪的觉悟比中国高？ http://audio.xmcdn.com/group9/M01/C9/31/wKgDZlZq8c_jSbhvADLKOGzmTgI246.m4a http://audio.xmcdn.com/group11/M00/BB/72/wKgDa1Zq8JHQ4xr5AIUNSOB6LeM043.m4a 0
+track_title: <type 'unicode'> 美国富豪的觉悟比中国高？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国富豪的觉悟比中国高？.m4a
+		 track_id: 485
+		{480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1}
+	很难跟老外解释的中国概念 I http://audio.xmcdn.com/group12/M05/C6/6F/wKgDXFZn8G2CSYNzACg37bJhUY0569.m4a http://audio.xmcdn.com/group15/M0B/C6/05/wKgDaFZn71mCs0_BAGlaWAwwPh0336.m4a 0
+track_title: <type 'unicode'> 很难跟老外解释的中国概念 I
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\很难跟老外解释的中国概念 I.m4a
+		 track_id: 486
+		{480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1}
+	看气质的英语是... http://audio.xmcdn.com/group9/M07/C5/39/wKgDYlZlVrSQRna9ACtLoN33NVM164.m4a http://audio.xmcdn.com/group9/M07/C5/39/wKgDYlZlVrmg9zsVAHFqJ9udkcY367.m4a 0
+track_title: <type 'unicode'> 看气质的英语是...
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\看气质的英语是....m4a
+		 track_id: 487
+		{480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1}
+	美国好男人的标准 http://audio.xmcdn.com/group7/M04/BF/A1/wKgDX1ZhViii-7MOAC0tFwp98ro454.m4a http://audio.xmcdn.com/group8/M08/BE/A1/wKgDYFZhVgOA6EArAHZXqsyNDD4144.m4a 0
+track_title: <type 'unicode'> 美国好男人的标准
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国好男人的标准.m4a
+		 track_id: 488
+		{480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1}
+	2015牛津年度十大新词 http://audio.xmcdn.com/group11/M03/A0/DC/wKgDa1ZcHWDAeFxSACtc-lITCvM759.m4a http://audio.xmcdn.com/group11/M03/A0/DD/wKgDa1ZcHWbzLeZmAHGXrfRwKrQ327.m4a 0
+track_title: <type 'unicode'> 2015牛津年度十大新词
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\2015牛津年度十大新词.m4a
+		 track_id: 489
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1}
+	【篮球英语】学英语的听过来，外教讲解科比公开信 http://audio.xmcdn.com/group7/M01/AD/EE/wKgDX1Zb-5qQVBBmACmvBR51MHI306.m4a http://audio.xmcdn.com/group7/M01/AD/E0/wKgDWlZb-6LB1auUAG0xMpwcAww691.m4a 0
+track_title: <type 'unicode'> 【篮球英语】学英语的听过来，外教讲解科比公开信
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\【篮球英语】学英语的听过来，外教讲解科比公开信.m4a
+		 track_id: 490
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1}
+	Black Friday: 美国人怎么占小便宜 http://audio.xmcdn.com/group11/M06/9E/F9/wKgDa1ZYIu-Ce2BCADIVHJDtCQ0356.m4a http://audio.xmcdn.com/group11/M06/9E/F9/wKgDa1ZYIwGgfLZGAIMx4LkGKQU347.m4a 0
+track_title: <type 'unicode'> Black Friday: 美国人怎么占小便宜
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\Black Friday: 美国人怎么占小便宜.m4a
+		 track_id: 491
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1}
+	感恩节｜美国的中秋节 http://audio.xmcdn.com/group15/M08/A9/71/wKgDZVZVTv-jE66RACQwsiDwnjI298.m4a http://audio.xmcdn.com/group9/M02/A9/F2/wKgDZlZVToXiWkudAF7MQU-zAb8397.m4a 0
+track_title: <type 'unicode'> 感恩节｜美国的中秋节
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\感恩节｜美国的中秋节.m4a
+		 track_id: 492
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1}
+	福利社｜试试全英文课程 http://audio.xmcdn.com/group14/M0A/A9/B1/wKgDZFZUKfPDS0VPAC10MNJDkls006.m4a http://audio.xmcdn.com/group8/M05/A9/77/wKgDYVZUKXnS_76KAHcSAdRwjDk078.m4a 0
+track_title: <type 'unicode'> 福利社｜试试全英文课程
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\福利社｜试试全英文课程.m4a
+		 track_id: 493
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1}
+	美国人爱看什么综艺节目？ http://audio.xmcdn.com/group11/M09/9B/63/wKgDa1ZS5enjJsM1ADAtwSv0Bvs944.m4a http://audio.xmcdn.com/group11/M09/B4/56/wKgDbVZS5e6BvaZNAH41xsluJnc429.m4a 0
+track_title: <type 'unicode'> 美国人爱看什么综艺节目？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国人爱看什么综艺节目？.m4a
+		 track_id: 494
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1}
+	怎么跟老外解释火锅？ http://audio.xmcdn.com/group14/M01/A5/A4/wKgDZFZO2ozBk3-DADEmUlZKhkg992.m4a http://audio.xmcdn.com/group14/M01/A5/A4/wKgDZFZO2pHCwyFXAIDA-frvWfo636.m4a 0
+track_title: <type 'unicode'> 怎么跟老外解释火锅？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\怎么跟老外解释火锅？.m4a
+		 track_id: 495
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1}
+	巴黎恐袭、ISIS http://audio.xmcdn.com/group11/M08/AC/A4/wKgDbVZMQRaSlROhACHCBjr88n0983.m4a http://audio.xmcdn.com/group11/M08/AC/A5/wKgDbVZMQR_z5KEhAFhsEd183Ec281.m4a 0
+track_title: <type 'unicode'> 巴黎恐袭、ISIS
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\巴黎恐袭、ISIS.m4a
+		 track_id: 496
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1}
+	二胎否？看美国人如何带一堆孩子 http://audio.xmcdn.com/group12/M04/9E/7F/wKgDW1ZJouCwWjxDACu4OV_Sfn4636.m4a http://audio.xmcdn.com/group12/M04/9E/7F/wKgDW1ZJouXDUgy-AHKG0V7ZhJI255.m4a 0
+track_title: <type 'unicode'> 二胎否？看美国人如何带一堆孩子
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\二胎否？看美国人如何带一堆孩子.m4a
+		 track_id: 497
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1}
+	从维密到秋裤：各种内衣英语怎么说？ http://audio.xmcdn.com/group13/M04/9C/66/wKgDXlZFrdPDu0ubACF56240LXA850.m4a http://audio.xmcdn.com/group12/M0B/9B/A6/wKgDXFZFrdfwoAybAFev3QN5Gsc580.m4a 0
+track_title: <type 'unicode'> 从维密到秋裤：各种内衣英语怎么说？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\从维密到秋裤：各种内衣英语怎么说？.m4a
+		 track_id: 498
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1}
+	握手还是亲亲？跟外国人social那些事儿 http://audio.xmcdn.com/group9/M00/9A/7F/wKgDZlZDCdHw6DbkAB8U1Fjgigc693.m4a http://audio.xmcdn.com/group9/M00/9A/7F/wKgDZlZDCcXSxv1mAFFpo_TvaVc164.m4a 0
+track_title: <type 'unicode'> 握手还是亲亲？跟外国人social那些事儿
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\握手还是亲亲？跟外国人social那些事儿.m4a
+		 track_id: 499
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1}
+	原来美国也有双11！ http://audio.xmcdn.com/group8/M03/98/F8/wKgDYVZAcIrTRN6JABwjSGjNPbA075.m4a http://audio.xmcdn.com/group14/M0B/99/47/wKgDY1ZAcI2Cd6vWAEmzNhqmJ9c819.m4a 0
+track_title: <type 'unicode'> 原来美国也有双11！
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\原来美国也有双11！.m4a
+		 track_id: 500
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1}
+	英语猜谜｜这些都是什么歌？ http://audio.xmcdn.com/group10/M05/95/A9/wKgDZ1Y8duejUK2cABulUWAf820385.m4a http://audio.xmcdn.com/group10/M05/95/A9/wKgDZ1Y8duqQW48WAEhpN7iM5gw990.m4a 0
+track_title: <type 'unicode'> 英语猜谜｜这些都是什么歌？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\英语猜谜｜这些都是什么歌？.m4a
+		 track_id: 501
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1}
+	星球大战：美国的琅琊榜 http://audio.xmcdn.com/group14/M08/94/13/wKgDZFY5wc_R3ku4ACcaZa_7jHg665.m4a http://audio.xmcdn.com/group14/M08/94/54/wKgDY1Y5wdyCy0p7AGZuJA3Bi3s676.m4a 0
+track_title: <type 'unicode'> 星球大战：美国的琅琊榜
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\星球大战：美国的琅琊榜.m4a
+		 track_id: 502
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1}
+	2015年全球Top 20 MBA商学院 http://audio.xmcdn.com/group9/M03/92/66/wKgDZlY3MVySiFKbACfdOAuU074178.m4a http://audio.xmcdn.com/group11/M03/85/A2/wKgDa1Y3MWHgxEwbAGhsnfy955g320.m4a 0
+track_title: <type 'unicode'> 2015年全球Top 20 MBA商学院
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\2015年全球Top 20 MBA商学院.m4a
+		 track_id: 503
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1}
+	万圣节: 美国人的cosplay大趴 http://audio.xmcdn.com/group9/M05/8F/D1/wKgDYlYzBiuQVEgSACew_uLYjPE789.m4a http://audio.xmcdn.com/group9/M05/8F/D1/wKgDYlYzBi-DphOWAGf4u3PIYcg616.m4a 0
+track_title: <type 'unicode'> 万圣节: 美国人的cosplay大趴
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\万圣节: 美国人的cosplay大趴.m4a
+		 track_id: 504
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1}
+	演讲｜希拉里总统辩论精选 http://audio.xmcdn.com/group12/M06/8E/57/wKgDXFYwnQDh0QkuADS6ytOw7f0308.m4a http://audio.xmcdn.com/group12/M06/8E/87/wKgDW1YwnQaDJZ42AIoiWSNO4GU788.m4a 0
+track_title: <type 'unicode'> 演讲｜希拉里总统辩论精选
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\演讲｜希拉里总统辩论精选.m4a
+		 track_id: 505
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1}
+	读报｜到底多少美国人有枪？ http://audio.xmcdn.com/group7/M09/8D/A9/wKgDX1Yt9VWStoycACy4EoZ2c14289.m4a http://audio.xmcdn.com/group7/M09/8D/AD/wKgDWlYt9WKyqdO0AHUlRtHhSbo823.m4a 0
+track_title: <type 'unicode'> 读报｜到底多少美国人有枪？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\读报｜到底多少美国人有枪？.m4a
+		 track_id: 506
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1}
+	怎么跟外国人解释大闸蟹？ http://audio.xmcdn.com/group10/M09/8B/08/wKgDZ1Yq0x3Q7Y7uACUrOXyljgM418.m4a http://audio.xmcdn.com/group14/M01/8B/68/wKgDZFYq0yKgXx_dAGFb9Z5palU432.m4a 0
+track_title: <type 'unicode'> 怎么跟外国人解释大闸蟹？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\怎么跟外国人解释大闸蟹？.m4a
+		 track_id: 507
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1}
+	怎么听懂印度口音 http://audio.xmcdn.com/group11/M05/95/65/wKgDbVYnQivQlB_iAB39d-dgfAs212.m4a http://audio.xmcdn.com/group11/M05/95/65/wKgDbVYnQjDQYZVIAE6Nvz6576M350.m4a 0
+track_title: <type 'unicode'> 怎么听懂印度口音
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\怎么听懂印度口音.m4a
+		 track_id: 508
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1}
+	读报｜美国人对未来的忧虑Part I http://audio.xmcdn.com/group14/M00/87/E4/wKgDZFYkvCCTNNnWAB3heRmxjo4674.m4a http://audio.xmcdn.com/group14/M00/87/E4/wKgDZFYkvCOj1wKFAE5ET8FTp1I191.m4a 0
+track_title: <type 'unicode'> 读报｜美国人对未来的忧虑Part I
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\读报｜美国人对未来的忧虑Part I.m4a
+		 track_id: 509
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1}
+	老外最爱吃和最怕吃的中国菜 http://audio.xmcdn.com/group9/M04/85/4C/wKgDYlYgv9aTjyg-ACo6-O-QyHo363.m4a http://audio.xmcdn.com/group15/M06/85/8B/wKgDZVYgv9vD1jCMAG6f0U8S9Kw986.m4a 0
+track_title: <type 'unicode'> 老外最爱吃和最怕吃的中国菜
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\老外最爱吃和最怕吃的中国菜.m4a
+		 track_id: 510
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1}
+	NBA中国赛特辑｜篮球俚语、乔丹、失恋 http://audio.xmcdn.com/group10/M09/84/0E/wKgDaVYeB4_yuJoVAB3nos2ET8I787.m4a http://audio.xmcdn.com/group10/M09/83/F9/wKgDZ1YeB5Kx7vn6AE5Ucozo344153.m4a 0
+track_title: <type 'unicode'> NBA中国赛特辑｜篮球俚语、乔丹、失恋
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\NBA中国赛特辑｜篮球俚语、乔丹、失恋.m4a
+		 track_id: 511
+		{467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	热议｜别老说中国游客，外国游客也有不文明时 http://audio.xmcdn.com/group13/M01/83/5B/wKgDXlYbh6jjkmZUACS1Xv-6s5k430.m4a http://audio.xmcdn.com/group15/M04/82/DA/wKgDZVYbh7TSrPbbAGAoCgbU0gk327.m4a 0
+track_title: <type 'unicode'> 热议｜别老说中国游客，外国游客也有不文明时
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\热议｜别老说中国游客，外国游客也有不文明时.m4a
+		 track_id: 512
+		{512: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	屠呦呦的诺贝尔奖、老外怎么看中医药？ http://audio.xmcdn.com/group8/M0B/81/38/wKgDYVYXftuwEjWrACNb8cRBfVc491.m4a http://audio.xmcdn.com/group8/M0B/80/F7/wKgDYFYXft-Ts5djAFye-7fK66I411.m4a 0
+track_title: <type 'unicode'> 屠呦呦的诺贝尔奖、老外怎么看中医药？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\屠呦呦的诺贝尔奖、老外怎么看中医药？.m4a
+		 track_id: 513
+		{512: 1, 513: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	读报｜From Made In China to Made By China http://audio.xmcdn.com/group9/M0A/7E/F8/wKgDYlYUtwbw6ljEAChJRfO4R_g411.m4a http://audio.xmcdn.com/group9/M0A/7E/F8/wKgDYlYUtxPw4GPcAGmH0NEdwZg537.m4a 0
+track_title: <type 'unicode'> 读报｜From Made In China to Made By China
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\读报｜From Made In China to Made By China.m4a
+		 track_id: 514
+		{512: 1, 513: 1, 514: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	美国小费指南 http://audio.xmcdn.com/group12/M03/7E/4F/wKgDXFYTobuihB5FABiELlbAzJc137.m4a http://audio.xmcdn.com/group12/M03/7E/57/wKgDW1YTob6AmmnbAEA2DtPBsuk401.m4a 0
+track_title: <type 'unicode'> 美国小费指南
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国小费指南.m4a
+		 track_id: 515
+		{512: 1, 513: 1, 514: 1, 515: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	长假的正确打开方式：Staycation! http://audio.xmcdn.com/group16/M0B/7C/8F/wKgDbFYOigHhHcj7ACmX5iZCFtI745.m4a http://audio.xmcdn.com/group16/M0B/7C/89/wKgDalYOigjBpokuAGzz8WnRAqc717.m4a 0
+track_title: <type 'unicode'> 长假的正确打开方式：Staycation!
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\长假的正确打开方式：Staycation!.m4a
+		 track_id: 516
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	特辑｜Peng马麻、奥巴马英语发言精选 http://audio.xmcdn.com/group8/M00/7B/A7/wKgDYFYMrR_SQNboADHXwV8uL70385.m4a http://audio.xmcdn.com/group8/M00/7B/A7/wKgDYFYMrSWQ8_gvAIKQoX6ne4c952.m4a 0
+track_title: <type 'unicode'> 特辑｜Peng马麻、奥巴马英语发言精选
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\特辑｜Peng马麻、奥巴马英语发言精选.m4a
+		 track_id: 517
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	听懂美式幽默--潘吉Jenny告诉你 http://audio.xmcdn.com/group13/M03/7A/17/wKgDXlYJC93Qc8puADGrDnB7Hgo763.m4a http://audio.xmcdn.com/group12/M07/79/2C/wKgDXFYJC-OAuhOpAIIcroTPIk8841.m4a 0
+track_title: <type 'unicode'> 听懂美式幽默--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\听懂美式幽默--潘吉Jenny告诉你.m4a
+		 track_id: 518
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	怎么跟老外解释中秋节和月饼--潘吉Jenny告诉你 http://audio.xmcdn.com/group12/M06/77/4B/wKgDXFYFFojRqUD-ABU20cfd-dM529.m4a http://audio.xmcdn.com/group12/M06/77/4B/wKgDXFYFFouyMkWlADePIHXNkRI806.m4a 0
+track_title: <type 'unicode'> 怎么跟老外解释中秋节和月饼--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\怎么跟老外解释中秋节和月饼--潘吉Jenny告诉你.m4a
+		 track_id: 519
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	苹果发布会Part II: 英语presentation这么做--潘吉Jenny告诉你 http://audio.xmcdn.com/group8/M09/75/8C/wKgDYVX_0jDx_BkFACN1W8zrVuU686.m4a http://audio.xmcdn.com/group8/M09/75/8C/wKgDYVX_0jXxkvINAFzg2fwx9Xk125.m4a 0
+track_title: <type 'unicode'> 苹果发布会Part II: 英语presentation这么做--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\苹果发布会Part II: 英语presentation这么做--潘吉Jenny告诉你.m4a
+		 track_id: 520
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	Live｜苹果发布会特辑Part I－潘吉Jenny告诉你 http://audio.xmcdn.com/group14/M0A/73/38/wKgDZFX728SieUL2ACUVqd73DP4511.m4a http://audio.xmcdn.com/group14/M0A/73/38/wKgDZFX728ngsqioAGEkUOn-5CU001.m4a 0
+track_title: <type 'unicode'> Live｜苹果发布会特辑Part I－潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\Live｜苹果发布会特辑Part I－潘吉Jenny告诉你.m4a
+		 track_id: 521
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	英语读报：Inside Amazon最狼性的美国企业-潘吉Jenny告诉你 http://audio.xmcdn.com/group14/M08/71/DD/wKgDZFX5MUeSRMyfAC1Q6OEfPLE538.m4a http://audio.xmcdn.com/group8/M09/72/6C/wKgDYVX5MTHigP0_AHa1ru7wEqI844.m4a 0
+track_title: <type 'unicode'> 英语读报：Inside Amazon最狼性的美国企业-潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\英语读报：Inside Amazon最狼性的美国企业-潘吉Jenny告诉你.m4a
+		 track_id: 522
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	Do you work out? 英语聊健身--潘吉Jenny告诉你 http://audio.xmcdn.com/group9/M04/70/9E/wKgDYlX2mxeREeSsACG4DyiowAc784.m4a http://audio.xmcdn.com/group9/M04/70/9E/wKgDYlX2mxzTWTXqAFhSvJYilfs292.m4a 0
+track_title: <type 'unicode'> Do you work out? 英语聊健身--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\Do you work out? 英语聊健身--潘吉Jenny告诉你.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'D:\\xmly\\\u6f58\u5409Jenny\u544a\u8bc9\u4f60--\u5b66\u82f1\u8bed\u804a\u7f8e\u56fd\\Do you work out? \u82f1\u8bed\u804a\u5065\u8eab--\u6f58\u5409Jenny\u544a\u8bc9\u4f60.m4a'
+	美金有这么多说法你知道吗？-潘吉Jenny告诉你 http://audio.xmcdn.com/group16/M05/6F/14/wKgDalXyj_yBFb64ABjBwxdwE84866.m4a http://audio.xmcdn.com/group7/M02/6F/38/wKgDX1XykFqBC-JQAEDXbmSTlCA916.m4a 0
+track_title: <type 'unicode'> 美金有这么多说法你知道吗？-潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美金有这么多说法你知道吗？-潘吉Jenny告诉你.m4a
+		 track_id: 524
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	美国最大外遇网站被黑：美国人讨伐还是同情？--潘吉Jenny告诉你 http://audio.xmcdn.com/group9/M09/6D/95/wKgDYlXv9znwN3czABbZBUgXTeM052.m4a http://audio.xmcdn.com/group9/M09/6D/95/wKgDYlXv9zzhb21RADvW1TUxo1A389.m4a 0
+track_title: <type 'unicode'> 美国最大外遇网站被黑：美国人讨伐还是同情？--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国最大外遇网站被黑：美国人讨伐还是同情？--潘吉Jenny告诉你.m4a
+		 track_id: 525
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	世界那么大，我想去看看--和前台打交道 http://audio.xmcdn.com/group14/M03/6D/1F/wKgDY1XuuGGxjiTfACVn9fKoTos552.m4a http://audio.xmcdn.com/group14/M03/6D/20/wKgDY1XuuG2QPJPQAGH75brFXUg721.m4a 0
+track_title: <type 'unicode'> 世界那么大，我想去看看--和前台打交道
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\世界那么大，我想去看看--和前台打交道.m4a
+		 track_id: 526
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	英语说话之道：如何礼貌地争论－潘吉Jenny告诉你 http://audio.xmcdn.com/group7/M08/6C/DD/wKgDX1XtYTfT61VPABlHkQ_X3OE004.m4a http://audio.xmcdn.com/group9/M0A/6C/57/wKgDYlXtYNHQi0FLAEI2A6ml_t0255.m4a 0
+track_title: <type 'unicode'> 英语说话之道：如何礼貌地争论－潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\英语说话之道：如何礼貌地争论－潘吉Jenny告诉你.m4a
+		 track_id: 527
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	奥巴马的歌单--潘吉Jenny告诉你 http://audio.xmcdn.com/group9/M0B/6A/9E/wKgDZlXpkozyaf6DACTjRt7tRqM457.m4a http://audio.xmcdn.com/group9/M0B/6A/9E/wKgDZlXpkpaDTxMiAGCgL6vcgLU708.m4a 0
+track_title: <type 'unicode'> 奥巴马的歌单--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\奥巴马的歌单--潘吉Jenny告诉你.m4a
+		 track_id: 528
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	阅兵特辑: Hail to the Chief!--潘吉Jenny告诉你 http://audio2.xmcdn.com/group14/M01/69/48/wKgDY1XmyFiiUxhbABX_zYfGkj8823.m4a http://audio2.xmcdn.com/group14/M01/69/24/wKgDZFXmyA2gKvzfADmdsDM-F6k196.m4a 0
+track_title: <type 'unicode'> 阅兵特辑: Hail to the Chief!--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\阅兵特辑: Hail to the Chief!--潘吉Jenny告诉你.m4a
+		 track_id: 529
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	最适合英语学习者的10本书--潘吉Jenny告诉你 http://audio.xmcdn.com/group9/M05/67/E6/wKgDYlXkKwLQKFQkADlqiBmoj3M005.m4a http://audio.xmcdn.com/group9/M05/67/E6/wKgDYlXkKwrhsO3RAJZpxmhEUmc378.m4a 0
+track_title: <type 'unicode'> 最适合英语学习者的10本书--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\最适合英语学习者的10本书--潘吉Jenny告诉你.m4a
+		 track_id: 530
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	第九道奇迹！田径世锦赛英语特辑--潘吉Jenny告诉你 http://audio.xmcdn.com/group7/M0A/66/B0/wKgDX1XgLIfTcy8cACmgdOypXWQ700.m4a http://audio.xmcdn.com/group7/M0A/66/B1/wKgDX1XgLJTwpetsAG0LGcZlqWU023.m4a 0
+track_title: <type 'unicode'> 第九道奇迹！田径世锦赛英语特辑--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\第九道奇迹！田径世锦赛英语特辑--潘吉Jenny告诉你.m4a
+		 track_id: 531
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	10大最吸引人的美国景点英语怎么说?--潘吉Jenny告诉你 http://audio.xmcdn.com/group7/M09/65/60/wKgDWlXdjPni-9rPACfvIjFFQeQ123.m4a http://audio.xmcdn.com/group7/M09/65/60/wKgDWlXdjPuj0swrAGibjR7jo14241.m4a 0
+track_title: <type 'unicode'> 10大最吸引人的美国景点英语怎么说?--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\10大最吸引人的美国景点英语怎么说?--潘吉Jenny告诉你.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'D:\\xmly\\\u6f58\u5409Jenny\u544a\u8bc9\u4f60--\u5b66\u82f1\u8bed\u804a\u7f8e\u56fd\\10\u5927\u6700\u5438\u5f15\u4eba\u7684\u7f8e\u56fd\u666f\u70b9\u82f1\u8bed\u600e\u4e48\u8bf4?--\u6f58\u5409Jenny\u544a\u8bc9\u4f60.m4a'
+	欧美孩子上学真得很轻松吗?--潘吉Jenny告诉你 http://audio.xmcdn.com/group8/M08/63/DB/wKgDYFXa52DTobunABywXFklswA926.m4a http://audio.xmcdn.com/group15/M04/63/CE/wKgDZVXa52biJG3GAEsk6UKyiwM337.m4a 0
+track_title: <type 'unicode'> 欧美孩子上学真得很轻松吗?--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\欧美孩子上学真得很轻松吗?--潘吉Jenny告诉你.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'D:\\xmly\\\u6f58\u5409Jenny\u544a\u8bc9\u4f60--\u5b66\u82f1\u8bed\u804a\u7f8e\u56fd\\\u6b27\u7f8e\u5b69\u5b50\u4e0a\u5b66\u771f\u5f97\u5f88\u8f7b\u677e\u5417?--\u6f58\u5409Jenny\u544a\u8bc9\u4f60.m4a'
+	怎么让英语发音更标准--潘吉Jenny告诉你 http://audio.xmcdn.com/group15/M09/62/1B/wKgDZVXW7tnjQNFFAC0yrZ0qzfA942.m4a http://audio.xmcdn.com/group15/M09/62/34/wKgDaFXW7sLxIQHhAHZmeAQ4x2Y023.m4a 0
+track_title: <type 'unicode'> 怎么让英语发音更标准--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\怎么让英语发音更标准--潘吉Jenny告诉你.m4a
+		 track_id: 534
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	七夕特辑:用英语谈场恋爱--潘吉Jenny告诉你 http://audio.xmcdn.com/group7/M01/61/1A/wKgDWlXUPseTWq03ABxBg8DJuSQ814.m4a http://audio.xmcdn.com/group13/M05/60/D4/wKgDXVXUPorBJN5xAEoCbJkl_zg408.m4a 0
+track_title: <type 'unicode'> 七夕特辑:用英语谈场恋爱--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\七夕特辑:用英语谈场恋爱--潘吉Jenny告诉你.m4a
+		 track_id: 535
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	怎么用英语请假--潘吉Jenny告诉你 http://audio.xmcdn.com/group12/M08/5E/E1/wKgDW1XRplCjVRRyABg3e0R-pd8545.m4a http://audio.xmcdn.com/group12/M08/5E/CD/wKgDXFXRpjCCxKbnAD9tGMIBGBg106.m4a 0
+track_title: <type 'unicode'> 怎么用英语请假--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\怎么用英语请假--潘吉Jenny告诉你.m4a
+		 track_id: 536
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	美国现在最流行的美食－潘吉Jenny告诉你 http://audio.xmcdn.com/group11/M00/63/CC/wKgDbVXLEgiDqI_fADEVeZd72eA572.m4a http://audio.xmcdn.com/group11/M00/63/CC/wKgDbVXLEg_Afb1lAICU6xygllw096.m4a 0
+track_title: <type 'unicode'> 美国现在最流行的美食－潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国现在最流行的美食－潘吉Jenny告诉你.m4a
+		 track_id: 537
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	高阶职场英语——AIDA Marketing http://audio.xmcdn.com/group16/M06/5B/AE/wKgDalXJyrrQrKC0AC9GwkmGZZ0541.m4a http://audio.xmcdn.com/group16/M06/5B/CE/wKgDbFXJytzgfrwCAHvX6CUO-UA870.m4a 0
+track_title: <type 'unicode'> 高阶职场英语——AIDA Marketing
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\高阶职场英语——AIDA Marketing.m4a
+		 track_id: 538
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	美国官二代、富二代都来选总统--潘吉Jenny告诉你 http://audio.xmcdn.com/group16/M07/5B/12/wKgDalXIevPR5VlAAB1pHDbLxR8569.m4a http://audio.xmcdn.com/group10/M0B/5A/85/wKgDZ1XIezPDdfP4AE0JB8Ll-gg172.m4a 0
+track_title: <type 'unicode'> 美国官二代、富二代都来选总统--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国官二代、富二代都来选总统--潘吉Jenny告诉你.m4a
+		 track_id: 539
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	时尚达人英语：各类衣服怎么说？--潘吉Jenny告诉你 http://audio.xmcdn.com/group7/M03/59/BE/wKgDWlXEY4_zdU6MABOMprTMaw0742.m4a http://audio.xmcdn.com/group7/M03/59/CE/wKgDX1XEY36CWKb4ADMxzbLz0ec040.m4a 0
+track_title: <type 'unicode'> 时尚达人英语：各类衣服怎么说？--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\时尚达人英语：各类衣服怎么说？--潘吉Jenny告诉你.m4a
+		 track_id: 540
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	最容易引起误会的英文词--潘吉Jenny告诉你 http://audio.xmcdn.com/group11/M00/5B/4D/wKgDbVXB3dGQ5al_AB-EFTWTuQc529.m4a http://audio.xmcdn.com/group11/M00/5B/4D/wKgDbVXB3dXwZAIiAFKMfJwppos322.m4a 0
+track_title: <type 'unicode'> 最容易引起误会的英文词--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\最容易引起误会的英文词--潘吉Jenny告诉你.m4a
+		 track_id: 541
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	爱上一个人爱上一座城之纽约--潘吉Jenny告诉你 http://audio.xmcdn.com/group13/M00/56/C8/wKgDXlW_PK2x7mTnAB-z0-ual9w903.m4a http://audio.xmcdn.com/group9/M06/56/7C/wKgDZlW_PL6hfY5xAFMKU804NY0605.m4a 0
+track_title: <type 'unicode'> 爱上一个人爱上一座城之纽约--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\爱上一个人爱上一座城之纽约--潘吉Jenny告诉你.m4a
+		 track_id: 542
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	烘培英语：爱baking、爱甜品! --潘吉Jenny告诉你 http://audio.xmcdn.com/group10/M05/54/F1/wKgDZ1W7S0vQ1yAuABmcqQOd_3o444.m4a http://audio.xmcdn.com/group10/M05/54/F1/wKgDZ1W7S1Ly-KdoAEMVBg5Ooz0191.m4a 0
+track_title: <type 'unicode'> 烘培英语：爱baking、爱甜品! --潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\烘培英语：爱baking、爱甜品! --潘吉Jenny告诉你.m4a
+		 track_id: 543
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	最常用的职场英语短语--潘吉Jenny告诉你 http://audio.xmcdn.com/group16/M0A/53/E4/wKgDbFW4qLfAR91RABrB43EoJvg394.m4a http://audio.xmcdn.com/group16/M0A/53/E4/wKgDbFW4qLvDFvTgAEYUlDu26Dg089.m4a 0
+track_title: <type 'unicode'> 最常用的职场英语短语--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\最常用的职场英语短语--潘吉Jenny告诉你.m4a
+		 track_id: 544
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	美国签证官最爱问的问题－潘吉Jenny告诉你 http://audio.xmcdn.com/group11/M04/52/38/wKgDa1W1-0HQeVViABsbcVQE3UE597.m4a http://audio.xmcdn.com/group13/M04/52/59/wKgDXVW1-yWRfA_GAEb_WSm7L2U198.m4a 0
+track_title: <type 'unicode'> 美国签证官最爱问的问题－潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国签证官最爱问的问题－潘吉Jenny告诉你.m4a
+		 track_id: 545
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	超有爱！可以跟小朋友说的英语－潘吉Jenny告诉你 http://audio.xmcdn.com/group11/M06/4E/13/wKgDbVWyAnKBPXq8ABDXsZBry9s385.m4a http://audio.xmcdn.com/group11/M06/4D/FD/wKgDa1WyAsWyoutAACwayXiO-mw888.m4a 0
+track_title: <type 'unicode'> 超有爱！可以跟小朋友说的英语－潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\超有爱！可以跟小朋友说的英语－潘吉Jenny告诉你.m4a
+		 track_id: 546
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	平时能用的“权利的游戏”经典台词--潘吉Jenny告诉你 http://audio.xmcdn.com/group13/M0B/4B/9B/wKgDXVWvRQfDZbpmAB5IfCPpVMI065.m4a http://audio.xmcdn.com/group10/M07/4B/5E/wKgDaVWvRaTQ7lesAE9SNz0iGwk587.m4a 0
+track_title: <type 'unicode'> 平时能用的“权利的游戏”经典台词--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\平时能用的“权利的游戏”经典台词--潘吉Jenny告诉你.m4a
+		 track_id: 547
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	Jenny的意大利自助游攻略 --潘吉Jenny告诉你 http://audio.xmcdn.com/group12/M06/48/A8/wKgDW1Wsv6KQgLfFAB0PYKFbuq4152.m4a http://audio.xmcdn.com/group12/M06/48/A0/wKgDXFWsv4yxbJJ6AEweFK3wbZI763.m4a 0
+track_title: <type 'unicode'> Jenny的意大利自助游攻略 --潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\Jenny的意大利自助游攻略 --潘吉Jenny告诉你.m4a
+		 track_id: 548
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	炒作英语怎么说?--潘吉Jenny告诉你 http://audio.xmcdn.com/group8/M00/47/82/wKgDYVWovpLBJ1F4ABRZrmP9m8Q340.m4a http://audio.xmcdn.com/group8/M00/47/4A/wKgDYFWovtGgeS92ADVLqsqLT3E516.m4a 0
+track_title: <type 'unicode'> 炒作英语怎么说?--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\炒作英语怎么说?--潘吉Jenny告诉你.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'D:\\xmly\\\u6f58\u5409Jenny\u544a\u8bc9\u4f60--\u5b66\u82f1\u8bed\u804a\u7f8e\u56fd\\\u7092\u4f5c\u82f1\u8bed\u600e\u4e48\u8bf4?--\u6f58\u5409Jenny\u544a\u8bc9\u4f60.m4a'
+	美国老板最爱听的10句话－潘吉Jenny告诉你 http://audio.xmcdn.com/group9/M09/44/98/wKgDZlWmFryh8E0LAC_7WxLNM38370.m4a http://audio.xmcdn.com/group13/M02/44/C1/wKgDXVWmFtGDEELvAH2x2L9DVQs793.m4a 0
+track_title: <type 'unicode'> 美国老板最爱听的10句话－潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国老板最爱听的10句话－潘吉Jenny告诉你.m4a
+		 track_id: 550
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	“厕所”的英语你用对了吗?-潘吉Jenny告诉你 http://audio.xmcdn.com/group14/M08/42/E5/wKgDZFWjeqyBK1g0ABaLw_-0Cdc279.m4a http://audio.xmcdn.com/group14/M08/43/01/wKgDY1WjetuzLGlsADsMaGZnASI361.m4a 0
+track_title: <type 'unicode'> “厕所”的英语你用对了吗?-潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\“厕所”的英语你用对了吗?-潘吉Jenny告诉你.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'D:\\xmly\\\u6f58\u5409Jenny\u544a\u8bc9\u4f60--\u5b66\u82f1\u8bed\u804a\u7f8e\u56fd\\\u201c\u5395\u6240\u201d\u7684\u82f1\u8bed\u4f60\u7528\u5bf9\u4e86\u5417?-\u6f58\u5409Jenny\u544a\u8bc9\u4f60.m4a'
+	微信、朋友圈、刷屏、扫二维码英语怎么说？--潘吉Jenny告诉你 http://audio.xmcdn.com/group16/M0B/3E/52/wKgDalWfjMLAigt5ABY6BlFUotw774.m4a http://audio.xmcdn.com/group7/M07/3E/D8/wKgDWlWfjQSz_i5lADo2PrJ9Nbs459.m4a 0
+track_title: <type 'unicode'> 微信、朋友圈、刷屏、扫二维码英语怎么说？--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\微信、朋友圈、刷屏、扫二维码英语怎么说？--潘吉Jenny告诉你.m4a
+		 track_id: 552
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	牛过一切美剧的纽约越狱--潘吉Jenny告诉你 http://audio.xmcdn.com/group14/M06/3C/12/wKgDY1WcueHzBwj9AA2_s3lWQDw320.m4a http://audio.xmcdn.com/group14/M06/3B/FA/wKgDZFWcubvRX6TaACP_KjTjmPY967.m4a 0
+track_title: <type 'unicode'> 牛过一切美剧的纽约越狱--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\牛过一切美剧的纽约越狱--潘吉Jenny告诉你.m4a
+		 track_id: 553
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	不会湿身的“雨”--和rain有关的英语俚语 http://audio.xmcdn.com/group7/M08/3A/D1/wKgDX1WbSJ-DAguoABSX0ikkObI151.m4a http://audio.xmcdn.com/group7/M05/3A/DC/wKgDX1WbUXmTWjWpADXuid3kC5U184.m4a 0
+track_title: <type 'unicode'> 不会湿身的“雨”--和rain有关的英语俚语
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\不会湿身的“雨”--和rain有关的英语俚语.m4a
+		 track_id: 554
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	美国国庆必备英语－潘吉Jenny告诉你 http://audio.xmcdn.com/group8/M03/37/07/wKgDYVWWTeHgAgafABcONFAWIpA327.m4a http://audio.xmcdn.com/group14/M09/37/1F/wKgDY1WWThnjxm7NADxiMCwIibw229.m4a 0
+track_title: <type 'unicode'> 美国国庆必备英语－潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国国庆必备英语－潘吉Jenny告诉你.m4a
+		 track_id: 555
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	毕业季特辑: 美国应届毕业生的困扰--潘吉Jenny告诉你 http://audio.xmcdn.com/group11/M01/34/67/wKgDa1WTrozjJ9GhAF_k_yzrCKs147.m4a http://audio.xmcdn.com/group16/M05/34/53/wKgDalWTrmewEnSaAPs7fK457iY755.m4a 0
+track_title: <type 'unicode'> 毕业季特辑: 美国应届毕业生的困扰--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\毕业季特辑: 美国应届毕业生的困扰--潘吉Jenny告诉你.m4a
+		 track_id: 556
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	一周英语热词: Same-Sex Marriage, Supreme Court http://audio.xmcdn.com/group16/M09/32/53/wKgDbFWSOSaTznCvAA732GIQZwo554.m4a http://audio.xmcdn.com/group16/M09/32/40/wKgDalWSORmwY1ZJACcxrYJoIcU791.m4a 0
+track_title: <type 'unicode'> 一周英语热词: Same-Sex Marriage, Supreme Court
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\一周英语热词: Same-Sex Marriage, Supreme Court.m4a
+		 track_id: 557
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	别再说中国人都吃狗肉--潘吉Jenny告诉你 http://audio.xmcdn.com/group16/M07/31/6D/wKgDalWQumTDzT6uADICWLtM6a0087.m4a http://audio.xmcdn.com/group14/M08/31/AD/wKgDY1WQuqzxE_RMAIMBj_bu4G0021.m4a 0
+track_title: <type 'unicode'> 别再说中国人都吃狗肉--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\别再说中国人都吃狗肉--潘吉Jenny告诉你.m4a
+		 track_id: 558
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	对比中美禁烟令--潘吉Jenny告诉你 http://audio2.xmcdn.com/group12/M00/2D/58/wKgDW1WKe_PB-2h_AB_rF2ftzkU255.m4a http://audio2.xmcdn.com/group12/M00/2D/58/wKgDW1WKe_jBb5AdAFObVxQ9RCY046.m4a 0
+track_title: <type 'unicode'> 对比中美禁烟令--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\对比中美禁烟令--潘吉Jenny告诉你.m4a
+		 track_id: 559
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	美国哪里适合你?--潘吉Jenny告诉你 http://audio.xmcdn.com/group10/M05/25/3C/wKgDaVWA5ebDgltCADLIaXcxr58433.m4a http://audio.xmcdn.com/group10/M05/25/3C/wKgDaVWA5eyil9JTAIUIrAiLaVg749.m4a 0
+track_title: <type 'unicode'> 美国哪里适合你?--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国哪里适合你?--潘吉Jenny告诉你.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'D:\\xmly\\\u6f58\u5409Jenny\u544a\u8bc9\u4f60--\u5b66\u82f1\u8bed\u804a\u7f8e\u56fd\\\u7f8e\u56fd\u54ea\u91cc\u9002\u5408\u4f60?--\u6f58\u5409Jenny\u544a\u8bc9\u4f60.m4a'
+	美国人眼中国的王思聪——潘吉Jenny告诉你 http://audio.xmcdn.com/group11/M01/1F/7E/wKgDa1V6hWOzqp76ACQaIiPf7bw571.m4a http://audio.xmcdn.com/group16/M02/1F/6E/wKgDbFV6hVCQA5ePAF6RbKLOf54153.m4a 0
+track_title: <type 'unicode'> 美国人眼中国的王思聪——潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国人眼中国的王思聪——潘吉Jenny告诉你.m4a
+		 track_id: 561
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	美国的虎妈猫爸--潘吉Jenny告诉你 http://audio.xmcdn.com/group8/M02/1C/F3/wKgDYVV4CHSjvaUxACt8V5YmsAw405.m4a http://audio.xmcdn.com/group8/M02/1C/C3/wKgDYFV4CJrTFg-1AHHpqbUyek0533.m4a 0
+track_title: <type 'unicode'> 美国的虎妈猫爸--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国的虎妈猫爸--潘吉Jenny告诉你.m4a
+		 track_id: 562
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	出国自助游之酒店--潘吉Jenny告诉你 http://audio.xmcdn.com/group15/M00/16/A0/wKgDZVVwGqSCQlwgADDRD7tH_RY458.m4a http://audio.xmcdn.com/group15/M00/16/A3/wKgDaFVwGqGzHQXuAH_h8Z69dfg897.m4a 0
+track_title: <type 'unicode'> 出国自助游之酒店--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\出国自助游之酒店--潘吉Jenny告诉你.m4a
+		 track_id: 563
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	名牌名字怎么读？-潘吉Jenny告诉你 http://audio.xmcdn.com/group7/M08/15/CC/wKgDX1Vuc4PxPBemABX3Qi15kC8154.m4a http://audio.xmcdn.com/group7/M08/15/CC/wKgDX1Vuc4bzM1gGADmGrSqS5kY996.m4a 0
+track_title: <type 'unicode'> 名牌名字怎么读？-潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\名牌名字怎么读？-潘吉Jenny告诉你.m4a
+		 track_id: 564
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	美国人最常用的App--潘吉Jenny告诉你 http://audio.xmcdn.com/group16/M00/20/0A/wKgDalV7Cr6g0Hq3ADSnMwEVllo504.m4a http://audio.xmcdn.com/group7/M03/23/A6/wKgDX1V-8waAjtHAAInu9s784gg291.m4a 0
+track_title: <type 'unicode'> 美国人最常用的App--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国人最常用的App--潘吉Jenny告诉你.m4a
+		 track_id: 565
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	美国文化必修课之种族歧视--潘吉Jenny告诉你 http://audio.xmcdn.com/group15/M02/4B/6E/wKgDaFWuv6vAQJtsAC-xTX0r3Zs075.m4a http://audio.xmcdn.com/group15/M02/4B/6B/wKgDZVWuv8CQ5OkwAHzv-LodrSE045.m4a 0
+track_title: <type 'unicode'> 美国文化必修课之种族歧视--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国文化必修课之种族歧视--潘吉Jenny告诉你.m4a
+		 track_id: 566
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	复联2英语指南--潘吉Jenny告诉你 http://audio.xmcdn.com/group10/M0A/3C/FF/wKgDaVWeAIeAHOvHACcfR3tifCI490.m4a http://audio.xmcdn.com/group10/M0A/3D/09/wKgDZ1WeAG6xOiXAAGZ7MGmaETo087.m4a 0
+track_title: <type 'unicode'> 复联2英语指南--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\复联2英语指南--潘吉Jenny告诉你.m4a
+		 track_id: 567
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	大牛市学股票英语-潘吉Jenny告诉你 http://audio.xmcdn.com/group9/M08/3C/2F/wKgDYlWdHPmQMHV_AC4eNjvujeA774.m4a http://audio.xmcdn.com/group9/M08/3C/4F/wKgDZlWdHQWAGfKeAHjP0mO44EQ510.m4a 0
+track_title: <type 'unicode'> 大牛市学股票英语-潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\大牛市学股票英语-潘吉Jenny告诉你.m4a
+		 track_id: 568
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	公主的名字和20个最好听的英语名--潘吉Jenny告诉你 http://audio.xmcdn.com/group8/M09/4C/FE/wKgDYVWwwLGime8bAE_Yspsmx44674.m4a http://audio.xmcdn.com/group8/M00/4C/CC/wKgDYFWwwPLAzV7bANEveG1HAyY901.m4a 0
+track_title: <type 'unicode'> 公主的名字和20个最好听的英语名--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\公主的名字和20个最好听的英语名--潘吉Jenny告诉你.m4a
+		 track_id: 569
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	10大另类美国家常菜--潘吉Jenny告诉你 http://audio.xmcdn.com/group10/M08/2D/62/wKgDZ1WKVzHR9OOsAEEb51zkufI132.m4a http://audio.xmcdn.com/group10/M08/2D/62/wKgDZ1WKVzGTJ09uAKqSL5Tq8sc084.m4a 0
+track_title: <type 'unicode'> 10大另类美国家常菜--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\10大另类美国家常菜--潘吉Jenny告诉你.m4a
+		 track_id: 570
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	创业圈必备英语--潘吉Jenny告诉你 http://audio.xmcdn.com/group10/M04/2C/8E/wKgDaVWJj-uieoLfADS4OC057yA067.m4a http://audio.xmcdn.com/group10/M04/2C/97/wKgDZ1WJj9jSfX-cAIoaw5VKVwA192.m4a 0
+track_title: <type 'unicode'> 创业圈必备英语--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\创业圈必备英语--潘吉Jenny告诉你.m4a
+		 track_id: 571
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	美国当gay不容易--潘吉Jenny告诉你 http://audio.xmcdn.com/group15/M01/42/51/wKgDZVWikO_wOQ2lADFsJhpmwjQ864.m4a http://audio.xmcdn.com/group15/M01/42/52/wKgDaFWikNyCDuAXAIF4X9HezKw999.m4a 0
+track_title: <type 'unicode'> 美国当gay不容易--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国当gay不容易--潘吉Jenny告诉你.m4a
+		 track_id: 572
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	什么样的人能上哈佛?--潘吉Jenny告诉你 http://audio.xmcdn.com/group16/M01/10/2A/wKgDbFVlg3jTOFo2ADmJuqUtevQ204.m4a http://audio.xmcdn.com/group15/M02/21/84/wKgDZVV8WYyiFIacAJa7z44AMnU385.m4a 0
+track_title: <type 'unicode'> 什么样的人能上哈佛?--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\什么样的人能上哈佛?--潘吉Jenny告诉你.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'D:\\xmly\\\u6f58\u5409Jenny\u544a\u8bc9\u4f60--\u5b66\u82f1\u8bed\u804a\u7f8e\u56fd\\\u4ec0\u4e48\u6837\u7684\u4eba\u80fd\u4e0a\u54c8\u4f5b?--\u6f58\u5409Jenny\u544a\u8bc9\u4f60.m4a'
+	常被念错的美国奇葩地名-潘吉Jenny告诉你 http://audio.xmcdn.com/group8/M0B/46/C9/wKgDYFWoO3STuADDACMswgTZ2Qo148.m4a http://audio.xmcdn.com/group8/M07/46/FD/wKgDYVWoOzihtN9AAFwjd6NVpU8713.m4a 0
+track_title: <type 'unicode'> 常被念错的美国奇葩地名-潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\常被念错的美国奇葩地名-潘吉Jenny告诉你.m4a
+		 track_id: 574
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	美国90后这样说英语--潘吉Jenny告诉你 http://audio.xmcdn.com/group9/M03/10/28/wKgDYlVlpFmwCS0rAC-TEXVJP5o602.m4a http://audio.xmcdn.com/group14/M03/21/9E/wKgDZFV8lCHh8VQEAHygzjkwFoA356.m4a 0
+track_title: <type 'unicode'> 美国90后这样说英语--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国90后这样说英语--潘吉Jenny告诉你.m4a
+		 track_id: 575
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	纸牌屋第三季观影指南--潘吉Jenny告诉你 http://audio.xmcdn.com/group13/M04/0C/8E/wKgDXlVhvAqCPnrEADTZlOL_RoY700.m4a http://audio.xmcdn.com/group8/M06/1E/B4/wKgDYFV59AnCLeRXAIpy7lB8NbM139.m4a 0
+track_title: <type 'unicode'> 纸牌屋第三季观影指南--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\纸牌屋第三季观影指南--潘吉Jenny告诉你.m4a
+		 track_id: 576
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	今年找个好工作！英语简历、面试秘笈--潘吉Jenny告诉你 http://audio.xmcdn.com/group16/M00/3C/7A/wKgDalWdOIHBIwWFADzyot4gbv8636.m4a http://audio.xmcdn.com/group16/M04/3C/A5/wKgDbFWdOJKgofDjAJ-qzsyKFHE108.m4a 0
+track_title: <type 'unicode'> 今年找个好工作！英语简历、面试秘笈--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\今年找个好工作！英语简历、面试秘笈--潘吉Jenny告诉你.m4a
+		 track_id: 577
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	英国人的名字vs.美国人的名字--潘吉Jenny告诉你 http://audio.xmcdn.com/group11/M01/40/86/wKgDbVWhFEPSBi2IADQF9hadYdY314.m4a http://audio.xmcdn.com/group11/M01/40/87/wKgDa1WhFIjwGpdJAIhITKOl_ls559.m4a 0
+track_title: <type 'unicode'> 英国人的名字vs.美国人的名字--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\英国人的名字vs.美国人的名字--潘吉Jenny告诉你.m4a
+		 track_id: 578
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	情人节必备英语(浪漫、激情样样有)--潘吉Jenny告诉你 http://audio.xmcdn.com/group11/M01/42/A1/wKgDbVWjQmHTsnQHACuHGe5RtqQ099.m4a http://audio.xmcdn.com/group11/M01/42/A0/wKgDa1WjQqiQzOyuAHIFfEhSTsQ787.m4a 0
+track_title: <type 'unicode'> 情人节必备英语(浪漫、激情样样有)--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\情人节必备英语(浪漫、激情样样有)--潘吉Jenny告诉你.m4a
+		 track_id: 579
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	超级碗前恶补橄榄球知识 http://audio.xmcdn.com/group16/M09/41/63/wKgDalWiAuiRl8lyADQpojzErC8986.m4a http://audio.xmcdn.com/group16/M09/41/63/wKgDalWiAuiiH2weAIimRWx-SLI794.m4a 0
+track_title: <type 'unicode'> 超级碗前恶补橄榄球知识
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\超级碗前恶补橄榄球知识.m4a
+		 track_id: 580
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	美国奥特莱斯攻略 http://audio.xmcdn.com/group8/M01/26/AF/wKgDYFWCxdqxeAQyAB22d5QylQM984.m4a http://audio.xmcdn.com/group8/M01/26/DA/wKgDYVWCxbSj-BY_AE3TNHoaTIo021.m4a 0
+track_title: <type 'unicode'> 美国奥特莱斯攻略
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国奥特莱斯攻略.m4a
+		 track_id: 581
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	美国大学生存手册--潘吉Jenny告诉你 http://audio.xmcdn.com/group10/M00/0C/4D/wKgDaVVhodHDJkknAC1qjT0nd0k840.m4a http://audio.xmcdn.com/group7/M06/1F/2E/wKgDX1V56OHS_IVRAHb5AM2mv1c136.m4a 0
+track_title: <type 'unicode'> 美国大学生存手册--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国大学生存手册--潘吉Jenny告诉你.m4a
+		 track_id: 582
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	我们结婚啦！蜜月过得怎么样？--潘吉Jenny告诉你 http://audio.xmcdn.com/group9/M00/0F/F3/wKgDZlVlaITinus1ACyeyQa7gOA901.m4a http://audio.xmcdn.com/group12/M05/21/28/wKgDXFV8RjjSU_ElAHTgruwr7y0993.m4a 0
+track_title: <type 'unicode'> 我们结婚啦！蜜月过得怎么样？--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\我们结婚啦！蜜月过得怎么样？--潘吉Jenny告诉你.m4a
+		 track_id: 583
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	牛津辞典2014年度新词你造吗？--潘吉Jenny告诉你 http://audio.xmcdn.com/group8/M03/0B/B1/wKgDYFVhLZzT23BSACnYKPRkI_o461.m4a http://audio.xmcdn.com/group7/M0B/1E/F4/wKgDX1V5pKSQ1UbmAG2bQLv6Soo708.m4a 0
+track_title: <type 'unicode'> 牛津辞典2014年度新词你造吗？--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\牛津辞典2014年度新词你造吗？--潘吉Jenny告诉你.m4a
+		 track_id: 584
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	美国人过新年是个shit show?!--潘吉Jenny告诉你 http://audio.xmcdn.com/group16/M02/2C/F4/wKgDalWKAXfghMIHABXp8prdvdE563.m4a http://audio.xmcdn.com/group16/M02/2D/04/wKgDbFWKAYSy2JnRADljjUkwZ18880.m4a 0
+track_title: <type 'unicode'> 美国人过新年是个shit show?!--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美国人过新年是个shit show?!--潘吉Jenny告诉你.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'D:\\xmly\\\u6f58\u5409Jenny\u544a\u8bc9\u4f60--\u5b66\u82f1\u8bed\u804a\u7f8e\u56fd\\\u7f8e\u56fd\u4eba\u8fc7\u65b0\u5e74\u662f\u4e2ashit show?!--\u6f58\u5409Jenny\u544a\u8bc9\u4f60.m4a'
+	两位新主播，谁是你的菜？--潘吉Jenny告诉你 http://audio.xmcdn.com/group11/M01/35/97/wKgDa1WU-0GBrUduACJLtKP0g1k804.m4a http://audio.xmcdn.com/group11/M01/35/9E/wKgDbVWU-wTibg02AFnV1Z2WTVE535.m4a 0
+track_title: <type 'unicode'> 两位新主播，谁是你的菜？--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\两位新主播，谁是你的菜？--潘吉Jenny告诉你.m4a
+		 track_id: 586
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	干货！英语到底怎么学？--潘吉Jenny告诉你 http://audio.xmcdn.com/group13/M04/26/C2/wKgDXlWCdBHCdvqhAEa6J8cXdfQ886.m4a http://audio.xmcdn.com/group13/M04/26/AF/wKgDXVWCdB_D2NCcALlKvOk4F6Q368.m4a 0
+track_title: <type 'unicode'> 干货！英语到底怎么学？--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\干货！英语到底怎么学？--潘吉Jenny告诉你.m4a
+		 track_id: 587
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	最专业的鸡尾酒大全--潘吉Jenny告诉你 http://audio.xmcdn.com/group15/M01/45/B6/wKgDZVWmozXR-QizAD8-W-IBwpU839.m4a http://audio.xmcdn.com/group15/M01/45/B6/wKgDaFWmoyHSBklEAKWvFQ-d1ps277.m4a 0
+track_title: <type 'unicode'> 最专业的鸡尾酒大全--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\最专业的鸡尾酒大全--潘吉Jenny告诉你.m4a
+		 track_id: 588
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	万万没想到！老外在中国的5大surprise--潘吉Jenny告诉你 http://audio.xmcdn.com/group13/M05/42/B5/wKgDXlWjS_7iBmDoACUyMWwU_AM214.m4a http://audio.xmcdn.com/group13/M05/42/B9/wKgDXVWjTBOR7w8HAGFvD6Ak_kM186.m4a 0
+track_title: <type 'unicode'> 万万没想到！老外在中国的5大surprise--潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\万万没想到！老外在中国的5大surprise--潘吉Jenny告诉你.m4a
+		 track_id: 589
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	英式口音高大上也屌丝---潘吉Jenny告诉你 http://audio.xmcdn.com/group10/M00/33/AE/wKgDaVWTYo2j8kFvAECWUp9_lXE237.m4a http://audio.xmcdn.com/group10/M00/33/B3/wKgDZ1WTYneg6zp4AKkzsroj6aA390.m4a 0
+track_title: <type 'unicode'> 英式口音高大上也屌丝---潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\英式口音高大上也屌丝---潘吉Jenny告诉你.m4a
+		 track_id: 590
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	美剧的黄金时代---潘吉Jenny告诉你 http://audio.xmcdn.com/group8/M08/3E/71/wKgDYVWfoaSBU_jFACYzHDD83Bk169.m4a http://audio.xmcdn.com/group8/M08/3E/3D/wKgDYFWfoduzSXZrAGQOEiCgN9M657.m4a 0
+track_title: <type 'unicode'> 美剧的黄金时代---潘吉Jenny告诉你
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\美剧的黄金时代---潘吉Jenny告诉你.m4a
+		 track_id: 591
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	潘吉Jenny告诉你--王菲谢霆锋复合&中美婚恋观 http://audio.xmcdn.com/group15/M0B/44/A1/wKgDaFWl2kSRzolzACrixE_5i0U697.m4a http://audio.xmcdn.com/group15/M0B/44/9F/wKgDZVWl2leTBakxAHBXrJGhWVk345.m4a 0
+track_title: <type 'unicode'> 潘吉Jenny告诉你--王菲谢霆锋复合&中美婚恋观
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\潘吉Jenny告诉你--王菲谢霆锋复合&中美婚恋观.m4a
+		 track_id: 592
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	潘吉Jenny告诉你--美国各地的口音 http://audio.xmcdn.com/group8/M03/3A/9C/wKgDYFWbo7Cgf5LEADsjOhoGxNg682.m4a http://audio.xmcdn.com/group8/M03/3A/CF/wKgDYVWbo3zxnEYNAJrrEs8GSOY030.m4a 0
+track_title: <type 'unicode'> 潘吉Jenny告诉你--美国各地的口音
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\潘吉Jenny告诉你--美国各地的口音.m4a
+		 track_id: 593
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 593: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	潘吉Jenny告诉你--海淘商品退换货 http://audio.xmcdn.com/group13/M0B/46/F7/wKgDXVWn-KThNH3pACZyDHtV9xM539.m4a http://audio.xmcdn.com/group13/M0B/46/F2/wKgDXlWn-I7hbViBAGS0gelglGM704.m4a 0
+track_title: <type 'unicode'> 潘吉Jenny告诉你--海淘商品退换货
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\潘吉Jenny告诉你--海淘商品退换货.m4a
+		 track_id: 594
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 593: 1, 594: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	潘吉Jenny告诉你--马云路演秀英语&苹果iPhone6发布 http://audio.xmcdn.com/group10/M02/42/50/wKgDZ1WjHUPSKSZHACah3bHq0r4354.m4a http://audio.xmcdn.com/group10/M02/42/4B/wKgDaVWjHV2Avvn5AGUxsQkogh0303.m4a 0
+track_title: <type 'unicode'> 潘吉Jenny告诉你--马云路演秀英语&苹果iPhone6发布
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\潘吉Jenny告诉你--马云路演秀英语&苹果iPhone6发布.m4a
+		 track_id: 595
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 593: 1, 594: 1, 595: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	潘吉Jenny告诉你--好莱坞爆发史上最严重艳照门事件 http://audio.xmcdn.com/group16/M01/39/D0/wKgDbFWam-uDgxwcAC4fW5MNwD0134.m4a http://audio.xmcdn.com/group16/M07/39/A9/wKgDalWam9rx9FLEAHjR3i9CVzE739.m4a 0
+track_title: <type 'unicode'> 潘吉Jenny告诉你--好莱坞爆发史上最严重艳照门事件
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\潘吉Jenny告诉你--好莱坞爆发史上最严重艳照门事件.m4a
+		 track_id: 596
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 593: 1, 594: 1, 595: 1, 596: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	今天我们说美国：中国女为什么喜欢外国男？ http://audio.xmcdn.com/group13/M06/4B/84/wKgDXVWvL9eD6aSsABJ9GYg0wc8944.m4a http://audio.xmcdn.com/group13/M06/4B/84/wKgDXVWvL9fz5OewADBrL01L8kc445.m4a 0
+track_title: <type 'unicode'> 今天我们说美国：中国女为什么喜欢外国男？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\今天我们说美国：中国女为什么喜欢外国男？.m4a
+		 track_id: 597
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 593: 1, 594: 1, 595: 1, 596: 1, 597: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	潘吉Jenny告诉你--冰桶挑战 http://audio.xmcdn.com/group11/M0A/27/53/wKgDa1WDDqSjH8n7ABcoeuZbvi4085.m4a http://audio.xmcdn.com/group11/M0A/27/5E/wKgDbVWDDnTSSpSJADynFk62oHo858.m4a 0
+track_title: <type 'unicode'> 潘吉Jenny告诉你--冰桶挑战
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\潘吉Jenny告诉你--冰桶挑战.m4a
+		 track_id: 598
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 593: 1, 594: 1, 595: 1, 596: 1, 597: 1, 598: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	潘吉Jenny告诉你--粉丝问答&明星涉毒 http://audio.xmcdn.com/group7/M08/3A/7F/wKgDWlWa-VDgRMxMAEBcBy5DR_A052.m4a http://audio.xmcdn.com/group7/M08/3A/77/wKgDX1Wa-UTB2v43AKiaLr4I31M740.m4a 0
+track_title: <type 'unicode'> 潘吉Jenny告诉你--粉丝问答&明星涉毒
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\潘吉Jenny告诉你--粉丝问答&明星涉毒.m4a
+		 track_id: 599
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 593: 1, 594: 1, 595: 1, 596: 1, 597: 1, 598: 1, 599: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	潘吉Jenny告诉你-- Meet Chris! 又来一位大帅哥 http://audio.xmcdn.com/group9/M02/28/F1/wKgDZlWFJH7wwIIBACoKpEjhv_Y542.m4a http://audio.xmcdn.com/group9/M02/28/DA/wKgDYlWFJHWCPX4dAG4gq4KpzW4685.m4a 0
+track_title: <type 'unicode'> 潘吉Jenny告诉你-- Meet Chris! 又来一位大帅哥
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\潘吉Jenny告诉你-- Meet Chris! 又来一位大帅哥.m4a
+		 track_id: 600
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 593: 1, 594: 1, 595: 1, 596: 1, 597: 1, 598: 1, 599: 1, 600: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	潘吉Jenny告诉你--电影暑期档强势来袭！ http://audio.xmcdn.com/group9/M04/3F/92/wKgDZlWgW0WRXVkdACSWay5dWB4641.m4a http://audio.xmcdn.com/group9/M04/3F/92/wKgDZlWgW0WA2st9AF_XEdL1-_4226.m4a 0
+track_title: <type 'unicode'> 潘吉Jenny告诉你--电影暑期档强势来袭！
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\潘吉Jenny告诉你--电影暑期档强势来袭！.m4a
+		 track_id: 601
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 593: 1, 594: 1, 595: 1, 596: 1, 597: 1, 598: 1, 599: 1, 600: 1, 601: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	潘吉Jenny告诉你--出国留学要不要买医保？ http://audio.xmcdn.com/group16/M01/42/95/wKgDbFWjFnKBpODgACKO2RU82c8144.m4a http://audio.xmcdn.com/group16/M01/42/6E/wKgDalWjFmCTSPF7AFqE9SiwXCI791.m4a 0
+track_title: <type 'unicode'> 潘吉Jenny告诉你--出国留学要不要买医保？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\潘吉Jenny告诉你--出国留学要不要买医保？.m4a
+		 track_id: 602
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 593: 1, 594: 1, 595: 1, 596: 1, 597: 1, 598: 1, 599: 1, 600: 1, 601: 1, 602: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	潘吉Jenny告诉你--七夕情人节怎么过？ http://audio.xmcdn.com/group11/M05/28/FF/wKgDa1WFIhSBzvALAB004znopqQ374.m4a http://audio.xmcdn.com/group11/M05/29/09/wKgDbVWFIePQlVhqAEyAW3tJFeQ198.m4a 0
+track_title: <type 'unicode'> 潘吉Jenny告诉你--七夕情人节怎么过？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\潘吉Jenny告诉你--七夕情人节怎么过？.m4a
+		 track_id: 603
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 593: 1, 594: 1, 595: 1, 596: 1, 597: 1, 598: 1, 599: 1, 600: 1, 601: 1, 602: 1, 603: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	潘吉Jenny告诉你--食品安全进化论 http://audio.xmcdn.com/group16/M0A/33/A0/wKgDalWTSgPi9BUsAC0V9wu-Xg0593.m4a http://audio.xmcdn.com/group16/M0A/33/A0/wKgDalWTSgPx5JawAHYbXQpvNss493.m4a 0
+track_title: <type 'unicode'> 潘吉Jenny告诉你--食品安全进化论
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\潘吉Jenny告诉你--食品安全进化论.m4a
+		 track_id: 604
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 593: 1, 594: 1, 595: 1, 596: 1, 597: 1, 598: 1, 599: 1, 600: 1, 601: 1, 602: 1, 603: 1, 604: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	潘吉Jenny告诉你--在上海读纽约大学？ http://audio.xmcdn.com/group11/M05/0D/0E/wKgDa1ViPt-T9f5LAErEvvW4OoU533.m4a http://audio.xmcdn.com/group13/M04/1F/CF/wKgDXVV6pB2w4_oWAMPhiGTsEcs351.m4a 0
+track_title: <type 'unicode'> 潘吉Jenny告诉你--在上海读纽约大学？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\潘吉Jenny告诉你--在上海读纽约大学？.m4a
+		 track_id: 605
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 593: 1, 594: 1, 595: 1, 596: 1, 597: 1, 598: 1, 599: 1, 600: 1, 601: 1, 602: 1, 603: 1, 604: 1, 605: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	潘吉Jenny告诉你--如何实现职场三级跳 http://audio.xmcdn.com/group11/M07/08/0A/wKgDbVVddsixNegqADvXPldRQx4425.m4a http://audio.xmcdn.com/group14/M06/1C/26/wKgDY1V22Ruyesz6AJzEeQJuZqE258.m4a 0
+track_title: <type 'unicode'> 潘吉Jenny告诉你--如何实现职场三级跳
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\潘吉Jenny告诉你--如何实现职场三级跳.m4a
+		 track_id: 606
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 593: 1, 594: 1, 595: 1, 596: 1, 597: 1, 598: 1, 599: 1, 600: 1, 601: 1, 602: 1, 603: 1, 604: 1, 605: 1, 606: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	潘吉Jenny告诉你--跨国公司面试秘笈 http://audio.xmcdn.com/group15/M07/22/C6/wKgDaFV-ILCxMnJrAD1PdAy-V8s626.m4a http://audio.xmcdn.com/group8/M0A/23/70/wKgDYFV_TQ6xvv7EAKCeQqC1Y7w165.m4a 0
+track_title: <type 'unicode'> 潘吉Jenny告诉你--跨国公司面试秘笈
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\潘吉Jenny告诉你--跨国公司面试秘笈.m4a
+		 track_id: 607
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 593: 1, 594: 1, 595: 1, 596: 1, 597: 1, 598: 1, 599: 1, 600: 1, 601: 1, 602: 1, 603: 1, 604: 1, 605: 1, 606: 1, 607: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	潘吉Jenny告诉你--海龟找工作 http://audio.xmcdn.com/group10/M0A/27/C9/wKgDZ1WDkn7hsMDmAF7RNQhzgVM984.m4a http://audio.xmcdn.com/group10/M0A/27/C1/wKgDaVWDkpCjc8BZAPhoWbUIDe4975.m4a 0
+track_title: <type 'unicode'> 潘吉Jenny告诉你--海龟找工作
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\潘吉Jenny告诉你--海龟找工作.m4a
+		 track_id: 608
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 593: 1, 594: 1, 595: 1, 596: 1, 597: 1, 598: 1, 599: 1, 600: 1, 601: 1, 602: 1, 603: 1, 604: 1, 605: 1, 606: 1, 607: 1, 608: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	潘吉Jenny告诉你--美国独立日 http://audio.xmcdn.com/group11/M00/40/EF/wKgDbVWhfo_AC9qPACEX3SxKtbw499.m4a http://audio.xmcdn.com/group11/M00/40/F1/wKgDa1WhftTicdcWAFavGTXKqvc992.m4a 0
+track_title: <type 'unicode'> 潘吉Jenny告诉你--美国独立日
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\潘吉Jenny告诉你--美国独立日.m4a
+		 track_id: 609
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 593: 1, 594: 1, 595: 1, 596: 1, 597: 1, 598: 1, 599: 1, 600: 1, 601: 1, 602: 1, 603: 1, 604: 1, 605: 1, 606: 1, 607: 1, 608: 1, 609: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	潘吉Jenny告诉你--MBA值不值得读？ http://audio.xmcdn.com/group12/M07/4D/BB/wKgDW1WyD62gHNomADr02rz5isE811.m4a http://audio.xmcdn.com/group12/M07/4D/BB/wKgDW1WyD6yDO4tRAJpyfI_X-lk701.m4a 0
+track_title: <type 'unicode'> 潘吉Jenny告诉你--MBA值不值得读？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\潘吉Jenny告诉你--MBA值不值得读？.m4a
+		 track_id: 610
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 593: 1, 594: 1, 595: 1, 596: 1, 597: 1, 598: 1, 599: 1, 600: 1, 601: 1, 602: 1, 603: 1, 604: 1, 605: 1, 606: 1, 607: 1, 608: 1, 609: 1, 610: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	潘吉Jenny告诉你--球星名字怎么读？ http://audio2.xmcdn.com/group11/M01/51/69/wKgDa1W1RZeC-pYZACGrHyYPqqo782.m4a http://audio2.xmcdn.com/group11/M01/51/84/wKgDbVW1RUPTWZJEAFgw49ZEIN4173.m4a 0
+track_title: <type 'unicode'> 潘吉Jenny告诉你--球星名字怎么读？
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\潘吉Jenny告诉你--球星名字怎么读？.m4a
+		 track_id: 611
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 593: 1, 594: 1, 595: 1, 596: 1, 597: 1, 598: 1, 599: 1, 600: 1, 601: 1, 602: 1, 603: 1, 604: 1, 605: 1, 606: 1, 607: 1, 608: 1, 609: 1, 610: 1, 611: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	潘吉Jenny告诉你--美国血拼一族！ http://audio.xmcdn.com/group10/M0B/3B/BA/wKgDZ1WctZjzYCaUACLJq3EA7n0824.m4a http://audio.xmcdn.com/group10/M0B/3B/BA/wKgDZ1WctZjjfjoAAFsf1AU2p0s242.m4a 0
+track_title: <type 'unicode'> 潘吉Jenny告诉你--美国血拼一族！
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\潘吉Jenny告诉你--美国血拼一族！.m4a
+		 track_id: 612
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 593: 1, 594: 1, 595: 1, 596: 1, 597: 1, 598: 1, 599: 1, 600: 1, 601: 1, 602: 1, 603: 1, 604: 1, 605: 1, 606: 1, 607: 1, 608: 1, 609: 1, 610: 1, 611: 1, 612: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	潘吉Jenny告诉你--世界杯开战！ http://audio.xmcdn.com/group10/M0A/28/97/wKgDaVWEwEqSUyceABy-eUbnkis045.m4a http://audio.xmcdn.com/group10/M0A/28/A1/wKgDZ1WEwDjhf5JmAEtJYfDyeR8491.m4a 0
+track_title: <type 'unicode'> 潘吉Jenny告诉你--世界杯开战！
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\潘吉Jenny告诉你--世界杯开战！.m4a
+		 track_id: 613
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 593: 1, 594: 1, 595: 1, 596: 1, 597: 1, 598: 1, 599: 1, 600: 1, 601: 1, 602: 1, 603: 1, 604: 1, 605: 1, 606: 1, 607: 1, 608: 1, 609: 1, 610: 1, 611: 1, 612: 1, 613: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+	潘吉Jenny告诉你--世界杯球迷 http://audio.xmcdn.com/group8/M04/28/54/wKgDYFWEwHGxW36ZACZthug6WTA978.m4a http://audio.xmcdn.com/group8/M04/28/54/wKgDYFWEwHHx9UupAGSo0RInluU147.m4a 0
+track_title: <type 'unicode'> 潘吉Jenny告诉你--世界杯球迷
+	D:\xmly\潘吉Jenny告诉你--学英语聊美国\潘吉Jenny告诉你--世界杯球迷.m4a
+		 track_id: 614
+		{512: 1, 513: 1, 514: 1, 515: 1, 516: 1, 517: 1, 518: 1, 519: 1, 520: 1, 521: 1, 522: 1, 524: 1, 525: 1, 526: 1, 527: 1, 528: 1, 529: 1, 530: 1, 531: 1, 534: 1, 535: 1, 536: 1, 537: 1, 538: 1, 539: 1, 540: 1, 541: 1, 542: 1, 543: 1, 544: 1, 545: 1, 546: 1, 547: 1, 548: 1, 550: 1, 552: 1, 553: 1, 554: 1, 555: 1, 556: 1, 557: 1, 558: 1, 559: 1, 561: 1, 562: 1, 563: 1, 564: 1, 565: 1, 566: 1, 567: 1, 568: 1, 569: 1, 570: 1, 571: 1, 572: 1, 574: 1, 575: 1, 576: 1, 577: 1, 578: 1, 579: 1, 580: 1, 581: 1, 582: 1, 583: 1, 584: 1, 586: 1, 587: 1, 588: 1, 589: 1, 590: 1, 591: 1, 592: 1, 593: 1, 594: 1, 595: 1, 596: 1, 597: 1, 598: 1, 599: 1, 600: 1, 601: 1, 602: 1, 603: 1, 604: 1, 605: 1, 606: 1, 607: 1, 608: 1, 609: 1, 610: 1, 611: 1, 612: 1, 613: 1, 614: 1, 467: 1, 468: 1, 469: 1, 470: 1, 471: 1, 472: 1, 473: 1, 474: 1, 475: 1, 477: 1, 478: 1, 479: 1, 480: 1, 481: 1, 482: 1, 483: 1, 484: 1, 485: 1, 486: 1, 487: 1, 488: 1, 489: 1, 490: 1, 491: 1, 492: 1, 493: 1, 494: 1, 495: 1, 496: 1, 497: 1, 498: 1, 499: 1, 500: 1, 501: 1, 502: 1, 503: 1, 504: 1, 505: 1, 506: 1, 507: 1, 508: 1, 509: 1, 510: 1, 511: 1}
+
+
+ -------- Convert m4a to mp3 start   ----------- 
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+Enter a zhubo, album or sound url:
