@@ -13,7 +13,7 @@ import subprocess
 HOME_URL = 'http://www.ximalaya.com'
 DATA_BASE = 'xmly.sqlite'
 # AUDIO_DIR = os.path.expanduser('~')   # 'C:\\Users\\username'
-AUDIO_DIR = 'D:\\xmly'   # 'C:\\Users\\username'
+AUDIO_DIR = 'E:\\xmly'   # 'C:\\Users\\username'
 
 reload(sys)
 sys.setdefaultencoding('gb18030')
@@ -676,7 +676,7 @@ def writeTrackToDB(conn, cur, url, result):
     except TypeError:
         print "\tTrack  doesn't in db:", zhubo_id, '/sound/', sound_id
         
-        # Add new Album into db
+        # Add new Track into db
         session = XMLYSession()
         track = session.getTrackProfile(sound_id)
         
@@ -768,7 +768,7 @@ def m4aToMp3(m4a_path, mp3_path):
         subprocess.call([
             "ffmpeg", "-i", 
             os.path.join(m4a_path, filename), 
-            "-acodec", "libmp3lame", "-ab", "256k", 
+            "-acodec", "libmp3lame", "-ab", "128k", 
             os.path.join(mp3_path, '%s.mp3' % filename[:-4])
             ])
         print '\n\nEnd#'
@@ -798,7 +798,7 @@ def downloadAlbum(conn, cur, url, result):
         
                
         # get all the tracks in the album from db.
-        cur.execute("SELECT title, play_path, play_path_32, play_path_64, downloaded, id FROM Track \
+        cur.execute("SELECT title, play_path, play_path_32, play_path_64, downloaded, id, sound_id FROM Track \
                         WHERE downloaded = 0 AND album_id = ?", (album_id, ))
         rowcount = cur.rowcount
         print '\n\t this album has ', sound_count, 'tracks.'
@@ -818,10 +818,13 @@ def downloadAlbum(conn, cur, url, result):
                 play_path_64 = row[3]
                 downloaded = row[4]
                 track_id = row[5]
+                sound_id = row[6]
                 track_suffix = '.' + play_path_64.split('.')[-1]
                 
+                track_pub_date = sound_ids.get(sound_id, '000000')
+                
                 print "track_title:", type(track_title), track_title
-                track_path = album_dir + track_title + track_suffix
+                track_path = album_dir + track_pub_date + " " + track_title + track_suffix
                 print '\t', track_path
                 
                 # download track with requests

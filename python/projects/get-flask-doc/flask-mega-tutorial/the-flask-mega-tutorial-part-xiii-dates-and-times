@@ -1,0 +1,1502 @@
+
+    <!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>The Flask Mega-Tutorial</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <div id="main">
+ <div class="post">
+  <p class="date">
+   <span class="flask-moment" data-format="format('LL')" data-refresh="0" data-timestamp="2013-01-01T18:58:58Z">
+    2013-01-01T18:58:58Z
+   </span>
+  </p>
+  <h1 class="post-title">
+   <a href="/post/the-flask-mega-tutorial-part-xiii-dates-and-times">
+    The Flask Mega-Tutorial, Part XIII: Dates and Times
+   </a>
+  </h1>
+  <div class="post_body">
+   <p>
+    This is the thirteenth article in the series in which I document my experience writing web applications in
+    <a href="http://python.org">
+     Python
+    </a>
+    using the
+    <a href="http://flask.pocoo.org">
+     Flask
+    </a>
+    microframework.
+   </p>
+   <p>
+    The goal of the tutorial series is to develop a decently featured microblogging application that demonstrating total lack of originality I have decided to call
+    <code>
+     microblog
+    </code>
+    .
+   </p>
+   <p>
+    <strong>
+     NOTE
+    </strong>
+    : This article was revised in September 2014 to be in sync with current versions of Python and Flask.
+   </p>
+   <p>
+    Here is an index of all the articles in the series that have been published to date:
+   </p>
+   <ul>
+    <li>
+     <a href="the-flask-mega-tutorial-part-i-hello-world">
+      Part I: Hello, World!
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-ii-templates">
+      Part II: Templates
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-iii-web-forms">
+      Part III: Web Forms
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-iv-database">
+      Part IV: Database
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-v-user-logins">
+      Part V: User Logins
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-vi-profile-page-and-avatars">
+      Part VI: Profile Page And Avatars
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-vii-unit-testing">
+      Part VII: Unit Testing
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-viii-followers-contacts-and-friends">
+      Part VIII: Followers, Contacts And Friends
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-ix-pagination">
+      Part IX: Pagination
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-x-full-text-search">
+      Part X: Full Text Search
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xi-email-support">
+      Part XI: Email Support
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xii-facelift">
+      Part XII: Facelift
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xiii-dates-and-times">
+      Part XIII: Dates and Times
+     </a>
+     (this article)
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xiv-i18n-and-l10n">
+      Part XIV: I18n and L10n
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xv-ajax">
+      Part XV: Ajax
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xvi-debugging-testing-and-profiling">
+      Part XVI: Debugging, Testing and Profiling
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xvii-deployment-on-linux-even-on-the-raspberry-pi">
+      Part XVII: Deployment on Linux (even on the Raspberry Pi!)
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud">
+      Part XVIII: Deployment on the Heroku Cloud
+     </a>
+    </li>
+   </ul>
+   <h2>
+    A quick note about github
+   </h2>
+   <p>
+    For those that did not notice, I recently moved the hosting of the
+    <code>
+     microblog
+    </code>
+    application to github. You can find the repository at this location:
+   </p>
+   <p>
+    <a href="https://github.com/miguelgrinberg/microblog">
+     https://github.com/miguelgrinberg/microblog
+    </a>
+   </p>
+   <p>
+    I have added tags that point to each tutorial step for your convenience.
+   </p>
+   <h2>
+    The problem with timestamps
+   </h2>
+   <p>
+    One of the aspects of our
+    <code>
+     microblog
+    </code>
+    application that we have left ignored for a long time is the display of dates and times.
+   </p>
+   <p>
+    Until now, we just trusted Python to render the
+    <code>
+     datetime
+    </code>
+    objects in our
+    <code>
+     User
+    </code>
+    and
+    <code>
+     Post
+    </code>
+    objects on its own, and that isn't really a good solution.
+   </p>
+   <p>
+    Consider the following example. I'm writing this at 3:54PM on December 31st, 2012. My timezone is PST (or UTC-8 if you prefer). Running in a Python interpreter I get the following:
+   </p>
+   <pre><code>&gt;&gt;&gt; from datetime import datetime
+&gt;&gt;&gt; now = datetime.now()
+&gt;&gt;&gt; print now
+2012-12-31 15:54:42.915204
+&gt;&gt;&gt; now = datetime.utcnow()
+&gt;&gt;&gt; print now
+2012-12-31 23:55:13.635874
+</code></pre>
+   <p>
+    The
+    <code>
+     now()
+    </code>
+    call returns the correct time for my location, while the
+    <code>
+     utcnow()
+    </code>
+    call returns the time in the UTC time zone.
+   </p>
+   <p>
+    So which one is better to use?
+   </p>
+   <p>
+    If we go with
+    <code>
+     now()
+    </code>
+    then all the timestamps that we store in the database will be local to where the application server is running, and this presents a few problems.
+   </p>
+   <p>
+    One day we may need to move the server to another location across time zones, and then all the times will have to be corrected to the new local time in the database before the server can be restarted.
+   </p>
+   <p>
+    But there is a more important problem with this approach. For users in different timezones it will be awfully difficult to figure out when a post was made if they see times in the PST timezone. They would need to know in advance that the times are in PST so that they can do the proper adjustments.
+   </p>
+   <p>
+    Clearly this is not a good option, and this is why back when we started our database we decided the we would always store timestamps in the UTC timezone.
+   </p>
+   <p>
+    While standardizing the timestamps to UTC solves the issue of moving the server across timezones, it does not address the second issue, dates and times are now presented to users from any part of the world in UTC.
+   </p>
+   <p>
+    This can still be pretty confusing to many. Imagine a user in the PST timezone that posts something at 3:00pm. The post immediately shows up in his or her index page with a 11:00pm time, or to be more exact 23:00.
+   </p>
+   <p>
+    The goal of today's article is to address  the issue of date and time display so that our users do not get confused.
+   </p>
+   <h2>
+    User specific timestamps
+   </h2>
+   <p>
+    The obvious solution to the problem is to individually convert all timestamps from UTC to local time for each user. This allows us to continue using UTC in our database so that we have consistency, while an on-the-fly conversion for each user makes times consistent for everyone.
+   </p>
+   <p>
+    But how do we know the location of each of our users?
+   </p>
+   <p>
+    Many websites have a configuration page where users can specify their timezone. This would require us to add a new page with a form in which we present users with a dropdown with the list of timezones. Users should be asked to enter their timezone when they access the site for the first time, as part of their registration.
+   </p>
+   <p>
+    While this is a decent solution that solves our problem, it is a bit cumbersome to ask our users to enter a piece of information that they have already configured in their systems. It seems it would be more efficient if we could just grab the timezone setting from their computers.
+   </p>
+   <p>
+    For security reasons web browsers will not allow us to get into the computers of our users to obtain this information. Even if this was possible we would need to know where to find the timezone on Windows, Linux, Mac, iOS, and Android, without counting other less common operating systems.
+   </p>
+   <p>
+    But as it turns out, the web browser knows the user's timezone, and exposes it through the standard Javascript APIs. In this Web 2.0 world it is safe to assume that users will have Javascript enabled (no modern site will work without scripting), so this solution has potential.
+   </p>
+   <p>
+    We have two ways to take advantage of the timezone configuration available via Javascript:
+   </p>
+   <ul>
+    <li>
+     The "old-school" approach would be to have the web browser somehow send the timezone information to the server when the user first logs on to the server. This could be done with an
+     <a href="http://en.wikipedia.org/wiki/Ajax_(programming)">
+      Ajax
+     </a>
+     call, or much more simply with a
+     <a href="http://en.wikipedia.org/wiki/Meta_refresh">
+      meta refresh tag
+     </a>
+     . Once the server knows the timezone it can keep it in the user's session and adjust all timestamps with it when templates are rendered.
+    </li>
+    <li>
+     The "new-school" approach would be to not change a thing in the server, which will continue to send UTC timestamps to the client browser. The conversion from UTC to local then happens in the client, using Javascript.
+    </li>
+   </ul>
+   <p>
+    Both options are valid, but the second one has an advantage. The browser is best able to render times according to the system locale configuration. Things like  AM/PM vs. 24 hour clock, DD/MM/YYYY vs. MM/DD/YYYY and many other cultural styles are all accessible to the browser and unknown to the server.
+   </p>
+   <p>
+    And if that wasn't enough, there is yet one more advantage for the new-school approach. Turns out someone else has done all the work for us!
+   </p>
+   <h2>
+    Introducing moment.js
+   </h2>
+   <p>
+    <a href="http://momentjs.com">
+     Moment.js
+    </a>
+    is a small, free and open source Javascript library that takes date and time rendering to another level. It provides every imaginable formatting option, and then some.
+   </p>
+   <p>
+    To use moment.js in our application we need to write a little bit of Javascript into our templates. We start by constructing a
+    <code>
+     moment
+    </code>
+    object from an
+    <a href="http://en.wikipedia.org/wiki/ISO_8601">
+     ISO 8601
+    </a>
+    time. For example, using the UTC time from the Python example above we create a moment object like this:
+   </p>
+   <pre><code>moment("2012-12-31T23:55:13Z")
+</code></pre>
+   <p>
+    Once the object is constructed it can be rendered to a string in a large variety of formats. For example, a very verbose rendering according to the system locale would be done as follows:
+   </p>
+   <pre><code>moment("2012-12-31T23:55:13Z").format('LLLL');
+</code></pre>
+   <p>
+    Below is how your system renders the above date:
+   </p>
+   <p>
+    <em>
+     <script>
+      document.write(moment("2012-12-31T23:55:13Z").format('LLLL'));
+     </script>
+    </em>
+   </p>
+   <p>
+    Here are some more examples of this same timestamp rendered in different formats:
+   </p>
+   <table class="data">
+    <tr>
+     <th>
+      Format
+     </th>
+     <th>
+      Result
+     </th>
+    </tr>
+    <tr>
+     <td>
+      L
+     </td>
+     <td>
+      <em>
+       <script>
+        document.write(moment("2012-12-31T23:55:13Z").format('L'));
+       </script>
+      </em>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LL
+     </td>
+     <td>
+      <em>
+       <script>
+        document.write(moment("2012-12-31T23:55:13Z").format('LL'));
+       </script>
+      </em>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LLL
+     </td>
+     <td>
+      <em>
+       <script>
+        document.write(moment("2012-12-31T23:55:13Z").format('LLL'));
+       </script>
+      </em>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      LLLL
+     </td>
+     <td>
+      <em>
+       <script>
+        document.write(moment("2012-12-31T23:55:13Z").format('LLLL'));
+       </script>
+      </em>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      dddd
+     </td>
+     <td>
+      <em>
+       <script>
+        document.write(moment("2012-12-31T23:55:13Z").format('dddd'));
+       </script>
+      </em>
+     </td>
+    </tr>
+   </table>
+   <p>
+    The library support for rendering options does not end there. In addition to
+    <code>
+     format()
+    </code>
+    it offers
+    <code>
+     fromNow()
+    </code>
+    and
+    <code>
+     calendar()
+    </code>
+    , with much more friendly renderings of timestamps:
+   </p>
+   <table class="data">
+    <tr>
+     <th>
+      Format
+     </th>
+     <th>
+      Result
+     </th>
+    </tr>
+    <tr>
+     <td>
+      fromNow()
+     </td>
+     <td>
+      <em>
+       <script>
+        document.write(moment("2012-12-31T23:55:13Z").fromNow());
+       </script>
+      </em>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      calendar()
+     </td>
+     <td>
+      <em>
+       <script>
+        document.write(moment("2012-12-31T23:55:13Z").calendar());
+       </script>
+      </em>
+     </td>
+    </tr>
+   </table>
+   <p>
+    Note that in all the examples above the server is rendering the same UTC time, the different renderings were executed by your own web browser.
+   </p>
+   <p>
+    The last bit of Javascript magic that we are missing is the code that actually makes the string returned by
+    <code>
+     moment
+    </code>
+    visible in the page. The simplest way to accomplish this is with Javascript's
+    <code>
+     document.write
+    </code>
+    function, as follows:
+   </p>
+   <pre><code>&lt;script&gt;
+document.write(moment("2012-12-31T23:55:13Z").format('LLLL'));
+&lt;/script&gt;
+</code></pre>
+   <p>
+    While using
+    <code>
+     document.write
+    </code>
+    is extremely simple and straightforward as a way to generate portions of an HTML document via javascript, it should be noted that this approach has some limitations. The most important one to note is that
+    <code>
+     document.write
+    </code>
+    can only be used while a document is loading, it cannot be used to modify the document once it has completed loading. As a result of this limitation this solution would not work when loading data via
+    <a href="http://en.wikipedia.org/wiki/Ajax_(programming)">
+     Ajax
+    </a>
+    .
+   </p>
+   <h2>
+    Integrating
+    <code>
+     moment.js
+    </code>
+   </h2>
+   <p>
+    There are a few things we need to do to be able to use
+    <code>
+     moment.js
+    </code>
+    in our microblog application.
+   </p>
+   <p>
+    First, we place the downloaded library
+    <code>
+     moment.min.js
+    </code>
+    in the
+    <code>
+     /app/static/js
+    </code>
+    folder, so that it can be served to clients as a static file.
+   </p>
+   <p>
+    Next we add the reference to this library in our base template (file
+    <code>
+     app/templates/base.html
+    </code>
+    ):
+   </p>
+   <pre><code>&lt;script src="/static/js/moment.min.js"&gt;&lt;/script&gt;
+</code></pre>
+   <p>
+    We can now add
+    <code>
+     &lt;script&gt;
+    </code>
+    tags in the templates that show timestamps and we would be done. But instead of doing it that way, we are going to create a wrapper for
+    <code>
+     moment.js
+    </code>
+    that we can invoke from the templates. This is going to save us time in the future if we need to change our timestamp rendering code, because we will have it just in one place.
+   </p>
+   <p>
+    Our wrapper will be a very simple Python class (file
+    <code>
+     app/momentjs.py
+    </code>
+    ):
+   </p>
+   <pre><code>from jinja2 import Markup
+
+class momentjs(object):
+    def __init__(self, timestamp):
+        self.timestamp = timestamp
+
+    def render(self, format):
+        return Markup("&lt;script&gt;\ndocument.write(moment(\"%s\").%s);\n&lt;/script&gt;" % (self.timestamp.strftime("%Y-%m-%dT%H:%M:%S Z"), format))
+
+    def format(self, fmt):
+        return self.render("format(\"%s\")" % fmt)
+
+    def calendar(self):
+        return self.render("calendar()")
+
+    def fromNow(self):
+        return self.render("fromNow()")
+</code></pre>
+   <p>
+    Note that the
+    <code>
+     render
+    </code>
+    method does not directly return a string but instead wraps the string inside a
+    <code>
+     Markup
+    </code>
+    object provided by Jinja2, our template engine. The reason is that Jinja2 escapes all strings by default, so for example, our
+    <code>
+     &lt;script&gt;
+    </code>
+    tag will not arrive as such to the client but as
+    <code>
+     &amp;lt;script&amp;gt;
+    </code>
+    . Wrapping the string in a
+    <code>
+     Markup
+    </code>
+    object tells Jinja2 that this string should not be escaped.
+   </p>
+   <p>
+    So now that we have a wrapper we need to hook it up with Jinja2 so that our templates can call it (file
+    <code>
+     app/__init__.py
+    </code>
+    ):
+   </p>
+   <pre><code>from .momentjs import momentjs
+app.jinja_env.globals['momentjs'] = momentjs
+</code></pre>
+   <p>
+    This just tells Jinja2 to expose our class as a global variable to all templates.
+   </p>
+   <p>
+    Now we are ready to modify our templates. we have two places in our application where we display dates and times. One is in the user profile page, where we show the "last seen" time. For this timestamp we will use the
+    <code>
+     calendar()
+    </code>
+    formatting (file
+    <code>
+     app/templates/user.html
+    </code>
+    ):
+   </p>
+   <pre><code>{% if user.last_seen %}
+&lt;p&gt;&lt;em&gt;Last seen: {{ momentjs(user.last_seen).calendar() }}&lt;/em&gt;&lt;/p&gt;
+{% endif %}
+</code></pre>
+   <p>
+    The second place is in the post sub-template, which is invoked from the index, user and search pages. In posts we will use the
+    <code>
+     fromNow()
+    </code>
+    formatting, because the exact time of a post isn't as important as how long ago it was made. Since we abstracted the rendering of a post into the sub-template we now need to make this change in just one place to affect all the pages that render posts (file
+    <code>
+     app/templates/post.html
+    </code>
+    ):
+   </p>
+   <pre><code>&lt;p&gt;&lt;a href="{{ url_for('user', nickname=post.author.nickname)}}"&gt;{{ post.author.nickname }}&lt;/a&gt; said {{ momentjs(post.timestamp).fromNow() }}:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;{{ post.body }}&lt;/strong&gt;&lt;/p&gt;
+</code></pre>
+   <p>
+    And with these simple template changes we have solved all our timestamps issues. We didn't need to make a single change to our server code!
+   </p>
+   <h2>
+    Final words
+   </h2>
+   <p>
+    Without even noticing it, today we've made an important step towards making
+    <code>
+     microblog
+    </code>
+    accessible to international users with the change to render dates and times according to the client configured locale.
+   </p>
+   <p>
+    In the next installment of this series we are going to make our international users even happier, as we will enable
+    <code>
+     microblog
+    </code>
+    to render in multiple languages.
+   </p>
+   <p>
+    In the meantime, here is the download link for the application with the new moment.js integration:
+   </p>
+   <p>
+    Download
+    <a href="https://github.com/miguelgrinberg/microblog/archive/version-0.13.zip">
+     microblog-0.13.zip
+    </a>
+    .
+   </p>
+   <p>
+    Or if you prefer, you can find the code on github
+    <a href="https://github.com/miguelgrinberg/microblog/tree/version-0.13">
+     here
+    </a>
+    .
+   </p>
+   <p>
+    Thank you for following my tutorials, I hope to see you in the next one.
+   </p>
+   <p>
+    Miguel
+   </p>
+  </div>
+  <div class="social-bar">
+   <table>
+    <tr>
+     <td>
+      <div class="social-box" style="padding-top: 8px;">
+       <a class="twitter-share-button" data-count="vertical" data-url="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-dates-and-times" data-via="miguelgrinberg" href="https://twitter.com/share">
+        Tweet
+       </a>
+      </div>
+     </td>
+     <td>
+      <div class="social-box" style="padding-left: 6px;">
+       <div class="fb-like" data-font="verdana" data-href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-dates-and-times" data-layout="box_count" data-send="false" data-show-faces="false" data-width="450">
+       </div>
+      </div>
+     </td>
+     <td>
+      <div class="social-box" style="padding-top: 8px;">
+       <g:plusone href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-dates-and-times" size="tall">
+       </g:plusone>
+      </div>
+     </td>
+     <td>
+      <div class="social-box" style="padding-top: 8px;">
+       <script data-counter="top" data-url="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-dates-and-times" type="IN/Share">
+       </script>
+      </div>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <h4 style="text-align: right">
+   <a name="comments">
+   </a>
+   60 comments
+  </h4>
+  <div class="comment">
+   <ul>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/d9dbd0d79255e58265b5f7597e15eb9a?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #1
+       </span>
+       <span class="label label-primary">
+        <a href="http://www.plusastra.com">
+         Denis Fuenzalida
+        </a>
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-01-06T21:17:24Z">
+        2013-01-06T21:17:24Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Thanks Miguel for this awesome series. I've learned about your tutorials last week and I've followed them all. Thanks for the effort you've put on them.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/08ecb22aacd2915b826213e208c8ad19?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #2
+       </span>
+       <span class="label label-primary">
+        Luis Villamarin
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-01-15T18:46:15Z">
+        2013-01-15T18:46:15Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Miguel, Thanks for this great tutorial. It is certainly the best tutorial for flask I have seen. Thanks for taking the time to make so detail and complete. One last question, do you have any experience or suggestion on how to use flask and Google App Engine? I have tried different resources online but all of them are always missing something and I can't  get it running to test my newly learned flask skills. Thanks in advance!
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #3
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-01-16T06:46:38Z">
+        2013-01-16T06:46:38Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Luis: thanks. I haven't tried this myself, but think the tricky part is to adapt the database to the Google Datastore which is not SQL based so SQLAlchemy cannot be used. Another possibility is to use the Google Cloud SQL service for the database, which is currently free but will be paid after June 2013. This service is compatible with SQLAlchemy via the mysql+gaerdbms:// dialect. Good luck.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/5b3a0431e591da5d11a279cae810e99d?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #4
+       </span>
+       <span class="label label-primary">
+        Anders Vännman
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-01-19T15:21:46Z">
+        2013-01-19T15:21:46Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Wounderful tutorial! Ive found it yesterday, and have started to do each in order. As an old developer in the pre-web-era I have lot of catch up to do. This is a great tutorial to see how the different frameworks fit together. In the old days we had just a few libraries :) tnx
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/67d2fcaad137a017987d7f6f39261dde?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #5
+       </span>
+       <span class="label label-primary">
+        Martha Morrigan
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-01-21T15:34:52Z">
+        2013-01-21T15:34:52Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Awesome tutorial.
+Can you post how to add tags at this microblog?
+Best wishes
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #6
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-01-22T01:58:23Z">
+        2013-01-22T01:58:23Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Martha: I may do #hashtags in a future article, but it isn't really that complicated. You need a hashtag table, and then a many-to-many relationship between hashtags and posts. The relationship is populated from scanning posts for #&lt;tag&gt;.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/ac91e951c9a08f0209028162d5809b2a?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #7
+       </span>
+       <span class="label label-primary">
+        <a href="http://www.se77en.cc">
+         Echo Zhao
+        </a>
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-01-22T05:26:27Z">
+        2013-01-22T05:26:27Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Thanks Miguel for this incomparable series.I've learned about this tutorials and I translate some to Chinese in http://www.oschina.net/translate/the-flask-mega-tutorial-part-xiii-dates-and-times .Hope        this series can keep on.Thanks!
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/ac91e951c9a08f0209028162d5809b2a?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #8
+       </span>
+       <span class="label label-primary">
+        <a href="http://www.se77en.cc">
+         Echo Zhao
+        </a>
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-01-29T08:00:03Z">
+        2013-01-29T08:00:03Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Dear Miguel,I hope later article can teach us the Comet feature.Thanks
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/6e5f833944a27be2f84427a88e299c0c?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #9
+       </span>
+       <span class="label label-primary">
+        Tian Siyuan
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-02-06T14:19:09Z">
+        2013-02-06T14:19:09Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        A minor error around:
+
+    def __init__(self, timestamp):
+    self.timestamp = timestamp
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #10
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-02-07T01:18:31Z">
+        2013-02-07T01:18:31Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Tian: I corrected the indentation on that code. Thanks!
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/aaa93110175ae00dba850e9f66a2c8ff?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #11
+       </span>
+       <span class="label label-primary">
+        Souvik
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-05-22T05:06:14Z">
+        2013-05-22T05:06:14Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Hi Miguel, I am getting a "class momentjs has no attribute '__call__' " error. Just to make sure I did not miss something I even tried to use your code base. Any suggestions on where I could be going wrong.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #12
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-05-22T05:14:36Z">
+        2013-05-22T05:14:36Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Souvik: did you set the Jinja2 globals to include momentjs? The error means that the momentjs variable isn't a callable object.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/1b15e0cbf2b061ebc63530f07c7cf185?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #13
+       </span>
+       <span class="label label-primary">
+        <a href="www.backpackpractice.com">
+         Joe Wagner
+        </a>
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-05-28T15:44:04Z">
+        2013-05-28T15:44:04Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Miguel, thanks much for the tutorial.  I am getting the same error at Souvik.  Is it possible that Jinja or Moment has changed something resulting in the error.  Thanks again, Joe
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #14
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-05-28T20:51:36Z">
+        2013-05-28T20:51:36Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Joe: can you show me the stack trace of the error?
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/455cc8a4a04e432be649617596a01500?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #15
+       </span>
+       <span class="label label-primary">
+        Kumar Arcot
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-05-28T21:45:22Z">
+        2013-05-28T21:45:22Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Miguel,
+
+I get the same error too. I am running it under windows with venv. The stacktrace is as follows:
+
+AttributeError
+
+AttributeError: class momentjs has no attribute '__call__'
+Traceback (most recent call last)
+
+    File "G:\home\microblog\venv\lib\site-packages\flask\app.py", line 1701, in __call__
+
+    return self.wsgi_app(environ, start_response)
+
+    File "G:\home\microblog\venv\lib\site-packages\flask\app.py", line 1689, in wsgi_app
+
+    response = self.make_response(self.handle_exception(e))
+
+    File "G:\home\microblog\venv\lib\site-packages\flask\app.py", line 1687, in wsgi_app
+
+    response = self.full_dispatch_request()
+
+    File "G:\home\microblog\venv\lib\site-packages\flask\app.py", line 1360, in full_dispatch_request
+
+    rv = self.handle_user_exception(e)
+
+    File "G:\home\microblog\venv\lib\site-packages\flask\app.py", line 1358, in full_dispatch_request
+
+    rv = self.dispatch_request()
+
+    File "G:\home\microblog\venv\lib\site-packages\flask\app.py", line 1344, in dispatch_request
+
+    return self.view_functions[rule.endpoint](**req.view_args)
+
+    File "G:\home\microblog\venv\lib\site-packages\flask_login.py", line 496, in decorated_view
+
+    return fn(*args, **kwargs)
+
+    File "G:\home\microblog\app\views.py", line 71, in index
+
+    posts = posts)
+
+    File "G:\home\microblog\venv\lib\site-packages\flask\templating.py", line 125, in render_template
+
+    context, ctx.app)
+
+    File "G:\home\microblog\venv\lib\site-packages\flask\templating.py", line 107, in _render
+
+    rv = template.render(context)
+
+    File "G:\home\microblog\venv\lib\site-packages\jinja2\environment.py", line 970, in render
+
+    return self.environment.handle_exception(exc_info, True)
+
+    File "G:\home\microblog\venv\lib\site-packages\jinja2\environment.py", line 743, in handle_exception
+
+    reraise(exc_type, exc_value, tb)
+
+    File "G:\home\microblog\app\templates\index.html", line 2, in top-level template code
+
+    {% extends "base.html" %}
+
+    File "G:\home\microblog\app\templates\base.html", line 64, in top-level template code
+
+    {% block content %}{% endblock %}
+
+    File "G:\home\microblog\app\templates\index.html", line 27, in block "content"
+
+    {% include 'post.html' %}
+
+    File "G:\home\microblog\app\templates\post.html", line 6, in top-level template code
+
+    &lt;p&gt;{{ _('%(nickname)s said %(when)s:', nickname = '&lt;a href="%s"&gt;%s&lt;/a&gt;' % (url_for('user', nickname = post.author.nickname), post.author.nickname), when = momentjs(post.timestamp).fromNow()) }}&lt;/p&gt;
+
+    AttributeError: class momentjs has no attribute '__call__'
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/455cc8a4a04e432be649617596a01500?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #16
+       </span>
+       <span class="label label-primary">
+        Kumar Arcot
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-05-28T22:20:52Z">
+        2013-05-28T22:20:52Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Forgot to add that I didn't change anything in the code including the setting of the jinja2 globals:
+
+THINK /g/home/microblog (master)
+$ git status
+# On branch master
+# Untracked files:
+#   (use "git add &lt;file&gt;..." to include in what will be committed)
+#
+#       venv/
+nothing added to commit but untracked files present (use "git add" to track)
+
+$ git diff !$
+git diff app/__init__.py
+THINK /g/home/microblog (master)
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/eb7aeee96bb0c65c257190e0ae0799de?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #17
+       </span>
+       <span class="label label-primary">
+        <a href="http://bkuberek.com">
+         Bastian
+        </a>
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-05-29T01:39:51Z">
+        2013-05-29T01:39:51Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        First of all thanks for the great tutorial. Really helped me. I spotted a small error with momentjs class, you can't call it momentjs() for it is not a callable. It can be fixed by adding:
+
+    def __call__(self, *args):
+        return self.format(*args)
+
+cheers
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #18
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-05-29T04:12:08Z">
+        2013-05-29T04:12:08Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Bastian: you are not correct. The "momentjs" item is a class, when you call it you are constructing a new object. This works fine for me:
+
+$ flask/bin/python
+Python 2.7.3 (default, Dec 18 2012, 13:50:09)
+[GCC 4.5.3] on cygwin
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; from app import momentjs
+&gt;&gt;&gt; from datetime import datetime
+&gt;&gt;&gt; m = momentjs(datetime.now())
+&gt;&gt;&gt; print m.fromNow()
+&lt;script&gt;
+document.write(moment("2013-05-28T21:09:42 Z").fromNow());
+&lt;/script&gt;
+&gt;&gt;&gt;
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #19
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-05-29T04:29:43Z">
+        2013-05-29T04:29:43Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Kumar: try the test in the comment above. If that works, then you may want to expose the expression "type(momentjs)" somewhere in the template, to see what you get there. Using Python 2.7.3 I get the expected type, which is "classobj".
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/455cc8a4a04e432be649617596a01500?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #20
+       </span>
+       <span class="label label-primary">
+        Kumar Arcot
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-05-29T17:55:02Z">
+        2013-05-29T17:55:02Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        I get the same result as your test from the command line. As I am new to python, and I tried many ways to expose the type(momentjs) expression and keep getting;
+
+jinja2.exceptions.UndefinedError
+UndefinedError: 'type' is undefined
+
+&lt;p&gt;{{ _('%(typemj)s said ', typemj = '&lt;a href="%s"&gt;%s&lt;/a&gt;' % (type(momentjs)))}}
+
+I am on Python 2.66. Will upgrade to 2.7.X be the quick fix?
+
+Thanks
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/455cc8a4a04e432be649617596a01500?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #21
+       </span>
+       <span class="label label-primary">
+        Kumar Arcot
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-05-29T17:59:01Z">
+        2013-05-29T17:59:01Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Miguel: It may not be correct but @Bastian's suggestion works!
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/3123804804b4b24e54bb35277a374a1a?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #22
+       </span>
+       <span class="label label-primary">
+        bobwal
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-05-30T15:07:52Z">
+        2013-05-30T15:07:52Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Hi @Miguel, I've been getting the same error too. @Bastian's suggestion also worked for me.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #23
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-05-30T16:12:58Z">
+        2013-05-30T16:12:58Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Kumar &amp; @bobwal: There is clearly something I'm missing in my environment. I tested Python 2.7.x and 2.6.x with this and in both cases things work fine for me. Glad you are back on track, when I figure this out I'll report back with my findings.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/7c41735e38f05b3448c52dc05e9eeabb?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #24
+       </span>
+       <span class="label label-primary">
+        Vincent Chen
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-05-31T23:21:36Z">
+        2013-05-31T23:21:36Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Hi Miguel, thanks for you tutorial! This really helps me a lot as a quick start to web development, since I was doing desktop application development before and web is so different. 
+The problem for me is I've followed all the steps from lesson 1 and all of your code works find so far. But when trying to run the code from this article it always get an error of 'AttributeError: class momentjs has no attribute '__call__'. Don't know what happened and I've spend one hour on this and still can't figure it out. Any suggestions? BTW I'm using python 2.7
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #25
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-05-31T23:31:36Z">
+        2013-05-31T23:31:36Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Vincent: See the comments above yours for a possible workaround to this problem. I haven't determined exactly what the problem is, but will update the article once I do. Thanks!
+       </p>
+      </div>
+     </div>
+    </li>
+   </ul>
+  </div>
+  <div class="page">
+   <ul class="pager">
+    <li class="previous disabled">
+     <a href="#">
+      ««
+     </a>
+    </li>
+    <li class="previous disabled">
+     <a href="#">
+      «
+     </a>
+    </li>
+    <li class="next">
+     <a href="/post/the-flask-mega-tutorial-part-xiii-dates-and-times/page/0#comments">
+      »»
+     </a>
+    </li>
+    <li class="next">
+     <a href="/post/the-flask-mega-tutorial-part-xiii-dates-and-times/page/2#comments">
+      »
+     </a>
+    </li>
+   </ul>
+  </div>
+  <h3>
+   <a name="commentform">
+   </a>
+   Leave a Comment
+  </h3>
+  <form action="#commentform" class="form" method="post" role="form">
+   <div style="display:none;">
+    <input id="csrf_token" name="csrf_token" type="hidden" value="1452908240.8##b0a28770a698ac56144d013150c2a0f42cbb502a"/>
+   </div>
+   <div class="form-group ">
+    <label class="control-label" for="name">
+     Name
+    </label>
+    <input class="form-control" id="name" name="name" required="" type="text" value=""/>
+   </div>
+   <div class="form-group ">
+    <label class="control-label" for="url">
+     URL
+    </label>
+    <input class="form-control" id="url" name="url" type="text" value=""/>
+   </div>
+   <div class="form-group ">
+    <label class="control-label" for="email">
+     Email
+    </label>
+    <input class="form-control" id="email" name="email" required="" type="text" value=""/>
+   </div>
+   <div class="form-group ">
+    <label class="control-label" for="comment">
+     Comment
+    </label>
+    <textarea class="form-control" id="comment" name="comment" required="">
+    </textarea>
+   </div>
+   <div class="form-group ">
+    <label class="control-label" for="captcha">
+     Captcha
+    </label>
+    <script type="text/javascript">
+     var RecaptchaOptions = {"custom_translations": {"audio_challenge": "Get an audio challenge", "cant_hear_this": "Download sound as MP3", "help_btn": "Help", "image_alt_text": "reCAPTCHA challenge image", "incorrect_try_again": "Incorrect. Try again.", "instructions_audio": "Type what you hear", "instructions_visual": "Type the text", "play_again": "Play sound again", "privacy_and_terms": "Privacy & Terms", "refresh_btn": "Get a new challenge", "visual_challenge": "Get a visual challenge"}, "theme": "white"};
+    </script>
+    <script src="//www.google.com/recaptcha/api/challenge?k=6Ld5Zs4SAAAAAOY0DOi4r18bgHlEaz41qAoRf__S" type="text/javascript">
+    </script>
+    <noscript>
+     <iframe frameborder="0" height="300" src="//www.google.com/recaptcha/api/noscript?k=6Ld5Zs4SAAAAAOY0DOi4r18bgHlEaz41qAoRf__S" width="500">
+     </iframe>
+     <br/>
+     <textarea cols="40" name="recaptcha_challenge_field" rows="3">
+     </textarea>
+     <input name="recaptcha_response_field" type="hidden" value="manual_challenge"/>
+    </noscript>
+   </div>
+   <input class="btn btn-default" id="submit" name="submit" type="submit" value="Submit"/>
+  </form>
+ </div>
+</div>
+
+    </html>
+    

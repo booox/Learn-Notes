@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>hide demo</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<p id="hello">Hello</p>
+<a id="clickme" href="#">Click to hide me too</a>
+<p id="p2">Here is another paragraph</p>
+ 
+ <h3 id="Random" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" aria-controls="ui-accordion-18-panel-1" aria-selected="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><a href="#"><span class="accheadtitle">Random Module</span></a></h3>
+ <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-18-panel-1" aria-labelledby="Random" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+	    <dl class="topitems">
+              <dt>Operations:</dt><dd><ul class="horiz-list"><li><a href="#" class="internal" data-dest="random-choice"><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">choice</span></code></a></li><li><a href="#" class="internal" data-dest="random-random-int"><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">randint</span></code></a></li><li><a href="#" class="internal" data-dest="random-random-int"><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">randrange</span></code></a></li><li><a href="#" class="internal" data-dest="random-random"><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">random</span></code></a></li><li><a href="#" class="internal" data-dest="random-shuffle"><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">shuffle</span></code></a></li><li><a href="#" class="internal" data-dest="random-seed"><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">seed</span></code></a></li></ul></dd><dt>Example:</dt><dd><ul class="horiz-list"><li><a href="http://www.codeskulptor.org/#examples-more-1b_more_operations-random_module.py" target="_blank">Random Module</a></li></ul></dd>            </dl>
+      
+            <p>
+              This module contains functions that involve randomness.
+              To use these operations, first import the module with
+              <code class="cm-s-default"><span class="cm-keyword">import</span> <span class="cm-variable">random</span></code>.
+            </p>
+			  
+            <div class="accordion ui-accordion ui-widget ui-helper-reset" role="tablist">
+              <h3 id="random-choice" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" aria-controls="ui-accordion-20-panel-0" aria-selected="false" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><a href="#"><span class="accheadtitle">Random Element of Sequence</span><span class="accheadcode"><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">choice</span>()</code></span></a></h3>              <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-20-panel-0" aria-labelledby="random-choice" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                <dl class="topitems">
+                  <dt>Syntax:</dt><dd><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">choice</span>(<span class="cm-variable">a_seq</span>)</code></dd><dt>Example:</dt><dd><table class="ex"><thead><tr><th>Code</th><th>Output</th></tr></thead><tbody><tr><td><pre class="cm cm-s-default"><span class="cm-keyword">import</span> <span class="cm-variable">random</span>
+
+<span class="cm-keyword">print</span> <span class="cm-variable">random</span>.<span class="cm-variable">choice</span>([<span class="cm-number">1</span>, <span class="cm-number">2</span>, <span class="cm-number">3</span>, <span class="cm-number">4</span>, <span class="cm-number">5</span>, <span class="cm-number">6</span>])</pre></td><td><pre># Results in one of the sequence's elements</pre></td></tr></tbody></table></dd>		</dl>
+
+                <p>
+                  Returns a random element from the non-empty sequence
+                  <code class="cm-s-default"><span class="cm-variable">a_seq</span></code>.  If <code class="cm-s-default"><span class="cm-variable">a_seq</span></code> is empty,
+                  raises an <code class="cm-s-default"><span class="cm-variable">IndexError</span></code>.
+                </p>
+              </div>
+
+              <h3 id="random-random-int" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" aria-controls="ui-accordion-20-panel-1" aria-selected="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><a href="#"><span class="accheadtitle">Random Integer</span><span class="accheadcode"><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">randint</span>()</code>,
+                             <code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">randrange</span>()</code></span></a></h3>              <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-20-panel-1" aria-labelledby="random-random-int" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                <dl class="topitems">
+                  <dt>Syntax:</dt><dd><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">randint</span>(<span class="cm-variable">start</span>, <span class="cm-variable">stop</span>)</code></dd><dd><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">randrange</span>(<span class="cm-variable">stop</span>)</code></dd><dd><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">randrange</span>(<span class="cm-variable">start</span>, <span class="cm-variable">stop</span>)</code></dd><dd><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">randrange</span>(<span class="cm-variable">start</span>, <span class="cm-variable">stop</span>, <span class="cm-variable">step</span>)</code></dd><dt>Examples:</dt><dd><table class="ex"><thead><tr><th>Code</th><th>Output</th></tr></thead><tbody><tr><td><pre class="cm cm-s-default"><span class="cm-keyword">import</span> <span class="cm-variable">random</span>
+
+<span class="cm-keyword">print</span> <span class="cm-variable">random</span>.<span class="cm-variable">randint</span>(<span class="cm-number">0</span>, <span class="cm-number">10</span>)</pre></td><td><pre># Possible results are 0, 1, 2, …, 10</pre></td></tr><tr><td><pre class="cm cm-s-default"><span class="cm-keyword">import</span> <span class="cm-variable">random</span>
+
+<span class="cm-keyword">print</span> <span class="cm-variable">random</span>.<span class="cm-variable">randrange</span>(<span class="cm-number">0</span>, <span class="cm-number">10</span>)</pre></td><td><pre># Possible results are 0, 1, 2, …, 9</pre></td></tr><tr><td><pre class="cm cm-s-default"><span class="cm-keyword">import</span> <span class="cm-variable">random</span>
+
+<span class="cm-keyword">print</span> <span class="cm-variable">random</span>.<span class="cm-variable">randrange</span>(<span class="cm-number">0</span>, <span class="cm-number">10</span>, <span class="cm-number">2</span>)</pre></td><td><pre># Possible results are 0, 2, 4, 6, 8</pre></td></tr></tbody></table></dd><dt>See also:</dt><dd><a href="#" class="internal" data-dest="random-choice"><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">choice</span>()</code></a> — Related to <code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">randrange</span>()</code></dd><dd><a href="#" class="internal" data-dest="range"><code class="cm-s-default"><span class="cm-builtin">range</span>()</code></a> — Related to <code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">randrange</span>()</code></dd>		</dl>
+
+                <p>
+                  <code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">randint</span>(<span class="cm-variable">start</span>, <span class="cm-variable">stop</span>)</code>
+                  returns a random integer <var>n</var> such that
+                  <code class="cm-s-default"><span class="cm-variable">start</span> <span class="cm-operator">&lt;=</span></code> <var>n</var> <code class="cm-s-default"><span class="cm-operator">&lt;=</span> <span class="cm-variable">stop</span></code>.
+                </p>
+
+                <p>
+                  <code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">randrange</span>(<span class="cm-variable">start</span>, <span class="cm-variable">stop</span>, <span class="cm-variable">step</span>)</code>
+                  is equivalent to
+                  <code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">choice</span>(<span class="cm-builtin">range</span>(<span class="cm-variable">start</span>, <span class="cm-variable">stop</span>, <span class="cm-variable">step</span>))</code>.
+                  In particular, <code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">randrange</span>(<span class="cm-variable">start</span>, <span class="cm-variable">stop</span>)</code>
+                  returns a random integer <var>n</var> such that
+                  <code class="cm-s-default"><span class="cm-variable">start</span> <span class="cm-operator">&lt;=</span></code> <var>n</var> <code class="cm-s-default"><span class="cm-operator">&lt;</span> <span class="cm-variable">stop</span></code>.
+                  Each possible <var>n</var> is of the form
+                  <code class="cm-s-default"><span class="cm-variable">start</span></code> + <var>i</var>×<code class="cm-s-default"><span class="cm-variable">step</span></code>,
+                  for some integral <var>i</var>.
+                </p>
+
+                <p>
+                  For each function, each possible number is equally likely,
+                  i.e., the possible numbers are distributed uniformly.
+                </p>
+              </div>
+
+              <h3 id="random-random" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" aria-controls="ui-accordion-20-panel-2" aria-selected="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><a href="#"><span class="accheadtitle">Random Floating-Point Number</span><span class="accheadcode"><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">random</span>()</code></span></a></h3>              <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-20-panel-2" aria-labelledby="random-random" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                <dl class="topitems">
+                  <dt>Syntax:</dt><dd><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">random</span>()</code></dd><dt>Examples:</dt><dd><table class="ex"><thead><tr><th>Code</th><th>Output</th></tr></thead><tbody><tr><td><pre class="cm cm-s-default"><span class="cm-keyword">import</span> <span class="cm-variable">random</span>
+
+<span class="cm-keyword">print</span> <span class="cm-variable">random</span>.<span class="cm-variable">random</span>()</pre></td><td><pre># Possible results are 0.0 to 1.0, not including 1.0</pre></td></tr><tr><td><pre class="cm cm-s-default"><span class="cm-keyword">import</span> <span class="cm-variable">random</span>
+
+<span class="cm-variable">lower</span> = <span class="cm-number">5</span>
+<span class="cm-variable">upper</span> = <span class="cm-number">10</span>
+<span class="cm-variable">range_width</span> = <span class="cm-variable">upper</span> <span class="cm-operator">-</span> <span class="cm-variable">lower</span>
+<span class="cm-keyword">print</span> <span class="cm-variable">random</span>.<span class="cm-variable">random</span>() <span class="cm-operator">*</span> <span class="cm-variable">range_width</span> <span class="cm-operator">+</span> <span class="cm-variable">lower</span></pre></td><td><pre># Possible results are lower to upper, not including upper</pre></td></tr></tbody></table></dd>                </dl>
+
+                <p>
+                  Returns a random floating-point number
+                  greater or equal to 0 and less than 1.
+                  Each number is equally likely, i.e.,
+                  the possible numbers are distributed uniformly.
+                </p>
+
+                <p>
+                  A common usage is to generate a random floating-point
+                  number <var>n</var> in an arbitrary range:
+                  <code class="cm-s-default"><span class="cm-variable">lower</span> <span class="cm-operator">&lt;=</span></code> <var>n</var> <code class="cm-s-default"><span class="cm-operator">&lt;</span> <span class="cm-variable">upper</span></code>,
+                  as illustrated in the last example above.
+                </p>
+              </div>
+                
+              <h3 id="random-shuffle" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" aria-controls="ui-accordion-20-panel-3" aria-selected="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><a href="#"><span class="accheadtitle">Permute List</span><span class="accheadcode"><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">shuffle</span>()</code></span></a></h3>              <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-20-panel-3" aria-labelledby="random-shuffle" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                <dl class="topitems">
+                  <dt>Syntax:</dt><dd><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">shuffle</span>(<span class="cm-variable">a_list</span>)</code></dd><dt>Example:</dt><dd><table class="ex"><thead><tr><th>Code</th><th>Output</th></tr></thead><tbody><tr><td><pre class="cm cm-s-default"><span class="cm-keyword">import</span> <span class="cm-variable">random</span>
+
+<span class="cm-variable">numbers</span> = <span class="cm-builtin">range</span>(<span class="cm-number">5</span>)
+<span class="cm-variable">random</span>.<span class="cm-variable">shuffle</span>(<span class="cm-variable">numbers</span>)
+<span class="cm-keyword">print</span> <span class="cm-variable">numbers</span></pre></td><td><pre>[2, 4, 3, 1, 0]   # One possible result</pre></td></tr></tbody></table></dd>                </dl>
+						
+                <p>
+                  Mutates the list <code class="cm-s-default"><span class="cm-variable">a_list</span></code> to be a random
+                  permutation of its elements.
+                </p>
+              </div>
+
+              <h3 id="random-seed" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" aria-controls="ui-accordion-20-panel-4" aria-selected="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><a href="#"><span class="accheadtitle">Seed the Random Number Generator</span><span class="accheadcode"><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">seed</span>()</code></span></a></h3>              <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-20-panel-4" aria-labelledby="random-seed" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                <dl class="topitems">
+                  <dt>Syntax:</dt><dd><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">seed</span>()</code></dd><dd><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">seed</span>(<span class="cm-variable">x</span>)</code></dd><dt>Example:</dt><dd><table class="ex"><thead><tr><th>Code</th><th>Output</th></tr></thead><tbody><tr><td><pre class="cm cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">seed</span>()</pre></td><td><pre># no output</pre></td></tr></tbody></table></dd>		</dl>
+
+                <p>
+                  Changes the random number generator's <dfn>seed</dfn>,
+                  which is used to generate future random values.
+                  The hashable object <code class="cm-s-default"><span class="cm-variable">x</span></code>'s integer value is used
+                  as the seed.
+                  If <code class="cm-s-default"><span class="cm-variable">x</span></code> is omitted or
+                  <code class="cm-s-default"><span class="cm-builtin">None</span></code>, the current system time is used.
+                </p>
+
+                <p>
+                  The current system time is used as the initial seed
+                  when the module is first imported.
+                </p>   
+              </div>
+            
+              <h3 id="Random-unsupported" class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" aria-controls="ui-accordion-20-panel-5" aria-selected="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span><a href="#"><span class="accheadtitle">Unsupported Random Module Operations</span></a></h3>              <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-20-panel-5" aria-labelledby="Random-unsupported" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                <ul class="horiz-list"><li><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">shuffle</span>(<span class="cm-variable">x</span>, <span class="cm-variable">random</span>)</code></li><li><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">getstate</span>()</code></li><li><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">setstate</span>()</code></li><li><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">jumpahead</span>()</code></li><li><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">getrandbits</span>()</code></li><li><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">sample</span>()</code></li><li><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">uniform</span>()</code></li><li><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">triangular</span>()</code></li><li><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">betavariate</span>()</code></li><li><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">expovariate</span>()</code></li><li><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">gammavariate</span>()</code></li><li><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">gauss</span>()</code></li><li><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">lognormvariate</span>()</code></li><li><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">normalvariate</span>()</code></li><li><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">vonmisesvariate</span>()</code></li><li><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">paretovariate</span>()</code></li><li><code class="cm-s-default"><span class="cm-variable">random</span>.<span class="cm-variable">weibullvariate</span>()</code></li></ul>              </div>
+            </div>  <!-- Closes accordion in Random -->
+          </div>
+ 
+  <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-18-panel-2" aria-labelledby="Random" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+
+ 
+ 
+<script>
+$( "#hello" ).hide();
+$( "a#clickme" ).click(function( event ) {
+  $("#p2").toggle();
+});
+
+$( "div#ui-accordion-18-panel-1" ).hide();
+$( "div#ui-accordion-18-panel-2" ).show();
+$( "h3#Random" ).click(function( event ) {
+  $("div#ui-accordion-18-panel-1").toggle();
+});
+
+</script>
+ 
+</body>
+</html>

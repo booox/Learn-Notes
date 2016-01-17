@@ -12124,3 +12124,1977 @@ End#
 End#
 
 Enter a zhubo, album or sound url:
+Enter a zhubo, album or sound url:http://www.ximalaya.com/39200626/album/3385980/
+Album  doesn't in db: 39200626 /album/ 3385980
+http://www.ximalaya.com/39200626/album/3385980/
+	 Start getItemsOnPages _type=  albumSound From :  http://www.ximalaya.com/39200626/album/3385980/
+	 getItemsOnPages retrieve the first page, total: 1
+	 getItemsOnPages retrive the first page done.
+	 getItemsOnPages retrive multi pages start.
+	 getItemsOnPages retrive multi pages Done.
+
+	 getItemsOnPages Done : get  albumSound from 1 pages
+Write New Album start. 39200626 /album/ 3385980
+Write New Album Done. 39200626 /album/ 3385980
+Write Tracks of the Album Start.
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/11620188/
+	Track  doesn't in db: 39200626 /sound/ 11620188
+	Write New Track start. 39200626 /sound/ 11620188
+	Write New Track Done. 39200626 /sound/ 11620188
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/11620188/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/11501095/
+	Track  doesn't in db: 39200626 /sound/ 11501095
+	Write New Track start. 39200626 /sound/ 11501095
+	Write New Track Done. 39200626 /sound/ 11501095
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/11501095/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/11408062/
+	Track  doesn't in db: 39200626 /sound/ 11408062
+	Write New Track start. 39200626 /sound/ 11408062
+	Write New Track Done. 39200626 /sound/ 11408062
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/11408062/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/11354834/
+	Track  doesn't in db: 39200626 /sound/ 11354834
+	Write New Track start. 39200626 /sound/ 11354834
+	Write New Track Done. 39200626 /sound/ 11354834
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/11354834/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/11231936/
+	Track  doesn't in db: 39200626 /sound/ 11231936
+	Write New Track start. 39200626 /sound/ 11231936
+	Write New Track Done. 39200626 /sound/ 11231936
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/11231936/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/11180859/
+	Track  doesn't in db: 39200626 /sound/ 11180859
+	Write New Track start. 39200626 /sound/ 11180859
+	Write New Track Done. 39200626 /sound/ 11180859
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/11180859/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/11056862/
+	Track  doesn't in db: 39200626 /sound/ 11056862
+	Write New Track start. 39200626 /sound/ 11056862
+	Write New Track Done. 39200626 /sound/ 11056862
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/11056862/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/10963546/
+	Track  doesn't in db: 39200626 /sound/ 10963546
+	Write New Track start. 39200626 /sound/ 10963546
+	Write New Track Done. 39200626 /sound/ 10963546
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/10963546/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/10912507/
+	Track  doesn't in db: 39200626 /sound/ 10912507
+	Write New Track start. 39200626 /sound/ 10912507
+	Write New Track Done. 39200626 /sound/ 10912507
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/10912507/
+Write Tracks of the Album Done.
+
+	 this album has  9 tracks.
+
+	 this album has  -1 tracks doesn't download.
+Start download track...
+	【周末福利】和京都艺妓喝花酒——真假、价格、流程全攻略 http://audio.xmcdn.com/group16/M00/E7/17/wKgDalabCBmAq3CkACkhpHYPyJE760.m4a http://audio.xmcdn.com/group16/M06/E6/F3/wKgDbFabCB7xk-4cAGu-CG3Ypk8549.m4a 0
+track_title: <type 'unicode'> 【周末福利】和京都艺妓喝花酒——真假、价格、流程全攻略
+	E:\xmly\静说日本\【周末福利】和京都艺妓喝花酒——真假、价格、流程全攻略.m4a
+		 track_id: 615
+		{615: 1}
+	【第八期】日本IT之神，赢了官司输了人生 http://audio.xmcdn.com/group11/M04/EF/71/wKgDbVaV4R7hj4x1ACYNH8ROPuc909.m4a http://audio.xmcdn.com/group11/M04/EF/71/wKgDbVaV4SOztb3cAGOslJEJ6Sk230.m4a 0
+track_title: <type 'unicode'> 【第八期】日本IT之神，赢了官司输了人生
+	E:\xmly\静说日本\【第八期】日本IT之神，赢了官司输了人生.m4a
+		 track_id: 616
+		{616: 1, 615: 1}
+	【周末福利】爸爸要给我洗澡了——日本父女共浴文化揭秘 http://audio.xmcdn.com/group9/M00/E0/BB/wKgDZlaPhIGAKa4IAB-Sw48-0L8925.m4a http://audio.xmcdn.com/group9/M00/E0/BB/wKgDZlaPhIWSb2-lAFKzvaCnvT8255.m4a 0
+track_title: <type 'unicode'> 【周末福利】爸爸要给我洗澡了——日本父女共浴文化揭秘
+	E:\xmly\静说日本\【周末福利】爸爸要给我洗澡了——日本父女共浴文化揭秘.m4a
+		 track_id: 617
+		{616: 1, 617: 1, 615: 1}
+	【第六期】走进日本“纸牌屋”，听安倍如何和政敌周旋 http://audio.xmcdn.com/group15/M00/DD/D4/wKgDaFaMiPnSMlGXACuaqDRgLD4975.m4a http://audio.xmcdn.com/group15/M00/DD/D4/wKgDaFaMiP7BjmDGAHI48blHN0U523.m4a 0
+track_title: <type 'unicode'> 【第六期】走进日本“纸牌屋”，听安倍如何和政敌周旋
+	E:\xmly\静说日本\【第六期】走进日本“纸牌屋”，听安倍如何和政敌周旋.m4a
+		 track_id: 618
+		{616: 1, 617: 1, 618: 1, 615: 1}
+	【第五期】他们真的比我们传统吗？听听日本青年如何过新年 http://audio.xmcdn.com/group7/M08/DC/34/wKgDX1aGBX2DLsgQACUF3bP7EYY187.m4a http://audio.xmcdn.com/group7/M08/DC/29/wKgDWlaGBYKDthbCAGD5gzzUpLQ728.m4a 0
+track_title: <type 'unicode'> 【第五期】他们真的比我们传统吗？听听日本青年如何过新年
+	E:\xmly\静说日本\【第五期】他们真的比我们传统吗？听听日本青年如何过新年.m4a
+		 track_id: 619
+		{616: 1, 617: 1, 618: 1, 619: 1, 615: 1}
+	【第四期】政府补贴数百万元，日本女人为何还不愿生二孩 http://audio.xmcdn.com/group11/M08/E4/D3/wKgDbVaDTMHAx1LcACI9SOG39R8088.m4a http://audio.xmcdn.com/group11/M08/CB/D5/wKgDa1aDTMbQ-pxaAFmucI7ZFSE762.m4a 0
+track_title: <type 'unicode'> 【第四期】政府补贴数百万元，日本女人为何还不愿生二孩
+	E:\xmly\静说日本\【第四期】政府补贴数百万元，日本女人为何还不愿生二孩.m4a
+		 track_id: 620
+		{615: 1, 616: 1, 617: 1, 618: 1, 619: 1, 620: 1}
+	【第三期】色与不色之间：揭秘日本酒吧女几大“潜规则” http://audio.xmcdn.com/group16/M03/D4/E6/wKgDbFZ8s8rgrWiJACAFGh0jKSU032.m4a http://audio.xmcdn.com/group16/M07/D4/F7/wKgDalZ8s82CmYOMAFPe46hn064928.m4a 0
+track_title: <type 'unicode'> 【第三期】色与不色之间：揭秘日本酒吧女几大“潜规则”
+	E:\xmly\静说日本\【第三期】色与不色之间：揭秘日本酒吧女几大“潜规则”.m4a
+		 track_id: 621
+		{615: 1, 616: 1, 617: 1, 618: 1, 619: 1, 620: 1, 621: 1}
+	【第二期】日本军费破纪录，安倍的假想敌到底是谁？ http://audio.xmcdn.com/group7/M05/D2/AF/wKgDWlZ3uGXTqYkOACSB1HaxwfU438.m4a http://audio.xmcdn.com/group12/M0B/D1/3C/wKgDW1Z3uG2za16bAF-g6aGcd9U967.m4a 0
+track_title: <type 'unicode'> 【第二期】日本军费破纪录，安倍的假想敌到底是谁？
+	E:\xmly\静说日本\【第二期】日本军费破纪录，安倍的假想敌到底是谁？.m4a
+		 track_id: 622
+		{615: 1, 616: 1, 617: 1, 618: 1, 619: 1, 620: 1, 621: 1, 622: 1}
+	【第一期】安倍为何让日本如此不安？ http://audio.xmcdn.com/group10/M0B/CB/26/wKgDZ1Z1JXSwVqsaACf10kyimH4218.m4a http://audio.xmcdn.com/group13/M09/D0/1B/wKgDXVZ1JE3A5JCUAGitNiQXm7Y548.m4a 0
+track_title: <type 'unicode'> 【第一期】安倍为何让日本如此不安？
+	E:\xmly\静说日本\【第一期】安倍为何让日本如此不安？.m4a
+		 track_id: 623
+		{615: 1, 616: 1, 617: 1, 618: 1, 619: 1, 620: 1, 621: 1, 622: 1, 623: 1}
+
+
+ -------- Convert m4a to mp3 start   ----------- 
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+Enter a zhubo, album or sound url:
+Enter a zhubo, album or sound url:http://www.ximalaya.com/12495477/album/269179/
+Album  doesn't in db: 12495477 /album/ 269179
+http://www.ximalaya.com/12495477/album/269179/
+	 Start getItemsOnPages _type=  albumSound From :  http://www.ximalaya.com/12495477/album/269179/
+	 getItemsOnPages retrieve the first page, total: 1
+	 getItemsOnPages retrive the first page done.
+	 getItemsOnPages retrive multi pages start.
+	 getItemsOnPages retrive multi pages Done.
+
+	 getItemsOnPages Done : get  albumSound from 1 pages
+Write New Album start. 12495477 /album/ 269179
+Write New Album Done. 12495477 /album/ 269179
+Write Tracks of the Album Start.
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/11553448/
+	Track  doesn't in db: 12495477 /sound/ 11553448
+	Write New Track start. 12495477 /sound/ 11553448
+	Write New Track Done. 12495477 /sound/ 11553448
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/11553448/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/11127116/
+	Track  doesn't in db: 12495477 /sound/ 11127116
+	Write New Track start. 12495477 /sound/ 11127116
+	Write New Track Done. 12495477 /sound/ 11127116
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/11127116/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/11032461/
+	Track  doesn't in db: 12495477 /sound/ 11032461
+	Write New Track start. 12495477 /sound/ 11032461
+	Write New Track Done. 12495477 /sound/ 11032461
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/11032461/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/10810819/
+	Track  doesn't in db: 12495477 /sound/ 10810819
+	Write New Track start. 12495477 /sound/ 10810819
+	Write New Track Done. 12495477 /sound/ 10810819
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/10810819/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/10476708/
+	Track  doesn't in db: 12495477 /sound/ 10476708
+	Write New Track start. 12495477 /sound/ 10476708
+	Write New Track Done. 12495477 /sound/ 10476708
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/10476708/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/10290730/
+	Track  doesn't in db: 12495477 /sound/ 10290730
+	Write New Track start. 12495477 /sound/ 10290730
+	Write New Track Done. 12495477 /sound/ 10290730
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/10290730/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/10102620/
+	Track  doesn't in db: 12495477 /sound/ 10102620
+	Write New Track start. 12495477 /sound/ 10102620
+	Write New Track Done. 12495477 /sound/ 10102620
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/10102620/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/9951379/
+	Track  doesn't in db: 12495477 /sound/ 9951379
+	Write New Track start. 12495477 /sound/ 9951379
+	Write New Track Done. 12495477 /sound/ 9951379
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/9951379/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/9774254/
+	Track  doesn't in db: 12495477 /sound/ 9774254
+	Write New Track start. 12495477 /sound/ 9774254
+	Write New Track Done. 12495477 /sound/ 9774254
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/9774254/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/9562490/
+	Track  doesn't in db: 12495477 /sound/ 9562490
+	Write New Track start. 12495477 /sound/ 9562490
+	Write New Track Done. 12495477 /sound/ 9562490
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/9562490/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/9427338/
+	Track  doesn't in db: 12495477 /sound/ 9427338
+	Write New Track start. 12495477 /sound/ 9427338
+	Write New Track Done. 12495477 /sound/ 9427338
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/9427338/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/9139514/
+	Track  doesn't in db: 12495477 /sound/ 9139514
+	Write New Track start. 12495477 /sound/ 9139514
+	Write New Track Done. 12495477 /sound/ 9139514
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/9139514/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/9014117/
+	Track  doesn't in db: 12495477 /sound/ 9014117
+	Write New Track start. 12495477 /sound/ 9014117
+	Write New Track Done. 12495477 /sound/ 9014117
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/9014117/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/8919108/
+	Track  doesn't in db: 12495477 /sound/ 8919108
+	Write New Track start. 12495477 /sound/ 8919108
+	Write New Track Done. 12495477 /sound/ 8919108
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/8919108/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/8810251/
+	Track  doesn't in db: 12495477 /sound/ 8810251
+	Write New Track start. 12495477 /sound/ 8810251
+	Write New Track Done. 12495477 /sound/ 8810251
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/8810251/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/8691121/
+	Track  doesn't in db: 12495477 /sound/ 8691121
+	Write New Track start. 12495477 /sound/ 8691121
+	Write New Track Done. 12495477 /sound/ 8691121
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/8691121/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/8628624/
+	Track  doesn't in db: 12495477 /sound/ 8628624
+	Write New Track start. 12495477 /sound/ 8628624
+	Write New Track Done. 12495477 /sound/ 8628624
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/8628624/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/8460468/
+	Track  doesn't in db: 12495477 /sound/ 8460468
+	Write New Track start. 12495477 /sound/ 8460468
+	Write New Track Done. 12495477 /sound/ 8460468
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/8460468/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/8385115/
+	Track  doesn't in db: 12495477 /sound/ 8385115
+	Write New Track start. 12495477 /sound/ 8385115
+	Write New Track Done. 12495477 /sound/ 8385115
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/8385115/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/8244949/
+	Track  doesn't in db: 12495477 /sound/ 8244949
+	Write New Track start. 12495477 /sound/ 8244949
+	Write New Track Done. 12495477 /sound/ 8244949
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/8244949/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/8048428/
+	Track  doesn't in db: 12495477 /sound/ 8048428
+	Write New Track start. 12495477 /sound/ 8048428
+	Write New Track Done. 12495477 /sound/ 8048428
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/8048428/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/7933891/
+	Track  doesn't in db: 12495477 /sound/ 7933891
+	Write New Track start. 12495477 /sound/ 7933891
+	Write New Track Done. 12495477 /sound/ 7933891
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/7933891/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/7823052/
+	Track  doesn't in db: 12495477 /sound/ 7823052
+	Write New Track start. 12495477 /sound/ 7823052
+	Write New Track Done. 12495477 /sound/ 7823052
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/7823052/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/7711024/
+	Track  doesn't in db: 12495477 /sound/ 7711024
+	Write New Track start. 12495477 /sound/ 7711024
+	Write New Track Done. 12495477 /sound/ 7711024
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/7711024/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/7573500/
+	Track  doesn't in db: 12495477 /sound/ 7573500
+	Write New Track start. 12495477 /sound/ 7573500
+	Write New Track Done. 12495477 /sound/ 7573500
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/7573500/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/7465625/
+	Track  doesn't in db: 12495477 /sound/ 7465625
+	Write New Track start. 12495477 /sound/ 7465625
+	Write New Track Done. 12495477 /sound/ 7465625
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/7465625/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/7374840/
+	Track  doesn't in db: 12495477 /sound/ 7374840
+	Write New Track start. 12495477 /sound/ 7374840
+	Write New Track Done. 12495477 /sound/ 7374840
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/7374840/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/7268443/
+	Track  doesn't in db: 12495477 /sound/ 7268443
+	Write New Track start. 12495477 /sound/ 7268443
+	Write New Track Done. 12495477 /sound/ 7268443
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/7268443/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/7146116/
+	Track  doesn't in db: 12495477 /sound/ 7146116
+	Write New Track start. 12495477 /sound/ 7146116
+	Write New Track Done. 12495477 /sound/ 7146116
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/7146116/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/7025575/
+	Track  doesn't in db: 12495477 /sound/ 7025575
+	Write New Track start. 12495477 /sound/ 7025575
+	Write New Track Done. 12495477 /sound/ 7025575
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/7025575/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/6915329/
+	Track  doesn't in db: 12495477 /sound/ 6915329
+	Write New Track start. 12495477 /sound/ 6915329
+	Write New Track Done. 12495477 /sound/ 6915329
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/6915329/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/6831282/
+	Track  doesn't in db: 12495477 /sound/ 6831282
+	Write New Track start. 12495477 /sound/ 6831282
+	Write New Track Done. 12495477 /sound/ 6831282
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/6831282/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/6722393/
+	Track  doesn't in db: 12495477 /sound/ 6722393
+	Write New Track start. 12495477 /sound/ 6722393
+	Write New Track Done. 12495477 /sound/ 6722393
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/6722393/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/6611211/
+	Track  doesn't in db: 12495477 /sound/ 6611211
+	Write New Track start. 12495477 /sound/ 6611211
+	Write New Track Done. 12495477 /sound/ 6611211
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/6611211/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/6510483/
+	Track  doesn't in db: 12495477 /sound/ 6510483
+	Write New Track start. 12495477 /sound/ 6510483
+	Write New Track Done. 12495477 /sound/ 6510483
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/6510483/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/6336540/
+	Track  doesn't in db: 12495477 /sound/ 6336540
+	Write New Track start. 12495477 /sound/ 6336540
+	Write New Track Done. 12495477 /sound/ 6336540
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/6336540/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/6180663/
+	Track  doesn't in db: 12495477 /sound/ 6180663
+	Write New Track start. 12495477 /sound/ 6180663
+	Write New Track Done. 12495477 /sound/ 6180663
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/6180663/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/6081419/
+	Track  doesn't in db: 12495477 /sound/ 6081419
+	Write New Track start. 12495477 /sound/ 6081419
+	Write New Track Done. 12495477 /sound/ 6081419
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/6081419/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/5997298/
+	Track  doesn't in db: 12495477 /sound/ 5997298
+	Write New Track start. 12495477 /sound/ 5997298
+	Write New Track Done. 12495477 /sound/ 5997298
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/5997298/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/5910583/
+	Track  doesn't in db: 12495477 /sound/ 5910583
+	Write New Track start. 12495477 /sound/ 5910583
+	Write New Track Done. 12495477 /sound/ 5910583
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/5910583/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/5791180/
+	Track  doesn't in db: 12495477 /sound/ 5791180
+	Write New Track start. 12495477 /sound/ 5791180
+	Write New Track Done. 12495477 /sound/ 5791180
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/5791180/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/5699062/
+	Track  doesn't in db: 12495477 /sound/ 5699062
+	Write New Track start. 12495477 /sound/ 5699062
+	Write New Track Done. 12495477 /sound/ 5699062
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/5699062/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/5462621/
+	Track  doesn't in db: 12495477 /sound/ 5462621
+	Write New Track start. 12495477 /sound/ 5462621
+	Write New Track Done. 12495477 /sound/ 5462621
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/5462621/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/5369212/
+	Track  doesn't in db: 12495477 /sound/ 5369212
+	Write New Track start. 12495477 /sound/ 5369212
+	Write New Track Done. 12495477 /sound/ 5369212
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/5369212/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/5253216/
+	Track  doesn't in db: 12495477 /sound/ 5253216
+	Write New Track start. 12495477 /sound/ 5253216
+	Write New Track Done. 12495477 /sound/ 5253216
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/5253216/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/5153815/
+	Track  doesn't in db: 12495477 /sound/ 5153815
+	Write New Track start. 12495477 /sound/ 5153815
+	Write New Track Done. 12495477 /sound/ 5153815
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/5153815/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/5056865/
+	Track  doesn't in db: 12495477 /sound/ 5056865
+	Write New Track start. 12495477 /sound/ 5056865
+	Write New Track Done. 12495477 /sound/ 5056865
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/5056865/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/4958741/
+	Track  doesn't in db: 12495477 /sound/ 4958741
+	Write New Track start. 12495477 /sound/ 4958741
+	Write New Track Done. 12495477 /sound/ 4958741
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/4958741/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/4879264/
+	Track  doesn't in db: 12495477 /sound/ 4879264
+	Write New Track start. 12495477 /sound/ 4879264
+	Write New Track Done. 12495477 /sound/ 4879264
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/4879264/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/4763961/
+	Track  doesn't in db: 12495477 /sound/ 4763961
+	Write New Track start. 12495477 /sound/ 4763961
+	Write New Track Done. 12495477 /sound/ 4763961
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/4763961/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/4689372/
+	Track  doesn't in db: 12495477 /sound/ 4689372
+	Write New Track start. 12495477 /sound/ 4689372
+	Write New Track Done. 12495477 /sound/ 4689372
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/4689372/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/4604604/
+	Track  doesn't in db: 12495477 /sound/ 4604604
+	Write New Track start. 12495477 /sound/ 4604604
+	Write New Track Done. 12495477 /sound/ 4604604
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/4604604/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/4541813/
+	Track  doesn't in db: 12495477 /sound/ 4541813
+	Write New Track start. 12495477 /sound/ 4541813
+	Write New Track Done. 12495477 /sound/ 4541813
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/4541813/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/4450021/
+	Track  doesn't in db: 12495477 /sound/ 4450021
+	Write New Track start. 12495477 /sound/ 4450021
+	Write New Track Done. 12495477 /sound/ 4450021
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/4450021/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/4334209/
+	Track  doesn't in db: 12495477 /sound/ 4334209
+	Write New Track start. 12495477 /sound/ 4334209
+	Write New Track Done. 12495477 /sound/ 4334209
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/4334209/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/4315000/
+	Track  doesn't in db: 12495477 /sound/ 4315000
+	Write New Track start. 12495477 /sound/ 4315000
+	Write New Track Done. 12495477 /sound/ 4315000
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/4315000/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3994486/
+	Track  doesn't in db: 12495477 /sound/ 3994486
+	Write New Track start. 12495477 /sound/ 3994486
+	Write New Track Done. 12495477 /sound/ 3994486
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3994486/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3807581/
+	Track  doesn't in db: 12495477 /sound/ 3807581
+	Write New Track start. 12495477 /sound/ 3807581
+	Write New Track Done. 12495477 /sound/ 3807581
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3807581/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3700166/
+	Track  doesn't in db: 12495477 /sound/ 3700166
+	Write New Track start. 12495477 /sound/ 3700166
+	Write New Track Done. 12495477 /sound/ 3700166
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3700166/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3699974/
+	Track  doesn't in db: 12495477 /sound/ 3699974
+	Write New Track start. 12495477 /sound/ 3699974
+	Write New Track Done. 12495477 /sound/ 3699974
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3699974/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3605373/
+	Track  doesn't in db: 12495477 /sound/ 3605373
+	Write New Track start. 12495477 /sound/ 3605373
+	Write New Track Done. 12495477 /sound/ 3605373
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3605373/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3572902/
+	Track  doesn't in db: 12495477 /sound/ 3572902
+	Write New Track start. 12495477 /sound/ 3572902
+	Write New Track Done. 12495477 /sound/ 3572902
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3572902/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3572870/
+	Track  doesn't in db: 12495477 /sound/ 3572870
+	Write New Track start. 12495477 /sound/ 3572870
+	Write New Track Done. 12495477 /sound/ 3572870
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3572870/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3564838/
+	Track  doesn't in db: 12495477 /sound/ 3564838
+	Write New Track start. 12495477 /sound/ 3564838
+	Write New Track Done. 12495477 /sound/ 3564838
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3564838/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3513658/
+	Track  doesn't in db: 12495477 /sound/ 3513658
+	Write New Track start. 12495477 /sound/ 3513658
+	Write New Track Done. 12495477 /sound/ 3513658
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3513658/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3456817/
+	Track  doesn't in db: 12495477 /sound/ 3456817
+	Write New Track start. 12495477 /sound/ 3456817
+	Write New Track Done. 12495477 /sound/ 3456817
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3456817/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3390526/
+	Track  doesn't in db: 12495477 /sound/ 3390526
+	Write New Track start. 12495477 /sound/ 3390526
+	Write New Track Done. 12495477 /sound/ 3390526
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3390526/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3326970/
+	Track  doesn't in db: 12495477 /sound/ 3326970
+	Write New Track start. 12495477 /sound/ 3326970
+	Write New Track Done. 12495477 /sound/ 3326970
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3326970/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3269196/
+	Track  doesn't in db: 12495477 /sound/ 3269196
+	Write New Track start. 12495477 /sound/ 3269196
+	Write New Track Done. 12495477 /sound/ 3269196
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3269196/
+Write Tracks of the Album Done.
+
+	 this album has  69 tracks.
+
+	 this album has  -1 tracks doesn't download.
+Start download track...
+	越南是中国的好学生 http://audio.xmcdn.com/group8/M0B/E4/EB/wKgDYVaXTe7TOMu_AE6Eg9DfSWA230.m4a http://audio.xmcdn.com/group16/M06/E4/A0/wKgDbFaXTfmS9_7wAM2yPZGPJRk450.m4a 0
+track_title: <type 'unicode'> 越南是中国的好学生
+	E:\xmly\吴晓波频道\越南是中国的好学生.m4a
+		 track_id: 624
+		{624: 1}
+	吴晓波：为什么那么多P2P倒闭了 http://audio.xmcdn.com/group10/M04/D3/19/wKgDZ1aAvQLS2MJrAFRvL2KJgD4363.m4a http://audio.xmcdn.com/group16/M04/D7/6F/wKgDalaAvRHCEG-SAN0yRzTAvyo108.m4a 0
+track_title: <type 'unicode'> 吴晓波：为什么那么多P2P倒闭了
+	E:\xmly\吴晓波频道\吴晓波：为什么那么多P2P倒闭了.m4a
+		 track_id: 625
+		{624: 1, 625: 1}
+	吴晓波：商界的刺猬与狐狸 http://audio.xmcdn.com/group12/M05/D4/68/wKgDW1Z7TELyQnhFAFNNlpY7FI0741.m4a http://audio.xmcdn.com/group12/M05/D4/72/wKgDXFZ7TEzzpP0_ANo8Bjv-fl4751.m4a 0
+track_title: <type 'unicode'> 吴晓波：商界的刺猬与狐狸
+	E:\xmly\吴晓波频道\吴晓波：商界的刺猬与狐狸.m4a
+		 track_id: 626
+		{624: 1, 625: 1, 626: 1}
+	吴晓波：百年企业的三点要诀 http://audio.xmcdn.com/group14/M04/CC/B8/wKgDZFZwBTWA7ungADwDrtRq2uk962.m4a http://audio.xmcdn.com/group15/M02/CB/49/wKgDaFZwAT3grUmQAJ02_WZf1HE917.m4a 0
+track_title: <type 'unicode'> 吴晓波：百年企业的三点要诀
+	E:\xmly\吴晓波频道\吴晓波：百年企业的三点要诀.m4a
+		 track_id: 627
+		{624: 1, 625: 1, 626: 1, 627: 1}
+	吴晓波：中产阶级理财六大建议 http://audio.xmcdn.com/group16/M03/BB/98/wKgDalZf2Urw9Lh7AFCpyK85Vyc346.m4a http://audio.xmcdn.com/group16/M03/BB/7A/wKgDbFZf2VOAQxSRANNRKvJUL6o696.m4a 0
+track_title: <type 'unicode'> 吴晓波：中产阶级理财六大建议
+	E:\xmly\吴晓波频道\吴晓波：中产阶级理财六大建议.m4a
+		 track_id: 628
+		{624: 1, 625: 1, 626: 1, 627: 1, 628: 1}
+	【大咖说】吴晓波：十招拯救股市最低谷 http://audio.xmcdn.com/group15/M09/AA/9F/wKgDaFZWxJXwox8pAFKqExp6S3Q073.m4a http://audio.xmcdn.com/group15/M09/AA/9F/wKgDaFZWxIvzATCjANiPWEdtYx8780.m4a 0
+track_title: <type 'unicode'> 【大咖说】吴晓波：十招拯救股市最低谷
+	E:\xmly\吴晓波频道\【大咖说】吴晓波：十招拯救股市最低谷.m4a
+		 track_id: 629
+		{624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1}
+	吴晓波：私人定制将是消费主流 http://audio.xmcdn.com/group9/M07/A2/03/wKgDYlZNnmDRvmcKAEZSaAX1koc568.m4a http://audio.xmcdn.com/group13/M07/A2/7D/wKgDXVZNnmnTWE8WALg4W5BEoMY839.m4a 0
+track_title: <type 'unicode'> 吴晓波：私人定制将是消费主流
+	E:\xmly\吴晓波频道\吴晓波：私人定制将是消费主流.m4a
+		 track_id: 630
+		{624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1}
+	吴晓波：三个最烂行业的逆袭者 http://audio.xmcdn.com/group14/M01/9C/98/wKgDY1ZFqeCASLsBAFxnpwj-jbg055.m4a http://audio.xmcdn.com/group10/M02/9B/FD/wKgDaVZFqfuSK3POAPIU7CiSbTc977.m4a 0
+track_title: <type 'unicode'> 吴晓波：三个最烂行业的逆袭者
+	E:\xmly\吴晓波频道\吴晓波：三个最烂行业的逆袭者.m4a
+		 track_id: 631
+		{624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1}
+	吴晓波：90后创业的5个大坑 http://audio.xmcdn.com/group15/M0B/95/A4/wKgDZVY8XkmDBrq_AFY0srUaK7M238.m4a http://audio.xmcdn.com/group15/M0B/95/CA/wKgDaFY8XlCTMFtMAOHWaKpJTk0121.m4a 0
+track_title: <type 'unicode'> 吴晓波：90后创业的5个大坑
+	E:\xmly\吴晓波频道\吴晓波：90后创业的5个大坑.m4a
+		 track_id: 632
+		{624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1}
+	我们极缺从0到1的能力 http://audio.xmcdn.com/group12/M01/8E/8B/wKgDW1YwpHWzs6EGADsaRNUqs6c378.m4a http://audio.xmcdn.com/group12/M03/8E/5B/wKgDXFYwpHzz8pN1AJrSlt3ljfs926.m4a 0
+track_title: <type 'unicode'> 我们极缺从0到1的能力
+	E:\xmly\吴晓波频道\我们极缺从0到1的能力.m4a
+		 track_id: 633
+		{624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1}
+	吴晓波:"跑男"李嘉诚 http://audio.xmcdn.com/group11/M02/7D/6C/wKgDa1Yoz0XCxr6eAGBUDG9paGI027.m4a http://audio.xmcdn.com/group12/M02/89/A6/wKgDXFYoz1OxjFj-APxck0CbZLA107.m4a 0
+track_title: <type 'unicode'> 吴晓波:"跑男"李嘉诚
+	E:\xmly\吴晓波频道\吴晓波:"跑男"李嘉诚.m4a
+		 track_id: 634
+		{624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1}
+	吴晓波：从Beyond到TFboys http://audio.xmcdn.com/group10/M05/7F/C5/wKgDaVYWMTOgPoq8AGUMDOGfTkM270.m4a http://audio.xmcdn.com/group10/M05/7F/C5/wKgDaVYWMTvgGiLTAQi7c0Ve3sM351.m4a 0
+track_title: <type 'unicode'> 吴晓波：从Beyond到TFboys
+	E:\xmly\吴晓波频道\吴晓波：从Beyond到TFboys.m4a
+		 track_id: 635
+		{624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1}
+	一个鹿晗带动亿万资金！ http://audio.xmcdn.com/group13/M04/7B/6A/wKgDXVYLfnqALuytADwuuxUWWBQ478.m4a http://audio.xmcdn.com/group13/M04/7B/45/wKgDXlYLfoCQlpw6AJ2pXsBPZSQ798.m4a 0
+track_title: <type 'unicode'> 一个鹿晗带动亿万资金！
+	E:\xmly\吴晓波频道\一个鹿晗带动亿万资金！.m4a
+		 track_id: 636
+		{624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1}
+	韩国如何成为造星工厂 http://audio.xmcdn.com/group9/M04/76/E8/wKgDYlYDp8STu-J5AE1P_9lGu2I818.m4a http://audio.xmcdn.com/group9/M04/76/E8/wKgDYlYDp92QOg-aAMqLnbIBedI182.m4a 0
+track_title: <type 'unicode'> 韩国如何成为造星工厂
+	E:\xmly\吴晓波频道\韩国如何成为造星工厂.m4a
+		 track_id: 637
+		{624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1}
+	吴晓波：每一块钱都能投资 http://audio.xmcdn.com/group11/M04/7F/BD/wKgDbVX7vyPz9_biAErYfXU-YEU478.m4a http://audio.xmcdn.com/group16/M05/73/78/wKgDalX7v0LA1ykEAMQTLOuDAaY776.m4a 0
+track_title: <type 'unicode'> 吴晓波：每一块钱都能投资
+	E:\xmly\吴晓波频道\吴晓波：每一块钱都能投资.m4a
+		 track_id: 638
+		{624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1}
+	吴晓波：国家为何控制这些行业 http://audio.xmcdn.com/group12/M00/6D/AA/wKgDW1Xw8zbTzRmiAEr3XJPXppo982.m4a http://audio.xmcdn.com/group7/M03/6E/70/wKgDWlXw827RnoRIAMRkAX3I2gs201.m4a 0
+track_title: <type 'unicode'> 吴晓波：国家为何控制这些行业
+	E:\xmly\吴晓波频道\吴晓波：国家为何控制这些行业.m4a
+		 track_id: 639
+		{624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	吴晓波:说说“屌丝”这个词 http://audio.xmcdn.com/group8/M05/6C/0C/wKgDYVXrtVKjlFpxAE5EvYlGCa4350.m4a http://audio.xmcdn.com/group8/M05/6B/CD/wKgDYFXrtb6i4YIVAM0K-_FYS8U161.m4a 0
+track_title: <type 'unicode'> 吴晓波:说说“屌丝”这个词
+	E:\xmly\吴晓波频道\吴晓波:说说“屌丝”这个词.m4a
+		 track_id: 640
+		{640: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	中国必须告别山寨王国 http://audio.xmcdn.com/group8/M06/65/0A/wKgDYFXdbfKioUBDAE8BALJ-o20821.m4a http://audio.xmcdn.com/group13/M02/65/16/wKgDXlXdbX6BGCCZAM732uVWDII181.m4a 0
+track_title: <type 'unicode'> 中国必须告别山寨王国
+	E:\xmly\吴晓波频道\中国必须告别山寨王国.m4a
+		 track_id: 641
+		{640: 1, 641: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	有一种爱叫真不爱 http://audio.xmcdn.com/group14/M06/61/BF/wKgDZFXWoRnB3gwEAD0dl7xI7T0755.m4a http://audio.xmcdn.com/group16/M02/62/06/wKgDbFXWoQOCt2SeAKAY8Z02ckw846.m4a 0
+track_title: <type 'unicode'> 有一种爱叫真不爱
+	E:\xmly\吴晓波频道\有一种爱叫真不爱.m4a
+		 track_id: 642
+		{640: 1, 641: 1, 642: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	吴晓波：为什么要去上海“开会” http://audio.xmcdn.com/group7/M06/5C/98/wKgDWlXK8YjQa7PqADv8Ie_SGXo439.m4a http://audio.xmcdn.com/group8/M04/5C/00/wKgDYFXK8aGz6AOiAJ0kBi60a-g584.m4a 0
+track_title: <type 'unicode'> 吴晓波：为什么要去上海“开会”
+	E:\xmly\吴晓波频道\吴晓波：为什么要去上海“开会”.m4a
+		 track_id: 643
+		{640: 1, 641: 1, 642: 1, 643: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	他们为什么放弃几十亿 http://audio.xmcdn.com/group15/M05/54/90/wKgDZVW5rqOxTa0mAEQyijWoOXI227.m4a http://audio.xmcdn.com/group15/M05/54/91/wKgDZVW5rq6jrh3NALKn9WW-Vb0868.m4a 0
+track_title: <type 'unicode'> 他们为什么放弃几十亿
+	E:\xmly\吴晓波频道\他们为什么放弃几十亿.m4a
+		 track_id: 644
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	阿廖的迷茫 http://audio.xmcdn.com/group9/M07/4C/78/wKgDZlWwYWjB9wDIAFuWWIq5qek228.m4a http://audio.xmcdn.com/group12/M08/4C/43/wKgDXFWwYYPABkQAAO_xk6ugruk507.m4a 0
+track_title: <type 'unicode'> 阿廖的迷茫
+	E:\xmly\吴晓波频道\阿廖的迷茫.m4a
+		 track_id: 645
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	给手机大战泼四盆冷水 http://audio.xmcdn.com/group11/M04/44/A4/wKgDbVWmBxjRd3CuAEunwTaRlNo985.m4a http://audio.xmcdn.com/group11/M04/44/A5/wKgDbVWmByDCrCn6AMYzrj1g6c8308.m4a 0
+track_title: <type 'unicode'> 给手机大战泼四盆冷水
+	E:\xmly\吴晓波频道\给手机大战泼四盆冷水.m4a
+		 track_id: 646
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	越来越陌生的金融 http://audio.xmcdn.com/group16/M05/3B/EB/wKgDbFWcmMnxoT-bAFASivZPdoM126.m4a http://audio.xmcdn.com/group7/M01/3C/56/wKgDWlWcnTrT8R3QANHE_4bnOpQ602.m4a 0
+track_title: <type 'unicode'> 越来越陌生的金融
+	E:\xmly\吴晓波频道\越来越陌生的金融.m4a
+		 track_id: 647
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	影响我一生的八句话 http://audio.xmcdn.com/group9/M06/33/B5/wKgDYlWTdzfhR5GAAESMPK9VxKU662.m4a http://audio.xmcdn.com/group9/M06/33/B6/wKgDYlWTd0HRJCXNALOS7YEt5Nk926.m4a 0
+track_title: <type 'unicode'> 影响我一生的八句话
+	E:\xmly\吴晓波频道\影响我一生的八句话.m4a
+		 track_id: 648
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	吴晓波：创业九死一生如何改变 http://audio.xmcdn.com/group13/M09/2D/38/wKgDXVWKHdyQD9kxAEvtuSHHJt0542.m4a http://audio.xmcdn.com/group7/M01/2D/31/wKgDWlWKHgmgO9ZuAMbq1WtDzN4735.m4a 0
+track_title: <type 'unicode'> 吴晓波：创业九死一生如何改变
+	E:\xmly\吴晓波频道\吴晓波：创业九死一生如何改变.m4a
+		 track_id: 649
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	是什么成就了百年企业 http://audio.xmcdn.com/group7/M0A/25/A0/wKgDWlWBDSujMOPWADt-V5ZA20U020.m4a http://audio.xmcdn.com/group9/M00/25/6D/wKgDZlWBDQvTjzTWAJvbQzbM_Cs933.m4a 0
+track_title: <type 'unicode'> 是什么成就了百年企业
+	E:\xmly\吴晓波频道\是什么成就了百年企业.m4a
+		 track_id: 650
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	二三季度股票会再疯吗 http://audio.xmcdn.com/group8/M06/1C/8C/wKgDYFV328aTjuflAE-AW7c4B2M986.m4a http://audio.xmcdn.com/group8/M06/1C/BB/wKgDYVV327Hz25f0ANBHuejRAQk253.m4a 0
+track_title: <type 'unicode'> 二三季度股票会再疯吗
+	E:\xmly\吴晓波频道\二三季度股票会再疯吗.m4a
+		 track_id: 651
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	资本爆发期如何理性 http://audio.xmcdn.com/group8/M0A/15/8D/wKgDYFVus_vjXw4PAFGf9snGU2M929.m4a http://audio.xmcdn.com/group8/M0A/15/8E/wKgDYFVutAfCR5RfANXYQpWsTBY029.m4a 0
+track_title: <type 'unicode'> 资本爆发期如何理性
+	E:\xmly\吴晓波频道\资本爆发期如何理性.m4a
+		 track_id: 652
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	未来你将被逼着生孩子  http://audio.xmcdn.com/group9/M02/35/E3/wKgDYlWVg4yz529EAEqYXlWz6K8323.m4a http://audio.xmcdn.com/group9/M02/36/04/wKgDZlWVg5fDAZrJAMMg4OmTgXY005.m4a 0
+track_title: <type 'unicode'> 未来你将被逼着生孩子 
+	E:\xmly\吴晓波频道\未来你将被逼着生孩子 .m4a
+		 track_id: 653
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	大数据将摧毁传统生意 http://audio.xmcdn.com/group10/M05/40/28/wKgDZ1Wg7VfhdsrTAEm8l2YOHDY965.m4a http://audio.xmcdn.com/group10/M05/40/23/wKgDaVWg7XHS2aFmAMEs68IhOyk222.m4a 0
+track_title: <type 'unicode'> 大数据将摧毁传统生意
+	E:\xmly\吴晓波频道\大数据将摧毁传统生意.m4a
+		 track_id: 654
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	【引以为鉴】伦敦如何摘去雾都帽子 http://audio.xmcdn.com/group11/M03/4F/39/wKgDa1WzOlOjE50UAEDwzasA3-Q139.m4a http://audio.xmcdn.com/group11/M03/4F/4C/wKgDbVWzOgDgcccCAKne8bHWCN4169.m4a 0
+track_title: <type 'unicode'> 【引以为鉴】伦敦如何摘去雾都帽子
+	E:\xmly\吴晓波频道\【引以为鉴】伦敦如何摘去雾都帽子.m4a
+		 track_id: 655
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	互联网为什么让丑闻倍增 http://audio.xmcdn.com/group7/M0A/37/2D/wKgDX1WWIRyzAPyMAD4J5pBzVLI458.m4a http://audio.xmcdn.com/group7/M0A/37/2D/wKgDWlWWISjBiqUkAKJHNOGL-KY581.m4a 0
+track_title: <type 'unicode'> 互联网为什么让丑闻倍增
+	E:\xmly\吴晓波频道\互联网为什么让丑闻倍增.m4a
+		 track_id: 656
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	即将失业的白领 http://audio.xmcdn.com/group11/M00/29/51/wKgDbVWFT7uh-fJ4AFF94IMH9h8451.m4a http://audio.xmcdn.com/group11/M07/29/46/wKgDa1WFT-ywwdeDANUqZGX0xNE941.m4a 0
+track_title: <type 'unicode'> 即将失业的白领
+	E:\xmly\吴晓波频道\即将失业的白领.m4a
+		 track_id: 657
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	我与读书的私密往事 http://audio.xmcdn.com/group9/M01/3B/5A/wKgDZlWcQE_hCi2EAEv9Li2CxgY363.m4a http://audio.xmcdn.com/group9/M01/3B/3A/wKgDYlWcQEOSsbd2AMbGT6a4H4A598.m4a 0
+track_title: <type 'unicode'> 我与读书的私密往事
+	E:\xmly\吴晓波频道\我与读书的私密往事.m4a
+		 track_id: 658
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	香港为什么被新粤沪超越 http://audio.xmcdn.com/group10/M08/4E/E8/wKgDZ1WzI8DhkQpVAEcg0SDXVzM508.m4a http://audio.xmcdn.com/group10/M08/4E/E8/wKgDZ1WzI8DReHQ-ALoPPVhZh4A355.m4a 0
+track_title: <type 'unicode'> 香港为什么被新粤沪超越
+	E:\xmly\吴晓波频道\香港为什么被新粤沪超越.m4a
+		 track_id: 659
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	香港巅峰与“香港之死” http://audio.xmcdn.com/group10/M0B/2A/2C/wKgDaVWGPaKRD5GjAEFySi9ouOw452.m4a http://audio.xmcdn.com/group10/M0B/2A/38/wKgDZ1WGPZCBK65FAKsxyKVM1Cc061.m4a 0
+track_title: <type 'unicode'> 香港巅峰与“香港之死”
+	E:\xmly\吴晓波频道\香港巅峰与“香港之死”.m4a
+		 track_id: 660
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	冒死也要游去香港的1977 http://audio.xmcdn.com/group9/M09/25/0D/wKgDZlWAbgyhv-kZACM2u-F7d_A544.m4a http://audio.xmcdn.com/group9/M09/24/FC/wKgDYlWAbgTSoCq4AFwYU3Qrvk0845.m4a 0
+track_title: <type 'unicode'> 冒死也要游去香港的1977
+	E:\xmly\吴晓波频道\冒死也要游去香港的1977.m4a
+		 track_id: 661
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	创业者的工具革命 http://audio.xmcdn.com/group8/M02/26/E5/wKgDYVWCznPCBvANADdS-Q_G_wQ548.m4a http://audio.xmcdn.com/group8/M02/26/BB/wKgDYFWCzpqhZzEcAJC0uA5HNAQ863.m4a 0
+track_title: <type 'unicode'> 创业者的工具革命
+	E:\xmly\吴晓波频道\创业者的工具革命.m4a
+		 track_id: 662
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	“中国制造”背后的诗人 http://audio.xmcdn.com/group9/M02/45/6F/wKgDZlWm1ViBH8j5AFo_JViJlzo451.m4a http://audio.xmcdn.com/group9/M02/45/43/wKgDYlWm1UvwSd16AOwTdRaN2YM671.m4a 0
+track_title: <type 'unicode'> “中国制造”背后的诗人
+	E:\xmly\吴晓波频道\“中国制造”背后的诗人.m4a
+		 track_id: 663
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	都是马桶盖惹的祸 http://audio.xmcdn.com/group12/M09/24/D5/wKgDW1WAaCvh3DiWAFCajPE1k48757.m4a http://audio.xmcdn.com/group12/M09/24/DA/wKgDXFWAaBvBOWEPANLY4kcFW58805.m4a 0
+track_title: <type 'unicode'> 都是马桶盖惹的祸
+	E:\xmly\吴晓波频道\都是马桶盖惹的祸.m4a
+		 track_id: 664
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	鹿晗碾压传统“造星”业 http://audio.xmcdn.com/group13/M00/42/CE/wKgDXVWjX9rjo1_-AEwdnuux13g403.m4a http://audio.xmcdn.com/group13/M00/42/C9/wKgDXlWjX8SwcC0dAMcbV4jBxwg130.m4a 0
+track_title: <type 'unicode'> 鹿晗碾压传统“造星”业
+	E:\xmly\吴晓波频道\鹿晗碾压传统“造星”业.m4a
+		 track_id: 665
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	比尔盖茨加入新营销队伍 http://audio.xmcdn.com/group15/M08/2D/3F/wKgDZVWKE_ri-dnEAEtxcvD7tws403.m4a http://audio.xmcdn.com/group15/M08/2D/3F/wKgDZVWKE_qjrdKiAMVYvuzhQz0412.m4a 0
+track_title: <type 'unicode'> 比尔盖茨加入新营销队伍
+	E:\xmly\吴晓波频道\比尔盖茨加入新营销队伍.m4a
+		 track_id: 666
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	西施的男友如何赚钱 http://audio.xmcdn.com/group14/M0B/3C/8C/wKgDY1WdJ1ODB7-BAD6LdogTPq0714.m4a http://audio.xmcdn.com/group14/M0B/3C/74/wKgDZFWdJyuxF3ZmAKOZ76QAiK4578.m4a 0
+track_title: <type 'unicode'> 西施的男友如何赚钱
+	E:\xmly\吴晓波频道\西施的男友如何赚钱.m4a
+		 track_id: 667
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	把时间浪费在美好的事物上 http://audio.xmcdn.com/group15/M02/3A/7D/wKgDZVWbMnHBEWhRADvux1km-Dc017.m4a http://audio.xmcdn.com/group15/M02/3A/7E/wKgDaFWbMl_idfKjAJzEUpj25oM766.m4a 0
+track_title: <type 'unicode'> 把时间浪费在美好的事物上
+	E:\xmly\吴晓波频道\把时间浪费在美好的事物上.m4a
+		 track_id: 668
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 668: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	股市巨鳄转身难 http://audio.xmcdn.com/group7/M04/2D/10/wKgDWlWKAhbD8a_UAD6YbOOt9CI790.m4a http://audio.xmcdn.com/group7/M04/2D/17/wKgDX1WKAgyRoLwXAKO7tDEtSOw665.m4a 0
+track_title: <type 'unicode'> 股市巨鳄转身难
+	E:\xmly\吴晓波频道\股市巨鳄转身难.m4a
+		 track_id: 669
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 668: 1, 669: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	我为什么从来不炒股 http://audio.xmcdn.com/group11/M07/22/68/wKgDbVV9yGnyKA1wAEgav-8rjzo244.m4a http://audio.xmcdn.com/group12/M03/23/6D/wKgDW1V_Hmjw1oJ3ALycP18v4y0544.m4a 0
+track_title: <type 'unicode'> 我为什么从来不炒股
+	E:\xmly\吴晓波频道\我为什么从来不炒股.m4a
+		 track_id: 670
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 668: 1, 669: 1, 670: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	2015如何不让钱包瘪下去 http://audio.xmcdn.com/group10/M0B/09/E1/wKgDaVVfXfzj-Bj5ADcdsp23BXw267.m4a http://audio.xmcdn.com/group13/M03/1D/A8/wKgDXlV4VPmA6fEhAJAq2iLfNaU481.m4a 0
+track_title: <type 'unicode'> 2015如何不让钱包瘪下去
+	E:\xmly\吴晓波频道\2015如何不让钱包瘪下去.m4a
+		 track_id: 671
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 668: 1, 669: 1, 670: 1, 671: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	体操王子李宁深陷商业困局 http://audio.xmcdn.com/group12/M03/24/15/wKgDW1V_15mje7jsADhyQl8EUEo504.m4a http://audio.xmcdn.com/group12/M03/24/15/wKgDW1V_15mThfAvAJOlRuxIKrg018.m4a 0
+track_title: <type 'unicode'> 体操王子李宁深陷商业困局
+	E:\xmly\吴晓波频道\体操王子李宁深陷商业困局.m4a
+		 track_id: 672
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 668: 1, 669: 1, 670: 1, 671: 1, 672: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	罗永浩获年度人物口水奖 http://audio.xmcdn.com/group16/M01/46/5C/wKgDalWneLXClCvkADmPATeHahE879.m4a http://audio.xmcdn.com/group16/M01/46/7B/wKgDbFWneMfhf5s9AJaN2iYwEMg483.m4a 0
+track_title: <type 'unicode'> 罗永浩获年度人物口水奖
+	E:\xmly\吴晓波频道\罗永浩获年度人物口水奖.m4a
+		 track_id: 673
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 668: 1, 669: 1, 670: 1, 671: 1, 672: 1, 673: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	2015大企业将遭遇危机  http://audio.xmcdn.com/group11/M02/25/D3/wKgDbVWBTEbwuoo3AETe6mzELiQ347.m4a http://audio.xmcdn.com/group11/M02/25/CD/wKgDa1WBTHXA_g3RALQnH1-QkyQ354.m4a 0
+track_title: <type 'unicode'> 2015大企业将遭遇危机 
+	E:\xmly\吴晓波频道\2015大企业将遭遇危机 .m4a
+		 track_id: 674
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 668: 1, 669: 1, 670: 1, 671: 1, 672: 1, 673: 1, 674: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	2015的机会在哪里？ http://audio.xmcdn.com/group12/M05/0A/25/wKgDXFVfp-GBF122AE9wKVM7u1E346.m4a http://audio.xmcdn.com/group13/M02/1D/E6/wKgDXlV4mZjQqApLAM_KtiNEsYg358.m4a 0
+track_title: <type 'unicode'> 2015的机会在哪里？
+	E:\xmly\吴晓波频道\2015的机会在哪里？.m4a
+		 track_id: 675
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 668: 1, 669: 1, 670: 1, 671: 1, 672: 1, 673: 1, 674: 1, 675: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	谁将拯救中国诚信？ http://audio.xmcdn.com/group16/M0A/10/05/wKgDbFVlYPKzSa3QAEvkeW-MHbE700.m4a http://audio.xmcdn.com/group15/M03/21/62/wKgDZVV8PQSyA9MHAMaFZrXUeyQ210.m4a 0
+track_title: <type 'unicode'> 谁将拯救中国诚信？
+	E:\xmly\吴晓波频道\谁将拯救中国诚信？.m4a
+		 track_id: 676
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 668: 1, 669: 1, 670: 1, 671: 1, 672: 1, 673: 1, 674: 1, 675: 1, 676: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	谁是下一个廖厂长 http://audio.xmcdn.com/group7/M06/0D/0E/wKgDWlViDhORGZ7XAEpF6Ws0zro130.m4a http://audio.xmcdn.com/group10/M0B/1F/77/wKgDZ1V6Z9ayxmwFAMKTJ-K6sKg871.m4a 0
+track_title: <type 'unicode'> 谁是下一个廖厂长
+	E:\xmly\吴晓波频道\谁是下一个廖厂长.m4a
+		 track_id: 677
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 668: 1, 669: 1, 670: 1, 671: 1, 672: 1, 673: 1, 674: 1, 675: 1, 676: 1, 677: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	中国商人靠什么赚钱 http://audio.xmcdn.com/group7/M03/4A/26/wKgDX1Wta2-zyI-OAE8olhL9-pw898.m4a http://audio.xmcdn.com/group7/M03/4A/2E/wKgDWlWta3-hGnMAAHwJh0oHxKY743.m4a 0
+track_title: <type 'unicode'> 中国商人靠什么赚钱
+	E:\xmly\吴晓波频道\中国商人靠什么赚钱.m4a
+		 track_id: 678
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 668: 1, 669: 1, 670: 1, 671: 1, 672: 1, 673: 1, 674: 1, 675: 1, 676: 1, 677: 1, 678: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	中国商人为什么不能富贵两全 http://audio.xmcdn.com/group8/M01/25/24/wKgDYFWBBivAvBF-AFAuqw5bmik085.m4a http://audio.xmcdn.com/group8/M01/25/51/wKgDYVWBBgbA5ZmCANG9bQWDtsM379.m4a 0
+track_title: <type 'unicode'> 中国商人为什么不能富贵两全
+	E:\xmly\吴晓波频道\中国商人为什么不能富贵两全.m4a
+		 track_id: 679
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 668: 1, 669: 1, 670: 1, 671: 1, 672: 1, 673: 1, 674: 1, 675: 1, 676: 1, 677: 1, 678: 1, 679: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	为何78年后物价不断涨 http://audio.xmcdn.com/group11/M03/41/15/wKgDa1Whr_7TkyVXAFX9KaQrCbM220.m4a http://audio.xmcdn.com/group11/M03/41/13/wKgDbVWhr7iiKelfAODvshhL6u0385.m4a 0
+track_title: <type 'unicode'> 为何78年后物价不断涨
+	E:\xmly\吴晓波频道\为何78年后物价不断涨.m4a
+		 track_id: 680
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 668: 1, 669: 1, 670: 1, 671: 1, 672: 1, 673: 1, 674: 1, 675: 1, 676: 1, 677: 1, 678: 1, 679: 1, 680: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	哪两大因素决定中国经济未来 http://audio.xmcdn.com/group10/M05/45/1A/wKgDZ1WmhQXgkSIWAD94b16rrx8356.m4a http://audio.xmcdn.com/group10/M05/45/13/wKgDaVWmhSCiMUb6AKYFIr2Pp_I931.m4a 0
+track_title: <type 'unicode'> 哪两大因素决定中国经济未来
+	E:\xmly\吴晓波频道\哪两大因素决定中国经济未来.m4a
+		 track_id: 681
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 668: 1, 669: 1, 670: 1, 671: 1, 672: 1, 673: 1, 674: 1, 675: 1, 676: 1, 677: 1, 678: 1, 679: 1, 680: 1, 681: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	中国经济会不会崩溃 http://audio.xmcdn.com/group13/M02/3A/EF/wKgDXlWbsaTzyrDBAGHV7Y4U1TQ917.m4a http://audio.xmcdn.com/group13/M02/3A/E4/wKgDXVWbsbeQ9w7OAQGKjVSotdA243.m4a 0
+track_title: <type 'unicode'> 中国经济会不会崩溃
+	E:\xmly\吴晓波频道\中国经济会不会崩溃.m4a
+		 track_id: 682
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 668: 1, 669: 1, 670: 1, 671: 1, 672: 1, 673: 1, 674: 1, 675: 1, 676: 1, 677: 1, 678: 1, 679: 1, 680: 1, 681: 1, 682: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	谁统治了我们的手机 http://audio.xmcdn.com/group7/M01/50/FD/wKgDX1W0gKyyB4NJAE9yWXyyymg676.m4a http://audio.xmcdn.com/group7/M01/50/FE/wKgDWlW0gLzTOL36AM_SN854PDk661.m4a 0
+track_title: <type 'unicode'> 谁统治了我们的手机
+	E:\xmly\吴晓波频道\谁统治了我们的手机.m4a
+		 track_id: 683
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 668: 1, 669: 1, 670: 1, 671: 1, 672: 1, 673: 1, 674: 1, 675: 1, 676: 1, 677: 1, 678: 1, 679: 1, 680: 1, 681: 1, 682: 1, 683: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	这些年马云犯过的错(四) http://audio.xmcdn.com/group12/M05/49/36/wKgDXFWtPhvR_gTzAFNmEYKXJ_k722.m4a http://audio.xmcdn.com/group12/M05/49/36/wKgDXFWtPhvhZn_zANopH6FYDlc630.m4a 0
+track_title: <type 'unicode'> 这些年马云犯过的错(四)
+	E:\xmly\吴晓波频道\这些年马云犯过的错(四).m4a
+		 track_id: 684
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 668: 1, 669: 1, 670: 1, 671: 1, 672: 1, 673: 1, 674: 1, 675: 1, 676: 1, 677: 1, 678: 1, 679: 1, 680: 1, 681: 1, 682: 1, 683: 1, 684: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	这些年马云犯过的错(三) http://audio.xmcdn.com/group10/M08/51/3A/wKgDaVW1W_OgDN1zAEDOxe2b0Fk742.m4a http://audio.xmcdn.com/group10/M08/51/3D/wKgDZ1W1W9Ph8rnNAKmF9dIOQJE634.m4a 0
+track_title: <type 'unicode'> 这些年马云犯过的错(三)
+	E:\xmly\吴晓波频道\这些年马云犯过的错(三).m4a
+		 track_id: 685
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 668: 1, 669: 1, 670: 1, 671: 1, 672: 1, 673: 1, 674: 1, 675: 1, 676: 1, 677: 1, 678: 1, 679: 1, 680: 1, 681: 1, 682: 1, 683: 1, 684: 1, 685: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	这些年马云犯过的错(二) http://audio.xmcdn.com/group7/M02/0B/8C/wKgDX1Vgx1TC2TZdAD2UvWIMB_8122.m4a http://audio.xmcdn.com/group12/M00/1E/3B/wKgDXFV5eQLSr5yFAKEU6desMX8232.m4a 0
+track_title: <type 'unicode'> 这些年马云犯过的错(二)
+	E:\xmly\吴晓波频道\这些年马云犯过的错(二).m4a
+		 track_id: 686
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 668: 1, 669: 1, 670: 1, 671: 1, 672: 1, 673: 1, 674: 1, 675: 1, 676: 1, 677: 1, 678: 1, 679: 1, 680: 1, 681: 1, 682: 1, 683: 1, 684: 1, 685: 1, 686: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	这些年马云也犯过不少错，你知道吗？ http://audio.xmcdn.com/group16/M06/0A/2E/wKgDalVflCagVTHcAFXgVe8KsDI599.m4a http://audio.xmcdn.com/group13/M06/1D/C6/wKgDXVV4kMLxCp22AOCkP0SOdcc672.m4a 0
+track_title: <type 'unicode'> 这些年马云也犯过不少错，你知道吗？
+	E:\xmly\吴晓波频道\这些年马云也犯过不少错，你知道吗？.m4a
+		 track_id: 687
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 668: 1, 669: 1, 670: 1, 671: 1, 672: 1, 673: 1, 674: 1, 675: 1, 676: 1, 677: 1, 678: 1, 679: 1, 680: 1, 681: 1, 682: 1, 683: 1, 684: 1, 685: 1, 686: 1, 687: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	状元的五个真相 http://audio.xmcdn.com/group16/M04/09/47/wKgDbFVerbTRRnIQAF1KKrP7HU0871.m4a http://audio.xmcdn.com/group14/M01/1D/04/wKgDZFV3-CqQwamnAPQIstzR3hI885.m4a 0
+track_title: <type 'unicode'> 状元的五个真相
+	E:\xmly\吴晓波频道\状元的五个真相.m4a
+		 track_id: 688
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 668: 1, 669: 1, 670: 1, 671: 1, 672: 1, 673: 1, 674: 1, 675: 1, 676: 1, 677: 1, 678: 1, 679: 1, 680: 1, 681: 1, 682: 1, 683: 1, 684: 1, 685: 1, 686: 1, 687: 1, 688: 1, 624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1, 633: 1, 634: 1, 635: 1, 636: 1, 637: 1, 638: 1, 639: 1}
+	晋商的兴衰史2 http://audio.xmcdn.com/group7/M06/3C/A6/wKgDWlWc4fuykV5UAEGdXRgDmW8964.m4a http://audio.xmcdn.com/group7/M06/3C/A6/wKgDWlWc4fuwMhK2AKugcXyhXpE141.m4a 0
+track_title: <type 'unicode'> 晋商的兴衰史2
+	E:\xmly\吴晓波频道\晋商的兴衰史2.m4a
+		 track_id: 689
+		{640: 1, 641: 1, 642: 1, 643: 1, 644: 1, 645: 1, 646: 1, 647: 1, 648: 1, 649: 1, 650: 1, 651: 1, 652: 1, 653: 1, 654: 1, 655: 1, 656: 1, 657: 1, 658: 1, 659: 1, 660: 1, 661: 1, 662: 1, 663: 1, 664: 1, 665: 1, 666: 1, 667: 1, 668: 1, 669: 1, 670: 1, 671: 1, 672: 1, 673: 1, 674: 1, 675: 1, 676: 1, 677: 1, 678: 1, 679: 1, 680: 1, 681: 1, 682: 1, 683: 1, 684: 1, 685: 1, 686: 1, 687: 
+Enter a zhubo, album or sound url:http://www.ximalaya.com/38212466/album/3492675/
+Album  doesn't in db: 38212466 /album/ 3492675
+http://www.ximalaya.com/38212466/album/3492675/
+	 Start getItemsOnPages _type=  albumSound From :  http://www.ximalaya.com/38212466/album/3492675/
+	 getItemsOnPages retrieve the first page, total: 1
+	 getItemsOnPages retrive the first page done.
+	 getItemsOnPages retrive multi pages Done.
+
+	 getItemsOnPages Done : get  albumSound from 1 pages
+Write New Album start. 38212466 /album/ 3492675
+Write New Album Done. 38212466 /album/ 3492675
+Write Tracks of the Album Start.
+
+start write the track into db. 
+	http://www.ximalaya.com/38212466/sound/11240725/
+	Track  doesn't in db: 38212466 /sound/ 11240725
+	Write New Track start. 38212466 /sound/ 11240725
+	Write New Track Done. 38212466 /sound/ 11240725
+the track write into db done. 
+	http://www.ximalaya.com/38212466/sound/11240725/
+
+start write the track into db. 
+	http://www.ximalaya.com/38212466/sound/11627819/
+	Track  doesn't in db: 38212466 /sound/ 11627819
+	Write New Track start. 38212466 /sound/ 11627819
+	Write New Track Done. 38212466 /sound/ 11627819
+the track write into db done. 
+	http://www.ximalaya.com/38212466/sound/11627819/
+
+start write the track into db. 
+	http://www.ximalaya.com/38212466/sound/11240782/
+	Track  doesn't in db: 38212466 /sound/ 11240782
+	Write New Track start. 38212466 /sound/ 11240782
+	Write New Track Done. 38212466 /sound/ 11240782
+the track write into db done. 
+	http://www.ximalaya.com/38212466/sound/11240782/
+
+start write the track into db. 
+	http://www.ximalaya.com/38212466/sound/11281606/
+	Track  doesn't in db: 38212466 /sound/ 11281606
+	Write New Track start. 38212466 /sound/ 11281606
+	Write New Track Done. 38212466 /sound/ 11281606
+the track write into db done. 
+	http://www.ximalaya.com/38212466/sound/11281606/
+
+start write the track into db. 
+	http://www.ximalaya.com/38212466/sound/11385568/
+	Track  doesn't in db: 38212466 /sound/ 11385568
+	Write New Track start. 38212466 /sound/ 11385568
+	Write New Track Done. 38212466 /sound/ 11385568
+the track write into db done. 
+	http://www.ximalaya.com/38212466/sound/11385568/
+
+start write the track into db. 
+	http://www.ximalaya.com/38212466/sound/11240491/
+	Track  doesn't in db: 38212466 /sound/ 11240491
+	Write New Track start. 38212466 /sound/ 11240491
+	Write New Track Done. 38212466 /sound/ 11240491
+the track write into db done. 
+	http://www.ximalaya.com/38212466/sound/11240491/
+
+start write the track into db. 
+	http://www.ximalaya.com/38212466/sound/11240621/
+	Track  doesn't in db: 38212466 /sound/ 11240621
+	Write New Track start. 38212466 /sound/ 11240621
+	Write New Track Done. 38212466 /sound/ 11240621
+the track write into db done. 
+	http://www.ximalaya.com/38212466/sound/11240621/
+
+start write the track into db. 
+	http://www.ximalaya.com/38212466/sound/11502918/
+	Track  doesn't in db: 38212466 /sound/ 11502918
+	Write New Track start. 38212466 /sound/ 11502918
+	Write New Track Done. 38212466 /sound/ 11502918
+the track write into db done. 
+	http://www.ximalaya.com/38212466/sound/11502918/
+
+start write the track into db. 
+	http://www.ximalaya.com/38212466/sound/11237507/
+	Track  doesn't in db: 38212466 /sound/ 11237507
+	Write New Track start. 38212466 /sound/ 11237507
+	Write New Track Done. 38212466 /sound/ 11237507
+the track write into db done. 
+	http://www.ximalaya.com/38212466/sound/11237507/
+Write Tracks of the Album Done.
+
+	 this album has  9 tracks.
+
+	 this album has  -1 tracks doesn't download.
+Start download track...
+	粉丝的袭击3-产消一体化 http://audio.xmcdn.com/group10/M03/D9/DD/wKgDaVaGbd6R5ZVUABzQhNpMLoo039.m4a http://audio.xmcdn.com/group10/M03/D9/DD/wKgDaVaGbd_iq7egAExPCp2L4Zc207.m4a 0
+track_title: <type 'unicode'> 粉丝的袭击3-产消一体化
+	E:\xmly\偏见\000000 粉丝的袭击3-产消一体化.m4a
+		 track_id: 693
+		{693: 1}
+	周子瑜事件：想象的分裂者 http://audio.xmcdn.com/group13/M02/E7/DD/wKgDXlabXZyw1LssAEOHPJLUmWo623.m4a http://audio.xmcdn.com/group11/M06/F2/F3/wKgDbVabXZ-TUyOZALLhUkDEXZ8884.m4a 0
+track_title: <type 'un
+Enter a zhubo, album or sound url:http://www.ximalaya.com/38212466/album/3492675/
+Album  doesn't in db: 38212466 /album/ 3492675
+http://www.ximalaya.com/38212466/album/3492675/
+	 Start getItemsOnPages _type=  albumSound From :  http://www.ximalaya.com/38212466/album/3492675/
+	 getItemsOnPages retrieve the first page, total: 1
+	 getItemsOnPages retrive the first page done.
+	 getItemsOnPages retrive multi pages Done.
+
+	 getItemsOnPages Done : get  albumSound from 1 pages
+Write New Album start. 38212466 /album/ 3492675
+Write New Album Done. 38212466 /album/ 3492675
+Write Tracks of the Album Start.
+
+start write the track into db. 
+	http://www.ximalaya.com/38212466/sound/11240725/
+	Track  doesn't in db: 38212466 /sound/ 11240725
+	Write New Track start. 38212466 /sound/ 11240725
+	Write New Track Done. 38212466 /sound/ 11240725
+the track write into db done. 
+	http://www.ximalaya.com/38212466/sound/11240725/
+
+start write the track into db. 
+	http://www.ximalaya.com/38212466/sound/11627819/
+	Track  doesn't in db: 38212466 /sound/ 11627819
+	Write New Track start. 38212466 /sound/ 11627819
+	Write New Track Done. 38212466 /sound/ 11627819
+the track write into db done. 
+	http://www.ximalaya.com/38212466/sound/11627819/
+
+start write the track into db. 
+	http://www.ximalaya.com/38212466/sound/11240782/
+	Track  doesn't in db: 38212466 /sound/ 11240782
+	Write New Track start. 38212466 /sound/ 11240782
+	Write New Track Done. 38212466 /sound/ 11240782
+the track write into db done. 
+	http://www.ximalaya.com/38212466/sound/11240782/
+
+start write the track into db. 
+	http://www.ximalaya.com/38212466/sound/11281606/
+	Track  doesn't in db: 38212466 /sound/ 11281606
+	Write New Track start. 38212466 /sound/ 11281606
+	Write New Track Done. 38212466 /sound/ 11281606
+the track write into db done. 
+	http://www.ximalaya.com/38212466/sound/11281606/
+
+start write the track into db. 
+	http://www.ximalaya.com/38212466/sound/11385568/
+	Track  doesn't in db: 38212466 /sound/ 11385568
+	Write New Track start. 38212466 /sound/ 11385568
+	Write New Track Done. 38212466 /sound/ 11385568
+the track write into db done. 
+	http://www.ximalaya.com/38212466/sound/11385568/
+
+start write the track into db. 
+	http://www.ximalaya.com/38212466/sound/11240491/
+	Track  doesn't in db: 38212466 /sound/ 11240491
+	Write New Track start. 38212466 /sound/ 11240491
+	Write New Track Done. 38212466 /sound/ 11240491
+the track write into db done. 
+	http://www.ximalaya.com/38212466/sound/11240491/
+
+start write the track into db. 
+	http://www.ximalaya.com/38212466/sound/11240621/
+	Track  doesn't in db: 38212466 /sound/ 11240621
+	Write New Track start. 38212466 /sound/ 11240621
+	Write New Track Done. 38212466 /sound/ 11240621
+the track write into db done. 
+	http://www.ximalaya.com/38212466/sound/11240621/
+
+start write the track into db. 
+	http://www.ximalaya.com/38212466/sound/11502918/
+	Track  doesn't in db: 38212466 /sound/ 11502918
+	Write New Track start. 38212466 /sound/ 11502918
+	Write New Track Done. 38212466 /sound/ 11502918
+the track write into db done. 
+	http://www.ximalaya.com/38212466/sound/11502918/
+
+start write the track into db. 
+	http://www.ximalaya.com/38212466/sound/11237507/
+	Track  doesn't in db: 38212466 /sound/ 11237507
+	Write New Track start. 38212466 /sound/ 11237507
+	Write New Track Done. 38212466 /sound/ 11237507
+the track write into db done. 
+	http://www.ximalaya.com/38212466/sound/11237507/
+Write Tracks of the Album Done.
+ -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+11240725 160101
+11627819 160117
+11240782 160101
+11281606 160103
+11385568 160107
+11240491 160101
+11240621 160101
+11502918 160112
+11237507 160101
+
+	 this album has  9 tracks.
+
+	 this album has  -1 tracks doesn't download.
+Start download track...
+	粉丝的袭击3-产消一体化 http://audio.xmcdn.com/group10/M03/D9/DD/wKgDaVaGbd6R5ZVUABzQhNpMLoo039.m4a http://audio.xmcdn.com/group10/M03/D9/DD/wKgDaVaGbd_iq7egAExPCp2L4Zc207.m4a 0
+----- test, track_id:  615
+track_title: <type 'unicode'> 粉丝的袭击3-产消一体化
+	E:\xmly\偏见\000000 粉丝的袭击3-产消一体化.m4a
+		 track_i
+Enter a zhubo, album or sound url:http://www.ximalaya.com/16174533/album/3340045/
+Album  doesn't in db: 16174533 /album/ 3340045
+http://www.ximalaya.com/16174533/album/3340045/
+	 Start getItemsOnPages _type=  albumSound From :  http://www.ximalaya.com/16174533/album/3340045/
+	 getItemsOnPages retrieve the first page, total: 1
+	 getItemsOnPages retrive the first page done.
+	 getItemsOnPages retrive multi pages Done.
+
+	 getItemsOnPages Done : get  albumSound from 1 pages
+Write New Album start. 16174533 /album/ 3340045
+Write New Album Done. 16174533 /album/ 3340045
+Write Tracks of the Album Start.
+
+start write the track into db. 
+	http://www.ximalaya.com/16174533/sound/11381659/
+	Track  doesn't in db: 16174533 /sound/ 11381659
+	Write New Track start. 16174533 /sound/ 11381659
+	Write New Track Done. 16174533 /sound/ 11381659
+the track write into db done. 
+	http://www.ximalaya.com/16174533/sound/11381659/
+
+start write the track into db. 
+	http://www.ximalaya.com/16174533/sound/11481917/
+	Track  doesn't in db: 16174533 /sound/ 11481917
+	Write New Track start. 16174533 /sound/ 11481917
+	Write New Track Done. 16174533 /sound/ 11481917
+the track write into db done. 
+	http://www.ximalaya.com/16174533/sound/11481917/
+
+start write the track into db. 
+	http://www.ximalaya.com/16174533/sound/11471591/
+	Track  doesn't in db: 16174533 /sound/ 11471591
+	Write New Track start. 16174533 /sound/ 11471591
+	Write New Track Done. 16174533 /sound/ 11471591
+the track write into db done. 
+	http://www.ximalaya.com/16174533/sound/11471591/
+
+start write the track into db. 
+	http://www.ximalaya.com/16174533/sound/11289255/
+	Track  doesn't in db: 16174533 /sound/ 11289255
+	Write New Track start. 16174533 /sound/ 11289255
+	Write New Track Done. 16174533 /sound/ 11289255
+the track write into db done. 
+	http://www.ximalaya.com/16174533/sound/11289255/
+
+start write the track into db. 
+	http://www.ximalaya.com/16174533/sound/11293098/
+	Track  doesn't in db: 16174533 /sound/ 11293098
+	Write New Track start. 16174533 /sound/ 11293098
+	Write New Track Done. 16174533 /sound/ 11293098
+the track write into db done. 
+	http://www.ximalaya.com/16174533/sound/11293098/
+
+start write the track into db. 
+	http://www.ximalaya.com/16174533/sound/11375594/
+	Track  doesn't in db: 16174533 /sound/ 11375594
+	Write New Track start. 16174533 /sound/ 11375594
+	Write New Track Done. 16174533 /sound/ 11375594
+the track write into db done. 
+	http://www.ximalaya.com/16174533/sound/11375594/
+
+start write the track into db. 
+	http://www.ximalaya.com/16174533/sound/11521675/
+	Track  doesn't in db: 16174533 /sound/ 11521675
+	Write New Track start. 16174533 /sound/ 11521675
+	Write New Track Done. 16174533 /sound/ 11521675
+the track write into db done. 
+	http://www.ximalaya.com/16174533/sound/11521675/
+
+start write the track into db. 
+	http://www.ximalaya.com/16174533/sound/11277680/
+	Track  doesn't in db: 16174533 /sound/ 11277680
+	Write New Track start. 16174533 /sound/ 11277680
+	Write New Track Done. 16174533 /sound/ 11277680
+the track write into db done. 
+	http://www.ximalaya.com/16174533/sound/11277680/
+
+start write the track into db. 
+	http://www.ximalaya.com/16174533/sound/11630434/
+	Track  doesn't in db: 16174533 /sound/ 11630434
+	Write New Track start. 16174533 /sound/ 11630434
+	Write New Track Done. 16174533 /sound/ 11630434
+the track write into db done. 
+	http://www.ximalaya.com/16174533/sound/11630434/
+
+start write the track into db. 
+	http://www.ximalaya.com/16174533/sound/11355590/
+	Track  doesn't in db: 16174533 /sound/ 11355590
+	Write New Track start. 16174533 /sound/ 11355590
+	Write New Track Done. 16174533 /sound/ 11355590
+the track write into db done. 
+	http://www.ximalaya.com/16174533/sound/11355590/
+
+start write the track into db. 
+	http://www.ximalaya.com/16174533/sound/11532677/
+	Track  doesn't in db: 16174533 /sound/ 11532677
+	Write New Track start. 16174533 /sound/ 11532677
+	Write New Track Done. 16174533 /sound/ 11532677
+the track write into db done. 
+	http://www.ximalaya.com/16174533/sound/11532677/
+Write Tracks of the Album Done.
+ -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+11381659 160107
+11481917 160111
+11471591 160111
+11289255 160104
+11293098 160104
+11375594 160107
+11521675 160113
+11277680 160103
+11630434 160117
+11355590 160106
+11532677 160113
+
+	 this album has  11 tracks.
+
+	 this album has  -1 tracks doesn't download.
+Start download track...
+	明天你是否依旧恐慌 http://audio.xmcdn.com/group12/M01/DF/41/wKgDW1aOEIjTefxWACm9L1tbrXU962.m4a http://audio.xmcdn.com/group12/M01/DF/41/wKgDW1aOEJSAKnGjAG1Uepf3GYM374.m4a 0
+----- test, track_id:  11381659
+track_title: <type 'unicode'> 明天你是否依旧恐慌
+	E:\xmly\你不恐慌，我不入场\160107 明天你是否依旧恐慌.m4a
+		 track_id: 624
+		{624: 1}
+	明天，我将再次满仓 http://audio.xmcdn.com/group13/M02/E3/29/wKgDXVaTmMXzPi-iAC_P1GzZOm8543.m4a http://audio.xmcdn.com/group13/M02/E3/29/wKgDXVaTmMqiBu5KAH091D2Xp_8607.m4a 0
+----- test, track_id:  11481917
+track_title: <type 'unicode'> 明天，我将再次满仓
+	E:\xmly\你不恐慌，我不入场\160111 明天，我将再次满仓.m4a
+		 track_id: 625
+		{624: 1, 625: 1}
+	你说崩盘，我偏进场 http://audio.xmcdn.com/group15/M03/E1/6E/wKgDZVaTKOuh95NDABquwx-IO40828.m4a http://audio.xmcdn.com/group15/M03/E1/6E/wKgDZVaTKO3ShZt8AEXhcvK8IX0867.m4a 0
+----- test, track_id:  11471591
+track_title: <type 'unicode'> 你说崩盘，我偏进场
+	E:\xmly\你不恐慌，我不入场\160111 你说崩盘，我偏进场.m4a
+		 track_id: 626
+		{624: 1, 625: 1, 626: 1}
+	新年红包来了 http://audio.xmcdn.com/group15/M00/DC/1A/wKgDaFaJ5BCDtKOxAA6A_Ul_Bf8501.m4a http://audio.xmcdn.com/group15/M00/DB/EE/wKgDZVaJ5BOi4NRRACX4EpGz78I133.m4a 0
+----- test, track_id:  11289255
+track_title: <type 'unicode'> 新年红包来了
+	E:\xmly\你不恐慌，我不入场\160104 新年红包来了.m4a
+		 track_id: 627
+		{624: 1, 625: 1, 626: 1, 627: 1}
+	恐慌杀跌时我选择满仓 http://audio.xmcdn.com/group12/M05/DC/CF/wKgDW1aKDD-B2_PgAAsHQ1QDkqQ870.m4a http://audio.xmcdn.com/group12/M05/DC/DB/wKgDXFaKDEPAz3EZABzeKaUqJVs358.m4a 0
+----- test, track_id:  11293098
+track_title: <type 'unicode'> 恐慌杀跌时我选择满仓
+	E:\xmly\你不恐慌，我不入场\160104 恐慌杀跌时我选择满仓.m4a
+		 track_id: 628
+		{624: 1, 625: 1, 626: 1, 627: 1, 628: 1}
+	人不可能两次踏入同一条河流 http://audio.xmcdn.com/group8/M04/DF/68/wKgDYVaNxI3wQ2ipAAd6JKkPOx8845.m4a http://audio.xmcdn.com/group8/M04/DF/4D/wKgDYFaNxI7g9ITHABOP9Z88FLY478.m4a 0
+----- test, track_id:  11375594
+track_title: <type 'unicode'> 人不可能两次踏入同一条河流
+	E:\xmly\你不恐慌，我不入场\160107 人不可能两次踏入同一条河流.m4a
+		 track_id: 629
+		{624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1}
+	打磨底部尚需时日 http://audio.xmcdn.com/group12/M06/E3/C0/wKgDXFaVvtrB7eo3ACN0TFDXB1U365.m4a http://audio.xmcdn.com/group12/M06/E3/C0/wKgDXFaVvt_CF5VdAFzdAs6K8Qw223.m4a 0
+----- test, track_id:  11521675
+track_title: <type 'unicode'> 打磨底部尚需时日
+	E:\xmly\你不恐慌，我不入场\160113 打磨底部尚需时日.m4a
+		 track_id: 630
+		{624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1}
+	2016年的几点判断 http://audio.xmcdn.com/group8/M08/DC/9D/wKgDYVaJBGLCgs1eACoYi1ysDnk465.m4a http://audio.xmcdn.com/group8/M08/DC/9D/wKgDYVaJBGbx5WxgAG5DlS5Xs3Y414.m4a 0
+----- test, track_id:  11277680
+track_title: <type 'unicode'> 2016年的几点判断
+	E:\xmly\你不恐慌，我不入场\160103 2016年的几点判断.m4a
+		 track_id: 631
+		{624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1}
+	全球恐慌时该怎么办 http://audio.xmcdn.com/group11/M01/D9/FC/wKgDa1abd4GD81KVACfSzj2E0-k801.m4a http://audio.xmcdn.com/group11/M01/D9/FC/wKgDa1abd4fxXMXMAGhPkIjbTbw571.m4a 0
+----- test, track_id:  11630434
+track_title: <type 'unicode'> 全球恐慌时该怎么办
+	E:\xmly\你不恐慌，我不入场\160117 全球恐慌时该怎么办.m4a
+		 track_id: 632
+		{624: 1, 625: 1, 626: 1, 627: 1, 628: 1, 629: 1, 630: 1, 631: 1, 632: 1}
+	红包落袋，低点探明 http://audio.xmcdn.com/group14/M01/DF/BB/wKgDY1aMkj7BCc-YACDdKRZTVWw282.m4a http://audi
+Enter a zhubo, album or sound url:http://www.ximalaya.com/12495477/album/269179/
+Album  doesn't in db: 12495477 /album/ 269179
+http://www.ximalaya.com/12495477/album/269179/
+	 Start getItemsOnPages _type=  albumSound From :  http://www.ximalaya.com/12495477/album/269179/
+	 getItemsOnPages retrieve the first page, total: 1
+	 getItemsOnPages retrive the first page done.
+	 getItemsOnPages retrive multi pages Done.
+
+	 getItemsOnPages Done : get  albumSound from 1 pages
+Write New Album start. 12495477 /album/ 269179
+Write New Album Done. 12495477 /album/ 269179
+Write Tracks of the Album Start.
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/7374840/
+	Track  doesn't in db: 12495477 /sound/ 7374840
+	Write New Track start. 12495477 /sound/ 7374840
+	Write New Track Done. 12495477 /sound/ 7374840
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/7374840/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/5056865/
+	Track  doesn't in db: 12495477 /sound/ 5056865
+	Write New Track start. 12495477 /sound/ 5056865
+	Write New Track Done. 12495477 /sound/ 5056865
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/5056865/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/8919108/
+	Track  doesn't in db: 12495477 /sound/ 8919108
+	Write New Track start. 12495477 /sound/ 8919108
+	Write New Track Done. 12495477 /sound/ 8919108
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/8919108/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/5997298/
+	Track  doesn't in db: 12495477 /sound/ 5997298
+	Write New Track start. 12495477 /sound/ 5997298
+	Write New Track Done. 12495477 /sound/ 5997298
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/5997298/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/11553448/
+	Track  doesn't in db: 12495477 /sound/ 11553448
+	Write New Track start. 12495477 /sound/ 11553448
+	Write New Track Done. 12495477 /sound/ 11553448
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/11553448/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/9562490/
+	Track  doesn't in db: 12495477 /sound/ 9562490
+	Write New Track start. 12495477 /sound/ 9562490
+	Write New Track Done. 12495477 /sound/ 9562490
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/9562490/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/7025575/
+	Track  doesn't in db: 12495477 /sound/ 7025575
+	Write New Track start. 12495477 /sound/ 7025575
+	Write New Track Done. 12495477 /sound/ 7025575
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/7025575/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/5253216/
+	Track  doesn't in db: 12495477 /sound/ 5253216
+	Write New Track start. 12495477 /sound/ 5253216
+	Write New Track Done. 12495477 /sound/ 5253216
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/5253216/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/10810819/
+	Track  doesn't in db: 12495477 /sound/ 10810819
+	Write New Track start. 12495477 /sound/ 10810819
+	Write New Track Done. 12495477 /sound/ 10810819
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/10810819/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/8244949/
+	Track  doesn't in db: 12495477 /sound/ 8244949
+	Write New Track start. 12495477 /sound/ 8244949
+	Write New Track Done. 12495477 /sound/ 8244949
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/8244949/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3572870/
+	Track  doesn't in db: 12495477 /sound/ 3572870
+	Write New Track start. 12495477 /sound/ 3572870
+	Write New Track Done. 12495477 /sound/ 3572870
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3572870/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/5791180/
+	Track  doesn't in db: 12495477 /sound/ 5791180
+	Write New Track start. 12495477 /sound/ 5791180
+	Write New Track Done. 12495477 /sound/ 5791180
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/5791180/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3994486/
+	Track  doesn't in db: 12495477 /sound/ 3994486
+	Write New Track start. 12495477 /sound/ 3994486
+	Write New Track Done. 12495477 /sound/ 3994486
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3994486/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/5910583/
+	Track  doesn't in db: 12495477 /sound/ 5910583
+	Write New Track start. 12495477 /sound/ 5910583
+	Write New Track Done. 12495477 /sound/ 5910583
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/5910583/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/8628624/
+	Track  doesn't in db: 12495477 /sound/ 8628624
+	Write New Track start. 12495477 /sound/ 8628624
+	Write New Track Done. 12495477 /sound/ 8628624
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/8628624/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3700166/
+	Track  doesn't in db: 12495477 /sound/ 3700166
+	Write New Track start. 12495477 /sound/ 3700166
+	Write New Track Done. 12495477 /sound/ 3700166
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3700166/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/6611211/
+	Track  doesn't in db: 12495477 /sound/ 6611211
+	Write New Track start. 12495477 /sound/ 6611211
+	Write New Track Done. 12495477 /sound/ 6611211
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/6611211/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/4689372/
+	Track  doesn't in db: 12495477 /sound/ 4689372
+	Write New Track start. 12495477 /sound/ 4689372
+	Write New Track Done. 12495477 /sound/ 4689372
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/4689372/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/7573500/
+	Track  doesn't in db: 12495477 /sound/ 7573500
+	Write New Track start. 12495477 /sound/ 7573500
+	Write New Track Done. 12495477 /sound/ 7573500
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/7573500/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3807581/
+	Track  doesn't in db: 12495477 /sound/ 3807581
+	Write New Track start. 12495477 /sound/ 3807581
+	Write New Track Done. 12495477 /sound/ 3807581
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3807581/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/7465625/
+	Track  doesn't in db: 12495477 /sound/ 7465625
+	Write New Track start. 12495477 /sound/ 7465625
+	Write New Track Done. 12495477 /sound/ 7465625
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/7465625/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3390526/
+	Track  doesn't in db: 12495477 /sound/ 3390526
+	Write New Track start. 12495477 /sound/ 3390526
+	Write New Track Done. 12495477 /sound/ 3390526
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3390526/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3572902/
+	Track  doesn't in db: 12495477 /sound/ 3572902
+	Write New Track start. 12495477 /sound/ 3572902
+	Write New Track Done. 12495477 /sound/ 3572902
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3572902/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/7933891/
+	Track  doesn't in db: 12495477 /sound/ 7933891
+	Write New Track start. 12495477 /sound/ 7933891
+	Write New Track Done. 12495477 /sound/ 7933891
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/7933891/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/6336540/
+	Track  doesn't in db: 12495477 /sound/ 6336540
+	Write New Track start. 12495477 /sound/ 6336540
+	Write New Track Done. 12495477 /sound/ 6336540
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/6336540/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/5699062/
+	Track  doesn't in db: 12495477 /sound/ 5699062
+	Write New Track start. 12495477 /sound/ 5699062
+	Write New Track Done. 12495477 /sound/ 5699062
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/5699062/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3513658/
+	Track  doesn't in db: 12495477 /sound/ 3513658
+	Write New Track start. 12495477 /sound/ 3513658
+	Write New Track Done. 12495477 /sound/ 3513658
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3513658/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/4450021/
+	Track  doesn't in db: 12495477 /sound/ 4450021
+	Write New Track start. 12495477 /sound/ 4450021
+	Write New Track Done. 12495477 /sound/ 4450021
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/4450021/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/10476708/
+	Track  doesn't in db: 12495477 /sound/ 10476708
+	Write New Track start. 12495477 /sound/ 10476708
+	Write New Track Done. 12495477 /sound/ 10476708
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/10476708/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3699974/
+	Track  doesn't in db: 12495477 /sound/ 3699974
+	Write New Track start. 12495477 /sound/ 3699974
+	Write New Track Done. 12495477 /sound/ 3699974
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3699974/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/4604604/
+	Track  doesn't in db: 12495477 /sound/ 4604604
+	Write New Track start. 12495477 /sound/ 4604604
+	Write New Track Done. 12495477 /sound/ 4604604
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/4604604/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/7146116/
+	Track  doesn't in db: 12495477 /sound/ 7146116
+	Write New Track start. 12495477 /sound/ 7146116
+	Write New Track Done. 12495477 /sound/ 7146116
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/7146116/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/9014117/
+	Track  doesn't in db: 12495477 /sound/ 9014117
+	Write New Track start. 12495477 /sound/ 9014117
+	Write New Track Done. 12495477 /sound/ 9014117
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/9014117/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/10102620/
+	Track  doesn't in db: 12495477 /sound/ 10102620
+	Write New Track start. 12495477 /sound/ 10102620
+	Write New Track Done. 12495477 /sound/ 10102620
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/10102620/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3326970/
+	Track  doesn't in db: 12495477 /sound/ 3326970
+	Write New Track start. 12495477 /sound/ 3326970
+	Write New Track Done. 12495477 /sound/ 3326970
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3326970/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/4315000/
+	Track  doesn't in db: 12495477 /sound/ 4315000
+	Write New Track start. 12495477 /sound/ 4315000
+	Write New Track Done. 12495477 /sound/ 4315000
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/4315000/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/6831282/
+	Track  doesn't in db: 12495477 /sound/ 6831282
+	Write New Track start. 12495477 /sound/ 6831282
+	Write New Track Done. 12495477 /sound/ 6831282
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/6831282/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/4541813/
+	Track  doesn't in db: 12495477 /sound/ 4541813
+	Write New Track start. 12495477 /sound/ 4541813
+	Write New Track Done. 12495477 /sound/ 4541813
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/4541813/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/7711024/
+	Track  doesn't in db: 12495477 /sound/ 7711024
+	Write New Track start. 12495477 /sound/ 7711024
+	Write New Track Done. 12495477 /sound/ 7711024
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/7711024/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/10290730/
+	Track  doesn't in db: 12495477 /sound/ 10290730
+	Write New Track start. 12495477 /sound/ 10290730
+	Write New Track Done. 12495477 /sound/ 10290730
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/10290730/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/8460468/
+	Track  doesn't in db: 12495477 /sound/ 8460468
+	Write New Track start. 12495477 /sound/ 8460468
+	Write New Track Done. 12495477 /sound/ 8460468
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/8460468/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3564838/
+	Track  doesn't in db: 12495477 /sound/ 3564838
+	Write New Track start. 12495477 /sound/ 3564838
+	Write New Track Done. 12495477 /sound/ 3564838
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3564838/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/6180663/
+	Track  doesn't in db: 12495477 /sound/ 6180663
+	Write New Track start. 12495477 /sound/ 6180663
+	Write New Track Done. 12495477 /sound/ 6180663
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/6180663/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/4334209/
+	Track  doesn't in db: 12495477 /sound/ 4334209
+	Write New Track start. 12495477 /sound/ 4334209
+	Write New Track Done. 12495477 /sound/ 4334209
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/4334209/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/6510483/
+	Track  doesn't in db: 12495477 /sound/ 6510483
+	Write New Track start. 12495477 /sound/ 6510483
+	Write New Track Done. 12495477 /sound/ 6510483
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/6510483/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/5462621/
+	Track  doesn't in db: 12495477 /sound/ 5462621
+	Write New Track start. 12495477 /sound/ 5462621
+	Write New Track Done. 12495477 /sound/ 5462621
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/5462621/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/9951379/
+	Track  doesn't in db: 12495477 /sound/ 9951379
+	Write New Track start. 12495477 /sound/ 9951379
+	Write New Track Done. 12495477 /sound/ 9951379
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/9951379/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/4763961/
+	Track  doesn't in db: 12495477 /sound/ 4763961
+	Write New Track start. 12495477 /sound/ 4763961
+	Write New Track Done. 12495477 /sound/ 4763961
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/4763961/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/5369212/
+	Track  doesn't in db: 12495477 /sound/ 5369212
+	Write New Track start. 12495477 /sound/ 5369212
+	Write New Track Done. 12495477 /sound/ 5369212
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/5369212/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/8385115/
+	Track  doesn't in db: 12495477 /sound/ 8385115
+	Write New Track start. 12495477 /sound/ 8385115
+	Write New Track Done. 12495477 /sound/ 8385115
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/8385115/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/9427338/
+	Track  doesn't in db: 12495477 /sound/ 9427338
+	Write New Track start. 12495477 /sound/ 9427338
+	Write New Track Done. 12495477 /sound/ 9427338
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/9427338/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/4958741/
+	Track  doesn't in db: 12495477 /sound/ 4958741
+	Write New Track start. 12495477 /sound/ 4958741
+	Write New Track Done. 12495477 /sound/ 4958741
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/4958741/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3456817/
+	Track  doesn't in db: 12495477 /sound/ 3456817
+	Write New Track start. 12495477 /sound/ 3456817
+	Write New Track Done. 12495477 /sound/ 3456817
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3456817/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3605373/
+	Track  doesn't in db: 12495477 /sound/ 3605373
+	Write New Track start. 12495477 /sound/ 3605373
+	Write New Track Done. 12495477 /sound/ 3605373
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3605373/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/11032461/
+	Track  doesn't in db: 12495477 /sound/ 11032461
+	Write New Track start. 12495477 /sound/ 11032461
+	Write New Track Done. 12495477 /sound/ 11032461
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/11032461/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/6722393/
+	Track  doesn't in db: 12495477 /sound/ 6722393
+	Write New Track start. 12495477 /sound/ 6722393
+	Write New Track Done. 12495477 /sound/ 6722393
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/6722393/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/6081419/
+	Track  doesn't in db: 12495477 /sound/ 6081419
+	Write New Track start. 12495477 /sound/ 6081419
+	Write New Track Done. 12495477 /sound/ 6081419
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/6081419/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/7268443/
+	Track  doesn't in db: 12495477 /sound/ 7268443
+	Write New Track start. 12495477 /sound/ 7268443
+	Write New Track Done. 12495477 /sound/ 7268443
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/7268443/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/8810251/
+	Track  doesn't in db: 12495477 /sound/ 8810251
+	Write New Track start. 12495477 /sound/ 8810251
+	Write New Track Done. 12495477 /sound/ 8810251
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/8810251/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/5153815/
+	Track  doesn't in db: 12495477 /sound/ 5153815
+	Write New Track start. 12495477 /sound/ 5153815
+	Write New Track Done. 12495477 /sound/ 5153815
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/5153815/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/11127116/
+	Track  doesn't in db: 12495477 /sound/ 11127116
+	Write New Track start. 12495477 /sound/ 11127116
+	Write New Track Done. 12495477 /sound/ 11127116
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/11127116/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/9774254/
+	Track  doesn't in db: 12495477 /sound/ 9774254
+	Write New Track start. 12495477 /sound/ 9774254
+	Write New Track Done. 12495477 /sound/ 9774254
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/9774254/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/3269196/
+	Track  doesn't in db: 12495477 /sound/ 3269196
+	Write New Track start. 12495477 /sound/ 3269196
+	Write New Track Done. 12495477 /sound/ 3269196
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/3269196/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/4879264/
+	Track  doesn't in db: 12495477 /sound/ 4879264
+	Write New Track start. 12495477 /sound/ 4879264
+	Write New Track Done. 12495477 /sound/ 4879264
+the track write into db done. 
+	http://www.ximalaya.com/12495477/sound/4879264/
+
+start write the track into db. 
+	http://www.ximalaya.com/12495477/sound/9139514/
+	Track  doesn't in db: 12495477 /sound/ 9139514
+	Write New Track start. 12495477 /sound/ 9139514
+	Write New Track Done

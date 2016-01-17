@@ -1,0 +1,1217 @@
+
+    <!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>The Flask Mega-Tutorial</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <div id="main">
+ <div class="post">
+  <p class="date">
+   <span class="flask-moment" data-format="format('LL')" data-refresh="0" data-timestamp="2012-12-16T07:53:39Z">
+    2012-12-16T07:53:39Z
+   </span>
+  </p>
+  <h1 class="post-title">
+   <a href="/post/the-flask-mega-tutorial-part-xii-facelift">
+    The Flask Mega-Tutorial, Part XII: Facelift
+   </a>
+  </h1>
+  <div class="post_body">
+   <p>
+    This is the twelfth article in the series in which I document my experience writing web applications in
+    <a href="http://python.org">
+     Python
+    </a>
+    using the
+    <a href="http://flask.pocoo.org">
+     Flask
+    </a>
+    microframework.
+   </p>
+   <p>
+    The goal of the tutorial series is to develop a decently featured microblogging application that demonstrating total lack of originality I have decided to call
+    <code>
+     microblog
+    </code>
+    .
+   </p>
+   <p>
+    <strong>
+     NOTE
+    </strong>
+    : This article was revised in September 2014 to be in sync with current versions of Python and Flask.
+   </p>
+   <p>
+    Here is an index of all the articles in the series that have been published to date:
+   </p>
+   <ul>
+    <li>
+     <a href="the-flask-mega-tutorial-part-i-hello-world">
+      Part I: Hello, World!
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-ii-templates">
+      Part II: Templates
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-iii-web-forms">
+      Part III: Web Forms
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-iv-database">
+      Part IV: Database
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-v-user-logins">
+      Part V: User Logins
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-vi-profile-page-and-avatars">
+      Part VI: Profile Page And Avatars
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-vii-unit-testing">
+      Part VII: Unit Testing
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-viii-followers-contacts-and-friends">
+      Part VIII: Followers, Contacts And Friends
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-ix-pagination">
+      Part IX: Pagination
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-x-full-text-search">
+      Part X: Full Text Search
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xi-email-support">
+      Part XI: Email Support
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xii-facelift">
+      Part XII: Facelift
+     </a>
+     (this article)
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xiii-dates-and-times">
+      Part XIII: Dates and Times
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xiv-i18n-and-l10n">
+      Part XIV: I18n and L10n
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xv-ajax">
+      Part XV: Ajax
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xvi-debugging-testing-and-profiling">
+      Part XVI: Debugging, Testing and Profiling
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xvii-deployment-on-linux-even-on-the-raspberry-pi">
+      Part XVII: Deployment on Linux (even on the Raspberry Pi!)
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud">
+      Part XVIII: Deployment on the Heroku Cloud
+     </a>
+    </li>
+   </ul>
+   <h2>
+    Introduction
+   </h2>
+   <p>
+    If you have been playing with the
+    <code>
+     microblog
+    </code>
+    application you must have noticed that we haven't spent too much time on its looks. Up to now the templates we put together were pretty basic, with absolutely no styling. This was useful, because we did not want the distraction of having to write good looking HTML when we were coding.
+   </p>
+   <p>
+    But we've been hard at work coding for a while now, so today we are taking a break and will see what we can do to make our application look a bit more appealing to our users.
+   </p>
+   <p>
+    This article is going to be different than previous ones because writing good looking HTML/CSS is a vast topic that falls outside of the intended scope of this series. There won't be any detailed HTML or CSS, we will just discuss basic guidelines and ideas so on how to approach the task.
+   </p>
+   <h2>
+    How do we do this?
+   </h2>
+   <p>
+    While we can argue that coding is hard, our pains are nothing compared to those of web designers, who have to write templates that have a nice and consistent look on a list of web browsers, most with obscure bugs or quirks. And in this modern age they not only need to make their designs look good on regular browsers but also on the resource limited browsers of tablets and smartphones.
+   </p>
+   <p>
+    Unfortunately, learning HTML, CSS and Javascript and on top of that being aware of the idiosyncrasies of each web browser is a task of uncertain dimensions. We really do not have time (or interest) to do that. We just want our application to look decent without having to invest a lot of energy.
+   </p>
+   <p>
+    So how can we approach the task of styling
+    <code>
+     microblog
+    </code>
+    with these constraints?
+   </p>
+   <h2>
+    Introducing Bootstrap
+   </h2>
+   <p>
+    Our good friends at Twitter have released an open source web framework called
+    <a href="http://twitter.github.com/bootstrap/index.html">
+     Bootstrap
+    </a>
+    that might be our winning ticket.
+   </p>
+   <p>
+    Bootstrap is a collection of CSS and Javascript utilities for the most common types of web pages. If you want to see the kind of pages that can be designed with this framework here are some
+    <a href="http://getbootstrap.com/2.3.2/getting-started.html#examples">
+     examples
+    </a>
+    .
+   </p>
+   <p>
+    These are some of the things Bootstrap is good at:
+   </p>
+   <ul>
+    <li>
+     Similar looks in all major web browsers
+    </li>
+    <li>
+     Handling of desktop, tablet and phone screen sizes
+    </li>
+    <li>
+     Customizable layouts
+    </li>
+    <li>
+     Fully styled navigation bars
+    </li>
+    <li>
+     Fully styled forms
+    </li>
+    <li>
+     And much, much more...
+    </li>
+   </ul>
+   <h2>
+    Bootstrapping
+    <code>
+     microblog
+    </code>
+   </h2>
+   <p>
+    Before we can add Bootstrap to our application we have to install the Bootstrap CSS, Javascript and image files in a place where our web server can find them.
+   </p>
+   <p>
+    In Flask applications the
+    <code>
+     app/static
+    </code>
+    folder is where regular files go. The web server knows to go look for files in these location when a URL has a
+    <code>
+     /static
+    </code>
+    prefix.
+   </p>
+   <p>
+    For example, if we store a file named
+    <code>
+     image.png
+    </code>
+    in
+    <code>
+     /app/static
+    </code>
+    then in an HTML template we can display the image with the following tag:
+   </p>
+   <pre><code>&lt;img src="/static/image.png" /&gt;
+</code></pre>
+   <p>
+    We will install the Bootstrap framework according to the following structure:
+   </p>
+   <pre><code>/app
+    /static
+        /css
+            bootstrap.min.css
+            bootstrap-responsive.min.css
+        /img
+            glyphicons-halflings.png
+            glyphicons-halflings-white.png
+        /js
+            bootstrap.min.js
+</code></pre>
+   <p>
+    Then in the
+    <code>
+     head
+    </code>
+    section of our base template we load the framework according to the
+    <a href="http://getbootstrap.com/2.3.2/getting-started.html#html-template">
+     instructions
+    </a>
+    :
+   </p>
+   <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    ...
+    &lt;link href="/static/css/bootstrap.min.css" rel="stylesheet" media="screen"&gt;
+    &lt;link href="/static/css/bootstrap-responsive.min.css" rel="stylesheet"&gt;
+    &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+    &lt;script src="/static/js/bootstrap.min.js"&gt;&lt;/script&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    ...
+  &lt;/head&gt;
+  ...
+&lt;/html&gt;
+</code></pre>
+   <p>
+    The
+    <code>
+     link
+    </code>
+    and
+    <code>
+     script
+    </code>
+    tags load the CSS and Javascript files that come with Bootstrap. Note that one of the required Javascript files is
+    <a href="http://jquery.com">
+     jQuery
+    </a>
+    , which is used by some of the Bootstrap plugins.
+   </p>
+   <p>
+    The
+    <code>
+     meta
+    </code>
+    tag enables Bootstrap's
+    <a href="http://getbootstrap.com/2.3.2/scaffolding.html#responsive">
+     responsive
+    </a>
+    mode, which scales the page appropriately for desktops, tablets and smartphones.
+   </p>
+   <p>
+    With these changes incorporated into our
+    <code>
+     base.html
+    </code>
+    template we are ready to start implementing Bootstrap, which simply involves changing the HTML in our templates.
+   </p>
+   <p>
+    The changes that we will make are:
+   </p>
+   <ul>
+    <li>
+     Enclose the entire page contents in a single column
+     <a href="http://getbootstrap.com/2.3.2/scaffolding.html#layouts">
+      fixed layout
+     </a>
+     with
+     <a href="http://getbootstrap.com/2.3.2/scaffolding.html#responsive">
+      responsive features
+     </a>
+     .
+    </li>
+    <li>
+     Adapt all forms to use Bootstrap
+     <a href="http://getbootstrap.com/2.3.2/base-css.html#forms">
+      form styles
+     </a>
+     .
+    </li>
+    <li>
+     Replace our navigation bar with a
+     <a href="http://getbootstrap.com/2.3.2/components.html#navbar">
+      Navbar
+     </a>
+     .
+    </li>
+    <li>
+     Convert the previous and next pagination links to
+     <a href="http://getbootstrap.com/2.3.2/components.html#pagination">
+      Pager
+     </a>
+     buttons.
+    </li>
+    <li>
+     Use the Boostrap
+     <a href="http://getbootstrap.com/2.3.2/components.html#alerts">
+      alert styles
+     </a>
+     for flashed messages.
+    </li>
+    <li>
+     Use
+     <a href="http://getbootstrap.com/2.3.2/base-css.html#images">
+      styled images
+     </a>
+     to represent the suggested OpenID providers in the login form.
+    </li>
+   </ul>
+   <p>
+    We will not discuss the specific changes to achieve the above since these are pretty simple. For those interested, the actual changes can be viewed in diff form on this
+    <a href="https://github.com/miguelgrinberg/microblog/commit/56d1d46326a79d9a3b9b6178ac02fe75c89625ad">
+     github commit
+    </a>
+    . The Bootstrap reference
+    <a href="http://getbootstrap.com/2.3.2/scaffolding.html">
+     documentation
+    </a>
+    will be useful when trying to analyze the new
+    <code>
+     microblog
+    </code>
+    templates.
+   </p>
+   <p>
+    <strong>
+     Note
+    </strong>
+    : At the time this tutorial was written the current version of Bootstrap was 2.3.2. Twitter has released a new major version since then, and with it several of the CSS classes have changed. Visit the
+    <a href="http://getbootstrap.com">
+     Bootstrap site
+    </a>
+    for more information.
+   </p>
+   <h2>
+    Final words
+   </h2>
+   <p>
+    Today we've made the promise to not write a single line of code, and we stuck to it. All the improvements we've made were done with edits to the template files.
+   </p>
+   <p>
+    To give you an idea of the magnitude of the transformation, here are a few before and after screenshots. Click on the images to enlarge.
+   </p>
+   <div style="text-align: center;">
+    <a class="gallery" href="/static/images/flask-mega-tutorial-part-xii-1.jpg" title="Login page -- Before">
+     <img src="/static/images/flask-mega-tutorial-part-xii-1-icon.jpg"/>
+    </a>
+   </div>
+   <div style="text-align: center;">
+    <a class="gallery" href="/static/images/flask-mega-tutorial-part-xii-2.jpg" title="Login page -- After">
+     <img src="/static/images/flask-mega-tutorial-part-xii-2-icon.jpg"/>
+    </a>
+   </div>
+   <div style="text-align: center;">
+    <a class="gallery" href="/static/images/flask-mega-tutorial-part-xii-3.jpg" title="Index page -- Before">
+     <img src="/static/images/flask-mega-tutorial-part-xii-3-icon.jpg"/>
+    </a>
+   </div>
+   <div style="text-align: center;">
+    <a class="gallery" href="/static/images/flask-mega-tutorial-part-xii-4.jpg" title="Index page -- After">
+     <img src="/static/images/flask-mega-tutorial-part-xii-4-icon.jpg"/>
+    </a>
+   </div>
+   <p>
+    The updated application can be downloaded below:
+   </p>
+   <p>
+    Download
+    <a href="https://github.com/miguelgrinberg/microblog/archive/version-0.12.zip">
+     microblog-0.12.zip
+    </a>
+    .
+   </p>
+   <p>
+    In the next chapter we will look at improving the formatting of dates and times in our application. I look forward to see you then!
+   </p>
+   <p>
+    Miguel
+   </p>
+  </div>
+  <div class="social-bar">
+   <table>
+    <tr>
+     <td>
+      <div class="social-box" style="padding-top: 8px;">
+       <a class="twitter-share-button" data-count="vertical" data-url="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xii-facelift" data-via="miguelgrinberg" href="https://twitter.com/share">
+        Tweet
+       </a>
+      </div>
+     </td>
+     <td>
+      <div class="social-box" style="padding-left: 6px;">
+       <div class="fb-like" data-font="verdana" data-href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xii-facelift" data-layout="box_count" data-send="false" data-show-faces="false" data-width="450">
+       </div>
+      </div>
+     </td>
+     <td>
+      <div class="social-box" style="padding-top: 8px;">
+       <g:plusone href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xii-facelift" size="tall">
+       </g:plusone>
+      </div>
+     </td>
+     <td>
+      <div class="social-box" style="padding-top: 8px;">
+       <script data-counter="top" data-url="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xii-facelift" type="IN/Share">
+       </script>
+      </div>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <h4 style="text-align: right">
+   <a name="comments">
+   </a>
+   29 comments
+  </h4>
+  <div class="comment">
+   <ul>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/d1cd1ea7e5bae8f4527da4a166419e20?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #1
+       </span>
+       <span class="label label-primary">
+        sat
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2012-12-19T12:48:23Z">
+        2012-12-19T12:48:23Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        i am new to web template languages can u plz tell me how can i call the python function in submit button Eg; click on submit for storing the data
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #2
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2012-12-22T23:20:33Z">
+        2012-12-22T23:20:33Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @sat: If you start this tutorial series from the beginning you will learn how to handle web forms. Good luck.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/53d8002b748b83ec10a0b63038b4af46?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #3
+       </span>
+       <span class="label label-primary">
+        Bryan
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2012-12-28T01:06:52Z">
+        2012-12-28T01:06:52Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        the downloadable base.html is missing the flash stuff from the earlier tutorial	eg {% with messages = get_flashed_messages() %}   -- is that somehow subsumed within the bootstrap nav or container??
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #4
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2012-12-28T07:52:57Z">
+        2012-12-28T07:52:57Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Bryan: the flashed messages did not look good that high in the page after I put in the bootstrap styling, so I abstracted those into a subtemplate (see file app/templates/flash.html on github) that is included from index.html, edit.html, etc. This just moves the flashed messages down to after the page specific headers, which looks much nicer.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/2be1ec99a9c5a9eebe2e2362502c6269?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #5
+       </span>
+       <span class="label label-primary">
+        ron
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2012-12-30T01:30:33Z">
+        2012-12-30T01:30:33Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        nice work. I like the links to the frameworks extensions, they really help with keeping up with new development.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/2c02c167f88ee80d03aa6d3b489ca935?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #6
+       </span>
+       <span class="label label-primary">
+        George Mabley
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-02-21T00:27:27Z">
+        2013-02-21T00:27:27Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Well...  I'm back with another question.  I replaced the bootstrap.min.css file with a theme from http://bootswatch.com/.  Everything went well and the changes were as expected, but I wanted to try out a few others just to see.  I replaced the file just as before, only to refresh and see that nothing changed.  I tried another theme, and still no changes.  I turned off the server and completely replaced all of my bootstrap files expecting to go back to default, but it is still the same first theme.  Even when running your run.py directly from the microblog-0.12 folder I get the first theme I tried.  I am dumbfounded as to where it is even getting the data it needs to show this theme.  Could you think of how to get rid of it?
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #7
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-02-21T00:49:13Z">
+        2013-02-21T00:49:13Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @George: try using a different web browser, one that you haven't used before for microblog on this computer. If that gives you the correct theme then the other browser has the files from the old theme in its cache. Unfortunately many browser assume static files never change. While this does not directly apply to your case, see the following stack overflow question for some ideas on how to force browsers to reload files: http://stackoverflow.com/questions/126772/how-to-force-a-web-browser-not-to-cache-images
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/f69faf9f8809a70f215ab961293bf58b?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #8
+       </span>
+       <span class="label label-primary">
+        Lucas
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-04-26T21:42:01Z">
+        2013-04-26T21:42:01Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Thank you for this awesome tutorial ! Flask is really... woaw
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/c0f27411f4befbb8e61e9e5ad35c297f?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #9
+       </span>
+       <span class="label label-primary">
+        <a href="www.jewellsmusicstudio.tk">
+         Paul Jewell
+        </a>
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-05-14T20:59:14Z">
+        2013-05-14T20:59:14Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Hello, I have a basically static website I am trying to convert from apache to flask to use some database applications in it. Things have gone well until I has some CSS which had links in it. For example background-image: url("SRC"); How do you point the src correctly to the file when it is in the css instead of the html?
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/6be8a8215f7393dd1881d12da3edfa01?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #10
+       </span>
+       <span class="label label-primary">
+        scott robinett
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-11-27T00:58:44Z">
+        2013-11-27T00:58:44Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        very nice, I just came across bootstrap and needed a concise tutorial.  Thank you very much.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/0952c4a2c08421aecb397d3a81545f6e?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #11
+       </span>
+       <span class="label label-primary">
+        Joshua Grigonis
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-12-17T17:07:32Z">
+        2013-12-17T17:07:32Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Bootstrap seems to have moved.
+
+http://getbootstrap.com/
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/8f5bf46b4a5478ecc7dc8c10bca103b2?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #12
+       </span>
+       <span class="label label-primary">
+        Zorba
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2014-06-24T17:53:33Z">
+        2014-06-24T17:53:33Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Hey Miguel, excellent tutorial! 
+Got everything working just great, but I'm having a problem with loading the external files:
+127.0.0.1 - - [24/Jun/2014 20:51:34] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [24/Jun/2014 20:51:34] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 500 -
+127.0.0.1 - - [24/Jun/2014 20:51:34] "GET /static/bootstrap/css/bootstrap-responsive.min.css HTTP/1.1" 500 -
+127.0.0.1 - - [24/Jun/2014 20:51:34] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 500 -
+
+Got any idea on what could cause this? Haven't touched the css or js files, and the site loads just fine, only without the styling.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #13
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2014-06-25T02:41:11Z">
+        2014-06-25T02:41:11Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Zorba: you are getting a 500 error, that means that the application raised an exception. Run in debug mode to get a stack trace, that will give you more clues.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/e83c3294a8b119c0759bca10b843a4bb?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #14
+       </span>
+       <span class="label label-primary">
+        Robert Wingard
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2014-07-09T18:40:44Z">
+        2014-07-09T18:40:44Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Great tutorial! I just started working with Flask and Bootstrap. I'm sure I'm missing something, but trying to use the themes from Bootswatch didn't go as planned using the flask-bootstrap plugin. Following your method, using the static folder etc., I was easily able to get the Bootswatch themes working. Thanks!
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/396da6ffb6ac7eca3e3c6886cc6ba702?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #15
+       </span>
+       <span class="label label-primary">
+        Batat
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2014-08-28T10:52:33Z">
+        2014-08-28T10:52:33Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Why don't you use {{ url_for('static') }} in templates?
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #16
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2014-08-30T05:51:38Z">
+        2014-08-30T05:51:38Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Batat: this is an old article, you are correct, I should have used url_for to link to static files.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/9020985739a08a81e3b9324c62382e4e?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #17
+       </span>
+       <span class="label label-primary">
+        Murtuza Z
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2014-12-08T11:40:11Z">
+        2014-12-08T11:40:11Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Hi Miguel ,
+
+Thank you so much for fantastic mega tutorial.
+Helps us a lot learning Flask.
+
+Greetings from India :)
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/ee880b38dd998a0b21f969387e9f87be?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #18
+       </span>
+       <span class="label label-primary">
+        Jignesh Vasoya
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2015-02-05T12:10:12Z">
+        2015-02-05T12:10:12Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        I have found that once user logged in using openID (google account), same user can jump to other user's profile page(if logged in user names nickname of other user).
+I have made following code modifications to restrict logged in user to access other users profile:
+############## views.py: at the beginning of view "user"
+if current_user.nickname != nickname:
+        flash('Can not access other user's profile page!')
+        return redirect(url_for('index'))
+####################
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #19
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2015-02-06T05:36:42Z">
+        2015-02-06T05:36:42Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Jignesh: This is by design. When you go to Facebook/Twitter/etc. you can see the profile page of any user.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/79980195d69b0608f70b2dea32be790f?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #20
+       </span>
+       <span class="label label-primary">
+        Kai
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2015-02-27T07:58:01Z">
+        2015-02-27T07:58:01Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Hi Miguel,
+
+great tutorial but in this case I would have liked to get some more Details - e.g.:
+
+&lt;form class="form" action="" method="post" name="login"&gt;
+
+This is a line from the Login-Form. Does the name have to match with the name of the function in the views.py or is it just a name?
+
+I like to read code and try to understand it to adapt it to my needs if possible, but sometimes the "links" are not exactly clear...
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #21
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2015-02-27T15:37:52Z">
+        2015-02-27T15:37:52Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Kai: the form name is used to access the form from Javascript. It does not need to match the name you give it in the code.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/6b77cf3e731e8a28b4c6caa3f0f93282?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #22
+       </span>
+       <span class="label label-primary">
+        Wang Qiang
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2015-03-06T08:26:52Z">
+        2015-03-06T08:26:52Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Hi Miguel ,
+
+Thank you so much for your great tutorial and blog.It helps us a lot for learning python and Flask.
+
+I found a link mistake in this chapter as below:
+&lt;link href="/static/css/bootstrap-responsive.css" rel="stylesheet"&gt;
+It should be :&lt;link href="/static/css/bootstrap-responsive.min.css" rel="stylesheet"&gt;
+
+Finally, thanks so much for your effort.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/d1cd1ea7e5bae8f4527da4a166419e20?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #23
+       </span>
+       <span class="label label-primary">
+        Sat
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2015-03-19T19:14:51Z">
+        2015-03-19T19:14:51Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Hi Miguel,
+
+I was tried to popup window with ajax form submission from button click action, main form has 3 buttons for different actions. When I tried with flask I not able to create popup but same code working with separate html file. Can please share some details flask with popups
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #24
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2015-03-21T22:02:02Z">
+        2015-03-21T22:02:02Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Sat: Flask has nothing to do with the popups, which happen entirely in the client side. Look at your javascript console to see if there are any errors, maybe the template that includes the javascript logic has a problem.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/61d2bc0830d4865a62c42c5e23a8c85f?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #25
+       </span>
+       <span class="label label-primary">
+        JustHowIDidIt
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2015-08-11T00:34:59Z">
+        2015-08-11T00:34:59Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        For all the people that are trying to replace bootstrap base css with something from bootswatch, I did it by loading the same file last.  Basically I derived from bootswatch/base.html as a new base template, then derive all my pages from that template, like this:
+
+{% extends "bootstrap/base.html" %}
+{% block title %}An intermediate base template{% endblock %}
+
+{% block navbar %}
+{{nav.top.render()}}
+{% endblock %}
+
+{% block body %}
+{{super()}}
+&lt;link rel="stylesheet" type="text/css" href="/static/bootswatch/cyborg/bootstrap.min.css"&gt;
+{% endblock %}
+
+Then when you derive from it using content or body templates, it puts the content above the end of body and adds the additional line for the bootstrap.min.css at the end of the body just before &lt;/body&gt;
+       </p>
+      </div>
+     </div>
+    </li>
+   </ul>
+  </div>
+  <div class="page">
+   <ul class="pager">
+    <li class="previous disabled">
+     <a href="#">
+      ««
+     </a>
+    </li>
+    <li class="previous disabled">
+     <a href="#">
+      «
+     </a>
+    </li>
+    <li class="next">
+     <a href="/post/the-flask-mega-tutorial-part-xii-facelift/page/0#comments">
+      »»
+     </a>
+    </li>
+    <li class="next">
+     <a href="/post/the-flask-mega-tutorial-part-xii-facelift/page/2#comments">
+      »
+     </a>
+    </li>
+   </ul>
+  </div>
+  <h3>
+   <a name="commentform">
+   </a>
+   Leave a Comment
+  </h3>
+  <form action="#commentform" class="form" method="post" role="form">
+   <div style="display:none;">
+    <input id="csrf_token" name="csrf_token" type="hidden" value="1452908237.57##a9a83447ae5b6c7b452ddf2fdf39715cbc128cf1"/>
+   </div>
+   <div class="form-group ">
+    <label class="control-label" for="name">
+     Name
+    </label>
+    <input class="form-control" id="name" name="name" required="" type="text" value=""/>
+   </div>
+   <div class="form-group ">
+    <label class="control-label" for="url">
+     URL
+    </label>
+    <input class="form-control" id="url" name="url" type="text" value=""/>
+   </div>
+   <div class="form-group ">
+    <label class="control-label" for="email">
+     Email
+    </label>
+    <input class="form-control" id="email" name="email" required="" type="text" value=""/>
+   </div>
+   <div class="form-group ">
+    <label class="control-label" for="comment">
+     Comment
+    </label>
+    <textarea class="form-control" id="comment" name="comment" required="">
+    </textarea>
+   </div>
+   <div class="form-group ">
+    <label class="control-label" for="captcha">
+     Captcha
+    </label>
+    <script type="text/javascript">
+     var RecaptchaOptions = {"custom_translations": {"audio_challenge": "Get an audio challenge", "cant_hear_this": "Download sound as MP3", "help_btn": "Help", "image_alt_text": "reCAPTCHA challenge image", "incorrect_try_again": "Incorrect. Try again.", "instructions_audio": "Type what you hear", "instructions_visual": "Type the text", "play_again": "Play sound again", "privacy_and_terms": "Privacy & Terms", "refresh_btn": "Get a new challenge", "visual_challenge": "Get a visual challenge"}, "theme": "white"};
+    </script>
+    <script src="//www.google.com/recaptcha/api/challenge?k=6Ld5Zs4SAAAAAOY0DOi4r18bgHlEaz41qAoRf__S" type="text/javascript">
+    </script>
+    <noscript>
+     <iframe frameborder="0" height="300" src="//www.google.com/recaptcha/api/noscript?k=6Ld5Zs4SAAAAAOY0DOi4r18bgHlEaz41qAoRf__S" width="500">
+     </iframe>
+     <br/>
+     <textarea cols="40" name="recaptcha_challenge_field" rows="3">
+     </textarea>
+     <input name="recaptcha_response_field" type="hidden" value="manual_challenge"/>
+    </noscript>
+   </div>
+   <input class="btn btn-default" id="submit" name="submit" type="submit" value="Submit"/>
+  </form>
+ </div>
+</div>
+
+    </html>
+    

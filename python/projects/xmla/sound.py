@@ -30,9 +30,11 @@ if __name__ == '__main__':
             # url = 'http://www.ximalaya.com/1000168/album/213506/'  # 小晓说
             
             # url = 'http://www.ximalaya.com/22366783/album/2685288/'  # 读读书
-            # url = 'http://www.ximalaya.com/12495477/album/269179/'  # 吴晓波频道   
+            url = 'http://www.ximalaya.com/12495477/album/269179/'  # 吴晓波频道   
             # url = 'http://www.ximalaya.com/39200626/album/3385980/'  # 静说日本   
-            url = 'http://www.ximalaya.com/11119867/album/262212/'  # 潘吉Jenny告诉你--学英语聊美国   
+            # url = 'http://www.ximalaya.com/11119867/album/262212/'  # 潘吉Jenny告诉你--学英语聊美国   
+            # url = 'http://www.ximalaya.com/38212466/album/3492675/'  # 偏见
+            # url = 'http://www.ximalaya.com/16174533/album/3340045/'  # 你不恐慌，我不入场
         if url == 'bye': exit(1)
             
         print url        

@@ -81,6 +81,7 @@ class XMLYSession(requests.Session):
         
         print '\t Start getItemsOnPages _type= ', _type, 'From : ', url
         item_list = []
+        # NOTE: for 'albumSound' is a dictionary
         
         res = self.getData(url)
         soup = BeautifulSoup(res.content, 'lxml')
@@ -108,16 +109,28 @@ class XMLYSession(requests.Session):
                 item_list.extend(sound_ids)
                 
             elif _type == 'albumSound':
-                tag_wrap = soup.find('div', class_='personal_body')
-                sound_ids = tag_wrap['sound_ids'].split(',')
+                # tag_wrap = soup.find('div', class_='personal_body')
+                # sound_ids = tag_wrap['sound_ids'].split(',')
                 
-                for sound_id in sound_ids:
-                    item_list.append(sound_id)
+                # for sound_id in sound_ids:
+                    # item_list.append(sound_id)
+                    
+                # try to extract sound publish date
+                item_list = {}
+                tag_wrap = soup.find_all('div', class_='operate')
+                for tag in tag_wrap:
+                    sound_id = tag.find('a', class_='likeBtn')['track_id']
+                    sound_pub_date = tag.span.string
+                    sound_pub_date = sound_pub_date.replace('-', '')[2:]
+                    
+                    # item_list.append([sound_id, sound_pub_date])
+                    item_list[sound_id] = sound_pub_date        # dictionary
                 
             print '\t getItemsOnPages retrive the first page done.'
-            print '\t getItemsOnPages retrive multi pages start.'
                 
             if page_count > 1:
+                print '\t getItemsOnPages retrive multi pages start.'
+                
                 page = 2
                 while page <= page_count:
                     page_url = url.rstrip('/') + '/p' + str(page)
@@ -143,11 +156,22 @@ class XMLYSession(requests.Session):
                         item_list.extend(sound_ids)
                         
                     elif _type == 'albumSound':
-                        tag_wrap = soup.find('div', class_='personal_body')
-                        sound_ids = tag_wrap['sound_ids'].split(',')
+                        # tag_wrap = soup.find('div', class_='personal_body')
+                        # sound_ids = tag_wrap['sound_ids'].split(',')
                         
-                        for sound_id in sound_ids:
-                            item_list.append(sound_id)
+                        # for sound_id in sound_ids:
+                            # item_list.append(sound_id)
+                            
+                        # try to extract sound publish date
+                        tag_wrap = soup.find_all('div', class_='operate')
+                        for tag in tag_wrap:
+                            sound_id = tag.find('a', class_='likeBtn')['track_id']
+                            sound_pub_date = tag.span.string
+                            sound_pub_date = sound_pub_date.replace('-', '')[2:]
+                            
+                            # item_list.append([sound_id, sound_pub_date])
+                            item_list[sound_id] = sound_pub_date    # dictionary
+
                         
                     print '\t Retriving page done ', page, '/', page_count
                     page = page + 1

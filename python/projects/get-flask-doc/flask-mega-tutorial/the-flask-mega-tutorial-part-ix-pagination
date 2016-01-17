@@ -1,0 +1,1491 @@
+
+    <!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>The Flask Mega-Tutorial</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <div id="main">
+ <div class="post">
+  <p class="date">
+   <span class="flask-moment" data-format="format('LL')" data-refresh="0" data-timestamp="2012-10-06T05:43:26Z">
+    2012-10-06T05:43:26Z
+   </span>
+  </p>
+  <h1 class="post-title">
+   <a href="/post/the-flask-mega-tutorial-part-ix-pagination">
+    The Flask Mega-Tutorial, Part IX: Pagination
+   </a>
+  </h1>
+  <div class="post_body">
+   <p>
+    This is the ninth article in the series in which I document my experience writing web applications in
+    <a href="http://python.org">
+     Python
+    </a>
+    using the
+    <a href="http://flask.pocoo.org">
+     Flask
+    </a>
+    microframework.
+   </p>
+   <p>
+    The goal of the tutorial series is to develop a decently featured microblogging application that demonstrating total lack of originality I have decided to call
+    <code>
+     microblog
+    </code>
+    .
+   </p>
+   <p>
+    <strong>
+     NOTE
+    </strong>
+    : This article was revised in September 2014 to be in sync with current versions of Python and Flask.
+   </p>
+   <p>
+    Here is an index of all the articles in the series that have been published to date:
+   </p>
+   <ul>
+    <li>
+     <a href="the-flask-mega-tutorial-part-i-hello-world">
+      Part I: Hello, World!
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-ii-templates">
+      Part II: Templates
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-iii-web-forms">
+      Part III: Web Forms
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-iv-database">
+      Part IV: Database
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-v-user-logins">
+      Part V: User Logins
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-vi-profile-page-and-avatars">
+      Part VI: Profile Page And Avatars
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-vii-unit-testing">
+      Part VII: Unit Testing
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-viii-followers-contacts-and-friends">
+      Part VIII: Followers, Contacts And Friends
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-ix-pagination">
+      Part IX: Pagination
+     </a>
+     (this article)
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-x-full-text-search">
+      Part X: Full Text Search
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xi-email-support">
+      Part XI: Email Support
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xii-facelift">
+      Part XII: Facelift
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xiii-dates-and-times">
+      Part XIII: Dates and Times
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xiv-i18n-and-l10n">
+      Part XIV: I18n and L10n
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xv-ajax">
+      Part XV: Ajax
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xvi-debugging-testing-and-profiling">
+      Part XVI: Debugging, Testing and Profiling
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xvii-deployment-on-linux-even-on-the-raspberry-pi">
+      Part XVII: Deployment on Linux (even on the Raspberry Pi!)
+     </a>
+    </li>
+    <li>
+     <a href="the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud">
+      Part XVIII: Deployment on the Heroku Cloud
+     </a>
+    </li>
+   </ul>
+   <h2>
+    Recap
+   </h2>
+   <p>
+    In the
+    <a href="/post/the-flask-mega-tutorial-part-viii-followers-contacts-and-friends">
+     previous article
+    </a>
+    in the series we've made all the database changes necessary to support the 'follower' paradigm, where users choose other users to follow.
+   </p>
+   <p>
+    Today we will build on what we did last time and enable our application to accept and deliver real content to its users. We are saying goodbye to the last of our fake objects today!
+   </p>
+   <h2>
+    Submission of blog posts
+   </h2>
+   <p>
+    Let's start with something simple. The home page should have a form for users to submit new posts.
+   </p>
+   <p>
+    First we define a single field form object (file
+    <code>
+     app/forms.py
+    </code>
+    ):
+   </p>
+   <pre><code>class PostForm(Form):
+    post = StringField('post', validators=[DataRequired()])
+</code></pre>
+   <p>
+    Next, we add the form to the template (file
+    <code>
+     app/templates/index.html
+    </code>
+    ):
+   </p>
+   <pre><code>&lt;!-- extend base layout --&gt;
+{% extends "base.html" %}
+
+{% block content %}
+  &lt;h1&gt;Hi, {{ g.user.nickname }}!&lt;/h1&gt;
+  &lt;form action="" method="post" name="post"&gt;
+      {{ form.hidden_tag() }}
+      &lt;table&gt;
+          &lt;tr&gt;
+              &lt;td&gt;Say something:&lt;/td&gt;
+              &lt;td&gt;{{ form.post(size=30, maxlength=140) }}&lt;/td&gt;
+              &lt;td&gt;
+              {% for error in form.post.errors %}
+              &lt;span style="color: red;"&gt;[{{ error }}]&lt;/span&gt;&lt;br&gt;
+              {% endfor %}
+              &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;input type="submit" value="Post!"&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+      &lt;/table&gt;
+  &lt;/form&gt;
+  {% for post in posts %}
+  &lt;p&gt;
+    {{ post.author.nickname }} says: &lt;b&gt;{{ post.body }}&lt;/b&gt;
+  &lt;/p&gt;
+  {% endfor %}
+{% endblock %}
+</code></pre>
+   <p>
+    Nothing earth shattering so far, as you can see. We are simply adding yet another form, like the ones we've done before.
+   </p>
+   <p>
+    Last of all, the view function that ties everything together is expanded to handle the form (file
+    <code>
+     app/views.py
+    </code>
+    ):
+   </p>
+   <pre><code>from forms import LoginForm, EditForm, PostForm
+from models import User, Post
+
+@app.route('/', methods=['GET', 'POST'])
+@app.route('/index', methods=['GET', 'POST'])
+@login_required
+def index():
+    form = PostForm()
+    if form.validate_on_submit():
+        post = Post(body=form.post.data, timestamp=datetime.utcnow(), author=g.user)
+        db.session.add(post)
+        db.session.commit()
+        flash('Your post is now live!')
+        return redirect(url_for('index'))
+    posts = [
+        { 
+            'author': {'nickname': 'John'}, 
+            'body': 'Beautiful day in Portland!' 
+        },
+        { 
+            'author': {'nickname': 'Susan'}, 
+            'body': 'The Avengers movie was so cool!' 
+        }
+    ]
+    return render_template('index.html',
+                           title='Home',
+                           form=form,
+                           posts=posts)
+</code></pre>
+   <p>
+    Let's review the changes in this function one by one:
+   </p>
+   <ul>
+    <li>
+     We are now importing the
+     <code>
+      Post
+     </code>
+     and
+     <code>
+      PostForm
+     </code>
+     classes
+    </li>
+    <li>
+     We accept POST requests in both routes associated with the
+     <code>
+      index
+     </code>
+     view function, since that is how we will receive submitted posts.
+    </li>
+    <li>
+     When we arrive at this view function through a form submission we insert a new
+     <code>
+      Post
+     </code>
+     record into the database. When we arrive at it via a regular GET request we do as before.
+    </li>
+    <li>
+     The template now receives an additional argument, the
+     <code>
+      form
+     </code>
+     , so that it can render the text field.
+    </li>
+   </ul>
+   <p>
+    One final comment before we continue. Notice how after we insert a new
+    <code>
+     Post
+    </code>
+    into the detabase we do this:
+   </p>
+   <pre><code>return redirect(url_for('index'))
+</code></pre>
+   <p>
+    We could have easily skipped the redirect and allowed the function to continue down into the template rendering part, and it would have been more efficient. Because really, all the redirect does is return to this same view function to do that, after an extra trip to the client web browser.
+   </p>
+   <p>
+    So, why the redirect? Consider what happens after the user writes a blog post, submits it and then hits the browser's refresh key. What will the refresh command do? Browsers resend the last issued request as a result of a refresh command.
+   </p>
+   <p>
+    Without the redirect, the last request is the POST request that submitted the form, so a refresh action will resubmit the form, causing a second
+    <code>
+     Post
+    </code>
+    record that is identical to the first to be written to the database. Not good.
+   </p>
+   <p>
+    By having the redirect, we force the browser to issue another request after the form submission, the one that grabs the redirected page. This is a simple GET request, so a refresh action will now repeat the GET request instead of submitting the form again.
+   </p>
+   <p>
+    This simple trick avoids inserting duplicate posts when a user inadvertently refreshes the page after submitting a blog post.
+   </p>
+   <h2>
+    Displaying blog posts
+   </h2>
+   <p>
+    And now we get to the fun part. We are going to grab blog posts from the database and display them.
+   </p>
+   <p>
+    If you recall from a few articles ago, we created a couple of
+    <em>
+     fake
+    </em>
+    posts and we've been displaying those in our home page for a long time. The fake objects were created explicitly in the
+    <code>
+     index
+    </code>
+    view function as a simply Python list:
+   </p>
+   <pre><code>    posts = [
+        { 
+            'author': {'nickname': 'John'}, 
+            'body': 'Beautiful day in Portland!' 
+        },
+        { 
+            'author': {'nickname': 'Susan'}, 
+            'body': 'The Avengers movie was so cool!' 
+        }
+    ]
+</code></pre>
+   <p>
+    But in the last article we created the query that allows us to get all the posts from followed users, so now we can simply replace the above with this (file
+    <code>
+     app/views.py
+    </code>
+    ):
+   </p>
+   <pre><code>    posts = g.user.followed_posts().all()
+</code></pre>
+   <p>
+    And when you run the application you will be seeing blog posts from the database!
+   </p>
+   <p>
+    The
+    <code>
+     followed_posts
+    </code>
+    method of the
+    <code>
+     User
+    </code>
+    class returns a sqlalchemy query object that is configured to grab the posts we are interested in. Calling
+    <code>
+     all()
+    </code>
+    on this query just retrieves all the posts into a list, so we end up with a structure that is very much alike the fake one we've been using until now. It's so close that the template does not even notice.
+   </p>
+   <p>
+    At this point feel free to play with the application. You can create a few users, make them follow others, and finally post some messages to see how each user sees its blog post stream.
+   </p>
+   <h2>
+    Pagination
+   </h2>
+   <p>
+    The application is looking better than ever, but we have a problem. We are showing all of the followed posts in the home page. What happens if a user has a thousand followed posts? Or a million? As you can imagine, grabbing and handling such a large list of objects will be extremely inefficient.
+   </p>
+   <p>
+    Instead, we are going to show this potentially large number of posts in groups, or
+    <em>
+     pages
+    </em>
+    .
+   </p>
+   <p>
+    Flask-SQLAlchemy comes with very good support for
+    <em>
+     pagination
+    </em>
+    . If for example, we wanted to get the first three followed posts of some user we can do this:
+   </p>
+   <pre><code>    posts = g.user.followed_posts().paginate(1, 3, False).items
+</code></pre>
+   <p>
+    The
+    <code>
+     paginate
+    </code>
+    method can be called on any query object. It takes three arguments:
+   </p>
+   <ul>
+    <li>
+     the page number, starting from 1,
+    </li>
+    <li>
+     the number of items per page,
+    </li>
+    <li>
+     an error flag. If True, when an out of range page is requested a 404 error will be automatically returned to the client web browser. If False, an empty list will be returned instead of an error.
+    </li>
+   </ul>
+   <p>
+    The return value from
+    <code>
+     paginate
+    </code>
+    is a
+    <code>
+     Pagination
+    </code>
+    object. The
+    <code>
+     items
+    </code>
+    member of this object contains the list of items in the requested page. There are other useful things in the
+    <code>
+     Pagination
+    </code>
+    object that we will see a bit later.
+   </p>
+   <p>
+    Now let's think about how we can implement pagination in our
+    <code>
+     index
+    </code>
+    view function. We can start by adding a configuration item to our application that determines how many items per page we will display (file
+    <code>
+     config.py
+    </code>
+    ):
+   </p>
+   <pre><code># pagination
+POSTS_PER_PAGE = 3
+</code></pre>
+   <p>
+    It is a good idea to have these global
+    <code>
+     knobs
+    </code>
+    that can change the behavior of our application in the configuration file all together, because then we can go to a single place to revise them all.
+   </p>
+   <p>
+    In the final application we will of course use a much larger number than 3, but for testing it is useful to work with small numbers.
+   </p>
+   <p>
+    Next, let's decide how the URLs that request different pages will look. We've seen before that Flask routes can take arguments, so we can add a suffix to the URL that indicates the desired page:
+   </p>
+   <pre><code>http://localhost:5000/         &lt;-- page #1 (default)
+http://localhost:5000/index    &lt;-- page #1 (default)
+http://localhost:5000/index/1  &lt;-- page #1
+http://localhost:5000/index/2  &lt;-- page #2
+</code></pre>
+   <p>
+    This format of URLs can be easily implemented with an additional
+    <code>
+     route
+    </code>
+    added to our view function (file
+    <code>
+     app/views.py
+    </code>
+    ):
+   </p>
+   <pre><code>from config import POSTS_PER_PAGE
+
+@app.route('/', methods=['GET', 'POST'])
+@app.route('/index', methods=['GET', 'POST'])
+@app.route('/index/&lt;int:page&gt;', methods=['GET', 'POST'])
+@login_required
+def index(page=1):
+    form = PostForm()
+    if form.validate_on_submit():
+        post = Post(body=form.post.data, timestamp=datetime.utcnow(), author=g.user)
+        db.session.add(post)
+        db.session.commit()
+        flash('Your post is now live!')
+        return redirect(url_for('index'))
+    posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False).items
+    return render_template('index.html',
+                           title='Home',
+                           form=form,
+                           posts=posts)
+</code></pre>
+   <p>
+    Our new route takes the page argument, and declares it as an integer. We also need to add the
+    <code>
+     page
+    </code>
+    argument to the
+    <code>
+     index
+    </code>
+    function, and we have to give it a default value because two of the three routes do not have this argument, so for those the default will always be used.
+   </p>
+   <p>
+    And now that we have a page number available to us we can easily hook it up to our
+    <code>
+     followed_posts
+    </code>
+    query, along with the POSTS_PER_PAGE configuration constant we defined earlier.
+   </p>
+   <p>
+    Note how easy these changes are, and how little code is affected each time we make a change. We are trying to write each part of the application without making any assumptions regarding how the other parts work, and this enables us to write modular and robust applications that are easier to test and are less likely to fail or have bugs.
+   </p>
+   <p>
+    At this point you can try the pagination by entering URLs for the different pages by hand into your browser's address bar. Make sure you have more than three posts available so that you can see more than one page.
+   </p>
+   <h2>
+    Page navigation
+   </h2>
+   <p>
+    We now need to add links that allow users to navigate to the next and/or previous pages, and luckily this is extremely easy to do, Flask-SQLAlchemy does most of the work for us.
+   </p>
+   <p>
+    We are going to start by making a small change in the view function. In our current version we use the paginate method as follows:
+   </p>
+   <pre><code>posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False).items
+</code></pre>
+   <p>
+    By doing this we are only keeping the
+    <code>
+     items
+    </code>
+    member of the
+    <code>
+     Pagination
+    </code>
+    object returned by
+    <code>
+     paginate
+    </code>
+    . But this object has a number of other very useful things in it, so we will instead keep the whole object (file
+    <code>
+     app/views.py
+    </code>
+    ):
+   </p>
+   <pre><code>posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False)
+</code></pre>
+   <p>
+    To compensate for this change, we have to modify the template (file
+    <code>
+     app/templates/index.html
+    </code>
+    ):
+   </p>
+   <pre><code>&lt;!-- posts is a Paginate object --&gt;
+{% for post in posts.items %}
+&lt;p&gt;
+  {{ post.author.nickname }} says: &lt;b&gt;{{ post.body }}&lt;/b&gt;
+&lt;/p&gt;
+{% endfor %}
+</code></pre>
+   <p>
+    What this change does is make the full Paginate object available to our template. The members of this object that we will use are:
+   </p>
+   <ul>
+    <li>
+     <code>
+      has_next
+     </code>
+     : True if there is at least one more page after the current one
+    </li>
+    <li>
+     <code>
+      has_prev
+     </code>
+     : True if there is at least one more page before the current one
+    </li>
+    <li>
+     <code>
+      next_num
+     </code>
+     : page number for the next page
+    </li>
+    <li>
+     <code>
+      prev_num
+     </code>
+     : page number for the previous page
+    </li>
+   </ul>
+   <p>
+    With these for elements we can produce the following (file
+    <code>
+     app/templates/index.html
+    </code>
+    ):
+   </p>
+   <pre><code>&lt;!-- posts is a Paginate object --&gt;
+{% for post in posts.items %}
+&lt;p&gt;
+  {{ post.author.nickname }} says: &lt;b&gt;{{ post.body }}&lt;/b&gt;
+&lt;/p&gt;
+{% endfor %}
+{% if posts.has_prev %}&lt;a href="{{ url_for('index', page=posts.prev_num) }}"&gt;&amp;lt;&amp;lt; Newer posts&lt;/a&gt;{% else %}&amp;lt;&amp;lt; Newer posts{% endif %} | 
+{% if posts.has_next %}&lt;a href="{{ url_for('index', page=posts.next_num) }}"&gt;Older posts &amp;gt;&amp;gt;&lt;/a&gt;{% else %}Older posts &amp;gt;&amp;gt;{% endif %}
+</code></pre>
+   <p>
+    So we have two links. First we have one labeled "Newer posts" that sends us to the previous page (keep in mind we show posts sorted by newest first, so the first page is the one with the newest stuff). Conversely, the "Older posts" points to the next page.
+   </p>
+   <p>
+    When we are looking at the first page we do not want to show a link to go to the previous page, since there isn't one. This is easy to detect because
+    <code>
+     posts.has_prev
+    </code>
+    will be
+    <code>
+     False
+    </code>
+    . We handle that case simply by showing the same text of the link but without the link itself. The link to the next page is handled in the same way.
+   </p>
+   <h2>
+    Implementing the Post sub-template
+   </h2>
+   <p>
+    Back in the article where we added
+    <a href="/post/the-flask-mega-tutorial-part-vi-profile-page-and-avatars">
+     avatar pictures
+    </a>
+    we defined a sub-template with the HTML rendering of a single post. The reason we created this sub-template was so that we can render posts with a consistent look in multiple pages, without having to duplicate the HTML code.
+   </p>
+   <p>
+    It is now time to implement this sub-template in our index page. And, as most of the things we are doing today, it is surprisingly simple (file
+    <code>
+     app/templates/index.html
+    </code>
+    ):
+   </p>
+   <pre><code>&lt;!-- posts is a Paginate object --&gt;
+{% for post in posts.items %}
+    {% include 'post.html' %}
+{% endfor %}
+</code></pre>
+   <p>
+    Amazing, huh? We just discarded our old rendering code and replaced it with an
+    <code>
+     include
+    </code>
+    of the sub-template. Just with this, we get the nicer version of the post that includes the user's avatar.
+   </p>
+   <p>
+    Here is a screenshot of the index page of our application in its current state:
+   </p>
+   <p>
+   </p>
+   <center>
+    <img alt="microblog profile page" src="/static/images/flask-mega-tutorial-part-ix.png"/>
+   </center>
+   <h2>
+    The user profile page
+   </h2>
+   <p>
+    We are done with the index page for now. However, we have also included posts in the user profile page, not posts from everyone but just from the owner of the profile. To be consistent the user profile page should be changed to match the index page.
+   </p>
+   <p>
+    The changes are similar to those we made on the index page. Here is a summary of what we need to do:
+   </p>
+   <ul>
+    <li>
+     add an additional route that takes the page number
+    </li>
+    <li>
+     add a
+     <code>
+      page
+     </code>
+     argument to the view function, with a default of 1
+    </li>
+    <li>
+     replace the list of fake posts with the proper database query and pagination
+    </li>
+    <li>
+     update the template to use the pagination object
+    </li>
+   </ul>
+   <p>
+    Here is the updated view function (file
+    <code>
+     app/views.py
+    </code>
+    ):
+   </p>
+   <pre><code>@app.route('/user/&lt;nickname&gt;')
+@app.route('/user/&lt;nickname&gt;/&lt;int:page&gt;')
+@login_required
+def user(nickname, page=1):
+    user = User.query.filter_by(nickname=nickname).first()
+    if user is None:
+        flash('User %s not found.' % nickname)
+        return redirect(url_for('index'))
+    posts = user.posts.paginate(page, POSTS_PER_PAGE, False)
+    return render_template('user.html',
+                           user=user,
+                           posts=posts)
+</code></pre>
+   <p>
+    Note that this function already had an argument (the nickname of the user), so we add the page number as a second argument.
+   </p>
+   <p>
+    The changes to the template are also pretty simple (file
+    <code>
+     app/templates/user.html
+    </code>
+    ):
+   </p>
+   <pre><code>&lt;!-- posts is a Paginate object --&gt;
+{% for post in posts.items %}
+    {% include 'post.html' %}
+{% endfor %}
+{% if posts.has_prev %}&lt;a href="{{ url_for('user', nickname=user.nickname, page=posts.prev_num) }}"&gt;&amp;lt;&amp;lt; Newer posts&lt;/a&gt;{% else %}&amp;lt;&amp;lt; Newer posts{% endif %} | 
+{% if posts.has_next %}&lt;a href="{{ url_for('user', nickname=user.nickname, page=posts.next_num) }}"&gt;Older posts &amp;gt;&amp;gt;&lt;/a&gt;{% else %}Older posts &amp;gt;&amp;gt;{% endif %}
+</code></pre>
+   <h2>
+    Final words
+   </h2>
+   <p>
+    Below I'm making available the updated version of the
+    <code>
+     microblog
+    </code>
+    application with all the pagination changes introduced in this article.
+   </p>
+   <p>
+    Download
+    <a href="https://github.com/miguelgrinberg/microblog/archive/version-0.9.zip">
+     microblog-0.9.zip
+    </a>
+    .
+   </p>
+   <p>
+    As always, a database isn't provided so you have to create your own. If you are following this series of articles you know how to do it. If not, then go back to the database article to find out.
+   </p>
+   <p>
+    As always, I thank you for following my tutorial. I hope to see you again in the next one!
+   </p>
+   <p>
+    Miguel
+   </p>
+  </div>
+  <div class="social-bar">
+   <table>
+    <tr>
+     <td>
+      <div class="social-box" style="padding-top: 8px;">
+       <a class="twitter-share-button" data-count="vertical" data-url="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ix-pagination" data-via="miguelgrinberg" href="https://twitter.com/share">
+        Tweet
+       </a>
+      </div>
+     </td>
+     <td>
+      <div class="social-box" style="padding-left: 6px;">
+       <div class="fb-like" data-font="verdana" data-href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ix-pagination" data-layout="box_count" data-send="false" data-show-faces="false" data-width="450">
+       </div>
+      </div>
+     </td>
+     <td>
+      <div class="social-box" style="padding-top: 8px;">
+       <g:plusone href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ix-pagination" size="tall">
+       </g:plusone>
+      </div>
+     </td>
+     <td>
+      <div class="social-box" style="padding-top: 8px;">
+       <script data-counter="top" data-url="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ix-pagination" type="IN/Share">
+       </script>
+      </div>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <h4 style="text-align: right">
+   <a name="comments">
+   </a>
+   98 comments
+  </h4>
+  <div class="comment">
+   <ul>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/110b30a978c33ff4802bc119b47a1122?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #1
+       </span>
+       <span class="label label-primary">
+        Siros
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2012-10-08T11:23:46Z">
+        2012-10-08T11:23:46Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Thank you so much again , this is very helpful.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/500b5c9e49563b18fc194cbd0285fe31?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #2
+       </span>
+       <span class="label label-primary">
+        Sean
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2012-10-13T03:35:17Z">
+        2012-10-13T03:35:17Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Great series! This is the most helpful Python/Flask tutorial I have read. Thank you very much!!
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/53d8002b748b83ec10a0b63038b4af46?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #3
+       </span>
+       <span class="label label-primary">
+        Bobby
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2012-11-25T00:50:47Z">
+        2012-11-25T00:50:47Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        This tutorial is amazing....really great!!  Thanks for sharing your skills with us.  Two small points:  your index function example above is missing "user = g.user";  it might be helpful to explain to people what the "form.hidden_tag()" does.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/53d8002b748b83ec10a0b63038b4af46?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #4
+       </span>
+       <span class="label label-primary">
+        Bobby
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2012-11-25T01:04:25Z">
+        2012-11-25T01:04:25Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        can you tell me why my route decorators need the trailing slash to work?  @app.route('/login/')  I'm sure I'm doing something silly??
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #5
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2012-11-25T06:30:03Z">
+        2012-11-25T06:30:03Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Bobby: hidden tags were covered in part 3 of the series. Can you expand on the "user = g.user" comment? What would that achieve?
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/53d8002b748b83ec10a0b63038b4af46?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #6
+       </span>
+       <span class="label label-primary">
+        Bobby
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2012-11-25T17:30:16Z">
+        2012-11-25T17:30:16Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        in an earlier part of the tutorial, we were passing the user into the index template to say "Hello Bobby"...I guess that got dropped somewhere and I missed it.  Can you tell me why my routes need the trailing "/"?
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #7
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2012-11-26T02:58:12Z">
+        2012-11-26T02:58:12Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Bobby: I'm not sure why you need trailing slashes. Are you using the development web server when you run the application? The only idea I can offer is that a different web server might be redirecting requests without a trailing slash. Check in the debugging console of your browser to see what's happening. Then please let me know as I would like to know!
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/bafafefac4abe76b1218317d841e167b?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #8
+       </span>
+       <span class="label label-primary">
+        Dogukan Tufekci
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-02-08T16:45:17Z">
+        2013-02-08T16:45:17Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Miguel thanks for another great tutorial. You are making my life so easy in this journey to understand Flask.
+
+I noticed that posts on a user's profile are not sorted by date. So I tweaked the code this way. Not sure if there's a better way to do this:
+
+class User(db.Model):
+#....
+def sorted_posts(self):
+		return Post.query.filter(Post.user_id == self.id).order_by(Post.timestamp.desc())
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #9
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-02-09T08:22:31Z">
+        2013-02-09T08:22:31Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Dogukan: you are right, I missed the sorting! You could simplify your solution a bit, the sorted_posts() method can be implemented as "return self.posts.order_by(Post.timestamp.desc())". I will update the article to include this. Thanks.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/bafafefac4abe76b1218317d841e167b?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #10
+       </span>
+       <span class="label label-primary">
+        Dogukan Tufekci
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-02-11T18:21:36Z">
+        2013-02-11T18:21:36Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Miguel That's much simpler indeed! Thanks!
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/2c02c167f88ee80d03aa6d3b489ca935?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #11
+       </span>
+       <span class="label label-primary">
+        George Mabley
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-02-12T03:34:07Z">
+        2013-02-12T03:34:07Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Hello, I'm not sure if this is the best article to ask this on, but it at least uses the concept.  Is there a function similar to redirect which either redirects you to the current page, or refreshes the page you are on?  Say I have a view that I can call on both the index and user page.  If an arbitrary condition is met, I would like a flash message to occur on the page, and for the page to basically start fresh.  However, I have to return something, so I must choose to redirect to url_for('index') or url_for('user').  If what I am asking is not clear, I will gladly provide some code as an example.  Thank you!
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #12
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-02-12T03:44:08Z">
+        2013-02-12T03:44:08Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @George: I'm not completely sure I understand, but I think a good example of what you are asking is the login view. Let's say the user wants to visit some password protected page, so he gets redirected to the login page. Once he enters his credentials you have two options, if the credentials are valid you have to go to the page the user wanted to visit originally, if the credentials are invalid you have to redirect back to the login page. This is implemented with an additional argument sent to the view that needs to decide where to redirect. In the login example if the user needs to access the index page the server will redirect to http://server/login?next=index. If instead the user went to the profile page the redirect will be http://server/login?next=profile. The login page then has the "next" argument in the request to know where to redirect. I hope this helps.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/2c02c167f88ee80d03aa6d3b489ca935?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #13
+       </span>
+       <span class="label label-primary">
+        George Mabley
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-02-12T04:06:15Z">
+        2013-02-12T04:06:15Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Wow, thanks for the quick reply.  I think that could work, but I am still hoping there is a simpler solution,  Let me try to explain with code here: http://i.imgur.com/OGYJyo2.png.  Is there not a way for flask to, if those conditions are met, redirect you to the user page if you are on the user page, and the index page if you are on the index?
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #14
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-02-12T05:13:52Z">
+        2013-02-12T05:13:52Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Ah, I think I understand it better now. I can think of two ways to handle the problem. One is similar to what I said before, you have to insert something in the request that tells the view function what is the originating page. For example, you could use a more complex route, like "/repost/&lt;source&gt;/&lt;id&gt;" so then the repost view function gets an additional argument that can be "index" or "user". The problem is that you have to build different URLs depending on what view you are in. A more sophisticated solution would be to let the client handle this via an ajax call, which does not trigger a page reload. Then it is up to the Javascript client code to stay on the same page or trigger a reload, based on instructions provided by the Ajax handler on the server. (hint: next article in the series covers ajax). Good luck,
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/3a32a4600ef525e3a0fb534f9fa765b2?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #15
+       </span>
+       <span class="label label-primary">
+        abenrob
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-02-24T03:15:32Z">
+        2013-02-24T03:15:32Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Dogukan, Miguel - how are you modifying the User view for the sorted object?
+we ahve "posts = user.posts.paginate(page, POSTS_PER_PAGE, False)"
+I tried "user.sorted_posts.paginate(page, POSTS_PER_PAGE, False)" after implenting sorted_view() into the User model, but that isn't working...
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #16
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-02-24T08:21:25Z">
+        2013-02-24T08:21:25Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @abenrob: sorted_posts is a method, you have to add the parenthesis at the end: "user.sorted_posts().paginate(page, POSTS_PER_PAGE, False)".
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/3a32a4600ef525e3a0fb534f9fa765b2?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #17
+       </span>
+       <span class="label label-primary">
+        abenrob
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-02-24T22:41:24Z">
+        2013-02-24T22:41:24Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Of course. Thanks again!
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/a465578ca655e19ffd574027784b2dbb?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #18
+       </span>
+       <span class="label label-primary">
+        uldis
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-03-04T14:42:08Z">
+        2013-03-04T14:42:08Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        How to solve the problem when the user double click the "post!" button?  The post with the same content is inserted twice.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #19
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-03-05T03:03:27Z">
+        2013-03-05T03:03:27Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @uldis: the standard solution for the double click to a form submit button is to use Javascript to disable the button when it is clicked the first time. You can achieve that simply by adding onclick="this.disabled=true;this.form.submit();" inside the submit button's input element.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/3dd0b569a1d88989eff25a82d78d7432?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #20
+       </span>
+       <span class="label label-primary">
+        Napoleon Ahiable
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-03-21T23:26:47Z">
+        2013-03-21T23:26:47Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Thank you so much for these amazing tutorials. YOU my friend, are my new favourite dude and I'll be hanging out with you a lot. God bless you for your kind giving heart.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/4c5c6ea94d1081a84b3179a4483357f0?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #21
+       </span>
+       <span class="label label-primary">
+        Saber Rastikerdar
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-05-01T01:34:14Z">
+        2013-05-01T01:34:14Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Thank you for this great tutorial series.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/8bae5bcf1e33a6de3c4832aa32a19402?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #22
+       </span>
+       <span class="label label-primary">
+        Tri
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-05-21T06:22:12Z">
+        2013-05-21T06:22:12Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        Miguel, Great tutorial once again!
+
+Could you please walk me through how to create other users and have them follow other users to test out the functionalities we just made? Kind of like in your screenshot.
+
+Thank you!
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #23
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-05-21T06:36:12Z">
+        2013-05-21T06:36:12Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Tri: the easiest way is for you to play different users. For example, login to the server with two different browsers, using a different OpenID on each. Then each of these users can follow the other.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/8bae5bcf1e33a6de3c4832aa32a19402?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #24
+       </span>
+       <span class="label label-primary">
+        Tri
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-05-23T03:02:48Z">
+        2013-05-23T03:02:48Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        I tried that but I keep on getting errors saying, "Invalid login. Please try again", even though it says, "Hi, Tri" underneath. And even when I logged in with another OpenID, the page always says, "Hi, Tri". Then when I click on 'your profile', there's an error that says, "TypeError: must be string or buffer, not None".
+
+I tried with many different OpenIDs and different browsers...logging out after each one, but I always get that same exact error where "Tri" is always the one that comes up.
+
+However, when I log in through Google with my email, there's no error. That's the only account that has no error, which is why I can't do multiple logins. I don't know where the problem comes from.
+
+Hopefully, you know what's going on. Thanks again.
+       </p>
+      </div>
+     </div>
+    </li>
+    <li>
+     <div class="comment-thumbnail">
+      <img src="http://gravatar.com/avatar/729e26a2a2c7ff24a71958d4aa4e5f35?s=60&amp;d=identicon"/>
+     </div>
+     <div class="comment-body">
+      <p>
+       <span class="label label-default">
+        #25
+       </span>
+       <span class="label label-danger">
+        Miguel Grinberg
+       </span>
+       said
+       <span class="flask-moment" data-format="fromNow(0)" data-refresh="0" data-timestamp="2013-05-23T04:52:07Z">
+        2013-05-23T04:52:07Z
+       </span>
+      </p>
+      <div style="overflow: auto;">
+       <p style="white-space: pre-wrap;">
+        @Tri: you may have found a bug, but the information that you are giving me isn't enough for me to figure out where or why. Could you show me stack traces of the errors that you get?
+       </p>
+      </div>
+     </div>
+    </li>
+   </ul>
+  </div>
+  <div class="page">
+   <ul class="pager">
+    <li class="previous disabled">
+     <a href="#">
+      ««
+     </a>
+    </li>
+    <li class="previous disabled">
+     <a href="#">
+      «
+     </a>
+    </li>
+    <li class="next">
+     <a href="/post/the-flask-mega-tutorial-part-ix-pagination/page/0#comments">
+      »»
+     </a>
+    </li>
+    <li class="next">
+     <a href="/post/the-flask-mega-tutorial-part-ix-pagination/page/2#comments">
+      »
+     </a>
+    </li>
+   </ul>
+  </div>
+  <h3>
+   <a name="commentform">
+   </a>
+   Leave a Comment
+  </h3>
+  <form action="#commentform" class="form" method="post" role="form">
+   <div style="display:none;">
+    <input id="csrf_token" name="csrf_token" type="hidden" value="1452908227.76##bada3a725a9f517f2bf0f845eedf2367c014523d"/>
+   </div>
+   <div class="form-group ">
+    <label class="control-label" for="name">
+     Name
+    </label>
+    <input class="form-control" id="name" name="name" required="" type="text" value=""/>
+   </div>
+   <div class="form-group ">
+    <label class="control-label" for="url">
+     URL
+    </label>
+    <input class="form-control" id="url" name="url" type="text" value=""/>
+   </div>
+   <div class="form-group ">
+    <label class="control-label" for="email">
+     Email
+    </label>
+    <input class="form-control" id="email" name="email" required="" type="text" value=""/>
+   </div>
+   <div class="form-group ">
+    <label class="control-label" for="comment">
+     Comment
+    </label>
+    <textarea class="form-control" id="comment" name="comment" required="">
+    </textarea>
+   </div>
+   <div class="form-group ">
+    <label class="control-label" for="captcha">
+     Captcha
+    </label>
+    <script type="text/javascript">
+     var RecaptchaOptions = {"custom_translations": {"audio_challenge": "Get an audio challenge", "cant_hear_this": "Download sound as MP3", "help_btn": "Help", "image_alt_text": "reCAPTCHA challenge image", "incorrect_try_again": "Incorrect. Try again.", "instructions_audio": "Type what you hear", "instructions_visual": "Type the text", "play_again": "Play sound again", "privacy_and_terms": "Privacy & Terms", "refresh_btn": "Get a new challenge", "visual_challenge": "Get a visual challenge"}, "theme": "white"};
+    </script>
+    <script src="//www.google.com/recaptcha/api/challenge?k=6Ld5Zs4SAAAAAOY0DOi4r18bgHlEaz41qAoRf__S" type="text/javascript">
+    </script>
+    <noscript>
+     <iframe frameborder="0" height="300" src="//www.google.com/recaptcha/api/noscript?k=6Ld5Zs4SAAAAAOY0DOi4r18bgHlEaz41qAoRf__S" width="500">
+     </iframe>
+     <br/>
+     <textarea cols="40" name="recaptcha_challenge_field" rows="3">
+     </textarea>
+     <input name="recaptcha_response_field" type="hidden" value="manual_challenge"/>
+    </noscript>
+   </div>
+   <input class="btn btn-default" id="submit" name="submit" type="submit" value="Submit"/>
+  </form>
+ </div>
+</div>
+
+    </html>
+    

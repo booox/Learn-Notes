@@ -513,5 +513,84 @@
     * Using shutil.move
         `shutil.move(src, dst)`
         
+* Regex Expressions
+    * re.search(pattern, string, flags=0)
+        * looking for the first location for the match
+        ```
+        >>> import re
+        >>> m = re.search('(?<=abc)def', 'abcdef')
+        >>> m.group(0)
+        'def'
         
+        
+        ```
+    * re.match(pattern, string, flags=0)
+        * only match at the beginning of the string
+        * if match, return a *MatchObject* instance.
+        * Return *None* if the string does not match the pattern.
+        
+        ```
+        >>> m = re.match(r"(\w+) (\w+)", "Isaac Newton, physicist")
+        >>> m.group(0)       # The entire match
+        'Isaac Newton'
+        >>> m.group(1)       # The first parenthesized subgroup.
+        'Isaac'
+        >>> m.group(2)       # The second parenthesized subgroup.
+        'Newton'
+        >>> m.group(1, 2)    # Multiple arguments give us a tuple.
+        ('Isaac', 'Newton')
+        
+        ```
+        
+    * re.split(pattern, string, maxsplit=0, flags=0)
+        * Split string by the occurrences of pattern.
+        
+        ```
+        >>> re.split('\W+', 'Words, words, words.')
+        ['Words', 'words', 'words', '']
+        >>> re.split('(\W+)', 'Words, words, words.')
+        ['Words', ', ', 'words', ', ', 'words', '.', '']
+        >>> re.split('\W+', 'Words, words, words.', 1)
+        ['Words', 'words, words.']
+        >>> re.split('[a-f]+', '0a3B9', flags=re.IGNORECASE)
+        ['0', '3', '9']        
+        ```
+    * re.findall(pattern, string, flags=0)
+        * Return all non-overlapping matches of pattern in string, as a list of strings. 
+        
+    * re.sub(pattern, repl, string, count=0, flags=0)
+        * Return the string obtained by replacing the leftmost non-overlapping occurrences of pattern in string by the replacement repl.
 
+* CodeSkulptor  Viz Mode -- Visualizing functions
+    * [CodeSkulptor Viz mode](http://www.codeskulptor.org/viz/index.html)
+    
+* The remainder is *%*
+    * Computes 12 / 24 hour use *%*
+    
+        ```
+        hour = 24
+        shift = 8
+        print (hour + shift) % 24   # 4
+        ```
+    * screen wraparound
+        ```
+        width = 800
+        position = 797
+        move = 5
+        position = (position + move) % width
+        print position
+        
+        ```
+* `dir()` - lists the methods available for an object.
+    ```
+        >>> s = 'hello'
+        >>> dir(s)
+        ['__add__', '__class__', '__contains__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_formatter_field_name_split', '_formatter_parser', 'capitalize', 'center', 'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']    
+    ```
+* `type()` - show the type of an object
+    ```
+        >>> s = 'hello'
+        >>> print type(s)
+        <type 'str'>
+    
+    ```
