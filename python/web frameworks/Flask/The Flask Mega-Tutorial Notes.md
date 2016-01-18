@@ -18,8 +18,8 @@ The Flask Mega-Tutorial](http://blog.miguelgrinberg.com/post/the-flask-mega-tuto
     [x] $ pip install flask-openid  
     [] $ pip install flask-mail
     [x] $ pip install flask-sqlalchemy
-    [] $ pip install sqlalchemy-migrate
-    [] $ pip install flask-whooshalchemy
+    [x] $ pip install sqlalchemy-migrate
+    [x] $ pip install flask-whooshalchemy
     [x] $ pip install flask-wtf     
     [] $ pip install flask-babel
     [] $ pip install guess_language
@@ -588,8 +588,20 @@ The Flask Mega-Tutorial](http://blog.miguelgrinberg.com/post/the-flask-mega-tuto
 
 ## Creating the database
 
-
-
+* With the configuration and model in place we are now ready to create our database file.
+* The SQLAlchemy-migrate package comes with command line tools and APIs to create databases in a way that allows easy updates in the future, so that is what we will use.
+* I find the command line tools a bit awkward to use
+    * so instead I have written my own set of little Python scripts that invoke the migration APIs.
+* Here is a script that creates the database
+* *db_create.py*
+    ```
+    #!venv/bin/python
+    
+    
+    ```
+    
+* something error: *sqlalchemy.exc.OperationalError near sytax error* *detect unicode returns: %r*
+    [SQLAlchemy Engine Configuration](http://docs.sqlalchemy.org/en/latest/core/engines.html)
 
 
 # Part V: User Logins

@@ -615,3 +615,12 @@
         <type 'str'>
     
     ```
+    
+* Run a python script in a Unix-like system
+    * Method 1: call the interpreter program with the path to the script passed as an argument.
+        `$ python script.py`
+    * Method 2: run your script as a standalone executable: `./script.py`
+        * In order to do this, you need to:
+            * Make sure execute permissions are turned on ( `$ chmod a+x script.py` )
+            * Start the first line in the script with the symbols `#!` ( called a "shebang")followed by the path to the interpreter to use.
+            
