@@ -17,7 +17,7 @@ The Flask Mega-Tutorial](http://blog.miguelgrinberg.com/post/the-flask-mega-tuto
     [] $ pip install flask-login
     [x] $ pip install flask-openid  
     [] $ pip install flask-mail
-    [] $ pip install flask-sqlalchemy
+    [x] $ pip install flask-sqlalchemy
     [] $ pip install sqlalchemy-migrate
     [] $ pip install flask-whooshalchemy
     [x] $ pip install flask-wtf     
