@@ -298,7 +298,7 @@ from app import views, models
     tool, I have made the following diagram to represent our users table:
    </p>
    <p>
-    <img alt="users table" src="/static/images/flask-mega-tutorial-part-iv-1.png"/>
+    <img alt="users table" src="images/flask-mega-tutorial-part-iv-1.png"/>
    </p>
    <p>
     The
@@ -546,7 +546,7 @@ print('Current database version: ' + str(v))
     table:
    </p>
    <p>
-    <img alt="users table" src="/static/images/flask-mega-tutorial-part-iv-2.png"/>
+    <img alt="users table" src="images/flask-mega-tutorial-part-iv-2.png"/>
    </p>
    <p>
     Our

@@ -654,7 +654,7 @@ def index(page=1):
    <p>
    </p>
    <center>
-    <img alt="microblog profile page" src="/static/images/flask-mega-tutorial-part-ix.png"/>
+    <img alt="microblog profile page" src="images/flask-mega-tutorial-part-ix.png"/>
    </center>
    <h2>
     The user profile page

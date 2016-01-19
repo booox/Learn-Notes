@@ -684,7 +684,7 @@ function set_openid(openid, pr)
     Below is a screenshot of our login screen after clicking the Google OpenID link:
    </p>
    <p>
-    <img alt="Sign In screenshot" src="/static/images/flask-mega-tutorial-part-ii.jpg"/>
+    <img alt="Sign In screenshot" src="images/flask-mega-tutorial-part-ii.jpg"/>
    </p>
    <h2>
     Final Words

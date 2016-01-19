@@ -636,7 +636,7 @@ def after_login(resp):
    <p>
    </p>
    <center>
-    <img alt="poedit" src="/static/images/flask-mega-tutorial-part-xiv-1.jpg"/>
+    <img alt="poedit" src="images/flask-mega-tutorial-part-xiv-1.jpg"/>
    </center>
    <p>
     The top section shows the texts in their original and translated languages. The bottom left has a box where the translator writes the text.

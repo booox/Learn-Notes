@@ -410,7 +410,7 @@ class User(db.Model):
    <p>
    </p>
    <center>
-    <img alt="microblog profile page" src="/static/images/flask-mega-tutorial-part-vi-1.png"/>
+    <img alt="microblog profile page" src="images/flask-mega-tutorial-part-vi-1.png"/>
    </center>
    <h2>
     Reusing at the sub-template level
@@ -693,7 +693,7 @@ def edit():
    <p>
    </p>
    <center>
-    <img alt="microblog profile page" src="/static/images/flask-mega-tutorial-part-vi-2.png"/>
+    <img alt="microblog profile page" src="images/flask-mega-tutorial-part-vi-2.png"/>
    </center>
    <h2>
     Final words... and your homework!

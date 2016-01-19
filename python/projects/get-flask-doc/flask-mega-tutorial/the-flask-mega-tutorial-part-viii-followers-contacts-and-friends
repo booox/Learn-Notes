@@ -216,7 +216,7 @@
     . Here is the diagram:
    </p>
    <p>
-    <img alt="one-to-many" src="/static/images/flask-mega-tutorial-part-iv-2.png"/>
+    <img alt="one-to-many" src="images/flask-mega-tutorial-part-iv-2.png"/>
    </p>
    <p>
     The two entities associated with this relationship are
@@ -297,7 +297,7 @@
     . Here is how the database would look for the students and teachers example:
    </p>
    <p>
-    <img alt="many-to-many" src="/static/images/flask-mega-tutorial-part-viii-1.png"/>
+    <img alt="many-to-many" src="images/flask-mega-tutorial-part-viii-1.png"/>
    </p>
    <p>
     While it may not seem straightforward, the association table with its two foreign keys is able to efficiently answer many types of queries, such as:
@@ -356,7 +356,7 @@
     Here is a diagram of our many-to-many relationship:
    </p>
    <p>
-    <img alt="many-to-many" src="/static/images/flask-mega-tutorial-part-viii-2.png"/>
+    <img alt="many-to-many" src="images/flask-mega-tutorial-part-viii-2.png"/>
    </p>
    <p>
     The
