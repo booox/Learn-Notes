@@ -12,3 +12,11 @@
  
 * 输入一个字符串，统计其中每个字母出现的次数。    
     * [count-chars.py]
+    
+## 文件
+
+* 写一个程序读取一个文件，将文件内容一行一行的打印输出，并全部为大写。
+    * [line-print-uppercase.py]
+    
+    
+    raised hand with part between middle and ring fingers.
