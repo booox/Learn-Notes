@@ -25,9 +25,14 @@
 
 
     
-## 条件判断
+## 逻辑与条件判断（Logic and Conditionals ）
 
-* 定义一个函数，sendFriendMoney，如果为朋友则问好并给20元
+* 定义一个函数， *is_even* ，整数 *number* 作为参数，当 *number* 为偶数是返回 *True* ，否则为 *False* 。
+    * [Logic and Conditionals/is_even.py]
+    
+* 定义一个函数， *is_cool* ，字符串 *name* 作为参数，当 *name* 为 "Joe", "John", "Stephen" 其中之一时返回 *True* ，否则为 *False* 。
+    * [Logic and Conditionals/is_cool.py]
+
 
 
 ## Programming tips
