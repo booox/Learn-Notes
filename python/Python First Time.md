@@ -637,3 +637,13 @@
         import string
         'abc!334d.'.translate(None, string.punctuation)
     ```
+
+* Using tuples as keys in dictionaries
+    * If we want to create a composite key to use in a dictionary we must use a tuple as the key.
+        * `yellowpage[lastname, firstname] = number`
+    * To traverse this dictionary
+        ```
+            for lastname, firstname in yellowpage:
+                print firstname, lastname, yellowpage[lastname, firstname]
+        ```
+    
