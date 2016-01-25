@@ -24,6 +24,11 @@
 ## 函数
 
 
+## Dictionary
+
+* 统计给定文件中的单词出现的次数，并按出现次数从大到小输出。
+    * [count-words.py]
+
     
 ## 逻辑与条件判断（Logic and Conditionals ）
 

@@ -624,3 +624,16 @@
             * Make sure execute permissions are turned on ( `$ chmod a+x script.py` )
             * Start the first line in the script with the symbols `#!` ( called a "shebang")followed by the path to the interpreter to use.
             
+* `string.punctuation`
+    * 
+        ```
+        >>> import string
+        >>> string.punctuation
+        '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
+        ```
+* translate(s, table, deletions='')
+    * 
+    ```
+        import string
+        'abc!334d.'.translate(None, string.punctuation)
+    ```
