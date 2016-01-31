@@ -75,3 +75,16 @@
 
 * Local Variables
     * Variables: Variables that define inside a function.
+    
+    
+## Simple GUI
+
+### GUI Program Structure
+
+* Global (state)
+* Helper functions
+* Classes (later)
+* Define event handlers
+* Create a frame
+* Register event handlers
+* Start frame & timers
