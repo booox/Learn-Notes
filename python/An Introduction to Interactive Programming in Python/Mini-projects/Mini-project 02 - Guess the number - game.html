@@ -1,0 +1,134 @@
+<div id="assessmentContentRegion" class="contentRegion"><div style="display: block;">
+<!-- h1.assessmentTitle Mini-project # 2 - &quot;Guess the number&quot; game (late)-->
+<div id="assessmentForm">
+  <div id="topContentToolbar" class="contentToolbar form-actions">
+<div class="assessmentActionBar"><div class="contentToolbarButtons"><div class="pull-left" style="text-align: left;"><span style="color:green"><i class="icon-ok"></i> Submitted.</span>  You can still make changes and re-submit before the deadline.<p><label><input type="checkbox" id="honorCode" class="honorCode" disabled="disabled" checked="checked">&nbsp;In accordance with the Honor Code, I certify that my answers here are my own work, and that I have appropriately acknowledged all external sources (if any) that were used in this work.</label></p></div><div class="pull-right"><a id="assessmentSubmit" href="#" role="button" class="hg-internal assessmentSubmit btn btn-primary">Re-submit for grading</a></div></div></div></div>
+  <div id="assessmentFormContent"><div class="submissionForm"><div id="assessmentHead"><div id="forumThreadLinkSection"></div></div><div id="evaluatedGroup-7465ba66200a7d29" class="assessmentSection"><div class="assessmentExposition"><div class="assessmentText" dir="auto"><h3> A reminder about the Honor Code</h3>
+For previous mini-projects, we have had instances of students submitting solutions that have been copied from the web. Remember, if you can find code on the web for one of the mini-projects, we can also find that code. Submitting copied code violates
+the <a target="">Honor Code</a> for this class as well as Coursera's Terms of Service. Please write your own code and refrain from copying. If, during peer evaluation, you suspect a submitted mini-project includes copied code, please evaluate as usual
+and email the assignment details to <a href="mailto:iipphonorcode@online.rice.edu">iipphonorcode@online.rice.edu</a>. We will investigate and handle as appropriate.
+
+
+<h2> Mini-project description — “Guess the number” game (late version - half credit) </h2>
+
+<p>One of the simplest two-player games is “Guess the number”. The first player thinks of a secret number in some known range while the second player attempts to guess the number. After each guess, the first player answers either “Higher”, “Lower” or “Correct!”
+    depending on whether the secret number is higher, lower or equal to the guess. In this project, you will build a simple interactive program in Python where the computer will take the role of the first player while you play as the second player.</p>
+<p>
+When discussing ranges in this mini-project, we will follow the standard Python convention of including the low end of the range and excluding the high end of the range. Mathematically, we will express ranges via the notation <code>[low, high)</code>.  The square bracket of the left of the range indicates that the corresponding bound should be included.  The left parenthesis on the right of the range indicates that corresponding bound should be excluded.  For example, the range <code>[0, 3)</code> consists of numbers starting at 0 up to, but not including 3. In other words 0, 1, and 2. </p>
+<p>You will interact with your program using an input field and several buttons. For this project, we will ignore the canvas and print the computer's responses in the console. Building an initial version of your project that prints information in the console
+    is a development strategy that you should use in later projects as well. Focusing on getting the logic of the program correct before trying to make it display the information in some “nice” way on the canvas usually saves lots of time since debugging
+    logic errors in graphical output can be tricky.</p>
+
+<h3> Mini-project development process </h3>
+
+<p>We have provided a basic template for this mini-project
+    <a href="http://www.codeskulptor.org/#examples-guess_the_number_template.py" target="">
+        <b>here</b>
+
+    </a>. Our suggested development strategy for the basic version of “Guess the number” is below.  Remember to run your program after each step to ensure that you implemented that step correctly.</p>
+<ol>
+    <li>
+        <p> Add code to the program template that creates a frame with an input field whose handler has the name <code>input_guess</code>. You will use this input field to enter guesses.</p>
+    </li>
+    <li>
+        <p>Add code to the event handler <code>input_guess(guess)</code> that takes the input string <code>guess</code>, converts it to an integer, and prints out a message of the form <code>"Guess was 37"</code> (or whatever the guess actually was).  <b>Hint:</b> We have shown you how to convert strings to numbers in the lectures.</p>
+    </li>
+    <li>
+        <p>Add code  to the function <code>new_game</code> that initializes a global variable <code>secret_number</code> to be a random number in the range <code>[0, 100)</code>. (Note that this range should <b>not</b> include 100 as a possible secret number.)
+Remember to include a <code>global</code> statement. <b>Hint:</b> Look at the functions in the <code>random</code> module to figure out how to easily select such a random number. Observe that the call to <code>new_game()</code> at the bottom of the template ensures that <code>secret_number</code> is always initialized when the program starts running.</p>
+    </li>
+    <li>
+        <p>Add code to <code>input_guess</code> that compares the entered number to <code>secret_number</code> and prints out an appropriate message such as <code>"Higher"</code>, <code>"Lower"</code>, or <code>"Correct"</code>.</p>
+    </li>
+    <li>
+        <p>Test your code by playing multiple games of “Guess the number” with a fixed range. At this point, you will need to re-run your program between each game (using the CodeSkulptor “Run” button). &nbsp;You are also welcome to use this testing template&nbsp;<a href="http://www.codeskulptor.org/#examples-gtn_testing_template.py" target="" style="color: rgb(3, 103, 176); text-decoration: none;">http://www.codeskulptor.org/#examples-gtn_testing_template.py</a>.&nbsp;<span style="color: rgb(51, 51, 51);">The bottom of the template contains a sequence of calls to&nbsp;</span><code>input_guess()</code><span style="color: rgb(51, 51, 51);">&nbsp;for three games of "Guess the number". Uncomment each sequence&nbsp;of calls and check whether the output in the console matches that provided in the comments below. Note that your output doesn't have to be identical, just of a similar form.</span></p>
+    </li>
+</ol>
+<p>From this minimal working version of “Guess the number”, the rest of this project consists of adding extra functionality to your project. There are two improvements that you will need to make to get full credit:</p>
+<ol>
+    <li>
+        <p>Using function(s) in the <code>simplegui</code> module, add buttons to restart the game so that you don't need to repeatedly click “Run” in CodeSkulptor to play multiple games. You should add two buttons with the labels <code>"Range is [0,100)"</code> and <code>"Range is [0,1000)"</code>
+            that allow the player to choose different ranges for the secret number. Using either of these buttons should restart the game and print out an appropriate message. They should work at any time during the game. In our implementation, the event
+            handler for each button set the desired range for the secret number (as a global variable) and then call&nbsp;<code>new_game</code> to reset the secret number in the desired range.</p>
+        <p>As you play “Guess the number”, you might notice that a good strategy is to maintain an interval that consists of the highest guess that is “Lower” than the secret number and the lowest guess that is “Higher” than the secret number. A good choice
+            for the next guess is the number that is the average of these two numbers. The answer for this new guess then allows you to figure a new interval that contains the secret number and that is half as large. For example, if the secret number
+            is in the range <code>[0, 100)</code>, it is a good idea to guess <code>50</code>. If the answer is "Higher", the secret number must be in the range <code>[51, 100)</code>. It is then a good idea to guess <code>75</code> and so on. This technique
+            of successively narrowing the range corresponds to a well-known computer algorithm known as <a href="http://en.wikipedia.org/wiki/Binary_search_algorithm" target="">binary
+search</a>.</p>
+    </li>
+    <li>
+        <p>Your final addition to “Guess the number” will be to restrict the player to a limited number of guesses. After each guess, your program should include in its output the number of remaining guesses. Once the player has used up those guesses, they
+            lose, the game prints out an appropriate message, and a new game immediately starts.</p>
+        <p>Since the strategy above for playing “Guess the number” approximately halves the range of possible secret numbers after each guess, any secret number in the range <code>[low, high)</code> can always be found in at most <code>n</code> guesses where <code>n</code> is
+            the smallest integer such that <code>2 ** n &gt;= high - low + 1</code>. For the range <code>[0, 100)</code>, <code>n</code> is seven. For the range <code>[0, 1000)</code>, <code>n</code> is ten. In our implementation, the function <code>new_game()</code> set
+            the number of allowed guess to seven when the range is <code>[0, 100)</code> or to ten when the range is <code>[0, 1000)</code>. For more of a challenge, you may compute <code>n</code> from <code>low</code> and <code>high</code> using the functions <code>math.log</code> and <code>math.ceil</code> in
+            the <code>math</code> module.</p>
+    </li>
+</ol>
+<p>When your program starts, the game should immediately begin in range <code>[0, 100)</code>. When the game ends (because the player either wins or runs out of guesses), a new game with the same range as the last one should immediately begin by calling <code>new_game()</code>.
+    Whenever the player clicks one of the range buttons, the current game should stop and a new game with the selected range should begin.</p>
+<p>
+For more helpful tips on implementing this mini-project, please visit the <a href="https://class.coursera.org/interactivepython1-010/wiki/gtn_tips" target="">Code Clinic tips</a> page for this mini-project.</p>
+
+<h3> Grading rubric — 11 pts total (scaled to 100 pts) </h3>
+
+<p>Your peers will assess your mini-project according to the rubric given below. To guide you in determining whether your project satisfies each item in the rubric, please consult the video that demonstrates our implementation of “Guess the number”. Small
+    deviations from the textual output of our implementation are fine. You should avoid potentially confusing deviations (such as printing “Too high” or “Too low” instead of “Lower” and “Higher”). Whether moderate deviations satisfy an item of the grading
+    rubric is at your peers' discretion during their assessment.</p>
+<p>Here is a break down of the scoring:</p>
+<ul>
+    <li>
+        <p>1 pt — The game starts immediately when the “Run” button in CodeSkulptor is pressed.</p>
+    </li>
+    <li>
+        <p>1 pt — A game is always in progress. Finishing one game immediately starts another in the same range.</p>
+    </li>
+    <li>
+        <p>1 pt — The game reads <code>guess</code> from the input field and correctly prints it out.</p>
+    </li>
+    <li>
+        <p>3 pts — The game correctly plays “Guess the number” with the range <code>[0, 100)</code> and prints understandable output messages to the console. Play three complete games: 1 pt for each correct game.</p>
+    </li>
+    <li>
+        <p>2 pts — The game includes two buttons that allow the user to select the range <code>[0, 100)</code> or the range <code>[0,
+1000)</code> for the secret number. These buttons correctly change the range and print an appropriate message. (1 pt per button.)</p>
+    </li>
+    <li>
+        <p>2 pts — The game restricts the player to a finite number of guesses and correctly terminates the game when these guesses are exhausted. Award 1 pt if the number of remaining guesses is printed, but the game does not terminate correctly.</p>
+    </li>
+    <li>
+        <p>1 pt — The game varies the number of allowed guesses based on the range of the secret number — seven guesses for range <code>[0, 100)</code>, ten guesses for range <code>[0, 1000)</code>.</p>
+    </li>
+</ul>
+<p>To help aid you in gauging what a full credit project might look like, the video lecture on the “Guess the number” project includes a demonstration of our implementation of this project. You do not need to validate that the input number is in the correct
+    range. (For this game, that responsibility should fall on the player.)</p></div></div></div><div id="evaluatedGroup-4ff31e0d1beb49e" class="assessmentSection"><div id="evaluatedGroup-2cdc14c88e273391" class="assessmentGroup"><div class="assessmentExposition"><div id="assessmentText-2cdc14c88e273391" class="assessmentText" dir="auto"><p>In the submission phase, cut and paste the URL for your cloud-saved mini-project into the box below. Click the Honor Code box and hit the "Submit for grading" button when you are ready to submit your mini-project. &nbsp;(You may submit as many times as you like before the deadline so we suggest that you use "Submit" instead of "Save".) &nbsp;<b>IMPORTANT: Please use the "Review your work" link that appears at the top of the subsequent submission page to verify that you submitted a working link for the final version of your mini-project.</b><br></p></div></div><div class="assessmentAnswer" aria-labelledby="assessmentText-2cdc14c88e273391"><input type="text" id="textfield-e89656c5196ebff8" data-modelbind="submission.fields.e89656c5196ebff8" aria-labelledby="assessmentText-2cdc14c88e273391" dir="auto" style="width: 100%"></div></div></div> </div></div>
+  <div id="bottomContentToolbar" class="contentToolbar form-actions">
+<div class="assessmentActionBar"><div class="contentToolbarButtons"><div class="pull-left" style="text-align: left;"><span style="color:green"><i class="icon-ok"></i> Submitted.</span>  You can still make changes and re-submit before the deadline.<p><label><input type="checkbox" id="honorCode" class="honorCode" disabled="disabled" checked="checked">&nbsp;In accordance with the Honor Code, I certify that my answers here are my own work, and that I have appropriately acknowledged all external sources (if any) that were used in this work.</label></p></div><div class="pull-right"><a id="assessmentSubmit" href="#" role="button" class="hg-internal assessmentSubmit btn btn-primary">Re-submit for grading</a></div></div></div></div>
+</div>
+<div class="coursera-signature-modal"></div>
+<div id="coursera-signature-pending-modal" style="display:none">
+  <div class="coursera-signature-please-complete-modal modal">
+    <div style="height: 2px; background: black; position: relative; width: 558px;">
+      <div class="coursera-signature-modal-header modal-header"><a class="close coursera-signature-close-button">×</a><img src="https://dw0ugk4msqulk.cloudfront.net/55390554329ae91f780f6f678a3250cc77405b95/../pages/signature/views/ribbon_stripes.png" class="coursera-signature-modal-ribbon">
+        <p class="coursera-signature-modal-signature-track">Signature Track</p>
+        <p class="coursera-signature-modal-title">Signature Track Profile incomplete</p>
+      </div>
+      <div style="position: relative; top: -10px; margin: 30px 10px 10px 70px;"><i style="margin-left: 60px; color: #c43b3b; font-size: 40px" class="icon-warning-sign"></i><span style="font-weight: bold; font-size: 16px">Oops! You have submitted your work, but you can't authenticate your coursework yet. </span> You still need to complete your Signature Track profile by registering your unique typing patterns and submitting webcam photos. You need to authenticate most of your assignments to get a Verified Certificate.
+        <p style="margin-top: 10px; font-weight: bold;">Please complete your profile as soon as possible.</p>
+      </div>
+      <div style="text-align: center; margin-bottom: 20px;">
+        <h4 style="margin-bottom: 0px;">You will need:</h4>
+        <div style="width: 40%; display: inline-block; vertical-align: top;">
+          <div style="height: 85px;"><img src="https://dw0ugk4msqulk.cloudfront.net/55390554329ae91f780f6f678a3250cc77405b95/../pages/signature/views/webcam_keyboard.jpg" alt="Illustration of keyboard and camera" style="height: 85px;"></div>
+          <div> Keyboard and Webcam</div>
+        </div>
+        <div style="width: 40%; display: inline-block; vertical-align: top;">
+          <div style="height: 85px;"><img src="https://dw0ugk4msqulk.cloudfront.net/55390554329ae91f780f6f678a3250cc77405b95/../pages/signature/views/government_id.jpg" alt="Illustration of identification card" style="margin-top: 14px"></div>
+          <div>Goverment-issued Photo ID</div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-bottom: 10px;"><a href="https://dw0ugk4msqulk.cloudfront.net/55390554329ae91f780f6f678a3250cc77405b95/../../signature/phrase/interactivepython1/976300">
+          <button style="margin-top: 0px; padding: 15px 25px;" class="coursera-signature-next-button">Complete my profile now</button></a></div><a style="font-size: smaller; float: right; margin-right: 20px; margin-bottom: 20px;" class="coursera-signature-nothanks">No thanks, I'll do this later. »</a>
+    </div>
+  </div>
+</div></div></div>
