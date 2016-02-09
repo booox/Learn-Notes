@@ -73,8 +73,21 @@
 
 * Global Variables
 
+    ```
+        number = 10
+        
+        print number
+        def test_global():
+            global number
+            number = 15
+        test_global()
+    
+    ```
+
 * Local Variables
     * Variables: Variables that define inside a function.
+    
+    
     
     
 ## Simple GUI
@@ -88,3 +101,4 @@
 * Create a frame
 * Register event handlers
 * Start frame & timers
+
