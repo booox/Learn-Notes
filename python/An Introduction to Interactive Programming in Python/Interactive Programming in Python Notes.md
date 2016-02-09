@@ -72,6 +72,8 @@
 ## Local vs. global variables
 
 * Global Variables
+    
+
 
     ```
         number = 10
@@ -102,3 +104,79 @@
 * Register event handlers
 * Start frame & timers
 
+
+=======
+### Programming tips
+
+#### Correct it!
+
+* global variables
+    ```
+        n = 0
+        
+        def assign(x):
+            n = x
+            
+        assign(2)
+        assign(15)
+        
+        print n
+    
+    ```
+* return None
+    ```
+        n = 0
+        
+        def decrement():
+            global n
+            n = n - 1
+            
+        x = decrement()
+        
+        print "x = ", x
+        print "n = ", n
+    
+    ```
+    
+* Briefly
+    * First
+    ```
+        def f(a, b):
+            """ Returns True eactly when a is False and b is True. """
+            if a == False and b == True:
+                return True
+            else:
+                return False
+        ```
+    * Change 1:
+    ```
+        def f(a, b):
+            """ Returns True eactly when a is False and b is True. """
+            if not a and b:
+                return True
+            else:
+                return False
+        ```
+    * Change 2:
+    ```
+        def f(a, b):
+            """ Returns True eactly when a is False and b is True. """
+            return not a and b
+        ```
+        
+* Another Example
+    * First
+    ```
+        def g(a, b):
+            """ Returns False eactly when a and b are both True. """
+            if a == True and b == True:
+                return False
+            else:
+                return True
+        ```
+    * Changed:
+    ```
+        def f(a, b):
+            """ Returns True eactly when a is False and b is True. """
+            return  not (a and b)
+        ```

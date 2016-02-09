@@ -647,3 +647,15 @@
                 print firstname, lastname, yellowpage[lastname, firstname]
         ```
     
+* Coding Style
+    * Use 4-spaces indentation, and no tabs
+    * Wrap lines so that they don't exceed 79 characters.
+    * Use blank lines to separate functions and classes, and larger blocks of code inside functions
+    * When possible, put comments on a line of their own.
+    * Use docstrings
+    * Use spaces around operators and after commas, but not directly inside bracketing constructs.
+    * Name your classes and functions consistently
+        * Use `CamelCase` for classes
+        * Use `lower_case_with_underscores` for functions and methods
+        * Always use `self` as the name for the first method argument.
+    
