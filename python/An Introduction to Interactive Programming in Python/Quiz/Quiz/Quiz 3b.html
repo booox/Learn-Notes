@@ -1,0 +1,507 @@
+<div id="course-page-content" role="main"><div id="spark" class="hide" style="display: block;">
+
+<h2 class="course-page-header">
+  <span>
+Quiz 3b  </span>
+  
+  <a class="coursera-reporter-link" title="Click here if you're experiencing technical problems or found errors in the course materials." target="_blank" href="https://accounts.coursera.org/i/zendesk/courserahelp?return_to=https://learner.coursera.help/hc/articles/201523125-Quizzes">
+     Help Center
+  </a>
+</h2>
+
+
+<a data-coursera-admin-helpwidget-link="" rel="help" href="https://class.coursera.org/mooc/help/quiz" title="Quiz documentation" style="display:none;">Learn more</a>
+
+
+<p class="course-quiz-intro-message">The <strong>hard deadline</strong> for this quiz is <strong>Mon 15 Feb 2016  2:01 PM CST</strong>.</p>
+
+
+
+
+
+
+
+            <form method="post" id="quiz_form" accept-charset="UTF-8">
+    
+    
+            
+<div class="course-quiz-honor-code">
+    <label class="checkbox">
+        <input type="checkbox">
+        In accordance with the Coursera Honor Code, I (lxworld) certify that the answers here are my own work.        <span class="course-quiz-honor-code-thanks" style="display: none;">Thank you!</span>
+    </label>
+
+</div>
+    
+    <div class="course-quiz-question-body">
+<h3 class="course-quiz-question-number">Question 1</h3>
+<div dir="auto" class="course-quiz-question-text">
+<p>
+When the following code is executed, how many times is <code>timer_handler</code> called?
+</p>
+
+<pre>import simplegui
+
+def timer_handler():
+   …
+
+timer = simplegui.create_timer(10, timer_handler)
+timer.start()
+</pre>
+
+<p>
+The body of <code>timer_handler</code> isn't given, as it is irrelevant for this question.  You may want to finish the code and run it before submitting your answer.
+</p>
+</div>
+<div dir="auto" class="course-quiz-options">
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[72206a6aa38d09ce98b75841d93748a7][]" id="gensym_56bac8940a39d" value="f60ab3a79c661a36bf8576927b4b8eb4"><label for="gensym_56bac8940a39d" style="cursor:pointer;">Unlimited — It is called repeatedly until you stop the program.</label>
+</div>
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[72206a6aa38d09ce98b75841d93748a7][]" id="gensym_56bac8940a817" value="4b05fae067258ad94ac8761b6adabaee"><label for="gensym_56bac8940a817" style="cursor:pointer;">0 — The code hasn't been written correctly.</label>
+</div>
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[72206a6aa38d09ce98b75841d93748a7][]" id="gensym_56bac8940ac42" value="b19f578bd9d20e13ba0bc8d39ce491e5"><label for="gensym_56bac8940ac42" style="cursor:pointer;">10</label>
+</div>
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[72206a6aa38d09ce98b75841d93748a7][]" id="gensym_56bac8940b060" value="a4ef595edd5a009e6297f6a598c07c3a"><label for="gensym_56bac8940b060" style="cursor:pointer;">1</label>
+</div>
+</div>
+</div><div class="course-quiz-question-body">
+<h3 class="course-quiz-question-number">Question 2</h3>
+<div dir="auto" class="course-quiz-question-text">
+<p>
+You want a timer to create exactly 1000 events.  Which of the following solutions are possible?
+</p>
+</div>
+<div dir="auto" class="course-quiz-options">
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[cc8803c07fbb166ac1417568e4ac8efd][]" id="gensym_56bac8940cc3b" value="d9773f5b241fd0d962a894b3e8f5fa03"><label for="gensym_56bac8940cc3b" style="cursor:pointer;"><p>
+Specify the number of timer events when creating the timer.
+</p></label>
+</div>
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[cc8803c07fbb166ac1417568e4ac8efd][]" id="gensym_56bac8940d089" value="258e12b869e02779c0e95203b857e743"><label for="gensym_56bac8940d089" style="cursor:pointer;"><p>
+Have a global counter for the number of timer calls.
+Outside the timer handler, increment the counter.  Outside the timer handler, check the count and possibly stop the timer. 
+</p></label>
+</div>
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[cc8803c07fbb166ac1417568e4ac8efd][]" id="gensym_56bac8940d4b5" value="ec58f74348398f848df57720f857e865"><label for="gensym_56bac8940d4b5" style="cursor:pointer;"><p>
+In the timer handler, have a local counter for the number of timer calls.
+In the timer handler, increment the counter.  In the timer handler, check the count and possibly stop the timer. 
+</p></label>
+</div>
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="checkbox" name="answer[cc8803c07fbb166ac1417568e4ac8efd][]" id="gensym_56bac8940d8d8" value="c526804b7f9bf4a2fefb405447006ca5"><label for="gensym_56bac8940d8d8" style="cursor:pointer;"><p>
+Have a global counter for the number of timer calls.
+In the timer handler, increment the counter.  In the timer handler, check the count and possibly stop the timer. 
+</p></label>
+</div>
+</div>
+</div><div class="course-quiz-question-body">
+<h3 class="course-quiz-question-number">Question 3</h3>
+<div dir="auto" class="course-quiz-question-text">
+<p>
+How do you change the frequency of a running timer, either increasing or decreasing the frequency?  E.g., in the code below, we want code at the question marks that changes the timer.
+</p>
+
+<pre>…
+timer = simplegui.create_timer(1000, timer_handler)
+timer.start()
+…
+???
+</pre>
+</div>
+<div dir="auto" class="course-quiz-options">
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[2cf52d138a182587a1d1bef2f3b4246a][]" id="gensym_56bac8940f50d" value="ec428c5e336dc3a7d2c83006387563ff"><label for="gensym_56bac8940f50d" style="cursor:pointer;"><p>
+Create and start the timer again.
+</p>
+
+<pre>timer = simplegui.create_timer(300, timer_handler)
+timer.start()
+</pre></label>
+</div>
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[2cf52d138a182587a1d1bef2f3b4246a][]" id="gensym_56bac8940f966" value="7e48cb148e81d45df89b4d7d589d6824"><label for="gensym_56bac8940f966" style="cursor:pointer;"><p>
+Just use <code>set_timer_interval</code>.
+</p>
+
+<pre>timer.set_timer_interval(300)
+</pre></label>
+</div>
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[2cf52d138a182587a1d1bef2f3b4246a][]" id="gensym_56bac8940ff73" value="32e5425d88dc8114adb2d71e89e69a38"><label for="gensym_56bac8940ff73" style="cursor:pointer;"><p>
+You can't.  But, you can stop this timer, and start a new one with a different frequency and same handler.
+</p>
+
+<pre>timer.stop()
+timer = simplegui.create_timer(300, timer_handler)
+timer.start()
+</pre></label>
+</div>
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[2cf52d138a182587a1d1bef2f3b4246a][]" id="gensym_56bac894103d1" value="3b17602365e1a7846124f51536da1e5d"><label for="gensym_56bac894103d1" style="cursor:pointer;"><p>
+Just run <code>create_timer</code>.  It will change the timer.
+</p>
+
+<pre>timer = simplegui.create_timer(300, timer_handler)
+</pre></label>
+</div>
+</div>
+</div><div class="course-quiz-question-body">
+<h3 class="course-quiz-question-number">Question 4</h3>
+<div dir="auto" class="course-quiz-question-text">
+<p>
+How many timers can you have running at once?
+</p>
+</div>
+<div dir="auto" class="course-quiz-options">
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[73a650c81768ce29ebf46c6f0431d9e5][]" id="gensym_56bac89411f86" value="62dde2cb7bcf4b7b131267d894c4cd83"><label for="gensym_56bac89411f86" style="cursor:pointer;">1</label>
+</div>
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[73a650c81768ce29ebf46c6f0431d9e5][]" id="gensym_56bac89412460" value="c0be3b6592dc23c92de8263f8e656a9b"><label for="gensym_56bac89412460" style="cursor:pointer;">0</label>
+</div>
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[73a650c81768ce29ebf46c6f0431d9e5][]" id="gensym_56bac894128b9" value="51a05ce8d2bf04ed223ded75c5e70c41"><label for="gensym_56bac894128b9" style="cursor:pointer;">Unlimited</label>
+</div>
+</div>
+</div><div class="course-quiz-question-body">
+<h3 class="course-quiz-question-number">Question 5</h3>
+<div dir="auto" class="course-quiz-question-text">
+<p>
+The function <code>time.time()</code> is used in Python to keep track of time.  What unit of time is associated with the value returned by <code>time.time()</code>?  Hint: Look in the <a href="http://www.codeskulptor.org/docs.html" target="_blank">documentation</a>. 
+</p>
+</div>
+<div dir="auto" class="course-quiz-options">
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[378a9d3b73794463a7a4a9daf5cd61df][]" id="gensym_56bac8941445b" value="6f02214065e17a592b9130df1d4c065b"><label for="gensym_56bac8941445b" style="cursor:pointer;">Hour</label>
+</div>
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[378a9d3b73794463a7a4a9daf5cd61df][]" id="gensym_56bac894149a5" value="1f552363432696ca1341c34b0835ea2e"><label for="gensym_56bac894149a5" style="cursor:pointer;">Milli-second</label>
+</div>
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[378a9d3b73794463a7a4a9daf5cd61df][]" id="gensym_56bac89414dd3" value="b76a60b57feb4b56ce367d99591b736e"><label for="gensym_56bac89414dd3" style="cursor:pointer;">Second</label>
+</div>
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[378a9d3b73794463a7a4a9daf5cd61df][]" id="gensym_56bac894152c4" value="181e3640de24245618a3f694e4830f1b"><label for="gensym_56bac894152c4" style="cursor:pointer;">Minute</label>
+</div>
+</div>
+</div><div class="course-quiz-question-body">
+<h3 class="course-quiz-question-number">Question 6</h3>
+<div style="float:none;width:100%"> <div dir="auto" class="course-quiz-question-text">
+<p>
+In Python, the <code>time</code> module can be used to determine the current time.  This module includes the method <code>time</code> which returns the current system time in seconds since a date referred as the <em>Epoch</em>.  The Epoch is fixed common date shared by all Python installations.  Using the date of the Epoch and the current system time, an application such as a clock or calendar can compute the current time/date using basic arithmetic.
+</p>
+<p>
+ Write a CodeSkulptor program that experiments with the method <code>time.time()</code> and determines what date and time corresponds to the Epoch.  Enter the year of the Epoch as a four digit number.  (Remember to <code>import time</code>.)  
+</p>
+</div>
+</div>
+<label for="gensym_56bac89415d54" class="hidden">Answer for Question 6</label><div class="course-quiz-options"></div>
+<textarea dir="auto" id="gensym_56bac89415d54" class="course-quiz-input" name="answer[7a88ff676fbb75625df0d306f1c416e0][answer]"></textarea>
+</div><div class="course-quiz-question-body">
+<h3 class="course-quiz-question-number">Question 7</h3>
+<div dir="auto" class="course-quiz-question-text">
+<p>
+The Python code below uses a timer to execute the function <code>update()</code> 10 times, computing a good approximation to a common mathematical function. Examine the code, and run it while varying the input value <code>n</code>.
+</p>  
+
+<p>
+What is the common name for what this computes?
+</p>
+
+<pre># Mystery computation in Python
+# Takes input n and computes output named result
+
+import simplegui
+
+# global state
+
+result = 1
+iteration = 0
+max_iterations = 10
+
+# helper functions
+
+def init(start):
+    """Initializes n."""
+    global n
+    n = start
+    print "Input is", n
+    
+def get_next(current):
+    """???  Part of mystery computation."""
+    return 0.5 * (current + n / current)
+
+# timer callback
+
+def update():
+    """???  Part of mystery computation."""
+    global iteration, result
+    iteration += 1
+    # Stop iterating after max_iterations
+    if iteration &gt;= max_iterations:
+        timer.stop()
+        print "Output is", result
+    else:
+        result = get_next(result)
+
+# register event handlers
+
+timer = simplegui.create_timer(1, update)
+
+# start program
+init(13)
+timer.start()
+</pre>
+</div>
+<div dir="auto" class="course-quiz-options">
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[53ea95bdb2967ed159313866d61c9aa2][]" id="gensym_56bac89418a06" value="758cbeac98416d45537d8f00ba9e6e50"><label for="gensym_56bac89418a06" style="cursor:pointer;">Multiplicative inverse — 1/<var>n</var></label>
+</div>
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[53ea95bdb2967ed159313866d61c9aa2][]" id="gensym_56bac89418e7b" value="6804fb67926da3f0577f67d8bf0c39cc"><label for="gensym_56bac89418e7b" style="cursor:pointer;">Cosine of <var>n</var></label>
+</div>
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[53ea95bdb2967ed159313866d61c9aa2][]" id="gensym_56bac894192a5" value="bfe4b2c3f1956e5f1ecfbf8e82d45ea0"><label for="gensym_56bac894192a5" style="cursor:pointer;">Square root of <var>n</var></label>
+</div>
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[53ea95bdb2967ed159313866d61c9aa2][]" id="gensym_56bac894196d0" value="ab90c05f0347963fdbde6a1ff00c03ed"><label for="gensym_56bac894196d0" style="cursor:pointer;">Exponentiation — 2<sup><var>n</var></sup></label>
+</div>
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[53ea95bdb2967ed159313866d61c9aa2][]" id="gensym_56bac89419b0d" value="30394e375d570dcd0c038d46f52ed815"><label for="gensym_56bac89419b0d" style="cursor:pointer;">Logarithm base 2</label>
+</div>
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[53ea95bdb2967ed159313866d61c9aa2][]" id="gensym_56bac89419f2c" value="85b5f5cb9c2f33b8a46eedb9a0fbfbe3"><label for="gensym_56bac89419f2c" style="cursor:pointer;">Square — <var>n</var><sup>2</sup></label>
+</div>
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[53ea95bdb2967ed159313866d61c9aa2][]" id="gensym_56bac8941a357" value="b0f2ae4711aecf33c20d78909329d2e7"><label for="gensym_56bac8941a357" style="cursor:pointer;">Multiplication by 2 — 2<var>n</var></label>
+</div>
+</div>
+</div><div class="course-quiz-question-body">
+<h3 class="course-quiz-question-number">Question 8</h3>
+<div style="float:none;width:100%"> <div dir="auto" class="course-quiz-question-text">
+<p>
+Given any initial natural number, consider the sequence of numbers generated by repeatedly following the rule:
+</p>
+<ul>
+<li> divide by two if the number is even or </li>
+  <li> multiply by 3 and add 1 if the number is odd. </li>
+</ul>
+<p>
+ The Collatz conjecture states that this sequence always terminates at 1. For example, the sequence generated by 23 is:
+</p>
+
+<div align="center">
+<p>
+23, 70, 35, 106, 53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1
+</p>
+</div>
+
+<p>
+Write a Python program that takes a global variable <code>n</code> and uses a timer callback to repeatedly apply the rule above to <code>n</code>.  Use the code from the previous question as a template.  I suggest that your code prints out the sequence of numbers generated by this rule.  Run this program for <code>n</code> = 217.  What is the largest number in the sequence generated by this starting value? 
+</p>
+
+<p>
+To test your code, starting at <code>n</code> = 23 generates a sequence with a maximum value of 160.
+</p>
+</div>
+</div>
+<label for="gensym_56bac8941af81" class="hidden">Answer for Question 8</label><div class="course-quiz-options"></div>
+<textarea dir="auto" id="gensym_56bac8941af81" class="course-quiz-input" name="answer[216505671d5f4a190c236f069382f79b][answer]"></textarea>
+</div><div class="course-quiz-question-body">
+<h3 class="course-quiz-question-number">Question 9</h3>
+<div dir="auto" class="course-quiz-question-text">CodeSkulptor runs your Python code by converting it into Javascript when you click the "Run" button and then executing this Javascript in your web browser.  Open this <a href="http://www.codeskulptor.org/#examples-explosion_animation.py" target="_blank"> <b>example</b></a> and run the provided code.   If the SimpleGUI frame is spawned as a separate window, you should see an animation of an explosion in the canvas for this frame.  If the SimpleGUI frame is spawned as a separate tab on top of the existing window containing the code (as happens in some browser configurations), the animation will "freeze" and a single static image is displayed.   (If the SimpleGUI frame spawns as a separate window, you can also cause the animation to freeze by opening a new tab on top of the code window.)
+<br>
+As explained in the FAQ, what is the explanation for this behavior?</div>
+<div dir="auto" class="course-quiz-options">
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[9f01edabb3f293002407ee42993e294a][]" id="gensym_56bac8941d4f2" value="3cc08ad003eb77c0f42ba652db78932b"><label for="gensym_56bac8941d4f2" style="cursor:pointer;">Javascript and Python are incompatible languages.  As a result, the Python in one tab can't run at the same time as the Javascript in the SimpleGUI frame.</label>
+</div>
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[9f01edabb3f293002407ee42993e294a][]" id="gensym_56bac8941d974" value="b5699ced6585de997123bce52a167777"><label for="gensym_56bac8941d974" style="cursor:pointer;">Modern browser don't support running Javascript in multiple windows simultaneously.  This situation causes the animation to freeze.</label>
+</div>
+<div class="course-quiz-option">
+<input dir="auto" class="course-quiz-input" type="radio" name="answer[9f01edabb3f293002407ee42993e294a][]" id="gensym_56bac8941ddb4" value="e3555462a7b6dc81ebc5e1b2af3cc241"><label for="gensym_56bac8941ddb4" style="cursor:pointer;">To save resources, modern browsers only execute the Javascript associated with the topmost tab of a window.  The animation freezes since the code tab and its associated Javascript is no longer the topmost tab.</label>
+</div>
+</div>
+</div>
+            
+<div class="course-quiz-honor-code">
+    <label class="checkbox">
+        <input type="checkbox">
+        In accordance with the Coursera Honor Code, I (lxworld) certify that the answers here are my own work.        <span class="course-quiz-honor-code-thanks" style="display: none;">Thank you!</span>
+    </label>
+
+</div>
+    
+            <div class="course-quiz-submit-button-container">
+        <input type="hidden" name="__csrf-token" value="oGJFPmzatT3SzOXbUCsS">
+        <input class="btn btn-success" type="submit" name="submit_answers" value="Submit Answers" disabled="disabled">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input class="btn btn-primary" type="submit" name="save_answers" value="Save Answers">
+
+        <div class="course-quiz-honor-code-status" style="margin-top: 10px; display: block;">You cannot submit your work until you agree to the Honor Code. Thanks!</div>
+
+    </div>
+    
+
+
+    </form>
+
+<script type="text/x-mathjax-config;executed=true">
+MathJax.Hub.Config({
+  config: ["MMLorHTML.js"],
+  
+  styleSheets: [],
+  styles: {},
+
+  jax: ["input/TeX"],
+  
+  extensions: ["tex2jax.js"],
+
+  preJax: null,
+  postJax: null,
+
+  preRemoveClass: "MathJax_Preview",
+
+  showProcessingMessages: true,
+
+  messageStyle: "none",
+  
+  displayAlign: "center",
+  displayIndent: "0em",
+  
+  delayStartupUntil: "none",
+
+  skipStartupTypeset: false,
+  
+  elements: [],
+  
+  tex2jax: {
+	    inlineMath: [
+	                 ['$$','$$'],      // uncomment this for standard TeX math delimiters
+	                 ['\\(','\\)']
+	                 ],
+
+	                 displayMath: [
+	                 ['\\[','\\]']
+	                 ],
+
+    skipTags: ["script","noscript","style","textarea","pre","code"],
+    ignoreClass: "tex2jax_ignore",
+    processClass: "tex2jax_process",
+    processEscapes: false,
+    processEnvironments: true,
+    preview: "TeX"
+    
+  },
+  
+  mml2jax: {
+    preview: "alttext"
+    
+  },
+  
+  jsMath2jax: {
+    preview: "TeX"
+    
+  },
+
+  TeX: {
+    TagSide: "right",
+    TagIndent: ".8em",
+    MultLineWidth: "85%",
+    Macros: {},
+
+    extensions: ["AMSmath.js", "AMSsymbols.js"]
+    
+  },
+
+  //============================================================================
+  //
+  //  These parameters control the MathML inupt jax.
+  //
+  MathML: {
+    //
+    //  This specifies whether to use TeX spacing or MathML spacing when the
+    //  HTML-CSS output jax is used.
+    //
+    useMathMLspacing: false
+  },
+  
+  //============================================================================
+  //
+  //  These parameters control the HTML-CSS output jax.
+  //
+  "HTML-CSS": {
+    
+    scale: 100,
+    
+    availableFonts: ["STIX","TeX"],
+    
+    preferredFont: "TeX",
+    
+    webFont: "TeX",
+    
+    imageFont: "TeX",
+    
+    undefinedFamily: "STIXGeneral,'Arial Unicode MS',serif",
+      
+    showMathMenu: true,
+
+    styles: {},
+    
+    tooltip: {
+      delayPost: 600,          // milliseconds delay before tooltip is posted after mouseover
+      delayClear: 600,         // milliseconds delay before tooltip is cleared after mouseout
+      offsetX: 10, offsetY: 5  // pixels to offset tooltip from mouse position
+    }
+  },
+  
+  //============================================================================
+  //
+  //  These parameters control the NativeMML output jax.
+  //
+  NativeMML: {
+
+    scale: 100,
+
+    showMathMenu: true,
+    showMathMenuMSIE: true,
+
+    styles: {}
+  },
+  
+  MathMenu: {
+    delay: 400,
+    
+    helpURL: "http://www.mathjax.org/help/user/",
+
+    showRenderer: true,
+    showFontMenu: false,
+    showContext:  false,
+
+    windowSettings: {
+      status: "no", toolbar: "no", locationbar: "no", menubar: "no",
+      directories: "no", personalbar: "no", resizable: "yes", scrollbars: "yes",
+      width: 100, height: 50
+    },
+    
+    styles: {}
+    
+  },
+
+  MMLorHTML: {
+    prefer: {
+      MSIE:    "MML",
+      Firefox: "HTML",
+      Opera:   "HTML",
+      other:   "HTML"
+    }
+  }
+});
+</script>
+</div></div>

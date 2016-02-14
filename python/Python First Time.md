@@ -659,3 +659,33 @@
         * Use `lower_case_with_underscores` for functions and methods
         * Always use `self` as the name for the first method argument.
     
+* Construct a full (“absolute”) URL
+    * by combining a “base URL” (base) with another URL (url).
+    * `urlparse.urljoin(base, url[, allow_fragments])`
+    * exs:
+        * ex1
+            ```
+            >>> from urlparse import urljoin
+            >>> urljoin('http://www.cwi.nl/%7Eguido/Python.html', 'FAQ.html')
+            'http://www.cwi.nl/%7Eguido/FAQ.html'
+            
+            ```
+        * ex2:
+            ```
+            >>> from urlparse import urlparse
+            >>> base_url = 'http://www.dmoz.org/Computers/Programming/Languages/Python'
+            >>> url = '/Computers/Programming/Languages/Python/Web/'
+            >>> import urlparse
+            >>> urlparse.urljoin(base_url, url)
+            'http://www.dmoz.org/Computers/Programming/Languages/Python/Web/'            
+            ```
+        * If url is an absolute URL (that is, starting with // or scheme://) , the url‘s host name and/or scheme will be present in the result. For example::
+            ```
+            >>> urljoin('http://www.cwi.nl/%7Eguido/Python.html',
+            ...         '//www.python.org/%7Eguido')
+            'http://www.python.org/%7Eguido'
+            
+            ```
+        * If you do not want that behavior, preprocess the *url* with `urlsplit()` and `urlunsplit()`, remove possible scheme and net1oc parts.
+        
+        
