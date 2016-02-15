@@ -10,6 +10,7 @@ import scrapy
 
 class BmlwItem(scrapy.Item):
     # define the fields for your item here like:
+    cates = scrapy.Field()
     title = scrapy.Field()
     link = scrapy.Field()
     forum = scrapy.Field()

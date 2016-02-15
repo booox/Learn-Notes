@@ -289,3 +289,173 @@
     
     
     ```
+    
+### From Stackoverflow
+* Ref [Crawling with an authenticated session in Scrapy](http://stackoverflow.com/a/5857202)
+    * [init.py](https://github.com/scrapy/scrapy/blob/master/scrapy/spiders/init.py)
+
+```
+    from scrapy.contrib.spiders.init import InitSpider
+    from scrapy.http import Request, FormRequest
+    from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
+    from scrapy.contrib.spiders import Rule
+
+    class MySpider(InitSpider):
+        name = 'myspider'
+        allowed_domains = ['domain.com']
+        login_page = 'http://www.domain.com/login'
+        start_urls = ['http://www.domain.com/useful_page/',
+                      'http://www.domain.com/another_useful_page/']
+
+        rules = (
+            Rule(SgmlLinkExtractor(allow=r'-\w+.html$'),
+                 callback='parse_item', follow=True),
+        )
+
+        def init_request(self):
+            """This function is called before crawling starts."""
+            return Request(url=self.login_page, callback=self.login)
+
+        def login(self, response):
+            """Generate a login request."""
+            return FormRequest.from_response(response,
+                        formdata={'name': 'herman', 'password': 'password'},
+                        callback=self.check_login_response)
+
+        def check_login_response(self, response):
+            """Check the response returned by a login request to see if we are
+            successfully logged in.
+            """
+            if "Hi Herman" in response.body:
+                self.log("Successfully logged in. Let's start crawling!")
+                # Now the crawling can begin..
+                return self.initialized()
+            else:
+                self.log("Bad times :(")
+                # Something went wrong, we couldn't log in, so nothing happens.
+
+        def parse_item(self, response):
+
+            # Scrape data from page
+```
+* Ref: [Using selenium get cookies](http://stackoverflow.com/q/11271928)
+
+```
+    from scrapy.contrib.spiders.init import InitSpider
+    from scrapy.http import Request, FormRequest
+    from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
+    from scrapy.contrib.spiders import Rule
+    from selenium import webdriver
+
+    class ProductDetailsSpider(InitSpider):
+        name = 'product_details_spider'
+        allowed_domains = ['my_domain.com']
+        login_page = 'http://www.my_domain.com/'
+        start_urls = ['http://www.my_domain.com/nextpage1/',
+                      'http://www.my_domain.com/nextpage2/',
+                      'http://www.my_domain.com/nextpage3/']
+
+        rules = (
+            Rule(SgmlLinkExtractor(allow=()),
+                callback='parse_item',
+                follow=True),
+            )
+
+        def get_cookies(self):
+            driver = webdriver.Firefox()
+            driver.implicitly_wait(30)
+            base_url = "http://www.my_domain.com"
+            driver.get(base_url + "/")
+            driver.find_element_by_name("USR").clear()
+            driver.find_element_by_name("USR").send_keys("my_user")
+            driver.find_element_by_name("PASSWRD").clear()
+            driver.find_element_by_name("PASSWRD").send_keys("my_pass")
+            driver.find_element_by_name("submit").click()
+            cookies = driver.get_cookies()
+            driver.close()
+            cookie_dic = {}
+            for c in cookies:
+                cookie_dic[c['name']] = c['value']
+            return cookie_dic
+
+        def init_request(self):
+            print '=======================INIT======================='
+            """This function is called before crawling starts."""
+            return Request(url=self.login_page, callback=self.login)
+
+        def login(self, response):
+            print '=======================LOGIN======================='
+            """Generate a login request."""
+            return [FormRequest.from_response(response,formname='login_form',
+                formdata={'USR': 'my_user', 'PASSWRD': 'my_pass'},
+                callback=self.login_cookies)]
+
+        def login_cookies(self, response):
+            print '=======================COOKIES======================='
+            return Request(url='http://www.my_domain.com/home',
+                cookies=self.get_cookies(),
+                callback=self.check_login_response)
+
+        def check_login_response(self, response):
+            print '=======================CHECK LOGIN======================='
+            """Check the response returned by a login request to see if we are
+            successfully logged in.
+            """
+            if "Logoff" in response.body:
+                print "=========Successfully logged in.========="
+                return self.initialized() # Add return
+                # Now the crawling can begin..
+            else:
+                print "==============Bad times :(==============="
+                # Something went wrong, we couldn't log in, so nothing happens.
+
+        def parse_item(self, response):
+            print "==============PARSE ITEM=========================="
+        # Scrape data from page    
+```    
+## Crawling rules
+
+* *rules* Which is a list of one (or more) *Rule* objects.
+* Each *Rule* defines a certain behaviour for crawling the site.
+* If multiple rules match the same link, the first one will be used, according to the order they're defined in this attribute.
+
+### Crawling rules
+    ```
+    class scrapy.contrib.spiders.Rule(link_extractor, callback=None, cb_kwargs=None, follow=None, process_links=None, process_request=None)
+    
+    ```
+* When writing crawl spider rules, avoid using parse as callback, since the CrawlSpider uses the parse method itself to implement its logic. So if you override the parse method, the crawl spider will no longer work.
+
+### CrawlSpider example
+
+```
+    from scrapy.contrib.spiders import CrawlSpider, Rule
+    from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
+    from scrapy.selector import HtmlXPathSelector
+    from scrapy.item import Item
+
+    class MySpider(CrawlSpider):
+        name = 'example.com'
+        allowed_domains = ['example.com']
+        start_urls = ['http://www.example.com']
+
+        rules = (
+            # Extract links matching 'category.php' (but not matching 'subsection.php')
+            # and follow links from them (since no callback means follow=True by default).
+            Rule(SgmlLinkExtractor(allow=('category\.php', ), deny=('subsection\.php', ))),
+
+            # Extract links matching 'item.php' and parse them with the spider's method parse_item
+            Rule(SgmlLinkExtractor(allow=('item\.php', )), callback='parse_item'),
+        )
+
+        def parse_item(self, response):
+            self.log('Hi, this is an item page! %s' % response.url)
+
+            hxs = HtmlXPathSelector(response)
+            item = Item()
+            item['id'] = hxs.select('//td[@id="item_id"]/text()').re(r'ID: (\d+)')
+            item['name'] = hxs.select('//td[@id="item_name"]/text()').extract()
+            item['description'] = hxs.select('//td[@id="item_description"]/text()').extract()
+            return item
+```
+    

@@ -688,4 +688,12 @@
             ```
         * If you do not want that behavior, preprocess the *url* with `urlsplit()` and `urlunsplit()`, remove possible scheme and net1oc parts.
         
-        
+* exit
+    * Python program exit:
+        ```
+            import sys
+            
+            ...
+            sys.exit(0)     `# normal exit`
+            
+        ```
