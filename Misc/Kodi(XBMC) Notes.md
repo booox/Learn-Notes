@@ -1,5 +1,8 @@
 * Links
     * [http://forum.kodi.tv/](http://forum.kodi.tv/)
+    * [hdpfans](http://www.hdpfans.com/forum-801-1.html)
+    * [htpc](http://bbs.htpc1.com/forum-225-1.html)
+    * [mirrors.xbmc.org/](http://mirrors.xbmc.org/)
 
 * Kodi Install
     * [Download Kodi](http://kodi.tv/download/)
@@ -32,3 +35,6 @@
 * 设置成中文乱码
     * 要先设置字体为 Airal based
     * 再设置字体就可以了。
+    
+* 你把xbmc运行日志的最后几行贴上来看看
+日志文件在C:\Documents and Settings\Administrator\Application Data\XBMC\xbmc.log
