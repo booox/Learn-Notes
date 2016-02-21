@@ -697,3 +697,17 @@
             sys.exit(0)     `# normal exit`
             
         ```
+        
+* `urlparse.parse_qsl` : query string to list
+    ```
+        >>> qs = 'action=pushing&category=Books'
+        >>> import urlparse
+        >>> urlparse.parse_qsl(qs)
+        [('action', 'pushing'), ('category', 'Books')]
+        >>> dict(urlparse.parse_qsl(qs))
+        {'action': 'pushing', 'category': 'Books'}  
+        >>> urlparse.parse_qs(qs)
+        {'action': ['pushing'], 'category': ['Books']}    
+    ```
+    * *parse_qs* : return dictionary
+    * *parse_qsl* : return list, query string to list

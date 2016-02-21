@@ -1,8 +1,12 @@
-* Links
+# Links
+## About Kodi
     * [http://forum.kodi.tv/](http://forum.kodi.tv/)
     * [hdpfans](http://www.hdpfans.com/forum-801-1.html)
     * [htpc](http://bbs.htpc1.com/forum-225-1.html)
     * [mirrors.xbmc.org/](http://mirrors.xbmc.org/)
+## About Kodi Add-ons
+* [Index of Modules](http://mirrors.xbmc.org/docs/python-docs/15.x-isengard/)
+* [General Add-on Tutorial](http://kodi.wiki/view/Audio/video_add-on_tutorial) Good!
 
 * Kodi Install
     * [Download Kodi](http://kodi.tv/download/)

@@ -63,7 +63,7 @@
     * background must be: 100% solid. Just make sure there is no transparency.
     * Kepp the logo as simple as possible
 * *fanart.jpg* 
-
+    * full-screen background images    
 * *LICENSE.txt* : This file should contain the text of whatever software license you've chosen to release your add-on under (e.g. GPLv2).
     
 * *resources/* : The resources/ subdirectory is the preferred place to put any files that the add-on uses that don't need to be stored in the root directory.
@@ -105,14 +105,36 @@
     * download chardet addon from : [script.module.chardet-2.1.2.zip](http://mirrors.xbmc.org/addons/frodo/)
     * installed it, and resolve the error.
     
+* AttributeError: 'xbmcgui.ListItem' object attribute 'setIconImage' is read-only
+    * 
     
+* When installed some script add-ons, you NEED restart KODI to let the script work.
  
 
 [todo] (http://bbs.htpc1.com/viewthread.php?tid=198731&page=2&authorid=511430)
     
     
+
+* Add Search box
+    ```
+    try:
+        from ChineseKeyboard import Keyboard as Apps
+    except:
+        from xbmc import Keyboard as Apps    
+        
+    def searchLetv():
+        result = ''
+        
+        keyboard = Apps('', '«Î ‰»ÎÀ—À˜ƒ⁄»›')
+        # keyboard.setHiddenInput(hidden)
+        xbmc.sleep(1500)
+        keyboard.doModal()
+        if (keyboard.isConfirmed()):
+            keyword = keyboard.getText()
+            letvSearchList(keyword, '1')
+        else: return
     
-    
+    ```
     
     
     
