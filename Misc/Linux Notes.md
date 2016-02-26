@@ -18,3 +18,10 @@
 
 * `$ env | grep LANG` check environment
 
+
+# CentOS Linux下VNC Server远程桌面配置详解
+
+* Step(CentOS 6.5)
+    * `# yum groupinstall "X Window System"`
+    * `# yum install tigervnc-server tigervnc`
+    
