@@ -17,5 +17,6 @@ print type(r.cookies)
 print '=' * 15
 print r.cookies
 
-for k,v in r.cookies.items():
+for k,v in r.c
+    ookies.items():
     print k, v

@@ -711,3 +711,125 @@
     ```
     * *parse_qs* : return dictionary
     * *parse_qsl* : return list, query string to list
+    
+* *expression* means "something", while statement means "do something"
+    * An expression can do something if it includes a function call.
+* *exec* is for statement and does not return anything
+* *eval* is for expression and returns value of expression.    `
+
+
+
+## Some Modules
+
+### Copy
+
+* copy.copy(x): Shallow cpy.
+* copy.deepcopy(x, memo=None, _nil=[]) : Deep copy function deepcopy.
+
+### keyword
+
+* keyword.iskeyword('if')
+* keyword.kwlist
+    ```
+    >>> keyword.iskeyword('if')
+    True
+    >>> keyword.iskeyword('iff')
+    False
+    >>> keyword.kwlist
+    ['and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'exec', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'not', 'or', 'pass', 'print', 'raise', 'return', 'try', 'while', 'with', 'yield']
+    
+    ```
+    
+### Random
+
+* random.randint(1, 100)
+* random.choice(['a', 'Jack', 'Python', 34])
+* random.shuffle(['a', 'Jack', 'Python', 34])
+
+### sys
+
+* sys.exit()
+* sys.stdin.readline()
+    * sys.stdin.readline(8)
+* sys.stdout.write('some thing you want to write to console')
+* sys.version
+    ```
+    >>> sys.version
+    '2.7.10 (default, May 23 2015, 09:44:00) [MSC v.1500 64 bit (AMD64)]'
+    ```
+    
+### time
+
+* time.time()
+    ```
+    import time
+    t1 = time.time()
+    # do something
+    t2 = time.time()
+    
+    print "It took %s seconds." % (t2 - t1)
+    
+    ```
+    
+* time.asctime() : Converting a Date with asctime
+    ```
+        >>> time.asctime()
+        'Sun Feb 28 22:43:56 2016'
+        >>> t = (2016, 2, 20, 10, 34, 52, 6, 0, 0)
+        >>> time.asctime(t)
+        'Sun Feb 20 10:34:52 2016'    
+        
+        
+    ```
+
+* time.localtime()    
+    ```
+    >>> time.localtime()
+    time.struct_time(tm_year=2016, tm_mon=2, tm_mday=28, tm_hour=22, tm_min=48, tm_sec=19, tm_wday=6, tm_yday=59, tm_isdst=0)
+    >>> t = time.localtime()
+    >>> print "year: %s" % t[0]
+    year: 2016
+    >>> print "month: %s" % t[1]
+    month: 2
+    
+    ```
+* time.sleep(1)
+    * time.sleep(1) : program pause 1 second.
+    
+### Use the pickle Module to Save Information
+
+* pickle.dump(data, file)
+* pickle.load(file)
+
+    ```
+        >>> import pickle
+        >>> data = {
+            'player': 'David',
+            'level' : 23,
+            'pockets' : ['keys', 'pocket knife'],
+            }
+        >>> save_file = open('some.txt', 'wb')
+        >>> pickle.dump(data, save_file)
+        >>> save_file.close()
+        >>> load_file = open('some.txt', 'rb')
+        >>> load_data = pickle.load(load_file)
+        >>> load_file.close()    
+    ```
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
