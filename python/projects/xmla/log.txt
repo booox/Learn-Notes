@@ -14098,3 +14098,2500 @@ start write the track into db.
 	Track  doesn't in db: 12495477 /sound/ 9139514
 	Write New Track start. 12495477 /sound/ 9139514
 	Write New Track Done
+Enter a zhubo, album or sound url:http://www.ximalaya.com/12512006/album/2894105/
+Album  doesn't in db: 12512006 /album/ 2894105
+http://www.ximalaya.com/12512006/album/2894105/
+	 Start getItemsOnPages _type=  albumSound From :  http://www.ximalaya.com/12512006/album/2894105/
+	 getItemsOnPages retrieve the first page, total: 1
+	 getItemsOnPages retrive the first page done.
+	 getItemsOnPages retrive multi pages Done.
+
+	 getItemsOnPages Done : get  albumSound from 1 pages
+Write New Album start. 12512006 /album/ 2894105
+Write New Album Done. 12512006 /album/ 2894105
+Write Tracks of the Album Start.
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10520408/
+	Track  doesn't in db: 12512006 /sound/ 10520408
+	Write New Track start. 12512006 /sound/ 10520408
+	Write New Track Done. 12512006 /sound/ 10520408
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10520408/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10946337/
+	Track  doesn't in db: 12512006 /sound/ 10946337
+	Write New Track start. 12512006 /sound/ 10946337
+	Write New Track Done. 12512006 /sound/ 10946337
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10946337/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9695193/
+	Track  doesn't in db: 12512006 /sound/ 9695193
+	Write New Track start. 12512006 /sound/ 9695193
+	Write New Track Done. 12512006 /sound/ 9695193
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9695193/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10864060/
+	Track  doesn't in db: 12512006 /sound/ 10864060
+	Write New Track start. 12512006 /sound/ 10864060
+	Write New Track Done. 12512006 /sound/ 10864060
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10864060/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10165878/
+	Track  doesn't in db: 12512006 /sound/ 10165878
+	Write New Track start. 12512006 /sound/ 10165878
+	Write New Track Done. 12512006 /sound/ 10165878
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10165878/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9492138/
+	Track  doesn't in db: 12512006 /sound/ 9492138
+	Write New Track start. 12512006 /sound/ 9492138
+	Write New Track Done. 12512006 /sound/ 9492138
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9492138/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9077218/
+	Track  doesn't in db: 12512006 /sound/ 9077218
+	Write New Track start. 12512006 /sound/ 9077218
+	Write New Track Done. 12512006 /sound/ 9077218
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9077218/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10919353/
+	Track  doesn't in db: 12512006 /sound/ 10919353
+	Write New Track start. 12512006 /sound/ 10919353
+	Write New Track Done. 12512006 /sound/ 10919353
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10919353/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8827569/
+	Track  doesn't in db: 12512006 /sound/ 8827569
+	Write New Track start. 12512006 /sound/ 8827569
+	Write New Track Done. 12512006 /sound/ 8827569
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8827569/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10544655/
+	Track  doesn't in db: 12512006 /sound/ 10544655
+	Write New Track start. 12512006 /sound/ 10544655
+	Write New Track Done. 12512006 /sound/ 10544655
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10544655/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9359621/
+	Track  doesn't in db: 12512006 /sound/ 9359621
+	Write New Track start. 12512006 /sound/ 9359621
+	Write New Track Done. 12512006 /sound/ 9359621
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9359621/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8926993/
+	Track  doesn't in db: 12512006 /sound/ 8926993
+	Write New Track start. 12512006 /sound/ 8926993
+	Write New Track Done. 12512006 /sound/ 8926993
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8926993/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10325339/
+	Track  doesn't in db: 12512006 /sound/ 10325339
+	Write New Track start. 12512006 /sound/ 10325339
+	Write New Track Done. 12512006 /sound/ 10325339
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10325339/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9426185/
+	Track  doesn't in db: 12512006 /sound/ 9426185
+	Write New Track start. 12512006 /sound/ 9426185
+	Write New Track Done. 12512006 /sound/ 9426185
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9426185/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9667611/
+	Track  doesn't in db: 12512006 /sound/ 9667611
+	Write New Track start. 12512006 /sound/ 9667611
+	Write New Track Done. 12512006 /sound/ 9667611
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9667611/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9836676/
+	Track  doesn't in db: 12512006 /sound/ 9836676
+	Write New Track start. 12512006 /sound/ 9836676
+	Write New Track Done. 12512006 /sound/ 9836676
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9836676/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10107481/
+	Track  doesn't in db: 12512006 /sound/ 10107481
+	Write New Track start. 12512006 /sound/ 10107481
+	Write New Track Done. 12512006 /sound/ 10107481
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10107481/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9333981/
+	Track  doesn't in db: 12512006 /sound/ 9333981
+	Write New Track start. 12512006 /sound/ 9333981
+	Write New Track Done. 12512006 /sound/ 9333981
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9333981/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9910321/
+	Track  doesn't in db: 12512006 /sound/ 9910321
+	Write New Track start. 12512006 /sound/ 9910321
+	Write New Track Done. 12512006 /sound/ 9910321
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9910321/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8507065/
+	Track  doesn't in db: 12512006 /sound/ 8507065
+	Write New Track start. 12512006 /sound/ 8507065
+	Write New Track Done. 12512006 /sound/ 8507065
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8507065/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10297935/
+	Track  doesn't in db: 12512006 /sound/ 10297935
+	Write New Track start. 12512006 /sound/ 10297935
+	Write New Track Done. 12512006 /sound/ 10297935
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10297935/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9780348/
+	Track  doesn't in db: 12512006 /sound/ 9780348
+	Write New Track start. 12512006 /sound/ 9780348
+	Write New Track Done. 12512006 /sound/ 9780348
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9780348/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/11002163/
+	Track  doesn't in db: 12512006 /sound/ 11002163
+	Write New Track start. 12512006 /sound/ 11002163
+	Write New Track Done. 12512006 /sound/ 11002163
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/11002163/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9191973/
+	Track  doesn't in db: 12512006 /sound/ 9191973
+	Write New Track start. 12512006 /sound/ 9191973
+	Write New Track Done. 12512006 /sound/ 9191973
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9191973/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9516707/
+	Track  doesn't in db: 12512006 /sound/ 9516707
+	Write New Track start. 12512006 /sound/ 9516707
+	Write New Track Done. 12512006 /sound/ 9516707
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9516707/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10245996/
+	Track  doesn't in db: 12512006 /sound/ 10245996
+	Write New Track start. 12512006 /sound/ 10245996
+	Write New Track Done. 12512006 /sound/ 10245996
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10245996/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8712107/
+	Track  doesn't in db: 12512006 /sound/ 8712107
+	Write New Track start. 12512006 /sound/ 8712107
+	Write New Track Done. 12512006 /sound/ 8712107
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8712107/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9044090/
+	Track  doesn't in db: 12512006 /sound/ 9044090
+	Write New Track start. 12512006 /sound/ 9044090
+	Write New Track Done. 12512006 /sound/ 9044090
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9044090/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8680710/
+	Track  doesn't in db: 12512006 /sound/ 8680710
+	Write New Track start. 12512006 /sound/ 8680710
+	Write New Track Done. 12512006 /sound/ 8680710
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8680710/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8752045/
+	Track  doesn't in db: 12512006 /sound/ 8752045
+	Write New Track start. 12512006 /sound/ 8752045
+	Write New Track Done. 12512006 /sound/ 8752045
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8752045/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9276376/
+	Track  doesn't in db: 12512006 /sound/ 9276376
+	Write New Track start. 12512006 /sound/ 9276376
+	Write New Track Done. 12512006 /sound/ 9276376
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9276376/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9036210/
+	Track  doesn't in db: 12512006 /sound/ 9036210
+	Write New Track start. 12512006 /sound/ 9036210
+	Write New Track Done. 12512006 /sound/ 9036210
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9036210/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8812909/
+	Track  doesn't in db: 12512006 /sound/ 8812909
+	Write New Track start. 12512006 /sound/ 8812909
+	Write New Track Done. 12512006 /sound/ 8812909
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8812909/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/11046500/
+	Track  doesn't in db: 12512006 /sound/ 11046500
+	Write New Track start. 12512006 /sound/ 11046500
+	Write New Track Done. 12512006 /sound/ 11046500
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/11046500/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9017404/
+	Track  doesn't in db: 12512006 /sound/ 9017404
+	Write New Track start. 12512006 /sound/ 9017404
+	Write New Track Done. 12512006 /sound/ 9017404
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9017404/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8779956/
+	Track  doesn't in db: 12512006 /sound/ 8779956
+	Write New Track start. 12512006 /sound/ 8779956
+	Write New Track Done. 12512006 /sound/ 8779956
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8779956/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8696607/
+	Track  doesn't in db: 12512006 /sound/ 8696607
+	Write New Track start. 12512006 /sound/ 8696607
+	Write New Track Done. 12512006 /sound/ 8696607
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8696607/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9928510/
+	Track  doesn't in db: 12512006 /sound/ 9928510
+	Write New Track start. 12512006 /sound/ 9928510
+	Write New Track Done. 12512006 /sound/ 9928510
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9928510/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8861602/
+	Track  doesn't in db: 12512006 /sound/ 8861602
+	Write New Track start. 12512006 /sound/ 8861602
+	Write New Track Done. 12512006 /sound/ 8861602
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8861602/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9608711/
+	Track  doesn't in db: 12512006 /sound/ 9608711
+	Write New Track start. 12512006 /sound/ 9608711
+	Write New Track Done. 12512006 /sound/ 9608711
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9608711/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8541687/
+	Track  doesn't in db: 12512006 /sound/ 8541687
+	Write New Track start. 12512006 /sound/ 8541687
+	Write New Track Done. 12512006 /sound/ 8541687
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8541687/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9296053/
+	Track  doesn't in db: 12512006 /sound/ 9296053
+	Write New Track start. 12512006 /sound/ 9296053
+	Write New Track Done. 12512006 /sound/ 9296053
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9296053/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10429397/
+	Track  doesn't in db: 12512006 /sound/ 10429397
+	Write New Track start. 12512006 /sound/ 10429397
+	Write New Track Done. 12512006 /sound/ 10429397
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10429397/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8462041/
+	Track  doesn't in db: 12512006 /sound/ 8462041
+	Write New Track start. 12512006 /sound/ 8462041
+	Write New Track Done. 12512006 /sound/ 8462041
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8462041/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8900104/
+	Track  doesn't in db: 12512006 /sound/ 8900104
+	Write New Track start. 12512006 /sound/ 8900104
+	Write New Track Done. 12512006 /sound/ 8900104
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8900104/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8634240/
+	Track  doesn't in db: 12512006 /sound/ 8634240
+	Write New Track start. 12512006 /sound/ 8634240
+	Write New Track Done. 12512006 /sound/ 8634240
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8634240/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9089626/
+	Track  doesn't in db: 12512006 /sound/ 9089626
+	Write New Track start. 12512006 /sound/ 9089626
+	Write New Track Done. 12512006 /sound/ 9089626
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9089626/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9105011/
+	Track  doesn't in db: 12512006 /sound/ 9105011
+	Write New Track start. 12512006 /sound/ 9105011
+	Write New Track Done. 12512006 /sound/ 9105011
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9105011/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10270298/
+	Track  doesn't in db: 12512006 /sound/ 10270298
+	Write New Track start. 12512006 /sound/ 10270298
+	Write New Track Done. 12512006 /sound/ 10270298
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10270298/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10585050/
+	Track  doesn't in db: 12512006 /sound/ 10585050
+	Write New Track start. 12512006 /sound/ 10585050
+	Write New Track Done. 12512006 /sound/ 10585050
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10585050/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9564773/
+	Track  doesn't in db: 12512006 /sound/ 9564773
+	Write New Track start. 12512006 /sound/ 9564773
+	Write New Track Done. 12512006 /sound/ 9564773
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9564773/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8480587/
+	Track  doesn't in db: 12512006 /sound/ 8480587
+	Write New Track start. 12512006 /sound/ 8480587
+	Write New Track Done. 12512006 /sound/ 8480587
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8480587/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9628011/
+	Track  doesn't in db: 12512006 /sound/ 9628011
+	Write New Track start. 12512006 /sound/ 9628011
+	Write New Track Done. 12512006 /sound/ 9628011
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9628011/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10373986/
+	Track  doesn't in db: 12512006 /sound/ 10373986
+	Write New Track start. 12512006 /sound/ 10373986
+	Write New Track Done. 12512006 /sound/ 10373986
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10373986/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10967469/
+	Track  doesn't in db: 12512006 /sound/ 10967469
+	Write New Track start. 12512006 /sound/ 10967469
+	Write New Track Done. 12512006 /sound/ 10967469
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10967469/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8985873/
+	Track  doesn't in db: 12512006 /sound/ 8985873
+	Write New Track start. 12512006 /sound/ 8985873
+	Write New Track Done. 12512006 /sound/ 8985873
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8985873/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10353100/
+	Track  doesn't in db: 12512006 /sound/ 10353100
+	Write New Track start. 12512006 /sound/ 10353100
+	Write New Track Done. 12512006 /sound/ 10353100
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10353100/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8953911/
+	Track  doesn't in db: 12512006 /sound/ 8953911
+	Write New Track start. 12512006 /sound/ 8953911
+	Write New Track Done. 12512006 /sound/ 8953911
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8953911/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10054073/
+	Track  doesn't in db: 12512006 /sound/ 10054073
+	Write New Track start. 12512006 /sound/ 10054073
+	Write New Track Done. 12512006 /sound/ 10054073
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10054073/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9140254/
+	Track  doesn't in db: 12512006 /sound/ 9140254
+	Write New Track start. 12512006 /sound/ 9140254
+	Write New Track Done. 12512006 /sound/ 9140254
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9140254/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9999950/
+	Track  doesn't in db: 12512006 /sound/ 9999950
+	Write New Track start. 12512006 /sound/ 9999950
+	Write New Track Done. 12512006 /sound/ 9999950
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9999950/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9450630/
+	Track  doesn't in db: 12512006 /sound/ 9450630
+	Write New Track start. 12512006 /sound/ 9450630
+	Write New Track Done. 12512006 /sound/ 9450630
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9450630/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9719695/
+	Track  doesn't in db: 12512006 /sound/ 9719695
+	Write New Track start. 12512006 /sound/ 9719695
+	Write New Track Done. 12512006 /sound/ 9719695
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9719695/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9411530/
+	Track  doesn't in db: 12512006 /sound/ 9411530
+	Write New Track start. 12512006 /sound/ 9411530
+	Write New Track Done. 12512006 /sound/ 9411530
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9411530/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9259738/
+	Track  doesn't in db: 12512006 /sound/ 9259738
+	Write New Track start. 12512006 /sound/ 9259738
+	Write New Track Done. 12512006 /sound/ 9259738
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9259738/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9162436/
+	Track  doesn't in db: 12512006 /sound/ 9162436
+	Write New Track start. 12512006 /sound/ 9162436
+	Write New Track Done. 12512006 /sound/ 9162436
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9162436/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8431574/
+	Track  doesn't in db: 12512006 /sound/ 8431574
+	Write New Track start. 12512006 /sound/ 8431574
+	Write New Track Done. 12512006 /sound/ 8431574
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8431574/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9312629/
+	Track  doesn't in db: 12512006 /sound/ 9312629
+	Write New Track start. 12512006 /sound/ 9312629
+	Write New Track Done. 12512006 /sound/ 9312629
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9312629/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9473549/
+	Track  doesn't in db: 12512006 /sound/ 9473549
+	Write New Track start. 12512006 /sound/ 9473549
+	Write New Track Done. 12512006 /sound/ 9473549
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9473549/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10139097/
+	Track  doesn't in db: 12512006 /sound/ 10139097
+	Write New Track start. 12512006 /sound/ 10139097
+	Write New Track Done. 12512006 /sound/ 10139097
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10139097/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8447670/
+	Track  doesn't in db: 12512006 /sound/ 8447670
+	Write New Track start. 12512006 /sound/ 8447670
+	Write New Track Done. 12512006 /sound/ 8447670
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8447670/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8664715/
+	Track  doesn't in db: 12512006 /sound/ 8664715
+	Write New Track start. 12512006 /sound/ 8664715
+	Write New Track Done. 12512006 /sound/ 8664715
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8664715/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9203145/
+	Track  doesn't in db: 12512006 /sound/ 9203145
+	Write New Track start. 12512006 /sound/ 9203145
+	Write New Track Done. 12512006 /sound/ 9203145
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9203145/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10405560/
+	Track  doesn't in db: 12512006 /sound/ 10405560
+	Write New Track start. 12512006 /sound/ 10405560
+	Write New Track Done. 12512006 /sound/ 10405560
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10405560/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10025539/
+	Track  doesn't in db: 12512006 /sound/ 10025539
+	Write New Track start. 12512006 /sound/ 10025539
+	Write New Track Done. 12512006 /sound/ 10025539
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10025539/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9001027/
+	Track  doesn't in db: 12512006 /sound/ 9001027
+	Write New Track start. 12512006 /sound/ 9001027
+	Write New Track Done. 12512006 /sound/ 9001027
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9001027/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8650041/
+	Track  doesn't in db: 12512006 /sound/ 8650041
+	Write New Track start. 12512006 /sound/ 8650041
+	Write New Track Done. 12512006 /sound/ 8650041
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8650041/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10463885/
+	Track  doesn't in db: 12512006 /sound/ 10463885
+	Write New Track start. 12512006 /sound/ 10463885
+	Write New Track Done. 12512006 /sound/ 10463885
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10463885/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10491277/
+	Track  doesn't in db: 12512006 /sound/ 10491277
+	Write New Track start. 12512006 /sound/ 10491277
+	Write New Track Done. 12512006 /sound/ 10491277
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10491277/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10891408/
+	Track  doesn't in db: 12512006 /sound/ 10891408
+	Write New Track start. 12512006 /sound/ 10891408
+	Write New Track Done. 12512006 /sound/ 10891408
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10891408/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9122601/
+	Track  doesn't in db: 12512006 /sound/ 9122601
+	Write New Track start. 12512006 /sound/ 9122601
+	Write New Track Done. 12512006 /sound/ 9122601
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9122601/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10212935/
+	Track  doesn't in db: 12512006 /sound/ 10212935
+	Write New Track start. 12512006 /sound/ 10212935
+	Write New Track Done. 12512006 /sound/ 10212935
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10212935/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8523607/
+	Track  doesn't in db: 12512006 /sound/ 8523607
+	Write New Track start. 12512006 /sound/ 8523607
+	Write New Track Done. 12512006 /sound/ 8523607
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8523607/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8894826/
+	Track  doesn't in db: 12512006 /sound/ 8894826
+	Write New Track start. 12512006 /sound/ 8894826
+	Write New Track Done. 12512006 /sound/ 8894826
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8894826/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10082907/
+	Track  doesn't in db: 12512006 /sound/ 10082907
+	Write New Track start. 12512006 /sound/ 10082907
+	Write New Track Done. 12512006 /sound/ 10082907
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10082907/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8770855/
+	Track  doesn't in db: 12512006 /sound/ 8770855
+	Write New Track start. 12512006 /sound/ 8770855
+	Write New Track Done. 12512006 /sound/ 8770855
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8770855/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9585028/
+	Track  doesn't in db: 12512006 /sound/ 9585028
+	Write New Track start. 12512006 /sound/ 9585028
+	Write New Track Done. 12512006 /sound/ 9585028
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9585028/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8843384/
+	Track  doesn't in db: 12512006 /sound/ 8843384
+	Write New Track start. 12512006 /sound/ 8843384
+	Write New Track Done. 12512006 /sound/ 8843384
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8843384/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9955981/
+	Track  doesn't in db: 12512006 /sound/ 9955981
+	Write New Track start. 12512006 /sound/ 9955981
+	Write New Track Done. 12512006 /sound/ 9955981
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9955981/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/11024423/
+	Track  doesn't in db: 12512006 /sound/ 11024423
+	Write New Track start. 12512006 /sound/ 11024423
+	Write New Track Done. 12512006 /sound/ 11024423
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/11024423/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8493151/
+	Track  doesn't in db: 12512006 /sound/ 8493151
+	Write New Track start. 12512006 /sound/ 8493151
+	Write New Track Done. 12512006 /sound/ 8493151
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8493151/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9977857/
+	Track  doesn't in db: 12512006 /sound/ 9977857
+	Write New Track start. 12512006 /sound/ 9977857
+	Write New Track Done. 12512006 /sound/ 9977857
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9977857/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9249567/
+	Track  doesn't in db: 12512006 /sound/ 9249567
+	Write New Track start. 12512006 /sound/ 9249567
+	Write New Track Done. 12512006 /sound/ 9249567
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9249567/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9858763/
+	Track  doesn't in db: 12512006 /sound/ 9858763
+	Write New Track start. 12512006 /sound/ 9858763
+	Write New Track Done. 12512006 /sound/ 9858763
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9858763/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8724832/
+	Track  doesn't in db: 12512006 /sound/ 8724832
+	Write New Track start. 12512006 /sound/ 8724832
+	Write New Track Done. 12512006 /sound/ 8724832
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8724832/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8556034/
+	Track  doesn't in db: 12512006 /sound/ 8556034
+	Write New Track start. 12512006 /sound/ 8556034
+	Write New Track Done. 12512006 /sound/ 8556034
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8556034/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8417717/
+	Track  doesn't in db: 12512006 /sound/ 8417717
+	Write New Track start. 12512006 /sound/ 8417717
+	Write New Track Done. 12512006 /sound/ 8417717
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8417717/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/10183191/
+	Track  doesn't in db: 12512006 /sound/ 10183191
+	Write New Track start. 12512006 /sound/ 10183191
+	Write New Track Done. 12512006 /sound/ 10183191
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/10183191/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/8738357/
+	Track  doesn't in db: 12512006 /sound/ 8738357
+	Write New Track start. 12512006 /sound/ 8738357
+	Write New Track Done. 12512006 /sound/ 8738357
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/8738357/
+
+start write the track into db. 
+	http://www.ximalaya.com/12512006/sound/9538832/
+	Track  doesn't in db: 12512006 /sound/ 9538832
+	Write New Track start. 12512006 /sound/ 9538832
+	Write New Track Done. 12512006 /sound/ 9538832
+the track write into db done. 
+	http://www.ximalaya.com/12512006/sound/9538832/
+Write Tracks of the Album Done.
+
+Enter a zhubo, album or sound url:
+Enter a zhubo, album or sound url:http://www.ximalaya.com/12512006/album/2894105/
+Album in database  12512006 /album/ 2894105
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/12512006/album/2894105/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 100 	 update_time: 2015-12-17
+	 Value in Web -- sound_count: 100 	 update_time: 2015-12-17
+NO NEED for update.
+
+	 this album has  100 tracks.
+
+	 this album has  -1 tracks doesn't download.
+Start download track...
+	像《致橡树》一样向往最好的爱情 http://audio.xmcdn.com/group7/M09/C0/33/wKgDWlZhog6iLJO0AA7xi6UPWhE628.m4a http://audio.xmcdn.com/group15/M07/BE/BF/wKgDaFZhobfShoivACchZJ94Cww363.m4a 0
+track_title: <type 'unicode'> 像《致橡树》一样向往最好的爱情
+	E:\xmly\给孩子的诗\151204 像《致橡树》一样向往最好的爱情.m4a
+		 track_id: 704
+		{704: 1}
+	【读诗】年 终 | 陆忆敏 http://audio.xmcdn.com/group13/M00/D1/38/wKgDXlZ2wtDS3OwRAAgCSDH36vo672.m4a http://audio.xmcdn.com/group9/M04/D1/20/wKgDYlZ2tEXRuNDCABT14CyGE44273.m4a 0
+track_title: <type 'unicode'> 【读诗】年 终 | 陆忆敏
+	E:\xmly\给孩子的诗\151220 【读诗】年 终 | 陆忆敏.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151220 \u3010\u8bfb\u8bd7\u3011\u5e74 \u7ec8 | \u9646\u5fc6\u654f.m4a'
+	当你写下新的一页——献给杰克（诗人容克 ） http://audio.xmcdn.com/group8/M09/93/66/wKgDYFY4qs-TFF4WAAuhXvJhSiA593.m4a http://audio.xmcdn.com/group8/M09/93/93/wKgDYVY4qtOR6lfiAB5zA9M3olc679.m4a 0
+track_title: <type 'unicode'> 当你写下新的一页——献给杰克（诗人容克 ）
+	E:\xmly\给孩子的诗\151103 当你写下新的一页——献给杰克（诗人容克 ）.m4a
+		 track_id: 706
+		{704: 1, 706: 1}
+	顾城 | 我是一个任性的孩子 http://audio.xmcdn.com/group11/M06/C0/66/wKgDa1ZyrPOAMQLYABZmq777DHA845.m4a http://audio.xmcdn.com/group15/M03/CC/EA/wKgDZVZyog2iyND5ADqrcKWgA-M578.m4a 0
+track_title: <type 'unicode'> 顾城 | 我是一个任性的孩子
+	E:\xmly\给孩子的诗\151217 顾城 | 我是一个任性的孩子.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151217 \u987e\u57ce\xa0| \u6211\u662f\u4e00\u4e2a\u4efb\u6027\u7684\u5b69\u5b50.m4a'
+	【北岛给孩子的诗】金黄的稻束 | 郑敏 http://audio.xmcdn.com/group9/M04/A6/E7/wKgDYlZQkSaytYj8AApFcKOL_Oo621.m4a http://audio.xmcdn.com/group16/M0B/A6/CE/wKgDbFZQkELyiZANABrin_fO470872.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】金黄的稻束 | 郑敏
+	E:\xmly\给孩子的诗\151121 【北岛给孩子的诗】金黄的稻束 | 郑敏.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151121 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u91d1\u9ec4\u7684\u7a3b\u675f | \u90d1\u654f.m4a'
+	【给孩子的诗】《嘎吱响的门》 阿米亥 http://audio.xmcdn.com/group9/M05/8C/55/wKgDZlYsqfzCQtLJAAOAwdneMF8304.m4a http://audio.xmcdn.com/group9/M05/8C/12/wKgDYlYsqf2wSJ6gAAkmllSNgB0038.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗】《嘎吱响的门》 阿米亥
+	E:\xmly\给孩子的诗\151025 【给孩子的诗】《嘎吱响的门》 阿米亥.m4a
+		 track_id: 709
+		{704: 1, 706: 1, 709: 1}
+	《吉他》| 洛尔迦 北岛译 http://audio.xmcdn.com/group12/M03/7D/17/wKgDW1YRFR-AWxZxAAga5-nbHaM700.m4a http://audio.xmcdn.com/group12/M03/7D/17/wKgDW1YRFSLwedaKABU2ahj_UMo154.m4a 0
+track_title: <type 'unicode'> 《吉他》| 洛尔迦 北岛译
+	E:\xmly\给孩子的诗\151004 《吉他》| 洛尔迦 北岛译.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151004 \u300a\u5409\u4ed6\u300b| \u6d1b\u5c14\u8fe6 \u5317\u5c9b\u8bd1.m4a'
+	【读诗】一种黑暗 | 韩 东 http://audio.xmcdn.com/group13/M07/D0/3D/wKgDXlZ1YuKA2A_ZAAzH23d8V7k839.m4a http://audio.xmcdn.com/group10/M03/CB/5F/wKgDZ1Z1Yjfy02qZACF2p1pzhHQ080.m4a 0
+track_title: <type 'unicode'> 【读诗】一种黑暗 | 韩 东
+	E:\xmly\给孩子的诗\151219 【读诗】一种黑暗 | 韩 东.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151219 \u3010\u8bfb\u8bd7\u3011\u4e00\u79cd\u9ed1\u6697 | \u97e9 \u4e1c.m4a'
+	林中雪地的寂静中 | 曼德尔施塔姆 http://audio.xmcdn.com/group13/M02/74/6F/wKgDXVX9QknRa0nDAAd3bZ61Tx4414.m4a http://audio.xmcdn.com/group13/M02/74/6F/wKgDXVX9QkrDWALKABOKFtD-ras289.m4a 0
+track_title: <type 'unicode'> 林中雪地的寂静中 | 曼德尔施塔姆
+	E:\xmly\给孩子的诗\150919 林中雪地的寂静中 | 曼德尔施塔姆.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150919 \u6797\u4e2d\u96ea\u5730\u7684\u5bc2\u9759\u4e2d | \u66fc\u5fb7\u5c14\u65bd\u5854\u59c6.m4a'
+	【北岛给孩子的诗】致太阳 | 多多 http://audio.xmcdn.com/group10/M03/BD/5E/wKgDZ1Zi7_TDBcBYAAtdpF-zsk8776.m4a http://audio.xmcdn.com/group10/M03/C0/85/wKgDaVZi7-uzTN0KAB3BhtTJKt8522.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】致太阳 | 多多
+	E:\xmly\给孩子的诗\151205 【北岛给孩子的诗】致太阳 | 多多.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151205 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u81f4\u592a\u9633 | \u591a\u591a.m4a'
+	【给孩子的诗】《日子》拉金 http://audio.xmcdn.com/group14/M08/88/2D/wKgDY1YkzarBzDVUAAUStEQ13mQ899.m4a http://audio.xmcdn.com/group14/M08/88/2D/wKgDY1YkzavChzw6AA1CVQ_KC_c198.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗】《日子》拉金
+	E:\xmly\给孩子的诗\151019 【给孩子的诗】《日子》拉金.m4a
+		 track_id: 714
+		{704: 1, 714: 1, 706: 1, 709: 1}
+	像这样细细地听 | 茨维塔耶娃 http://audio.xmcdn.com/group9/M04/77/36/wKgDYlYEDm3RmH_ZAAgCA1AwjnI035.m4a http://audio.xmcdn.com/group9/M04/77/36/wKgDYlYEDm_ROiYJABT0Z3BFRxA700.m4a 0
+track_title: <type 'unicode'> 像这样细细地听 | 茨维塔耶娃
+	E:\xmly\给孩子的诗\150924 像这样细细地听 | 茨维塔耶娃.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150924 \u50cf\u8fd9\u6837\u7ec6\u7ec6\u5730\u542c | \u8328\u7ef4\u5854\u8036\u5a03.m4a'
+	【北岛给孩子的诗】一片芳草 | 昌耀 http://audio.xmcdn.com/group15/M01/AB/AD/wKgDZVZYYamR6-cHAAZJIEnTS24672.m4a http://audio.xmcdn.com/group11/M03/B8/2E/wKgDbVZYYUzQlHrQABBx-wqo_0Q148.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】一片芳草 | 昌耀
+	E:\xmly\给孩子的诗\151127 【北岛给孩子的诗】一片芳草 | 昌耀.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151127 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u4e00\u7247\u82b3\u8349 | \u660c\u8000.m4a'
+	【给孩子的诗】《静物》 安德拉德 http://audio.xmcdn.com/group15/M07/89/F9/wKgDZVYoxJbxkxxwAAVd-_4U660704.m4a http://audio.xmcdn.com/group15/M07/89/FA/wKgDZVYoxJbixjkYAA4J1Pjye5U016.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗】《静物》 安德拉德
+	E:\xmly\给孩子的诗\151022 【给孩子的诗】《静物》 安德拉德.m4a
+		 track_id: 717
+		{704: 1, 714: 1, 706: 1, 709: 1, 717: 1}
+	谷川俊太郎《小鸟在天空消失的日子》 http://audio.xmcdn.com/group13/M01/92/DB/wKgDXlY3VgKBVgLwAAwPqFfpJes604.m4a http://audio.xmcdn.com/group13/M01/92/F4/wKgDXVY3VgSz7MF_AB-T_CLpZpo445.m4a 0
+track_title: <type 'unicode'> 谷川俊太郎《小鸟在天空消失的日子》
+	E:\xmly\给孩子的诗\151102 谷川俊太郎《小鸟在天空消失的日子》.m4a
+		 track_id: 718
+		{704: 1, 706: 1, 709: 1, 714: 1, 717: 1, 718: 1}
+	静波读诗　《“睡”之变奏》阿特伍德 http://audio.xmcdn.com/group11/M03/8B/46/wKgDa1Y_WfvSiJDPAA2_TP9aPZM534.m4a http://audio.xmcdn.com/group11/M03/A4/34/wKgDbVY_WgCwY8ooACP_AiPAekU778.m4a 0
+track_title: <type 'unicode'> 静波读诗　《“睡”之变奏》阿特伍德
+	E:\xmly\给孩子的诗\151108 静波读诗　《“睡”之变奏》阿特伍德.m4a
+		 track_id: 719
+		{704: 1, 706: 1, 709: 1, 714: 1, 717: 1, 718: 1, 719: 1}
+	【北岛给孩子的诗75】山和海 | 陈敬容 http://audio.xmcdn.com/group16/M0B/A2/E6/wKgDbFZNw76jD-KkAAofpqs9B6c135.m4a http://audio.xmcdn.com/group16/M0B/A2/E6/wKgDbFZNw7-C70i7ABqAV5FFXxQ660.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗75】山和海 | 陈敬容
+	E:\xmly\给孩子的诗\151119 【北岛给孩子的诗75】山和海 | 陈敬容.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151119 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd775\u3011\u5c71\u548c\u6d77 | \u9648\u656c\u5bb9.m4a'
+	【读诗】《诗人的墓志铭》 帕斯 http://audio.xmcdn.com/group11/M00/7A/6B/wKgDa1YjdOCSIbZsAAOtt3Ksodg925.m4a http://audio.xmcdn.com/group11/M00/93/57/wKgDbVYjdOChWd_ZAAmb7-QYHas059.m4a 0
+track_title: <type 'unicode'> 【读诗】《诗人的墓志铭》 帕斯
+	E:\xmly\给孩子的诗\151018 【读诗】《诗人的墓志铭》 帕斯.m4a
+		 track_id: 721
+		{704: 1, 706: 1, 709: 1, 714: 1, 717: 1, 718: 1, 719: 1, 721: 1}
+	【给孩子的诗】达维什 | 想想别人 http://audio.xmcdn.com/group11/M08/8D/D5/wKgDa1ZDUkCCt6HgAAaYJghnPj8653.m4a http://audio.xmcdn.com/group11/M08/A6/C4/wKgDbVZDUkGCcIiLABE_pQjWU04303.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗】达维什 | 想想别人
+	E:\xmly\给孩子的诗\151111 【给孩子的诗】达维什 | 想想别人.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151111 \u3010\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u8fbe\u7ef4\u4ec0\xa0| \u60f3\u60f3\u522b\u4eba.m4a'
+	给孩子的诗 |《 假如生活欺骗了你》 普希金 http://audio.xmcdn.com/group11/M07/73/50/wKgDbVXhc4-w4bXAAAak2euXSDY689.m4a http://audio.xmcdn.com/group11/M07/5A/64/wKgDa1Xhc_SiXRh2ABFhE7BB-w4710.m4a 0
+track_title: <type 'unicode'> 给孩子的诗 |《 假如生活欺骗了你》 普希金
+	E:\xmly\给孩子的诗\150829 给孩子的诗 |《 假如生活欺骗了你》 普希金.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150829 \u7ed9\u5b69\u5b50\u7684\u8bd7 |\u300a \u5047\u5982\u751f\u6d3b\u6b3a\u9a97\u4e86\u4f60\u300b \u666e\u5e0c\u91d1.m4a'
+	【北岛给孩子的诗】用脚思想 | 商禽 http://audio2.xmcdn.com/group8/M09/AB/57/wKgDYFZXARmjVbasAAnweGvW51s682.m4a http://audio2.xmcdn.com/group13/M04/AB/AF/wKgDXVZW_yTxmNBaABoDqP_V4TE520.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】用脚思想 | 商禽
+	E:\xmly\给孩子的诗\151126 【北岛给孩子的诗】用脚思想 | 商禽.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151126 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u7528\u811a\u601d\u60f3\xa0| \u5546\u79bd.m4a'
+	克里斯坦森 《我们毁掉的》（节选） http://audio.xmcdn.com/group7/M08/96/91/wKgDWlY8m13i7DaPAAYEUXWegY0366.m4a http://audio.xmcdn.com/group7/M08/96/91/wKgDWlY8m12jQkYUAA-9fSqx8mM298.m4a 0
+track_title: <type 'unicode'> 克里斯坦森 《我们毁掉的》（节选）
+	E:\xmly\给孩子的诗\151106 克里斯坦森 《我们毁掉的》（节选）.m4a
+		 track_id: 725
+		{704: 1, 706: 1, 709: 1, 714: 1, 717: 1, 718: 1, 719: 1, 721: 1, 725: 1}
+	【读诗】三 原 色| 车前子 http://audio.xmcdn.com/group10/M07/D1/A0/wKgDaVZ5XXvj5Gq2AAZSpBy8yWY015.m4a http://audio.xmcdn.com/group10/M07/D1/A0/wKgDaVZ5XXvQglnaABCK6_T2Mh0779.m4a 0
+track_title: <type 'unicode'> 【读诗】三 原 色| 车前子
+	E:\xmly\给孩子的诗\151222 【读诗】三 原 色| 车前子.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151222 \u3010\u8bfb\u8bd7\u3011\u4e09 \u539f \u8272| \u8f66\u524d\u5b50.m4a'
+	愿宝贝永远不孤独 | 聂鲁达《孤独》 http://audio.xmcdn.com/group9/M0B/81/6A/wKgDYlYZMVLiFZrFAAkiywsA-0A656.m4a http://audio.xmcdn.com/group9/M0B/81/B7/wKgDZlYZMVWBeV4lABfpT-II1Mw067.m4a 0
+track_title: <type 'unicode'> 愿宝贝永远不孤独 | 聂鲁达《孤独》
+	E:\xmly\给孩子的诗\151010 愿宝贝永远不孤独 | 聂鲁达《孤独》.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151010 \u613f\u5b9d\u8d1d\u6c38\u8fdc\u4e0d\u5b64\u72ec | \u8042\u9c81\u8fbe\u300a\u5b64\u72ec\u300b.m4a'
+	【给孩子的诗】《补网》 K.布鲁 http://audio.xmcdn.com/group8/M03/8D/99/wKgDYVYuFazjkH1fAApqLtX_XIA311.m4a http://audio.xmcdn.com/group8/M03/8D/6E/wKgDYFYuFa2RGvvNABtDbsP6zqk614.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗】《补网》 K.布鲁
+	E:\xmly\给孩子的诗\151026 【给孩子的诗】《补网》 K.布鲁.m4a
+		 track_id: 728
+		{704: 1, 706: 1, 709: 1, 714: 1, 717: 1, 718: 1, 719: 1, 721: 1, 725: 1, 728: 1}
+	【北岛给孩子的诗】伞 | 痖弦 http://audio.xmcdn.com/group11/M07/B5/95/wKgDbVZUiEaxW63WAAdjv9id5lU957.m4a http://audio.xmcdn.com/group11/M07/9C/A4/wKgDa1ZUiEbws8NuABNVUaC0fvo408.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】伞 | 痖弦
+	E:\xmly\给孩子的诗\151124 【北岛给孩子的诗】伞 | 痖弦.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151124 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u4f1e | \u75d6\u5f26.m4a'
+	给解冻之风 | 弗洛斯特 http://audio.xmcdn.com/group9/M0A/6E/D5/wKgDYlXysxnj7qQ6AAb77lM5Vx0596.m4a http://audio.xmcdn.com/group9/M0A/6E/FE/wKgDZlXyszHDr7OPABJF6IHyOxc374.m4a 0
+track_title: <type 'unicode'> 给解冻之风 | 弗洛斯特
+	E:\xmly\给孩子的诗\150911 给解冻之风 | 弗洛斯特.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150911 \u7ed9\u89e3\u51bb\u4e4b\u98ce | \u5f17\u6d1b\u65af\u7279.m4a'
+	哑孩子 | 洛尔迦 戴望舒译 http://audio.xmcdn.com/group8/M0A/7C/6F/wKgDYFYOTSHBX7DVAAhRoMrj2-w377.m4a http://audio.xmcdn.com/group8/M0A/7C/AC/wKgDYVYOTSLTxO8WABXEXGFGQc0109.m4a 0
+track_title: <type 'unicode'> 哑孩子 | 洛尔迦 戴望舒译
+	E:\xmly\给孩子的诗\151002 哑孩子 | 洛尔迦 戴望舒译.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151002 \u54d1\u5b69\u5b50 | \u6d1b\u5c14\u8fe6 \u6234\u671b\u8212\u8bd1.m4a'
+	叶芝| 柯尔庄园的野天鹅 配五彩呼伦贝尔 http://audio.xmcdn.com/group7/M08/6E/1B/wKgDX1XwEQaTujrOAA4OPEgjSI4395.m4a http://audio.xmcdn.com/group7/M08/6E/1B/wKgDX1XwEQuzgU3WACTN1tZ-zj8210.m4a 0
+track_title: <type 'unicode'> 叶芝| 柯尔庄园的野天鹅 配五彩呼伦贝尔
+	E:\xmly\给孩子的诗\150909 叶芝| 柯尔庄园的野天鹅 配五彩呼伦贝尔.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150909 \u53f6\u829d| \u67ef\u5c14\u5e84\u56ed\u7684\u91ce\u5929\u9e45 \u914d\u4e94\u5f69\u547c\u4f26\u8d1d\u5c14.m4a'
+	雾 | 桑德堡 http://audio.xmcdn.com/group10/M02/70/3E/wKgDaVX2nfHR8_JPAARFXfHuahw079.m4a http://audio.xmcdn.com/group10/M02/70/45/wKgDZ1X2nb_D7GL9AAsoODFFSnA255.m4a 0
+track_title: <type 'unicode'> 雾 | 桑德堡
+	E:\xmly\给孩子的诗\150914 雾 | 桑德堡.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150914 \u96fe | \u6851\u5fb7\u5821.m4a'
+	《饮着科林斯的太阳‘’‘’‘》| 艾利蒂斯 http://audio.xmcdn.com/group12/M06/84/70/wKgDXFYfbgGRJUJDAAg3zGyVVDw145.m4a http://audio.xmcdn.com/group12/M06/84/98/wKgDW1YfbgKyKSG0ABWAYEAdioo635.m4a 0
+track_title: <type 'unicode'> 《饮着科林斯的太阳‘’‘’‘》| 艾利蒂斯
+	E:\xmly\给孩子的诗\151015 《饮着科林斯的太阳‘’‘’‘》| 艾利蒂斯.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151015 \u300a\u996e\u7740\u79d1\u6797\u65af\u7684\u592a\u9633\u2018\u2019\u2018\u2019\u2018\u300b| \u827e\u5229\u8482\u65af.m4a'
+	关于爬树 | 布莱希特 http://audio.xmcdn.com/group10/M04/7B/7C/wKgDaVYNVe-h0TUGAAlm412V4rI117.m4a http://audio.xmcdn.com/group10/M04/7B/7B/wKgDZ1YNVfOBiBQuABicRc2xfrs457.m4a 0
+track_title: <type 'unicode'> 关于爬树 | 布莱希特
+	E:\xmly\给孩子的诗\151001 关于爬树 | 布莱希特.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151001 \u5173\u4e8e\u722c\u6811 | \u5e03\u83b1\u5e0c\u7279.m4a'
+	你不快乐的每一天都不是你的 | 佩索阿 http://audio.xmcdn.com/group8/M00/73/87/wKgDYFX76WXTF6NQAAWlulKOLX8161.m4a http://audio.xmcdn.com/group8/M00/73/C6/wKgDYVX76PfSH_urAA7FlvATrKc011.m4a 0
+track_title: <type 'unicode'> 你不快乐的每一天都不是你的 | 佩索阿
+	E:\xmly\给孩子的诗\150918 你不快乐的每一天都不是你的 | 佩索阿.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150918 \u4f60\u4e0d\u5feb\u4e50\u7684\u6bcf\u4e00\u5929\u90fd\u4e0d\u662f\u4f60\u7684 | \u4f69\u7d22\u963f.m4a'
+	【平安夜完本】 面朝大海 春暖花开| 海子 http://audio.xmcdn.com/group16/M06/D4/A5/wKgDalZ75u-h2hpAAAxb9WEGShQ565.m4a http://audio.xmcdn.com/group16/M06/D4/A5/wKgDalZ75vDh89Y_ACBbjIJdcds067.m4a 0
+track_title: <type 'unicode'> 【平安夜完本】 面朝大海 春暖花开| 海子
+	E:\xmly\给孩子的诗\151224 【平安夜完本】 面朝大海 春暖花开| 海子.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151224 \u3010\u5e73\u5b89\u591c\u5b8c\u672c\u3011 \u9762\u671d\u5927\u6d77 \u6625\u6696\u82b1\u5f00| \u6d77\u5b50.m4a'
+	火 | 阿莱克桑德雷 http://audio.xmcdn.com/group13/M0A/7B/91/wKgDXVYLuJOgvau9AAYf79VKFlM703.m4a http://audio.xmcdn.com/group13/M0A/7B/91/wKgDXVYLuJXh3l-2ABAFXZeLN2M203.m4a 0
+track_title: <type 'unicode'> 火 | 阿莱克桑德雷
+	E:\xmly\给孩子的诗\150930 火 | 阿莱克桑德雷.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150930 \u706b | \u963f\u83b1\u514b\u6851\u5fb7\u96f7.m4a'
+	我不知道 | 希梅内斯 http://audio.xmcdn.com/group15/M07/72/1E/wKgDaFX5PxGgIaCaAAYtH7KhLmY663.m4a http://audio.xmcdn.com/group15/M07/72/1E/wKgDaFX5PxLgW1WlABAokpKWDSg065.m4a 0
+track_title: <type 'unicode'> 我不知道 | 希梅内斯
+	E:\xmly\给孩子的诗\150916 我不知道 | 希梅内斯.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150916 \u6211\u4e0d\u77e5\u9053 | \u5e0c\u6885\u5185\u65af.m4a'
+	未走之路 | 弗洛斯特（美） http://audio.xmcdn.com/group15/M0A/6E/64/wKgDaFXxTWDy4zl-AAfKSXRJueg507.m4a http://audio.xmcdn.com/group15/M0A/6E/64/wKgDaFXxTWHQ9V39ABRjL2R6Alk406.m4a 0
+track_title: <type 'unicode'> 未走之路 | 弗洛斯特（美）
+	E:\xmly\给孩子的诗\150910 未走之路 | 弗洛斯特（美）.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150910 \u672a\u8d70\u4e4b\u8def | \u5f17\u6d1b\u65af\u7279\uff08\u7f8e\uff09.m4a'
+	【给孩子的诗】 诺德布兰德 | 回家 http://audio.xmcdn.com/group8/M0A/9B/6D/wKgDYFZEfjqR-fJoAAY5_1C8AK4837.m4a http://audio.xmcdn.com/group8/M0A/9B/6D/wKgDYFZEfjqTWzpTABBKX255KTs481.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗】 诺德布兰德 | 回家
+	E:\xmly\给孩子的诗\151112 【给孩子的诗】 诺德布兰德 | 回家.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151112 \u3010\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011 \u8bfa\u5fb7\u5e03\u5170\u5fb7 | \u56de\u5bb6.m4a'
+	北岛翻译索德格朗 | 星 星 http://audio2.xmcdn.com/group11/M08/68/C5/wKgDa1X_5mTS2Tm6AAXoBK0aSlo403.m4a http://audio2.xmcdn.com/group11/M08/81/AB/wKgDbVX_5mWh6FfnAA9yrUIlyTA295.m4a 0
+track_title: <type 'unicode'> 北岛翻译索德格朗 | 星 星
+	E:\xmly\给孩子的诗\150921 北岛翻译索德格朗 | 星 星.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150921 \u5317\u5c9b\u7ffb\u8bd1\u7d22\u5fb7\u683c\u6717 | \u661f \u661f.m4a'
+	特朗斯特罗默《写于1966年解冻》 http://audio.xmcdn.com/group8/M0A/90/A5/wKgDYVYzX3_yJ1w1AAQ4EI8PI5k002.m4a http://audio.xmcdn.com/group8/M0A/90/81/wKgDYFYzX4DTwe6BAAsHuGk6luU072.m4a 0
+track_title: <type 'unicode'> 特朗斯特罗默《写于1966年解冻》
+	E:\xmly\给孩子的诗\151030 特朗斯特罗默《写于1966年解冻》.m4a
+		 track_id: 743
+		{704: 1, 706: 1, 709: 1, 743: 1, 714: 1, 717: 1, 718: 1, 719: 1, 721: 1, 725: 1, 728: 1}
+	给孩子的诗 | 帆 莱蒙托夫（俄） http://audio.xmcdn.com/group8/M09/68/71/wKgDYVXkM7Si31jVAAYUfaWcxew495.m4a http://audio.xmcdn.com/group8/M09/68/71/wKgDYVXkM7TjulziAA_oB7P_WU4002.m4a 0
+track_title: <type 'unicode'> 给孩子的诗 | 帆 莱蒙托夫（俄）
+	E:\xmly\给孩子的诗\150831 给孩子的诗 | 帆 莱蒙托夫（俄）.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150831 \u7ed9\u5b69\u5b50\u7684\u8bd7 | \u5e06 \u83b1\u8499\u6258\u592b\uff08\u4fc4\uff09.m4a'
+	《孩子们的歌》| R.S.托马斯 http://audio.xmcdn.com/group11/M00/79/03/wKgDa1Yg07CT2AmjAAZ-TMT5okI719.m4a http://audio.xmcdn.com/group11/M00/91/EE/wKgDbVYg07LCmKCIABD9VDG4SKg298.m4a 0
+track_title: <type 'unicode'> 《孩子们的歌》| R.S.托马斯
+	E:\xmly\给孩子的诗\151016 《孩子们的歌》| R.S.托马斯.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151016 \u300a\u5b69\u5b50\u4eec\u7684\u6b4c\u300b| R.S.\u6258\u9a6c\u65af.m4a'
+	【北岛给孩子的诗】城市风景 | 也斯 http://audio.xmcdn.com/group9/M05/B6/B4/wKgDZlZdkvbgNM47AAlTTmB485o155.m4a http://audio.xmcdn.com/group9/M05/B6/B4/wKgDZlZdkvfiNKiYABho75i0Txo673.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】城市风景 | 也斯
+	E:\xmly\给孩子的诗\151201 【北岛给孩子的诗】城市风景 | 也斯.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151201 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u57ce\u5e02\u98ce\u666f | \u4e5f\u65af.m4a'
+	给孩子的诗 | 至大自然 荷尔德林（德） http://audio.xmcdn.com/group10/M04/64/72/wKgDaVXdhzLQ9I8LAAX6LV3GQtU762.m4a http://audio.xmcdn.com/group10/M04/64/72/wKgDaVXdhzPxydRzAA-jFknzE6I981.m4a 0
+track_title: <type 'unicode'> 给孩子的诗 | 至大自然 荷尔德林（德）
+	E:\xmly\给孩子的诗\150826 给孩子的诗 | 至大自然 荷尔德林（德）.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150826 \u7ed9\u5b69\u5b50\u7684\u8bd7 | \u81f3\u5927\u81ea\u7136 \u8377\u5c14\u5fb7\u6797\uff08\u5fb7\uff09.m4a'
+	茨维塔耶娃 | 我的大都市里一片黑夜 http://audio.xmcdn.com/group15/M0A/76/78/wKgDZVYCclSTEITdAA0QEWr0FTw981.m4a http://audio.xmcdn.com/group15/M0A/76/78/wKgDZVYCclaytFDTACIz4Fh5bkc795.m4a 0
+track_title: <type 'unicode'> 茨维塔耶娃 | 我的大都市里一片黑夜
+	E:\xmly\给孩子的诗\150923 茨维塔耶娃 | 我的大都市里一片黑夜.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150923 \u8328\u7ef4\u5854\u8036\u5a03 | \u6211\u7684\u5927\u90fd\u5e02\u91cc\u4e00\u7247\u9ed1\u591c.m4a'
+	狄金森 | 如果记住就是忘却 http://audio.xmcdn.com/group10/M05/6B/51/wKgDaVXsIf6jdLJYAAXYr0WuMQ8078.m4a http://audio.xmcdn.com/group10/M05/6B/51/wKgDaVXsIgDyjNlhAA9LEgwrPdM997.m4a 0
+track_title: <type 'unicode'> 狄金森 | 如果记住就是忘却
+	E:\xmly\给孩子的诗\150906 狄金森 | 如果记住就是忘却.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150906 \u72c4\u91d1\u68ee | \u5982\u679c\u8bb0\u4f4f\u5c31\u662f\u5fd8\u5374.m4a'
+	《公园里》| 普列维尔的［法］ http://audio.xmcdn.com/group12/M01/7D/B1/wKgDW1YSUfnwFlkWAAcratJ5wig746.m4a http://audio.xmcdn.com/group12/M01/7D/AC/wKgDXFYSUfrg2Yd6ABLCmImOLL4672.m4a 0
+track_title: <type 'unicode'> 《公园里》| 普列维尔的［法］
+	E:\xmly\给孩子的诗\151005 《公园里》| 普列维尔的［法］.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151005 \u300a\u516c\u56ed\u91cc\u300b| \u666e\u5217\u7ef4\u5c14\u7684\uff3b\u6cd5\uff3d.m4a'
+	《老虎的金黄》 | 博尔赫斯 http://audio.xmcdn.com/group11/M0A/8B/1D/wKgDbVYTjUjiMmnBAAiJ_RCv9UQ620.m4a http://audio.xmcdn.com/group9/M08/7E/B6/wKgDZlYTjQGiCcHFABZY28DzuNA680.m4a 0
+track_title: <type 'unicode'> 《老虎的金黄》 | 博尔赫斯
+	E:\xmly\给孩子的诗\151006 《老虎的金黄》 | 博尔赫斯.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151006 \u300a\u8001\u864e\u7684\u91d1\u9ec4\u300b | \u535a\u5c14\u8d6b\u65af.m4a'
+	【北岛给孩子的诗】乡愁 | 余光中 http://audio.xmcdn.com/group11/M05/9D/5F/wKgDa1ZVv4ixjJw6AA1T0QdCe2U582.m4a http://audio.xmcdn.com/group8/M02/AA/87/wKgDYVZVuy3jLjpgACLlX0IZ4h0423.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】乡愁 | 余光中
+	E:\xmly\给孩子的诗\151125 【北岛给孩子的诗】乡愁 | 余光中.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151125 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u4e61\u6101 | \u4f59\u5149\u4e2d.m4a'
+	【北岛给孩子的诗】还给我 | 严 力 http://audio.xmcdn.com/group10/M06/C0/90/wKgDZ1ZlTHTiOIupAA5t-rLautY440.m4a http://audio.xmcdn.com/group10/M06/C0/90/wKgDZ1ZlTHbyvNwbACXIrcc1FYY940.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】还给我 | 严 力
+	E:\xmly\给孩子的诗\151207 【北岛给孩子的诗】还给我 | 严 力.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151207 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u8fd8\u7ed9\u6211 | \u4e25 \u529b.m4a'
+	【给孩子的诗】《分别》 西亚特 http://audio.xmcdn.com/group11/M05/82/16/wKgDa1Ywvgmzbe12AAXkV3vSWmo088.m4a http://audio.xmcdn.com/group11/M05/82/16/wKgDa1YwvgmhgRDrAA9p4OBr1g8941.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗】《分别》 西亚特
+	E:\xmly\给孩子的诗\151028 【给孩子的诗】《分别》 西亚特.m4a
+		 track_id: 754
+		{704: 1, 706: 1, 709: 1, 743: 1, 714: 1, 717: 1, 718: 1, 719: 1, 721: 1, 754: 1, 725: 1, 728: 1}
+	给孩子的诗 | 星星们高挂空中 海涅（德） http://audio.xmcdn.com/group9/M09/65/C2/wKgDZlXe9q3CjruNAAPokFEAqfU061.m4a http://audio.xmcdn.com/group9/M09/65/C3/wKgDZlXe9q2ALV_KAAo3bAz7Wkg034.m4a 0
+track_title: <type 'unicode'> 给孩子的诗 | 星星们高挂空中 海涅（德）
+	E:\xmly\给孩子的诗\150827 给孩子的诗 | 星星们高挂空中 海涅（德）.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150827 \u7ed9\u5b69\u5b50\u7684\u8bd7 | \u661f\u661f\u4eec\u9ad8\u6302\u7a7a\u4e2d \u6d77\u6d85\uff08\u5fb7\uff09.m4a'
+	“不好意思，读哭了”《河流》 谷川俊太郎 http://audio.xmcdn.com/group15/M07/90/F6/wKgDZVY0qrijsn-7AAcioAYysiQ252.m4a http://audio.xmcdn.com/group15/M07/90/F7/wKgDZVY0qrmwfX7ZABKrHwYtheA220.m4a 0
+track_title: <type 'unicode'> “不好意思，读哭了”《河流》 谷川俊太郎
+	E:\xmly\给孩子的诗\151031 “不好意思，读哭了”《河流》 谷川俊太郎.m4a
+		 track_id: 756
+		{704: 1, 706: 1, 709: 1, 743: 1, 714: 1, 717: 1, 718: 1, 719: 1, 721: 1, 754: 1, 756: 1, 725: 1, 728: 1}
+	【北岛给孩子的诗】这是四点零八分的北京 | 食指 http://audio.xmcdn.com/group15/M07/AC/6A/wKgDaFZa_enQf_YoAAv-fADYMZA450.m4a http://audio.xmcdn.com/group15/M07/AC/3D/wKgDZVZa_erjSbADAB9mhFYM1y0329.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】这是四点零八分的北京 | 食指
+	E:\xmly\给孩子的诗\151129 【北岛给孩子的诗】这是四点零八分的北京 | 食指.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151129 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u8fd9\u662f\u56db\u70b9\u96f6\u516b\u5206\u7684\u5317\u4eac | \u98df\u6307.m4a'
+	【读诗】镜 中 | 张枣 http://audio.xmcdn.com/group14/M07/D2/6C/wKgDY1Z32OCiZH9kAApEChKYeg0239.m4a http://audio.xmcdn.com/group14/M07/D2/3C/wKgDZFZ32OLzHZouABrfsNfxHjI857.m4a 0
+track_title: <type 'unicode'> 【读诗】镜 中 | 张枣
+	E:\xmly\给孩子的诗\151221 【读诗】镜 中 | 张枣.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151221 \u3010\u8bfb\u8bd7\u3011\u955c \u4e2d\xa0| \u5f20\u67a3.m4a'
+	给你最向往的 “自 由” | ​保尔·艾吕雅 http://audio.xmcdn.com/group13/M0B/7A/23/wKgDXlYJIkDT96L6ABhASCJX12I630.m4a http://audio.xmcdn.com/group13/M0B/7A/41/wKgDXVYJIkKQqOcmAD-EaQEoiec791.m4a 0
+track_title: <type 'unicode'> 给你最向往的 “自 由” | ​保尔·艾吕雅
+	E:\xmly\给孩子的诗\150928 给你最向往的 “自 由” | ​保尔·艾吕雅.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150928 \u7ed9\u4f60\u6700\u5411\u5f80\u7684 \u201c\u81ea \u7531\u201d | \u200b\u4fdd\u5c14\xb7\u827e\u5415\u96c5.m4a'
+	【北岛给孩子的诗】在你出发的时候 | 食指 http://audio.xmcdn.com/group10/M01/A6/93/wKgDZ1ZZzJrAFjt4AAgJj7WxgQg811.m4a http://audio.xmcdn.com/group10/M01/A9/C4/wKgDaVZZzJuypSWCABUI8imOkfY137.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】在你出发的时候 | 食指
+	E:\xmly\给孩子的诗\151128 【北岛给孩子的诗】在你出发的时候 | 食指.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151128 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u5728\u4f60\u51fa\u53d1\u7684\u65f6\u5019 | \u98df\u6307.m4a'
+	已经过了一点 | 马雅可夫斯基 http://audio.xmcdn.com/group9/M03/78/7E/wKgDZlYGg8GybajfAAsLVRFEtMI043.m4a http://audio.xmcdn.com/group9/M03/78/7E/wKgDZlYGg8PxRna-ABzp5PI7104688.m4a 0
+track_title: <type 'unicode'> 已经过了一点 | 马雅可夫斯基
+	E:\xmly\给孩子的诗\150926 已经过了一点 | 马雅可夫斯基.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150926 \u5df2\u7ecf\u8fc7\u4e86\u4e00\u70b9 | \u9a6c\u96c5\u53ef\u592b\u65af\u57fa.m4a'
+	【北岛编给孩子的诗】纪弦 | 你的名字 http://audio.xmcdn.com/group14/M06/A0/51/wKgDZFZLNUvzEEfTAAkUCLfobEQ295.m4a http://audio.xmcdn.com/group15/M0B/9F/CF/wKgDaFZLNOjyYExoABfDLPj-0wM847.m4a 0
+track_title: <type 'unicode'> 【北岛编给孩子的诗】纪弦 | 你的名字
+	E:\xmly\给孩子的诗\151117 【北岛编给孩子的诗】纪弦 | 你的名字.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151117 \u3010\u5317\u5c9b\u7f16\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u7eaa\u5f26 | \u4f60\u7684\u540d\u5b57.m4a'
+	今天给宝贝两篇 《瞬息间是夜晚》《无题》 http://audio.xmcdn.com/group10/M08/7F/CB/wKgDaVYWOJ6DpUUsAAd8d5VsRf4498.m4a http://audio.xmcdn.com/group10/M08/7F/CC/wKgDaVYWOKHyWg0QABOXSsGs6Xw873.m4a 0
+track_title: <type 'unicode'> 今天给宝贝两篇 《瞬息间是夜晚》《无题》
+	E:\xmly\给孩子的诗\151008 今天给宝贝两篇 《瞬息间是夜晚》《无题》.m4a
+		 track_id: 763
+		{704: 1, 706: 1, 709: 1, 743: 1, 714: 1, 717: 1, 718: 1, 719: 1, 721: 1, 754: 1, 756: 1, 725: 1, 728: 1, 763: 1}
+	【北岛编给孩子的诗】冯至 | 深夜又是深山 http://audio.xmcdn.com/group10/M03/9D/DF/wKgDZ1ZIdfKSCYByAAhpSLEtGqs840.m4a http://audio.xmcdn.com/group10/M03/9D/DF/wKgDZ1ZIdfLCb9qiABYDx0Ro4mw375.m4a 0
+track_title: <type 'unicode'> 【北岛编给孩子的诗】冯至 | 深夜又是深山
+	E:\xmly\给孩子的诗\151115 【北岛编给孩子的诗】冯至 | 深夜又是深山.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151115 \u3010\u5317\u5c9b\u7f16\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u51af\u81f3 | \u6df1\u591c\u53c8\u662f\u6df1\u5c71.m4a'
+	【给孩子的诗】《声音》 赫伯特 http://audio.xmcdn.com/group16/M02/8B/0E/wKgDalYqDJDheUKWAA9NIVh3R9Q029.m4a http://audio.xmcdn.com/group16/M02/8B/18/wKgDbFYqDJWgNV4GACgPFpE_E7g693.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗】《声音》 赫伯特
+	E:\xmly\给孩子的诗\151023 【给孩子的诗】《声音》 赫伯特.m4a
+		 track_id: 765
+		{704: 1, 706: 1, 709: 1, 743: 1, 714: 1, 717: 1, 718: 1, 719: 1, 721: 1, 754: 1, 756: 1, 725: 1, 728: 1, 763: 1, 765: 1}
+	【给孩子读诗】雪 | 艾基 http://audio.xmcdn.com/group11/M04/A0/51/wKgDbVY58oCAJQbNAAhg4pOltiQ144.m4a http://audio.xmcdn.com/group13/M03/94/71/wKgDXlY58iOCh8WiABXtxndYQ44188.m4a 0
+track_title: <type 'unicode'> 【给孩子读诗】雪 | 艾基
+	E:\xmly\给孩子的诗\151104 【给孩子读诗】雪 | 艾基.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151104 \u3010\u7ed9\u5b69\u5b50\u8bfb\u8bd7\u3011\u96ea | \u827e\u57fa.m4a'
+	【给孩子的诗】 《夏夜》节选 | 博纳富瓦 http://audio.xmcdn.com/group10/M08/89/44/wKgDZ1YnsiKAGfPjAAR6HzaL6Z4932.m4a http://audio.xmcdn.com/group10/M08/89/45/wKgDZ1YnsiKC75PXAAu0zy7dm6M740.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗】 《夏夜》节选 | 博纳富瓦
+	E:\xmly\给孩子的诗\151021 【给孩子的诗】 《夏夜》节选 | 博纳富瓦.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151021 \u3010\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011 \u300a\u590f\u591c\u300b\u8282\u9009 | \u535a\u7eb3\u5bcc\u74e6.m4a'
+	《我不再认识黑夜》| 艾利蒂斯 http://audio.xmcdn.com/group8/M09/84/76/wKgDYFYeJI7DHDleAAekN3QEta8490.m4a http://audio.xmcdn.com/group8/M09/84/76/wKgDYFYeJI_zlY-MABP_cNI8gUo156.m4a 0
+track_title: <type 'unicode'> 《我不再认识黑夜》| 艾利蒂斯
+	E:\xmly\给孩子的诗\151014 《我不再认识黑夜》| 艾利蒂斯.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151014 \u300a\u6211\u4e0d\u518d\u8ba4\u8bc6\u9ed1\u591c\u300b| \u827e\u5229\u8482\u65af.m4a'
+	《积雪》 | 金子美铃 http://audio.xmcdn.com/group9/M03/80/6E/wKgDYlYXjrrBkRWBAAP1cZp1xHM352.m4a http://audio.xmcdn.com/group9/M03/80/6E/wKgDYlYXjrvQ_9Y4AApZKT-JPlA843.m4a 0
+track_title: <type 'unicode'> 《积雪》 | 金子美铃
+	E:\xmly\给孩子的诗\151009 《积雪》 | 金子美铃.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151009 \u300a\u79ef\u96ea\u300b | \u91d1\u5b50\u7f8e\u94c3.m4a'
+	给孩子的诗 | 老虎 http://audio.xmcdn.com/group8/M08/63/DB/wKgDYFXa51-zu67NAAlyFqI5pfk687.m4a http://audio.xmcdn.com/group8/M08/64/19/wKgDYVXa5wbB5U4zABi5m61HMMM845.m4a 0
+track_title: <type 'unicode'> 给孩子的诗 | 老虎
+	E:\xmly\给孩子的诗\150824 给孩子的诗 | 老虎.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150824 \u7ed9\u5b69\u5b50\u7684\u8bd7 | \u8001\u864e.m4a'
+	【北岛给孩子的诗】《秋日》 R.S.托马斯 http://audio.xmcdn.com/group9/M03/85/FD/wKgDYlYiB2rjIUuBAAUcYwreg8I991.m4a http://audio.xmcdn.com/group9/M0A/86/49/wKgDZlYiB2uQyO_aAA1cNbziilo682.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】《秋日》 R.S.托马斯
+	E:\xmly\给孩子的诗\151017 【北岛给孩子的诗】《秋日》 R.S.托马斯.m4a
+		 track_id: 771
+		{704: 1, 706: 1, 771: 1, 709: 1, 743: 1, 714: 1, 717: 1, 718: 1, 719: 1, 721: 1, 754: 1, 756: 1, 725: 1, 728: 1, 763: 1, 765: 1}
+	【给孩子的诗】《之前》 阿米亥 http://audio.xmcdn.com/group11/M04/97/ED/wKgDbVYrWgnRqAgyAATx7h8ItIM571.m4a http://audio.xmcdn.com/group11/M04/97/ED/wKgDbVYrWgnwpIaZAAzuuNIeNE0289.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗】《之前》 阿米亥
+	E:\xmly\给孩子的诗\151024 【给孩子的诗】《之前》 阿米亥.m4a
+		 track_id: 772
+		{704: 1, 706: 1, 771: 1, 772: 1, 709: 1, 743: 1, 714: 1, 717: 1, 718: 1, 719: 1, 721: 1, 754: 1, 756: 1, 725: 1, 728: 1, 763: 1, 765: 1}
+	【北岛给孩子的诗75】波浪 | 蔡其矫 http://audio.xmcdn.com/group13/M05/A5/F8/wKgDXlZPKsXR6CRfAAuCZ-I6TJQ108.m4a http://audio.xmcdn.com/group9/M0B/A5/82/wKgDYlZPKi6Ccn9WAB4g37DLYRI562.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗75】波浪 | 蔡其矫
+	E:\xmly\给孩子的诗\151120 【北岛给孩子的诗75】波浪 | 蔡其矫.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151120 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd775\u3011\u6ce2\u6d6a | \u8521\u5176\u77eb.m4a'
+	给孩子的诗 | 往昔的时光 彭斯_苏格兰 http://audio.xmcdn.com/group12/M09/63/FD/wKgDW1XcNczCZ2IBAAhX7ejl5D8934.m4a http://audio.xmcdn.com/group12/M09/63/F7/wKgDXFXcNanwp5T2ABXWTf2_5H0485.m4a 0
+track_title: <type 'unicode'> 给孩子的诗 | 往昔的时光 彭斯_苏格兰
+	E:\xmly\给孩子的诗\150825 给孩子的诗 | 往昔的时光 彭斯_苏格兰.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150825 \u7ed9\u5b69\u5b50\u7684\u8bd7 | \u5f80\u6614\u7684\u65f6\u5149 \u5f6d\u65af_\u82cf\u683c\u5170.m4a'
+	叶芝| 当你老了 http://audio.xmcdn.com/group10/M04/6C/97/wKgDZ1XuuLyB_bSIAAeZwKEMRJ0278.m4a http://audio.xmcdn.com/group10/M0B/6C/9D/wKgDaVXuuO3SrSQqABPjkYHQ7Po306.m4a 0
+track_title: <type 'unicode'> 叶芝| 当你老了
+	E:\xmly\给孩子的诗\150908 叶芝| 当你老了.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150908 \u53f6\u829d| \u5f53\u4f60\u8001\u4e86.m4a'
+	《如果白昼落进...》 | 聂鲁达 http://audio.xmcdn.com/group10/M0A/81/FA/wKgDaVYaPK7DViHAAALxSNhjles763.m4a http://audio.xmcdn.com/group10/M0A/81/FA/wKgDaVYaPK_T9EtNAAetmboj31s366.m4a 0
+track_title: <type 'unicode'> 《如果白昼落进...》 | 聂鲁达
+	E:\xmly\给孩子的诗\151011 《如果白昼落进...》 | 聂鲁达.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151011 \u300a\u5982\u679c\u767d\u663c\u843d\u8fdb...\u300b | \u8042\u9c81\u8fbe.m4a'
+	【北岛给孩子的诗】你好，哀愁 | 依群 http://audio.xmcdn.com/group14/M06/B0/B8/wKgDY1ZcclDR4x8yAAamNLRigFI523.m4a http://audio.xmcdn.com/group7/M03/B0/55/wKgDX1Zca8Hx53uHABFlewughIQ431.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】你好，哀愁 | 依群
+	E:\xmly\给孩子的诗\151130 【北岛给孩子的诗】你好，哀愁 | 依群.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151130 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u4f60\u597d\uff0c\u54c0\u6101 | \u4f9d\u7fa4.m4a'
+	【北岛编给孩子的诗】音尘 | 卞之琳 http://audio.xmcdn.com/group11/M02/92/18/wKgDa1ZJ1lmSuv_DAAfbpPEz6Us879.m4a http://audio.xmcdn.com/group11/M03/AB/08/wKgDbVZJ1lrBnWXiABSQqIuwYjo737.m4a 0
+track_title: <type 'unicode'> 【北岛编给孩子的诗】音尘 | 卞之琳
+	E:\xmly\给孩子的诗\151116 【北岛编给孩子的诗】音尘 | 卞之琳.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151116 \u3010\u5317\u5c9b\u7f16\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u97f3\u5c18 | \u535e\u4e4b\u7433.m4a'
+	英国圆号 | 埃乌杰尼奥·蒙塔莱 http://audio.xmcdn.com/group16/M09/7A/87/wKgDalYKXi_hk_8nAAgqp6K7bNg653.m4a http://audio.xmcdn.com/group16/M09/7A/92/wKgDbFYKXjHx4mTnABVffFLfjr4939.m4a 0
+track_title: <type 'unicode'> 英国圆号 | 埃乌杰尼奥·蒙塔莱
+	E:\xmly\给孩子的诗\150929 英国圆号 | 埃乌杰尼奥·蒙塔莱.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150929 \u82f1\u56fd\u5706\u53f7 | \u57c3\u4e4c\u6770\u5c3c\u5965\xb7\u8499\u5854\u83b1.m4a'
+	《仿佛》 泰戈尔写母亲 http://audio.xmcdn.com/group9/M00/6C/5F/wKgDYlXtbeWQLzKZAAk3VIipuM0733.m4a http://audio.xmcdn.com/group9/M0A/6C/7D/wKgDZlXtbf2y48k3ABgfllNqxDw326.m4a 0
+track_title: <type 'unicode'> 《仿佛》 泰戈尔写母亲
+	E:\xmly\给孩子的诗\150907 《仿佛》 泰戈尔写母亲.m4a
+		 track_id: 780
+		{704: 1, 706: 1, 771: 1, 772: 1, 709: 1, 743: 1, 714: 1, 780: 1, 717: 1, 718: 1, 719: 1, 721: 1, 754: 1, 756: 1, 725: 1, 728: 1, 763: 1, 765: 1}
+	【北岛给孩子的诗】一 束 | 北岛 http://audio.xmcdn.com/group11/M07/AD/4B/wKgDa1ZfCY3Rj7i_ABD9nsnx4qk901.m4a http://audio.xmcdn.com/group14/M09/BB/5D/wKgDY1ZfB7XiyWKXACx-YtPravg742.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】一 束 | 北岛
+	E:\xmly\给孩子的诗\151202 【北岛给孩子的诗】一 束 | 北岛.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151202 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u4e00 \u675f | \u5317\u5c9b.m4a'
+	【北岛给孩子的诗】我是风 | 芒克 http://audio.xmcdn.com/group8/M06/BC/DE/wKgDYFZgT-jwJ9zCAA6CImPbga8401.m4a http://audio.xmcdn.com/group7/M08/BD/C6/wKgDWlZgTy-xp77wACX9e6z5gvU545.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】我是风 | 芒克
+	E:\xmly\给孩子的诗\151203 【北岛给孩子的诗】我是风 | 芒克.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151203 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u6211\u662f\u98ce | \u8292\u514b.m4a'
+	寂 静 | 欧阳江河 http://audio.xmcdn.com/group7/M01/D0/5B/wKgDX1Zz-J2Ck1EWAAs8nMB4tNA693.m4a http://audio.xmcdn.com/group15/M06/CE/0B/wKgDZVZz8_TzEIT4AB1q-q4jY7c598.m4a 0
+track_title: <type 'unicode'> 寂 静 | 欧阳江河
+	E:\xmly\给孩子的诗\151218 寂 静 | 欧阳江河.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151218 \u5bc2 \u9759\xa0| \u6b27\u9633\u6c5f\u6cb3.m4a'
+	《看见的，看不见的》 | 夸西莫多［意大利］ http://audio.xmcdn.com/group16/M06/7F/A0/wKgDalYU7j3SnoSKAAbMrSs93x0171.m4a http://audio.xmcdn.com/group16/M06/7F/A0/wKgDalYU7j6j6NAgABHKsb3ViiI506.m4a 0
+track_title: <type 'unicode'> 《看见的，看不见的》 | 夸西莫多［意大利］
+	E:\xmly\给孩子的诗\151007 《看见的，看不见的》 | 夸西莫多［意大利］.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151007 \u300a\u770b\u89c1\u7684\uff0c\u770b\u4e0d\u89c1\u7684\u300b | \u5938\u897f\u83ab\u591a\uff3b\u610f\u5927\u5229\uff3d.m4a'
+	【北岛给孩子的诗】根 | 牛汉 http://audio.xmcdn.com/group8/M03/A8/D8/wKgDYVZTHbLgOs6_AAd5ognt_zM060.m4a http://audio.xmcdn.com/group13/M09/A9/13/wKgDXVZTHOrAR1HAABOOfg0BioI830.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】根 | 牛汉
+	E:\xmly\给孩子的诗\151123 【北岛给孩子的诗】根 | 牛汉.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151123 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u6839 | \u725b\u6c49.m4a'
+	给孩子的诗 | 当一切入睡 雨果 http://audio.xmcdn.com/group15/M01/67/7B/wKgDaFXiz4mhiBr-AAimTfCc8kU051.m4a http://audio.xmcdn.com/group15/M01/67/7B/wKgDaFXiz4qCL2K_ABajqsRAl_M756.m4a 0
+track_title: <type 'unicode'> 给孩子的诗 | 当一切入睡 雨果
+	E:\xmly\给孩子的诗\150830 给孩子的诗 | 当一切入睡 雨果.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150830 \u7ed9\u5b69\u5b50\u7684\u8bd7 | \u5f53\u4e00\u5207\u5165\u7761 \u96e8\u679c.m4a'
+	黄昏 | 索德格朗 http://audio.xmcdn.com/group8/M08/76/D0/wKgDYVYCNrej4P4SAAVwdNM0RIE460.m4a http://audio.xmcdn.com/group8/M08/76/D0/wKgDYVYCNrmhIzw9AA46PFXvfQg307.m4a 0
+track_title: <type 'unicode'> 黄昏 | 索德格朗
+	E:\xmly\给孩子的诗\150923 黄昏 | 索德格朗.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150923 \u9ec4\u660f | \u7d22\u5fb7\u683c\u6717.m4a'
+	【北岛给孩子的诗74】欢乐 | 何其芳 http://audio.xmcdn.com/group9/M0A/A0/FA/wKgDYlZMnHWT7nvpAAonfMLQ6ik767.m4a http://audio.xmcdn.com/group9/M0A/A1/24/wKgDZlZMnHaz6ta2ABqU4D2KqNU835.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗74】欢乐 | 何其芳
+	E:\xmly\给孩子的诗\151118 【北岛给孩子的诗74】欢乐 | 何其芳.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151118 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd774\u3011\u6b22\u4e50 | \u4f55\u5176\u82b3.m4a'
+	米拉波桥 | 阿波利奈尔 http://audio.xmcdn.com/group10/M0A/71/1E/wKgDaVX4P8DzBGOAAApNiywFWnM751.m4a http://audio.xmcdn.com/group10/M0A/71/1E/wKgDaVX4P8HgVQBPABr4n99dbs0855.m4a 0
+track_title: <type 'unicode'> 米拉波桥 | 阿波利奈尔
+	E:\xmly\给孩子的诗\150915 米拉波桥 | 阿波利奈尔.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150915 \u7c73\u62c9\u6ce2\u6865 | \u963f\u6ce2\u5229\u5948\u5c14.m4a'
+	《自1979年3月》 特朗斯特罗默 http://audio.xmcdn.com/group7/M05/90/02/wKgDX1YyCD3C1FR2AAXnnV_A8ek610.m4a http://audio.xmcdn.com/group7/M05/90/01/wKgDWlYyCD2AeBTGAA9xOHv7ifU169.m4a 0
+track_title: <type 'unicode'> 《自1979年3月》 特朗斯特罗默
+	E:\xmly\给孩子的诗\151029 《自1979年3月》 特朗斯特罗默.m4a
+		 track_id: 790
+		{704: 1, 706: 1, 771: 1, 772: 1, 709: 1, 743: 1, 714: 1, 780: 1, 717: 1, 718: 1, 719: 1, 721: 1, 754: 1, 756: 1, 725: 1, 790: 1, 728: 1, 763: 1, 765: 1}
+	逝去的恋歌 | 巴列霍 http://audio.xmcdn.com/group11/M06/81/0F/wKgDbVX-gTnhSWUUAApAq4zV-Oc012.m4a http://audio.xmcdn.com/group11/M06/81/0F/wKgDbVX-gTuDNis_ABrW4tZojHI740.m4a 0
+track_title: <type 'unicode'> 逝去的恋歌 | 巴列霍
+	E:\xmly\给孩子的诗\150920 逝去的恋歌 | 巴列霍.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150920 \u901d\u53bb\u7684\u604b\u6b4c | \u5df4\u5217\u970d.m4a'
+	【给孩子的诗】哈特 | 未来的历史 http://audio.xmcdn.com/group16/M05/9C/55/wKgDalZF3O3iSw8hAAe0gmls5dE882.m4a http://audio.xmcdn.com/group16/M05/9C/55/wKgDalZF3O7zBCEeABQoggBGI94081.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗】哈特 | 未来的历史
+	E:\xmly\给孩子的诗\151113 【给孩子的诗】哈特 | 未来的历史.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151113 \u3010\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u54c8\u7279 | \u672a\u6765\u7684\u5386\u53f2.m4a'
+	【读诗】饮 水 | 西川 http://audio.xmcdn.com/group12/M05/D3/EE/wKgDXFZ6pAaiVTACAA0DMz3u5PU519.m4a http://audio.xmcdn.com/group12/M05/D3/EE/wKgDXFZ6o_mSnugrACISJNkv9Xs249.m4a 0
+track_title: <type 'unicode'> 【读诗】饮 水 | 西川
+	E:\xmly\给孩子的诗\151223 【读诗】饮 水 | 西川.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151223 \u3010\u8bfb\u8bd7\u3011\u996e \u6c34\xa0| \u897f\u5ddd.m4a'
+	普希金最美情诗《给凯恩》 http://audio.xmcdn.com/group13/M08/66/75/wKgDXlXgKK7SLW3uAAt38rGbqCo838.m4a http://audio.xmcdn.com/group13/M08/66/75/wKgDXlXgKLCyI1R8AB4FB5_nCa0710.m4a 0
+track_title: <type 'unicode'> 普希金最美情诗《给凯恩》
+	E:\xmly\给孩子的诗\150828 普希金最美情诗《给凯恩》.m4a
+		 track_id: 794
+		{704: 1, 706: 1, 771: 1, 772: 1, 709: 1, 743: 1, 714: 1, 780: 1, 717: 1, 718: 1, 719: 1, 721: 1, 754: 1, 756: 1, 725: 1, 790: 1, 728: 1, 794: 1, 763: 1, 765: 1}
+	【中国诗第一篇】废名 | 十二月十九夜 http://audio.xmcdn.com/group15/M04/9C/E2/wKgDZVZHLrTzaBqiAAgLtX5zRls658.m4a http://audio.xmcdn.com/group15/M04/9C/E3/wKgDZVZHLrbTPxL6ABUNVxlK4gA380.m4a 0
+track_title: <type 'unicode'> 【中国诗第一篇】废名 | 十二月十九夜
+	E:\xmly\给孩子的诗\151114 【中国诗第一篇】废名 | 十二月十九夜.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151114 \u3010\u4e2d\u56fd\u8bd7\u7b2c\u4e00\u7bc7\u3011\u5e9f\u540d | \u5341\u4e8c\u6708\u5341\u4e5d\u591c.m4a'
+	《雨燕》| 勒内·夏尔 http://audio.xmcdn.com/group9/M0A/83/8F/wKgDYlYdKPGzoJu-AAa60PzLNCI962.m4a http://audio.xmcdn.com/group9/M0A/83/8F/wKgDYlYdKPOS4kuKABGbwLNEkow022.m4a 0
+track_title: <type 'unicode'> 《雨燕》| 勒内·夏尔
+	E:\xmly\给孩子的诗\151013 《雨燕》| 勒内·夏尔.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151013 \u300a\u96e8\u71d5\u300b| \u52d2\u5185\xb7\u590f\u5c14.m4a'
+	【给孩子的诗】鲍勃·迪伦《在风中飘》 http://audio.xmcdn.com/group11/M01/8C/21/wKgDa1ZAk6vjJFjKAA4Q6IwWW6Y550.m4a http://audio.xmcdn.com/group8/M0B/98/F0/wKgDYFZAkznhtPxdACTTtPi6ogA273.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗】鲍勃·迪伦《在风中飘》
+	E:\xmly\给孩子的诗\151109 【给孩子的诗】鲍勃·迪伦《在风中飘》.m4a
+		 track_id: 797
+		{704: 1, 706: 1, 771: 1, 772: 1, 709: 1, 743: 1, 714: 1, 780: 1, 717: 1, 718: 1, 719: 1, 721: 1, 754: 1, 797: 1, 756: 1, 725: 1, 790: 1, 728: 1, 794: 1, 763: 1, 765: 1}
+	秋日 | 里尔克 http://audio2.xmcdn.com/group9/M0A/6F/9C/wKgDZlX0CCGx-w1eAAX9nkz-8aI281.m4a http://audio2.xmcdn.com/group9/M0A/6F/9C/wKgDZlX0CCKz7E02AA-r42Bw7bE035.m4a 0
+track_title: <type 'unicode'> 秋日 | 里尔克
+	E:\xmly\给孩子的诗\150912 秋日 | 里尔克.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150912 \u79cb\u65e5 | \u91cc\u5c14\u514b.m4a'
+	【经典】我愿意是急流 | 裴多菲 http://audio.xmcdn.com/group9/M0A/68/B0/wKgDZlXlepiSw0RWAAuF8Oah0Os267.m4a http://audio.xmcdn.com/group9/M0A/68/86/wKgDYlXleoaj9zGyAB4rIp068CU978.m4a 0
+track_title: <type 'unicode'> 【经典】我愿意是急流 | 裴多菲
+	E:\xmly\给孩子的诗\150901 【经典】我愿意是急流 | 裴多菲.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150901 \u3010\u7ecf\u5178\u3011\u6211\u613f\u610f\u662f\u6025\u6d41 | \u88f4\u591a\u83f2.m4a'
+	【给孩子的诗开篇】天真的预示 （英）布莱克 http://audio.xmcdn.com/group11/M07/6F/AE/wKgDbVXZj1Sw8YU0AAsuCqlF74g499.m4a http://audio.xmcdn.com/group11/M07/6F/AE/wKgDbVXZj1WBBB_RAB1E1vWvlOw836.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗开篇】天真的预示 （英）布莱克
+	E:\xmly\给孩子的诗\150823 【给孩子的诗开篇】天真的预示 （英）布莱克.m4a
+		 track_id: 800
+		{771: 1, 772: 1, 780: 1, 790: 1, 794: 1, 797: 1, 800: 1, 704: 1, 706: 1, 709: 1, 714: 1, 717: 1, 718: 1, 719: 1, 721: 1, 725: 1, 728: 1, 743: 1, 754: 1, 756: 1, 763: 1, 765: 1}
+	【北岛给孩子的诗】周梦蝶 | 九行 http://audio.xmcdn.com/group16/M07/A7/6D/wKgDalZRt5_xmaC4AAg_gjH3YM8517.m4a http://audio.xmcdn.com/group16/M07/A7/62/wKgDbFZRt5-wSjjEABWVxO_dB-M160.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】周梦蝶 | 九行
+	E:\xmly\给孩子的诗\151122 【北岛给孩子的诗】周梦蝶 | 九行.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151122 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u5468\u68a6\u8776 | \u4e5d\u884c.m4a'
+	严重的时刻 | 里尔克 http://audio.xmcdn.com/group15/M07/70/22/wKgDZVX1UC3z-ECMAAUu9FMYzJs663.m4a http://audio.xmcdn.com/group15/M07/70/23/wKgDZVX1UDCDt9BsAA2OnMaRaeg214.m4a 0
+track_title: <type 'unicode'> 严重的时刻 | 里尔克
+	E:\xmly\给孩子的诗\150913 严重的时刻 | 里尔克.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150913 \u4e25\u91cd\u7684\u65f6\u523b | \u91cc\u5c14\u514b.m4a'
+	《在意义丛林旅行 的向导》节选 阿多尼斯 http://audio.xmcdn.com/group16/M06/8E/34/wKgDbFYvWovCzvDQAAYmS_eZJTM662.m4a http://audio.xmcdn.com/group16/M06/8E/2D/wKgDalYvWoyAgZr9ABAVgFKWupk910.m4a 0
+track_title: <type 'unicode'> 《在意义丛林旅行 的向导》节选 阿多尼斯
+	E:\xmly\给孩子的诗\151027 《在意义丛林旅行 的向导》节选 阿多尼斯.m4a
+		 track_id: 803
+		{771: 1, 772: 1, 780: 1, 790: 1, 794: 1, 797: 1, 800: 1, 803: 1, 704: 1, 706: 1, 709: 1, 714: 1, 717: 1, 718: 1, 719: 1, 721: 1, 725: 1, 728: 1, 743: 1, 754: 1, 756: 1, 763: 1, 765: 1}
+
+
+ -------- Convert m4a to mp3 start   ----------- 
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+Enter a zhubo, album or sound url:http://www.ximalaya.com/12512006/album/2894105/
+Album in database  12512006 /album/ 2894105
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/12512006/album/2894105/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 100 	 update_time: 2015-12-17
+	 Value in Web -- sound_count: 100 	 update_time: 2015-12-17
+NO NEED for update.
+
+	 this album has  100 tracks.
+
+	 this album has  -1 tracks doesn't download.
+Start download track...
+	【读诗】年 终 | 陆忆敏 http://audio.xmcdn.com/group13/M00/D1/38/wKgDXlZ2wtDS3OwRAAgCSDH36vo672.m4a http://audio.xmcdn.com/group9/M04/D1/20/wKgDYlZ2tEXRuNDCABT14CyGE44273.m4a 0
+track_title: <type 'unicode'> 【读诗】年 终 | 陆忆敏
+	E:\xmly\给孩子的诗\151220 【读诗】年 终 | 陆忆敏.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151220 \u3010\u8bfb\u8bd7\u3011\u5e74 \u7ec8 | \u9646\u5fc6\u654f.m4a'
+	顾城 | 我是一个任性的孩子 http://audio.xmcdn.com/group11/M06/C0/66/wKgDa1ZyrPOAMQLYABZmq777DHA845.m4a http://audio.xmcdn.com/group15/M03/CC/EA/wKgDZVZyog2iyND5ADqrcKWgA-M578.m4a 0
+track_title: <type 'unicode'> 顾城 | 我是一个任性的孩子
+	E:\xmly\给孩子的诗\151217 顾城 | 我是一个任性的孩子.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151217 \u987e\u57ce\xa0| \u6211\u662f\u4e00\u4e2a\u4efb\u6027\u7684\u5b69\u5b50.m4a'
+	【北岛给孩子的诗】金黄的稻束 | 郑敏 http://audio.xmcdn.com/group9/M04/A6/E7/wKgDYlZQkSaytYj8AApFcKOL_Oo621.m4a http://audio.xmcdn.com/group16/M0B/A6/CE/wKgDbFZQkELyiZANABrin_fO470872.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】金黄的稻束 | 郑敏
+	E:\xmly\给孩子的诗\151121 【北岛给孩子的诗】金黄的稻束 | 郑敏.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151121 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u91d1\u9ec4\u7684\u7a3b\u675f | \u90d1\u654f.m4a'
+	《吉他》| 洛尔迦 北岛译 http://audio.xmcdn.com/group12/M03/7D/17/wKgDW1YRFR-AWxZxAAga5-nbHaM700.m4a http://audio.xmcdn.com/group12/M03/7D/17/wKgDW1YRFSLwedaKABU2ahj_UMo154.m4a 0
+track_title: <type 'unicode'> 《吉他》| 洛尔迦 北岛译
+	E:\xmly\给孩子的诗\151004 《吉他》| 洛尔迦 北岛译.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151004 \u300a\u5409\u4ed6\u300b| \u6d1b\u5c14\u8fe6 \u5317\u5c9b\u8bd1.m4a'
+	【读诗】一种黑暗 | 韩 东 http://audio.xmcdn.com/group13/M07/D0/3D/wKgDXlZ1YuKA2A_ZAAzH23d8V7k839.m4a http://audio.xmcdn.com/group10/M03/CB/5F/wKgDZ1Z1Yjfy02qZACF2p1pzhHQ080.m4a 0
+track_title: <type 'unicode'> 【读诗】一种黑暗 | 韩 东
+	E:\xmly\给孩子的诗\151219 【读诗】一种黑暗 | 韩 东.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151219 \u3010\u8bfb\u8bd7\u3011\u4e00\u79cd\u9ed1\u6697 | \u97e9 \u4e1c.m4a'
+	林中雪地的寂静中 | 曼德尔施塔姆 http://audio.xmcdn.com/group13/M02/74/6F/wKgDXVX9QknRa0nDAAd3bZ61Tx4414.m4a http://audio.xmcdn.com/group13/M02/74/6F/wKgDXVX9QkrDWALKABOKFtD-ras289.m4a 0
+track_title: <type 'unicode'> 林中雪地的寂静中 | 曼德尔施塔姆
+	E:\xmly\给孩子的诗\150919 林中雪地的寂静中 | 曼德尔施塔姆.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150919 \u6797\u4e2d\u96ea\u5730\u7684\u5bc2\u9759\u4e2d | \u66fc\u5fb7\u5c14\u65bd\u5854\u59c6.m4a'
+	【北岛给孩子的诗】致太阳 | 多多 http://audio.xmcdn.com/group10/M03/BD/5E/wKgDZ1Zi7_TDBcBYAAtdpF-zsk8776.m4a http://audio.xmcdn.com/group10/M03/C0/85/wKgDaVZi7-uzTN0KAB3BhtTJKt8522.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】致太阳 | 多多
+	E:\xmly\给孩子的诗\151205 【北岛给孩子的诗】致太阳 | 多多.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151205 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u81f4\u592a\u9633 | \u591a\u591a.m4a'
+	像这样细细地听 | 茨维塔耶娃 http://audio.xmcdn.com/group9/M04/77/36/wKgDYlYEDm3RmH_ZAAgCA1AwjnI035.m4a http://audio.xmcdn.com/group9/M04/77/36/wKgDYlYEDm_ROiYJABT0Z3BFRxA700.m4a 0
+track_title: <type 'unicode'> 像这样细细地听 | 茨维塔耶娃
+	E:\xmly\给孩子的诗\150924 像这样细细地听 | 茨维塔耶娃.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150924 \u50cf\u8fd9\u6837\u7ec6\u7ec6\u5730\u542c | \u8328\u7ef4\u5854\u8036\u5a03.m4a'
+	【北岛给孩子的诗】一片芳草 | 昌耀 http://audio.xmcdn.com/group15/M01/AB/AD/wKgDZVZYYamR6-cHAAZJIEnTS24672.m4a http://audio.xmcdn.com/group11/M03/B8/2E/wKgDbVZYYUzQlHrQABBx-wqo_0Q148.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】一片芳草 | 昌耀
+	E:\xmly\给孩子的诗\151127 【北岛给孩子的诗】一片芳草 | 昌耀.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151127 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u4e00\u7247\u82b3\u8349 | \u660c\u8000.m4a'
+	【北岛给孩子的诗75】山和海 | 陈敬容 http://audio.xmcdn.com/group16/M0B/A2/E6/wKgDbFZNw76jD-KkAAofpqs9B6c135.m4a http://audio.xmcdn.com/group16/M0B/A2/E6/wKgDbFZNw7-C70i7ABqAV5FFXxQ660.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗75】山和海 | 陈敬容
+	E:\xmly\给孩子的诗\151119 【北岛给孩子的诗75】山和海 | 陈敬容.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151119 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd775\u3011\u5c71\u548c\u6d77 | \u9648\u656c\u5bb9.m4a'
+	【给孩子的诗】达维什 | 想想别人 http://audio.xmcdn.com/group11/M08/8D/D5/wKgDa1ZDUkCCt6HgAAaYJghnPj8653.m4a http://audio.xmcdn.com/group11/M08/A6/C4/wKgDbVZDUkGCcIiLABE_pQjWU04303.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗】达维什 | 想想别人
+	E:\xmly\给孩子的诗\151111 【给孩子的诗】达维什 | 想想别人.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151111 \u3010\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u8fbe\u7ef4\u4ec0\xa0| \u60f3\u60f3\u522b\u4eba.m4a'
+	给孩子的诗 |《 假如生活欺骗了你》 普希金 http://audio.xmcdn.com/group11/M07/73/50/wKgDbVXhc4-w4bXAAAak2euXSDY689.m4a http://audio.xmcdn.com/group11/M07/5A/64/wKgDa1Xhc_SiXRh2ABFhE7BB-w4710.m4a 0
+track_title: <type 'unicode'> 给孩子的诗 |《 假如生活欺骗了你》 普希金
+	E:\xmly\给孩子的诗\150829 给孩子的诗 |《 假如生活欺骗了你》 普希金.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150829 \u7ed9\u5b69\u5b50\u7684\u8bd7 |\u300a \u5047\u5982\u751f\u6d3b\u6b3a\u9a97\u4e86\u4f60\u300b \u666e\u5e0c\u91d1.m4a'
+	【北岛给孩子的诗】用脚思想 | 商禽 http://audio2.xmcdn.com/group8/M09/AB/57/wKgDYFZXARmjVbasAAnweGvW51s682.m4a http://audio2.xmcdn.com/group13/M04/AB/AF/wKgDXVZW_yTxmNBaABoDqP_V4TE520.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】用脚思想 | 商禽
+	E:\xmly\给孩子的诗\151126 【北岛给孩子的诗】用脚思想 | 商禽.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151126 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u7528\u811a\u601d\u60f3\xa0| \u5546\u79bd.m4a'
+	【读诗】三 原 色| 车前子 http://audio.xmcdn.com/group10/M07/D1/A0/wKgDaVZ5XXvj5Gq2AAZSpBy8yWY015.m4a http://audio.xmcdn.com/group10/M07/D1/A0/wKgDaVZ5XXvQglnaABCK6_T2Mh0779.m4a 0
+track_title: <type 'unicode'> 【读诗】三 原 色| 车前子
+	E:\xmly\给孩子的诗\151222 【读诗】三 原 色| 车前子.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151222 \u3010\u8bfb\u8bd7\u3011\u4e09 \u539f \u8272| \u8f66\u524d\u5b50.m4a'
+	愿宝贝永远不孤独 | 聂鲁达《孤独》 http://audio.xmcdn.com/group9/M0B/81/6A/wKgDYlYZMVLiFZrFAAkiywsA-0A656.m4a http://audio.xmcdn.com/group9/M0B/81/B7/wKgDZlYZMVWBeV4lABfpT-II1Mw067.m4a 0
+track_title: <type 'unicode'> 愿宝贝永远不孤独 | 聂鲁达《孤独》
+	E:\xmly\给孩子的诗\151010 愿宝贝永远不孤独 | 聂鲁达《孤独》.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151010 \u613f\u5b9d\u8d1d\u6c38\u8fdc\u4e0d\u5b64\u72ec | \u8042\u9c81\u8fbe\u300a\u5b64\u72ec\u300b.m4a'
+	【北岛给孩子的诗】伞 | 痖弦 http://audio.xmcdn.com/group11/M07/B5/95/wKgDbVZUiEaxW63WAAdjv9id5lU957.m4a http://audio.xmcdn.com/group11/M07/9C/A4/wKgDa1ZUiEbws8NuABNVUaC0fvo408.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】伞 | 痖弦
+	E:\xmly\给孩子的诗\151124 【北岛给孩子的诗】伞 | 痖弦.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151124 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u4f1e | \u75d6\u5f26.m4a'
+	给解冻之风 | 弗洛斯特 http://audio.xmcdn.com/group9/M0A/6E/D5/wKgDYlXysxnj7qQ6AAb77lM5Vx0596.m4a http://audio.xmcdn.com/group9/M0A/6E/FE/wKgDZlXyszHDr7OPABJF6IHyOxc374.m4a 0
+track_title: <type 'unicode'> 给解冻之风 | 弗洛斯特
+	E:\xmly\给孩子的诗\150911 给解冻之风 | 弗洛斯特.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150911 \u7ed9\u89e3\u51bb\u4e4b\u98ce | \u5f17\u6d1b\u65af\u7279.m4a'
+	哑孩子 | 洛尔迦 戴望舒译 http://audio.xmcdn.com/group8/M0A/7C/6F/wKgDYFYOTSHBX7DVAAhRoMrj2-w377.m4a http://audio.xmcdn.com/group8/M0A/7C/AC/wKgDYVYOTSLTxO8WABXEXGFGQc0109.m4a 0
+track_title: <type 'unicode'> 哑孩子 | 洛尔迦 戴望舒译
+	E:\xmly\给孩子的诗\151002 哑孩子 | 洛尔迦 戴望舒译.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151002 \u54d1\u5b69\u5b50 | \u6d1b\u5c14\u8fe6 \u6234\u671b\u8212\u8bd1.m4a'
+	叶芝| 柯尔庄园的野天鹅 配五彩呼伦贝尔 http://audio.xmcdn.com/group7/M08/6E/1B/wKgDX1XwEQaTujrOAA4OPEgjSI4395.m4a http://audio.xmcdn.com/group7/M08/6E/1B/wKgDX1XwEQuzgU3WACTN1tZ-zj8210.m4a 0
+track_title: <type 'unicode'> 叶芝| 柯尔庄园的野天鹅 配五彩呼伦贝尔
+	E:\xmly\给孩子的诗\150909 叶芝| 柯尔庄园的野天鹅 配五彩呼伦贝尔.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150909 \u53f6\u829d| \u67ef\u5c14\u5e84\u56ed\u7684\u91ce\u5929\u9e45 \u914d\u4e94\u5f69\u547c\u4f26\u8d1d\u5c14.m4a'
+	雾 | 桑德堡 http://audio.xmcdn.com/group10/M02/70/3E/wKgDaVX2nfHR8_JPAARFXfHuahw079.m4a http://audio.xmcdn.com/group10/M02/70/45/wKgDZ1X2nb_D7GL9AAsoODFFSnA255.m4a 0
+track_title: <type 'unicode'> 雾 | 桑德堡
+	E:\xmly\给孩子的诗\150914 雾 | 桑德堡.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150914 \u96fe | \u6851\u5fb7\u5821.m4a'
+	《饮着科林斯的太阳‘’‘’‘》| 艾利蒂斯 http://audio.xmcdn.com/group12/M06/84/70/wKgDXFYfbgGRJUJDAAg3zGyVVDw145.m4a http://audio.xmcdn.com/group12/M06/84/98/wKgDW1YfbgKyKSG0ABWAYEAdioo635.m4a 0
+track_title: <type 'unicode'> 《饮着科林斯的太阳‘’‘’‘》| 艾利蒂斯
+	E:\xmly\给孩子的诗\151015 《饮着科林斯的太阳‘’‘’‘》| 艾利蒂斯.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151015 \u300a\u996e\u7740\u79d1\u6797\u65af\u7684\u592a\u9633\u2018\u2019\u2018\u2019\u2018\u300b| \u827e\u5229\u8482\u65af.m4a'
+	关于爬树 | 布莱希特 http://audio.xmcdn.com/group10/M04/7B/7C/wKgDaVYNVe-h0TUGAAlm412V4rI117.m4a http://audio.xmcdn.com/group10/M04/7B/7B/wKgDZ1YNVfOBiBQuABicRc2xfrs457.m4a 0
+track_title: <type 'unicode'> 关于爬树 | 布莱希特
+	E:\xmly\给孩子的诗\151001 关于爬树 | 布莱希特.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151001 \u5173\u4e8e\u722c\u6811 | \u5e03\u83b1\u5e0c\u7279.m4a'
+	你不快乐的每一天都不是你的 | 佩索阿 http://audio.xmcdn.com/group8/M00/73/87/wKgDYFX76WXTF6NQAAWlulKOLX8161.m4a http://audio.xmcdn.com/group8/M00/73/C6/wKgDYVX76PfSH_urAA7FlvATrKc011.m4a 0
+track_title: <type 'unicode'> 你不快乐的每一天都不是你的 | 佩索阿
+	E:\xmly\给孩子的诗\150918 你不快乐的每一天都不是你的 | 佩索阿.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150918 \u4f60\u4e0d\u5feb\u4e50\u7684\u6bcf\u4e00\u5929\u90fd\u4e0d\u662f\u4f60\u7684 | \u4f69\u7d22\u963f.m4a'
+	【平安夜完本】 面朝大海 春暖花开| 海子 http://audio.xmcdn.com/group16/M06/D4/A5/wKgDalZ75u-h2hpAAAxb9WEGShQ565.m4a http://audio.xmcdn.com/group16/M06/D4/A5/wKgDalZ75vDh89Y_ACBbjIJdcds067.m4a 0
+track_title: <type 'unicode'> 【平安夜完本】 面朝大海 春暖花开| 海子
+	E:\xmly\给孩子的诗\151224 【平安夜完本】 面朝大海 春暖花开| 海子.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151224 \u3010\u5e73\u5b89\u591c\u5b8c\u672c\u3011 \u9762\u671d\u5927\u6d77 \u6625\u6696\u82b1\u5f00| \u6d77\u5b50.m4a'
+	火 | 阿莱克桑德雷 http://audio.xmcdn.com/group13/M0A/7B/91/wKgDXVYLuJOgvau9AAYf79VKFlM703.m4a http://audio.xmcdn.com/group13/M0A/7B/91/wKgDXVYLuJXh3l-2ABAFXZeLN2M203.m4a 0
+track_title: <type 'unicode'> 火 | 阿莱克桑德雷
+	E:\xmly\给孩子的诗\150930 火 | 阿莱克桑德雷.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150930 \u706b | \u963f\u83b1\u514b\u6851\u5fb7\u96f7.m4a'
+	我不知道 | 希梅内斯 http://audio.xmcdn.com/group15/M07/72/1E/wKgDaFX5PxGgIaCaAAYtH7KhLmY663.m4a http://audio.xmcdn.com/group15/M07/72/1E/wKgDaFX5PxLgW1WlABAokpKWDSg065.m4a 0
+track_title: <type 'unicode'> 我不知道 | 希梅内斯
+	E:\xmly\给孩子的诗\150916 我不知道 | 希梅内斯.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150916 \u6211\u4e0d\u77e5\u9053 | \u5e0c\u6885\u5185\u65af.m4a'
+	未走之路 | 弗洛斯特（美） http://audio.xmcdn.com/group15/M0A/6E/64/wKgDaFXxTWDy4zl-AAfKSXRJueg507.m4a http://audio.xmcdn.com/group15/M0A/6E/64/wKgDaFXxTWHQ9V39ABRjL2R6Alk406.m4a 0
+track_title: <type 'unicode'> 未走之路 | 弗洛斯特（美）
+	E:\xmly\给孩子的诗\150910 未走之路 | 弗洛斯特（美）.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150910 \u672a\u8d70\u4e4b\u8def | \u5f17\u6d1b\u65af\u7279\uff08\u7f8e\uff09.m4a'
+	【给孩子的诗】 诺德布兰德 | 回家 http://audio.xmcdn.com/group8/M0A/9B/6D/wKgDYFZEfjqR-fJoAAY5_1C8AK4837.m4a http://audio.xmcdn.com/group8/M0A/9B/6D/wKgDYFZEfjqTWzpTABBKX255KTs481.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗】 诺德布兰德 | 回家
+	E:\xmly\给孩子的诗\151112 【给孩子的诗】 诺德布兰德 | 回家.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151112 \u3010\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011 \u8bfa\u5fb7\u5e03\u5170\u5fb7 | \u56de\u5bb6.m4a'
+	北岛翻译索德格朗 | 星 星 http://audio2.xmcdn.com/group11/M08/68/C5/wKgDa1X_5mTS2Tm6AAXoBK0aSlo403.m4a http://audio2.xmcdn.com/group11/M08/81/AB/wKgDbVX_5mWh6FfnAA9yrUIlyTA295.m4a 0
+track_title: <type 'unicode'> 北岛翻译索德格朗 | 星 星
+	E:\xmly\给孩子的诗\150921 北岛翻译索德格朗 | 星 星.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150921 \u5317\u5c9b\u7ffb\u8bd1\u7d22\u5fb7\u683c\u6717 | \u661f \u661f.m4a'
+	给孩子的诗 | 帆 莱蒙托夫（俄） http://audio.xmcdn.com/group8/M09/68/71/wKgDYVXkM7Si31jVAAYUfaWcxew495.m4a http://audio.xmcdn.com/group8/M09/68/71/wKgDYVXkM7TjulziAA_oB7P_WU4002.m4a 0
+track_title: <type 'unicode'> 给孩子的诗 | 帆 莱蒙托夫（俄）
+	E:\xmly\给孩子的诗\150831 给孩子的诗 | 帆 莱蒙托夫（俄）.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150831 \u7ed9\u5b69\u5b50\u7684\u8bd7 | \u5e06 \u83b1\u8499\u6258\u592b\uff08\u4fc4\uff09.m4a'
+	《孩子们的歌》| R.S.托马斯 http://audio.xmcdn.com/group11/M00/79/03/wKgDa1Yg07CT2AmjAAZ-TMT5okI719.m4a http://audio.xmcdn.com/group11/M00/91/EE/wKgDbVYg07LCmKCIABD9VDG4SKg298.m4a 0
+track_title: <type 'unicode'> 《孩子们的歌》| R.S.托马斯
+	E:\xmly\给孩子的诗\151016 《孩子们的歌》| R.S.托马斯.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151016 \u300a\u5b69\u5b50\u4eec\u7684\u6b4c\u300b| R.S.\u6258\u9a6c\u65af.m4a'
+	【北岛给孩子的诗】城市风景 | 也斯 http://audio.xmcdn.com/group9/M05/B6/B4/wKgDZlZdkvbgNM47AAlTTmB485o155.m4a http://audio.xmcdn.com/group9/M05/B6/B4/wKgDZlZdkvfiNKiYABho75i0Txo673.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】城市风景 | 也斯
+	E:\xmly\给孩子的诗\151201 【北岛给孩子的诗】城市风景 | 也斯.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151201 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u57ce\u5e02\u98ce\u666f | \u4e5f\u65af.m4a'
+	给孩子的诗 | 至大自然 荷尔德林（德） http://audio.xmcdn.com/group10/M04/64/72/wKgDaVXdhzLQ9I8LAAX6LV3GQtU762.m4a http://audio.xmcdn.com/group10/M04/64/72/wKgDaVXdhzPxydRzAA-jFknzE6I981.m4a 0
+track_title: <type 'unicode'> 给孩子的诗 | 至大自然 荷尔德林（德）
+	E:\xmly\给孩子的诗\150826 给孩子的诗 | 至大自然 荷尔德林（德）.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150826 \u7ed9\u5b69\u5b50\u7684\u8bd7 | \u81f3\u5927\u81ea\u7136 \u8377\u5c14\u5fb7\u6797\uff08\u5fb7\uff09.m4a'
+	茨维塔耶娃 | 我的大都市里一片黑夜 http://audio.xmcdn.com/group15/M0A/76/78/wKgDZVYCclSTEITdAA0QEWr0FTw981.m4a http://audio.xmcdn.com/group15/M0A/76/78/wKgDZVYCclaytFDTACIz4Fh5bkc795.m4a 0
+track_title: <type 'unicode'> 茨维塔耶娃 | 我的大都市里一片黑夜
+	E:\xmly\给孩子的诗\150923 茨维塔耶娃 | 我的大都市里一片黑夜.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150923 \u8328\u7ef4\u5854\u8036\u5a03 | \u6211\u7684\u5927\u90fd\u5e02\u91cc\u4e00\u7247\u9ed1\u591c.m4a'
+	狄金森 | 如果记住就是忘却 http://audio.xmcdn.com/group10/M05/6B/51/wKgDaVXsIf6jdLJYAAXYr0WuMQ8078.m4a http://audio.xmcdn.com/group10/M05/6B/51/wKgDaVXsIgDyjNlhAA9LEgwrPdM997.m4a 0
+track_title: <type 'unicode'> 狄金森 | 如果记住就是忘却
+	E:\xmly\给孩子的诗\150906 狄金森 | 如果记住就是忘却.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150906 \u72c4\u91d1\u68ee | \u5982\u679c\u8bb0\u4f4f\u5c31\u662f\u5fd8\u5374.m4a'
+	《公园里》| 普列维尔的［法］ http://audio.xmcdn.com/group12/M01/7D/B1/wKgDW1YSUfnwFlkWAAcratJ5wig746.m4a http://audio.xmcdn.com/group12/M01/7D/AC/wKgDXFYSUfrg2Yd6ABLCmImOLL4672.m4a 0
+track_title: <type 'unicode'> 《公园里》| 普列维尔的［法］
+	E:\xmly\给孩子的诗\151005 《公园里》| 普列维尔的［法］.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151005 \u300a\u516c\u56ed\u91cc\u300b| \u666e\u5217\u7ef4\u5c14\u7684\uff3b\u6cd5\uff3d.m4a'
+	《老虎的金黄》 | 博尔赫斯 http://audio.xmcdn.com/group11/M0A/8B/1D/wKgDbVYTjUjiMmnBAAiJ_RCv9UQ620.m4a http://audio.xmcdn.com/group9/M08/7E/B6/wKgDZlYTjQGiCcHFABZY28DzuNA680.m4a 0
+track_title: <type 'unicode'> 《老虎的金黄》 | 博尔赫斯
+	E:\xmly\给孩子的诗\151006 《老虎的金黄》 | 博尔赫斯.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151006 \u300a\u8001\u864e\u7684\u91d1\u9ec4\u300b | \u535a\u5c14\u8d6b\u65af.m4a'
+	【北岛给孩子的诗】乡愁 | 余光中 http://audio.xmcdn.com/group11/M05/9D/5F/wKgDa1ZVv4ixjJw6AA1T0QdCe2U582.m4a http://audio.xmcdn.com/group8/M02/AA/87/wKgDYVZVuy3jLjpgACLlX0IZ4h0423.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】乡愁 | 余光中
+	E:\xmly\给孩子的诗\151125 【北岛给孩子的诗】乡愁 | 余光中.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151125 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u4e61\u6101 | \u4f59\u5149\u4e2d.m4a'
+	【北岛给孩子的诗】还给我 | 严 力 http://audio.xmcdn.com/group10/M06/C0/90/wKgDZ1ZlTHTiOIupAA5t-rLautY440.m4a http://audio.xmcdn.com/group10/M06/C0/90/wKgDZ1ZlTHbyvNwbACXIrcc1FYY940.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】还给我 | 严 力
+	E:\xmly\给孩子的诗\151207 【北岛给孩子的诗】还给我 | 严 力.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151207 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u8fd8\u7ed9\u6211 | \u4e25 \u529b.m4a'
+	给孩子的诗 | 星星们高挂空中 海涅（德） http://audio.xmcdn.com/group9/M09/65/C2/wKgDZlXe9q3CjruNAAPokFEAqfU061.m4a http://audio.xmcdn.com/group9/M09/65/C3/wKgDZlXe9q2ALV_KAAo3bAz7Wkg034.m4a 0
+track_title: <type 'unicode'> 给孩子的诗 | 星星们高挂空中 海涅（德）
+	E:\xmly\给孩子的诗\150827 给孩子的诗 | 星星们高挂空中 海涅（德）.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150827 \u7ed9\u5b69\u5b50\u7684\u8bd7 | \u661f\u661f\u4eec\u9ad8\u6302\u7a7a\u4e2d \u6d77\u6d85\uff08\u5fb7\uff09.m4a'
+	【北岛给孩子的诗】这是四点零八分的北京 | 食指 http://audio.xmcdn.com/group15/M07/AC/6A/wKgDaFZa_enQf_YoAAv-fADYMZA450.m4a http://audio.xmcdn.com/group15/M07/AC/3D/wKgDZVZa_erjSbADAB9mhFYM1y0329.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】这是四点零八分的北京 | 食指
+	E:\xmly\给孩子的诗\151129 【北岛给孩子的诗】这是四点零八分的北京 | 食指.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151129 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u8fd9\u662f\u56db\u70b9\u96f6\u516b\u5206\u7684\u5317\u4eac | \u98df\u6307.m4a'
+	【读诗】镜 中 | 张枣 http://audio.xmcdn.com/group14/M07/D2/6C/wKgDY1Z32OCiZH9kAApEChKYeg0239.m4a http://audio.xmcdn.com/group14/M07/D2/3C/wKgDZFZ32OLzHZouABrfsNfxHjI857.m4a 0
+track_title: <type 'unicode'> 【读诗】镜 中 | 张枣
+	E:\xmly\给孩子的诗\151221 【读诗】镜 中 | 张枣.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151221 \u3010\u8bfb\u8bd7\u3011\u955c \u4e2d\xa0| \u5f20\u67a3.m4a'
+	给你最向往的 “自 由” | ​保尔·艾吕雅 http://audio.xmcdn.com/group13/M0B/7A/23/wKgDXlYJIkDT96L6ABhASCJX12I630.m4a http://audio.xmcdn.com/group13/M0B/7A/41/wKgDXVYJIkKQqOcmAD-EaQEoiec791.m4a 0
+track_title: <type 'unicode'> 给你最向往的 “自 由” | ​保尔·艾吕雅
+	E:\xmly\给孩子的诗\150928 给你最向往的 “自 由” | ​保尔·艾吕雅.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150928 \u7ed9\u4f60\u6700\u5411\u5f80\u7684 \u201c\u81ea \u7531\u201d | \u200b\u4fdd\u5c14\xb7\u827e\u5415\u96c5.m4a'
+	【北岛给孩子的诗】在你出发的时候 | 食指 http://audio.xmcdn.com/group10/M01/A6/93/wKgDZ1ZZzJrAFjt4AAgJj7WxgQg811.m4a http://audio.xmcdn.com/group10/M01/A9/C4/wKgDaVZZzJuypSWCABUI8imOkfY137.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】在你出发的时候 | 食指
+	E:\xmly\给孩子的诗\151128 【北岛给孩子的诗】在你出发的时候 | 食指.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151128 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u5728\u4f60\u51fa\u53d1\u7684\u65f6\u5019 | \u98df\u6307.m4a'
+	已经过了一点 | 马雅可夫斯基 http://audio.xmcdn.com/group9/M03/78/7E/wKgDZlYGg8GybajfAAsLVRFEtMI043.m4a http://audio.xmcdn.com/group9/M03/78/7E/wKgDZlYGg8PxRna-ABzp5PI7104688.m4a 0
+track_title: <type 'unicode'> 已经过了一点 | 马雅可夫斯基
+	E:\xmly\给孩子的诗\150926 已经过了一点 | 马雅可夫斯基.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150926 \u5df2\u7ecf\u8fc7\u4e86\u4e00\u70b9 | \u9a6c\u96c5\u53ef\u592b\u65af\u57fa.m4a'
+	【北岛编给孩子的诗】纪弦 | 你的名字 http://audio.xmcdn.com/group14/M06/A0/51/wKgDZFZLNUvzEEfTAAkUCLfobEQ295.m4a http://audio.xmcdn.com/group15/M0B/9F/CF/wKgDaFZLNOjyYExoABfDLPj-0wM847.m4a 0
+track_title: <type 'unicode'> 【北岛编给孩子的诗】纪弦 | 你的名字
+	E:\xmly\给孩子的诗\151117 【北岛编给孩子的诗】纪弦 | 你的名字.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151117 \u3010\u5317\u5c9b\u7f16\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u7eaa\u5f26 | \u4f60\u7684\u540d\u5b57.m4a'
+	【北岛编给孩子的诗】冯至 | 深夜又是深山 http://audio.xmcdn.com/group10/M03/9D/DF/wKgDZ1ZIdfKSCYByAAhpSLEtGqs840.m4a http://audio.xmcdn.com/group10/M03/9D/DF/wKgDZ1ZIdfLCb9qiABYDx0Ro4mw375.m4a 0
+track_title: <type 'unicode'> 【北岛编给孩子的诗】冯至 | 深夜又是深山
+	E:\xmly\给孩子的诗\151115 【北岛编给孩子的诗】冯至 | 深夜又是深山.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151115 \u3010\u5317\u5c9b\u7f16\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u51af\u81f3 | \u6df1\u591c\u53c8\u662f\u6df1\u5c71.m4a'
+	【给孩子读诗】雪 | 艾基 http://audio.xmcdn.com/group11/M04/A0/51/wKgDbVY58oCAJQbNAAhg4pOltiQ144.m4a http://audio.xmcdn.com/group13/M03/94/71/wKgDXlY58iOCh8WiABXtxndYQ44188.m4a 0
+track_title: <type 'unicode'> 【给孩子读诗】雪 | 艾基
+	E:\xmly\给孩子的诗\151104 【给孩子读诗】雪 | 艾基.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151104 \u3010\u7ed9\u5b69\u5b50\u8bfb\u8bd7\u3011\u96ea | \u827e\u57fa.m4a'
+	【给孩子的诗】 《夏夜》节选 | 博纳富瓦 http://audio.xmcdn.com/group10/M08/89/44/wKgDZ1YnsiKAGfPjAAR6HzaL6Z4932.m4a http://audio.xmcdn.com/group10/M08/89/45/wKgDZ1YnsiKC75PXAAu0zy7dm6M740.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗】 《夏夜》节选 | 博纳富瓦
+	E:\xmly\给孩子的诗\151021 【给孩子的诗】 《夏夜》节选 | 博纳富瓦.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151021 \u3010\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011 \u300a\u590f\u591c\u300b\u8282\u9009 | \u535a\u7eb3\u5bcc\u74e6.m4a'
+	《我不再认识黑夜》| 艾利蒂斯 http://audio.xmcdn.com/group8/M09/84/76/wKgDYFYeJI7DHDleAAekN3QEta8490.m4a http://audio.xmcdn.com/group8/M09/84/76/wKgDYFYeJI_zlY-MABP_cNI8gUo156.m4a 0
+track_title: <type 'unicode'> 《我不再认识黑夜》| 艾利蒂斯
+	E:\xmly\给孩子的诗\151014 《我不再认识黑夜》| 艾利蒂斯.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151014 \u300a\u6211\u4e0d\u518d\u8ba4\u8bc6\u9ed1\u591c\u300b| \u827e\u5229\u8482\u65af.m4a'
+	《积雪》 | 金子美铃 http://audio.xmcdn.com/group9/M03/80/6E/wKgDYlYXjrrBkRWBAAP1cZp1xHM352.m4a http://audio.xmcdn.com/group9/M03/80/6E/wKgDYlYXjrvQ_9Y4AApZKT-JPlA843.m4a 0
+track_title: <type 'unicode'> 《积雪》 | 金子美铃
+	E:\xmly\给孩子的诗\151009 《积雪》 | 金子美铃.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151009 \u300a\u79ef\u96ea\u300b | \u91d1\u5b50\u7f8e\u94c3.m4a'
+	给孩子的诗 | 老虎 http://audio.xmcdn.com/group8/M08/63/DB/wKgDYFXa51-zu67NAAlyFqI5pfk687.m4a http://audio.xmcdn.com/group8/M08/64/19/wKgDYVXa5wbB5U4zABi5m61HMMM845.m4a 0
+track_title: <type 'unicode'> 给孩子的诗 | 老虎
+	E:\xmly\给孩子的诗\150824 给孩子的诗 | 老虎.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150824 \u7ed9\u5b69\u5b50\u7684\u8bd7 | \u8001\u864e.m4a'
+	【北岛给孩子的诗75】波浪 | 蔡其矫 http://audio.xmcdn.com/group13/M05/A5/F8/wKgDXlZPKsXR6CRfAAuCZ-I6TJQ108.m4a http://audio.xmcdn.com/group9/M0B/A5/82/wKgDYlZPKi6Ccn9WAB4g37DLYRI562.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗75】波浪 | 蔡其矫
+	E:\xmly\给孩子的诗\151120 【北岛给孩子的诗75】波浪 | 蔡其矫.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151120 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd775\u3011\u6ce2\u6d6a | \u8521\u5176\u77eb.m4a'
+	给孩子的诗 | 往昔的时光 彭斯_苏格兰 http://audio.xmcdn.com/group12/M09/63/FD/wKgDW1XcNczCZ2IBAAhX7ejl5D8934.m4a http://audio.xmcdn.com/group12/M09/63/F7/wKgDXFXcNanwp5T2ABXWTf2_5H0485.m4a 0
+track_title: <type 'unicode'> 给孩子的诗 | 往昔的时光 彭斯_苏格兰
+	E:\xmly\给孩子的诗\150825 给孩子的诗 | 往昔的时光 彭斯_苏格兰.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150825 \u7ed9\u5b69\u5b50\u7684\u8bd7 | \u5f80\u6614\u7684\u65f6\u5149 \u5f6d\u65af_\u82cf\u683c\u5170.m4a'
+	叶芝| 当你老了 http://audio.xmcdn.com/group10/M04/6C/97/wKgDZ1XuuLyB_bSIAAeZwKEMRJ0278.m4a http://audio.xmcdn.com/group10/M0B/6C/9D/wKgDaVXuuO3SrSQqABPjkYHQ7Po306.m4a 0
+track_title: <type 'unicode'> 叶芝| 当你老了
+	E:\xmly\给孩子的诗\150908 叶芝| 当你老了.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150908 \u53f6\u829d| \u5f53\u4f60\u8001\u4e86.m4a'
+	《如果白昼落进...》 | 聂鲁达 http://audio.xmcdn.com/group10/M0A/81/FA/wKgDaVYaPK7DViHAAALxSNhjles763.m4a http://audio.xmcdn.com/group10/M0A/81/FA/wKgDaVYaPK_T9EtNAAetmboj31s366.m4a 0
+track_title: <type 'unicode'> 《如果白昼落进...》 | 聂鲁达
+	E:\xmly\给孩子的诗\151011 《如果白昼落进...》 | 聂鲁达.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151011 \u300a\u5982\u679c\u767d\u663c\u843d\u8fdb...\u300b | \u8042\u9c81\u8fbe.m4a'
+	【北岛给孩子的诗】你好，哀愁 | 依群 http://audio.xmcdn.com/group14/M06/B0/B8/wKgDY1ZcclDR4x8yAAamNLRigFI523.m4a http://audio.xmcdn.com/group7/M03/B0/55/wKgDX1Zca8Hx53uHABFlewughIQ431.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】你好，哀愁 | 依群
+	E:\xmly\给孩子的诗\151130 【北岛给孩子的诗】你好，哀愁 | 依群.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151130 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u4f60\u597d\uff0c\u54c0\u6101 | \u4f9d\u7fa4.m4a'
+	【北岛编给孩子的诗】音尘 | 卞之琳 http://audio.xmcdn.com/group11/M02/92/18/wKgDa1ZJ1lmSuv_DAAfbpPEz6Us879.m4a http://audio.xmcdn.com/group11/M03/AB/08/wKgDbVZJ1lrBnWXiABSQqIuwYjo737.m4a 0
+track_title: <type 'unicode'> 【北岛编给孩子的诗】音尘 | 卞之琳
+	E:\xmly\给孩子的诗\151116 【北岛编给孩子的诗】音尘 | 卞之琳.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151116 \u3010\u5317\u5c9b\u7f16\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u97f3\u5c18 | \u535e\u4e4b\u7433.m4a'
+	英国圆号 | 埃乌杰尼奥·蒙塔莱 http://audio.xmcdn.com/group16/M09/7A/87/wKgDalYKXi_hk_8nAAgqp6K7bNg653.m4a http://audio.xmcdn.com/group16/M09/7A/92/wKgDbFYKXjHx4mTnABVffFLfjr4939.m4a 0
+track_title: <type 'unicode'> 英国圆号 | 埃乌杰尼奥·蒙塔莱
+	E:\xmly\给孩子的诗\150929 英国圆号 | 埃乌杰尼奥·蒙塔莱.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150929 \u82f1\u56fd\u5706\u53f7 | \u57c3\u4e4c\u6770\u5c3c\u5965\xb7\u8499\u5854\u83b1.m4a'
+	【北岛给孩子的诗】一 束 | 北岛 http://audio.xmcdn.com/group11/M07/AD/4B/wKgDa1ZfCY3Rj7i_ABD9nsnx4qk901.m4a http://audio.xmcdn.com/group14/M09/BB/5D/wKgDY1ZfB7XiyWKXACx-YtPravg742.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】一 束 | 北岛
+	E:\xmly\给孩子的诗\151202 【北岛给孩子的诗】一 束 | 北岛.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151202 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u4e00 \u675f | \u5317\u5c9b.m4a'
+	【北岛给孩子的诗】我是风 | 芒克 http://audio.xmcdn.com/group8/M06/BC/DE/wKgDYFZgT-jwJ9zCAA6CImPbga8401.m4a http://audio.xmcdn.com/group7/M08/BD/C6/wKgDWlZgTy-xp77wACX9e6z5gvU545.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】我是风 | 芒克
+	E:\xmly\给孩子的诗\151203 【北岛给孩子的诗】我是风 | 芒克.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151203 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u6211\u662f\u98ce | \u8292\u514b.m4a'
+	寂 静 | 欧阳江河 http://audio.xmcdn.com/group7/M01/D0/5B/wKgDX1Zz-J2Ck1EWAAs8nMB4tNA693.m4a http://audio.xmcdn.com/group15/M06/CE/0B/wKgDZVZz8_TzEIT4AB1q-q4jY7c598.m4a 0
+track_title: <type 'unicode'> 寂 静 | 欧阳江河
+	E:\xmly\给孩子的诗\151218 寂 静 | 欧阳江河.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151218 \u5bc2 \u9759\xa0| \u6b27\u9633\u6c5f\u6cb3.m4a'
+	《看见的，看不见的》 | 夸西莫多［意大利］ http://audio.xmcdn.com/group16/M06/7F/A0/wKgDalYU7j3SnoSKAAbMrSs93x0171.m4a http://audio.xmcdn.com/group16/M06/7F/A0/wKgDalYU7j6j6NAgABHKsb3ViiI506.m4a 0
+track_title: <type 'unicode'> 《看见的，看不见的》 | 夸西莫多［意大利］
+	E:\xmly\给孩子的诗\151007 《看见的，看不见的》 | 夸西莫多［意大利］.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151007 \u300a\u770b\u89c1\u7684\uff0c\u770b\u4e0d\u89c1\u7684\u300b | \u5938\u897f\u83ab\u591a\uff3b\u610f\u5927\u5229\uff3d.m4a'
+	【北岛给孩子的诗】根 | 牛汉 http://audio.xmcdn.com/group8/M03/A8/D8/wKgDYVZTHbLgOs6_AAd5ognt_zM060.m4a http://audio.xmcdn.com/group13/M09/A9/13/wKgDXVZTHOrAR1HAABOOfg0BioI830.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】根 | 牛汉
+	E:\xmly\给孩子的诗\151123 【北岛给孩子的诗】根 | 牛汉.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151123 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u6839 | \u725b\u6c49.m4a'
+	给孩子的诗 | 当一切入睡 雨果 http://audio.xmcdn.com/group15/M01/67/7B/wKgDaFXiz4mhiBr-AAimTfCc8kU051.m4a http://audio.xmcdn.com/group15/M01/67/7B/wKgDaFXiz4qCL2K_ABajqsRAl_M756.m4a 0
+track_title: <type 'unicode'> 给孩子的诗 | 当一切入睡 雨果
+	E:\xmly\给孩子的诗\150830 给孩子的诗 | 当一切入睡 雨果.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150830 \u7ed9\u5b69\u5b50\u7684\u8bd7 | \u5f53\u4e00\u5207\u5165\u7761 \u96e8\u679c.m4a'
+	黄昏 | 索德格朗 http://audio.xmcdn.com/group8/M08/76/D0/wKgDYVYCNrej4P4SAAVwdNM0RIE460.m4a http://audio.xmcdn.com/group8/M08/76/D0/wKgDYVYCNrmhIzw9AA46PFXvfQg307.m4a 0
+track_title: <type 'unicode'> 黄昏 | 索德格朗
+	E:\xmly\给孩子的诗\150923 黄昏 | 索德格朗.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150923 \u9ec4\u660f | \u7d22\u5fb7\u683c\u6717.m4a'
+	【北岛给孩子的诗74】欢乐 | 何其芳 http://audio.xmcdn.com/group9/M0A/A0/FA/wKgDYlZMnHWT7nvpAAonfMLQ6ik767.m4a http://audio.xmcdn.com/group9/M0A/A1/24/wKgDZlZMnHaz6ta2ABqU4D2KqNU835.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗74】欢乐 | 何其芳
+	E:\xmly\给孩子的诗\151118 【北岛给孩子的诗74】欢乐 | 何其芳.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151118 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd774\u3011\u6b22\u4e50 | \u4f55\u5176\u82b3.m4a'
+	米拉波桥 | 阿波利奈尔 http://audio.xmcdn.com/group10/M0A/71/1E/wKgDaVX4P8DzBGOAAApNiywFWnM751.m4a http://audio.xmcdn.com/group10/M0A/71/1E/wKgDaVX4P8HgVQBPABr4n99dbs0855.m4a 0
+track_title: <type 'unicode'> 米拉波桥 | 阿波利奈尔
+	E:\xmly\给孩子的诗\150915 米拉波桥 | 阿波利奈尔.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150915 \u7c73\u62c9\u6ce2\u6865 | \u963f\u6ce2\u5229\u5948\u5c14.m4a'
+	逝去的恋歌 | 巴列霍 http://audio.xmcdn.com/group11/M06/81/0F/wKgDbVX-gTnhSWUUAApAq4zV-Oc012.m4a http://audio.xmcdn.com/group11/M06/81/0F/wKgDbVX-gTuDNis_ABrW4tZojHI740.m4a 0
+track_title: <type 'unicode'> 逝去的恋歌 | 巴列霍
+	E:\xmly\给孩子的诗\150920 逝去的恋歌 | 巴列霍.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150920 \u901d\u53bb\u7684\u604b\u6b4c | \u5df4\u5217\u970d.m4a'
+	【给孩子的诗】哈特 | 未来的历史 http://audio.xmcdn.com/group16/M05/9C/55/wKgDalZF3O3iSw8hAAe0gmls5dE882.m4a http://audio.xmcdn.com/group16/M05/9C/55/wKgDalZF3O7zBCEeABQoggBGI94081.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗】哈特 | 未来的历史
+	E:\xmly\给孩子的诗\151113 【给孩子的诗】哈特 | 未来的历史.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151113 \u3010\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u54c8\u7279 | \u672a\u6765\u7684\u5386\u53f2.m4a'
+	【读诗】饮 水 | 西川 http://audio.xmcdn.com/group12/M05/D3/EE/wKgDXFZ6pAaiVTACAA0DMz3u5PU519.m4a http://audio.xmcdn.com/group12/M05/D3/EE/wKgDXFZ6o_mSnugrACISJNkv9Xs249.m4a 0
+track_title: <type 'unicode'> 【读诗】饮 水 | 西川
+	E:\xmly\给孩子的诗\151223 【读诗】饮 水 | 西川.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151223 \u3010\u8bfb\u8bd7\u3011\u996e \u6c34\xa0| \u897f\u5ddd.m4a'
+	【中国诗第一篇】废名 | 十二月十九夜 http://audio.xmcdn.com/group15/M04/9C/E2/wKgDZVZHLrTzaBqiAAgLtX5zRls658.m4a http://audio.xmcdn.com/group15/M04/9C/E3/wKgDZVZHLrbTPxL6ABUNVxlK4gA380.m4a 0
+track_title: <type 'unicode'> 【中国诗第一篇】废名 | 十二月十九夜
+	E:\xmly\给孩子的诗\151114 【中国诗第一篇】废名 | 十二月十九夜.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151114 \u3010\u4e2d\u56fd\u8bd7\u7b2c\u4e00\u7bc7\u3011\u5e9f\u540d | \u5341\u4e8c\u6708\u5341\u4e5d\u591c.m4a'
+	《雨燕》| 勒内·夏尔 http://audio.xmcdn.com/group9/M0A/83/8F/wKgDYlYdKPGzoJu-AAa60PzLNCI962.m4a http://audio.xmcdn.com/group9/M0A/83/8F/wKgDYlYdKPOS4kuKABGbwLNEkow022.m4a 0
+track_title: <type 'unicode'> 《雨燕》| 勒内·夏尔
+	E:\xmly\给孩子的诗\151013 《雨燕》| 勒内·夏尔.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151013 \u300a\u96e8\u71d5\u300b| \u52d2\u5185\xb7\u590f\u5c14.m4a'
+	秋日 | 里尔克 http://audio2.xmcdn.com/group9/M0A/6F/9C/wKgDZlX0CCGx-w1eAAX9nkz-8aI281.m4a http://audio2.xmcdn.com/group9/M0A/6F/9C/wKgDZlX0CCKz7E02AA-r42Bw7bE035.m4a 0
+track_title: <type 'unicode'> 秋日 | 里尔克
+	E:\xmly\给孩子的诗\150912 秋日 | 里尔克.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150912 \u79cb\u65e5 | \u91cc\u5c14\u514b.m4a'
+	【经典】我愿意是急流 | 裴多菲 http://audio.xmcdn.com/group9/M0A/68/B0/wKgDZlXlepiSw0RWAAuF8Oah0Os267.m4a http://audio.xmcdn.com/group9/M0A/68/86/wKgDYlXleoaj9zGyAB4rIp068CU978.m4a 0
+track_title: <type 'unicode'> 【经典】我愿意是急流 | 裴多菲
+	E:\xmly\给孩子的诗\150901 【经典】我愿意是急流 | 裴多菲.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150901 \u3010\u7ecf\u5178\u3011\u6211\u613f\u610f\u662f\u6025\u6d41 | \u88f4\u591a\u83f2.m4a'
+	【北岛给孩子的诗】周梦蝶 | 九行 http://audio.xmcdn.com/group16/M07/A7/6D/wKgDalZRt5_xmaC4AAg_gjH3YM8517.m4a http://audio.xmcdn.com/group16/M07/A7/62/wKgDbFZRt5-wSjjEABWVxO_dB-M160.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】周梦蝶 | 九行
+	E:\xmly\给孩子的诗\151122 【北岛给孩子的诗】周梦蝶 | 九行.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151122 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u5468\u68a6\u8776 | \u4e5d\u884c.m4a'
+	严重的时刻 | 里尔克 http://audio.xmcdn.com/group15/M07/70/22/wKgDZVX1UC3z-ECMAAUu9FMYzJs663.m4a http://audio.xmcdn.com/group15/M07/70/23/wKgDZVX1UDCDt9BsAA2OnMaRaeg214.m4a 0
+track_title: <type 'unicode'> 严重的时刻 | 里尔克
+	E:\xmly\给孩子的诗\150913 严重的时刻 | 里尔克.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150913 \u4e25\u91cd\u7684\u65f6\u523b | \u91cc\u5c14\u514b.m4a'
+
+
+ -------- Convert m4a to mp3 start   ----------- 
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+Enter a zhubo, album or sound url:
+Enter a zhubo, album or sound url:
+Enter a zhubo, album or sound url:http://www.ximalaya.com/12512006/album/2894105/
+Album in database  12512006 /album/ 2894105
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/12512006/album/2894105/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 100 	 update_time: 2015-12-17
+	 Value in Web -- sound_count: 100 	 update_time: 2015-12-17
+NO NEED for update.
+
+	 this album has  100 tracks.
+
+	 this album has  -1 tracks doesn't download.
+Start download track...
+	【读诗】年 终 | 陆忆敏 http://audio.xmcdn.com/group13/M00/D1/38/wKgDXlZ2wtDS3OwRAAgCSDH36vo672.m4a http://audio.xmcdn.com/group9/M04/D1/20/wKgDYlZ2tEXRuNDCABT14CyGE44273.m4a 0
+track_title: <type 'unicode'> 【读诗】年 终 | 陆忆敏
+	E:\xmly\给孩子的诗\151220 【读诗】年 终 | 陆忆敏.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151220 \u3010\u8bfb\u8bd7\u3011\u5e74 \u7ec8 | \u9646\u5fc6\u654f.m4a'
+	顾城 | 我是一个任性的孩子 http://audio.xmcdn.com/group11/M06/C0/66/wKgDa1ZyrPOAMQLYABZmq777DHA845.m4a http://audio.xmcdn.com/group15/M03/CC/EA/wKgDZVZyog2iyND5ADqrcKWgA-M578.m4a 0
+track_title: <type 'unicode'> 顾城 | 我是一个任性的孩子
+	E:\xmly\给孩子的诗\151217 顾城 | 我是一个任性的孩子.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151217 \u987e\u57ce\xa0| \u6211\u662f\u4e00\u4e2a\u4efb\u6027\u7684\u5b69\u5b50.m4a'
+	【北岛给孩子的诗】金黄的稻束 | 郑敏 http://audio.xmcdn.com/group9/M04/A6/E7/wKgDYlZQkSaytYj8AApFcKOL_Oo621.m4a http://audio.xmcdn.com/group16/M0B/A6/CE/wKgDbFZQkELyiZANABrin_fO470872.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】金黄的稻束 | 郑敏
+	E:\xmly\给孩子的诗\151121 【北岛给孩子的诗】金黄的稻束 | 郑敏.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151121 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u91d1\u9ec4\u7684\u7a3b\u675f | \u90d1\u654f.m4a'
+	《吉他》| 洛尔迦 北岛译 http://audio.xmcdn.com/group12/M03/7D/17/wKgDW1YRFR-AWxZxAAga5-nbHaM700.m4a http://audio.xmcdn.com/group12/M03/7D/17/wKgDW1YRFSLwedaKABU2ahj_UMo154.m4a 0
+track_title: <type 'unicode'> 《吉他》| 洛尔迦 北岛译
+	E:\xmly\给孩子的诗\151004 《吉他》| 洛尔迦 北岛译.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151004 \u300a\u5409\u4ed6\u300b| \u6d1b\u5c14\u8fe6 \u5317\u5c9b\u8bd1.m4a'
+	【读诗】一种黑暗 | 韩 东 http://audio.xmcdn.com/group13/M07/D0/3D/wKgDXlZ1YuKA2A_ZAAzH23d8V7k839.m4a http://audio.xmcdn.com/group10/M03/CB/5F/wKgDZ1Z1Yjfy02qZACF2p1pzhHQ080.m4a 0
+track_title: <type 'unicode'> 【读诗】一种黑暗 | 韩 东
+	E:\xmly\给孩子的诗\151219 【读诗】一种黑暗 | 韩 东.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151219 \u3010\u8bfb\u8bd7\u3011\u4e00\u79cd\u9ed1\u6697 | \u97e9 \u4e1c.m4a'
+	林中雪地的寂静中 | 曼德尔施塔姆 http://audio.xmcdn.com/group13/M02/74/6F/wKgDXVX9QknRa0nDAAd3bZ61Tx4414.m4a http://audio.xmcdn.com/group13/M02/74/6F/wKgDXVX9QkrDWALKABOKFtD-ras289.m4a 0
+track_title: <type 'unicode'> 林中雪地的寂静中 | 曼德尔施塔姆
+	E:\xmly\给孩子的诗\150919 林中雪地的寂静中 | 曼德尔施塔姆.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150919 \u6797\u4e2d\u96ea\u5730\u7684\u5bc2\u9759\u4e2d | \u66fc\u5fb7\u5c14\u65bd\u5854\u59c6.m4a'
+	【北岛给孩子的诗】致太阳 | 多多 http://audio.xmcdn.com/group10/M03/BD/5E/wKgDZ1Zi7_TDBcBYAAtdpF-zsk8776.m4a http://audio.xmcdn.com/group10/M03/C0/85/wKgDaVZi7-uzTN0KAB3BhtTJKt8522.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】致太阳 | 多多
+	E:\xmly\给孩子的诗\151205 【北岛给孩子的诗】致太阳 | 多多.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151205 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u81f4\u592a\u9633 | \u591a\u591a.m4a'
+	像这样细细地听 | 茨维塔耶娃 http://audio.xmcdn.com/group9/M04/77/36/wKgDYlYEDm3RmH_ZAAgCA1AwjnI035.m4a http://audio.xmcdn.com/group9/M04/77/36/wKgDYlYEDm_ROiYJABT0Z3BFRxA700.m4a 0
+track_title: <type 'unicode'> 像这样细细地听 | 茨维塔耶娃
+	E:\xmly\给孩子的诗\150924 像这样细细地听 | 茨维塔耶娃.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150924 \u50cf\u8fd9\u6837\u7ec6\u7ec6\u5730\u542c | \u8328\u7ef4\u5854\u8036\u5a03.m4a'
+	【北岛给孩子的诗】一片芳草 | 昌耀 http://audio.xmcdn.com/group15/M01/AB/AD/wKgDZVZYYamR6-cHAAZJIEnTS24672.m4a http://audio.xmcdn.com/group11/M03/B8/2E/wKgDbVZYYUzQlHrQABBx-wqo_0Q148.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】一片芳草 | 昌耀
+	E:\xmly\给孩子的诗\151127 【北岛给孩子的诗】一片芳草 | 昌耀.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151127 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u4e00\u7247\u82b3\u8349 | \u660c\u8000.m4a'
+	【北岛给孩子的诗75】山和海 | 陈敬容 http://audio.xmcdn.com/group16/M0B/A2/E6/wKgDbFZNw76jD-KkAAofpqs9B6c135.m4a http://audio.xmcdn.com/group16/M0B/A2/E6/wKgDbFZNw7-C70i7ABqAV5FFXxQ660.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗75】山和海 | 陈敬容
+	E:\xmly\给孩子的诗\151119 【北岛给孩子的诗75】山和海 | 陈敬容.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151119 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd775\u3011\u5c71\u548c\u6d77 | \u9648\u656c\u5bb9.m4a'
+	【给孩子的诗】达维什 | 想想别人 http://audio.xmcdn.com/group11/M08/8D/D5/wKgDa1ZDUkCCt6HgAAaYJghnPj8653.m4a http://audio.xmcdn.com/group11/M08/A6/C4/wKgDbVZDUkGCcIiLABE_pQjWU04303.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗】达维什 | 想想别人
+	E:\xmly\给孩子的诗\151111 【给孩子的诗】达维什 | 想想别人.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151111 \u3010\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u8fbe\u7ef4\u4ec0\xa0| \u60f3\u60f3\u522b\u4eba.m4a'
+	给孩子的诗 |《 假如生活欺骗了你》 普希金 http://audio.xmcdn.com/group11/M07/73/50/wKgDbVXhc4-w4bXAAAak2euXSDY689.m4a http://audio.xmcdn.com/group11/M07/5A/64/wKgDa1Xhc_SiXRh2ABFhE7BB-w4710.m4a 0
+track_title: <type 'unicode'> 给孩子的诗 |《 假如生活欺骗了你》 普希金
+	E:\xmly\给孩子的诗\150829 给孩子的诗 |《 假如生活欺骗了你》 普希金.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150829 \u7ed9\u5b69\u5b50\u7684\u8bd7 |\u300a \u5047\u5982\u751f\u6d3b\u6b3a\u9a97\u4e86\u4f60\u300b \u666e\u5e0c\u91d1.m4a'
+	【北岛给孩子的诗】用脚思想 | 商禽 http://audio2.xmcdn.com/group8/M09/AB/57/wKgDYFZXARmjVbasAAnweGvW51s682.m4a http://audio2.xmcdn.com/group13/M04/AB/AF/wKgDXVZW_yTxmNBaABoDqP_V4TE520.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】用脚思想 | 商禽
+	E:\xmly\给孩子的诗\151126 【北岛给孩子的诗】用脚思想 | 商禽.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151126 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u7528\u811a\u601d\u60f3\xa0| \u5546\u79bd.m4a'
+	【读诗】三 原 色| 车前子 http://audio.xmcdn.com/group10/M07/D1/A0/wKgDaVZ5XXvj5Gq2AAZSpBy8yWY015.m4a http://audio.xmcdn.com/group10/M07/D1/A0/wKgDaVZ5XXvQglnaABCK6_T2Mh0779.m4a 0
+track_title: <type 'unicode'> 【读诗】三 原 色| 车前子
+	E:\xmly\给孩子的诗\151222 【读诗】三 原 色| 车前子.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151222 \u3010\u8bfb\u8bd7\u3011\u4e09 \u539f \u8272| \u8f66\u524d\u5b50.m4a'
+	愿宝贝永远不孤独 | 聂鲁达《孤独》 http://audio.xmcdn.com/group9/M0B/81/6A/wKgDYlYZMVLiFZrFAAkiywsA-0A656.m4a http://audio.xmcdn.com/group9/M0B/81/B7/wKgDZlYZMVWBeV4lABfpT-II1Mw067.m4a 0
+track_title: <type 'unicode'> 愿宝贝永远不孤独 | 聂鲁达《孤独》
+	E:\xmly\给孩子的诗\151010 愿宝贝永远不孤独 | 聂鲁达《孤独》.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151010 \u613f\u5b9d\u8d1d\u6c38\u8fdc\u4e0d\u5b64\u72ec | \u8042\u9c81\u8fbe\u300a\u5b64\u72ec\u300b.m4a'
+	【北岛给孩子的诗】伞 | 痖弦 http://audio.xmcdn.com/group11/M07/B5/95/wKgDbVZUiEaxW63WAAdjv9id5lU957.m4a http://audio.xmcdn.com/group11/M07/9C/A4/wKgDa1ZUiEbws8NuABNVUaC0fvo408.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】伞 | 痖弦
+	E:\xmly\给孩子的诗\151124 【北岛给孩子的诗】伞 | 痖弦.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151124 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u4f1e | \u75d6\u5f26.m4a'
+	给解冻之风 | 弗洛斯特 http://audio.xmcdn.com/group9/M0A/6E/D5/wKgDYlXysxnj7qQ6AAb77lM5Vx0596.m4a http://audio.xmcdn.com/group9/M0A/6E/FE/wKgDZlXyszHDr7OPABJF6IHyOxc374.m4a 0
+track_title: <type 'unicode'> 给解冻之风 | 弗洛斯特
+	E:\xmly\给孩子的诗\150911 给解冻之风 | 弗洛斯特.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150911 \u7ed9\u89e3\u51bb\u4e4b\u98ce | \u5f17\u6d1b\u65af\u7279.m4a'
+	哑孩子 | 洛尔迦 戴望舒译 http://audio.xmcdn.com/group8/M0A/7C/6F/wKgDYFYOTSHBX7DVAAhRoMrj2-w377.m4a http://audio.xmcdn.com/group8/M0A/7C/AC/wKgDYVYOTSLTxO8WABXEXGFGQc0109.m4a 0
+track_title: <type 'unicode'> 哑孩子 | 洛尔迦 戴望舒译
+	E:\xmly\给孩子的诗\151002 哑孩子 | 洛尔迦 戴望舒译.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151002 \u54d1\u5b69\u5b50 | \u6d1b\u5c14\u8fe6 \u6234\u671b\u8212\u8bd1.m4a'
+	叶芝| 柯尔庄园的野天鹅 配五彩呼伦贝尔 http://audio.xmcdn.com/group7/M08/6E/1B/wKgDX1XwEQaTujrOAA4OPEgjSI4395.m4a http://audio.xmcdn.com/group7/M08/6E/1B/wKgDX1XwEQuzgU3WACTN1tZ-zj8210.m4a 0
+track_title: <type 'unicode'> 叶芝| 柯尔庄园的野天鹅 配五彩呼伦贝尔
+	E:\xmly\给孩子的诗\150909 叶芝| 柯尔庄园的野天鹅 配五彩呼伦贝尔.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150909 \u53f6\u829d| \u67ef\u5c14\u5e84\u56ed\u7684\u91ce\u5929\u9e45 \u914d\u4e94\u5f69\u547c\u4f26\u8d1d\u5c14.m4a'
+	雾 | 桑德堡 http://audio.xmcdn.com/group10/M02/70/3E/wKgDaVX2nfHR8_JPAARFXfHuahw079.m4a http://audio.xmcdn.com/group10/M02/70/45/wKgDZ1X2nb_D7GL9AAsoODFFSnA255.m4a 0
+track_title: <type 'unicode'> 雾 | 桑德堡
+	E:\xmly\给孩子的诗\150914 雾 | 桑德堡.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150914 \u96fe | \u6851\u5fb7\u5821.m4a'
+	《饮着科林斯的太阳‘’‘’‘》| 艾利蒂斯 http://audio.xmcdn.com/group12/M06/84/70/wKgDXFYfbgGRJUJDAAg3zGyVVDw145.m4a http://audio.xmcdn.com/group12/M06/84/98/wKgDW1YfbgKyKSG0ABWAYEAdioo635.m4a 0
+track_title: <type 'unicode'> 《饮着科林斯的太阳‘’‘’‘》| 艾利蒂斯
+	E:\xmly\给孩子的诗\151015 《饮着科林斯的太阳‘’‘’‘》| 艾利蒂斯.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151015 \u300a\u996e\u7740\u79d1\u6797\u65af\u7684\u592a\u9633\u2018\u2019\u2018\u2019\u2018\u300b| \u827e\u5229\u8482\u65af.m4a'
+	关于爬树 | 布莱希特 http://audio.xmcdn.com/group10/M04/7B/7C/wKgDaVYNVe-h0TUGAAlm412V4rI117.m4a http://audio.xmcdn.com/group10/M04/7B/7B/wKgDZ1YNVfOBiBQuABicRc2xfrs457.m4a 0
+track_title: <type 'unicode'> 关于爬树 | 布莱希特
+	E:\xmly\给孩子的诗\151001 关于爬树 | 布莱希特.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151001 \u5173\u4e8e\u722c\u6811 | \u5e03\u83b1\u5e0c\u7279.m4a'
+	你不快乐的每一天都不是你的 | 佩索阿 http://audio.xmcdn.com/group8/M00/73/87/wKgDYFX76WXTF6NQAAWlulKOLX8161.m4a http://audio.xmcdn.com/group8/M00/73/C6/wKgDYVX76PfSH_urAA7FlvATrKc011.m4a 0
+track_title: <type 'unicode'> 你不快乐的每一天都不是你的 | 佩索阿
+	E:\xmly\给孩子的诗\150918 你不快乐的每一天都不是你的 | 佩索阿.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150918 \u4f60\u4e0d\u5feb\u4e50\u7684\u6bcf\u4e00\u5929\u90fd\u4e0d\u662f\u4f60\u7684 | \u4f69\u7d22\u963f.m4a'
+	【平安夜完本】 面朝大海 春暖花开| 海子 http://audio.xmcdn.com/group16/M06/D4/A5/wKgDalZ75u-h2hpAAAxb9WEGShQ565.m4a http://audio.xmcdn.com/group16/M06/D4/A5/wKgDalZ75vDh89Y_ACBbjIJdcds067.m4a 0
+track_title: <type 'unicode'> 【平安夜完本】 面朝大海 春暖花开| 海子
+	E:\xmly\给孩子的诗\151224 【平安夜完本】 面朝大海 春暖花开| 海子.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151224 \u3010\u5e73\u5b89\u591c\u5b8c\u672c\u3011 \u9762\u671d\u5927\u6d77 \u6625\u6696\u82b1\u5f00| \u6d77\u5b50.m4a'
+	火 | 阿莱克桑德雷 http://audio.xmcdn.com/group13/M0A/7B/91/wKgDXVYLuJOgvau9AAYf79VKFlM703.m4a http://audio.xmcdn.com/group13/M0A/7B/91/wKgDXVYLuJXh3l-2ABAFXZeLN2M203.m4a 0
+track_title: <type 'unicode'> 火 | 阿莱克桑德雷
+	E:\xmly\给孩子的诗\150930 火 | 阿莱克桑德雷.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150930 \u706b | \u963f\u83b1\u514b\u6851\u5fb7\u96f7.m4a'
+	我不知道 | 希梅内斯 http://audio.xmcdn.com/group15/M07/72/1E/wKgDaFX5PxGgIaCaAAYtH7KhLmY663.m4a http://audio.xmcdn.com/group15/M07/72/1E/wKgDaFX5PxLgW1WlABAokpKWDSg065.m4a 0
+track_title: <type 'unicode'> 我不知道 | 希梅内斯
+	E:\xmly\给孩子的诗\150916 我不知道 | 希梅内斯.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150916 \u6211\u4e0d\u77e5\u9053 | \u5e0c\u6885\u5185\u65af.m4a'
+	未走之路 | 弗洛斯特（美） http://audio.xmcdn.com/group15/M0A/6E/64/wKgDaFXxTWDy4zl-AAfKSXRJueg507.m4a http://audio.xmcdn.com/group15/M0A/6E/64/wKgDaFXxTWHQ9V39ABRjL2R6Alk406.m4a 0
+track_title: <type 'unicode'> 未走之路 | 弗洛斯特（美）
+	E:\xmly\给孩子的诗\150910 未走之路 | 弗洛斯特（美）.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150910 \u672a\u8d70\u4e4b\u8def | \u5f17\u6d1b\u65af\u7279\uff08\u7f8e\uff09.m4a'
+	【给孩子的诗】 诺德布兰德 | 回家 http://audio.xmcdn.com/group8/M0A/9B/6D/wKgDYFZEfjqR-fJoAAY5_1C8AK4837.m4a http://audio.xmcdn.com/group8/M0A/9B/6D/wKgDYFZEfjqTWzpTABBKX255KTs481.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗】 诺德布兰德 | 回家
+	E:\xmly\给孩子的诗\151112 【给孩子的诗】 诺德布兰德 | 回家.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151112 \u3010\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011 \u8bfa\u5fb7\u5e03\u5170\u5fb7 | \u56de\u5bb6.m4a'
+	北岛翻译索德格朗 | 星 星 http://audio2.xmcdn.com/group11/M08/68/C5/wKgDa1X_5mTS2Tm6AAXoBK0aSlo403.m4a http://audio2.xmcdn.com/group11/M08/81/AB/wKgDbVX_5mWh6FfnAA9yrUIlyTA295.m4a 0
+track_title: <type 'unicode'> 北岛翻译索德格朗 | 星 星
+	E:\xmly\给孩子的诗\150921 北岛翻译索德格朗 | 星 星.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150921 \u5317\u5c9b\u7ffb\u8bd1\u7d22\u5fb7\u683c\u6717 | \u661f \u661f.m4a'
+	给孩子的诗 | 帆 莱蒙托夫（俄） http://audio.xmcdn.com/group8/M09/68/71/wKgDYVXkM7Si31jVAAYUfaWcxew495.m4a http://audio.xmcdn.com/group8/M09/68/71/wKgDYVXkM7TjulziAA_oB7P_WU4002.m4a 0
+track_title: <type 'unicode'> 给孩子的诗 | 帆 莱蒙托夫（俄）
+	E:\xmly\给孩子的诗\150831 给孩子的诗 | 帆 莱蒙托夫（俄）.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150831 \u7ed9\u5b69\u5b50\u7684\u8bd7 | \u5e06 \u83b1\u8499\u6258\u592b\uff08\u4fc4\uff09.m4a'
+	《孩子们的歌》| R.S.托马斯 http://audio.xmcdn.com/group11/M00/79/03/wKgDa1Yg07CT2AmjAAZ-TMT5okI719.m4a http://audio.xmcdn.com/group11/M00/91/EE/wKgDbVYg07LCmKCIABD9VDG4SKg298.m4a 0
+track_title: <type 'unicode'> 《孩子们的歌》| R.S.托马斯
+	E:\xmly\给孩子的诗\151016 《孩子们的歌》| R.S.托马斯.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151016 \u300a\u5b69\u5b50\u4eec\u7684\u6b4c\u300b| R.S.\u6258\u9a6c\u65af.m4a'
+	【北岛给孩子的诗】城市风景 | 也斯 http://audio.xmcdn.com/group9/M05/B6/B4/wKgDZlZdkvbgNM47AAlTTmB485o155.m4a http://audio.xmcdn.com/group9/M05/B6/B4/wKgDZlZdkvfiNKiYABho75i0Txo673.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】城市风景 | 也斯
+	E:\xmly\给孩子的诗\151201 【北岛给孩子的诗】城市风景 | 也斯.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\151201 \u3010\u5317\u5c9b\u7ed9\u5b69\u5b50\u7684\u8bd7\u3011\u57ce\u5e02\u98ce\u666f | \u4e5f\u65af.m4a'
+	给孩子的诗 | 至大自然 荷尔德林（德） http://audio.xmcdn.com/group10/M04/64/72/wKgDaVXdhzLQ9I8LAAX6LV3GQtU762.m4a http://audio.xmcdn.com/group10/M04/64/72/wKgDaVXdhzPxydRzAA-jFknzE6I981.m4a 0
+track_title: <type 'unicode'> 给孩子的诗 | 至大自然 荷尔德林（德）
+	E:\xmly\给孩子的诗\150826 给孩子的诗 | 至大自然 荷尔德林（德）.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150826 \u7ed9\u5b69\u5b50\u7684\u8bd7 | \u81f3\u5927\u81ea\u7136 \u8377\u5c14\u5fb7\u6797\uff08\u5fb7\uff09.m4a'
+	茨维塔耶娃 | 我的大都市里一片黑夜 http://audio.xmcdn.com/group15/M0A/76/78/wKgDZVYCclSTEITdAA0QEWr0FTw981.m4a http://audio.xmcdn.com/group15/M0A/76/78/wKgDZVYCclaytFDTACIz4Fh5bkc795.m4a 0
+track_title: <type 'unicode'> 茨维塔耶娃 | 我的大都市里一片黑夜
+	E:\xmly\给孩子的诗\150923 茨维塔耶娃 | 我的大都市里一片黑夜.m4a
+
+ download track error [Errno 22] invalid mode ('wb') or filename: u'E:\\xmly\\\u7ed9\u5b69\u5b50\u7684\u8bd7\\150923 \u8328\u7ef4\u5854\u8036\u5a03 | \u6211\u7684\u5927\u90fd\u5e02\u91cc\u4e00\u7247\u9ed1\u591c.m4a'
+	狄金森 | 如果记住就是忘却 http://audio.xmcdn.com/group10/M05/6B/51/wKgDaVXsIf6jdLJYAAXYr0WuMQ8078.m4a http://audio.xmcdn.com/group10/M05/6B/51/wKgDaVXsIgDyjNlhAA9LEgwrPdM997.m4a 0
+track_title: <type 'unicode'> 狄金森 | 如果记住就是忘却
+	E:\xmly\给孩子的诗\150906 狄金森 | 如果记住就是忘却.m4a
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 62, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 832, in downloadAlbum
+    rec_track = requests.get(play_path_64)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\api.py", line 67, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\api.py", line 53, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\sessions.py", line 468, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\sessions.py", line 608, in send
+    r.content
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\models.py", line 737, in content
+    self._content = bytes().join(self.iter_content(CONTENT_CHUNK_SIZE)) or bytes()
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\models.py", line 660, in generate
+    for chunk in self.raw.stream(chunk_size, decode_content=True):
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\packages\urllib3\response.py", line 344, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\packages\urllib3\response.py", line 301, in read
+    data = self._fp.read(amt)
+  File "C:\Python27\lib\httplib.py", line 612, in read
+    s = self.fp.read(amt)
+  File "C:\Python27\lib\socket.py", line 384, in read
+    data = self._sock.recv(left)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 62, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 832, in downloadAlbum
+    rec_track = requests.get(play_path_64)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\api.py", line 67, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\api.py", line 53, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\sessions.py", line 468, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\sessions.py", line 608, in send
+    r.content
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\models.py", line 737, in content
+    self._content = bytes().join(self.iter_content(CONTENT_CHUNK_SIZE)) or bytes()
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\models.py", line 660, in generate
+    for chunk in self.raw.stream(chunk_size, decode_content=True):
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\packages\urllib3\response.py", line 344, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\packages\urllib3\response.py", line 301, in read
+    data = self._fp.read(amt)
+  File "C:\Python27\lib\httplib.py", line 612, in read
+    s = self.fp.read(amt)
+  File "C:\Python27\lib\socket.py", line 384, in read
+    data = self._sock.recv(left)
+KeyboardInterrupt
+
+Enter a zhubo, album or sound url:http://www.ximalaya.com/12512006/album/2894105/
+Album in database  12512006 /album/ 2894105
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/12512006/album/2894105/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 100 	 update_time: 2015-12-17
+	 Value in Web -- sound_count: 100 	 update_time: 2015-12-17
+NO NEED for update.
+
+	 this album has  100 tracks.
+
+	 this album has  -1 tracks doesn't download.
+Start download track...
+	【读诗】年 终 | 陆忆敏 http://audio.xmcdn.com/group13/M00/D1/38/wKgDXlZ2wtDS3OwRAAgCSDH36vo672.m4a http://audio.xmcdn.com/group9/M04/D1/20/wKgDYlZ2tEXRuNDCABT14CyGE44273.m4a 0
+track_title: <type 'unicode'> 【读诗】年 终   陆忆敏
+	E:\xmly\给孩子的诗\151220 【读诗】年 终   陆忆敏.m4a
+		 track_id: 705
+		{705: 1}
+	顾城 | 我是一个任性的孩子 http://audio.xmcdn.com/group11/M06/C0/66/wKgDa1ZyrPOAMQLYABZmq777DHA845.m4a http://audio.xmcdn.com/group15/M03/CC/EA/wKgDZVZyog2iyND5ADqrcKWgA-M578.m4a 0
+track_title: <type 'unicode'> 顾城   我是一个任性的孩子
+	E:\xmly\给孩子的诗\151217 顾城   我是一个任性的孩子.m4a
+		 track_id: 707
+		{705: 1, 707: 1}
+	【北岛给孩子的诗】金黄的稻束 | 郑敏 http://audio.xmcdn.com/group9/M04/A6/E7/wKgDYlZQkSaytYj8AApFcKOL_Oo621.m4a http://audio.xmcdn.com/group16/M0B/A6/CE/wKgDbFZQkELyiZANABrin_fO470872.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】金黄的稻束   郑敏
+	E:\xmly\给孩子的诗\151121 【北岛给孩子的诗】金黄的稻束   郑敏.m4a
+		 track_id: 708
+		{705: 1, 707: 1, 708: 1}
+	《吉他》| 洛尔迦 北岛译 http://audio.xmcdn.com/group12/M03/7D/17/wKgDW1YRFR-AWxZxAAga5-nbHaM700.m4a http://audio.xmcdn.com/group12/M03/7D/17/wKgDW1YRFSLwedaKABU2ahj_UMo154.m4a 0
+track_title: <type 'unicode'> 《吉他》  洛尔迦 北岛译
+	E:\xmly\给孩子的诗\151004 《吉他》  洛尔迦 北岛译.m4a
+		 track_id: 710
+		{705: 1, 707: 1, 708: 1, 710: 1}
+	【读诗】一种黑暗 | 韩 东 http://audio.xmcdn.com/group13/M07/D0/3D/wKgDXlZ1YuKA2A_ZAAzH23d8V7k839.m4a http://audio.xmcdn.com/group10/M03/CB/5F/wKgDZ1Z1Yjfy02qZACF2p1pzhHQ080.m4a 0
+track_title: <type 'unicode'> 【读诗】一种黑暗   韩 东
+	E:\xmly\给孩子的诗\151219 【读诗】一种黑暗   韩 东.m4a
+		 track_id: 711
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1}
+	林中雪地的寂静中 | 曼德尔施塔姆 http://audio.xmcdn.com/group13/M02/74/6F/wKgDXVX9QknRa0nDAAd3bZ61Tx4414.m4a http://audio.xmcdn.com/group13/M02/74/6F/wKgDXVX9QkrDWALKABOKFtD-ras289.m4a 0
+track_title: <type 'unicode'> 林中雪地的寂静中   曼德尔施塔姆
+	E:\xmly\给孩子的诗\150919 林中雪地的寂静中   曼德尔施塔姆.m4a
+		 track_id: 712
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1}
+	【北岛给孩子的诗】致太阳 | 多多 http://audio.xmcdn.com/group10/M03/BD/5E/wKgDZ1Zi7_TDBcBYAAtdpF-zsk8776.m4a http://audio.xmcdn.com/group10/M03/C0/85/wKgDaVZi7-uzTN0KAB3BhtTJKt8522.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】致太阳   多多
+	E:\xmly\给孩子的诗\151205 【北岛给孩子的诗】致太阳   多多.m4a
+		 track_id: 713
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1}
+	像这样细细地听 | 茨维塔耶娃 http://audio.xmcdn.com/group9/M04/77/36/wKgDYlYEDm3RmH_ZAAgCA1AwjnI035.m4a http://audio.xmcdn.com/group9/M04/77/36/wKgDYlYEDm_ROiYJABT0Z3BFRxA700.m4a 0
+track_title: <type 'unicode'> 像这样细细地听   茨维塔耶娃
+	E:\xmly\给孩子的诗\150924 像这样细细地听   茨维塔耶娃.m4a
+		 track_id: 715
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1}
+	【北岛给孩子的诗】一片芳草 | 昌耀 http://audio.xmcdn.com/group15/M01/AB/AD/wKgDZVZYYamR6-cHAAZJIEnTS24672.m4a http://audio.xmcdn.com/group11/M03/B8/2E/wKgDbVZYYUzQlHrQABBx-wqo_0Q148.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】一片芳草   昌耀
+	E:\xmly\给孩子的诗\151127 【北岛给孩子的诗】一片芳草   昌耀.m4a
+		 track_id: 716
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1}
+	【北岛给孩子的诗75】山和海 | 陈敬容 http://audio.xmcdn.com/group16/M0B/A2/E6/wKgDbFZNw76jD-KkAAofpqs9B6c135.m4a http://audio.xmcdn.com/group16/M0B/A2/E6/wKgDbFZNw7-C70i7ABqAV5FFXxQ660.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗75】山和海   陈敬容
+	E:\xmly\给孩子的诗\151119 【北岛给孩子的诗75】山和海   陈敬容.m4a
+		 track_id: 720
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1}
+	【给孩子的诗】达维什 | 想想别人 http://audio.xmcdn.com/group11/M08/8D/D5/wKgDa1ZDUkCCt6HgAAaYJghnPj8653.m4a http://audio.xmcdn.com/group11/M08/A6/C4/wKgDbVZDUkGCcIiLABE_pQjWU04303.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗】达维什   想想别人
+	E:\xmly\给孩子的诗\151111 【给孩子的诗】达维什   想想别人.m4a
+		 track_id: 722
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1}
+	给孩子的诗 |《 假如生活欺骗了你》 普希金 http://audio.xmcdn.com/group11/M07/73/50/wKgDbVXhc4-w4bXAAAak2euXSDY689.m4a http://audio.xmcdn.com/group11/M07/5A/64/wKgDa1Xhc_SiXRh2ABFhE7BB-w4710.m4a 0
+track_title: <type 'unicode'> 给孩子的诗  《 假如生活欺骗了你》 普希金
+	E:\xmly\给孩子的诗\150829 给孩子的诗  《 假如生活欺骗了你》 普希金.m4a
+		 track_id: 723
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1}
+	【北岛给孩子的诗】用脚思想 | 商禽 http://audio2.xmcdn.com/group8/M09/AB/57/wKgDYFZXARmjVbasAAnweGvW51s682.m4a http://audio2.xmcdn.com/group13/M04/AB/AF/wKgDXVZW_yTxmNBaABoDqP_V4TE520.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】用脚思想   商禽
+	E:\xmly\给孩子的诗\151126 【北岛给孩子的诗】用脚思想   商禽.m4a
+		 track_id: 724
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1}
+	【读诗】三 原 色| 车前子 http://audio.xmcdn.com/group10/M07/D1/A0/wKgDaVZ5XXvj5Gq2AAZSpBy8yWY015.m4a http://audio.xmcdn.com/group10/M07/D1/A0/wKgDaVZ5XXvQglnaABCK6_T2Mh0779.m4a 0
+track_title: <type 'unicode'> 【读诗】三 原 色  车前子
+	E:\xmly\给孩子的诗\151222 【读诗】三 原 色  车前子.m4a
+		 track_id: 726
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1}
+	愿宝贝永远不孤独 | 聂鲁达《孤独》 http://audio.xmcdn.com/group9/M0B/81/6A/wKgDYlYZMVLiFZrFAAkiywsA-0A656.m4a http://audio.xmcdn.com/group9/M0B/81/B7/wKgDZlYZMVWBeV4lABfpT-II1Mw067.m4a 0
+track_title: <type 'unicode'> 愿宝贝永远不孤独   聂鲁达《孤独》
+	E:\xmly\给孩子的诗\151010 愿宝贝永远不孤独   聂鲁达《孤独》.m4a
+		 track_id: 727
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1}
+	【北岛给孩子的诗】伞 | 痖弦 http://audio.xmcdn.com/group11/M07/B5/95/wKgDbVZUiEaxW63WAAdjv9id5lU957.m4a http://audio.xmcdn.com/group11/M07/9C/A4/wKgDa1ZUiEbws8NuABNVUaC0fvo408.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】伞   痖弦
+	E:\xmly\给孩子的诗\151124 【北岛给孩子的诗】伞   痖弦.m4a
+		 track_id: 729
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1}
+	给解冻之风 | 弗洛斯特 http://audio.xmcdn.com/group9/M0A/6E/D5/wKgDYlXysxnj7qQ6AAb77lM5Vx0596.m4a http://audio.xmcdn.com/group9/M0A/6E/FE/wKgDZlXyszHDr7OPABJF6IHyOxc374.m4a 0
+track_title: <type 'unicode'> 给解冻之风   弗洛斯特
+	E:\xmly\给孩子的诗\150911 给解冻之风   弗洛斯特.m4a
+		 track_id: 730
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1}
+	哑孩子 | 洛尔迦 戴望舒译 http://audio.xmcdn.com/group8/M0A/7C/6F/wKgDYFYOTSHBX7DVAAhRoMrj2-w377.m4a http://audio.xmcdn.com/group8/M0A/7C/AC/wKgDYVYOTSLTxO8WABXEXGFGQc0109.m4a 0
+track_title: <type 'unicode'> 哑孩子   洛尔迦 戴望舒译
+	E:\xmly\给孩子的诗\151002 哑孩子   洛尔迦 戴望舒译.m4a
+		 track_id: 731
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1}
+	叶芝| 柯尔庄园的野天鹅 配五彩呼伦贝尔 http://audio.xmcdn.com/group7/M08/6E/1B/wKgDX1XwEQaTujrOAA4OPEgjSI4395.m4a http://audio.xmcdn.com/group7/M08/6E/1B/wKgDX1XwEQuzgU3WACTN1tZ-zj8210.m4a 0
+track_title: <type 'unicode'> 叶芝  柯尔庄园的野天鹅 配五彩呼伦贝尔
+	E:\xmly\给孩子的诗\150909 叶芝  柯尔庄园的野天鹅 配五彩呼伦贝尔.m4a
+		 track_id: 732
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1}
+	雾 | 桑德堡 http://audio.xmcdn.com/group10/M02/70/3E/wKgDaVX2nfHR8_JPAARFXfHuahw079.m4a http://audio.xmcdn.com/group10/M02/70/45/wKgDZ1X2nb_D7GL9AAsoODFFSnA255.m4a 0
+track_title: <type 'unicode'> 雾   桑德堡
+	E:\xmly\给孩子的诗\150914 雾   桑德堡.m4a
+		 track_id: 733
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1}
+	《饮着科林斯的太阳‘’‘’‘》| 艾利蒂斯 http://audio.xmcdn.com/group12/M06/84/70/wKgDXFYfbgGRJUJDAAg3zGyVVDw145.m4a http://audio.xmcdn.com/group12/M06/84/98/wKgDW1YfbgKyKSG0ABWAYEAdioo635.m4a 0
+track_title: <type 'unicode'> 《饮着科林斯的太阳‘’‘’‘》  艾利蒂斯
+	E:\xmly\给孩子的诗\151015 《饮着科林斯的太阳‘’‘’‘》  艾利蒂斯.m4a
+		 track_id: 734
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1}
+	关于爬树 | 布莱希特 http://audio.xmcdn.com/group10/M04/7B/7C/wKgDaVYNVe-h0TUGAAlm412V4rI117.m4a http://audio.xmcdn.com/group10/M04/7B/7B/wKgDZ1YNVfOBiBQuABicRc2xfrs457.m4a 0
+track_title: <type 'unicode'> 关于爬树   布莱希特
+	E:\xmly\给孩子的诗\151001 关于爬树   布莱希特.m4a
+		 track_id: 735
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1}
+	你不快乐的每一天都不是你的 | 佩索阿 http://audio.xmcdn.com/group8/M00/73/87/wKgDYFX76WXTF6NQAAWlulKOLX8161.m4a http://audio.xmcdn.com/group8/M00/73/C6/wKgDYVX76PfSH_urAA7FlvATrKc011.m4a 0
+track_title: <type 'unicode'> 你不快乐的每一天都不是你的   佩索阿
+	E:\xmly\给孩子的诗\150918 你不快乐的每一天都不是你的   佩索阿.m4a
+		 track_id: 736
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1}
+	【平安夜完本】 面朝大海 春暖花开| 海子 http://audio.xmcdn.com/group16/M06/D4/A5/wKgDalZ75u-h2hpAAAxb9WEGShQ565.m4a http://audio.xmcdn.com/group16/M06/D4/A5/wKgDalZ75vDh89Y_ACBbjIJdcds067.m4a 0
+track_title: <type 'unicode'> 【平安夜完本】 面朝大海 春暖花开  海子
+	E:\xmly\给孩子的诗\151224 【平安夜完本】 面朝大海 春暖花开  海子.m4a
+		 track_id: 737
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1}
+	火 | 阿莱克桑德雷 http://audio.xmcdn.com/group13/M0A/7B/91/wKgDXVYLuJOgvau9AAYf79VKFlM703.m4a http://audio.xmcdn.com/group13/M0A/7B/91/wKgDXVYLuJXh3l-2ABAFXZeLN2M203.m4a 0
+track_title: <type 'unicode'> 火   阿莱克桑德雷
+	E:\xmly\给孩子的诗\150930 火   阿莱克桑德雷.m4a
+		 track_id: 738
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1}
+	我不知道 | 希梅内斯 http://audio.xmcdn.com/group15/M07/72/1E/wKgDaFX5PxGgIaCaAAYtH7KhLmY663.m4a http://audio.xmcdn.com/group15/M07/72/1E/wKgDaFX5PxLgW1WlABAokpKWDSg065.m4a 0
+track_title: <type 'unicode'> 我不知道   希梅内斯
+	E:\xmly\给孩子的诗\150916 我不知道   希梅内斯.m4a
+		 track_id: 739
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1}
+	未走之路 | 弗洛斯特（美） http://audio.xmcdn.com/group15/M0A/6E/64/wKgDaFXxTWDy4zl-AAfKSXRJueg507.m4a http://audio.xmcdn.com/group15/M0A/6E/64/wKgDaFXxTWHQ9V39ABRjL2R6Alk406.m4a 0
+track_title: <type 'unicode'> 未走之路   弗洛斯特（美）
+	E:\xmly\给孩子的诗\150910 未走之路   弗洛斯特（美）.m4a
+		 track_id: 740
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1}
+	【给孩子的诗】 诺德布兰德 | 回家 http://audio.xmcdn.com/group8/M0A/9B/6D/wKgDYFZEfjqR-fJoAAY5_1C8AK4837.m4a http://audio.xmcdn.com/group8/M0A/9B/6D/wKgDYFZEfjqTWzpTABBKX255KTs481.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗】 诺德布兰德   回家
+	E:\xmly\给孩子的诗\151112 【给孩子的诗】 诺德布兰德   回家.m4a
+		 track_id: 741
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1}
+	北岛翻译索德格朗 | 星 星 http://audio2.xmcdn.com/group11/M08/68/C5/wKgDa1X_5mTS2Tm6AAXoBK0aSlo403.m4a http://audio2.xmcdn.com/group11/M08/81/AB/wKgDbVX_5mWh6FfnAA9yrUIlyTA295.m4a 0
+track_title: <type 'unicode'> 北岛翻译索德格朗   星 星
+	E:\xmly\给孩子的诗\150921 北岛翻译索德格朗   星 星.m4a
+		 track_id: 742
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1}
+	给孩子的诗 | 帆 莱蒙托夫（俄） http://audio.xmcdn.com/group8/M09/68/71/wKgDYVXkM7Si31jVAAYUfaWcxew495.m4a http://audio.xmcdn.com/group8/M09/68/71/wKgDYVXkM7TjulziAA_oB7P_WU4002.m4a 0
+track_title: <type 'unicode'> 给孩子的诗   帆 莱蒙托夫（俄）
+	E:\xmly\给孩子的诗\150831 给孩子的诗   帆 莱蒙托夫（俄）.m4a
+		 track_id: 744
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1}
+	《孩子们的歌》| R.S.托马斯 http://audio.xmcdn.com/group11/M00/79/03/wKgDa1Yg07CT2AmjAAZ-TMT5okI719.m4a http://audio.xmcdn.com/group11/M00/91/EE/wKgDbVYg07LCmKCIABD9VDG4SKg298.m4a 0
+track_title: <type 'unicode'> 《孩子们的歌》  R.S.托马斯
+	E:\xmly\给孩子的诗\151016 《孩子们的歌》  R.S.托马斯.m4a
+		 track_id: 745
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1}
+	【北岛给孩子的诗】城市风景 | 也斯 http://audio.xmcdn.com/group9/M05/B6/B4/wKgDZlZdkvbgNM47AAlTTmB485o155.m4a http://audio.xmcdn.com/group9/M05/B6/B4/wKgDZlZdkvfiNKiYABho75i0Txo673.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】城市风景   也斯
+	E:\xmly\给孩子的诗\151201 【北岛给孩子的诗】城市风景   也斯.m4a
+		 track_id: 746
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1}
+	给孩子的诗 | 至大自然 荷尔德林（德） http://audio.xmcdn.com/group10/M04/64/72/wKgDaVXdhzLQ9I8LAAX6LV3GQtU762.m4a http://audio.xmcdn.com/group10/M04/64/72/wKgDaVXdhzPxydRzAA-jFknzE6I981.m4a 0
+track_title: <type 'unicode'> 给孩子的诗   至大自然 荷尔德林（德）
+	E:\xmly\给孩子的诗\150826 给孩子的诗   至大自然 荷尔德林（德）.m4a
+		 track_id: 747
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1}
+	茨维塔耶娃 | 我的大都市里一片黑夜 http://audio.xmcdn.com/group15/M0A/76/78/wKgDZVYCclSTEITdAA0QEWr0FTw981.m4a http://audio.xmcdn.com/group15/M0A/76/78/wKgDZVYCclaytFDTACIz4Fh5bkc795.m4a 0
+track_title: <type 'unicode'> 茨维塔耶娃   我的大都市里一片黑夜
+	E:\xmly\给孩子的诗\150923 茨维塔耶娃   我的大都市里一片黑夜.m4a
+		 track_id: 748
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1}
+	狄金森 | 如果记住就是忘却 http://audio.xmcdn.com/group10/M05/6B/51/wKgDaVXsIf6jdLJYAAXYr0WuMQ8078.m4a http://audio.xmcdn.com/group10/M05/6B/51/wKgDaVXsIgDyjNlhAA9LEgwrPdM997.m4a 0
+track_title: <type 'unicode'> 狄金森   如果记住就是忘却
+	E:\xmly\给孩子的诗\150906 狄金森   如果记住就是忘却.m4a
+		 track_id: 749
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1}
+	《公园里》| 普列维尔的［法］ http://audio.xmcdn.com/group12/M01/7D/B1/wKgDW1YSUfnwFlkWAAcratJ5wig746.m4a http://audio.xmcdn.com/group12/M01/7D/AC/wKgDXFYSUfrg2Yd6ABLCmImOLL4672.m4a 0
+track_title: <type 'unicode'> 《公园里》  普列维尔的［法］
+	E:\xmly\给孩子的诗\151005 《公园里》  普列维尔的［法］.m4a
+		 track_id: 750
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1}
+	《老虎的金黄》 | 博尔赫斯 http://audio.xmcdn.com/group11/M0A/8B/1D/wKgDbVYTjUjiMmnBAAiJ_RCv9UQ620.m4a http://audio.xmcdn.com/group9/M08/7E/B6/wKgDZlYTjQGiCcHFABZY28DzuNA680.m4a 0
+track_title: <type 'unicode'> 《老虎的金黄》   博尔赫斯
+	E:\xmly\给孩子的诗\151006 《老虎的金黄》   博尔赫斯.m4a
+		 track_id: 751
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1}
+	【北岛给孩子的诗】乡愁 | 余光中 http://audio.xmcdn.com/group11/M05/9D/5F/wKgDa1ZVv4ixjJw6AA1T0QdCe2U582.m4a http://audio.xmcdn.com/group8/M02/AA/87/wKgDYVZVuy3jLjpgACLlX0IZ4h0423.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】乡愁   余光中
+	E:\xmly\给孩子的诗\151125 【北岛给孩子的诗】乡愁   余光中.m4a
+		 track_id: 752
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1}
+	【北岛给孩子的诗】还给我 | 严 力 http://audio.xmcdn.com/group10/M06/C0/90/wKgDZ1ZlTHTiOIupAA5t-rLautY440.m4a http://audio.xmcdn.com/group10/M06/C0/90/wKgDZ1ZlTHbyvNwbACXIrcc1FYY940.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】还给我   严 力
+	E:\xmly\给孩子的诗\151207 【北岛给孩子的诗】还给我   严 力.m4a
+		 track_id: 753
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1}
+	给孩子的诗 | 星星们高挂空中 海涅（德） http://audio.xmcdn.com/group9/M09/65/C2/wKgDZlXe9q3CjruNAAPokFEAqfU061.m4a http://audio.xmcdn.com/group9/M09/65/C3/wKgDZlXe9q2ALV_KAAo3bAz7Wkg034.m4a 0
+track_title: <type 'unicode'> 给孩子的诗   星星们高挂空中 海涅（德）
+	E:\xmly\给孩子的诗\150827 给孩子的诗   星星们高挂空中 海涅（德）.m4a
+		 track_id: 755
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1}
+	【北岛给孩子的诗】这是四点零八分的北京 | 食指 http://audio.xmcdn.com/group15/M07/AC/6A/wKgDaFZa_enQf_YoAAv-fADYMZA450.m4a http://audio.xmcdn.com/group15/M07/AC/3D/wKgDZVZa_erjSbADAB9mhFYM1y0329.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】这是四点零八分的北京   食指
+	E:\xmly\给孩子的诗\151129 【北岛给孩子的诗】这是四点零八分的北京   食指.m4a
+		 track_id: 757
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1}
+	【读诗】镜 中 | 张枣 http://audio.xmcdn.com/group14/M07/D2/6C/wKgDY1Z32OCiZH9kAApEChKYeg0239.m4a http://audio.xmcdn.com/group14/M07/D2/3C/wKgDZFZ32OLzHZouABrfsNfxHjI857.m4a 0
+track_title: <type 'unicode'> 【读诗】镜 中   张枣
+	E:\xmly\给孩子的诗\151221 【读诗】镜 中   张枣.m4a
+		 track_id: 758
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1}
+	给你最向往的 “自 由” | ​保尔·艾吕雅 http://audio.xmcdn.com/group13/M0B/7A/23/wKgDXlYJIkDT96L6ABhASCJX12I630.m4a http://audio.xmcdn.com/group13/M0B/7A/41/wKgDXVYJIkKQqOcmAD-EaQEoiec791.m4a 0
+track_title: <type 'unicode'> 给你最向往的 “自 由”   ​保尔·艾吕雅
+	E:\xmly\给孩子的诗\150928 给你最向往的 “自 由”   ​保尔·艾吕雅.m4a
+		 track_id: 759
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1}
+	【北岛给孩子的诗】在你出发的时候 | 食指 http://audio.xmcdn.com/group10/M01/A6/93/wKgDZ1ZZzJrAFjt4AAgJj7WxgQg811.m4a http://audio.xmcdn.com/group10/M01/A9/C4/wKgDaVZZzJuypSWCABUI8imOkfY137.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】在你出发的时候   食指
+	E:\xmly\给孩子的诗\151128 【北岛给孩子的诗】在你出发的时候   食指.m4a
+		 track_id: 760
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1}
+	已经过了一点 | 马雅可夫斯基 http://audio.xmcdn.com/group9/M03/78/7E/wKgDZlYGg8GybajfAAsLVRFEtMI043.m4a http://audio.xmcdn.com/group9/M03/78/7E/wKgDZlYGg8PxRna-ABzp5PI7104688.m4a 0
+track_title: <type 'unicode'> 已经过了一点   马雅可夫斯基
+	E:\xmly\给孩子的诗\150926 已经过了一点   马雅可夫斯基.m4a
+		 track_id: 761
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1}
+	【北岛编给孩子的诗】纪弦 | 你的名字 http://audio.xmcdn.com/group14/M06/A0/51/wKgDZFZLNUvzEEfTAAkUCLfobEQ295.m4a http://audio.xmcdn.com/group15/M0B/9F/CF/wKgDaFZLNOjyYExoABfDLPj-0wM847.m4a 0
+track_title: <type 'unicode'> 【北岛编给孩子的诗】纪弦   你的名字
+	E:\xmly\给孩子的诗\151117 【北岛编给孩子的诗】纪弦   你的名字.m4a
+		 track_id: 762
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1}
+	【北岛编给孩子的诗】冯至 | 深夜又是深山 http://audio.xmcdn.com/group10/M03/9D/DF/wKgDZ1ZIdfKSCYByAAhpSLEtGqs840.m4a http://audio.xmcdn.com/group10/M03/9D/DF/wKgDZ1ZIdfLCb9qiABYDx0Ro4mw375.m4a 0
+track_title: <type 'unicode'> 【北岛编给孩子的诗】冯至   深夜又是深山
+	E:\xmly\给孩子的诗\151115 【北岛编给孩子的诗】冯至   深夜又是深山.m4a
+		 track_id: 764
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1}
+	【给孩子读诗】雪 | 艾基 http://audio.xmcdn.com/group11/M04/A0/51/wKgDbVY58oCAJQbNAAhg4pOltiQ144.m4a http://audio.xmcdn.com/group13/M03/94/71/wKgDXlY58iOCh8WiABXtxndYQ44188.m4a 0
+track_title: <type 'unicode'> 【给孩子读诗】雪   艾基
+	E:\xmly\给孩子的诗\151104 【给孩子读诗】雪   艾基.m4a
+		 track_id: 766
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1}
+	【给孩子的诗】 《夏夜》节选 | 博纳富瓦 http://audio.xmcdn.com/group10/M08/89/44/wKgDZ1YnsiKAGfPjAAR6HzaL6Z4932.m4a http://audio.xmcdn.com/group10/M08/89/45/wKgDZ1YnsiKC75PXAAu0zy7dm6M740.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗】 《夏夜》节选   博纳富瓦
+	E:\xmly\给孩子的诗\151021 【给孩子的诗】 《夏夜》节选   博纳富瓦.m4a
+		 track_id: 767
+		{705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	《我不再认识黑夜》| 艾利蒂斯 http://audio.xmcdn.com/group8/M09/84/76/wKgDYFYeJI7DHDleAAekN3QEta8490.m4a http://audio.xmcdn.com/group8/M09/84/76/wKgDYFYeJI_zlY-MABP_cNI8gUo156.m4a 0
+track_title: <type 'unicode'> 《我不再认识黑夜》  艾利蒂斯
+	E:\xmly\给孩子的诗\151014 《我不再认识黑夜》  艾利蒂斯.m4a
+		 track_id: 768
+		{768: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	《积雪》 | 金子美铃 http://audio.xmcdn.com/group9/M03/80/6E/wKgDYlYXjrrBkRWBAAP1cZp1xHM352.m4a http://audio.xmcdn.com/group9/M03/80/6E/wKgDYlYXjrvQ_9Y4AApZKT-JPlA843.m4a 0
+track_title: <type 'unicode'> 《积雪》   金子美铃
+	E:\xmly\给孩子的诗\151009 《积雪》   金子美铃.m4a
+		 track_id: 769
+		{768: 1, 769: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	给孩子的诗 | 老虎 http://audio.xmcdn.com/group8/M08/63/DB/wKgDYFXa51-zu67NAAlyFqI5pfk687.m4a http://audio.xmcdn.com/group8/M08/64/19/wKgDYVXa5wbB5U4zABi5m61HMMM845.m4a 0
+track_title: <type 'unicode'> 给孩子的诗   老虎
+	E:\xmly\给孩子的诗\150824 给孩子的诗   老虎.m4a
+		 track_id: 770
+		{768: 1, 769: 1, 770: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	【北岛给孩子的诗75】波浪 | 蔡其矫 http://audio.xmcdn.com/group13/M05/A5/F8/wKgDXlZPKsXR6CRfAAuCZ-I6TJQ108.m4a http://audio.xmcdn.com/group9/M0B/A5/82/wKgDYlZPKi6Ccn9WAB4g37DLYRI562.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗75】波浪   蔡其矫
+	E:\xmly\给孩子的诗\151120 【北岛给孩子的诗75】波浪   蔡其矫.m4a
+		 track_id: 773
+		{768: 1, 769: 1, 770: 1, 773: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	给孩子的诗 | 往昔的时光 彭斯_苏格兰 http://audio.xmcdn.com/group12/M09/63/FD/wKgDW1XcNczCZ2IBAAhX7ejl5D8934.m4a http://audio.xmcdn.com/group12/M09/63/F7/wKgDXFXcNanwp5T2ABXWTf2_5H0485.m4a 0
+track_title: <type 'unicode'> 给孩子的诗   往昔的时光 彭斯_苏格兰
+	E:\xmly\给孩子的诗\150825 给孩子的诗   往昔的时光 彭斯_苏格兰.m4a
+		 track_id: 774
+		{768: 1, 769: 1, 770: 1, 773: 1, 774: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	叶芝| 当你老了 http://audio.xmcdn.com/group10/M04/6C/97/wKgDZ1XuuLyB_bSIAAeZwKEMRJ0278.m4a http://audio.xmcdn.com/group10/M0B/6C/9D/wKgDaVXuuO3SrSQqABPjkYHQ7Po306.m4a 0
+track_title: <type 'unicode'> 叶芝  当你老了
+	E:\xmly\给孩子的诗\150908 叶芝  当你老了.m4a
+		 track_id: 775
+		{768: 1, 769: 1, 770: 1, 773: 1, 774: 1, 775: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	《如果白昼落进...》 | 聂鲁达 http://audio.xmcdn.com/group10/M0A/81/FA/wKgDaVYaPK7DViHAAALxSNhjles763.m4a http://audio.xmcdn.com/group10/M0A/81/FA/wKgDaVYaPK_T9EtNAAetmboj31s366.m4a 0
+track_title: <type 'unicode'> 《如果白昼落进...》   聂鲁达
+	E:\xmly\给孩子的诗\151011 《如果白昼落进...》   聂鲁达.m4a
+		 track_id: 776
+		{768: 1, 769: 1, 770: 1, 773: 1, 774: 1, 775: 1, 776: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	【北岛给孩子的诗】你好，哀愁 | 依群 http://audio.xmcdn.com/group14/M06/B0/B8/wKgDY1ZcclDR4x8yAAamNLRigFI523.m4a http://audio.xmcdn.com/group7/M03/B0/55/wKgDX1Zca8Hx53uHABFlewughIQ431.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】你好，哀愁   依群
+	E:\xmly\给孩子的诗\151130 【北岛给孩子的诗】你好，哀愁   依群.m4a
+		 track_id: 777
+		{768: 1, 769: 1, 770: 1, 773: 1, 774: 1, 775: 1, 776: 1, 777: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	【北岛编给孩子的诗】音尘 | 卞之琳 http://audio.xmcdn.com/group11/M02/92/18/wKgDa1ZJ1lmSuv_DAAfbpPEz6Us879.m4a http://audio.xmcdn.com/group11/M03/AB/08/wKgDbVZJ1lrBnWXiABSQqIuwYjo737.m4a 0
+track_title: <type 'unicode'> 【北岛编给孩子的诗】音尘   卞之琳
+	E:\xmly\给孩子的诗\151116 【北岛编给孩子的诗】音尘   卞之琳.m4a
+		 track_id: 778
+		{768: 1, 769: 1, 770: 1, 773: 1, 774: 1, 775: 1, 776: 1, 777: 1, 778: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	英国圆号 | 埃乌杰尼奥·蒙塔莱 http://audio.xmcdn.com/group16/M09/7A/87/wKgDalYKXi_hk_8nAAgqp6K7bNg653.m4a http://audio.xmcdn.com/group16/M09/7A/92/wKgDbFYKXjHx4mTnABVffFLfjr4939.m4a 0
+track_title: <type 'unicode'> 英国圆号   埃乌杰尼奥·蒙塔莱
+	E:\xmly\给孩子的诗\150929 英国圆号   埃乌杰尼奥·蒙塔莱.m4a
+		 track_id: 779
+		{768: 1, 769: 1, 770: 1, 773: 1, 774: 1, 775: 1, 776: 1, 777: 1, 778: 1, 779: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	【北岛给孩子的诗】一 束 | 北岛 http://audio.xmcdn.com/group11/M07/AD/4B/wKgDa1ZfCY3Rj7i_ABD9nsnx4qk901.m4a http://audio.xmcdn.com/group14/M09/BB/5D/wKgDY1ZfB7XiyWKXACx-YtPravg742.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】一 束   北岛
+	E:\xmly\给孩子的诗\151202 【北岛给孩子的诗】一 束   北岛.m4a
+		 track_id: 781
+		{768: 1, 769: 1, 770: 1, 773: 1, 774: 1, 775: 1, 776: 1, 777: 1, 778: 1, 779: 1, 781: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	【北岛给孩子的诗】我是风 | 芒克 http://audio.xmcdn.com/group8/M06/BC/DE/wKgDYFZgT-jwJ9zCAA6CImPbga8401.m4a http://audio.xmcdn.com/group7/M08/BD/C6/wKgDWlZgTy-xp77wACX9e6z5gvU545.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】我是风   芒克
+	E:\xmly\给孩子的诗\151203 【北岛给孩子的诗】我是风   芒克.m4a
+		 track_id: 782
+		{768: 1, 769: 1, 770: 1, 773: 1, 774: 1, 775: 1, 776: 1, 777: 1, 778: 1, 779: 1, 781: 1, 782: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	寂 静 | 欧阳江河 http://audio.xmcdn.com/group7/M01/D0/5B/wKgDX1Zz-J2Ck1EWAAs8nMB4tNA693.m4a http://audio.xmcdn.com/group15/M06/CE/0B/wKgDZVZz8_TzEIT4AB1q-q4jY7c598.m4a 0
+track_title: <type 'unicode'> 寂 静   欧阳江河
+	E:\xmly\给孩子的诗\151218 寂 静   欧阳江河.m4a
+		 track_id: 783
+		{768: 1, 769: 1, 770: 1, 773: 1, 774: 1, 775: 1, 776: 1, 777: 1, 778: 1, 779: 1, 781: 1, 782: 1, 783: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	《看见的，看不见的》 | 夸西莫多［意大利］ http://audio.xmcdn.com/group16/M06/7F/A0/wKgDalYU7j3SnoSKAAbMrSs93x0171.m4a http://audio.xmcdn.com/group16/M06/7F/A0/wKgDalYU7j6j6NAgABHKsb3ViiI506.m4a 0
+track_title: <type 'unicode'> 《看见的，看不见的》   夸西莫多［意大利］
+	E:\xmly\给孩子的诗\151007 《看见的，看不见的》   夸西莫多［意大利］.m4a
+		 track_id: 784
+		{768: 1, 769: 1, 770: 1, 773: 1, 774: 1, 775: 1, 776: 1, 777: 1, 778: 1, 779: 1, 781: 1, 782: 1, 783: 1, 784: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	【北岛给孩子的诗】根 | 牛汉 http://audio.xmcdn.com/group8/M03/A8/D8/wKgDYVZTHbLgOs6_AAd5ognt_zM060.m4a http://audio.xmcdn.com/group13/M09/A9/13/wKgDXVZTHOrAR1HAABOOfg0BioI830.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗】根   牛汉
+	E:\xmly\给孩子的诗\151123 【北岛给孩子的诗】根   牛汉.m4a
+		 track_id: 785
+		{768: 1, 769: 1, 770: 1, 773: 1, 774: 1, 775: 1, 776: 1, 777: 1, 778: 1, 779: 1, 781: 1, 782: 1, 783: 1, 784: 1, 785: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	给孩子的诗 | 当一切入睡 雨果 http://audio.xmcdn.com/group15/M01/67/7B/wKgDaFXiz4mhiBr-AAimTfCc8kU051.m4a http://audio.xmcdn.com/group15/M01/67/7B/wKgDaFXiz4qCL2K_ABajqsRAl_M756.m4a 0
+track_title: <type 'unicode'> 给孩子的诗   当一切入睡 雨果
+	E:\xmly\给孩子的诗\150830 给孩子的诗   当一切入睡 雨果.m4a
+		 track_id: 786
+		{768: 1, 769: 1, 770: 1, 773: 1, 774: 1, 775: 1, 776: 1, 777: 1, 778: 1, 779: 1, 781: 1, 782: 1, 783: 1, 784: 1, 785: 1, 786: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	黄昏 | 索德格朗 http://audio.xmcdn.com/group8/M08/76/D0/wKgDYVYCNrej4P4SAAVwdNM0RIE460.m4a http://audio.xmcdn.com/group8/M08/76/D0/wKgDYVYCNrmhIzw9AA46PFXvfQg307.m4a 0
+track_title: <type 'unicode'> 黄昏   索德格朗
+	E:\xmly\给孩子的诗\150923 黄昏   索德格朗.m4a
+		 track_id: 787
+		{768: 1, 769: 1, 770: 1, 773: 1, 774: 1, 775: 1, 776: 1, 777: 1, 778: 1, 779: 1, 781: 1, 782: 1, 783: 1, 784: 1, 785: 1, 786: 1, 787: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	【北岛给孩子的诗74】欢乐 | 何其芳 http://audio.xmcdn.com/group9/M0A/A0/FA/wKgDYlZMnHWT7nvpAAonfMLQ6ik767.m4a http://audio.xmcdn.com/group9/M0A/A1/24/wKgDZlZMnHaz6ta2ABqU4D2KqNU835.m4a 0
+track_title: <type 'unicode'> 【北岛给孩子的诗74】欢乐   何其芳
+	E:\xmly\给孩子的诗\151118 【北岛给孩子的诗74】欢乐   何其芳.m4a
+		 track_id: 788
+		{768: 1, 769: 1, 770: 1, 773: 1, 774: 1, 775: 1, 776: 1, 777: 1, 778: 1, 779: 1, 781: 1, 782: 1, 783: 1, 784: 1, 785: 1, 786: 1, 787: 1, 788: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	米拉波桥 | 阿波利奈尔 http://audio.xmcdn.com/group10/M0A/71/1E/wKgDaVX4P8DzBGOAAApNiywFWnM751.m4a http://audio.xmcdn.com/group10/M0A/71/1E/wKgDaVX4P8HgVQBPABr4n99dbs0855.m4a 0
+track_title: <type 'unicode'> 米拉波桥   阿波利奈尔
+	E:\xmly\给孩子的诗\150915 米拉波桥   阿波利奈尔.m4a
+		 track_id: 789
+		{768: 1, 769: 1, 770: 1, 773: 1, 774: 1, 775: 1, 776: 1, 777: 1, 778: 1, 779: 1, 781: 1, 782: 1, 783: 1, 784: 1, 785: 1, 786: 1, 787: 1, 788: 1, 789: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	逝去的恋歌 | 巴列霍 http://audio.xmcdn.com/group11/M06/81/0F/wKgDbVX-gTnhSWUUAApAq4zV-Oc012.m4a http://audio.xmcdn.com/group11/M06/81/0F/wKgDbVX-gTuDNis_ABrW4tZojHI740.m4a 0
+track_title: <type 'unicode'> 逝去的恋歌   巴列霍
+	E:\xmly\给孩子的诗\150920 逝去的恋歌   巴列霍.m4a
+		 track_id: 791
+		{768: 1, 769: 1, 770: 1, 773: 1, 774: 1, 775: 1, 776: 1, 777: 1, 778: 1, 779: 1, 781: 1, 782: 1, 783: 1, 784: 1, 785: 1, 786: 1, 787: 1, 788: 1, 789: 1, 791: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	【给孩子的诗】哈特 | 未来的历史 http://audio.xmcdn.com/group16/M05/9C/55/wKgDalZF3O3iSw8hAAe0gmls5dE882.m4a http://audio.xmcdn.com/group16/M05/9C/55/wKgDalZF3O7zBCEeABQoggBGI94081.m4a 0
+track_title: <type 'unicode'> 【给孩子的诗】哈特   未来的历史
+	E:\xmly\给孩子的诗\151113 【给孩子的诗】哈特   未来的历史.m4a
+		 track_id: 792
+		{768: 1, 769: 1, 770: 1, 773: 1, 774: 1, 775: 1, 776: 1, 777: 1, 778: 1, 779: 1, 781: 1, 782: 1, 783: 1, 784: 1, 785: 1, 786: 1, 787: 1, 788: 1, 789: 1, 791: 1, 792: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	【读诗】饮 水 | 西川 http://audio.xmcdn.com/group12/M05/D3/EE/wKgDXFZ6pAaiVTACAA0DMz3u5PU519.m4a http://audio.xmcdn.com/group12/M05/D3/EE/wKgDXFZ6o_mSnugrACISJNkv9Xs249.m4a 0
+track_title: <type 'unicode'> 【读诗】饮 水   西川
+	E:\xmly\给孩子的诗\151223 【读诗】饮 水   西川.m4a
+		 track_id: 793
+		{768: 1, 769: 1, 770: 1, 773: 1, 774: 1, 775: 1, 776: 1, 777: 1, 778: 1, 779: 1, 781: 1, 782: 1, 783: 1, 784: 1, 785: 1, 786: 1, 787: 1, 788: 1, 789: 1, 791: 1, 792: 1, 793: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	【中国诗第一篇】废名 | 十二月十九夜 http://audio.xmcdn.com/group15/M04/9C/E2/wKgDZVZHLrTzaBqiAAgLtX5zRls658.m4a http://audio.xmcdn.com/group15/M04/9C/E3/wKgDZVZHLrbTPxL6ABUNVxlK4gA380.m4a 0
+track_title: <type 'unicode'> 【中国诗第一篇】废名   十二月十九夜
+	E:\xmly\给孩子的诗\151114 【中国诗第一篇】废名   十二月十九夜.m4a
+		 track_id: 795
+		{768: 1, 769: 1, 770: 1, 773: 1, 774: 1, 775: 1, 776: 1, 777: 1, 778: 1, 779: 1, 781: 1, 782: 1, 783: 1, 784: 1, 785: 1, 786: 1, 787: 1, 788: 1, 789: 1, 791: 1, 792: 1, 793: 1, 795: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	《雨燕》| 勒内·夏尔 http://audio.xmcdn.com/group9/M0A/83/8F/wKgDYlYdKPGzoJu-AAa60PzLNCI962.m4a http://audio.xmcdn.com/group9/M0A/83/8F/wKgDYlYdKPOS4kuKABGbwLNEkow022.m4a 0
+track_title: <type 'unicode'> 《雨燕》  勒内·夏尔
+	E:\xmly\给孩子的诗\151013 《雨燕》  勒内·夏尔.m4a
+		 track_id: 796
+		{768: 1, 769: 1, 770: 1, 773: 1, 774: 1, 775: 1, 776: 1, 777: 1, 778: 1, 779: 1, 781: 1, 782: 1, 783: 1, 784: 1, 785: 1, 786: 1, 787: 1, 788: 1, 789: 1, 791: 1, 792: 1, 793: 1, 795: 1, 796: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
+	秋日 | 里尔克 http://audio2.xmcdn.com/group9/M0A/6F/9C/wKgDZlX0CCGx-w1eAAX9nkz-8aI281.m4a http://audio2.xmcdn.com/group9/M0A/6F/9C/wKgDZlX0CCKz7E02AA-r42Bw7bE035.m4a 0
+track_title: <type 'unicode'> 秋

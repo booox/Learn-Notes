@@ -818,7 +818,19 @@
     
     
     
+* 在写Windows 文件名之前，将字符串中的特殊字符去除
+    ```
+    import re
     
+    def pretty_windows_filename(filename):
+        """clean the file name for winodws"""
+        
+        pattern = r'[\\/:*?"<>|]'       # strip special chars for windows filename
+        filename = re.sub(pattern, ' ', filename)
+        return filename
+
+    
+    ```
     
     
     

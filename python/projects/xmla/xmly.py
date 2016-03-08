@@ -233,7 +233,14 @@ def printUrlError():
     print '\t sound_url: http://www.ximalaya.com/1162654/sound/11011001/'
     print '\t NOTICE: The url must be end with a "/". '
 
-        
+def pretty_windows_filename(filename):
+    """clean the file name for winodws"""
+    
+    pattern = r'[\\/:*?"<>|]'       # strip special chars for windows filename
+    filename = re.sub(pattern, ' ', filename)
+    return filename
+
+
 def writeToDB(result):
     
     # -------------- zhubo ------------ 
@@ -713,10 +720,12 @@ def writeTrackToDB(conn, cur, url, result):
         raise
     
 def prettyAlbumDir(album_name):
-    "clean the album name, create album directory"
+    """clean the album name, create album directory"""
     
-    pattern = r'[\\/:*?"<>|]'       # strip special chars for windows filename
-    album_name = re.sub(pattern, ' ', album_name)
+    # pattern = r'[\\/:*?"<>|]'       # strip special chars for windows filename
+    # album_name = re.sub(pattern, ' ', album_name)
+    
+    album_name = pretty_windows_filename(album_name)
     
     # check weather the album_title dir exist?
     album_dir = AUDIO_DIR + '\\' + album_name + '\\'
@@ -822,6 +831,8 @@ def downloadAlbum(conn, cur, url, result):
                 track_suffix = '.' + play_path_64.split('.')[-1]
                 
                 track_pub_date = sound_ids.get(sound_id, '000000')
+                # clean the file name for windows OS.
+                track_title = pretty_windows_filename(track_title) 
                 
                 print "track_title:", type(track_title), track_title
                 track_path = album_dir + track_pub_date + " " + track_title + track_suffix
