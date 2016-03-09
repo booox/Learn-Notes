@@ -6,7 +6,7 @@ import requests
 from scrapy.contrib.spiders.init import InitSpider
 from scrapy.http import Request, FormRequest
 
-from id97.items import Id97Item
+from bmlw.items import BmlwItem
 
 
 class Id97Spider(InitSpider):
@@ -56,46 +56,14 @@ class Id97Spider(InitSpider):
         
         for href in response.xpath('//div[@class="movie-item-in"]/a'):
             _url = href.xpath('@href')[0].extract()
-            url = response.urljoin(_url)
-            self.pretty_print(url, 2)
+            self.pretty_print(_url, 2)
             
-            yield scrapy.Request(_url, callback=self.parse_movie_info)
-            
-        next_page = response.xpath('//a[@rel="next"]/@href')
-        if next_page:
-            url = response.urljoin(next_page[0].extract())
-            self.pretty_print(url, 3)
-            
-            yield scrapy.Request(url, self.parse_item)
         
     def parse_movie_info(self, response):
         """ Scrape data from detail page """
-        # pass
         
-        title = response.xpath('//h1/text()')[0].extract()
-        year = response.xpath('//h1/span/text()')[0].extract()[1:-1]
+        pass
         
-        tds = response.xpath('//table[@class="movie-info-table"]/tbody/tr/td')
-        
-        director = tds[1].xpath('a/text()').extract()
-        writer = tds[3].xpath('a/text()').extract()
-        stars = tds[5].xpath('a/text()').extract()
-        type = tds[7].xpath('a/text()').extract()
-        country = tds[9].xpath('a/text()').extract()
-        language = tds[11].xpath('text()').extract()
-        release_dates = tds[13].xpath('text()').extract()
-        duration = tds[15].xpath('text()').extract()
-        other_name = tds[17].xpath('text()').extract()
-        rate_douban = tds[19].xpath('a/text()').extract()[0][-3:]
-        rate_imdb = tds[19].xpath('a/text()').extract()[1][-3:]
-        
-        tag_s = response.xpath('//div[@class="col-md-12 tags"]/a/text()')
-        
-        tags = []
-        for tag in tag_s:
-            tags.append(tag.extract())
-            
-        d_links = 
         
         
         

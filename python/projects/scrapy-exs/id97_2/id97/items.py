@@ -20,7 +20,6 @@ class Id97Item(scrapy.Item):
     language = scrapy.Field()
     release_dates = scrapy.Field()
     duration = scrapy.Field()
-    other_name = scrapy.Field()
     rate_douban = scrapy.Field()
     rate_imdb = scrapy.Field()
     tags = scrapy.Field()

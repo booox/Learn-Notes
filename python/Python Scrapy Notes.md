@@ -459,3 +459,12 @@
             return item
 ```
     
+    
+    
+# Q&A
+
+* exceptions.ImportError: No module named win32api
+    * [PyPI上搜索](https://pypi.python.org/pypi) *pywin32* 
+    * [Download URL](https://sourceforge.net/projects/pywin32/files/pywin32/)
+    * [选择对应版本: pywin32-220.win-amd64-py2.7.exe](https://sourceforge.net/projects/pywin32/files/pywin32/Build%20220/pywin32-220.win-amd64-py2.7.exe/download)
+    * Installed.

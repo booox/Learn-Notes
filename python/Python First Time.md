@@ -200,6 +200,19 @@
     
 ## Lists
 
+### List Comprehension
+
+* return a list by its even items
+    ```
+    >>> l = list(range(0, 20))
+    >>> l
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+    >>> [x for x in l if (l.index(x) % 2 == 0)]
+    [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+    
+    ```
+
+### list other
 * Reverse a List:   `['a', 1, '2', 'c'][::-1]`
     * The are seven sequence types: strings, Unicode strings, lists, tuples, bytearrays, buffer, and xrange objects.
     * The sequence operations sorted in ascending priority:
