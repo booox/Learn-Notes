@@ -15,9 +15,9 @@ SPIDER_MODULES = ['id97.spiders']
 NEWSPIDER_MODULE = 'id97.spiders'
 
 
-ITEM_PIPLINES = {
-    'id97.pipelines.Id97Pipeline': 300
-}
+# ITEM_PIPLINES = {
+    # 'id97.pipelines.Id97Pipeline': 300
+# }
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'id97 (+http://www.yourdomain.com)'

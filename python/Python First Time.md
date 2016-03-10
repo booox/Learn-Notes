@@ -844,6 +844,20 @@
 
     
     ```
+
+* 将迅雷地址转换成普通链接
+    * 迅雷地址使用的是base64来加密的
+    * 在真实地址前面加上AA，后面加上ZZ
+    * 
+    ```
+        import base64
+        
+        href = "thunder://QUFodHRwOi8vZGwzMi44MHMuaW06OTIwLzE2MDMv5Y+26ZeuM1vnsqTor63niYhdL+WPtumXrjNb57Kk6K+t54mIXV9iZC5tcDRaWg=="
+        
+        href = base64.b64decode(href[10:])[2:-2]
+        print href
+    
+    ```
     
     
     
