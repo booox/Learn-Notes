@@ -71,7 +71,7 @@
 
 * To put our spider to work, go to the project’s top level directory and run
     * `$ scrapy crawl dmoz`
-    
+    * `$ scrapy crawl dmoz -o items.json -t json`
 * You should notice two new files have been created
     * *Books.html*
     * *Resources.html* 
@@ -468,3 +468,6 @@
     * [Download URL](https://sourceforge.net/projects/pywin32/files/pywin32/)
     * [选择对应版本: pywin32-220.win-amd64-py2.7.exe](https://sourceforge.net/projects/pywin32/files/pywin32/Build%20220/pywin32-220.win-amd64-py2.7.exe/download)
     * Installed.
+    
+* UnicodeDecodeError: scrapy.extensions.feedexport.FeedExporter
+    * 

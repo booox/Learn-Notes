@@ -147,23 +147,13 @@ class Id97Spider(InitSpider):
         for x in info_field_index[:-1]:
             field = tds[x].xpath('span/text()').extract()[0][:-1]
             
-            self.pretty_print(len(field), 2)
-            self.pretty_print(type(field), 2)
-            # self.pretty_print(type("µ¼ÑÝ"), 2)
-            # self.pretty_print(len("µ¼ÑÝ"), 2)
-            
-            # self.pretty_print(field, 2)
             field = field.encode('gbk')
-            self.pretty_print(len(field), 2)
-            self.pretty_print(type(field), 2)
-            # self.pretty_print('AF:' + type(field), 2)
-            # self.pretty_print(field, 2)
-            # self.pretty_print(infos_field["µ¼ÑÝ"], 2)
+            # self.pretty_print(len(field), 2)
+            # self.pretty_print(type(field), 2)
             
-            self.pretty_print("tds[x+1]." + infos_field[field], 2)
             result = eval("tds[x+1]." + infos_field[field])
             
-            infos[field] = result
+            infos[field.decode('gbk').encode('utf-8')] = result
             
             
             

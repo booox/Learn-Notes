@@ -19,6 +19,11 @@ NEWSPIDER_MODULE = 'id97.spiders'
     # 'id97.pipelines.Id97Pipeline': 300
 # }
 
+ITEM_PIPLINES = ['id97.pipelines.Id97Pipeline']
+
+FILES_STORE = 'D:\\id97_items.json'
+
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'id97 (+http://www.yourdomain.com)'
 
