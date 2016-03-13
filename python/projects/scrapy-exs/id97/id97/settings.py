@@ -20,6 +20,9 @@ NEWSPIDER_MODULE = 'id97.spiders'
 # }
 
 ITEM_PIPLINES = ['id97.pipelines.Id97Pipeline']
+ITEM_PIPLINES = ['myspider.pipelines.MyspiderPipeline']
+
+
 
 FILES_STORE = 'D:\\id97_items.json'
 

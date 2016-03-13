@@ -3,10 +3,11 @@
 
 import requests
 import sys
-
+import logging
 import scrapy
 from scrapy.contrib.spiders.init import InitSpider
 from scrapy.http import Request, FormRequest
+# from scrapy.utils.log import configure_logging
 
 from id97.items import Id97Item
 
@@ -17,6 +18,18 @@ class Id97Spider(InitSpider):
     start_urls = [
         "http://www.id97.com/videos/movie?page=1",
     ]
+    
+    # def __init__(self):
+        # print '#' * 25
+        # print 'TEST logging.......'
+        # configure_logging(install_root_handler=False)
+        # logging.basicConfig(
+            # filename='id97log.log',
+            # filemode='a',
+            # format='%(levelname)s: %(message)s',
+            # level=logging.DEBUG
+        # )
+
 
     def pretty_print(self, string, level):
         print '\t' * (level - 1), '=' * 5, string, '=' * 5
@@ -56,9 +69,9 @@ class Id97Spider(InitSpider):
         """ Scrape data from list page """
         self.pretty_print('parse_item start', 1)
         
-        if "page=6" in response.url:
-            self.pretty_print('CTRL+C', 1)
-            sys.exit(0)
+        # if "page=6" in response.url:
+            # self.pretty_print('CTRL+C', 1)
+            # sys.exit(0)
         
         for href in response.xpath('//div[@class="movie-item-in"]/a'):
             _url = href.xpath('@href')[0].extract()
@@ -129,15 +142,15 @@ class Id97Spider(InitSpider):
         tds = response.xpath('//table[@class="movie-info-table"]/tbody/tr/td')
         
         infos_field = {
-            "导演": "xpath('a/text()').extract()",
-            "编剧": "xpath('a/text()').extract()",
-            "主演": "xpath('a/text()').extract()",
-            "类型": "xpath('a/text()').extract()",
-            "国家": "xpath('a/text()').extract()",
-            "语言": "xpath('text()').extract()",
-            "时间": "xpath('text()').extract()",
-            "片长": "xpath('text()').extract()",
-            "又名": "xpath('text()').extract()",
+            "瀵兼紨": "xpath('a/text()').extract()",
+            "缂栧墽": "xpath('a/text()').extract()",
+            "涓绘紨": "xpath('a/text()').extract()",
+            "绫诲瀷": "xpath('a/text()').extract()",
+            "鍥藉": "xpath('a/text()').extract()",
+            "璇█": "xpath('text()').extract()",
+            "鏃堕棿": "xpath('text()').extract()",
+            "鐗囬暱": "xpath('text()').extract()",
+            "鍙堝悕": "xpath('text()').extract()",
         }
         
         
@@ -147,13 +160,14 @@ class Id97Spider(InitSpider):
         for x in info_field_index[:-1]:
             field = tds[x].xpath('span/text()').extract()[0][:-1]
             
-            field = field.encode('gbk')
+            field = field.encode('utf-8')
             # self.pretty_print(len(field), 2)
             # self.pretty_print(type(field), 2)
             
             result = eval("tds[x+1]." + infos_field[field])
             
-            infos[field.decode('gbk').encode('utf-8')] = result
+            # infos[field.decode('gbk').encode('utf-8')] = result
+            infos[field] = result
             
             
             
