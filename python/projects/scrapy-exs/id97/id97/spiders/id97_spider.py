@@ -5,7 +5,8 @@ import requests
 import sys
 import logging
 import scrapy
-from scrapy.contrib.spiders.init import InitSpider
+# from scrapy.contrib.spiders.init import InitSpider
+from scrapy.spiders.init import InitSpider
 from scrapy.http import Request, FormRequest
 # from scrapy.utils.log import configure_logging
 
