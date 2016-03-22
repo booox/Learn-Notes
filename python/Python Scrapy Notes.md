@@ -471,3 +471,10 @@
     
 * UnicodeDecodeError: scrapy.extensions.feedexport.FeedExporter
     * 
+    
+* about splash
+    - [Scrapinghub执行spider抓取并显示图片](http://www.cnblogs.com/silverbullet11/p/Python_Scrapy_Scrapinghub.html)
+    - [Scrapinghub执行spider抓取并显示图片](http://www.tuicool.com/articles/ZjEVvav)
+    - [Handling JavaScript in Scrapy with Splash](https://blog.scrapinghub.com/2015/03/02/handling-javascript-in-scrapy-with-splash/?utm_source=tuicool&utm_medium=referral)
+    - [SCRAPY爬虫中使用SPLASH处理页面JS](http://www.baixihe.com/2015/06/11/scrapy%E7%88%AC%E8%99%AB%E4%B8%AD%E4%BD%BF%E7%94%A8splash%E5%A4%84%E7%90%86%E9%A1%B5%E9%9D%A2js)
+    - [splash](https://github.com/scrapinghub/splash )

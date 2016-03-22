@@ -90,6 +90,9 @@ The Flask Mega-Tutorial](http://blog.miguelgrinberg.com/post/the-flask-mega-tuto
     * `http://localhost:5000`
     * `http://localhost:5000/index`
    
+    * `app.run(host='0.0.0.0')` - Listen on all public IPs.
+    * sometimes you need to allow the traffic using iptables:
+        `iptables -I INPUT -p tcp --dport 5000 -j ACCEPT`
     
 
 # Part II: Templates
