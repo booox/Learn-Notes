@@ -16595,3 +16595,363 @@ track_title: <type 'unicode'> 《雨燕》  勒内·夏尔
 		{768: 1, 769: 1, 770: 1, 773: 1, 774: 1, 775: 1, 776: 1, 777: 1, 778: 1, 779: 1, 781: 1, 782: 1, 783: 1, 784: 1, 785: 1, 786: 1, 787: 1, 788: 1, 789: 1, 791: 1, 792: 1, 793: 1, 795: 1, 796: 1, 705: 1, 707: 1, 708: 1, 710: 1, 711: 1, 712: 1, 713: 1, 715: 1, 716: 1, 720: 1, 722: 1, 723: 1, 724: 1, 726: 1, 727: 1, 729: 1, 730: 1, 731: 1, 732: 1, 733: 1, 734: 1, 735: 1, 736: 1, 737: 1, 738: 1, 739: 1, 740: 1, 741: 1, 742: 1, 744: 1, 745: 1, 746: 1, 747: 1, 748: 1, 749: 1, 750: 1, 751: 1, 752: 1, 753: 1, 755: 1, 757: 1, 758: 1, 759: 1, 760: 1, 761: 1, 762: 1, 764: 1, 766: 1, 767: 1}
 	秋日 | 里尔克 http://audio2.xmcdn.com/group9/M0A/6F/9C/wKgDZlX0CCGx-w1eAAX9nkz-8aI281.m4a http://audio2.xmcdn.com/group9/M0A/6F/9C/wKgDZlX0CCKz7E02AA-r42Bw7bE035.m4a 0
 track_title: <type 'unicode'> 秋
+Enter a zhubo, album or sound url:http://www.ximalaya.com/39200626/album/3385980/
+Album  doesn't in db: 39200626 /album/ 3385980
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 62, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 792, in downloadAlbum
+    writeAlbumToDB(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 618, in writeAlbumToDB
+    session = XMLYSession()
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly_session.py", line 23, in __init__
+    r = self.get(url=xmly.HOME_URL, headers=headers)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\sessions.py", line 480, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\sessions.py", line 468, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\sessions.py", line 576, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\adapters.py", line 437, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8087): Max retries exceeded with url: http://www.ximalaya.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x00000000034E9FD0>: Failed to establish a new connection: [Errno 10061] ',)))
+Traceback (most recent call last):
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\sound.py", line 62, in <module>
+    xmly.downloadAlbum(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 792, in downloadAlbum
+    writeAlbumToDB(conn, cur, url, result)
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly.py", line 618, in writeAlbumToDB
+    session = XMLYSession()
+  File "E:\study\Computer\Git\Learn-Notes\python\projects\xmla\xmly_session.py", line 23, in __init__
+    r = self.get(url=xmly.HOME_URL, headers=headers)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\sessions.py", line 480, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\sessions.py", line 468, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\sessions.py", line 576, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Python27\lib\site-packages\requests-2.9.1-py2.7.egg\requests\adapters.py", line 437, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8087): Max retries exceeded with url: http://www.ximalaya.com/ (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x00000000034E9FD0>: Failed to establish a new connection: [Errno 10061] ',)))
+
+Enter a zhubo, album or sound url:http://www.ximalaya.com/39200626/album/3385980/
+Album  doesn't in db: 39200626 /album/ 3385980
+http://www.ximalaya.com/39200626/album/3385980/
+	 Start getItemsOnPages _type=  albumSound From :  http://www.ximalaya.com/39200626/album/3385980/
+	 getItemsOnPages retrieve the first page, total: 1
+	 getItemsOnPages retrive the first page done.
+	 getItemsOnPages retrive multi pages Done.
+
+	 getItemsOnPages Done : get  albumSound from 1 pages
+Write New Album start. 39200626 /album/ 3385980
+Write New Album Done. 39200626 /album/ 3385980
+Write Tracks of the Album Start.
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/11984074/
+	Track  doesn't in db: 39200626 /sound/ 11984074
+	Write New Track start. 39200626 /sound/ 11984074
+	Write New Track Done. 39200626 /sound/ 11984074
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/11984074/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/12848602/
+	Track  doesn't in db: 39200626 /sound/ 12848602
+	Write New Track start. 39200626 /sound/ 12848602
+	Write New Track Done. 39200626 /sound/ 12848602
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/12848602/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/11501095/
+	Track  doesn't in db: 39200626 /sound/ 11501095
+	Write New Track start. 39200626 /sound/ 11501095
+	Write New Track Done. 39200626 /sound/ 11501095
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/11501095/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/12062093/
+	Track  doesn't in db: 39200626 /sound/ 12062093
+	Write New Track start. 39200626 /sound/ 12062093
+	Write New Track Done. 39200626 /sound/ 12062093
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/12062093/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/11874679/
+	Track  doesn't in db: 39200626 /sound/ 11874679
+	Write New Track start. 39200626 /sound/ 11874679
+	Write New Track Done. 39200626 /sound/ 11874679
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/11874679/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/10963546/
+	Track  doesn't in db: 39200626 /sound/ 10963546
+	Write New Track start. 39200626 /sound/ 10963546
+	Write New Track Done. 39200626 /sound/ 10963546
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/10963546/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/11354834/
+	Track  doesn't in db: 39200626 /sound/ 11354834
+	Write New Track start. 39200626 /sound/ 11354834
+	Write New Track Done. 39200626 /sound/ 11354834
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/11354834/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/11778056/
+	Track  doesn't in db: 39200626 /sound/ 11778056
+	Write New Track start. 39200626 /sound/ 11778056
+	Write New Track Done. 39200626 /sound/ 11778056
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/11778056/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/11408062/
+	Track  doesn't in db: 39200626 /sound/ 11408062
+	Write New Track start. 39200626 /sound/ 11408062
+	Write New Track Done. 39200626 /sound/ 11408062
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/11408062/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/13088237/
+	Track  doesn't in db: 39200626 /sound/ 13088237
+	Write New Track start. 39200626 /sound/ 13088237
+	Write New Track Done. 39200626 /sound/ 13088237
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/13088237/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/12350128/
+	Track  doesn't in db: 39200626 /sound/ 12350128
+	Write New Track start. 39200626 /sound/ 12350128
+	Write New Track Done. 39200626 /sound/ 12350128
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/12350128/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/11620188/
+	Track  doesn't in db: 39200626 /sound/ 11620188
+	Write New Track start. 39200626 /sound/ 11620188
+	Write New Track Done. 39200626 /sound/ 11620188
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/11620188/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/10912507/
+	Track  doesn't in db: 39200626 /sound/ 10912507
+	Write New Track start. 39200626 /sound/ 10912507
+	Write New Track Done. 39200626 /sound/ 10912507
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/10912507/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/12137675/
+	Track  doesn't in db: 39200626 /sound/ 12137675
+	Write New Track start. 39200626 /sound/ 12137675
+	Write New Track Done. 39200626 /sound/ 12137675
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/12137675/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/12984913/
+	Track  doesn't in db: 39200626 /sound/ 12984913
+	Write New Track start. 39200626 /sound/ 12984913
+	Write New Track Done. 39200626 /sound/ 12984913
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/12984913/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/12556251/
+	Track  doesn't in db: 39200626 /sound/ 12556251
+	Write New Track start. 39200626 /sound/ 12556251
+	Write New Track Done. 39200626 /sound/ 12556251
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/12556251/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/13231902/
+	Track  doesn't in db: 39200626 /sound/ 13231902
+	Write New Track start. 39200626 /sound/ 13231902
+	Write New Track Done. 39200626 /sound/ 13231902
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/13231902/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/12754087/
+	Track  doesn't in db: 39200626 /sound/ 12754087
+	Write New Track start. 39200626 /sound/ 12754087
+	Write New Track Done. 39200626 /sound/ 12754087
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/12754087/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/12427415/
+	Track  doesn't in db: 39200626 /sound/ 12427415
+	Write New Track start. 39200626 /sound/ 12427415
+	Write New Track Done. 39200626 /sound/ 12427415
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/12427415/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/11698545/
+	Track  doesn't in db: 39200626 /sound/ 11698545
+	Write New Track start. 39200626 /sound/ 11698545
+	Write New Track Done. 39200626 /sound/ 11698545
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/11698545/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/11231936/
+	Track  doesn't in db: 39200626 /sound/ 11231936
+	Write New Track start. 39200626 /sound/ 11231936
+	Write New Track Done. 39200626 /sound/ 11231936
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/11231936/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/11056862/
+	Track  doesn't in db: 39200626 /sound/ 11056862
+	Write New Track start. 39200626 /sound/ 11056862
+	Write New Track Done. 39200626 /sound/ 11056862
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/11056862/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/11180859/
+	Track  doesn't in db: 39200626 /sound/ 11180859
+	Write New Track start. 39200626 /sound/ 11180859
+	Write New Track Done. 39200626 /sound/ 11180859
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/11180859/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/12634134/
+	Track  doesn't in db: 39200626 /sound/ 12634134
+	Write New Track start. 39200626 /sound/ 12634134
+	Write New Track Done. 39200626 /sound/ 12634134
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/12634134/
+Write Tracks of the Album Done.
+
+	 this album has  24 tracks.
+
+	 this album has  -1 tracks doesn't download.
+Start download track...
+	【特别加长版】亲历日本黑社会，告诉你“不一样”的山口组 http://audio.xmcdn.com/group9/M09/F7/35/wKgDZlath9eRa6hfAD98EIf-8yo584.m4a http://audio.xmcdn.com/group9/M09/F7/08/wKgDYlath9_Ae6m3AKZQmvX88WE021.m4a 0
+track_title: <type 'unicode'> 【特别加长版】亲历日本黑社会，告诉你“不一样”的山口组
+	E:\xmly\静说日本\160131 【特别加长版】亲历日本黑社会，告诉你“不一样”的山口组.m4a
+		 track_id: 804
+		{804: 1}
+	【第二十一期】日本大网站首次直播两会，日媒在关注什么？ http://audio.xmcdn.com/group9/M02/16/39/wKgDYlbaZ1rAexXoACSsc6g3BmY642.m4a http://audio.xmcdn.com/group9/M02/16/39/wKgDYlbaZ12wSmY1AGAQcPSUhMI741.m4a 0
+track_title: <type 'unicode'> 【第二十一期】日本大网站首次直播两会，日媒在关注什么？
+	E:\xmly\静说日本\160305 【第二十一期】日本大网站首次直播两会，日媒在关注什么？.m4a
+		 track_id: 805
+		{804: 1, 805: 1}
+	【第八期】日本IT之神，赢了官司输了人生 http://audio.xmcdn.com/group11/M04/EF/71/wKgDbVaV4R7hj4x1ACYNH8ROPuc909.m4a http://audio.xmcdn.com/group11/M04/EF/71/wKgDbVaV4SOztb3cAGOslJEJ6Sk230.m4a 0
+track_title: <type 'unicode'> 【第八期】日本IT之神，赢了官司输了人生
+	E:\xmly\静说日本\160112 【第八期】日本IT之神，赢了官司输了人生.m4a
+		 track_id: 806
+		{804: 1, 805: 1, 806: 1}
+	【第十四期】安倍放出负利率大招，欲围剿中国经济？ http://audio.xmcdn.com/group13/M03/FA/2E/wKgDXlaxen-Ao7XwACaMKQmMFBA236.m4a http://audio.xmcdn.com/group13/M03/FA/45/wKgDXVaxeoPRrI46AGT5hD4F_Gc656.m4a 0
+track_title: <type 'unicode'> 【第十四期】安倍放出负利率大招，欲围剿中国经济？
+	E:\xmly\静说日本\160203 【第十四期】安倍放出负利率大招，欲围剿中国经济？.m4a
+		 track_id: 807
+		{804: 1, 805: 1, 806: 1, 807: 1}
+	【第十二期】没有反贪局，日本靠什么扳倒贪腐大臣？ http://audio.xmcdn.com/group7/M09/F4/23/wKgDX1aoXAayT3DPACP6W01xvtc060.m4a http://audio.xmcdn.com/group7/M09/F4/2F/wKgDWlaoXAygHTfjAF48dT4kEes681.m4a 0
+track_title: <type 'unicode'> 【第十二期】没有反贪局，日本靠什么扳倒贪腐大臣？
+	E:\xmly\静说日本\160127 【第十二期】没有反贪局，日本靠什么扳倒贪腐大臣？.m4a
+		 track_id: 808
+		{808: 1, 804: 1, 805: 1, 806: 1, 807: 1}
+	【第二期】日本军费破纪录，安倍的假想敌到底是谁？ http://audio.xmcdn.com/group7/M05/D2/AF/wKgDWlZ3uGXTqYkOACSB1HaxwfU438.m4a http://audio.xmcdn.com/group12/M0B/D1/3C/wKgDW1Z3uG2za16bAF-g6aGcd9U967.m4a 0
+track_title: <type 'unicode'> 【第二期】日本军费破纪录，安倍的假想敌到底是谁？
+	E:\xmly\静说日本\151221 【第二期】日本军费破纪录，安倍的假想敌到底是谁？.m4a
+		 track_id: 809
+		{804: 1, 805: 1, 806: 1, 807: 1, 808: 1, 809: 1}
+	【第六期】走进日本“纸牌屋”，听安倍如何和政敌周旋 http://audio.xmcdn.com/group15/M00/DD/D4/wKgDaFaMiPnSMlGXACuaqDRgLD4975.m4a http://audio.xmcdn.com/group15/M00/DD/D4/wKgDaFaMiP7BjmDGAHI48blHN0U523.m4a 0
+track_title: <type 'unicode'> 【第六期】走进日本“纸牌屋”，听安倍如何和政敌周旋
+	E:\xmly\静说日本\160106 【第六期】走进日本“纸牌屋”，听安倍如何和政敌周旋.m4a
+		 track_id: 810
+		{804: 1, 805: 1, 806: 1, 807: 1, 808: 1, 809: 1, 810: 1}
+	【周末福利】日本女孩冬天爱穿短裙，不怕冻坏膝盖？ http://audio.xmcdn.com/group16/M08/EF/5A/wKgDalajMuXzcBi-ACPMcY7PA7k647.m4a http://audio.xmcdn.com/group16/M08/EF/3D/wKgDbFajMuqw6T7gAF3FvNKr2xQ899.m4a 0
+track_title: <type 'unicode'> 【周末福利】日本女孩冬天爱穿短裙，不怕冻坏膝盖？
+	E:\xmly\静说日本\160123 【周末福利】日本女孩冬天爱穿短裙，不怕冻坏膝盖？.m4a
+		 track_id: 811
+		{804: 1, 805: 1, 806: 1, 807: 1, 808: 1, 809: 1, 810: 1, 811: 1}
+	【周末福利】爸爸要给我洗澡了——日本父女共浴文化揭秘 http://audio.xmcdn.com/group9/M00/E0/BB/wKgDZlaPhIGAKa4IAB-Sw48-0L8925.m4a http://audio.xmcdn.com/group9/M00/E0/BB/wKgDZlaPhIWSb2-lAFKzvaCnvT8255.m4a 0
+track_title: <type 'unicode'> 【周末福利】爸爸要给我洗澡了——日本父女共浴文化揭秘
+	E:\xmly\静说日本\160108 【周末福利】爸爸要给我洗澡了——日本父女共浴文化揭秘.m4a
+		 track_id: 812
+		{804: 1, 805: 1, 806: 1, 807: 1, 808: 1, 809: 1, 810: 1, 811: 1, 812: 1}
+	【第二十三期】“东日本大地震”五周年祭：那些难民还好吗？ http://audio.xmcdn.com/group12/M0B/1E/66/wKgDXFbj50aAphusACrgpvRCBG0873.m4a http://audio.xmcdn.com/group12/M08/1E/4B/wKgDW1bj503ygjjvAHBSEFYt04Q886.m4a 0
+track_title: <type 'unicode'> 【第二十三期】“东日本大地震”五周年祭：那些难民还好吗？
+	E:\xmly\静说日本\160312 【第二十三期】“东日本大地震”五周年祭：那些难民还好吗？.m4a
+		 track_id: 813
+		{804: 1, 805: 1, 806: 1, 807: 1, 808: 1, 809: 1, 810: 1, 811: 1, 812: 1, 813: 1}
+	【特别节目】日本前首相鸠山为何点赞中国经济（附独家中文拜年原声） http://audio.xmcdn.com/group16/M07/04/30/wKgDbFbESMORjZ71ACe8_L3qoug011.m4a http://audio.xmcdn.com/group16/M07/04/30/wKgDbFbESM7Rba0CAGgXf44fg_o845.m4a 0
+track_title: <type 'unicode'> 【特别节目】日本前首相鸠山为何点赞中国经济（附独家中文拜年原声）
+	E:\xmly\静说日本\160217 【特别节目】日本前首相鸠山为何点赞中国经济（附独家中文拜年原声）.m4a
+		 track_id: 814
+		{804: 1, 805: 1, 806: 1, 807: 1, 808: 1, 809: 1, 810: 1, 811: 1, 812: 1, 813: 1, 814: 1}
+	【周末福利】与艺妓一起喝酒，你可以去京都试试 http://audio.xmcdn.com/group16/M00/E7/17/wKgDalabCBmAq3CkACkhpHYPyJE760.m4a http://audio.xmcdn.com/group16/M06/E6/F3/wKgDbFabCB7xk-4cAGu-CG3Ypk8549.m4a 0
+track_title: <type 'unicode'> 【周末福利】与艺妓一起喝酒，你可以去京都试试
+	E:\xmly\静说日本\160117 【周末福利】与艺妓一起喝酒，你可以去京都试试.m4a
+		 track_id: 815
+		{804: 1, 805: 1, 806: 1, 807: 1, 808: 1, 809: 1, 810: 1, 811: 1, 812: 1, 813: 1, 814: 1, 815: 1}
+	【第一期】安倍为何让日本如此不安？ http://audio.xmcdn.com/group10/M0B/CB/26/wKgDZ1Z1JXSwVqsaACf10kyimH4218.m4a http://audio.xmcdn.com/group13/M09/D0/1B/wKgDXVZ1JE3A5JCUAGitNiQXm7Y548.m4a 0
+track_title: <type 'unicode'> 【第一期】安倍为何让日本如此不安？
+	E:\xmly\静说日本\151219 【第一期】安倍为何让日本如此不安？.m4a
+		 track_id: 816
+		{804: 1, 805: 1, 806: 1, 807: 1, 808: 1, 809: 1, 810: 1, 811: 1, 812: 1, 813: 1, 814: 1, 815: 1, 816: 1}
+	【第十五期】夏普“下嫁”郭台铭，日本人的内心在煎熬 http://audio.xmcdn.com/group8/M07/FC/AF/wKgDYFa1aMDgC40tACfYe1AEaQs358.m4a http://audio.xmcdn.com/group8/M07/FC/B0/wKgDYFa1aMXQNVGbAGhfa8PZ2-4912.m4a 0
+track_title: <type 'unicode'> 【第十五期】夏普“下嫁”郭台铭，日本人的内心在煎熬
+	E:\xmly\静说日本\160206 【第十五期】夏普“下嫁”郭台铭，日本人的内心在煎熬.m4a
+		 track_id: 817
+		{804: 1, 805: 1, 806: 1, 807: 1, 808: 1, 809: 1, 810: 1, 811: 1, 812: 1, 813: 1, 814: 1, 815: 1, 816: 1, 817: 1}
+	【第二十二期】日本美女不嫁富豪，她们的择偶标准是什么？ http://audio.xmcdn.com/group9/M07/1B/74/wKgDZlbgDzGya3ZOAB37wSn8vE8310.m4a http://audio.xmcdn.com/group13/M07/1B/A2/wKgDXVbgDxyR4K0FAE6JT9btBsI733.m4a 0
+track_title: <type 'unicode'> 【第二十二期】日本美女不嫁富豪，她们的择偶标准是什么？
+	E:\xmly\静说日本\160309 【第二十二期】日本美女不嫁富豪，她们的择偶标准是什么？.m4a
+		 track_id: 818
+		{804: 1, 805: 1, 806: 1, 807: 1, 808: 1, 809: 1, 810: 1, 811: 1, 812: 1, 813: 1, 814: 1, 815: 1, 816: 1, 817: 1, 818: 1}
+	【第十八期】住宅小区破围墙？听听日本人是怎么做的 http://audio.xmcdn.com/group8/M03/0B/26/wKgDYFbNgB2zHC7SAB9fzlRNtSs137.m4a http://audio.xmcdn.com/group8/M03/0B/22/wKgDYVbNgCSxzlI1AFIs92CJ-ls910.m4a 0
+track_title: <type 'unicode'> 【第十八期】住宅小区破围墙？听听日本人是怎么做的
+	E:\xmly\静说日本\160224 【第十八期】住宅小区破围墙？听听日本人是怎么做的.m4a
+		 track_id: 819
+		{804: 1, 805: 1, 806: 1, 807: 1, 808: 1, 809: 1, 810: 1, 811: 1, 812: 1, 813: 1, 814: 1, 815: 1, 816: 1, 817: 1, 818: 1, 819: 1}
+	【第二十四期】日本百年企业的生存秘密 http://audio.xmcdn.com/group12/M04/22/C6/wKgDW1bpEBaCV1e0ACMr44sKOVA677.m4a http://audio.xmcdn.com/group14/M00/24/62/wKgDY1bpEBzgkONoAFwfO3TrkS0605.m4a 0
+track_title: <type 'unicode'> 【第二十四期】日本百年企业的生存秘密
+	E:\xmly\静说日本\160316 【第二十四期】日本百年企业的生存秘密.m4a
+		 track_id: 820
+		{804: 1, 805: 1, 806: 1, 807: 1, 808: 1, 809: 1, 810: 1, 811: 1, 812: 1, 813: 1, 814: 1, 815: 1, 816: 1, 817: 1, 818: 1, 819: 1, 820: 1}
+	【第二十期】2016中日关系展望：送给安倍这几句话 http://audio.xmcdn.com/group8/M0B/12/CF/wKgDYFbWghXzqIhEAClQ7J37PP8167.m4a http://audio.xmcdn.com/group8/M0B/12/CF/wKgDYFbWghjhVGvHAGw6uOFVOks118.m4a 0
+track_title: <type 'unicode'> 【第二十期】2016中日关系展望：送给安倍这几句话
+	E:\xmly\静说日本\160302 【第二十期】2016中日关系展望：送给安倍这几句话.m4a
+		 track_id: 821
+		{804: 1, 805: 1, 806: 1, 807: 1, 808: 1, 809: 1, 810: 1, 811: 1, 812: 1, 813: 1, 814: 1, 815: 1, 816: 1, 817: 1, 818: 1, 819: 1, 820: 1, 821: 1}
+	【周末福利】日本人现在都买什么车？ http://audio.xmcdn.com/group14/M0A/08/47/wKgDZFbH2eWzrelhACGJPuA8Lg0658.m4a http://audio.xmcdn.com/group14/M0A/08/47/wKgDZFbH2ejRj0ZCAFfXbof9AjE280.m4a 0
+track_title: <type 'unicode'> 【周末福利】日本人现在都买什么车？
+	E:\xmly\静说日本\160220 【周末福利】日本人现在都买什么车？.m4a
+		 track_id: 822
+		{804: 1, 805: 1, 806: 1, 807: 1, 808: 1, 809: 1, 810: 1, 811: 1, 812: 1, 813: 1, 814: 1, 815: 1, 816: 1, 817: 1, 818: 1, 819: 1, 820: 1, 821: 1, 822: 1}
+	【第十期】重大事故救援，日本官员为何不去现场 http://audio.xmcdn.com/group14/M05/EA/F3/wKgDZFafIFSgUWNvACWDW9wx_u4742.m4a http://audio.xmcdn.com/group9/M00/EA/19/wKgDYlafIFnzLBC-AGJDx56BXe4465.m4a 0
+track_title: <type 'unicode'> 【第十期】重大事故救援，日本官员为何不去现场
+	E:\xmly\静说日本\160120 【第十期】重大事故救援，日本官员为何不去现场.m4a
+		 track_id: 823
+		{804: 1, 805: 1, 806: 1, 807: 1, 808: 1, 809: 1, 810: 1, 811: 1, 812: 1, 813: 1, 814: 1, 815: 1, 816: 1, 817: 1, 818: 1, 819: 1, 820: 1, 821: 1, 822: 1, 823: 1}
+	【第五期】他们真的比我们传统吗？听听日本青年如何过新年 http://audio.xmcdn.com/group7/M08/DC/34/wKgDX1aGBX2DLsgQACUF3bP7EYY187.m4a http://audio.xmcdn.com/group7/M08/DC/29/wKgDWlaGBYKDthbCAGD5gzzUpLQ728.m4a 0
+track_title: <type 'unicode'> 【第五期】他们真的比我们传统吗？听听日本青年如何过新年
+	E:\xmly\静说日本\160101 【第五期】他们真的比我们传统吗？听听日本青年如何过新年.m4a
+		 track_id: 824
+		{804: 1, 805: 1, 806: 1, 807: 1, 808: 1, 809: 1, 810: 1, 811: 1, 812: 1, 813: 1, 814: 1, 815: 1, 816: 1, 817: 1, 818: 1, 819: 1, 820: 1, 821: 1, 822: 1, 823: 1, 824: 1}
+	【第三期】色与不色之间：揭秘日本酒吧女几大“潜规则” http://audio.xmcdn.com/group16/M03/D4/E6/wKgDbFZ8s8rgrWiJACAFGh0jKSU032.m4a http://audio.xmcdn.com/group16/M07/D4/F7/wKgDalZ8s82CmYOMAFPe46hn064928.m4a 0
+track_title: <type 'unicode'> 【第三期】色与不色之间：揭秘日本酒吧女几大“潜规则”
+	E:\xmly\静说日本\151225 【第三期】色与不色之间：揭秘日本酒吧女几大“潜规则”.m4a
+		 track_id: 825
+		{804: 1, 805: 1, 806: 1, 807: 1, 808: 1, 809: 1, 810: 1, 811: 1, 812: 1, 813: 1, 814: 1, 815: 1, 816: 1, 817: 1, 818: 1, 819: 1, 820: 1, 821: 1, 822: 1, 823: 1, 824: 1, 825: 1}
+	【第四期】政府补贴数百万元，日本女人为何还不愿生二孩 http://audio.xmcdn.com/group11/M08/E4/D3/wKgDbVaDTMHAx1LcACI9SOG39R8088.m4a http://audio.xmcdn.com/group11/M08/CB/D5/wKgDa1aDT

@@ -7,6 +7,7 @@
 # url = 'https://www.youtube.com/watch?v=kMLWDbyjfq4'
 # ul = 'https://www.youtube.com/watch?v=42CYiUtGafQ'
 url = 'https://www.youtube.com/watch?v=hzTZaa4ORKw'
+url = 'https://www.youtube.com/watch?v=_QzsIkQlGgI'
 
 
 ydl_opts = {
