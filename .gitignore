@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿# no .cfg files
 *.cfg
 *.mp3
@@ -6,6 +5,9 @@
 *.mkv
 *.wav
 *.mp4
+*.flv
+
+
 =======
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -68,4 +70,4 @@ docs/_build/
 
 # PyBuilder
 target/
->>>>>>> 18ecdd116879a9c667cb97423e162481f772e982
+
