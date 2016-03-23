@@ -66,6 +66,8 @@ The Flask Mega-Tutorial](http://blog.miguelgrinberg.com/post/the-flask-mega-tuto
 ## Create view function
     * *app/views.py*
     ```
+        from app import app
+        
         @app.route('/')
         @app.route('/index')
         def index():
