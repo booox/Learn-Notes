@@ -242,7 +242,7 @@ The Flask Mega-Tutorial](http://blog.miguelgrinberg.com/post/the-flask-mega-tuto
     
     * We use *block* control statement.
 * Modify *index.html* template to **inherit** from *base.html*.
-    * *app/templates/index.html*
+    * *app/templates/index.html*vi 
     ```
         {% extends "base.html" %}
         {% block content %}
@@ -257,8 +257,8 @@ The Flask Mega-Tutorial](http://blog.miguelgrinberg.com/post/the-flask-mega-tuto
 # Part III: Web Forms
 
 ## Configuration
-
 * To handle our web forms we are going to use the *Flask-WTF* extension.
+    * `$ pip install flask-wtf`
 * Many Flask extensions require some amount of configuration.
 * So we are going to setup a configuration file inside our root *microblog* folder.
 * *microblog/config.py*
