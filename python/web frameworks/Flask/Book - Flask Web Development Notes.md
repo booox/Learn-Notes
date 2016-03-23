@@ -413,7 +413,8 @@
         basedir = os.path.abspath(os.path.dirname(__file__))
 
         SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db')
-        SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')    
+        SQLALCHEMY_COMMIT_ON_TEARDOWN = True
+        # SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')    
     ```
     * The *SQLALCHEMY_DATABASE_URI* is required by the Flask-SQLAlchemy extension. This is the path of our database file.
     * The *SQLALCHEMY_MIGRATE_REPO* is the folder where we will store the SQLAlchemy-migrate data files.
@@ -428,10 +429,12 @@
         app.config.from_object('config')
         db = SQLAlchemy(app)
 
-        from app import views, models    
+        from app import views    
+        from app import models    
     ```
     * We created a *db* object that will be our database.
     * We also imported a new module called *models* .
+    * NOTICE: `from app import views` MUST be in the end of the script for the reason of circular reference.
 
 ## Model Definition
 * There are three fields: *id* , *nickname* , *email* .
@@ -439,20 +442,114 @@
     ```
         from app import db
 
-        class User(db.Model):
+        class Role(db.Model):
+            __tablename__ = 'roles'
             id = db.Column(db.Integer, primary_key=True)
-            nickname = db.Column(db.String(64), index=True, unique=True)
-            email = db.Column(db.String(120), index=True, unique=True)
+            name = db.Column(db.String(64), unique=True)
 
             def __repr__(self):
-                return '<User %r>' % (self.nickname)    
+                return '<Role %r>' % (self.name)    
+                
+        class User(db.Model):
+            __tablename__ = 'users'
+            id = db.Column(db.Integer, primary_key=True)
+            username = db.Column(db.String(64), unique=True, index=True)
+            
+            def __repr__(self):
+                return '<User %r>' % (self.username)
     ```
+    * The *__tablename__* class variable defines the name of the table. 
+    * Most common SQLAlchemy column types:
+        * *Integer* , int, Regular integer, 32bits
+        * *SmallInteger* , int, Short-range integer, 16bits
+        * *BigInteger* , int or long, Unlimited precision integer
+        * *Float* , float, Floating-point number
+        * *Numeric* , decimal.Decimal, Fixed-point number
+        * *String* , str
+        * *Text* , str
+        * *Unicode* , unicode
+        * *UnicodeText* , unicode
+        * *Boolean* , bool
+        * *Date* , datetime.date
+        * *Time* , datetime.time
+        * *DateTime* , datetime.datetime
+        * *Interval* , datetime.timedelta
+        * *Enum* , str
+        * *PickleType* , Any Python object
+        * *LargeBinary* , str
+    * Most common SQLAlchemy column options:
+        * *primary_key*
+        * *unique*      do not allow duplicate values
+        * *index*       create an index for this column, so that queries are more efficient.
+        * *nullable*    True: allow empty values for this column. False: not allow.
+        * *default*     Define a default value for the column.
     * The *__repr__* method tells Python how to print objects of this class. 
-    * We will use this for debugging.
+        * We will use this for debugging and testing
+    
+## Relationships
+* This is a *one-to-many* relationshiop from roles to users
+    * Because one role belongs to many users
+    * And users have only one role.
+* Relationships
+    ```
+    class Role(db.Model):
+        # ...
+        users = db.relationship('User', backref='role')
+    class User(db.Model):
+        # ...
+        role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))    
+    ```
+    
+* *app/models.py*
+    ```
+        from app import db
 
+        class Role(db.Model):
+            __tablename__ = 'roles'
+            id = db.Column(db.Integer, primary_key=True)
+            name = db.Column(db.String(64), unique=True)
+            users = db.relationship('User', backref='role')
 
+            def __repr__(self):
+                return '<Role %r>' % (self.name)    
+                
+        class User(db.Model):
+            __tablename__ = 'users'
+            id = db.Column(db.Integer, primary_key=True)
+            username = db.Column(db.String(64), unique=True, index=True)
+            role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
+            
+            def __repr__(self):
+                return '<User %r>' % (self.username)
+    ```
 
+    * Common SQLAlchemy relationship options
+        * *backref* : back reference
+        * *primaryjoin* : 
+        * P57
 
+## Database Operations
+
+### Creating the Tables
+* The very first thing to do is to instruct Flask-SQLAlchemy to create a database based on the model classes.
+* The *db.create_all()* function does this:
+    ```
+        (venv) $ python hello.py shell
+        >>> from hello import db
+        >>> db.create_all()
+    ```
+    * You will now see a new file there called *data.sqlite*
+* The *db.create_all()* function will not re-create or update a database table if it already exists in the database.
+    * The brute-force solution
+        * remove the old tables first:
+            ```
+                >>> db.drop_all()
+                >>> db.create_all()
+            ```
+    * A better solution:
+        ```
+        
+        ```
 
 
 

@@ -16955,3 +16955,309 @@ track_title: <type 'unicode'> 【第三期】色与不色之间：揭秘日本�
 		 track_id: 825
 		{804: 1, 805: 1, 806: 1, 807: 1, 808: 1, 809: 1, 810: 1, 811: 1, 812: 1, 813: 1, 814: 1, 815: 1, 816: 1, 817: 1, 818: 1, 819: 1, 820: 1, 821: 1, 822: 1, 823: 1, 824: 1, 825: 1}
 	【第四期】政府补贴数百万元，日本女人为何还不愿生二孩 http://audio.xmcdn.com/group11/M08/E4/D3/wKgDbVaDTMHAx1LcACI9SOG39R8088.m4a http://audio.xmcdn.com/group11/M08/CB/D5/wKgDa1aDT
+Enter a zhubo, album or sound url:http://www.ximalaya.com/23687226/album/2714949/
+Album  doesn't in db: 23687226 /album/ 2714949
+http://www.ximalaya.com/23687226/album/2714949/
+	 Start getItemsOnPages _type=  albumSound From :  http://www.ximalaya.com/23687226/album/2714949/
+	 getItemsOnPages retrieve the first page, total: 1
+	 getItemsOnPages retrive the first page done.
+	 getItemsOnPages retrive multi pages Done.
+
+	 getItemsOnPages Done : get  albumSound from 1 pages
+Write New Album start. 23687226 /album/ 2714949
+Write New Album Done. 23687226 /album/ 2714949
+Write Tracks of the Album Start.
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/8582904/
+	Track  doesn't in db: 23687226 /sound/ 8582904
+	Write New Track start. 23687226 /sound/ 8582904
+	Write New Track Done. 23687226 /sound/ 8582904
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/8582904/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/8582848/
+	Track  doesn't in db: 23687226 /sound/ 8582848
+	Write New Track start. 23687226 /sound/ 8582848
+	Write New Track Done. 23687226 /sound/ 8582848
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/8582848/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/8484868/
+	Track  doesn't in db: 23687226 /sound/ 8484868
+	Write New Track start. 23687226 /sound/ 8484868
+	Write New Track Done. 23687226 /sound/ 8484868
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/8484868/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/7438468/
+	Track  doesn't in db: 23687226 /sound/ 7438468
+	Write New Track start. 23687226 /sound/ 7438468
+	Write New Track Done. 23687226 /sound/ 7438468
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/7438468/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/8484943/
+	Track  doesn't in db: 23687226 /sound/ 8484943
+	Write New Track start. 23687226 /sound/ 8484943
+	Write New Track Done. 23687226 /sound/ 8484943
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/8484943/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/8582867/
+	Track  doesn't in db: 23687226 /sound/ 8582867
+	Write New Track start. 23687226 /sound/ 8582867
+	Write New Track Done. 23687226 /sound/ 8582867
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/8582867/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/8484862/
+	Track  doesn't in db: 23687226 /sound/ 8484862
+	Write New Track start. 23687226 /sound/ 8484862
+	Write New Track Done. 23687226 /sound/ 8484862
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/8484862/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/8485840/
+	Track  doesn't in db: 23687226 /sound/ 8485840
+	Write New Track start. 23687226 /sound/ 8485840
+	Write New Track Done. 23687226 /sound/ 8485840
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/8485840/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/8484925/
+	Track  doesn't in db: 23687226 /sound/ 8484925
+	Write New Track start. 23687226 /sound/ 8484925
+	Write New Track Done. 23687226 /sound/ 8484925
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/8484925/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/8484885/
+	Track  doesn't in db: 23687226 /sound/ 8484885
+	Write New Track start. 23687226 /sound/ 8484885
+	Write New Track Done. 23687226 /sound/ 8484885
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/8484885/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/8484909/
+	Track  doesn't in db: 23687226 /sound/ 8484909
+	Write New Track start. 23687226 /sound/ 8484909
+	Write New Track Done. 23687226 /sound/ 8484909
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/8484909/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/8484851/
+	Track  doesn't in db: 23687226 /sound/ 8484851
+	Write New Track start. 23687226 /sound/ 8484851
+	Write New Track Done. 23687226 /sound/ 8484851
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/8484851/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/8582894/
+	Track  doesn't in db: 23687226 /sound/ 8582894
+	Write New Track start. 23687226 /sound/ 8582894
+	Write New Track Done. 23687226 /sound/ 8582894
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/8582894/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/8484878/
+	Track  doesn't in db: 23687226 /sound/ 8484878
+	Write New Track start. 23687226 /sound/ 8484878
+	Write New Track Done. 23687226 /sound/ 8484878
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/8484878/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/11069579/
+	Track  doesn't in db: 23687226 /sound/ 11069579
+	Write New Track start. 23687226 /sound/ 11069579
+	Write New Track Done. 23687226 /sound/ 11069579
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/11069579/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/13061557/
+	Track  doesn't in db: 23687226 /sound/ 13061557
+	Write New Track start. 23687226 /sound/ 13061557
+	Write New Track Done. 23687226 /sound/ 13061557
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/13061557/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/8484936/
+	Track  doesn't in db: 23687226 /sound/ 8484936
+	Write New Track start. 23687226 /sound/ 8484936
+	Write New Track Done. 23687226 /sound/ 8484936
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/8484936/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/8485835/
+	Track  doesn't in db: 23687226 /sound/ 8485835
+	Write New Track start. 23687226 /sound/ 8485835
+	Write New Track Done. 23687226 /sound/ 8485835
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/8485835/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/8582858/
+	Track  doesn't in db: 23687226 /sound/ 8582858
+	Write New Track start. 23687226 /sound/ 8582858
+	Write New Track Done. 23687226 /sound/ 8582858
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/8582858/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/10099134/
+	Track  doesn't in db: 23687226 /sound/ 10099134
+	Write New Track start. 23687226 /sound/ 10099134
+	Write New Track Done. 23687226 /sound/ 10099134
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/10099134/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/8485851/
+	Track  doesn't in db: 23687226 /sound/ 8485851
+	Write New Track start. 23687226 /sound/ 8485851
+	Write New Track Done. 23687226 /sound/ 8485851
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/8485851/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/8484932/
+	Track  doesn't in db: 23687226 /sound/ 8484932
+	Write New Track start. 23687226 /sound/ 8484932
+	Write New Track Done. 23687226 /sound/ 8484932
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/8484932/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/8484893/
+	Track  doesn't in db: 23687226 /sound/ 8484893
+	Write New Track start. 23687226 /sound/ 8484893
+	Write New Track Done. 23687226 /sound/ 8484893
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/8484893/
+
+start write the track into db. 
+	http://www.ximalaya.com/23687226/sound/8484898/
+	Track  doesn't in db: 23687226 /sound/ 8484898
+	Write New Track start. 23687226 /sound/ 8484898
+	Write New Track Done. 23687226 /sound/ 8484898
+the track write into db done. 
+	http://www.ximalaya.com/23687226/sound/8484898/
+Write Tracks of the Album Done.
+
+	 this album has  24 tracks.
+
+	 this album has  -1 tracks doesn't download.
+Start download track...
+	Lifehouse - It Is What It Is http://audio.xmcdn.com/group8/M0B/69/DA/wKgDYFXntYfDhFSJAAmEYMduVIw448.m4a http://audio.xmcdn.com/group9/M08/69/B3/wKgDZlXntQ_xw_SGABjoA0uRjwQ855.m4a 0
+track_title: <type 'unicode'> Lifehouse - It Is What It Is
+	E:\xmly\无限单曲循环的经典英文歌曲\150903 Lifehouse - It Is What It Is.m4a
+		 track_id: 828
+		{828: 1}
+	Atomic Kitten - Nothing In The World http://audio.xmcdn.com/group16/M03/69/E6/wKgDbFXnslrhmkjKAAtGA8gI5nI627.m4a http://audio.xmcdn.com/group16/M03/69/D2/wKgDalXnsj2gPLjnAB2C53uDDgQ875.m4a 0
+track_title: <type 'unicode'> Atomic Kitten - Nothing In The World
+	E:\xmly\无限单曲循环的经典英文歌曲\150903 Atomic Kitten - Nothing In The World.m4a
+		 track_id: 829
+		{828: 1, 829: 1}
+	david guetta - without you http://audio.xmcdn.com/group12/M0B/65/74/wKgDXFXfOoLCTSDjAAnW3B_2GlA605.m4a http://audio.xmcdn.com/group12/M0B/65/74/wKgDXFXfOoOSIHTyABm_1bC4Guo899.m4a 0
+track_title: <type 'unicode'> david guetta - without you
+	E:\xmly\无限单曲循环的经典英文歌曲\150828 david guetta - without you.m4a
+		 track_id: 830
+		{828: 1, 829: 1, 830: 1}
+	Lisa Miskovsky - A Brand New Day http://audio.xmcdn.com/group13/M07/2B/16/wKgDXVWHeXqCPBgYAAqdtfCnQOU979.m4a http://audio.xmcdn.com/group13/M07/2B/16/wKgDXVWHeXuhrjSAABvJlNSplCE791.m4a 0
+track_title: <type 'unicode'> Lisa Miskovsky - A Brand New Day
+	E:\xmly\无限单曲循环的经典英文歌曲\150622 Lisa Miskovsky - A Brand New Day.m4a
+		 track_id: 831
+		{828: 1, 829: 1, 830: 1, 831: 1}
+	Céline Dion - My Heart Will Go On http://audio.xmcdn.com/group14/M01/65/BC/wKgDZFXfPQ_jMA-JAA0hWpMxnRw984.m4a http://audio.xmcdn.com/group14/M01/65/EC/wKgDY1XfPVqSdxWqACJgRdt1J2o651.m4a 0
+track_title: <type 'unicode'> Céline Dion - My Heart Will Go On
+	E:\xmly\无限单曲循环的经典英文歌曲\150828 Céline Dion - My Heart Will Go On.m4a
+		 track_id: 832
+		{832: 1, 828: 1, 829: 1, 830: 1, 831: 1}
+	Delta Goodrem - Lost Without You http://audio.xmcdn.com/group7/M00/6A/1B/wKgDX1Xns1-SkYOfAAvSG2qPGWA127.m4a http://audio.xmcdn.com/group7/M00/6A/1B/wKgDX1Xns2Hxa_NiAB7w2cVrt8g504.m4a 0
+track_title: <type 'unicode'> Delta Goodrem - Lost Without You
+	E:\xmly\无限单曲循环的经典英文歌曲\150903 Delta Goodrem - Lost Without You.m4a
+		 track_id: 833
+		{832: 1, 833: 1, 828: 1, 829: 1, 830: 1, 831: 1}
+	Timbaland - Apologize http://audio.xmcdn.com/group16/M0A/66/23/wKgDbFXfOlahkSrEAAjg9IecSXI530.m4a http://audio.xmcdn.com/group14/M08/65/BB/wKgDZFXfOnbCkQPWABc8pQCAcOw178.m4a 0
+track_title: <type 'unicode'> Timbaland - Apologize
+	E:\xmly\无限单曲循环的经典英文歌曲\150828 Timbaland - Apologize.m4a
+		 track_id: 834
+		{832: 1, 833: 1, 834: 1, 828: 1, 829: 1, 830: 1, 831: 1}
+	Jason Walker - Down http://audio.xmcdn.com/group14/M01/65/F8/wKgDY1XfoBjCS6cEAAuRpkUTqYs517.m4a http://audio.xmcdn.com/group16/M0A/66/1D/wKgDalXfn5nzqJP7AB5I_Qvg1yc205.m4a 0
+track_title: <type 'unicode'> Jason Walker - Down
+	E:\xmly\无限单曲循环的经典英文歌曲\150828 Jason Walker - Down.m4a
+		 track_id: 835
+		{832: 1, 833: 1, 834: 1, 835: 1, 828: 1, 829: 1, 830: 1, 831: 1}
+	Laurel Music-This Night And The Next-Empty Feeling http://audio.xmcdn.com/group16/M0B/66/10/wKgDalXfPDTQe87JAAZDbEVSiOE995.m4a http://audio.xmcdn.com/group16/M0B/66/10/wKgDalXfPDXBDx-oABBiT2nI_Rk530.m4a 0
+track_title: <type 'unicode'> Laurel Music-This Night And The Next-Empty Feeling
+	E:\xmly\无限单曲循环的经典英文歌曲\150828 Laurel Music-This Night And The Next-Empty Feeling.m4a
+		 track_id: 836
+		{832: 1, 833: 1, 834: 1, 835: 1, 836: 1, 828: 1, 829: 1, 830: 1, 831: 1}
+	Kelly Sweet - We Are One http://audio.xmcdn.com/group15/M05/65/FA/wKgDZVXfO2bjztNnAAozE7tT7FQ836.m4a http://audio.xmcdn.com/group15/M05/65/FA/wKgDZVXfO2qA6LQlABqyndDKmko851.m4a 0
+track_title: <type 'unicode'> Kelly Sweet - We Are One
+	E:\xmly\无限单曲循环的经典英文歌曲\150828 Kelly Sweet - We Are One.m4a
+		 track_id: 837
+		{832: 1, 833: 1, 834: 1, 835: 1, 836: 1, 837: 1, 828: 1, 829: 1, 830: 1, 831: 1}
+	sarah mclachlan-Surfacing-Building A Mystery http://audio.xmcdn.com/group7/M07/66/5B/wKgDX1XfPBCDQNFKAAurVdjxmC0105.m4a http://audio.xmcdn.com/group7/M07/66/43/wKgDWlXfPCmBCyYyAB6MZU4qitI765.m4a 0
+track_title: <type 'unicode'> sarah mclachlan-Surfacing-Building A Mystery
+	E:\xmly\无限单曲循环的经典英文歌曲\150828 sarah mclachlan-Surfacing-Building A Mystery.m4a
+		 track_id: 838
+		{832: 1, 833: 1, 834: 1, 835: 1, 836: 1, 837: 1, 838: 1, 828: 1, 829: 1, 830: 1, 831: 1}
+	Tone Damli Aaberge - Stupid http://audio.xmcdn.com/group10/M05/65/57/wKgDaVXfOoGyq1PmAAgJW3aUg3k544.m4a http://audio.xmcdn.com/group10/M05/65/57/wKgDaVXfOoLwkrBCABUH11iL3P0233.m4a 0
+track_title: <type 'unicode'> Tone Damli Aaberge - Stupid
+	E:\xmly\无限单曲循环的经典英文歌曲\150828 Tone Damli Aaberge - Stupid.m4a
+		 track_id: 839
+		{832: 1, 833: 1, 834: 1, 835: 1, 836: 1, 837: 1, 838: 1, 839: 1, 828: 1, 829: 1, 830: 1, 831: 1}
+	Faith Hill - There You'll Be http://audio.xmcdn.com/group14/M06/69/AC/wKgDY1XntTfyS6OAAAqKfnBoq4M863.m4a http://audio.xmcdn.com/group14/M06/69/AC/wKgDY1XntTjj0xGmABuXh0PUMZI406.m4a 0
+track_title: <type 'unicode'> Faith Hill - There You'll Be
+	E:\xmly\无限单曲循环的经典英文歌曲\150903 Faith Hill - There You'll Be.m4a
+		 track_id: 840
+		{832: 1, 833: 1, 834: 1, 835: 1, 836: 1, 837: 1, 838: 1, 839: 1, 840: 1, 828: 1, 829: 1, 830: 1, 831: 1}
+	Kim Taylor - I Am You http://audio.xmcdn.com/group11/M0B/59/7A/wKgDa1XfOwDDcFdJAAzvazmqdIA166.m4a http://audio.xmcdn.com/group11/M0B/72/61/wKgDbVXfOp-TzfsmACHdtiyxvcA623.m4a 0
+track_title: <type 'unicode'> Kim Taylor - I Am You
+	E:\xmly\无限单曲循环的经典英文歌曲\150828 Kim Taylor - I Am You.m4a
+		 track_id: 841
+		{832: 1, 833: 1, 834: 1, 835: 1, 836: 1, 837: 1, 838: 1, 839: 1, 840: 1, 841: 1, 828: 1, 829: 1, 830: 1, 831: 1}
+	Adele - Set Fire To The Rain http://audio.xmcdn.com/group11/M01/C8/28/wKgDa1Z9Rh2xEtMFAAtnt9YHuNA868.m4a http://audio.xmcdn.com/group10/M04/D1/26/wKgDZ1Z9RiGi8s3SAB3b7Teg7r0117.m4a 0
+track_title: <type 'unicode'> Adele - Set Fire To The Rain
+	E:\xmly\无限单曲循环的经典英文歌曲\151225 Adele - Set Fire To The Rain.m4a
+		 track_id: 842
+		{832: 1, 833: 1, 834: 1, 835: 1, 836: 1, 837: 1, 838: 1, 839: 1, 840: 1, 841: 1, 842: 1, 828: 1, 829: 1, 830: 1, 831: 1}
+	Alan Walker - Fade http://audio.xmcdn.com/group10/M00/19/12/wKgDZ1bixWGgC_DdAAx1c-V8v6s026.m4a http://audio.xmcdn.com/group12/M0B/1D/6C/wKgDW1bixUPzU93dACCckuv7RzE410.m4a 0
+track_title: <type 'unicode'> Alan Walker - Fade
+	E:\xmly\无限单曲循环的经典英文歌曲\160311 Alan Walker - Fade.m4a
+		 track_id: 843
+		{832: 1, 833: 1, 834: 1, 835: 1, 836: 1, 837: 1, 838: 1, 839: 1, 840: 1, 841: 1, 842: 1, 843: 1, 828: 1, 829: 1, 830: 1, 831: 1}
+	Britney Spears - Girl in the Mirror http://audio.xmcdn.com/group10/M09/65/50/wKgDZ1XfPPHzHyfGAApDVZDgefw891.m4a http://audio.xmcdn.com/group10/M09/65/50/wKgDZ1XfPPXTjs77ABrdLR7Lzjk232.m4a 0
+track_title: <type 'unicode'> Britney Spears - Girl in the Mirror
+	E:\xmly\无限单曲循环的经典英文歌曲\150828 Britney Spears - Girl in the Mirror.m4a
+		 track_id: 844
+		{832: 1, 833: 1, 834: 1, 835: 1, 836: 1, 837: 1, 838: 1, 839: 1, 840: 1, 841: 1, 842: 1, 843: 1, 844: 1, 828: 1, 829: 1, 830: 1, 831: 1}
+	Flo Rida - Whistle http://audio.xmcdn.com/group12/M0B/65/82/wKgDXFXfn2KynQFyAAqhIFX5OGU360.m4a http://audio.xmcdn.com/group12/M0B/65/82/wKgDXFXfn2SBlR-xABvScs-FFGA114.m4a 0
+track_title: <type 'unicode'> Flo Rida - Whistle
+	E:\xmly\无限单曲循环的经典英文歌曲\150828 Flo Rida - Whistle.m4a
+		 track_id: 845
+		{832: 1, 833: 1, 834: 1, 835: 1, 836: 1, 837: 1, 838: 1, 839: 1, 840: 1, 841: 1, 842: 1, 843: 1, 844: 1, 845: 1, 828: 1, 829: 1, 830: 1, 831: 1}
+	Delta Goodrem - Born To Try http://audio.xmcdn.com/group13/M03/69/E4/wKgDXlXnspShbNI5AAvbC-q0fB4105.m4a http://audio.xmcdn.com/group13/M03/69/E4/wKgDXlXnspWSfRUnAB8JNHNYN6c457.m4a 0
+track_title: <type 'unicode'> Delta Goodrem - Born To Try
+	E:\xmly\无限单曲循环的经典英文歌曲\150903 Delta Goodrem - Born To Try.m4a
+		 track_id: 846
+		{832: 1, 833: 1, 834: 1, 835: 1, 836: 1, 837: 1, 838: 1, 839: 1, 840: 1, 841: 1, 842: 1, 843: 1, 844: 1, 845: 1, 846: 1, 828: 1, 829: 1, 830: 1, 831: 1}
+	Rolling In The

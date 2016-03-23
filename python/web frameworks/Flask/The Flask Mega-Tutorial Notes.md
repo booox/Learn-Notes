@@ -60,9 +60,12 @@ The Flask Mega-Tutorial](http://blog.miguelgrinberg.com/post/the-flask-mega-tuto
     from flask import Flask
     
     app = Flask(__name__)
+    
     from app import views
     
     ```
+* To avoid circular reference, the *import views* is at the end and not at the beginning of the script.
+
 ## Create view function
     * *app/views.py*
     ```
@@ -606,6 +609,7 @@ The Flask Mega-Tutorial](http://blog.miguelgrinberg.com/post/the-flask-mega-tuto
     ```
     
 * something error: *sqlalchemy.exc.OperationalError near sytax error* *detect unicode returns: %r*
+    near :syntax error
     [SQLAlchemy Engine Configuration](http://docs.sqlalchemy.org/en/latest/core/engines.html)
 
 
