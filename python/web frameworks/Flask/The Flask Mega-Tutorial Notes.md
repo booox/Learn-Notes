@@ -9,6 +9,7 @@ The Flask Mega-Tutorial](http://blog.miguelgrinberg.com/post/the-flask-mega-tuto
 * `$ cd microblog`
 * `$ virtualenv venv`   (已经安装过 *virtualenv* )
 * `$ . venv/bin/activate`
+    * for Windows: `> venv\Scripts\activate`
 ## install Flask
 * `(venv)$ pip install Flask`   (下面省略 *(venv)* )
 ### Linux, OS X or Cygwin

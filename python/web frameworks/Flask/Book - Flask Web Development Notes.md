@@ -1,3 +1,102 @@
+# Preface
+## How to work with the Example Code
+
+* Downloads a project and its entire version history
+    `$ git clone https://github.com/miguelgrinberg/flasky.git`
+    * download source code from Github into a *flasky* folder
+    * that is created in the current directory
+    
+* Switches to the specified branch updateds the working directory
+    `$ git checkout [branch-name]`
+    `$ git checkout 1a`
+    
+* Redo Commits: 
+    * Undoes all commits after [commit], preserving changes locally
+        `$ git reset [commit]`
+    * Discards all history and changes back to the specified commit
+        `$ git reset --hard [commit]`
+
+* Synchronize Changes
+    * Downloads all history from the repository bookmark
+        `$ git fetch [bookmark]`
+    * Combines bookmark's branch into current local branch
+        `$ git merge [bookmark]/[branch]`
+    * Uploads all local branch commits to GitHub
+        `$ git push [alias] [branch]`
+    * Downloads bookmark history and incorporates changes
+        `$ git pull`
+        
+        
+    * Update the commit history and tags
+        ```
+        $ git fetch --all
+        $ git fetch --tags
+        $ git reset --hard origin/master
+        
+        ```
+* Review History
+    * Lists version history for the current branch
+        `$ git log`
+    * Lists version history for a file, including renames
+        `$ git log --follow [file]`
+    * Shows content differences between two branches
+        `$ git diff [first-branch]...[second-branch]`
+        `$ git diff 2a 2b`
+    * Outputs metadata and content changes of the specified commit
+        `$ git show [commit]`
+        
+# Part I. Introduction to Flask
+
+## Chapter 1. Installation
+
+### Using Virtual Environments
+* Check *virtualenv* installed:
+    `$ virtualenv --version`
+* Install *virtualenv*
+    * Ubuntu
+        `$ sudo apt-get install python-virtualenv`
+    * CentOS
+        `$ yum install virtualenv` (?)
+    * Mac OS X
+        `$ sudo easy_install virtualenv`
+    * Windows
+        * first installed *pip* , and then: `pip install virtualenv`
+        * OR: Using easy_install
+            * Go to :  https://bitbucket.org/pypa/setuptools
+            * Run:
+                ```
+                $ python ez_setup.py
+                $ easy_install virtualenv
+                
+                ```
+* Git Clone
+    * Create a folder to host the example code
+    * Git clone
+        ```
+            $ git clone https://github.com/miguelgrinberg/flasky.git
+            $ cd flasky
+            $ git checkout 1a
+        
+        ```
+* Create the Python virtual env
+    ```
+        $ virtualenv venv
+    
+    ```
+* Activate the virtual env
+    * Linux and Mac OS X
+        `$ source venv/bin/activate`
+    * Windows:
+        `$ venv\Scripts\activate`
+        
+    * Note the activation prompt
+        `(venv) $`
+    * Exit the virtual env
+        `$ deactivate`
+    
+### Installing Python Packages with pip 
+        
+
 
 # The Jinja2 Template Engine
 ## Rendering Templates
@@ -418,6 +517,7 @@
     ```
     * The *SQLALCHEMY_DATABASE_URI* is required by the Flask-SQLAlchemy extension. This is the path of our database file.
     * The *SQLALCHEMY_MIGRATE_REPO* is the folder where we will store the SQLAlchemy-migrate data files.
+    * *SQLALCHEMY_COMMIT_ON_TEARDOWN* set to True to enable automatic commits of database changes at the end of each request.
     
 * When we initialize our app we also need to initialize our database.
     * *app/__init__.py*
@@ -483,7 +583,7 @@
         * *index*       create an index for this column, so that queries are more efficient.
         * *nullable*    True: allow empty values for this column. False: not allow.
         * *default*     Define a default value for the column.
-    * The *__repr__* method tells Python how to print objects of this class. 
+    * The *__repr__* method representation that tells Python how to print objects of this class. 
         * We will use this for debugging and testing
     
 ## Relationships
@@ -529,6 +629,8 @@
         * P57
 
 ## Database Operations
+
+* The best way to learn how to work with database models is in a Python shell.
 
 ### Creating the Tables
 * The very first thing to do is to instruct Flask-SQLAlchemy to create a database based on the model classes.
