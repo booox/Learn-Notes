@@ -95,7 +95,145 @@
         `$ deactivate`
     
 ### Installing Python Packages with pip 
+* Install Flask into the virtual env
+    `(env) $ pip install Flask`
+    * Verify Flask was installed correctly
+        ```
+            (env) $ python
+            >>> import flask
+            >>>
+            
+        ```
+## Chapter 2: Basic Application Structure
+
+### Initialization
+* All Flask application must create an *application* *instance* .
+* The web server passes all requests it receives from clients to this object for handling
+* using a protocol called Web Server Gateway Interface (WSGI)
+* The application instance is an object of class **Flask** :
+    ```
+        from flask import Flask
+        app = Flask(__name__)
+    ```
+    * The only required argument to the Flask class constructor is
+        * the name of the main module or package of the application.
+### Routes and View Functions
+
+* Routes:
+    - Client Browser : 
+        - send request to server
+    - Web Server (WSGI): 
+        - send the request to Flask Application Instance
+    - Flask Application Instance
+        - needs to know: what code need to run for each URL requested
+        - keeps a mapping of URLs to Python functions
+        - It is called a *route*
+        - through the *app.route* decorator
+    - Decorator : *@app.route*
+        ```
+            @app.route('/')
+            def index():
+                return '<h1>Hello World!</h1>'        
+        ```
+        - The previous example registers the function index() as the handler for the application¡¯s root URL
+        - The return value of this function, called the *response* , is what the client receives.
+        - Functions like *index()* are called *view* *functions* .
+### View Functions
+
+* Route can also has a dynamic name component
+    * The dynamic components in routes are strings by default
+    ```
+        @app.route('/user/<name>')
+        def user(name):
+            return '<h1>Hello, %s!</h1>' % name
+    
+    ```
+    * Also be defined with a type
+        `@app.route('/user/<int:id>')`
+* Flask supports types *int* , *float* , and path for routes.
+
+### Server Startup
+* The application instance has a *run* method that launches Flask's integrated development web server.
+    ```
+        if __name__ == '__main__':
+            app.run(debug=True)
+    ```
+* Once the server starts up, it goes into a loop that waits for requests and services them.
+    * This loop continues until the application is stopped, for example by hitting Ctrl-C.
+    
+### A Simple Complete Application
+* A Simple Complete Application
+    * *hello.py*
+    ```
+        from flask import Flask
+        app = Flask(__name__)
+        @app.route('/')
+        def index():
+            return '<h1>Hello World!</h1>'
+        if __name__ == '__main__':
+            app.run(debug=True)    
+    ```
+* To run the application, make sure that the *venv* is activated.
+    * Linux : `$ . venv/bin/activate`
+    * Windows : `> venv\Scripts\activate`
+* To launch the application:
+    ```
+        (venv) $ python hello.py
+         * Running on http://127.0.0.1:5000/
+         * Restarting with reloader
+    ```
+* Open your web browser
+    `localhost:5000` or `127.0.0.1:5000`
+
+* Flask application with a dynamic route
+    * *hello.py*
+    ```
+        from flask import Flask
+        app = Flask(__name__)
+        @app.route('/')
+        def index():
+            return '<h1>Hello World!</h1>'
+        @app.route('/user/<name>')
+        def user(name):
+            return '<h1>Hello, %s!</h1>' % name
+        if __name__ == '__main__':
+            app.run(debug=True)
+    
+    ```
+    * To test the dynamic route
+        ` http://localhost:5000/user/Dave`
+
+### The Request-Response Cycle
+#### Application and Request Contexts
+* Flask uses contexts to temporarily make certain objects globally accessible.
+* View functions like the following one can be written
+    ```
+        from flask import request
         
+        @app.route('/')
+        def index():
+            
+            user_agent = request.headers.get('User-Agent')
+            return '<p>Your browser is %s</p>' % user_agent
+    
+    ```
+    * Note how in this view function request is used as if it was a global variable. 
+    * In reality, *request* cannot be a global variable if you consider that in a multithreaded server
+    * each thread needs to see a different object in *request* . 
+    * *Contexts* enable Flask to make certain variables globally accessible to a thread without interfering with the other threads.
+        * A  thread  is  the  smallest  sequence of  instructions  that can be managed independently.
+
+* There are two contexts in Flask: 
+    * the *application* *context*  
+    * and the *request *context* . 
+* Flask context globals
+    * *current_app* : Application context - the active application
+    * *g* : Application context - the application can use for temporary storage during the handling of a request
+        * This variable is reset with each request
+    * *request* : Request context - The request object, 
+        * which encapsulates the contents of a HTTP request sent by the client.
+    * *session* : Request context - The user session
+        *  a dictionary that the application can use to store values that are ¡°remembered¡± between requests
 
 
 # The Jinja2 Template Engine
