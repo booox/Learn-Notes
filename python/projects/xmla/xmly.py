@@ -763,11 +763,17 @@ def m4aToMp3(m4a_path, mp3_path):
         
     
     
-    # convert all the m4a file to mp3 format to mp3 directory
+    # convert all the m4a file to mp3 format, and save in mp3 directory
     
+    # get converted mp3 filenames
+    converted_mp3_filename = [
+        filename[:-4] for filename in os.listdir(mp3_path)
+        ]
+    
+    #
     filenames_m4a = [
         filename for filename in os.listdir(m4a_path)
-        if filename.endswith('.m4a')
+        if filename.endswith('.m4a') and (filename[:-4] not in converted_mp3_filename)
         ]
         
     for filename in filenames_m4a:

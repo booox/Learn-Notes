@@ -851,13 +851,13 @@ added in this case.
     * *PasswordField* :
     * *HiddenField* :
     * ...
-    * ![Table 4-1. WTForms standard HTML fields.jpg](Table 4-1. WTForms standard HTML fields.jpg)
+    * ![Table 4-1. WTForms standard HTML fields.jpg](imgs/Table 4-1. WTForms standard HTML fields.jpg)
 * WTForms built-in validators
     * *Email* : Validates an email address
     * *EqualTo* : useful when requesting a password to be entered twice for confirmation
     * *IPAddress* : Validates an IPv4 network address
     * ...
-    * ![Table 4-2. WTForms validators.jpg](Table 4-2. WTForms validators.jpg)
+    * ![Table 4-2. WTForms validators.jpg](imgs/Table 4-2. WTForms validators.jpg)
     
     
 
@@ -896,8 +896,6 @@ added in this case.
 * In the new version of *hello.py* , the *index()* view function will be rendering the form and also receiving its data.
 * *hello.py* : Route methods
     ```
-    from .forms import NameForm
-    
     @app.route('/', methods=['GET', 'POST'])
     def index():
         name = None
@@ -938,6 +936,7 @@ added in this case.
 * By default, user sessions are stored in client-side cookies that are cryptographiclly signed using the configured *SECRET_KEY*
 
 #### Redirects and user sessions
+* *hello.py* : Redirects and user sessions
     ```
     from flask import Flask, render_template, session, redirect, url_for
     
@@ -959,9 +958,10 @@ added in this case.
 * Flask includes this functionality as a core feature.
     * *flash()* function can be used for this purpose.
 * Flashed message
-    * *app/views.py*
+    * *hello.py* : Flashed message
     ```
         from flask import Flask, render_template, session, redirect, url_for, flash
+        
         @app.route('/', methods=['GET', 'POST'])
         def index():
             form = NameForm()
@@ -982,7 +982,7 @@ added in this case.
 * Flask makes a *get_flashed_messages()* function available to templates to retrieve the messages and render them.
 
 * Flash message rendering
-    * *app/templates/base.html*
+    * *templates/base.html* : Flash message rendering
         ```
         {% extends "bootstrap/base.html" %}
         
@@ -999,7 +999,7 @@ added in this case.
         {% endblock %}
         
         {% block content %}
-        <div class="flash">
+        <div class="container">
             {% for message in get_flashed_messages() %}
             <div class="alert alert-warning">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -1013,32 +1013,28 @@ added in this case.
     
         ```
 
-    * `app/templates/hello.html`
-    
-    ```
-        {% extends "base.html" %}
-        
-        {% import "bootstrap/wtf.html" as wtf %}
-        
-        {% block title %}Hello Page{% endblock %}
-        
-        {% block page_content %}
-            {{ super() }}
-            <div class="page-header">
-                <h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!</h1>
-            </div>
-            {{ wtf.quick_form(form) }}
-        {% endblock %}
-    ```
     
 
 ## Chapter 5. Databases
 
 ## SQL Databases & NoSQL Databases
 
+* The most commonly used databases for web applications are those based on the relational model, also called SQL databases in reference to the Structured Query Language they use. 
+* But in recent years *document-oriented* and *key-value* databases, informally known together as NoSQL databases, have become popular alternatives.
+
+### SQL Databases
+* Relational databases store data in tables, which model the different entities in the application's domain.
+* A table has a fixed number of *columns* and a variable number of *rows*.
+* Tables have a special column called the *primary_key* , which holds a unique identifier for each row stored in the table.
+* Tables can also have columns called *foreign-keys* , which reference the primary key of another row from the same or another table. 
+* These links between rows are called *relationships* and are the foundation of the relational database model.
+
+### NoSQL Databases
+* Databases that do not follow the relational model described in the previous section are collectively referred to as NoSQL databases.
+* One common organization for NoSQL databases uses *collections* instead of *tables* and *documents* instead of *records* . 
 
 
-## Python Database Frameworks
+### Python Database Frameworks
 
 * Python has packages for most database engines, both open source and commercial
     * Flask puts no restrictions on what database packages can be used
@@ -1049,64 +1045,47 @@ added in this case.
 * The chosen database framework for the examples in this book will be *Flask-SQLAlchemy* .
     * The Flask extension wrapper for *SQLAlchemy* .
 
-## Database Management with Flask-SQLAlchemy
+### Database Management with Flask-SQLAlchemy
 * Flask-SQLAlchemy is a Flask extension that simplifies the use of SQLAlchemy inside Flask applications.
     * SQLAlchemy is a powerful relational database framework that supports several database backends.
     * It offers a high-level ORM and low level access to the database¡¯s native SQL functionality.
-### Install Flask-SQLAlchemy
+#### Install Flask-SQLAlchemy
 * `(venv) $ pip install flask-sqlalchemy`
 
-### Flask-SQLAlchemy database URLs
-* In Flask-SQLAlchemy, a database is specified as a URL.
+#### Flask-SQLAlchemy database URLs
+* In Flask-SQLAlchemy, a database is specified as a **URL** .
 * The database URLs for the three most popular database engines.
     * *MySQL*  *mysql://username:password@hostname/database*
     * *Postgres*  *postgresql://username:password@hostname/database*
     * *SQLite(Unix)*  *sqlite:////absolute/path/to/database*
     * *SQLite(Windows)*  *sqlite:///c:/absolute/path/to/database*
-    
-* The URL of the application database must be configured as the key *SQLALCHEMY_DATABASE_URI* in the Flask configuration object.
-* Another useful option is the configuration key *SQLALCHEMY_COMMIT_ON_TEARDOWN*
-    * which can be set to **True** to enable automatic commits of database changes at the end of each request.
+    ![Table 5-1. Flask-SQLAlchemy database URLs.jpg](Table 5-1. Flask-SQLAlchemy database URLs.jpg)
 
-### Initialize and configure a simple SQLite database
-
-* Database configuration
-* *config.py*
+#### Database configuration
+* *hello.py* : Database configuration
     ```
-        import os
-        basedir = os.path.abspath(os.path.dirname(__file__))
-
-        SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db')
-        SQLALCHEMY_COMMIT_ON_TEARDOWN = True
-        # SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')    
-    ```
-    * The *SQLALCHEMY_DATABASE_URI* is required by the Flask-SQLAlchemy extension. This is the path of our database file.
-    * The *SQLALCHEMY_MIGRATE_REPO* is the folder where we will store the SQLAlchemy-migrate data files.
-    * *SQLALCHEMY_COMMIT_ON_TEARDOWN* set to True to enable automatic commits of database changes at the end of each request.
-    
-* When we initialize our app we also need to initialize our database.
-    * *app/__init__.py*
-    ```
-        from flask import Flask
         from flask.ext.sqlalchemy import SQLAlchemy
-
+        
+        basedir = os.path.abspath(os.path.dirname(__file__))
+        
         app = Flask(__name__)
-        app.config.from_object('config')
+        app.config['SQLALCHEMY_DATABASE_URI'] =\
+            'sqlite:///' + os.path.join(basedir, 'data.sqlite')
+        app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
+        
         db = SQLAlchemy(app)
-
-        from app import views    
-        from app import models    
+    
     ```
-    * We created a *db* object that will be our database.
-    * We also imported a new module called *models* .
-    * NOTICE: `from app import views` MUST be in the end of the script for the reason of circular reference.
+    * The URL of the application database must be configured as the key *SQLALCHEMY_DATABASE_URI* in the Flask configuration object.
+    * Another useful option is the configuration key *SQLALCHEMY_COMMIT_ON_TEARDOWN*
+        * which can be set to **True** to enable automatic commits of database changes at the end of each request.
+    * The *db* object instantiated from class *SQLAlchemy* represents the database
+        * and provides access to all the functionality of *Flask-SQLAlchemy* .
+    
 
-## Model Definition
-* There are three fields: *id* , *nickname* , *email* .
-* *app/models.py*
+### Model Definition
+* *hello.py* : Role and User model definition
     ```
-        from app import db
-
         class Role(db.Model):
             __tablename__ = 'roles'
             id = db.Column(db.Integer, primary_key=True)
@@ -1151,53 +1130,33 @@ added in this case.
     * The *__repr__* method representation that tells Python how to print objects of this class. 
         * We will use this for debugging and testing
     
-## Relationships
+### Relationships
 * This is a *one-to-many* relationshiop from roles to users
     * Because one role belongs to many users
     * And users have only one role.
 * Relationships
+    * *hello.py* : Relationships
     ```
     class Role(db.Model):
         # ...
         users = db.relationship('User', backref='role')
+        
     class User(db.Model):
         # ...
         role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))    
     ```
     
-* *app/models.py*
-    ```
-        from app import db
 
-        class Role(db.Model):
-            __tablename__ = 'roles'
-            id = db.Column(db.Integer, primary_key=True)
-            name = db.Column(db.String(64), unique=True)
-            users = db.relationship('User', backref='role')
+* Common SQLAlchemy relationship options
+    * *backref* : back reference
+    * *primaryjoin* : 
+    * ![Table 5-4. Common SQLAlchemy relationship options](imgs/Table 5-4. Common SQLAlchemy relationship options.jpg)
 
-            def __repr__(self):
-                return '<Role %r>' % (self.name)    
-                
-        class User(db.Model):
-            __tablename__ = 'users'
-            id = db.Column(db.Integer, primary_key=True)
-            username = db.Column(db.String(64), unique=True, index=True)
-            role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
-            
-            def __repr__(self):
-                return '<User %r>' % (self.username)
-    ```
-
-    * Common SQLAlchemy relationship options
-        * *backref* : back reference
-        * *primaryjoin* : 
-        * P57
-
-## Database Operations
+### Database Operations
 
 * The best way to learn how to work with database models is in a Python shell.
 
-### Creating the Tables
+#### Creating the Tables
 * The very first thing to do is to instruct Flask-SQLAlchemy to create a database based on the model classes.
 * The *db.create_all()* function does this:
     ```
@@ -1217,6 +1176,165 @@ added in this case.
         ```
         
         ```
+        
+#### Inserting Rows
+* The following example creates a few roles and users:
+    ```
+        >>> from hello import Role, User
+        >>> admin_role = Role(name='Admin')
+        >>> mod_role = Role(name='Moderator')
+        >>> user_role = Role(name='User')
+        >>> user_john = User(username='john', role=admin_role)
+        >>> user_susan = User(username='susan', role=user_role)
+        >>> user_david = User(username='david', role=user_role)
+    
+    ```
+    
+* The constructors for medels accept initial values for the model attributes as key arguments.
+* Note that even the *role* attribute can be used, even though it is not a real database column.
+* The *id* attribute of these new objects is not set explicity: the primary keys are managed by *Flask-SQLAlchemy* .
+* The objects exist only on the Python side so far; they have not been written to the database yet.
+* So:
+    ```
+        >>> print admin_role.id
+        None
+        >>> print mod_role.id
+        None
+    
+    ```
+    
+* Changes to the database are managed through a database *session* , which *Flask-SQLAlchemy* provides as *db.session* .
+* To prepare objects to be written to the database, they must be added to the session:
+    ```
+        >>> db.session.add(admin_role)
+        >>> db.session.add(mod_role)
+        >>> db.session.add(user_role)
+        >>> db.session.add(user_john)
+        >>> db.session.add(user_susan)
+        >>> db.session.add(user_david)
+    ```
+    
+    * Or, more concisely:
+    ```
+        >>> db.session.add_all([admin_role, mod_role, user_role,
+        ...     user_john, user_susan, user_david])
+    
+    ```
+    
+* To write the objects to the database, the session needs to be *commited* by calling its *commit()* method:
+    ```
+        >>> db.session.commit()
+        
+    ```
+    
+* Check the *id* attributes again; they are now set:
+    ```
+        >>> print(admin_role.id)
+        1
+        >>> print(mod_role.id)
+        2
+        >>> print(user_role.id)
+        3
+        >>> print(user_david.username)
+        david
+        >>> print(user_david.role)
+        <Role u'User'>
+    
+    ```
+* The *db.session* database session is not related to the Flask *session* object.
+* Database sessions are also called *transactions* .
+
+* Database sessions are extremely useful in keeping the database consistent. 
+* The commit operation writes all the objects that were added to the session atomically.
+* If an error occurs while the session is being written, the whole session is discarded. 
+* If you always commit related changes together in a session, you are guaranteed to avoid database inconsistencies due to partial updates.
+
+* A database session can also be *rolled-back* . 
+    *  If *db.session.rollback()* is called, any objects that were added to the database session are restored to the state they have in the database.
+    
+
+#### Modifying Rows
+* The *add()* method of the database session can also be used to update models.
+    ```
+        >>> admin_role.name = 'Administrator'
+        >>> db.session.add(admin_role)
+        >>> db.session.commit()
+    
+    ```
+
+#### Deleting Rows
+* The database session also has a *delete()* method.
+    ```
+        >>> db.session.delete(mod_role)
+        >>> db.session.commit()
+    ```
+* Note that deletions, like insertions and updates, are executed only when the database session is committed.
+
+#### Querying Rows
+* Flask-SQLAlchemy makes a *query* object available in each model class. 
+* The most basic query for a model is the one that returns the entire contents of the corresponding table:
+    ```
+        >>> Role.query.all()
+        [<Role u'Administrator'>, <Role u'User'>]
+        >>> User.query.all()
+        [<User u'john'>, <User u'susan'>, <User u'david'>]
+    
+    ```
+* A query object can be configured to issue more specific database searches through the use of *filters* .
+    ```
+        >>> User.query.filter_by(role=user_role).all()
+        [<User u'susan'>, <User u'david'>]
+    ```
+
+* It is also possible to inspect the native SQL query that SQLAlchemy generates for a given query by converting the query object to a string:
+    ```
+        >>> str(User.query.filter_by(role=user_role))
+        'SELECT users.id AS users_id, users.username AS users_username,
+        users.role_id AS users_role_id FROM users WHERE :param_1 = users.role_id'
+    
+    ```
+    
+* If you exit the shell session, the objects created in the previous example will cease to exist as Python objects but will continue to exist as rows in their respective database tables.
+* If you then start a brand new shell session, you have to re-create Python objects from their database rows. 
+    ```
+        >>> from hello import db
+        >>> from hello import Role, User
+        >>> user_role = Role.query.filter_by(name='User').first()
+    ```
+    
+* Common SQLAlchemy query filters
+    ![Common SQLAlchemy query filters](imgs/Table 5-5. Common SQLAlchemy query filters.jpg)
+    
+* Most common SQLAlchemy query executors
+    ![Most common SQLAlchemy query executors](imgs/Table 5-6. Most common SQLAlchemy query executors.jpg)
+    
+* Relationships work similarly to queries.
+    * The following example queries the one-to-many relationship between roles and users from both ends:
+        ```
+            >>> users = user_role.users
+            >>> users
+            [<User u'susan'>, <User u'david'>]
+            >>> users[0].role
+            <Role u'User'>
+        ```
+        
+### Database Use in View Functions
+### Integration with the Python Shell
+### Database Migrations with Flask-Migrate
+#### Creating a Migration Repository
+#### Creating a Migration Script
+#### Upgrading the Database
+
+
+
+## Chapter 6. Email
+## Chapter 7. Large Application Structure
+
+# Part II. Example : A Social Blogging Application
+# Part III. The Last Mile
+
+
+
 
 
 
