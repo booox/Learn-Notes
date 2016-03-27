@@ -104,6 +104,7 @@
             >>>
             
         ```
+        
 ## Chapter 2: Basic Application Structure
 
 ### Initialization
@@ -235,23 +236,201 @@
     * *session* : Request context - The user session
         *  a dictionary that the application can use to store values that are ¡°remembered¡± between requests
 
-
-# The Jinja2 Template Engine
-## Rendering Templates
-
+#### Request Dispatching
+* To see what the URL map in a Flask application looks like
+* You can inspect the map created for *hello.py* in the Python shell.
     ```
-    from flask import Flask, render_template
-    # ...
-    @app.route('/index')
-    def index():
-        return render_template('index.html')
-        
-    @app.route('/user/<name>')
-    def user(name):
-        return render_template('user.html', name=name)
+        (venv) $ python
+        >>> from hello import app
+        >>> app.url_map
+        Map([<Rule '/' (HEAD, OPTIONS, GET) -> index>,
+         <Rule '/static/<filename>' (HEAD, OPTIONS, GET) -> static>,
+         <Rule '/user/<name>' (HEAD, OPTIONS, GET) -> user>])    
+    ```
+    * The */* and */user/<name>* routes were defined by the *app.route* decorators.
+    * The *static/<filename>* route is a special route added by Flask to give access to static files.
+    * The *HEAD* , *OPTIONS* , *GET* elements are the *request *methods that are handled by the route.
+    
+    
+#### Request Hooks
+* Sometimes it it useful to execute code before or after request is processed.
+    * For example, at the start of each request it may be necessary to create a database connection
+    * or authenticate the user making the request
+* Instead of duplicating the code that does this in every view function
+    * Flask gives you the option to register common functions 
+    * to be invoked before or after a request is dispatched to a view function.
+* Request hooks are implemented as decorators.
+* There are four hooks supported by Flask:
+    * *before_first_request* : Register a function to run before the first request is handled
+    * *before_request* : Register a function to run before each request
+    * *after_request* : Register a function to run after each request, if no unhandled exceptions occurred.
+    * *teardown_request* : Register a function to run after each request, even if unhandled exceptions occurred.
+* A common pattern to share data between request hook functions and view functions is to use the *g* context global.
+
+    
+#### Responses
+
+* In most cases the response is a simple string that is sent back to the client as an HTML page.
+
+* *status *code* 
+    * But the HTTP protocol requires more than a string as a response to a request.
+    * A very important part of the HTTP response is the *status *code 
+        * Flask by default sets to *200* 
+    * The following view function returns a *400* status code, the code for a bad request error:
+    ```
+        @app.route('/')
+        def index():
+            return '<h1>Bad Request</h1>', 400
     
     ```
-## Variables
+    * Responses returned by view functions can also take a third argument 
+        * a dictionary of headers that are added to the HTTP response.
+    
+
+* *make_response()* 
+    * The *make_response()*  function takes one, two, or three arguments, the same values that can be returned from a view function, and returns Response object.
+    * Example: Creates a response object and then sets a cookie in it:
+        ```
+            from flask import make_response
+            
+            @app.route('/')
+            def index():
+                response = make_response('<h1>This document carries a cookie!</h1>')
+                response.set_cookie('answer', '42')
+                return response
+        
+        ```
+
+* *redirect* : 
+    * There is a special type of response.
+    * This response does not include a page document;
+    * It just gives the browser a new URL from which to load a new page.
+    * A redirect is typically indicated with a *302* response status code and the URL to redirect to given in a *Location* header.
+    ```
+        from flask import redirect
+        
+        @app.route('/')
+        def index():
+            return redirect('http://www.example.com')
+    
+    ```
+* *abort* :
+    * Another special response is issued with the *abort* function.
+    * Which is used for error handling.
+    * The following example returns status code *404* if the *id* dynamic argument given in the URL does not represent a valid user:
+    ```
+        from flask import abort
+        
+        @app.route('/user/<id>')
+        def get_user(id):
+            user = load_user(id)
+            if not user:
+                abort(404)
+            return '<h1>Hello, %s</h1>' % user.name
+            
+    ```
+    
+
+### Flask Extensions
+
+* Flask is designed to be extended.
+* There is a large variety of *extensions* for many different prupose that were created by the community
+* And if that is not enough, any standard Python package or library can be used as well.
+
+#### Command-Line Options with Flask-Script
+* Flask¡¯s development web server supports a number of startup configuration options
+* but the only way to specify them is by passing them as arguments to the app.run() call in the script.
+* This is not very convenient
+* The ideal way to pass configuration options is through command-line arguments.
+* *Flask-Script* is an extension for Flask that adds a command-line parser to your Flask application.
+* Install with pip
+    `(venv) $ pip install flask-script`
+    
+* The following example shows the changes needed to add command-line parsing to the *hello.py* application.
+    * *hello.py* : Using Flask-Script
+    ```
+        from flask.ext.script import Manager
+        
+        manager = Manager(app)
+        # ...
+        
+        if __name__ == '__main__':
+            manager.run()
+    ```
+* With these changes, the application acquires a basic set of commond-line options.
+    ```
+        $ python hello.py
+        usage: hello.py [-h] {shell,runserver} ...
+        
+        positional arguments:
+          {shell,runserver}
+            shell            Runs a Python shell inside Flask application context.
+            runserver        Runs the Flask development server i.e. app.run()
+            
+        optional arguments:
+          -h, --help         show this help message and exit
+    
+    ```
+    * The *shell* command is used to start a Python shell session in the context of the application.
+        * You can use this session to run maintenance tasks or tests, or to debug issues.
+    * The *runserver* command, as its name implies, starts the web server. And there are more options available.
+        ```
+            (venv) $ python hello.py runserver --help
+            ...
+            optional arguments:
+              -h, --help            show this help message and exit
+              -t HOST, --host HOST
+              -p PORT, --port PORT
+              --threaded
+              --processes PROCESSES
+              --passthrough-errors
+              -d, --no-debug
+              -r, --no-reload
+              
+            (venv) $ python hello.py runserver --host 0.0.0.0
+             * Running on http://0.0.0.0:5000/
+             * Restarting with reloader  
+        
+        ```
+
+
+
+## Chapter 3: Templates
+* A template is a file that contains the text of a response, with placeholder variables for the dynamic parts that will be known only in the context of a request.
+* The process that replaces the variables with actual values and returns a final response string is called *rendering* . 
+* For the task of rendering templates, Flask uses a powerful template engine called *Jinja2* .
+
+### The Jinja2 Template Engine 
+* a Jinja2 template is a file that contains the text of a response.
+* *templates/index.html* : Jinja2 template
+    `<h1>Hello World!</h1>`
+* *templates/user.html* : Jinja2 template
+    `<h1>Hello {{ name }}!</h1>`
+
+#### Rendering Templates 
+* By default Flask looks for templates in a *templates* subfolder located inside the application folder. 
+* *hello.py* : Rendering a template
+    ```
+        from flask import Flask, render_template
+        
+        # ...
+        
+        @app.route('/index')
+        def index():
+            return render_template('index.html')
+            
+        @app.route('/user/<name>')
+        def user(name):
+            return render_template('user.html', name=name)
+    
+    ```
+    * The *name* on the left side represents the argument name
+        * which is used in the placeholder written in the template
+    * The *name* on the right side is a variable in the current scope
+        * that provides the value for the argument of the same name
+        
+
+#### Variables
 
 * *Jinja2* recognizes variables of any type, even complex types such as lists, dictionaries and objects.
     * examples
@@ -274,7 +453,7 @@
         * *trim* : Removes leading and trailing whitespace from the value
         * *striptags* : Removes any HTML tags from the value before rendering
         
-## Control Structures
+#### Control Structures
 * conditional statements
     ```
         {% if user %}
@@ -356,9 +535,9 @@
         * Note the *head* block, which is not empty in the base template
         * uses *super()* to retain the original contents
         
-# Twitter Bootstrap Integration with Flask-Bootstrap
+### Twitter Bootstrap Integration with Flask-Bootstrap
 
-## Bootstrap intro
+#### Bootstrap intro
     * Bootstrap is an open source framework from Twitter 
     * that provides user interface components to create clean and attractive web pages 
     * that are compatible with all modern web browsers.
@@ -366,10 +545,10 @@
     
     * The obvious way to integrate Bootstrap with the application is to make all the necessary changes to the templates.
     * A simpler approach is to use a Flask extension called Flask-Bootstrap to simplify the integration effort.
-## Install Flask-Bootstrap
+#### Install Flask-Bootstrap
     `(venv) $ pip install flask-bootstrap`
     
-## Flask-Bootstrap initialization
+#### Flask-Bootstrap initialization
 * Flask-Bootstrap initialization
     ```
         from flask.ext.bootstrap import Bootstrap
@@ -383,6 +562,7 @@
     * Once Flask-Bootstrap is initialized, a base template that includes all the Bootstrap files is aviable to the application.
     
 * Template that uses Flask-Bootstrap
+    * *templates/user.html* : Template that uses Flask-Bootstrap
     ```
         {% extends "bootstrap/base.html" %}
         
@@ -408,38 +588,249 @@
     
     ```
     
-# Web Forms
+* Flask-Bootstrap¡¯s *base.html* template defines several other blocks that can be used in derived templates.
+* The following table shows the complete list of avaiable blocks.
+    * *doc*
+    * *html_attribs*
+    * *html*
+    * *head*
+    * *title*
+    * *metas*
+    * *styles*
+    * ...
+    
+    * These blocks are used by Flask-Bootstrap itself.
+    * So overriding them directly would cause problems.
+* If the application needs to add its own content to a block that already has some content, then Jinja2's *super()* must be used.
+    * Add a new JavaScript file to the document.
+    ```
+        {% block scripts %}
+        {{ super() }}
+        <script type="text/javascript" src="my-script.js"></script>
+        {% endblock %}
+    ```
+### Custom Error Pages
+* Flask allows an application to define custom error pages that can be based on templates
+* There are two most common error codes
+    * *404* : triggered when the client requests a page or route that is not known
+    * *500* : triggered when there is an unhandled exception
+* *hello.py* : Custom error pages
+    ```
+        @app.errorhandler(404)
+        def page_not_found(e):
+            return render_template('404.html'), 404
+            
+        @app.errorhandler(500)
+        def internal_server_error(e):
+            return render_template('500.html'), 500
+    
+    ```
+    
+* You can copy *templates/user.html* to *templates/404.html* and *templates/500.html* and then change them.
+    * But this will generate a lot of duplication
+    
+* Jinja2's template *inheritance* can help with this.
+* The application can define its own base template just like Flask-Bootstrap provides a base template.
+* *templates/base.html* : Base application template with nav bar.
+    ```
+        {% extends "bootstrap/base.html" %}
+        
+        {% block title %}Flasky{% endblock %}
+        
+        {% block navbar %}
+        <div class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle"
+                     data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Flasky</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+        
+        {% block content %}
+        <div class="container">
+            {% block page_content %}{% endblock %}
+        </div>
+        {% endblock %}
+    
+    ```
+    * In the content block of this template is just a container *div* element that wraps a new empty block called *page_content* , which derived templates can define.
+    
+    
+    
+* *templates/404.html* : Custom code 404 error page using template inheritance
+    ```
+        {% extends "base.html" %}
+        
+        {% block title %}Flasky - Page Not Found{% endblock %}
+        
+        {% block page_content %}
+        <div class="page-header">
+            <h1>Not Found</h1>
+        </div>
+        {% endblock %}        
+    
+    ```
+* The templates/user.html template can now be simplified by making it inherit from the base template.
+* *templates/user.html* : Simplified page template using template inheritance
+    ```
+        {% extends "base.html" %}
+        
+        {% block title %}Flasky{% endblock %}
+        
+        {% page_content %}
+        <div class="page-header">
+            <h1>Hello, {{ name }}
+        </div>
+        {% endblock %}
+    
+    ```
 
-## Install Flask-WTF
+### Links
+* Writing the URLs as links directly in the template is trivial for simple routes
+    * But for dynamic routes with variable portions it can get more complicated to build the URLs right in the template.
+* If the routes are reorganized , links in templates may break.
+* To avoid these problems, Flask provides the *url_for()* helper function
+    * Which generates URLs from the information stored in the application's URL map.
+    
+* Some examples:
+    * `url_for('index')` : return /
+    * `url_for('index', _external=True)` : return an absolute URL,  http://localhost:5000/
+    * `url_for('user', name='john', _external=True)` : return http://localhost:5000/user/john
+    * `url_for('index', page=2)` : return /?page=2
+    * **
+    
+
+
+### Static Files
+* Web applications are not made of Python code and templates alone.
+* Most applications also use static files such as images, JavaScript source files, and CSS that are referenced from the HTML code.
+
+* Static files are treated as a special route defined as `/static/<filename>`
+    * `url_for('static', filename='css/styles.css', _external=True) `
+        * http://localhost:5000/static/css/styles.css
+        
+* Flask looks for static files in *static* subdirectory in the application's root folder.
+* *templates/base.html* : favicon definition
+    ```
+        {% block head %}
+        {{ super() }}
+        <link rel="shortcut icon" href="{{ url_for('static', filename = 'favicon.ico') }}"
+            type="image/x-icon">
+        <link rel="icon" href="{{ url_for('static', filename = 'favicon.ico') }}"
+            type="image/x-icon">
+        {% endblock %}
+    
+    ```
+
+### Localization of Dates and Times with Flask-Moment
+
+* Handling of dates and times in a web application is not a trivial problem when users work in different parts of the world.
+* the server needs uniform time units that are independent of the location of each user, so typically Coordinated Universal Time (UTC) is used.
+* An elegant solution that allows the server to work exclusively in UTC is to send these time units to the web browser, where they are converted to local time and rendered.
+* There is an excellent client-side open source library written in JavaScript that renders dates and times in the browser called *moment.js*
+* *Flask-Moment* is an extension for Flask applications that integrates *moment.js* into Jinja2 templates. 
+
+#### Install Flask-Moment with pip
+    `(venv) $ pip install flask-moment`
+
+#### Initialize Flask-Moment
+    ```
+        from flask.ext.moment import Moment
+        
+        moment = Moment(app)
+    
+    ```
+* Flask-Moment depends on *jquery.js* in addition to *moment.js* .
+* Bootstrap already includes *jquery.js* , only *moment.js* needs to be
+added in this case. 
+
+* *templates/base.html* : Import moment.js library
+    ```
+        {% block scripts %}
+        {{ super() }}
+        {{ moment.include_moment() }}
+        {% endblock %}
+    
+    ```
+* *hello.py* : Add a datetime variable
+
+    ```
+        from datetime import datetime
+        
+        @app.route('/')
+        def index():
+            return render_template('index.html',
+                                                current_time=datetime.utcnow())
+    ```
+* *templates/index.html* : Timestamp rendering with Flask-Moment
+    ```
+        <p>The local date and time is {{ moment(current_time).format('LLL') }}.</p>
+        <p>That was {{ moment(current_time).fromNow(refresh=True) }}</p>
+        
+    ```
+    * The format('LLL') format renders the date and time according to the time zone and locale settings in the client computer.
+    * The fromNow() render style shown in the second line renders a relative timestamp and automatically refreshes it as time passes.
+        * a few seconds ago
+        * a minute ago
+        * 2 minutes ago
+* Flask-Moment implements some methods from *moment.js*
+    * *format()*
+    * *fromNow()*
+    * *fromTime()*
+    * *calendar()*
+    * *ValueOf()*
+    * *unix()*
+    
+* The timestamps rendered by Flask-Moment can be localized to many languages.
+    `{{ moment.lang('es') }}`
+
+    
+
+    
+    
+## Chapter 4. Web Forms
+
+* *request.form* provides access to form data sumitted in **POST** requests.
+
+### Install Flask-WTF
 * The *Flask-WTF* extension makes working with web forms a much more pleasant experience.
+    * This extension is a Flask integration wrapper around the framework-agnostic *WTForms* package.
+* installed with *pip* 
+    `(venv) $ pip install flask-wtf`
+    
 
-## Cross-Site Request Forgery (CSRF) Protection
+### Cross-Site Request Forgery (CSRF) Protection
+* A *CSRF* attack occurs when a malicious website sends requests to a different website on which the victim is logged in.
+
 * To implement CSRF protection, *Flask-WTF* needs the application to configure an encryption key.
-* *root_folder/config.py*
+* *hello.py* : Flask-WTF configuration
     ```
-        WTF_CSRF_ENABLED = True
-        SECRET_KEY = 'you-will-never-guess'    
+        app = Flask(__name__)    
+        app.config['SECRET_KEY'] = 'hard to guess thing'
     ```
+    
+    * The *app.config* dictionary is a general-purpose place to store configuration variaables used by the framework, the extensions, or the application itself.
+    * Configuration values can be added to the *app.config* object using standard dictionary syntax.
+    * The configuration object also has methods to import configuration values from files or the environment.
     * *WTF_CSRF_ENABLED* - activates the *cross-site request forgery* prevention.(now it's enabled by default.)
     * *SECRET_KEY*  - only needed when CSRF is enabled, and is used to create a cryptographic token that is used to validate a form.
 
-    
-* Now that we have our config file, we need to tell Flask to read it and use it.
-    * We can do this right after the Flask app object is created.
-    * *root_folder/app/__init__.py*
-        ```
-            from flask import Flask
-            
-            app = Flask(__name__)
-            app.config.from_object('config')
-            
-            from app import views
-        
-        ```
 
-## Form Classes
-* Form class definition
-    * *app/forms.py* 
+### Form Classes
+* *hello.py* : Form class definition
     ```
     from flask.ext.wtf import Form
     from wtforms import StringField, SubmitField
@@ -447,29 +838,63 @@
     
     class NameForm(Form):
         name = StringField('What is your name?', validators=[Required()])
-        submit = SubmitField('Submit'
-
-
+        submit = SubmitField('Submit')
     ```
-
-## HTML Rendering of Forms
-    * *app/templates/hello.html*
-
-    ```
-    {% extends "base.html" %}
-    {% import "bootstrap/wtf.html" as wtf %}
-    {% block title %}Flasky{% endblock %}
-    {% block page_content %}
-    <div class="page-header">
-        <h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!</h1>
-    </div>
-    {{ wtf.quick_form(form) }}
-    {% endblock %}
     
-    ```
+    * The *Required()* validator ensures that the field is not submitted empty.
+    * The *Form* base class is defined by the *Flask-WTF* extension, so it is imported from *flask.ext.wtf* .
+    * The fields and validators, however, are imported directly from the *WTForms* package.
+    
+* WTForms supported some standard HTML fields
+    * *StringField* : Text field
+    * *TextAreaField* :
+    * *PasswordField* :
+    * *HiddenField* :
+    * ...
+    * ![Table 4-1. WTForms standard HTML fields.jpg](Table 4-1. WTForms standard HTML fields.jpg)
+* WTForms built-in validators
+    * *Email* : Validates an email address
+    * *EqualTo* : useful when requesting a password to be entered twice for confirmation
+    * *IPAddress* : Validates an IPv4 network address
+    * ...
+    * ![Table 4-2. WTForms validators.jpg](Table 4-2. WTForms validators.jpg)
+    
+    
 
-## Form Handling in View Functions
-    * *app/views.py*
+### HTML Rendering of Forms
+* *Flask-Bootstrap* provides a very high-level helper function that renders an entire *Flask-WTF* form using Bootstrap's predefined form styles, all with a single call.
+* Using *Flask-Bootstrap* , the previous form can be rendered as follows:
+    ```
+        {% import "bootstrap/wtf.html" as wtf %}
+        {{ wtf.quick_form(form) }}
+    ```
+    * The imported *bootstrap/wtf.html* file defines helper functions that render *Flask-WTF* forms using *Bootstrap* .
+    * The *wtf.quick_form()* function takes a *Flask-WTF* form object and renders it using default *Bootstrap* styles.
+* The complete template for *hello.py* is  shown below.
+    * *template/index.html* : Using Flask-WTF and Flask-Bootstrap to render a form
+    ```
+        {% extends "base.html" %}
+        {% import "bootstrap/wtf.html" as wtf %}
+        
+        {% block title %}Flasky{% endblock %}
+        
+        {% block page_content %}
+        <div class="page-header">
+            <h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!</h1>
+        </div>
+        {{ wtf.quick_form(form) }}
+        {% endblock %}
+    ```
+    
+    * There has two sections:
+        * The first section is a page header that shows a greeting.
+        * The second section of the content renders the *NameForm* object using the *wtf.quick_form()* function.
+
+
+### Form Handling in View Functions
+
+* In the new version of *hello.py* , the *index()* view function will be rendering the form and also receiving its data.
+* *hello.py* : Route methods
     ```
     from .forms import NameForm
     
@@ -481,13 +906,15 @@
             name = form.name.data
             form.name.data = ''
         return render_template('index.html', form=form, name=name)
-    
-    
     ```
+    
+    * The *methods* argument added to the app.route decorator tells Flask to register the view function as a handler for *GET* and *POST* requests in the URL map.
+    * When *methods* is not given, the view function is registered to handle *GET* requests only.
 
 
-## Redirects and User Sessions
-### Problem One: POST as a last request
+
+### Redirects and User Sessions
+#### Problem One: POST as a last request
 * Now the *hello.py* has a usability problem.
     * If you enter your name and submit it and then click the refresh button on your browser
     * you will likely get an obscure warning that asks for confirmation before submitting the form again.
@@ -500,17 +927,17 @@
 * This practice can be achieved by responding to *POST* requests with a *redirect* instead of a normal response.
     * *Post/Redirect/Get* pattern
 
-### Problem Two: 
+#### Problem Two: 
 * When the application handles the *POST* request, it has access to the name entered by the user in *form.name.data*
     * but as soon as that request ends the form data is lost.
 * Because the *POST* request is handled with a redirect, the application needs to store the name 
     * so that the redirected request can have it and use it to build the actual response.
 
-### Session
+#### Session
 * Applications can "remember" things from one request to the next by storing them in the *user* *session*.
 * By default, user sessions are stored in client-side cookies that are cryptographiclly signed using the configured *SECRET_KEY*
 
-### Redirects and user sessions
+#### Redirects and user sessions
     ```
     from flask import Flask, render_template, session, redirect, url_for
     
@@ -525,7 +952,7 @@
 * the *name* variable is now placed in the user sessions as *session['name']*
     * so that it is remembered beyond the request.
     
-## Message Flashing
+### Message Flashing
 
 * Sometimes it is useful to give the user a status update after a request is completed.
     * This could be a confirmation message, a warning, or an error.
@@ -605,7 +1032,7 @@
     ```
     
 
-# Databases
+## Chapter 5. Databases
 
 ## SQL Databases & NoSQL Databases
 

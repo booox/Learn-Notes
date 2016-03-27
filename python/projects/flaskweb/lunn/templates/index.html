@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% import }
+
+{% block page_content %}
+<p>local date,time is: {{ moment(current_time).format('LLL') }}</p>
+<p>There was: {{ moment(current_time).fromNow(refresh=True) }}</p>
+
+{% endblock %}
