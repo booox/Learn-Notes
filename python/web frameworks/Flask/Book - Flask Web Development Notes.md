@@ -104,6 +104,7 @@
             >>>
             
         ```
+        
 ## Chapter 2: Basic Application Structure
 
 ### Initialization
@@ -240,23 +241,201 @@
     * *session* : Request context - The user session
         *  a dictionary that the application can use to store values that are ¡°remembered¡± between requests
 
-
-# The Jinja2 Template Engine
-## Rendering Templates
-
+#### Request Dispatching
+* To see what the URL map in a Flask application looks like
+* You can inspect the map created for *hello.py* in the Python shell.
     ```
-    from flask import Flask, render_template
-    # ...
-    @app.route('/index')
-    def index():
-        return render_template('index.html')
-        
-    @app.route('/user/<name>')
-    def user(name):
-        return render_template('user.html', name=name)
+        (venv) $ python
+        >>> from hello import app
+        >>> app.url_map
+        Map([<Rule '/' (HEAD, OPTIONS, GET) -> index>,
+         <Rule '/static/<filename>' (HEAD, OPTIONS, GET) -> static>,
+         <Rule '/user/<name>' (HEAD, OPTIONS, GET) -> user>])    
+    ```
+    * The */* and */user/<name>* routes were defined by the *app.route* decorators.
+    * The *static/<filename>* route is a special route added by Flask to give access to static files.
+    * The *HEAD* , *OPTIONS* , *GET* elements are the *request *methods that are handled by the route.
+    
+    
+#### Request Hooks
+* Sometimes it it useful to execute code before or after request is processed.
+    * For example, at the start of each request it may be necessary to create a database connection
+    * or authenticate the user making the request
+* Instead of duplicating the code that does this in every view function
+    * Flask gives you the option to register common functions 
+    * to be invoked before or after a request is dispatched to a view function.
+* Request hooks are implemented as decorators.
+* There are four hooks supported by Flask:
+    * *before_first_request* : Register a function to run before the first request is handled
+    * *before_request* : Register a function to run before each request
+    * *after_request* : Register a function to run after each request, if no unhandled exceptions occurred.
+    * *teardown_request* : Register a function to run after each request, even if unhandled exceptions occurred.
+* A common pattern to share data between request hook functions and view functions is to use the *g* context global.
+
+    
+#### Responses
+
+* In most cases the response is a simple string that is sent back to the client as an HTML page.
+
+* *status *code* 
+    * But the HTTP protocol requires more than a string as a response to a request.
+    * A very important part of the HTTP response is the *status *code 
+        * Flask by default sets to *200* 
+    * The following view function returns a *400* status code, the code for a bad request error:
+    ```
+        @app.route('/')
+        def index():
+            return '<h1>Bad Request</h1>', 400
     
     ```
-## Variables
+    * Responses returned by view functions can also take a third argument 
+        * a dictionary of headers that are added to the HTTP response.
+    
+
+* *make_response()* 
+    * The *make_response()*  function takes one, two, or three arguments, the same values that can be returned from a view function, and returns Response object.
+    * Example: Creates a response object and then sets a cookie in it:
+        ```
+            from flask import make_response
+            
+            @app.route('/')
+            def index():
+                response = make_response('<h1>This document carries a cookie!</h1>')
+                response.set_cookie('answer', '42')
+                return response
+        
+        ```
+
+* *redirect* : 
+    * There is a special type of response.
+    * This response does not include a page document;
+    * It just gives the browser a new URL from which to load a new page.
+    * A redirect is typically indicated with a *302* response status code and the URL to redirect to given in a *Location* header.
+    ```
+        from flask import redirect
+        
+        @app.route('/')
+        def index():
+            return redirect('http://www.example.com')
+    
+    ```
+* *abort* :
+    * Another special response is issued with the *abort* function.
+    * Which is used for error handling.
+    * The following example returns status code *404* if the *id* dynamic argument given in the URL does not represent a valid user:
+    ```
+        from flask import abort
+        
+        @app.route('/user/<id>')
+        def get_user(id):
+            user = load_user(id)
+            if not user:
+                abort(404)
+            return '<h1>Hello, %s</h1>' % user.name
+            
+    ```
+    
+
+### Flask Extensions
+
+* Flask is designed to be extended.
+* There is a large variety of *extensions* for many different prupose that were created by the community
+* And if that is not enough, any standard Python package or library can be used as well.
+
+#### Command-Line Options with Flask-Script
+* Flask¡¯s development web server supports a number of startup configuration options
+* but the only way to specify them is by passing them as arguments to the app.run() call in the script.
+* This is not very convenient
+* The ideal way to pass configuration options is through command-line arguments.
+* *Flask-Script* is an extension for Flask that adds a command-line parser to your Flask application.
+* Install with pip
+    `(venv) $ pip install flask-script`
+    
+* The following example shows the changes needed to add command-line parsing to the *hello.py* application.
+    * *hello.py* : Using Flask-Script
+    ```
+        from flask.ext.script import Manager
+        
+        manager = Manager(app)
+        # ...
+        
+        if __name__ == '__main__':
+            manager.run()
+    ```
+* With these changes, the application acquires a basic set of commond-line options.
+    ```
+        $ python hello.py
+        usage: hello.py [-h] {shell,runserver} ...
+        
+        positional arguments:
+          {shell,runserver}
+            shell            Runs a Python shell inside Flask application context.
+            runserver        Runs the Flask development server i.e. app.run()
+            
+        optional arguments:
+          -h, --help         show this help message and exit
+    
+    ```
+    * The *shell* command is used to start a Python shell session in the context of the application.
+        * You can use this session to run maintenance tasks or tests, or to debug issues.
+    * The *runserver* command, as its name implies, starts the web server. And there are more options available.
+        ```
+            (venv) $ python hello.py runserver --help
+            ...
+            optional arguments:
+              -h, --help            show this help message and exit
+              -t HOST, --host HOST
+              -p PORT, --port PORT
+              --threaded
+              --processes PROCESSES
+              --passthrough-errors
+              -d, --no-debug
+              -r, --no-reload
+              
+            (venv) $ python hello.py runserver --host 0.0.0.0
+             * Running on http://0.0.0.0:5000/
+             * Restarting with reloader  
+        
+        ```
+
+
+
+## Chapter 3: Templates
+* A template is a file that contains the text of a response, with placeholder variables for the dynamic parts that will be known only in the context of a request.
+* The process that replaces the variables with actual values and returns a final response string is called *rendering* . 
+* For the task of rendering templates, Flask uses a powerful template engine called *Jinja2* .
+
+### The Jinja2 Template Engine 
+* a Jinja2 template is a file that contains the text of a response.
+* *templates/index.html* : Jinja2 template
+    `<h1>Hello World!</h1>`
+* *templates/user.html* : Jinja2 template
+    `<h1>Hello {{ name }}!</h1>`
+
+#### Rendering Templates 
+* By default Flask looks for templates in a *templates* subfolder located inside the application folder. 
+* *hello.py* : Rendering a template
+    ```
+        from flask import Flask, render_template
+        
+        # ...
+        
+        @app.route('/index')
+        def index():
+            return render_template('index.html')
+            
+        @app.route('/user/<name>')
+        def user(name):
+            return render_template('user.html', name=name)
+    
+    ```
+    * The *name* on the left side represents the argument name
+        * which is used in the placeholder written in the template
+    * The *name* on the right side is a variable in the current scope
+        * that provides the value for the argument of the same name
+        
+
+#### Variables
 
 * *Jinja2* recognizes variables of any type, even complex types such as lists, dictionaries and objects.
     * examples
@@ -279,7 +458,7 @@
         * *trim* : Removes leading and trailing whitespace from the value
         * *striptags* : Removes any HTML tags from the value before rendering
         
-## Control Structures
+#### Control Structures
 * conditional statements
     ```
         {% if user %}
@@ -361,9 +540,9 @@
         * Note the *head* block, which is not empty in the base template
         * uses *super()* to retain the original contents
         
-# Twitter Bootstrap Integration with Flask-Bootstrap
+### Twitter Bootstrap Integration with Flask-Bootstrap
 
-## Bootstrap intro
+#### Bootstrap intro
     * Bootstrap is an open source framework from Twitter 
     * that provides user interface components to create clean and attractive web pages 
     * that are compatible with all modern web browsers.
@@ -371,10 +550,10 @@
     
     * The obvious way to integrate Bootstrap with the application is to make all the necessary changes to the templates.
     * A simpler approach is to use a Flask extension called Flask-Bootstrap to simplify the integration effort.
-## Install Flask-Bootstrap
+#### Install Flask-Bootstrap
     `(venv) $ pip install flask-bootstrap`
     
-## Flask-Bootstrap initialization
+#### Flask-Bootstrap initialization
 * Flask-Bootstrap initialization
     ```
         from flask.ext.bootstrap import Bootstrap
@@ -388,6 +567,7 @@
     * Once Flask-Bootstrap is initialized, a base template that includes all the Bootstrap files is aviable to the application.
     
 * Template that uses Flask-Bootstrap
+    * *templates/user.html* : Template that uses Flask-Bootstrap
     ```
         {% extends "bootstrap/base.html" %}
         
@@ -413,38 +593,249 @@
     
     ```
     
-# Web Forms
+* Flask-Bootstrap¡¯s *base.html* template defines several other blocks that can be used in derived templates.
+* The following table shows the complete list of avaiable blocks.
+    * *doc*
+    * *html_attribs*
+    * *html*
+    * *head*
+    * *title*
+    * *metas*
+    * *styles*
+    * ...
+    
+    * These blocks are used by Flask-Bootstrap itself.
+    * So overriding them directly would cause problems.
+* If the application needs to add its own content to a block that already has some content, then Jinja2's *super()* must be used.
+    * Add a new JavaScript file to the document.
+    ```
+        {% block scripts %}
+        {{ super() }}
+        <script type="text/javascript" src="my-script.js"></script>
+        {% endblock %}
+    ```
+### Custom Error Pages
+* Flask allows an application to define custom error pages that can be based on templates
+* There are two most common error codes
+    * *404* : triggered when the client requests a page or route that is not known
+    * *500* : triggered when there is an unhandled exception
+* *hello.py* : Custom error pages
+    ```
+        @app.errorhandler(404)
+        def page_not_found(e):
+            return render_template('404.html'), 404
+            
+        @app.errorhandler(500)
+        def internal_server_error(e):
+            return render_template('500.html'), 500
+    
+    ```
+    
+* You can copy *templates/user.html* to *templates/404.html* and *templates/500.html* and then change them.
+    * But this will generate a lot of duplication
+    
+* Jinja2's template *inheritance* can help with this.
+* The application can define its own base template just like Flask-Bootstrap provides a base template.
+* *templates/base.html* : Base application template with nav bar.
+    ```
+        {% extends "bootstrap/base.html" %}
+        
+        {% block title %}Flasky{% endblock %}
+        
+        {% block navbar %}
+        <div class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle"
+                     data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Flasky</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+        
+        {% block content %}
+        <div class="container">
+            {% block page_content %}{% endblock %}
+        </div>
+        {% endblock %}
+    
+    ```
+    * In the content block of this template is just a container *div* element that wraps a new empty block called *page_content* , which derived templates can define.
+    
+    
+    
+* *templates/404.html* : Custom code 404 error page using template inheritance
+    ```
+        {% extends "base.html" %}
+        
+        {% block title %}Flasky - Page Not Found{% endblock %}
+        
+        {% block page_content %}
+        <div class="page-header">
+            <h1>Not Found</h1>
+        </div>
+        {% endblock %}        
+    
+    ```
+* The templates/user.html template can now be simplified by making it inherit from the base template.
+* *templates/user.html* : Simplified page template using template inheritance
+    ```
+        {% extends "base.html" %}
+        
+        {% block title %}Flasky{% endblock %}
+        
+        {% page_content %}
+        <div class="page-header">
+            <h1>Hello, {{ name }}
+        </div>
+        {% endblock %}
+    
+    ```
 
-## Install Flask-WTF
+### Links
+* Writing the URLs as links directly in the template is trivial for simple routes
+    * But for dynamic routes with variable portions it can get more complicated to build the URLs right in the template.
+* If the routes are reorganized , links in templates may break.
+* To avoid these problems, Flask provides the *url_for()* helper function
+    * Which generates URLs from the information stored in the application's URL map.
+    
+* Some examples:
+    * `url_for('index')` : return /
+    * `url_for('index', _external=True)` : return an absolute URL,  http://localhost:5000/
+    * `url_for('user', name='john', _external=True)` : return http://localhost:5000/user/john
+    * `url_for('index', page=2)` : return /?page=2
+    * **
+    
+
+
+### Static Files
+* Web applications are not made of Python code and templates alone.
+* Most applications also use static files such as images, JavaScript source files, and CSS that are referenced from the HTML code.
+
+* Static files are treated as a special route defined as `/static/<filename>`
+    * `url_for('static', filename='css/styles.css', _external=True) `
+        * http://localhost:5000/static/css/styles.css
+        
+* Flask looks for static files in *static* subdirectory in the application's root folder.
+* *templates/base.html* : favicon definition
+    ```
+        {% block head %}
+        {{ super() }}
+        <link rel="shortcut icon" href="{{ url_for('static', filename = 'favicon.ico') }}"
+            type="image/x-icon">
+        <link rel="icon" href="{{ url_for('static', filename = 'favicon.ico') }}"
+            type="image/x-icon">
+        {% endblock %}
+    
+    ```
+
+### Localization of Dates and Times with Flask-Moment
+
+* Handling of dates and times in a web application is not a trivial problem when users work in different parts of the world.
+* the server needs uniform time units that are independent of the location of each user, so typically Coordinated Universal Time (UTC) is used.
+* An elegant solution that allows the server to work exclusively in UTC is to send these time units to the web browser, where they are converted to local time and rendered.
+* There is an excellent client-side open source library written in JavaScript that renders dates and times in the browser called *moment.js*
+* *Flask-Moment* is an extension for Flask applications that integrates *moment.js* into Jinja2 templates. 
+
+#### Install Flask-Moment with pip
+    `(venv) $ pip install flask-moment`
+
+#### Initialize Flask-Moment
+    ```
+        from flask.ext.moment import Moment
+        
+        moment = Moment(app)
+    
+    ```
+* Flask-Moment depends on *jquery.js* in addition to *moment.js* .
+* Bootstrap already includes *jquery.js* , only *moment.js* needs to be
+added in this case. 
+
+* *templates/base.html* : Import moment.js library
+    ```
+        {% block scripts %}
+        {{ super() }}
+        {{ moment.include_moment() }}
+        {% endblock %}
+    
+    ```
+* *hello.py* : Add a datetime variable
+
+    ```
+        from datetime import datetime
+        
+        @app.route('/')
+        def index():
+            return render_template('index.html',
+                                                current_time=datetime.utcnow())
+    ```
+* *templates/index.html* : Timestamp rendering with Flask-Moment
+    ```
+        <p>The local date and time is {{ moment(current_time).format('LLL') }}.</p>
+        <p>That was {{ moment(current_time).fromNow(refresh=True) }}</p>
+        
+    ```
+    * The format('LLL') format renders the date and time according to the time zone and locale settings in the client computer.
+    * The fromNow() render style shown in the second line renders a relative timestamp and automatically refreshes it as time passes.
+        * a few seconds ago
+        * a minute ago
+        * 2 minutes ago
+* Flask-Moment implements some methods from *moment.js*
+    * *format()*
+    * *fromNow()*
+    * *fromTime()*
+    * *calendar()*
+    * *ValueOf()*
+    * *unix()*
+    
+* The timestamps rendered by Flask-Moment can be localized to many languages.
+    `{{ moment.lang('es') }}`
+
+    
+
+    
+    
+## Chapter 4. Web Forms
+
+* *request.form* provides access to form data sumitted in **POST** requests.
+
+### Install Flask-WTF
 * The *Flask-WTF* extension makes working with web forms a much more pleasant experience.
+    * This extension is a Flask integration wrapper around the framework-agnostic *WTForms* package.
+* installed with *pip* 
+    `(venv) $ pip install flask-wtf`
+    
 
-## Cross-Site Request Forgery (CSRF) Protection
+### Cross-Site Request Forgery (CSRF) Protection
+* A *CSRF* attack occurs when a malicious website sends requests to a different website on which the victim is logged in.
+
 * To implement CSRF protection, *Flask-WTF* needs the application to configure an encryption key.
-* *root_folder/config.py*
+* *hello.py* : Flask-WTF configuration
     ```
-        WTF_CSRF_ENABLED = True
-        SECRET_KEY = 'you-will-never-guess'    
+        app = Flask(__name__)    
+        app.config['SECRET_KEY'] = 'hard to guess thing'
     ```
+    
+    * The *app.config* dictionary is a general-purpose place to store configuration variaables used by the framework, the extensions, or the application itself.
+    * Configuration values can be added to the *app.config* object using standard dictionary syntax.
+    * The configuration object also has methods to import configuration values from files or the environment.
     * *WTF_CSRF_ENABLED* - activates the *cross-site request forgery* prevention.(now it's enabled by default.)
     * *SECRET_KEY*  - only needed when CSRF is enabled, and is used to create a cryptographic token that is used to validate a form.
 
-    
-* Now that we have our config file, we need to tell Flask to read it and use it.
-    * We can do this right after the Flask app object is created.
-    * *root_folder/app/__init__.py*
-        ```
-            from flask import Flask
-            
-            app = Flask(__name__)
-            app.config.from_object('config')
-            
-            from app import views
-        
-        ```
 
-## Form Classes
-* Form class definition
-    * *app/forms.py* 
+### Form Classes
+* *hello.py* : Form class definition
     ```
     from flask.ext.wtf import Form
     from wtforms import StringField, SubmitField
@@ -452,32 +843,64 @@
     
     class NameForm(Form):
         name = StringField('What is your name?', validators=[Required()])
-        submit = SubmitField('Submit'
-
-
+        submit = SubmitField('Submit')
     ```
-
-## HTML Rendering of Forms
-    * *app/templates/hello.html*
-
-    ```
-    {% extends "base.html" %}
-    {% import "bootstrap/wtf.html" as wtf %}
-    {% block title %}Flasky{% endblock %}
-    {% block page_content %}
-    <div class="page-header">
-        <h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!</h1>
-    </div>
-    {{ wtf.quick_form(form) }}
-    {% endblock %}
     
-    ```
-
-## Form Handling in View Functions
-    * *app/views.py*
-    ```
-    from .forms import NameForm
+    * The *Required()* validator ensures that the field is not submitted empty.
+    * The *Form* base class is defined by the *Flask-WTF* extension, so it is imported from *flask.ext.wtf* .
+    * The fields and validators, however, are imported directly from the *WTForms* package.
     
+* WTForms supported some standard HTML fields
+    * *StringField* : Text field
+    * *TextAreaField* :
+    * *PasswordField* :
+    * *HiddenField* :
+    * ...
+    * ![Table 4-1. WTForms standard HTML fields.jpg](imgs/Table 4-1. WTForms standard HTML fields.jpg)
+* WTForms built-in validators
+    * *Email* : Validates an email address
+    * *EqualTo* : useful when requesting a password to be entered twice for confirmation
+    * *IPAddress* : Validates an IPv4 network address
+    * ...
+    * ![Table 4-2. WTForms validators.jpg](imgs/Table 4-2. WTForms validators.jpg)
+    
+    
+
+### HTML Rendering of Forms
+* *Flask-Bootstrap* provides a very high-level helper function that renders an entire *Flask-WTF* form using Bootstrap's predefined form styles, all with a single call.
+* Using *Flask-Bootstrap* , the previous form can be rendered as follows:
+    ```
+        {% import "bootstrap/wtf.html" as wtf %}
+        {{ wtf.quick_form(form) }}
+    ```
+    * The imported *bootstrap/wtf.html* file defines helper functions that render *Flask-WTF* forms using *Bootstrap* .
+    * The *wtf.quick_form()* function takes a *Flask-WTF* form object and renders it using default *Bootstrap* styles.
+* The complete template for *hello.py* is  shown below.
+    * *template/index.html* : Using Flask-WTF and Flask-Bootstrap to render a form
+    ```
+        {% extends "base.html" %}
+        {% import "bootstrap/wtf.html" as wtf %}
+        
+        {% block title %}Flasky{% endblock %}
+        
+        {% block page_content %}
+        <div class="page-header">
+            <h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!</h1>
+        </div>
+        {{ wtf.quick_form(form) }}
+        {% endblock %}
+    ```
+    
+    * There has two sections:
+        * The first section is a page header that shows a greeting.
+        * The second section of the content renders the *NameForm* object using the *wtf.quick_form()* function.
+
+
+### Form Handling in View Functions
+
+* In the new version of *hello.py* , the *index()* view function will be rendering the form and also receiving its data.
+* *hello.py* : Route methods
+    ```
     @app.route('/', methods=['GET', 'POST'])
     def index():
         name = None
@@ -486,13 +909,15 @@
             name = form.name.data
             form.name.data = ''
         return render_template('index.html', form=form, name=name)
-    
-    
     ```
+    
+    * The *methods* argument added to the app.route decorator tells Flask to register the view function as a handler for *GET* and *POST* requests in the URL map.
+    * When *methods* is not given, the view function is registered to handle *GET* requests only.
 
 
-## Redirects and User Sessions
-### Problem One: POST as a last request
+
+### Redirects and User Sessions
+#### Problem One: POST as a last request
 * Now the *hello.py* has a usability problem.
     * If you enter your name and submit it and then click the refresh button on your browser
     * you will likely get an obscure warning that asks for confirmation before submitting the form again.
@@ -505,17 +930,18 @@
 * This practice can be achieved by responding to *POST* requests with a *redirect* instead of a normal response.
     * *Post/Redirect/Get* pattern
 
-### Problem Two: 
+#### Problem Two: 
 * When the application handles the *POST* request, it has access to the name entered by the user in *form.name.data*
     * but as soon as that request ends the form data is lost.
 * Because the *POST* request is handled with a redirect, the application needs to store the name 
     * so that the redirected request can have it and use it to build the actual response.
 
-### Session
+#### Session
 * Applications can "remember" things from one request to the next by storing them in the *user* *session*.
 * By default, user sessions are stored in client-side cookies that are cryptographiclly signed using the configured *SECRET_KEY*
 
-### Redirects and user sessions
+#### Redirects and user sessions
+* *hello.py* : Redirects and user sessions
     ```
     from flask import Flask, render_template, session, redirect, url_for
     
@@ -530,16 +956,17 @@
 * the *name* variable is now placed in the user sessions as *session['name']*
     * so that it is remembered beyond the request.
     
-## Message Flashing
+### Message Flashing
 
 * Sometimes it is useful to give the user a status update after a request is completed.
     * This could be a confirmation message, a warning, or an error.
 * Flask includes this functionality as a core feature.
     * *flash()* function can be used for this purpose.
 * Flashed message
-    * *app/views.py*
+    * *hello.py* : Flashed message
     ```
         from flask import Flask, render_template, session, redirect, url_for, flash
+        
         @app.route('/', methods=['GET', 'POST'])
         def index():
             form = NameForm()
@@ -560,7 +987,7 @@
 * Flask makes a *get_flashed_messages()* function available to templates to retrieve the messages and render them.
 
 * Flash message rendering
-    * *app/templates/base.html*
+    * *templates/base.html* : Flash message rendering
         ```
         {% extends "bootstrap/base.html" %}
         
@@ -577,7 +1004,7 @@
         {% endblock %}
         
         {% block content %}
-        <div class="flash">
+        <div class="container">
             {% for message in get_flashed_messages() %}
             <div class="alert alert-warning">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -591,32 +1018,28 @@
     
         ```
 
-    * `app/templates/hello.html`
-    
-    ```
-        {% extends "base.html" %}
-        
-        {% import "bootstrap/wtf.html" as wtf %}
-        
-        {% block title %}Hello Page{% endblock %}
-        
-        {% block page_content %}
-            {{ super() }}
-            <div class="page-header">
-                <h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!</h1>
-            </div>
-            {{ wtf.quick_form(form) }}
-        {% endblock %}
-    ```
     
 
-# Databases
+## Chapter 5. Databases
 
 ## SQL Databases & NoSQL Databases
 
+* The most commonly used databases for web applications are those based on the relational model, also called SQL databases in reference to the Structured Query Language they use. 
+* But in recent years *document-oriented* and *key-value* databases, informally known together as NoSQL databases, have become popular alternatives.
+
+### SQL Databases
+* Relational databases store data in tables, which model the different entities in the application's domain.
+* A table has a fixed number of *columns* and a variable number of *rows*.
+* Tables have a special column called the *primary_key* , which holds a unique identifier for each row stored in the table.
+* Tables can also have columns called *foreign-keys* , which reference the primary key of another row from the same or another table. 
+* These links between rows are called *relationships* and are the foundation of the relational database model.
+
+### NoSQL Databases
+* Databases that do not follow the relational model described in the previous section are collectively referred to as NoSQL databases.
+* One common organization for NoSQL databases uses *collections* instead of *tables* and *documents* instead of *records* . 
 
 
-## Python Database Frameworks
+### Python Database Frameworks
 
 * Python has packages for most database engines, both open source and commercial
     * Flask puts no restrictions on what database packages can be used
@@ -627,64 +1050,47 @@
 * The chosen database framework for the examples in this book will be *Flask-SQLAlchemy* .
     * The Flask extension wrapper for *SQLAlchemy* .
 
-## Database Management with Flask-SQLAlchemy
+### Database Management with Flask-SQLAlchemy
 * Flask-SQLAlchemy is a Flask extension that simplifies the use of SQLAlchemy inside Flask applications.
     * SQLAlchemy is a powerful relational database framework that supports several database backends.
     * It offers a high-level ORM and low level access to the database¡¯s native SQL functionality.
-### Install Flask-SQLAlchemy
+#### Install Flask-SQLAlchemy
 * `(venv) $ pip install flask-sqlalchemy`
 
-### Flask-SQLAlchemy database URLs
-* In Flask-SQLAlchemy, a database is specified as a URL.
+#### Flask-SQLAlchemy database URLs
+* In Flask-SQLAlchemy, a database is specified as a **URL** .
 * The database URLs for the three most popular database engines.
     * *MySQL*  *mysql://username:password@hostname/database*
     * *Postgres*  *postgresql://username:password@hostname/database*
     * *SQLite(Unix)*  *sqlite:////absolute/path/to/database*
     * *SQLite(Windows)*  *sqlite:///c:/absolute/path/to/database*
-    
-* The URL of the application database must be configured as the key *SQLALCHEMY_DATABASE_URI* in the Flask configuration object.
-* Another useful option is the configuration key *SQLALCHEMY_COMMIT_ON_TEARDOWN*
-    * which can be set to **True** to enable automatic commits of database changes at the end of each request.
+    ![Table 5-1. Flask-SQLAlchemy database URLs.jpg](Table 5-1. Flask-SQLAlchemy database URLs.jpg)
 
-### Initialize and configure a simple SQLite database
-
-* Database configuration
-* *config.py*
+#### Database configuration
+* *hello.py* : Database configuration
     ```
-        import os
-        basedir = os.path.abspath(os.path.dirname(__file__))
-
-        SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db')
-        SQLALCHEMY_COMMIT_ON_TEARDOWN = True
-        # SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')    
-    ```
-    * The *SQLALCHEMY_DATABASE_URI* is required by the Flask-SQLAlchemy extension. This is the path of our database file.
-    * The *SQLALCHEMY_MIGRATE_REPO* is the folder where we will store the SQLAlchemy-migrate data files.
-    * *SQLALCHEMY_COMMIT_ON_TEARDOWN* set to True to enable automatic commits of database changes at the end of each request.
-    
-* When we initialize our app we also need to initialize our database.
-    * *app/__init__.py*
-    ```
-        from flask import Flask
         from flask.ext.sqlalchemy import SQLAlchemy
-
+        
+        basedir = os.path.abspath(os.path.dirname(__file__))
+        
         app = Flask(__name__)
-        app.config.from_object('config')
+        app.config['SQLALCHEMY_DATABASE_URI'] =\
+            'sqlite:///' + os.path.join(basedir, 'data.sqlite')
+        app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
+        
         db = SQLAlchemy(app)
-
-        from app import views    
-        from app import models    
+    
     ```
-    * We created a *db* object that will be our database.
-    * We also imported a new module called *models* .
-    * NOTICE: `from app import views` MUST be in the end of the script for the reason of circular reference.
+    * The URL of the application database must be configured as the key *SQLALCHEMY_DATABASE_URI* in the Flask configuration object.
+    * Another useful option is the configuration key *SQLALCHEMY_COMMIT_ON_TEARDOWN*
+        * which can be set to **True** to enable automatic commits of database changes at the end of each request.
+    * The *db* object instantiated from class *SQLAlchemy* represents the database
+        * and provides access to all the functionality of *Flask-SQLAlchemy* .
+    
 
-## Model Definition
-* There are three fields: *id* , *nickname* , *email* .
-* *app/models.py*
+### Model Definition
+* *hello.py* : Role and User model definition
     ```
-        from app import db
-
         class Role(db.Model):
             __tablename__ = 'roles'
             id = db.Column(db.Integer, primary_key=True)
@@ -729,53 +1135,33 @@
     * The *__repr__* method representation that tells Python how to print objects of this class. 
         * We will use this for debugging and testing
     
-## Relationships
+### Relationships
 * This is a *one-to-many* relationshiop from roles to users
     * Because one role belongs to many users
     * And users have only one role.
 * Relationships
+    * *hello.py* : Relationships
     ```
     class Role(db.Model):
         # ...
         users = db.relationship('User', backref='role')
+        
     class User(db.Model):
         # ...
         role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))    
     ```
     
-* *app/models.py*
-    ```
-        from app import db
 
-        class Role(db.Model):
-            __tablename__ = 'roles'
-            id = db.Column(db.Integer, primary_key=True)
-            name = db.Column(db.String(64), unique=True)
-            users = db.relationship('User', backref='role')
+* Common SQLAlchemy relationship options
+    * *backref* : back reference
+    * *primaryjoin* : 
+    * ![Table 5-4. Common SQLAlchemy relationship options](imgs/Table 5-4. Common SQLAlchemy relationship options.jpg)
 
-            def __repr__(self):
-                return '<Role %r>' % (self.name)    
-                
-        class User(db.Model):
-            __tablename__ = 'users'
-            id = db.Column(db.Integer, primary_key=True)
-            username = db.Column(db.String(64), unique=True, index=True)
-            role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
-            
-            def __repr__(self):
-                return '<User %r>' % (self.username)
-    ```
-
-    * Common SQLAlchemy relationship options
-        * *backref* : back reference
-        * *primaryjoin* : 
-        * P57
-
-## Database Operations
+### Database Operations
 
 * The best way to learn how to work with database models is in a Python shell.
 
-### Creating the Tables
+#### Creating the Tables
 * The very first thing to do is to instruct Flask-SQLAlchemy to create a database based on the model classes.
 * The *db.create_all()* function does this:
     ```
@@ -795,6 +1181,165 @@
         ```
         
         ```
+        
+#### Inserting Rows
+* The following example creates a few roles and users:
+    ```
+        >>> from hello import Role, User
+        >>> admin_role = Role(name='Admin')
+        >>> mod_role = Role(name='Moderator')
+        >>> user_role = Role(name='User')
+        >>> user_john = User(username='john', role=admin_role)
+        >>> user_susan = User(username='susan', role=user_role)
+        >>> user_david = User(username='david', role=user_role)
+    
+    ```
+    
+* The constructors for medels accept initial values for the model attributes as key arguments.
+* Note that even the *role* attribute can be used, even though it is not a real database column.
+* The *id* attribute of these new objects is not set explicity: the primary keys are managed by *Flask-SQLAlchemy* .
+* The objects exist only on the Python side so far; they have not been written to the database yet.
+* So:
+    ```
+        >>> print admin_role.id
+        None
+        >>> print mod_role.id
+        None
+    
+    ```
+    
+* Changes to the database are managed through a database *session* , which *Flask-SQLAlchemy* provides as *db.session* .
+* To prepare objects to be written to the database, they must be added to the session:
+    ```
+        >>> db.session.add(admin_role)
+        >>> db.session.add(mod_role)
+        >>> db.session.add(user_role)
+        >>> db.session.add(user_john)
+        >>> db.session.add(user_susan)
+        >>> db.session.add(user_david)
+    ```
+    
+    * Or, more concisely:
+    ```
+        >>> db.session.add_all([admin_role, mod_role, user_role,
+        ...     user_john, user_susan, user_david])
+    
+    ```
+    
+* To write the objects to the database, the session needs to be *commited* by calling its *commit()* method:
+    ```
+        >>> db.session.commit()
+        
+    ```
+    
+* Check the *id* attributes again; they are now set:
+    ```
+        >>> print(admin_role.id)
+        1
+        >>> print(mod_role.id)
+        2
+        >>> print(user_role.id)
+        3
+        >>> print(user_david.username)
+        david
+        >>> print(user_david.role)
+        <Role u'User'>
+    
+    ```
+* The *db.session* database session is not related to the Flask *session* object.
+* Database sessions are also called *transactions* .
+
+* Database sessions are extremely useful in keeping the database consistent. 
+* The commit operation writes all the objects that were added to the session atomically.
+* If an error occurs while the session is being written, the whole session is discarded. 
+* If you always commit related changes together in a session, you are guaranteed to avoid database inconsistencies due to partial updates.
+
+* A database session can also be *rolled-back* . 
+    *  If *db.session.rollback()* is called, any objects that were added to the database session are restored to the state they have in the database.
+    
+
+#### Modifying Rows
+* The *add()* method of the database session can also be used to update models.
+    ```
+        >>> admin_role.name = 'Administrator'
+        >>> db.session.add(admin_role)
+        >>> db.session.commit()
+    
+    ```
+
+#### Deleting Rows
+* The database session also has a *delete()* method.
+    ```
+        >>> db.session.delete(mod_role)
+        >>> db.session.commit()
+    ```
+* Note that deletions, like insertions and updates, are executed only when the database session is committed.
+
+#### Querying Rows
+* Flask-SQLAlchemy makes a *query* object available in each model class. 
+* The most basic query for a model is the one that returns the entire contents of the corresponding table:
+    ```
+        >>> Role.query.all()
+        [<Role u'Administrator'>, <Role u'User'>]
+        >>> User.query.all()
+        [<User u'john'>, <User u'susan'>, <User u'david'>]
+    
+    ```
+* A query object can be configured to issue more specific database searches through the use of *filters* .
+    ```
+        >>> User.query.filter_by(role=user_role).all()
+        [<User u'susan'>, <User u'david'>]
+    ```
+
+* It is also possible to inspect the native SQL query that SQLAlchemy generates for a given query by converting the query object to a string:
+    ```
+        >>> str(User.query.filter_by(role=user_role))
+        'SELECT users.id AS users_id, users.username AS users_username,
+        users.role_id AS users_role_id FROM users WHERE :param_1 = users.role_id'
+    
+    ```
+    
+* If you exit the shell session, the objects created in the previous example will cease to exist as Python objects but will continue to exist as rows in their respective database tables.
+* If you then start a brand new shell session, you have to re-create Python objects from their database rows. 
+    ```
+        >>> from hello import db
+        >>> from hello import Role, User
+        >>> user_role = Role.query.filter_by(name='User').first()
+    ```
+    
+* Common SQLAlchemy query filters
+    ![Common SQLAlchemy query filters](imgs/Table 5-5. Common SQLAlchemy query filters.jpg)
+    
+* Most common SQLAlchemy query executors
+    ![Most common SQLAlchemy query executors](imgs/Table 5-6. Most common SQLAlchemy query executors.jpg)
+    
+* Relationships work similarly to queries.
+    * The following example queries the one-to-many relationship between roles and users from both ends:
+        ```
+            >>> users = user_role.users
+            >>> users
+            [<User u'susan'>, <User u'david'>]
+            >>> users[0].role
+            <Role u'User'>
+        ```
+        
+### Database Use in View Functions
+### Integration with the Python Shell
+### Database Migrations with Flask-Migrate
+#### Creating a Migration Repository
+#### Creating a Migration Script
+#### Upgrading the Database
+
+
+
+## Chapter 6. Email
+## Chapter 7. Large Application Structure
+
+# Part II. Example : A Social Blogging Application
+# Part III. The Last Mile
+
+
+
 
 
 
