@@ -70,3 +70,7 @@
 * network statistics
     * `netstat -tupln | grep ':5000'`
     
+# Q & A
+
+* Q: [How do I set a user environment variable? (permanently, not session)](http://unix.stackexchange.com/questions/21598/how-do-i-set-a-user-environment-variable-permanently-not-session) 
+    * A: 

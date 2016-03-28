@@ -207,4 +207,15 @@ DIFFERENT WAYS TO ADD
 + `$ git add "*.txt"`             Add all txt files in the whole project
 
 
+# Q & A
 
+* Q:  'Please, commit your changes or stash them before you can merge.'
+    * A: You have three options
+        * 1. One is to commit the change: 
+                `git commit -m "Something"`
+        * 2. The second is to stash it. stashing acts as a stack, where you can push changes, and you pop them in reverse order.
+                To stash:   `git commit -m "Something"`
+                Do the merge, and than pull the stash: `git stash pop`
+        * 3. The third options is to discard the local changes:
+                `git reset --hard`
+    * Links: [You have three options](http://stackoverflow.com/a/15745424)

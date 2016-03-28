@@ -1064,7 +1064,7 @@ added in this case.
     * *Postgres*  *postgresql://username:password@hostname/database*
     * *SQLite(Unix)*  *sqlite:////absolute/path/to/database*
     * *SQLite(Windows)*  *sqlite:///c:/absolute/path/to/database*
-    ![Table 5-1. Flask-SQLAlchemy database URLs.jpg](Table 5-1. Flask-SQLAlchemy database URLs.jpg)
+    ![Table 5-1. Flask-SQLAlchemy database URLs.jpg](imgs/Table 5-1. Flask-SQLAlchemy database URLs.jpg)
 
 #### Database configuration
 * *hello.py* : Database configuration
@@ -1322,18 +1322,319 @@ added in this case.
             >>> users[0].role
             <Role u'User'>
         ```
+    * The *user_role.users* query here has a small problem. It is not possible to refine it with additional query filters.
+        * So we can modify the configuration of the relationship with a *lazy='dynamic'* argument to request that the query is not automatically execute.
         
+        * *hello.py* : Dynamic relationships 
+            ```
+                class Role(db.Model):
+                    # ...
+                    users = db.relationship('User', backref='role', lazy='dynamic')
+                    # ...
+            
+            ```
+        * With the relationship configured in this way, *user_role.users* returns a query that hasn't executed yet, so filters can be added to it.
+            ```
+                >>> user_role.users.order_by(User.username).all()
+                [<User u'david'>, <User u'susan'>]
+                >>> user_role.users.count()
+                2
+            
+            ```
+    
 ### Database Use in View Functions
+* The database operations described in the previous sections can be used directly inside view functions.
+    * *hello.py* : Database use in view functions
+    ```
+        @app.route('/', methods=['GET', 'POST'])
+        def index():
+            form = NameForm()
+            if form.validate_on_submit():
+                user = User.query.filter_by(username=form.name.data).first()
+                if user is None:
+                    user = User(username = form.name.data)
+                    db.session.add(user)
+                    session['known'] = False
+                else:
+                    session['known'] = True
+                session['name'] = form.name.data
+                form.name.data = ''
+                return redirect(url_for('index'))
+            return render_template('index.html',
+                form = form, name = session.get('name'),
+                known = session.get('known', False))
+    
+    ```
+    * Each time a name is submitted the apllication checks for it in the database using the *filter_by()* query filter.
+    * A *known* variable is written to the user session, so that after the redirect the information can be sent to the template, where it is used to customize the greeting.
+        * Note that for the application to work, the database tables must be created in a Python shell as shown earlier.
+        
+    * *templates/index.html* : 
+        ```
+            {% extends "base.html" %}
+            
+            {% import "bootstrap/wtf.html" as wtf %}
+            
+            {% block title %}Flasky{% endblock %}
+            
+            {% block page_content %}
+            <div class="page-header">
+                <h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!</h1>
+                {% if not known %}
+                <p>Pleased to meet you!</p>
+                {% else %}
+                <p>Happy to see you again!</p>
+                {% endif %}
+            </div>
+            
+            {{ wtf.quick_form(form) }}
+            
+            {% endblock %}
+        
+        ```
+
 ### Integration with the Python Shell
+* Having to import the database instance and the models each time a shell session is started is tedious work.
+* To avoid having to constantly repeat thest imports, the *Flask-Script* 's shell command can be configured to automatically import certain objects.
+* To add objects to the import list the shell command needs to be registered with a *make_context* callback function.
+
+* *hello.py* : Adding a shell context
+    ```
+        from flask.ext.script import Shell
+        
+        def make_shell_context():
+             return dict(app=app, db=db, User=User, Role=Role)
+             
+        manager.add_command("shell", Shell(make_context=make_shell_context))
+    ```
+    * The *make_shell_context() function registers the application and database instances and the models so that they are automatically imported into the shell.
+    
+
 ### Database Migrations with Flask-Migrate
+* Sometimes you will find that your database models neet to change.
+* *Flask-SQLAlchemy* creates database tables from models only when they do not exist already, so the only way to make it update tables is by destroying the old tables first, but of course this causes all the data in the database to be lost.
+* A better solution is to use a *database *migration framework.  
+    * The database migration framework keeps track of changes to a database *schema* , and then incremental changes can be applied to the database.
+    
+    * The lead developer of SQLAlchemy has written a migration framework called *Alembic* 
+    * Flask applications can use the *Flask-Migrate* extension, a lightweight *Alembic* wrapper that integrates with Flask-Script to provide all operations through Flask-Script commands.
+    
+
 #### Creating a Migration Repository
+* To begin, Flask-Migrate must be installed in the virtual environment
+    `(venv) $ pip install flask-migrate`
+    
+* Initialize flask-migrate
+    * *hello.py* : Flask-Migrate configuration
+        ```
+            from flask.ext.migrate import Migrate, MigrateCommand
+            
+            # ...
+            
+            migrate = Migrate(app, db)
+            manager.add_command('db', MigrateCommand)
+        
+        ```
+        
+        * To expose the database migration commands, Flask-Migrate exposes a *MigrateCommand* class that is attached to Flask-Script's *manager* object.
+        
+* Create a Migration Repository
+    * with *init* subcommand
+        ```
+            (venv) $ python hello.py db init
+              Creating directory /home/flask/flasky/migrations...done
+              Creating directory /home/flask/flasky/migrations/versions...done
+              Generating /home/flask/flasky/migrations/alembic.ini...done
+              Generating /home/flask/flasky/migrations/env.py...done
+              Generating /home/flask/flasky/migrations/env.pyc...done
+              Generating /home/flask/flasky/migrations/README...done
+              Generating /home/flask/flasky/migrations/script.py.mako...done
+              Please edit configuration/connection/logging settings in
+              '/home/flask/flasky/migrations/alembic.ini' before proceeding.
+        
+        ```
+        
+        * This command creates a *migrations* folder, where all the migration scripts will be stored.
+        
 #### Creating a Migration Script
+
+* In Alembic, a database migration is represented by a *migration *script.
+    * This script has two functions called *upgrade()* and *downgrade()* .
+        * *upgrade()* : applies the database changes that are part of the migration
+        * *downgrade()* : removes them.
+        
+* Alembic migrations can be created **manually or **automatically using the *revision and *migrate commands, respectively.
+
+* The *migrate subcommand creates an automatic migration script
+    ```
+        (venv) $ python hello.py db migrate -m "initial migration"
+        INFO  [alembic.migration] Context impl SQLiteImpl.
+        INFO  [alembic.migration] Will assume non-transactional DDL.
+        INFO  [alembic.autogenerate] Detected added table 'roles'
+        INFO  [alembic.autogenerate] Detected added table 'users'
+        INFO  [alembic.autogenerate.compare] Detected added index
+        'ix_users_username' on '['username']'
+          Generating /home/flask/flasky/migrations/versions/1bc
+          594146bb5_initial_migration.py...done
+    
+    ```
+        
 #### Upgrading the Database
 
-
+* Once a migration script has been reviewed and accepted, it can be applied to the database using the *db *upgrade command:
+    ```
+        (venv) $ python hello.py db upgrade
+        INFO  [alembic.migration] Context impl SQLiteImpl.
+        INFO  [alembic.migration] Will assume non-transactional DDL.
+        INFO  [alembic.migration] Running upgrade None -> 1bc594146bb5, initial migration
+    
+    ```
 
 ## Chapter 6. Email
+
+
 ## Chapter 7. Large Application Structure
+
+* Flask does not impose a specific organization for large projects
+* In this chapter, a possible way to organize a large application in packages and modules is presented.
+
+### Project Structure
+
+* the basic layout for a Flask application.
+
+    ```
+        |-flasky
+          |-app/
+            |-templates/
+            |-static/
+            |-main/
+              |-__init__.py
+              |-errors.py
+              |-forms.py
+              |-views.py
+            |-__init__.py
+            |-email.py
+            |-models.py
+          |-migrations/
+          |-tests/
+            |-__init__.py
+            |-test*.py
+          |-venv/
+          |-requirements.txt
+          |-config.py
+          |-manage.py
+
+    ```
+* This structure has four top-level folders:
+    * *app : The Flask application lives inside a package generically named *app .
+    * *migrations : contains the database migration scripts, as before.
+    * *tests : Unit tests are written in a *tests package.
+    * *venv : contains the Python virtual environment.
+    
+* There are also a few new files:
+    * *requirements.txt : lists the package dependencies so that it is easy to regenerate an identical virtual environment on a different computer.
+    * *config.py : stores the configuration settings
+    * *manage.py : launches the apllication and other apllication tasks
+    
+* To help you fully understand this structure, the following sections describe the process to convert the *hello.py apllication to it.
+
+### Configuration Options
+
+* Applications often need several configuration sets. 
+    * The best example of this is the need to use different databasees during development, testing, and production so that they don't interfere with each other.
+* Instead of the simple dictionary-like structure configuration used by *hello.py , a hierarchy of configuration classes can be used.
+
+    * *config.py : Application configuration
+        ```
+            import os
+            basedir = os.path.abspath(os.path.dirname(__file__))
+            
+            class Config:
+                SECRET_KEY = os.environ.get('SECRET_KEY') or 'hard to guess string'
+                SQLALCHEMY_COMMIT_ON_TEARDOWN = True
+                FLASKY_MAIL_SUBJECT_PREFIX = '[Flasky]'
+                FLASKY_MAIL_SENDER = 'Flasky Admin <flasky@example.com>'
+                FLASKY_ADMIN = os.environ.get('FLASKY_ADMIN')
+                
+                @staticmethod
+                def init_app(app):
+                    pass
+                    
+            class DevelopmentConfig(Config):
+                DEBUG = True                
+                MAIL_SERVER = 'smtp.googlemail.com'
+                MAIL_PORT = 587
+                MAIL_USE_TLS = True
+                MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
+                MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+                SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or \
+                    'sqlite:///' + os.path.join(basedir, 'data-dev.sqlite')
+                
+        class TestingConfig(Config):
+            TESTING = True
+            SQLALCHEMY_DATABASE_URI = os.environ.get('TEST_DATABASE_URL') or \
+                'sqlite:///' + os.path.join(basedir, 'data-test.sqlite')
+        
+        class ProductionConfig(Config):
+            SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
+                'sqlite:///' + os.path.join(basedir, 'data.sqlite')
+        
+        config = {
+            'development': DevelopmentConfig,
+            'testing': TestingConfig,
+            'production': ProductionConfig,
+            'default': DevelopmentConfig
+        }
+        
+        ```
+    * To make configuration more flexible and safe, some settings can be optionally imported from environment variables.  *SECRET_KEY
+
+### Application Package
+
+* *app/__init__.py : Application package constructor
+    ```
+        from flask import Flask, render_template
+        from flask.ext.bootstrap import Bootstrap
+        from flask.ext.mail import Mail
+        from flask.ext.moment import Moment
+        from flask.ext.sqlalchemy import SQLAlchemy
+        from config import config
+        
+        bootstrap = Bootstrap()
+        mail = Mail()
+        moment = Moment()
+        db = SQLAlchemy()
+        
+        def create_app(config_name):
+            app = Flask(__name__)
+            app.config.from_object(config[config_name])
+            config[config_name].init_app(app)
+            
+            bootstrap.init_app(app)
+            mail.init_app(app)
+            moment.init_app(app)
+            db.init_app(app)
+            
+            # attach routes and custom error pages here
+            
+            return app
+    
+    ```
+
+
+### Launch Script
+
+
+### Requirements File
+
+
+### Unit Tests
+
+
+### Database Setup
+
+
+
 
 # Part II. Example : A Social Blogging Application
 # Part III. The Last Mile
