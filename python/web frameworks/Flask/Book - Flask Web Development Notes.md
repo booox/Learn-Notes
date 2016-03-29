@@ -2317,14 +2317,273 @@ have an account can easily find it.
 ### Account Confirmation
 
 #### Generating Confirmation Tokens with itsdangerous
-
 #### Sending Confirmation Emails
-
 ### Account Management
 
         
 ## Chapter 9. User Roles
+
+* There are several ways to implement roles in an application. 
+    * For example, a simple application may need just two roles, one for regular users and one for administrators.
+        * In this case, having an *is_administrator* Boolean field in the User model may be all that is necessary.
+    * A more complex application may need additional roles with varying levels of power in between regular users and administrators.
+    
+### Database Representation of Roles
+    
+* *app/models.py* : Role permissions
+    ```
+        class Role(db.Model):
+            __tablename__ = 'roles'
+            id = db.Column(db.Integer, primary_key=True)
+            name = db.Column(db.String(64), unique=True)
+            default = db.Column(db.Boolean, default=False, index=True)
+             permissions = db.Column(db.Integer)
+            users = db.relationship('User', backref='role', lazy='dynamic')    
+    ```
+    
+    * The *default* field should be set to *True* for only one role and *False* for all the others.
+        * The role marked as default will be the one assigned to new users upon registration.
+    * The second addition to the model is the *permissions* field, which is an integer that will be used as bit flags. 
+    
+* Application permissions
+    * ![Table 9-1. Application permissions](images/Table 9-1. Application permissions.jpg)
+    
+    * *app/models.py* : Permission constants
+        ```
+            class Permission:
+                FOLLOW = 0x01
+                COMMENT = 0x02
+                WRITE_ARTICLES = 0x04
+                MODERATE_COMMENTS = 0x08
+                ADMINISTER = 0x80
+        
+        ```
+        
+* User roles
+    * *Anonymous*
+    * *User*
+    * *Moderator*
+    * *Administrator*
+    * ![Table 9-2. User roles](images/Table 9-2. User roles.jpg)
+    
+    * Adding the roles to the database manually is time consuming and error prone. 
+    * Instead, a class method will be added to the Role class for this purpose:
+        * *app/models.py* : Create roles in the database
+        ```
+            class Role(db.Model):
+                # ...
+                @staticmethod
+                def insert_roles():
+                    roles = {
+                        'User': (Permission.FOLLOW |
+                                 Permission.COMMENT |
+                                 Permission.WRITE_ARTICLES, True),
+                        'Moderator': (Permission.FOLLOW |
+                                      Permission.COMMENT |
+                                      Permission.WRITE_ARTICLES |
+                                      Permission.MODERATE_COMMENTS, False),
+                        'Administrator': (0xff, False)
+                    }
+                    for r in roles:
+                        role = Role.query.filter_by(name=r).first()
+                        if role is None:
+                            role = Role(name=r)
+                        role.permissions = roles[r][0]
+                        role.default = roles[r][1]
+                        db.session.add(role)
+                    db.session.commit()        
+        ```
+        
+        * The *insert_roles()* function does not directly create new role objects. 
+        * Instead, it tries to find existing roles by name and update those. 
+        * To add a new role or change the permission assignments for a role, CHANGE THE ROLES ARRAY AND RERUN THE FUNCTION. 
+        * Note that the ¡°Anonymous¡± role does not need to be represented in the database, as it is designed to represent users who are not in the database.
+        
+    * To apply these roles to the database, a shell session can be used:
+        ```
+            (venv) $ python manage.py shell
+            >>> Role.insert_roles()
+            >>> Role.query.all()
+            [<Role u'Administrator'>, <Role u'User'>, <Role u'Moderator'>]        
+        ```
+
+### Role Assignment
+
+* When users register an account with the application, the correct role should be assigned to them. 
+* For most users, the role assigned at registration time will be the ¡°User¡± role, as that is the role that is marked as a default role. 
+* The only exception is made for the administrator, which needs to be assigned the ¡°Administrator¡± role from the start. 
+    * This user is identified by an email address stored in the FLASKY_ADMIN configuration variable, so as soon as that email  address appears in a registration request it can be given the correct role.
+    * *app/models.py* : Define a default role for users
+    ```
+        class User(UserMixin, db.Model):
+            # ...
+            def __init__(self, **kwargs):
+                super(User, self).__init__(**kwargs)
+                if self.role is None:
+                    if self.email == current_app.config['FLASKY_ADMIN']:
+                        self.role = Role.query.filter_by(permissions=0xff).first()
+                    if self.role is None:
+                        self.role = Role.query.filter_by(default=True).first()
+            # ...
+    ```
+    
+
+
+### Role Verification
+* To simplify the implementation of roles and permissions, a helper method can be added to the  User model that checks whether a given permission is present.
+    * *app/models.py* : Evaluate whether a user has a given permission
+    ```
+        from flask.ext.login import UserMixin, AnonymousUserMixin
+        
+        class User(UserMixin, db.Model):
+            # ...
+            def can(self, permissions):
+                return self.role is not None and \
+                    (self.role.permissions & permissions) == permissions
+                    
+            def is_administrator(self):
+                return self.can(Permission.ADMINISTER)
+                
+        class AnonymousUser(AnonymousUserMixin):
+            def can(self, permissions):
+                return False
+                
+            def is_administrator(self):
+                return False
+                
+        login_manager.anonymous_user = AnonymousUser
+    ```
+    
+    * The *can()* method added to the User model performs a *bitwise* *and* operation between the requested permissions and the permissions of the assigned role. 
+    * The check for administration permissions is so common that it is also implemented as a standalone *is_administrator()* method.
+    * For consistency, a custom  *AnonymousUser* class that implements the  *can()* and *is_administrator()* methods is created. 
+        * This object inherits from Flask-Login¡¯s *AnonymousUserMixin* class and is registered as the class of the object that is assigned to *current_user* when the user is not logged in. 
+        
+    * This will enable the application to freely call *current_user.can()* and *current_user.is_administrator()* without having to check whether the user is logged in first.
+    
+* For cases in which an entire view function needs to be made available only to users with certain permissions, a custom decorator can be used. 
+    * the implementation of two decorators, one for generic permission checks and one that checks specifically for administrator permission.
+    
+    * *app/decorators.py* : Custom decorators that check user permissions
+    ```
+        from functools import wraps
+        from flask import abort
+        from flask.ext.login import current_user
+        
+        def permission_required(permission):
+            def decorator(f):
+                @wraps(f)
+                def decorated_function(*args, **kwargs):
+                    if not current_user.can(permission):
+                        abort(403)
+                    return f(*args, **kwargs)
+                return decorated_function
+            return decorator
+            
+        def admin_required(f):
+            return permission_required(Permission.ADMINISTER)(f)
+    ```
+    
+    * These decorators are built with the help of the *functools* package from the Python standard library, and return an error code *403* , the ¡°Forbidden¡± HTTP error, when the current user does not have the requested permissions.
+    
+* The following are two examples that demonstrate the usage of these decorators:
+    ```
+        from decorators import admin_required, permission_required
+        
+        @main.route('/admin')
+        @login_required
+        @admin_required
+        def for_admins_only():
+            return "For administrators!"
+            
+        @main.route('/moderator')
+        @login_required
+        @permission_required(Permission.MODERATE_COMMENTS)
+        def for_moderators_only():
+            return "For comment moderators!"
+    ```
+    
+* Permissions may also need to be checked from templates, so the *Permission* class with all the bit constants needs to be accessible to them. 
+    * To avoid having to add a template argument in every render_template() call, a context processor can be used. Context processors make variables globally available to all templates.
+    * *app/main/__init__.py* : Adding the Permission class to the template context
+    ```
+        @main.app_context_processor
+        def inject_permissions():
+            return dict(Permission=Permission)
+    ```
+    
+    * HOW TO USE THIS?
+    
+* The new roles and permissions can be exercised in unit tests. The following example shows two simple tests that also serve as a demonstration of the usage.
+    * *tests/test_user_model.py* : Unit tests for roles and permissions
+    ```
+        class UserModelTestCase(unittest.TestCase):
+            # ...
+            
+            def test_roles_and_permissions(self):
+                Role.insert_roles()
+                u = User(email='john@example.com', password='cat')
+                self.assertTrue(u.can(Permission.WRITE_ARTICLES))
+                self.assertFalse(u.can(Permission.MODERATE_COMMENTS))
+                
+            def test_anonymous_user(self):
+                u = AnonymousUser()
+                self.assertFalse(u.can(Permission.FOLLOW))
+    ```
+        
 ## Chapter 10. User Profiles
+
+### Profile Information
+
+* To make user profile pages more interesting, some additional information about users can be recorded.
+    * *app/models.py* : User information fields
+    ```
+        class User(UserMixin, db.Model):
+            # ...
+            name = db.Column(db.String(64))
+            location = db.Column(db.String(64))
+            about_me = db.Column(db.Text())
+            member_since = db.Column(db.DateTime(), default=datetime.utcnow)
+            last_seen = db.Column(db.DateTime(), default=datetime.utcnow)
+    ```
+    
+    * Note that *datetime.utcnow* is missing the () at the end. 
+        * This is because the *default* argument to *db.Column()* can take a function as a default value, so each time a default value needs to be generated the function is invoked to produce it. 
+
+* The *last_seen* field is also initialized to the current time upon creation, but it needs to be refreshed each time the user accesses the site. 
+    * A method in the *User* class can be added to perform this update. 
+    * *app/models.py* : Refresh last visit time of a user
+    ```
+        class User(UserMixin, db.Model):
+            # ...
+            def ping(self):
+                self.last_seen = datetime.utcnow()
+                db.session.add(self)
+    ```
+    
+    * The *ping()* method must be called each time a request from the user is received.  
+    * The *before_app_request* can do this easily.
+    * *app/auth/views.py* : Ping logged-in user
+    ```
+        @auth.before_app_request
+            def before_request():
+                if current_user.is_authenticated():
+                    current_user.ping()
+                    if not current_user.confirmed \
+                            and request.endpoint[:5] != 'auth.':
+                        return redirect(url_for('auth.unconfirmed'))
+    ```
+    
+
+### User Profile Page
+
+### Profile Editor
+#### User-Level Profile Editor
+#### Administrator-Level Profile Editor
+### User Avatars
+
+
+
 ## Chapter 11. Blog Posts
 ## Chapter 12. Followers
 ## Chapter 13. User Comments
