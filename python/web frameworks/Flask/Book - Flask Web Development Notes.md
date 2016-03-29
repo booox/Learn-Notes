@@ -2244,7 +2244,82 @@ added in this case.
 
 
 ### New User Registration
+
+#### Adding a User Registration Form
+* The form that will be used in the registration page asks the user to enter registration infomation.
+
+    * *app/auth/forms.py* : User registration form
+    ```
+        from flask.ext.wtf import Form
+        from wtforms import StringField, PasswordField, BooleanField, SubmitField
+        from wtforms.validators import Required, Length, Email, Regexp, EqualTo        
+        from wtforms import ValidationError
+        from ..models import User
+        
+        class RegistrationForm(Form):
+            email = StringField('Email', validators=[Required(), Length(1, 64),
+                                                     Email()])
+            username = StringField('Username', validators=[
+                Required(), Length(1, 64), Regexp('^[A-Za-z][A-Za-z0-9_.]*$', 0,
+                                                  'Usernames must have only letters, '
+                                                  'numbers, dots or underscores')])
+            password = PasswordField('Password', validators=[
+                Required(), EqualTo('password2', message='Passwords must match.')])
+            password2 = PasswordField('Confirm password', validators=[Required()])
+            submit = SubmitField('Register')
+            
+            def validate_email(self, field):
+                if User.query.filter_by(email=field.data).first():
+                    raise ValidationError('Email already registered.')
+                    
+            def validate_username(self, field):
+                if User.query.filter_by(username=field.data).first():
+                    raise ValidationError('Username already in use.')
+    
+    ```
+    
+    * This form uses the Regexp validator from WTForms to ensure that the username field contains letters, numbers, underscores, and dots only. 
+
+* The registration page needs to be linked from the login page so that users who don¡¯t
+have an account can easily find it. 
+    * *app/templates/auth/login.html* : Link to the registration page
+    ```
+        <p>
+            New user?
+            <a href="{{ url_for('auth.register') }}">
+                Click here to register
+            </a>
+        </p>
+    
+    ```
+
+
+#### Registering New Users
+
+* When the registration form is submitted and validated, a new user is added to the database using the user provided information. 
+* The view function that performs this task.
+    * *app/auth/views.py* : User registration route
+    ```
+        @auth.route('/register', methods=['GET', 'POST'])
+        def register():
+            form = RegistrationForm()
+            if form.validate_on_submit():
+                user = User(email=form.email.data,
+                            username=form.username.data,
+                            password=form.password.data)
+                db.session.add(user)
+                flash('You can now login.')
+                return redirect(url_for('auth.login'))
+            return render_template('auth/register.html', form=form)
+    
+    ```
+
 ### Account Confirmation
+
+#### Generating Confirmation Tokens with itsdangerous
+
+#### Sending Confirmation Emails
+
 ### Account Management
 
         
