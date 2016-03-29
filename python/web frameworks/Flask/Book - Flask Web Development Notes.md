@@ -856,13 +856,13 @@ added in this case.
     * *PasswordField* :
     * *HiddenField* :
     * ...
-    * ![Table 4-1. WTForms standard HTML fields.jpg](imgs/Table 4-1. WTForms standard HTML fields.jpg)
+    * ![Table 4-1. WTForms standard HTML fields.jpg](images/Table 4-1. WTForms standard HTML fields.jpg)
 * WTForms built-in validators
     * *Email* : Validates an email address
     * *EqualTo* : useful when requesting a password to be entered twice for confirmation
     * *IPAddress* : Validates an IPv4 network address
     * ...
-    * ![Table 4-2. WTForms validators.jpg](imgs/Table 4-2. WTForms validators.jpg)
+    * ![Table 4-2. WTForms validators.jpg](images/Table 4-2. WTForms validators.jpg)
     
     
 
@@ -1064,7 +1064,7 @@ added in this case.
     * *Postgres*  *postgresql://username:password@hostname/database*
     * *SQLite(Unix)*  *sqlite:////absolute/path/to/database*
     * *SQLite(Windows)*  *sqlite:///c:/absolute/path/to/database*
-    ![Table 5-1. Flask-SQLAlchemy database URLs.jpg](imgs/Table 5-1. Flask-SQLAlchemy database URLs.jpg)
+    ![Table 5-1. Flask-SQLAlchemy database URLs.jpg](images/Table 5-1. Flask-SQLAlchemy database URLs.jpg)
 
 #### Database configuration
 * *hello.py* : Database configuration
@@ -1155,7 +1155,7 @@ added in this case.
 * Common SQLAlchemy relationship options
     * *backref* : back reference
     * *primaryjoin* : 
-    * ![Table 5-4. Common SQLAlchemy relationship options](imgs/Table 5-4. Common SQLAlchemy relationship options.jpg)
+    * ![Table 5-4. Common SQLAlchemy relationship options](images/Table 5-4. Common SQLAlchemy relationship options.jpg)
 
 ### Database Operations
 
@@ -1308,10 +1308,10 @@ added in this case.
     ```
     
 * Common SQLAlchemy query filters
-    ![Common SQLAlchemy query filters](imgs/Table 5-5. Common SQLAlchemy query filters.jpg)
+    ![Common SQLAlchemy query filters](images/Table 5-5. Common SQLAlchemy query filters.jpg)
     
 * Most common SQLAlchemy query executors
-    ![Most common SQLAlchemy query executors](imgs/Table 5-6. Most common SQLAlchemy query executors.jpg)
+    ![Most common SQLAlchemy query executors](images/Table 5-6. Most common SQLAlchemy query executors.jpg)
     
 * Relationships work similarly to queries.
     * The following example queries the one-to-many relationship between roles and users from both ends:
@@ -1439,7 +1439,7 @@ added in this case.
         * To expose the database migration commands, Flask-Migrate exposes a *MigrateCommand* class that is attached to Flask-Script's *manager* object.
         
 * Create a Migration Repository
-    * with *init* subcommand
+    * Before database migrations can be maintained, it is necessary to create a migration repository with *init* subcommand
         ```
             (venv) $ python hello.py db init
               Creating directory /home/flask/flasky/migrations...done
@@ -1463,9 +1463,9 @@ added in this case.
         * *upgrade()* : applies the database changes that are part of the migration
         * *downgrade()* : removes them.
         
-* Alembic migrations can be created **manually or **automatically using the *revision and *migrate commands, respectively.
+* Alembic migrations can be created **manually** or **automatically** using the *revision* and *migrate* commands, respectively.
 
-* The *migrate subcommand creates an automatic migration script
+* The *migrate* subcommand creates an automatic migration script:
     ```
         (venv) $ python hello.py db migrate -m "initial migration"
         INFO  [alembic.migration] Context impl SQLiteImpl.
@@ -1481,7 +1481,7 @@ added in this case.
         
 #### Upgrading the Database
 
-* Once a migration script has been reviewed and accepted, it can be applied to the database using the *db *upgrade command:
+* Once a migration script has been reviewed and accepted, it can be applied to the database using the `db upgrade` command:
     ```
         (venv) $ python hello.py db upgrade
         INFO  [alembic.migration] Context impl SQLiteImpl.
@@ -1489,6 +1489,8 @@ added in this case.
         INFO  [alembic.migration] Running upgrade None -> 1bc594146bb5, initial migration
     
     ```
+    
+    * For a first migration, this is effectively equivalent to calling *db.create_all()* , but in successive migrations the *upgrade* command applies updates to the tables without affecting their content.
 
 ## Chapter 6. Email
 
@@ -1526,25 +1528,25 @@ added in this case.
 
     ```
 * This structure has four top-level folders:
-    * *app : The Flask application lives inside a package generically named *app .
-    * *migrations : contains the database migration scripts, as before.
-    * *tests : Unit tests are written in a *tests package.
-    * *venv : contains the Python virtual environment.
+    * *app* : The Flask application lives inside a package generically named *app* .
+    * *migrations* : contains the database migration scripts, as before.
+    * *tests* : Unit tests are written in a *tests* package.
+    * *venv* : contains the Python virtual environment.
     
 * There are also a few new files:
-    * *requirements.txt : lists the package dependencies so that it is easy to regenerate an identical virtual environment on a different computer.
-    * *config.py : stores the configuration settings
-    * *manage.py : launches the apllication and other apllication tasks
+    * *requirements.txt* : lists the package dependencies so that it is easy to regenerate an identical virtual environment on a different computer.
+    * *config.py* : stores the configuration settings
+    * *manage.py* : launches the apllication and other apllication tasks
     
-* To help you fully understand this structure, the following sections describe the process to convert the *hello.py apllication to it.
+* To help you fully understand this structure, the following sections describe the process to convert the *hello.py* apllication to it.
 
 ### Configuration Options
 
 * Applications often need several configuration sets. 
     * The best example of this is the need to use different databasees during development, testing, and production so that they don't interfere with each other.
-* Instead of the simple dictionary-like structure configuration used by *hello.py , a hierarchy of configuration classes can be used.
+* Instead of the simple dictionary-like structure configuration used by *hello.py* , a hierarchy of configuration classes can be used.
 
-    * *config.py : Application configuration
+    * *config.py* : Application configuration
         ```
             import os
             basedir = os.path.abspath(os.path.dirname(__file__))
@@ -1570,28 +1572,29 @@ added in this case.
                 SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or \
                     'sqlite:///' + os.path.join(basedir, 'data-dev.sqlite')
                 
-        class TestingConfig(Config):
-            TESTING = True
-            SQLALCHEMY_DATABASE_URI = os.environ.get('TEST_DATABASE_URL') or \
-                'sqlite:///' + os.path.join(basedir, 'data-test.sqlite')
-        
-        class ProductionConfig(Config):
-            SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
-                'sqlite:///' + os.path.join(basedir, 'data.sqlite')
-        
-        config = {
-            'development': DevelopmentConfig,
-            'testing': TestingConfig,
-            'production': ProductionConfig,
-            'default': DevelopmentConfig
-        }
+            class TestingConfig(Config):
+                TESTING = True
+                SQLALCHEMY_DATABASE_URI = os.environ.get('TEST_DATABASE_URL') or \
+                    'sqlite:///' + os.path.join(basedir, 'data-test.sqlite')
+            
+            class ProductionConfig(Config):
+                SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
+                    'sqlite:///' + os.path.join(basedir, 'data.sqlite')
+            
+            config = {
+                'development': DevelopmentConfig,
+                'testing': TestingConfig,
+                'production': ProductionConfig,
+                'default': DevelopmentConfig
+            }
         
         ```
-    * To make configuration more flexible and safe, some settings can be optionally imported from environment variables.  *SECRET_KEY
+    * To make configuration more flexible and safe, some settings can be optionally imported from environment variables.  *SECRET_KEY*
 
 ### Application Package
 
-* *app/__init__.py : Application package constructor
+#### Using an Application Factory
+* *app/__init__.py* : Application package constructor
     ```
         from flask import Flask, render_template
         from flask.ext.bootstrap import Bootstrap
@@ -1620,23 +1623,638 @@ added in this case.
             return app
     
     ```
+    * The single-file version application is created in the global scope, there is no way to apply configuration changes dynamically.
+        * by the time the script is running, the application instance has already been created, so it is already too late to make configuration changes.
+        
+    * The solution to this problem is to delay the creation of the application by moving it into a *factory* *function* that can be explicitly invoked from the script. 
+    
+    * This constructor imports most of the Flask extensions currently in use.
+        * but because there is no application instance to initialize them with, it creates them uninitialized by passing no arguments into their constructiors.
+    * The *create_app()* function is the application factory,
+        * which takes as an argument the name of a configuration to use for the application.
+    * The configuration settings stored in one of the classes defined in *config.py* can be imported directly into the application using the *from_object()* method avaiable in Flask's *app.config* configuration object.
+
+#### Implementing Application Functionality in a Blueprint 
+
+* In single-script applications, the application instance exists in the global scope, so routes can be easily defined using the app.route decorator.
+* But now that the application is created at runtime, the app.route decorator begins to exist only after create_app() is invoked, which is too late. 
+    * Like routes, custom error page handlers present the same problem, as these are defined with the app.errorhandler decorator.
+
+* Luckily Flask offers a better solution using *blueprints* . 
+    * A *blueprint* is similar to an application in that it can also define routes.
+    * The difference is that routes associated with a blueprint are in a dormant state until the blueprint is registered with an application, at which point the routes become part of it.
+
+* Like applications, blueprints can be defined all in a single file or can be created in a more structured way with multiple modules inside a package.
+    * To allow for the greatest flexibility, a subpackage inside the application package will be created to host the blueprint.
+    
+    * *app/main/__init__.py* : Blueprint creation
+    ```
+        from flask import Blueprint
+        
+        main = Blueprint('main', __name__)
+        
+        from . import views, errors
+    
+    ```
+    
+    * The routes of the application are stored in an *app/main/views.py* module inside the package
+    * The error handlers are in *app/main/errors.py* .
+    * It is important to note that the modules are imported at the bottom of the *app/__init__.py* script to avoid circular dependencies.
+        * Because *views.py* and *errors.py* need to import the *main* blueprint.
+
+* The blueprint is registered with the application inside the *create_app()* factory function.
+    * *app/__init__.py* : Blueprint registration
+    ```
+        def create_app(config_name):
+            # ...
+            
+            from main import main as main_blueprint
+            
+            app.register_blueprint(main_blueprint)
+            
+            return app
+    ```
+    
+    * *app/main/errors.py* : Blueprint with error handlers
+    ```
+        from flask import render_template
+        from . import main
+        
+        @main.app_errorhandler(404)
+        def page_not_found(e):
+            return render_template('404.html'), 404
+            
+        @main.app_errorhandler(500)
+        def internal_server_error(e):
+            return render_template('500.html'), 500
+    
+    ```
+    
+    * *app/main/views.py* : Blueprint with application routes
+    ```
+        from datetime import datetime
+        from flask import render_template, session, redirect, url_for        
+        from . import main
+        from .forms import NameForm
+        from .. import db
+        from ..models import User
+        
+        @main.route('/', methods=['GET', 'POST'])
+        def index():
+            form = NameForm()
+            if form.validate_on_submit():
+                # ...
+                return redirect(url_for('.index'))
+            return render_template('index.html',
+                                   form=form, name=session.get('name'),
+                                   known=session.get('known', False),
+                                   current_time=datetime.utcnow())
+    
+    ```
+    
+    * *app/main/forms.py* : application forms
+    ```
+        from flask.ext.wtf import Form
+        from wtforms import StringField, SubmitField
+        from wtforms.validators import Required
 
 
+        class NameForm(Form):
+            name = StringField('What is your name?', validators=[Required()])
+            submit = SubmitField('Submit')
+    
+    ```
+        
 ### Launch Script
-
+* The *manage.py* file in the top-level folder is used to start the application. 
+    * *manage.py* : Launch script
+    ```
+        #!/usr/bin/env python
+        import os
+        from app import create_app, db
+        from app.models import User, Role
+        from flask.ext.script import Manager, Shell
+        from flask.ext.migrate import Migrate, MigrateCommand
+        
+        app = create_app(os.getenv('FLASK_CONFIG') or 'default')
+        manager = Manager(app)
+        migrate = Migrate(app, db)
+        
+        def make_shell_context():
+            return dict(app=app, db=db, User=User, Role=Role)
+            
+        manager.add_command("shell", Shell(make_context=make_shell_context))
+        manager.add_command('db', MigrateCommand)
+        
+        if __name__ == '__main__':
+            manager.run()
+    ```
+    
+    * As a convenience, a shebang line is added (`#!/usr/bin/env python`)
+        * Unix-based operating systems the script can be executed as *./manage.py* instead of the more verbose `python manage.py`.
 
 ### Requirements File
 
+* Applications must include a requirements.txt file that records all the package dependencies, with the exact version numbers.
 
+* This file can be generated automatically by *pip* :
+    `(venv) $ pip freeze >requirements.txt`
+    
+* It is a good idea to refresh this file whenever a package is installed or upgraded.
+* An example requirements file is shown here:
+    ```
+        Flask==0.10.1
+        Flask-Bootstrap==3.0.3.1
+        Flask-Mail==0.9.0
+        Flask-Migrate==1.1.0
+        Flask-Moment==0.2.0
+        Flask-SQLAlchemy==1.0
+        Flask-Script==0.6.6
+        Flask-WTF==0.9.4
+    ```
+    
+* you can create a new virtual environment and run the following command on it:
+    `(venv) $ pip install -r requirements.txt`
+    
 ### Unit Tests
 
+* This application is very small so there isn¡¯t a lot to test yet, but as an example two simple tests can be defined.
 
+* *tests/test_basics.py* : Unit tests
+    ```
+        import unittest
+        from flask import current_app
+        from app import create_app, db
+        
+        class BasicsTestCase(unittest.TestCase):
+            def setUp(self):
+                self.app = create_app('testing')
+                self.app_context = self.app.app_context()
+                self.app_context.push()
+                db.create_all()
+                
+            def tearDown(self):
+                db.session.remove()
+                db.drop_all()
+                self.app_context.pop()
+                
+            def test_app_exists(self):
+                self.assertFalse(current_app is None)
+                
+            def test_app_is_testing(self):
+                self.assertTrue(current_app.config['TESTING'])
+    
+    ```
+    
+    * The tests are written using the standard *unittest* package from the Python standard library.
+        * The setUp() and tearDown() methods run before and after each test
+        * And any methods that have a name that begins with *test_* are executed as tests.
+        
+    * It first creates an application configured for testing and activates its context.
+        * This step ensures that tests have access to *current_app* , like regular requests.
+    * Then it creates a brand-new database that the test can use when necessary.
+    * The database and the application context are removed in the *tearDown()* method.
+    * The first test ensures that the application instance exists.
+    * The second test ensures that the application is running under the testing configuration. 
+    
+    * To make the *tests* folder a proper package, a *tests/__init__.py* file needs to be added, but this can be an empty file.
+    
+    
+* To run the unit tests, a custom command can be added to the *manage.py* script.
+    * *manage.py* : Unit test launcher command
+    ```
+        @manager.command
+        def test():
+            """ Run the unit tests. """
+            import unittest
+            
+            tests = unittest.TestLoader().discover('tests')
+            unittest.TextTestRunner(verbosity=2).run(tests)    
+    ```
+    
+    * The *manager.command* decorator makes it simple to implement custom commands.
+        * The name of the decorated function is used as the command name
+        * And the function's docstring is displayed in the help messages.
+    * The implementation of *test()* function invokes the test runner from the *unittest* package.
+
+* The unit tests can be executed as follows:
+    ```
+        (venv) $ python manage.py test
+        test_app_exists (test_basics.BasicsTestCase) ... ok
+        test_app_is_testing (test_basics.BasicsTestCase) ... ok
+        
+        .----------------------------------------------------------------------
+        Ran 2 tests in 0.001s
+        OK
+    
+    ```
+    
 ### Database Setup
 
-
-
+#### Creating a Migration Repository 
+* To begin, Flask-Migrate must be installed in the virtual environment:
+    `(venv) $ pip install flask-migrate`
+* Initialize the Flask-Migrate extension
+    ```
+        from flask.ext.migrate import Migrate, MigrateCommand
+        
+        # ...
+        
+        migrate = Migrate(app, db)
+        manager.add_command('db', MigrateCommand)
+    ```
+    * To expose the database migration commands, Flask-Migrate exposes a *MigrateCommand* class that is attached to Flask-Script's *manage* object.
+    * In this example the command is attached using *db* .
+    
+* Before database migrations can be maintained, it is necessary to create a migration repository with the *init* subcommand:
+    ```
+        (venv) $ python hello.py db init
+          Creating directory /home/flask/flasky/migrations...done
+          Creating directory /home/flask/flasky/migrations/versions...done
+          Generating /home/flask/flasky/migrations/alembic.ini...done
+          Generating /home/flask/flasky/migrations/env.py...done
+          Generating /home/flask/flasky/migrations/env.pyc...done
+          Generating /home/flask/flasky/migrations/README...done
+          Generating /home/flask/flasky/migrations/script.py.mako...done
+          Please edit configuration/connection/logging settings in
+          '/home/flask/flasky/migrations/alembic.ini' before proceeding.
+    ```
+    * This command creates a *migrations* folder, where all the migration scripts will be stored.
+    
+#### Creating a Migration Script
+* The *migrate* subcommand creates an automatic migration script: 
+    ```
+        (venv) $ python hello.py db migrate -m "initial migration"
+        INFO  [alembic.migration] Context impl SQLiteImpl.
+        INFO  [alembic.migration] Will assume non-transactional DDL.
+        INFO  [alembic.autogenerate] Detected added table 'roles'
+        INFO  [alembic.autogenerate] Detected added table 'users'
+        INFO  [alembic.autogenerate.compare] Detected added index
+        'ix_users_username' on '['username']'
+          Generating /home/flask/flasky/migrations/versions/1bc
+          594146bb5_initial_migration.py...done
+    ```
+    
+#### Upgrading the Database
+* Once a migration script has been reviewed and accepted, it can be applied to the database using the `db upgrade` command:
+    ```
+        (venv) $ python hello.py db upgrade
+        INFO  [alembic.migration] Context impl SQLiteImpl.
+        INFO  [alembic.migration] Will assume non-transactional DDL.
+        INFO  [alembic.migration] Running upgrade None -> 1bc594146bb5, initial migration
+    
+    ```
+    
+    * For a first migration, this is effectively equivalent to calling *db.create_all()* ,
+    * But in successive migrations the *upgrade* command applies updates to the tables without affecting their contents. 
 
 # Part II. Example : A Social Blogging Application
+## Chapter 8. User Authentication
+### Authentication Extensions for Flask
+* There are many excellent Python authentication packages, but none of them do everything.
+* This is the list of packages that will be used:
+    * *Flask-Login* : Management of user sessions for logged-in users
+    * *Werkzeug* : Password hashing and verification
+    * *istdangerous* : Cryptographically secure token generation and verification
+    
+* In addition to authentication-specific packages, the following general-purpose extensions will be used:
+    * *Flask-Mail* : Sending of authentication-related emails
+    * *Flask-Bootstrap* : HTML templates
+    * *Flask-WTF* : Web forms
+
+### Password Security
+    
+* The key to storing user passwords securely in a database relies not on storing the password itself but a *hash* of it.
+    * A password hashing function takes a password as input and applies one or more cryptographic transformations to it.
+    * The result is a new sequence of characters that has no resemblance to the original password. 
+    * Password hashes can be verified in place of the real passwords because hashing functions are repeatable: 
+        * given the same inputs, the result is always the same.
+        
+#### Hashing Passwords with Werkzeug 
+* Werkzeug¡¯s *security* module conveniently implements secure password hashing. 
+    * This functionality is exposed with just two functions, used in the registration and verification phases, respectively:
+        * `generate_password_hash(password, method=pbkdf2:sha1, salt_length=8)`
+            * This function takes a plain-text password and returns the password hash as a string that can be stored in the user database.
+        * `check_password_hash(hash, password)`   
+            * This function takes a password hash retrieved from the database and the password entered by the user. A return value of *True* indicates that the password is correct. 
+* *app/models.py* : Password hashing in User model
+    ```
+        from werkzeug.security import generate_password_hash, check_password_hash
+        
+        class User(db.Model):
+            # ...
+            password_hash = db.Column(db.String(128))
+            
+            @property
+            def password(self):
+                raise AttributeError('password is not a readable attribute')
+                
+            @password.setter
+            def password(self, password):
+                self.password_hash = generate_password_hash(password)
+                
+            def verify_password(self, password):
+                return check_password_hash(self.password_hash, password)
+    
+    ```
+
+* The password hashing functionality is now complete and can be tested in the shell:
+    ```
+        (venv) $ python manage.py shell
+        >>> u = User()
+        >>> u.password = 'cat'
+        >>> u.password_hash
+        'pbkdf2:sha1:1000$duxMk0OF$4735b293e397d6eeaf650aaf490fd9091f928bed'
+        >>> u.verify_password('cat')
+        True
+        >>> u.verify_password('dog')
+        False
+        >>> u2 = User()
+        >>> u2.password = 'cat'
+        >>> u2.password_hash
+        'pbkdf2:sha1:1000$UjvnGeTP$875e28eb0874f44101d6b332442218f66975ee89'
+    
+    ```
+    * Note how users u and u2 have completely different password hashes, even though they both use the same password.
+    
+    * To ensure that this functionality continues to work in the future, the above tests can be written as unit tests that can be repeated easily.
+    
+    * a new module inside the tests package is shown with three new tests that exercise the recent changes to the User model.
+    * *tests/test_user_model.py* : Password hashing tests
+        ```
+            import unittest
+            from app.models import User
+            
+            class UserModelTestCase(unittest.TestCase):
+                def test_password_setter(self):
+                    u = User(password = 'cat')
+                    self.assertTrue(u.password_hash is not None)
+                    
+                def test_no_password_getter(self):
+                    u = User(password = 'cat')
+                    with self.assertRaises(AttributeError):
+                        u.password
+                        
+                def test_password_verification(self):
+                    u = User(password = 'cat')
+                    self.assertTrue(u.verify_password('cat'))
+                    self.assertFalse(u.verify_password('dog'))
+                    
+                def test_password_salts_are_random(self):
+                    u = User(password='cat')
+                    u2 = User(password='cat')
+                    self.assertTrue(u.password_hash != u2.password_hash)
+        ```
+        
+### Creating an Authentication Blueprint 
+
+* The routes related to the user authentication system can be added to a *auth* blueprint. 
+    * Using different blueprints for different sets of application functionality is a great way to keep the code neatly organized.
+    
+* The *auth* blueprint will be hosted in a Python package with the same name.
+* The blueprint¡¯s package constructor creates the blueprint object and imports routes from a *views.py* module. 
+    * *app/auth/__init__.py* : Blueprint creation
+    ```
+        from flask import Blueprint
+        
+        auth = Blueprint('auth', __name__)
+        
+        from . import views
+    ```
+* The *app/auth/views.py* module imports the blueprint and defines the routes associated with authentication using its  route  decorator.      
+    * *app/auth/views.py* : Blueprint routes and view functions
+    ```
+        from flask import render_template
+        from . import auth
+        
+        @auth.route('/login')
+        def login():
+            return render_template('auth/login.html')
+    ```
+* The *auth* blueprint needs to be attached to the apllication in the *create_app()* factory function.
+    * *app/__init__.py* : Blueprint attachment
+    ```
+        def create_app(config_name):
+            # ...
+            from .auth import auth as auth_blueprint
+            app.register_blueprint(auth_blueprint, url_prefix='/auth')
+            
+            return app
+    ```
+    
+    * The *url_prefix* argument in the blueprint registration is optional. 
+    * When used, all the routes defined in the blueprint will be registered with the given prefix, in this case */auth* . 
+        * */login* route will be registered as */auth/login*
+        * fully URL becomes *http://localhost:5000/auth/login* 
+    
+### User Authentication with Flask-Login
+* When users log in to the application, their authenticated state has to be recorded so that it is remembered as they navigate through different pages.
+* Flask-Login is a small but extremely useful extension that specializes in managing this  particular aspect of a user authentication system.
+
+#### install with pip
+    `(venv) $ pip install flask-login`
+    
+#### Preparing the User Model for Logins
+* To be able to work with the application¡¯s User model, the Flask-Login extension requires a few methods to be implemented by it.
+    * *is_authenticated()*
+    * *is_active()*
+    * *is_anonymous()*
+    * *get_id()*
+    * ![Table 8-1. Flask-Login user methods](imgs/Table 8-1. Flask-Login user methods.jpg)
+
+* These four methods can be implemented directly as methods in the model class, but as an easier alternative Flask-Login provides a *UserMixin* class that has default implementations that are appropriate for most cases. 
+* Updates to the User model to support user logins
+    * *app/models.py* : Updates to the User model to support user logins
+    ```
+        from flask.ext.login import UserMixin
+        
+        class User(UserMixin, db.Model):
+            __tablename__ = 'users'
+            id = db.Column(db.Integer, primary_key = True)
+            email = db.Column(db.String(64), unique=True, index=True)
+            username = db.Column(db.String(64), unique=True, index=True)
+            password_hash = db.Column(db.String(128))
+            role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
+    
+    ```
+* Flask-Login is initialized in the application factory function
+    * *app/__init__.py* : Flask-Login initialization
+    ```
+        from flask.ext.login import LoginManager
+        
+        login_manager = LoginManager()
+        login_manager.session_protection = 'strong'
+        login_manager.login_view = 'auth.login'
+        
+        def create_app(config_name):
+            # ...
+            login_manager.init_app(app)
+            # ...
+    ```
+    
+    * The *session_protection* attribute of the  *LoginManager* object can be set to  *None* , *'basic'* , or *'strong'* to provide different levels of security against user session tampering. 
+        * With the *'strong'* setting, Flask-Login will keep track of the client¡¯s IP address and browser agent and will log the user out if it detects a change. 
+    * The *login_view* attribute sets the endpoint for the login page. 
+        * Recall that because the login route is inside a blueprint, it needs to be prefixed with the blueprint name.
+
+* Finally, Flask-Login requires the application to set up a callback function that loads a user, given the identifier. 
+    * *app/models.py* : User loader callback function
+    ```
+        from . import login_manager
+        
+        @login_manager.user_loader
+        def load_user(user_id):
+            return User.query.get(int(user_id))
+    
+    ```
+    
+#### Protecting Routes
+* To protect a route so that it can only be accessed by authenticated users, Flask-Login provides a *login_required* decorator. 
+    * An example of its usage follows:
+    ```
+        from flask.ext.login import login_required
+        
+        @app.route('/secret')
+        @login_required
+        def secret():
+            return 'Only authenticated users are allowed!'
+    ```
+    * If this route is accessed by a user who is not authenticated, Flask-Login will intercept the request and send the user to the login page instead.
+    
+
+#### Adding a Login Form
+* The login form that will be presented to users has a text field for the email address(or username), a password field, a ¡°remember me¡± checkbox, and a submit button. 
+    * *app/auth/forms.py* : Login form
+    ```
+        from flask.ext.wtf import Form
+        from wtforms import StringField, PasswordField, BooleanField, SubmitField
+        from wtforms.validators import Required, Email
+        
+        class LoginForm(Form):
+            email = StringField('Email', validators=[Required(), Length(1, 64),
+                                                     Email()])
+            password = PasswordField('Password', validators=[Required()])
+            remember_me = BooleanField('Keep me logged in')
+            submit = SubmitField('Log In')
+    
+    ```
+* The template associated with the login page is stored in *auth/login.html* . 
+    * This template just needs to render the form using Flask-Bootstrap¡¯s *wtf.quick_form()*  macro.
+* The navigation bar in the base.html template uses a Jinja2 conditional to display ¡°SignIn¡± or ¡°Sign Out¡± links depending on the logged in state of the current user. 
+    * *app/templates/base.html* : Sign In and Sign Out navigation bar links
+    ```
+        <ul class="nav navbar-nav navbar-right">
+            {% if current_user.is_authenticated %}
+            <li><a href="{{ url_for('auth.logout') }}">Sign Out</a></li>
+            {% else %}
+            <li><a href="{{ url_for('auth.login') }}">Sign In</a></li>
+            {% endif %}
+        </ul>
+    
+    ```
+    * The *current_user* variable used in the conditional is defined by Flask-Login and is automatically available to view functions and templates. 
+        * Anonymous user objects respond to the *is_authenticated* method with *False* .
+    * Note: Here is *is_authenticated* , shouldn't be *is_authenticated()* .
+        * `AttributeError: 'bool' object has no attribute '__call__'`
+
+#### Signing Users In
+
+* The implementation of the login() view function is shown below:
+    * *app/auth/views.py* : Sign In route
+    ```
+        from flask import render_template, redirect, request, url_for, flash
+        from flask.ext.login import login_user
+        from . import auth
+        from ..models import User
+        from .forms import LoginForm
+        
+        @auth.route('/login', methods=['GET', 'POST'])
+        def login():
+            form = LoginForm()
+            if form.validate_on_submit():
+                user = User.query.filter_by(email=form.email.data).first()
+                if user is not None and user.verify_password(form.password.data):
+                    login_user(user, form.remember_me.data)
+                    return redirect(request.args.get('next') or url_for('main.index'))
+                flash('Invalid username or password.')
+            return render_template('auth/login.html', form=form)
+    
+    ```
+
+* The login template needs to be updated to render the form.
+    * *app/templates/auth/login.html* : Render login form
+    ```
+        {% extends "base.html" %}
+        {% import "bootstrap/wtf.html" as wtf %}
+        
+        {% block title %}Flasky - Login{% endblock %}
+        
+        {% block page_content %}
+        <div class="page-header">
+            <h1>Login</h1>
+        </div>
+        <div class="col-md-4">
+            {{ wtf.quick_form(form) }}
+        </div>
+        {% endblock %}
+    
+    ```
+
+#### Signing Users Out
+* Use sign out
+    * *app/auth/views.py* : Sign Out route
+    ```
+        from flask.ext.login import logout_user, login_required
+        
+        @auth.route('/logout')
+        @login_required
+        def logout():
+            logout_user()
+            flash('You have been logged out.')
+            return redirect(url_for('main.index'))   
+    ```
+    
+    * To log a user out, Flask-Login¡¯s *logout_user()* function is called to remove and reset the user session. 
+    * The logout is completed with a flash message that confirms the action and a redirect to the home page.
+
+#### Testing Logins
+
+* To verify that the login functionality is working, the home page can be updated to greet the logged-in user by name. 
+    * *app/templates/index.html* : Greet the logged-in user
+    ```
+        Hello,
+        {% if current_user.is_authenticated %}
+            {{ current_user.username }}
+        {% else %}
+            Stranger
+        {% endif %}!
+    
+    ```
+    
+    * In this template once again *current_user.is_authenticated* is used to determine whether the user is logged in.
+    
+* Because no user registration functionality has been built, a new user can be registered from the shell:
+    ```
+        (venv) $ python manage.py shell
+        >>> u = User(email='john@example.com', username='john', password='cat')
+        >>> db.session.add(u)
+        >>> db.session.commit()
+    
+    ```
+
+
+### New User Registration
+### Account Confirmation
+### Account Management
+
+        
+## Chapter 9. User Roles
+## Chapter 10. User Profiles
+## Chapter 11. Blog Posts
+## Chapter 12. Followers
+## Chapter 13. User Comments
+## Chapter 14. Application Programming Interfaces
+
 # Part III. The Last Mile
 
 

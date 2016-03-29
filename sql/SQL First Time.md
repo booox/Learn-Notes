@@ -105,3 +105,22 @@ ProgrammingError: You must not use 8-bit bytestrings unless you use a text_facto
     
     * but sqlite3 doesn't support DROP A COLUMN
        `ALTER TABLE t DROP COLUMN c` , THIS DOESN'T WORK.
+        * The following steps illustrate how this could be done:
+            ```
+                BEGIN TRANSACTION;
+                CREATE TEMPORARY TABLE t1_backup(a,b);
+                INSERT INTO t1_backup SELECT a,b FROM t1;
+                DROP TABLE t1;
+                CREATE TABLE t1(a,b);
+                INSERT INTO t1 SELECT a,b FROM t1_backup;
+                DROP TABLE t1_backup;
+                COMMIT;
+            
+            ```
+       
+        * create a new table with all the columns and data we want to save
+            `CREATE TABLE my_table_temp AS (SELECT id, user_id, latitude, longitude FROM my_table);`
+        * Then we drop the old table
+            `DROP my_table;`
+        * rename our new table with the old name
+            `ALTER TABLE my_table_temp RENAME TO my_table`

@@ -2,6 +2,8 @@
 
 - [ ] modify ps, send email, lock mach
 - [ ] Read phelp: unittest
+- [ ] Flask database bakup & restore
+
 
 * JiFang Test System
     * add Rank

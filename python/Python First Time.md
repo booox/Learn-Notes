@@ -859,7 +859,8 @@
     
     ```
     
-    
+* Python import path:
+    * ![Ptyhon import path](images/python import path.png)
     
     
     
