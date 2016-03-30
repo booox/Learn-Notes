@@ -34,7 +34,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SECRET_KEY'] = 'something that hard to guess'
 
 # config for mail
-app.config['MAIL_SERVER'] = 'smtp.126.com'
+app.config['MAIL_SERVER'] = 'smtp.163.com'
 app.config['MAIL_PORT'] = 25
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
