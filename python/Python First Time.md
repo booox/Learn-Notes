@@ -863,8 +863,18 @@
     * ![Ptyhon import path](images/python import path.png)
     
     
+* PYTHON os.environ
+    * display os.environ keys
+        ```
+            $ import os
+            $ os.environ.keys()            
+        ```
     
-    
+    * for Windows :
+        * display all the virables: `set`
+        * display env virable: `set VIRABLE`
+        * modify env variable: `set VIRABLE='something'`
+        * append : `set VIRABLE=%VIRABLE%;'some_new_things'`
     
     
     

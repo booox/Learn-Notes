@@ -1126,6 +1126,9 @@ added in this case.
         * *Enum* , str
         * *PickleType* , Any Python object
         * *LargeBinary* , str
+        
+        * ![Table 5-2. Most common SQLAlchemy column types 01](images/Table 5-2. Most common SQLAlchemy column types 01.jpg)
+        * ![Table 5-2. Most common SQLAlchemy column types 02](images/Table 5-2. Most common SQLAlchemy column types 02.jpg)
     * Most common SQLAlchemy column options:
         * *primary_key*
         * *unique*      do not allow duplicate values
@@ -1493,7 +1496,52 @@ added in this case.
     * For a first migration, this is effectively equivalent to calling *db.create_all()* , but in successive migrations the *upgrade* command applies updates to the tables without affecting their content.
 
 ## Chapter 6. Email
+* Although the  smtplib package from the Python standard library can be used to send email inside a Flask application
+* The Flask-Mail extension wraps smtplib and integrates it nicely with Flask
 
+### Email Support with Flask-Mail
+
+* installed with pip :
+    * `(venv) $ pip install flask-mail`
+    
+* The extension connects to a Simple Mail Transfer Protocol (SMTP) server and passes
+emails to it for delivery.
+* If no configuration is given, Flask-Mail connects to *localhost* at port *25* and sends email without authentication. 
+
+    * ![Table 6-1. Flask-Mail SMTP server configuration keys](images/Table 6-1. Flask-Mail SMTP server configuration keys.jpg)
+    
+* configure the application to send email through a Google Gmail account.
+    * *hello.py* : Flask-Mail configuration for Gmail
+    ```
+        import os
+        # ...
+        app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
+        app.config['MAIL_PORT'] = 587
+        app.config['MAIL_USE_TLS'] = True
+        app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
+        app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
+    ```
+* Flask-Mail is initialized
+    * *hello.py* : Flask-Mail initialization
+    ```
+        from flask.ext.mail import Mail
+        mail = Mail(app)
+    ```
+* Set environment variables
+    * Linux or Mac OS X using bash
+        ```
+            (venv) $ export MAIL_USERNAME=<Gmail username>
+            (venv) $ export MAIL_PASSWORD=<Gmail password>
+        ```
+    * Windows
+        ```
+            (venv) $ set MAIL_USERNAME=<Gmail username>
+            (venv) $ set MAIL_PASSWORD=<Gmail password>
+        ```
+    
+#### Sending Email from the Python Shell
+#### Integrating Emails with the Application
+#### Sending Asynchronous Email 
 
 ## Chapter 7. Large Application Structure
 
@@ -2316,7 +2364,157 @@ have an account can easily find it.
 
 ### Account Confirmation
 
+* To validate the email address, applications send a confirmation email to users imme diately after they register. 
+    * The new account is initially marked as unconfirmed until the instructions in the email are followed.
+* The account confirmation procedure usually involves clicking a specially crafted URL link that includes a confirmation token.
+
+
 #### Generating Confirmation Tokens with itsdangerous
+
+* The simplest account confirmation link would be a URL with the below format included in the confirmation email, 
+    * `http://www.example.com/auth/confirm/<id>`
+    * where id is the numeric id assigned to the user in the database. 
+* But this is obviously not a secure implementation
+    * As any user who figures out the format of the confirmation links 
+    * will be able to confirm arbitrary accounts just by sending random numbers in the URL. 
+* The idea is to replace the id in the URL with a token that contains the same information securely encrypted.
+    * Flask uses cryptographically signed cookies to protect the content of user sessions against tampering. 
+    * These secure cookies are signed by a package called *itsdangerous* .
+    
+* The following is a short shell session that shows how itsdangerous can generate a secure token that contains a user id inside:
+    ```
+        (venv) $ python manage.py shell
+        >>> from manage import app
+        >>> from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+        >>> s = Serializer(app.config['SECRET_KEY'], expires_in = 3600)
+        >>> token = s.dumps({ 'confirm': 23 })
+        >>> token
+        'eyJhbGciOiJIUzI1NiIsImV4cCI6MTM4MTcxODU1OCwiaWF0IjoxMzgxNzE0OTU4fQ.ey ...'
+        >>> data = s.loads(token)
+        >>> data
+        {u'confirm': 23}
+    ```
+    
+    * *Itsdangerous* provides several types of token generators. 
+    * Among them, the class *TimedJSONWebSignatureSerializer* generates JSON Web Signatures (JWS) with a
+time expiration.
+    * The constructor of this class takes an encryption key as argument, which in a Flask application can be the configured *SECRET_KEY* .
+    
+* Token generation and verification using this functionality can be added to the User model. 
+    * *app/models.py* : User account confirmation
+    ```
+        from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+        from flask import current_app
+        from . import db
+        
+        class User(UserMixin, db.Model):
+            # ...
+            confirmed = db.Column(db.Boolean, default=False)
+            
+            def generate_confirmation_token(self, expiration=3600):
+                s = Serializer(current_app.config['SECRET_KEY'], expiration)
+                return s.dumps({'confirm': self.id})
+                
+            def confirm(self, token):
+                s = Serializer(current_app.config['SECRET_KEY'])
+                try:
+                    data = s.loads(token)
+                except:
+                    return False
+                if data.get('confirm') != self.id:
+                    return False
+                self.confirmed = True
+                db.session.add(self)
+                return True
+                
+    ```
+    
+* The email templates used by the authentication blueprint will be added in the folder *templates/auth/email* to keep them separate from the HTML templates. 
+    * for each email two templates are needed for the *plain-* and *rich-text* versions of the body. 
+    * *app/auth/templates/auth/email/confirm.txt* : Text body of confirmation email
+    ```
+        Dear {{ user.username }},
+        
+        Welcome to Flasky!
+        
+        To confirm your account please click on the following link:
+        
+        {{ url_for('auth.confirm', token=token, _external=True) }}
+        
+        Sincerely,
+        
+        The Flasky Team
+        
+        Note: replies to this email address are not monitored.
+    ```
+    
+* The view function that confirms accounts
+    * *app/auth/views.py* : Confirm a user account
+    ```
+        from flask.ext.login import current_user
+        
+        @auth.route('/confirm/<token>')
+        @login_required
+        
+        def confirm(token):
+            if current_user.confirmed:
+                return redirect(url_for('main.index'))
+            if current_user.confirm(token):
+                flash('You have confirmed your account. Thanks!')
+            else:
+                flash('The confirmation link is invalid or has expired.')
+            return redirect(url_for('main.index'))
+    ```
+    
+    * This route is protected with the login_required decorator from Flask-Login, so that when the users click on the link from the confirmation email they are asked to log in before they reach this view function.
+    * Because the actual token confirmation is done entirely in the *User* model, all the view function needs to do is call the *confirm()* method and then flash a message according to the result. 
+    * When the confirmation succeeds, the *User* model¡¯s *confirmed* attribute is changed and added to the session, which will be committed when the request ends.
+    
+* Each application can decide what unconfirmed users are allowed to do before they confirm their account.
+    * One possibility is to allow unconfirmed users to log in, but only show them a page that asks them to confirm their accounts before they can gain access.
+    * This step can be done using Flask¡¯s *before_request* hook.
+    * From a blueprint, the *before_request* hook applies only to requests that belong to the blueprint.
+    * To install a hook for all application requests from a blueprint, the *before_app_request* decorator must be used instead.
+    
+    * *app/auth/views.py* : Filter unconfirmed accounts in before_app_request handler
+    ```
+        @auth.before_app_request
+        def before_request():
+            if current_user.is_authenticated() \
+                    and not current_user.confirmed \
+                    and request.endpoint[:5] != 'auth.':
+                return redirect(url_for('auth.unconfirmed'))
+                
+        @auth.route('/unconfirmed')
+        def unconfirmed():
+            if current_user.is_anonymous() or current_user.confirmed:
+                return redirect('main.index')
+            return render_template('auth/unconfirmed.html')
+    ```
+    
+    * The *before_app_request* handler will intercept a request when three conditions are true:
+        * A user is logged in (current_user.is_authenticated() must return True)
+        * The account for the user is not confirmed.
+        * The requested endpoint (accessible as  *request.endpoint* ) is outside of the authentication blueprint. 
+    * If the three conditions are met, then a redirect is issued to a new */auth/unconfirmed* route that shows a page with information about account confirmation.
+        * The page that is presented to unconfirmed users just renders a template that gives users instructions for how to confirm their account and offers a link to request a new confirmation email, in case the original email was lost. 
+        
+    * The route that resends the confirmation email is shown below.
+        * *app/auth/views.py* : Resend account confirmation email
+        ```
+            @auth.route('/confirm')
+            @login_required
+            def resend_confirmation():
+                token = current_user.generate_confirmation_token()
+                send_email('auth/email/confirm',
+                           'Confirm Your Account', user, token=token)
+                flash('A new confirmation email has been sent to you by email.')
+                return redirect(url_for('main.index'))
+        ```
+    
+* Note that a db.session.commit() call had to be added, even though the application configured automatic database commits at the end of the request. 
+* THE APPLICATION CONFIGURED AUTOMATIC DATABASE COMMITS AT THE END OF THE REQUEST. 
+    
 #### Sending Confirmation Emails
 ### Account Management
 
@@ -2562,7 +2760,7 @@ have an account can easily find it.
     ```
     
     * The *ping()* method must be called each time a request from the user is received.  
-    * The *before_app_request* can do this easily.
+    * Because the *before_app_request* handler in the *auth* blueprint runs before every request, it can do this easily.
     * *app/auth/views.py* : Ping logged-in user
     ```
         @auth.before_app_request
@@ -2576,6 +2774,59 @@ have an account can easily find it.
     
 
 ### User Profile Page
+
+* Creating a profile page for each user does not present any new challenges.
+    * *app/main/views.py* : Profile page route
+    ```
+        @main.route('/user/<username>')
+        def user(username):
+            user = User.query.filter_by(username=username).first()
+            if use is None:
+                abort(404)
+            return render_template('user.html', user=user)    
+    ```
+    
+    * For a user named *john* , the profile page will be at *http://localhost:5000/user/john* . 
+* The *user.html* template should render the information stored in the user object.
+    * *app/templates/user.html* : User Profile template
+    ```
+        {% block page_content %}
+        <div class="page-header">
+            <h1>{{ user.username }}</h1>
+            {% if user.name or user.location %}
+            <p>
+                {% if user.name %}{{ user.name }}{% endif %}
+                {% if user.location %}
+                    From <a href="http://maps.google.com/?q={{ user.location }}">
+                        {{ user.location }}
+                    </a>
+                {% endif %}
+            </p>
+            {% endif %}
+            {% if current_user.is_administrator() %}
+            <p><a href="mailto:{{ user.email }}">{{ user.email }}</a></p>
+            {% endif %}
+            {% if user.about_me %}<p>{{ user.about_me }}</p>{% endif %}
+            <p>
+                Member since {{ moment(user.member_since).format('L') }}.
+                Last seen {{ moment(user.last_seen).fromNow() }}.
+            </p>
+        </div>
+        {% endblock %}
+    ```
+    
+* As most users will want easy access to their own profile page, a link to it can be added to the navigation bar. The relevant changes to the base.html template are shown below.
+    * *app/templates/base.html*
+    ```
+        {% if current_user.is_authenticated() %}
+        <li>
+            <a href="{{ url_for('main.user', username=current_user.username) }}">
+                Profile
+            </a>
+        </li>
+        {% endif %}
+    ```
+    
 
 ### Profile Editor
 #### User-Level Profile Editor

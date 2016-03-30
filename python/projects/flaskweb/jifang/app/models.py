@@ -3,6 +3,7 @@ from werkzeug.security import check_password_hash
 from flask.ext.login import UserMixin, AnonymousUserMixin
 from . import db
 from . import login_manager
+from datetime import datetime
 
 class Permission:
     FOLLOW = 0X01
@@ -51,6 +52,10 @@ class User(UserMixin, db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), unique=True, index=True)
+    location = db.Column(db.String(64))
+    about_me = db.Column(db.Text())
+    member_since = db.Column(db.DateTime(), default=datetime.utcnow)
+    last_seen = db.Column(db.DateTime(), default=datetime.utcnow)
     role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))    
     password_hash = db.Column(db.String(128))
     
@@ -68,6 +73,11 @@ class User(UserMixin, db.Model):
             
     def is_administrator(self):
         return self.can(Permission.ADMINISTER)
+        
+    # refresh last visit time of a user
+    def ping(self):
+        self.last_seen = datetime.utcnow()
+        db.session.add(self)
     
     @property
     def password(self):
