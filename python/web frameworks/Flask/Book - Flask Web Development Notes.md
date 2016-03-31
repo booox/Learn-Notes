@@ -1510,17 +1510,21 @@ emails to it for delivery.
 
     * ![Table 6-1. Flask-Mail SMTP server configuration keys](images/Table 6-1. Flask-Mail SMTP server configuration keys.jpg)
     
-* configure the application to send email through a Google Gmail account.
+* configure the application to send email through a *163* email account.
     * *hello.py* : Flask-Mail configuration for Gmail
     ```
         import os
         # ...
-        app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
-        app.config['MAIL_PORT'] = 587
+        app.config['MAIL_SERVER'] = 'smtp.163.com'
+        app.config['MAIL_PORT'] = 25
         app.config['MAIL_USE_TLS'] = True
+        app.config['MAIL_USE_SSL'] = True
         app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
         app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
     ```
+    
+    * *163* mail need set a *AuthCode* in the setup.
+    
 * Flask-Mail is initialized
     * *hello.py* : Flask-Mail initialization
     ```
@@ -1539,10 +1543,160 @@ emails to it for delivery.
             (venv) $ set MAIL_PASSWORD=<Gmail password>
         ```
     
+    
+    
 #### Sending Email from the Python Shell
+
+* To test the configuration, you can start a shell session and send a test email:
+    ```
+        (venv) $ python hello.py shell
+        >>> from flask.ext.mail import Message
+        >>> from hello import mail
+        >>> msg = Message('test subject', sender='you@example.com',
+        ...     recipients=['you@example.com'])
+        >>> msg.body = 'text body'
+        >>> msg.html = '<b>HTML</b> body'
+        >>> with app.app_context():
+        ...    mail.send(msg)
+        ...
+    ```
+    
+    * Note that Flask-Mail¡¯s send() function uses current_app, so it needs to be executed with an activated application context.
+
+* Also You can use this script to test everything is ok.
+    * Set environment variables in the script cmd
+        
+    * *mail_test.py* : 
+    ```
+        from flask import Flask
+        from flask.ext.mail import Mail, Message
+        import os
+
+        app = Flask(__name__)
+
+        # config for mail
+        app.config['MAIL_SERVER'] = 'smtp.163.com'
+        app.config['MAIL_PORT'] = 25
+        app.config['MAIL_USE_TLS'] = True
+        app.config['MAIL_USE_SSL'] = False
+        app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
+        app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
+
+        mail = Mail(app)
+
+        @app.route('/')
+        def index():
+            msg = Message('test mail subject no2', sender=app.config['MAIL_USERNAME'],
+                                    recipients=[app.config['MAIL_USERNAME']])
+            msg.body = 'test mail body'
+            msg.html = '<b>test mail HTML</b>'
+            mail.send(msg)
+            
+            return 'Mail Send Succeed'
+            
+            
+        if __name__ == '__main__':
+            app.run(port=5002, debug=True)
+
+    ```
+
 #### Integrating Emails with the Application
+
+* To avoid having to create email messages manually every time, it is a good idea to abstract the common parts of the application¡¯s email sending functionality into a function.
+* As an added benefit, this function can render email bodies from *Jinja2* templates to have the most flexibility.
+
+    * *hello.py* : Email support
+    ```
+        from flask.ext.mail import Message
+        
+        app.config['FLASKY_MAIL_SUBJECT_PREFIX'] = '[Flasky]'
+        app.config['FLASKY_MAIL_SENDER'] = 'Flasky Admin <flasky@example.com>'
+        
+        def send_email(to, subject, template, **kwargs):
+            msg = Message(app.config['FLASKY_MAIL_SUBJECT_PREFIX'] + subject,
+                          sender=app.config['FLASKY_MAIL_SENDER'], recipients=[to])
+            msg.body = render_template(template + '.txt', **kwargs)
+            msg.html = render_template(template + '.html', **kwargs)
+            mail.send(msg)
+    ```
+    
+* The *index()* view function can be easily expanded to send an email to the administrator whenever a new name is received with the form.
+    * *hello.py* : Email example
+    ```
+        # ...
+        app.config['FLASKY_ADMIN'] = os.environ.get('FLASKY_ADMIN')
+        # ...
+        
+        @app.route('/', methods=['GET', 'POST'])
+        def index():
+            form = NameForm()
+            if form.validate_on_submit():
+                user = User.query.filter_by(username=form.name.data).first()
+                if user is None:
+                    user = User(username=form.name.data)
+                    db.session.add(user)
+                    session['known'] = False
+                    if app.config['FLASKY_ADMIN']:
+                         send_email(app.config['FLASKY_ADMIN'], 'New User',
+                                   'mail/new_user', user=user)
+                else:
+                    session['known'] = True
+                session['name'] = form.name.data
+                form.name.data = ''
+                return redirect(url_for('index'))
+            return render_template('index.html', form=form, name=session.get('name'),
+                                   known=session.get('known', False))
+    ```
+    
+    * the application needs the *FLASKY_ADMIN* , *MAIL_USERNAME* and *MAIL_USERNAME* environment variables.
+    * Two template files need to be created for the text and HTML versions of the email.
+        * *templates/mail/* 
+        * *templates/mail/* 
+
 #### Sending Asynchronous Email 
 
+* To avoid unnecessary delays during request handling, the email send function can be moved to a background thread. 
+    * *hello.py* : Asynchronous email support
+    ```
+        from threading import Thread
+        
+        def send_async_email(app, msg):
+            with app.app_context():
+                 mail.send(msg)
+                 
+        def send_email(to, subject, template, **kwargs):
+            msg = Message(app.config['FLASKY_MAIL_SUBJECT_PREFIX'] + subject,
+                          sender=app.config['FLASKY_MAIL_SENDER'], recipients=[to])
+            msg.body = render_template(template + '.txt', **kwargs)
+            msg.html = render_template(template + '.html', **kwargs)
+            thr = Thread(target=send_async_email, args=[app, msg])
+            thr.start()
+            return thr            
+    ```
+    
+    * This implementation highlights an interesting problem. 
+        * Many Flask extensions operate under the assumption that there are active application and request contexts. 
+        * Flask-Mail¡¯s *send()* function uses *current_app* , so it requires the application context to be active.
+        * But when the *mail.send()* function executes in a different thread, the application context nedds to be created artificially using *app.app_context()* .
+        
+    * Another problem is when you need send a large volume of email, having a job dedicated to sending email is more appropriate than starting a new thread for every email.
+        * For example, the execution of the *send_async_email()* function can be sent to a *Celery* task queue.
+
+#### Email Error
+
+* `SMTPSenderRefused: (553, 'authentication is required,163`
+    * Most time is the wrong username or password, check it.
+    
+* `SMTPSenderRefused: (553, 'Mail from must equal authorized user'`
+    * change the *sender* to the mail server account.
+    
+* `RuntimeError: maximum recursion depth exceeded`
+    * I made a mistake, in the *send_mail()* function, I wrote *msg.send(msg)* , it should be *mail.send(msg)* . 
+    
+* `SSLError: [SSL: UNKNOWN_PROTOCOL] unknown protocol (_ssl.c:590)`
+    * `app.config['MAIL_USE_SSL'] = True`   (not work)
+    * `app.config['MAIL_USE_SSL'] = False`
+    
 ## Chapter 7. Large Application Structure
 
 * Flask does not impose a specific organization for large projects
@@ -2429,6 +2583,71 @@ time expiration.
                 
     ```
     
+    
+#### Sending Confirmation Emails
+
+* The current */register* route redirects to */index* after adding the new user to the database.
+* Before redirecting, this route now needs to send the confirmation email. 
+
+* Initialize Mail in *app/__init__.py*
+    * *app/__init__.py* : Initialize mail
+    ```
+        from flask.ext.mail import Mail
+        
+        mail = Mail()
+        
+        def create_app(config_name):
+            # ...
+            mail.init_app(app)
+        
+    ```
+
+* Create *email.py* for send email.
+    * *app/email.py* : Send email
+    ```
+        from threading import Thread
+        from flask import current_app, render_template
+        from flask.ext.mail import Message
+        from . import mail
+
+
+        def send_async_email(app, msg):
+            with app.app_context():
+                mail.send(msg)
+
+
+        def send_email(to, subject, template, **kwargs):
+            app = current_app._get_current_object()
+            msg = Message(app.config['FLASKY_MAIL_SUBJECT_PREFIX'] + ' ' + subject,
+                          sender=app.config['FLASKY_MAIL_SENDER'], recipients=[to])
+            msg.body = render_template(template + '.txt', **kwargs)
+            msg.html = render_template(template + '.html', **kwargs)
+            thr = Thread(target=send_async_email, args=[app, msg])
+            thr.start()
+            return thr
+    ```
+    
+    * Note: `app = current_app._get_current_object()` get the application itself in its child models(?)
+    
+    * *app/auth/views.py* : Registration route with confirmation email
+    ```
+        from ..email import send_email
+        
+        @auth.route('/register', methods = ['GET', 'POST'])
+        def register():
+            form = RegistrationForm()
+            if form.validate_on_submit():
+                # ...
+                db.session.add(user)
+                db.session.commit()
+                token = user.generate_confirmation_token()
+                send_email(user.email, 'Confirm Your Account',
+                           'auth/email/confirm', user=user, token=token)
+                flash('A confirmation email has been sent to you by email.')
+                return redirect(url_for('main.index'))
+            return render_template('auth/register.html', form=form)
+    ```
+    
 * The email templates used by the authentication blueprint will be added in the folder *templates/auth/email* to keep them separate from the HTML templates. 
     * for each email two templates are needed for the *plain-* and *rich-text* versions of the body. 
     * *app/auth/templates/auth/email/confirm.txt* : Text body of confirmation email
@@ -2454,8 +2673,7 @@ time expiration.
         from flask.ext.login import current_user
         
         @auth.route('/confirm/<token>')
-        @login_required
-        
+        @login_required        
         def confirm(token):
             if current_user.confirmed:
                 return redirect(url_for('main.index'))
@@ -2466,7 +2684,7 @@ time expiration.
             return redirect(url_for('main.index'))
     ```
     
-    * This route is protected with the login_required decorator from Flask-Login, so that when the users click on the link from the confirmation email they are asked to log in before they reach this view function.
+    * This route is protected with the *login_required* decorator from *Flask-Login* , so that when the users click on the link from the confirmation email they are asked to log in before they reach this view function.
     * Because the actual token confirmation is done entirely in the *User* model, all the view function needs to do is call the *confirm()* method and then flash a message according to the result. 
     * When the confirmation succeeds, the *User* model¡¯s *confirmed* attribute is changed and added to the session, which will be committed when the request ends.
     
@@ -2493,7 +2711,7 @@ time expiration.
     ```
     
     * The *before_app_request* handler will intercept a request when three conditions are true:
-        * A user is logged in (current_user.is_authenticated() must return True)
+        * A user is logged in ( *current_user.is_authenticated()* must return True)
         * The account for the user is not confirmed.
         * The requested endpoint (accessible as  *request.endpoint* ) is outside of the authentication blueprint. 
     * If the three conditions are met, then a redirect is issued to a new */auth/unconfirmed* route that shows a page with information about account confirmation.
@@ -2506,16 +2724,16 @@ time expiration.
             @login_required
             def resend_confirmation():
                 token = current_user.generate_confirmation_token()
-                send_email('auth/email/confirm',
-                           'Confirm Your Account', user, token=token)
+                send_email(current_user.email, 'Confirm Your Account',
+                           'auth/email/confirm', user=current_user, token=token)
                 flash('A new confirmation email has been sent to you by email.')
                 return redirect(url_for('main.index'))
         ```
     
 * Note that a db.session.commit() call had to be added, even though the application configured automatic database commits at the end of the request. 
 * THE APPLICATION CONFIGURED AUTOMATIC DATABASE COMMITS AT THE END OF THE REQUEST. 
-    
-#### Sending Confirmation Emails
+
+
 ### Account Management
 
         

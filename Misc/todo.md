@@ -3,6 +3,9 @@
 - [ ] modify ps, send email, lock mach
 - [ ] Read phelp: unittest
 - [ ] Flask database bakup & restore
+- [ ] send *send_async_email()* to a *Celery* task queue.
+- [ ] 
+
 
 
 * JiFang Test System

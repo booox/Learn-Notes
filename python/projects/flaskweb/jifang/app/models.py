@@ -1,6 +1,8 @@
 from werkzeug.security import generate_password_hash
 from werkzeug.security import check_password_hash
 from flask.ext.login import UserMixin, AnonymousUserMixin
+from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+from flask import current_app
 from . import db
 from . import login_manager
 from datetime import datetime
@@ -51,6 +53,7 @@ class Role(db.Model):
 class User(UserMixin, db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(64), unique=True, index=True)
     username = db.Column(db.String(64), unique=True, index=True)
     location = db.Column(db.String(64))
     about_me = db.Column(db.Text())
@@ -58,6 +61,7 @@ class User(UserMixin, db.Model):
     last_seen = db.Column(db.DateTime(), default=datetime.utcnow)
     role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))    
     password_hash = db.Column(db.String(128))
+    confirmed = db.Column(db.Boolean(128), default=False)
     
     def __init__(self, **kwargs):
         super(User, self).__init__(**kwargs)
@@ -66,6 +70,24 @@ class User(UserMixin, db.Model):
                 self.role = Role.query.filter_by(permissions=0xff).first()
             if self.role is None:
                 self.role = Role.query.filter_by(default=True).first()
+                
+    # for user register confirmation
+    def generate_confirmation_token(self, expiration=3600):
+        s = Serializer(current_app.config['SECRET_KEY'], expiration)
+        return s.dumps({'confirm' : self.id})
+        
+    def confirm(self, token):
+        s = Serializer(current_app['SECRET_KEY'])
+        try:
+            data = s.loads(token)
+        except:
+            return False
+            
+        if data.get('confirm') != self.id:
+            return False
+        self.confirmed = True
+        db.session.add(self)
+        return True
                 
     def can(self, permissions):
         return self.role is not None and \
@@ -111,3 +133,5 @@ login_manager.anonymous_user = AnonymousUser
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
+    
+    

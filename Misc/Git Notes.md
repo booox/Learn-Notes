@@ -219,3 +219,5 @@ DIFFERENT WAYS TO ADD
         * 3. The third options is to discard the local changes:
                 `git reset --hard`
     * Links: [You have three options](http://stackoverflow.com/a/15745424)
+
+* git tag
