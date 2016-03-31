@@ -2760,9 +2760,13 @@ time expiration.
     * The *default* field should be set to *True* for only one role and *False* for all the others.
         * The role marked as default will be the one assigned to new users upon registration.
     * The second addition to the model is the *permissions* field, which is an integer that will be used as bit flags. 
+        * Each task will be assigned a *bit* *position* , and for each role the tasks that are allowed for that role will have their bits set to *1* .
     
 * Application permissions
     * ![Table 9-1. Application permissions](images/Table 9-1. Application permissions.jpg)
+    
+    * Note that a total of *eight* bits was allocated to tasks, and so far only five have been used.
+    * The remaining *three* are left for future expansion.
     
     * *app/models.py* : Permission constants
         ```
@@ -2842,7 +2846,8 @@ time expiration.
                         self.role = Role.query.filter_by(default=True).first()
             # ...
     ```
-    
+    * The *User* constructor first invokes the constructors of the base classes.
+    * And if after that the object does not have a role defined, it sets the administrator of default roles depending on the email address.
 
 
 ### Role Verification
@@ -2885,6 +2890,7 @@ time expiration.
         from functools import wraps
         from flask import abort
         from flask.ext.login import current_user
+        from .models import Permission
         
         def permission_required(permission):
             def decorator(f):
@@ -2920,7 +2926,7 @@ time expiration.
     ```
     
 * Permissions may also need to be checked from templates, so the *Permission* class with all the bit constants needs to be accessible to them. 
-    * To avoid having to add a template argument in every render_template() call, a context processor can be used. Context processors make variables globally available to all templates.
+    * To avoid having to add a template argument in every *render_template()* call, a *context* *processor* can be used. Context processors make variables globally available to all templates.
     * *app/main/__init__.py* : Adding the Permission class to the template context
     ```
         @main.app_context_processor
@@ -3047,10 +3053,212 @@ time expiration.
     
 
 ### Profile Editor
-#### User-Level Profile Editor
-#### Administrator-Level Profile Editor
-### User Avatars
 
+* There are two different use cases related to editing of user profiles.
+    * The most obvious is that users need to have access to a page where they can enter information.
+    * A less obvious but also important requirement is to let administrators edit the profile of any users.
+        * not only the personal information items
+        * but also other fields in the *User* model to which users have no direct access, such as the user role.
+
+* Because the two profile editing requirements are substantially different, two different forms will be created.
+
+#### User-Level Profile Editor
+
+* The profile edit form for regular users.
+    * *app/main/forms.py* : Profile edit form
+    ```
+        class EditProfileForm(Form):
+            name = StringField('Real name', validators=[Length(0, 64)])
+            location = StringField('Location', validators=[Length(0, 64)])
+            about_me = TextAreaField('About me')
+            submit = SubmitField('Submit')
+    ```
+    
+    * Note that as all the fields in this form are *optional* , the length validator allows a length of *zero* .
+    
+* The route definition that uses this form is shown below.
+    * *app/main/views.py* : Profile edit route
+    ```
+        from flask import flash
+        
+        @main.route('/edit-profile', methods=['GET', 'POST'])
+        @login_required
+        def edit_profile():
+            form = EditProfileForm()
+            if form.validate_on_submit():
+                current_user.name = form.name.data
+                current_user.location = form.location.data
+                current_user.about_me = form.about_me.data
+                db.session.add(current_user)
+                flash('Your profile has been updated.')
+                return redirect(url_for('.user', username=current_user.username))
+            form.name.data = current_user.name
+            form.location.data = current_user.location
+            form.about_me.data = current_user.about_me
+            return render_template('edit_profile.html', form=form)
+    ```
+* Template for edit profile.
+    * *app/templates/edit_profile.html* : Template for edit profile
+    ```
+        {% extends "base.html" %}
+
+        {% import "bootstrap/wtf.html" as wtf %}
+
+        {% block title %}JiFang - Edit Profile{% endblock %}
+
+        {% block page_content %}
+        <div class="page-header">
+            <h1>Edit Your Profile</h1>
+        </div>
+        <div class="col-md-4">
+            {{ wtf.quick_form(form) }}
+        </div>
+
+        {% endblock %}
+    ```
+    
+* A direct link can be added in the profile page.
+    * *app/templates/user.html* : Profile edit link
+    ```
+        {% if user == current_user %}
+        <a class="btn btn-default" href="{{ url_for('.edit_profile') }}">
+            Edit Profile
+        </a>
+        {% endif %}
+    ```
+    
+    * The conditional that encloses the link will make the link appear only when users are viewing their own profiles.
+    
+    
+    
+#### Administrator-Level Profile Editor
+* The profile edit form for administrators is more complex than the one for regular users.
+* In addition to the three profile information fields, this form allows administrators to edit a user¡¯s email, username, confirmed status, and role.
+    * *app/main/forms.py* : Profile editing form for administrators
+    ```
+        class EditProfileAdminForm(Form):
+            email = StringField('Email', validators=[Required(), Length(1, 64),
+                                                     Email()])
+            username = StringField('Username', validators=[
+                Required(), Length(1, 64), Regexp('^[A-Za-z][A-Za-z0-9_.]*$', 0,
+                                                  'Usernames must have only letters, '
+                                                  'numbers, dots or underscores')])
+            confirmed = BooleanField('Confirmed')
+            role = SelectField('Role', coerce=int)
+            name = StringField('Real name', validators=[Length(0, 64)])
+            location = StringField('Location', validators=[Length(0, 64)])
+            about_me = TextAreaField('About me')
+            submit = SubmitField('Submit')
+            
+             def __init__(self, user, *args, **kwargs):
+                super(EditProfileAdminForm, self).__init__(*args, **kwargs)
+                self.role.choices = [(role.id, role.name)
+                                     for role in Role.query.order_by(Role.name).all()]
+                self.user = user
+                
+            def validate_email(self, field):
+                if field.data != self.user.email and \
+                        User.query.filter_by(email=field.data).first():
+                    raise ValidationError('Email already registered.')
+                    
+            def validate_username(self, field):
+                if field.data != self.user.username and \
+                        User.query.filter_by(username=field.data).first():
+                    raise ValidationError('Username already in use.')
+    ```
+    * An instance of *SelectField* must have the items set in its *choices* attribute. 
+        * They must be given as a list of tuples, with each tuple consisting of two values: 
+            * an identifier for the item 
+            * and the text to show in the control as a string. 
+        * The *choices* list is set in the form¡¯s constructor, with values obtained from the Role model with a query that sorts all the roles alphabetically by name. 
+        * The identifier for each tuple is set to the *id* of each role, and since these are integers, a *coerce=int* argument is added to the *SelectField* constructor so that the field values are stored as integers instead of the default, which is strings.
+    * The *email* and *username* fields are constructed in the same way as in the authentication forms, but their validation requires some careful handling. 
+        * The validation condition used for both these fields must first check:
+            * whether a change to the field was made, 
+            * and only when there is a change should it ensure that the new value does not duplicate another user¡¯s. 
+        * When these fields are not changed, then validation should pass. 
+        * To implement this logic, the form¡¯s constructor receives the user *object* as an argument and saves it as a member variable, which is later used in the custom validation methods.
+        
+* The route definition for the administrator¡¯s profile editor.
+    * *app/main/views.py* : Profile edit route for administrators
+    ```
+        @main.route('/edit-profile/<int:id>', methods=['GET', 'POST'])
+        @login_required
+        @admin_required
+        def edit_profile_admin(id):
+            user = User.query.get_or_404(id)
+            form = EditProfileAdminForm(user=user)
+            if form.validate_on_submit():
+                user.email = form.email.data
+                user.username = form.username.data
+                user.confirmed = form.confirmed.data
+                 user.role = Role.query.get(form.role.data)
+                user.name = form.name.data
+                user.location = form.location.data
+                user.about_me = form.about_me.data
+                db.session.add(user)
+                flash('The profile has been updated.')
+                return redirect(url_for('.user', username=user.username))
+            form.email.data = user.email
+            form.username.data = user.username
+            form.confirmed.data = user.confirmed
+            form.role.data = user.role_id
+            form.name.data = user.name
+            form.location.data = user.location
+            form.about_me.data = user.about_me
+            
+            return render_template('edit_profile.html', form=form, user=user)
+    ```
+    
+    *  In this view function, the *user* is given by its id, so Flask-SQLAlchemy¡¯s *get_or_404()* convenience function can be used, knowing that if the *id* is invalid the request will return a code *404* error.
+    
+* Template the same with the regular user's *edit_profile.html* .
+    
+* To link to this page, another button is added in the user profile page.
+    * *app/templates/user.html* : Profile edit link for administrator
+    ```
+        {% if current_user.is_administrator() %}
+        <a class="btn btn-danger"
+                href="{{ url_for('.edit_profile_admin', id=user.id) }}">
+            Edit Profile [Admin]
+        </a>
+        {% endif %}
+    ```
+    
+    * This button is rendered with a different Bootstrap style to call attention to it. 
+        
+            
+            
+
+### User Avatars
+* The look of the profile pages can be improved by showing avatar pictures of users. 
+* *Gravatar* associates avatar images with email addresses. 
+    * Users create an account at http://gravatar.com and then upload their images. 
+    * To generate the avatar URL for a given email address, its MD5 hash is calculated:
+    
+    ```
+        (venv) $ python
+        >>> import hashlib
+        >>> hashlib.md5('john@example.com'.encode('utf-8')).hexdigest()
+        'd4c74594d841139328695756648b6bd6'
+    ```
+* The knowledge of how to build a Gravatar URL can be added to the User model. 
+    * *app/models.py* : Gravatar URL generation
+    ```
+        import hashlib
+        from flask import request
+        
+        class User(UserMixin, db.Model):
+             # ...
+            def gravatar(self, size=100, default='identicon', rating='g'):
+                if request.is_secure:
+                    url = 'https://secure.gravatar.com/avatar'
+                else:
+                    url = 'http://www.gravatar.com/avatar'
+                hash = hashlib.md5(self.email.encode('utf-8')).hexdigest()
+                return '{url}/{hash}?s={size}&d={default}&r={rating}'.format(
+                    url=url, hash=hash, size=size, default=default, rating=rating)
+    ```
 
 
 ## Chapter 11. Blog Posts

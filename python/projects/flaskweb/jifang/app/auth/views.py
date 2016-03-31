@@ -1,25 +1,24 @@
 from flask import render_template, redirect, request, url_for, flash
 from flask.ext.login import login_user, logout_user, login_required, current_user
 from . import auth
-from .forms import LoginForm
-from .forms import RegistrationForm
+from .forms import LoginForm, RegistrationForm
 from ..models import User
 from .. import db
 from ..email import send_email
 
-# Ping logged-in user
+
+
 @auth.before_app_request
 def before_request():
-    # if current_user.is_authenticated:
-        # current_user.ping()
-        # if not current_user.confirmed \
-                    # and request.endpoint[:5] != 'auth.':
-            # return redirect(url_for('auth.unconfirmed'))
-            
-     if current_user.is_authenticated \
-            and not current_user.confirmed \
-            and request.endpoint[:5] != 'auth.':
-        return redirect(url_for('auth.unconfirmed'))
+    # a user is logged in
+    if current_user.is_authenticated:
+        # ping logged-in user, for visit time
+        current_user.ping()
+        # not confirmed
+        if not current_user.confirmed \
+            and request.endpoint[:5] != 'auth.':    # not confirmed user just access the url 'auth/' (?)
+            return redirect(url_for('auth.unconfirmed'))
+    
             
 @auth.route('/unconfirmed')
 def unconfirmed():
@@ -78,6 +77,7 @@ def confirm(token):
         flash('You have confirmed your account. Thanks!')
     else:
         flash('The confirmation link is invalid or has expired.')
+    return redirect(url_for('main.index'))
         
     
     

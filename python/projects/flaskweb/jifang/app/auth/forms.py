@@ -1,14 +1,15 @@
 from flask.ext.wtf import Form
 from wtforms import StringField, PasswordField, BooleanField, SubmitField
 from wtforms.validators import Required, Email, Length, Regexp, EqualTo
-
 from wtforms import ValidationError
 from ..models import User
 
 class LoginForm(Form):
-    email = StringField('Email', 
+    email = StringField('Email'
             # validators=[Required(), Length(1, 64), Email()])
-            validators=[Length(1, 64), Email()])
+            # validators=[Length(1, 64), Email()])
+            # validators=[Length(0, 64), Email()]
+            )
     username = StringField('UserName', validators=[Required()])
     password = PasswordField('Password', validators=[Required()])
     remember_me = BooleanField('Keep me logged in')
