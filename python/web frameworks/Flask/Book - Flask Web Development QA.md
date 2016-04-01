@@ -15,4 +15,17 @@
     
     
 * `TemplateNotFound: bootstratp/wtf.html`
-    * 
+    * a typo: `bootstrap/wtf.html`
+    
+* `Internal Server Error`
+    * before-error: `(venv) $ python manage runserver -d`
+    * modify : `(venv) $ python manage runserver`
+
+* `python manage.py db migrate`
+    `AttributeError: '_MigrateConfig' object has no attribute 'configure_args'`
+    * Becasue Flask-Migrate version doesn't match
+    * modify : 
+        ```
+            pip uninstall flask-migrate
+            pip install flask-migrate
+        ```

@@ -397,7 +397,7 @@
              * Restarting with reloader  
         
         ```
-
+        * Note: `-d` , `--no-debug`
 
 
 ## Chapter 3: Templates
@@ -3456,18 +3456,312 @@ allow users to read and write blog posts.
         * Note that the use of an underscore prefix in the *_posts.html* template name is not a requirement; this is merely a convention to distinguish standalone and partial templates.
 
 ### Paginating Long Blog Post Lists
-#### Creating Fake Blog Post Data
-#### Rendering Data on Pages
-#### Adding a Pagination Widget
 
+* Big pages take longer to generate, download, and render in the web browser, so the quality of the user experience decreases as the pages get larger.
+* The solution is to *paginate* the data and render it in chunks.
+
+
+
+#### Creating Fake Blog Post Data
+* To be able to work with multiple pages of blog posts, it is necessary to have a test database with a large volume of data. 
+    * There are several Python packages that can be used to generate fake information. 
+* There are several Python packages that can be used to generate fake information. 
+    * A fairly complete one is *ForgeryPy* , which is installed with pip:
+        ` (venv) $ pip install forgerypy `
+        
+* To separate the production dependencies from the development dependencies, the *requirements.txt* file can be replaced with a *requirements* folder that stores different sets of dependencies. 
+    * Inside this new folder a *dev.txt* file can list the dependencies that are necessary for development 
+    * and a *prod.txt* file can list the dependencies that are needed in production. 
+    * As there is a large number of dependencies that will be in both lists, a *common.txt* file is added for those, and then the *dev.txt* and *prod.txt* lists use the *-r* prefix to include it. 
+    
+    * *requirements/dev.txt* : Development requirements file
+    ```
+        -r common.txt
+        ForgeryPy==0.1
+    ```
+    * ` (venv) $ pip install -r requirements/dev.txt`
+    
+* Class methods added to the *User* and *Post* models that can generate fake data.
+    * *app/models.py* : Generate fake users and blog posts
+    ```
+        class User(UserMixin, db.Model):
+            # ...
+            @staticmethod
+            def generate_fake(count=100):
+                from sqlalchemy.exc import IntegrityError
+                from random import seed
+                import forgery_py
+                seed()
+                for i in range(count):
+                    u = User(email=forgery_py.internet.email_address(),
+                             username=forgery_py.internet.user_name(True),
+                             password=forgery_py.lorem_ipsum.word(),
+                             confirmed=True,
+                             name=forgery_py.name.full_name(),
+                             location=forgery_py.address.city(),
+                             about_me=forgery_py.lorem_ipsum.sentence(),
+                             member_since=forgery_py.date.date(True))
+                    db.session.add(u)
+                    try:
+                        db.session.commit()
+                    except IntegrityError:
+                        db.session.rollback()
+                        
+        class Post(db.Model):
+            # ...
+            @staticmethod
+            def generate_fake(count=100):
+                from random import seed, randint
+                import forgery_py
+                seed()
+                user_count = User.query.count()
+                for i in range(count):
+                    u = User.query.offset(randint(0, user_count - 1)).first()
+                    p = Post(body=forgery_py.lorem_ipsum.sentences(randint(1, 3)),
+                             timestamp=forgery_py.date.date(True),
+                             author=u)
+                    db.session.add(p)
+                    db.session.commit()
+    ```
+    
+    * The attributes of these fake objects are generated with *ForgeryPy* random information generators
+        * which can generate real-looking names, emails, sentences, and many more attributes.
+        
+    * The email addresses and usernames of users must be unique, but since ForgeryPy generates these in completely random fashion, there is a risk of having duplicates.
+        * In this unlikely event, the database session commit will throw an *IntegrityError* exception.
+        * The loop iterations that produce a duplicate will not write a user to the database, so the total number of fake users added can be less than the number requested.
+        
+    * The random *post* generation must assign a random user to each post. 
+        * For this the *offset()* query filter is used.
+        * This filter discards the number of results given as an argument. 
+        * By setting a random offset and then calling *first()* , a different random user is obtained each time.
+        
+    * The new methods make it easy to create a large number of fake users and posts from the Python shell:
+        ```
+            (venv) $ python manage.py shell
+            >>> User.generate_fake(100)
+            >>> Post.generate_fake(100)
+        ```
+        * If you run the application now, you will see a long list of random blog posts on the home page.
+        
+
+#### Rendering Data on Pages
+* changes to the home page route to support pagination.
+    * *app/main/views.py* : Paginate the blog post list
+    ```
+        @main.route('/', methods=['GET', 'POST'])
+        def index():
+            # ...
+            page = request.args.get('page', 1, type=int)
+            pagination = Post.query.order_by(Post.timestamp.desc()).paginate(
+                page, per_page=current_app.config['FLASKY_POSTS_PER_PAGE'],
+                error_out=False)
+            posts = pagination.items
+            return render_template('index.html', form=form, posts=posts,
+                                   pagination=pagination)
+    ```
+    
+    * The page number to render is obtained from the request¡¯s query string, which is available as *request.args* .
+        * When an explicit page isn¡¯t given, a default page of *1* (the first page) is used. 
+        * The *type=int* argument ensures that if the argument cannot be converted to an integer, the default value is returned.
+        
+    * To load a single page of records, the call to *all()* is replaced with Flask-SQLAlchemy¡¯s *paginate()* . 
+        * The *paginate()* method takes the *page* number as the first and only required argument. 
+        * An optional *per_page* argument can be given to indicate the size of each page, in number of items. 
+            * If this argument is not specified, the default is *20* items per page. 
+        * Another optional argument called *error_out* can be set to *True* (the default) to issue a code *404* error when a page outside of the valid range is requested.
+            * If *error_out* is *False* , pages outside of the valid range are returned with an empty list of items.
+        * To make the page sizes configurable, the value of the *per_page* argument is read from an application-specific configuration variable called *FLASKY_POSTS_PER_PAGE* .
+        
+        
+
+#### Adding a Pagination Widget
+* The return value of *paginate()* is an object of class *Pagination* , a class defined by *Flask-SQLAlchemy* . 
+    * This object contains several properties that are useful to generate page links in a template, so it is passed to the template as an argument. 
+        * Table 11-1. Flask-SQLAlchemy pagination object attributes
+        * ![Table 11-1. Flask-SQLAlchemy pagination object attributes](images/Table 11-1. Flask-SQLAlchemy pagination object attributes.jpg)
+    * The pagination object also has some methods
+        * Table 11-2. Flask-SQLAlchemy pagination object attributes
+        * ![Table 11-2. Flask-SQLAlchemy pagination object attributes](images/Table 11-2. Flask-SQLAlchemy pagination object attributes.jpg)
+        
+* Armed with this powerful object and Bootstrap¡¯s pagination CSS classes, it is quite easy to build a pagination footer in the template. 
+
+    * The implementation shown in below is done as a reusable Jinja2 *macro* .
+    * *app/templates/_macros.html* : Pagination template macro
+    ```
+        {% macro pagination_widget(pagination, endpoint) %}
+        <ul class="pagination">
+            <li{% if not pagination.has_prev %} class="disabled"{% endif %}>
+                <a href="{% if pagination.has_prev %}{{ url_for(endpoint,
+                    page = pagination.page - 1, **kwargs) }}{% else %}#{% endif %}">
+                    &laquo;
+                </a>
+            </li>
+            {% for p in pagination.iter_pages() %}
+                {% if p %}
+                    {% if p == pagination.page %}
+                    <li class="active">
+                        <a href="{{ url_for(endpoint, page = p, **kwargs) }}">{{ p }}</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{{ url_for(endpoint, page = p, **kwargs) }}">{{ p }}</a>
+                    </li>
+                    {% endif %}
+                {% else %}
+                <li class="disabled"><a href="#">&hellip;</a></li>
+                {% endif %}
+            {% endfor %}
+            <li{% if not pagination.has_next %} class="disabled"{% endif %}>
+                <a href="{% if pagination.has_next %}{{ url_for(endpoint,
+                    page = pagination.page + 1, **kwargs) }}{% else %}#{% endif %}">
+                    &raquo;
+                </a>
+            </li>
+        </ul>
+        {% encmacro %}
+    ```
+    
+    * The macro creates a Bootstrap pagination element, which is a styled unordered list. 
+    * It defines the following page links inside it:
+        * A ¡°previous page¡± link. This link gets the disabled class if the current page is the first page.
+        * Links to the all pages returned by the pagination object¡¯s iter_pages()  iterator.
+        * A ¡°next page¡± link. This link will appear disabled if the current page is the last page.
+    * Jinja2 macros always receive keyword arguments without having to include `**kwargs` in the argument list.     
+        * The pagination macro passes all the keyword arguments it receives to the *url_for()* call that generates the pagination links. 
+
+* The *pagination_widget* macro can be added below the *_posts.html* template included by *index.html* and *user.html* . 
+    * *app/templates/index.html* : Pagination footer for blog post lists
+    ```
+        {% extends "base.html" %}
+        {% import "bootstrap/wtf.html" as wtf %}
+        {% import "_macros.html" as macros %}
+        ...
+        {% include '_posts.html' %}
+        <div class="pagination">
+            {{ macros.pagination_widget(pagination, '.index') }}
+        </div>
+        {% endif %}
+    ```
+    
 
 ### Rich-Text Posts with Markdown and Flask-PageDown
+* In this section, the text area field where posts are entered will be upgraded to support the *Markdown* syntax and present a rich-text preview of the post.
+* The implementation of this feature requires a few new packages:
+    * *PageDown* : a client-side Markdown-to-HTML converter implemented in JavaScript.
+    * *Flask-PageDown* : a PageDown wrapper for Flask that integrates PageDown with
+    * *Markdown* : a server-side Markdown-to-HTML converter implemented in Python.
+    * *Bleach* : an HTML sanitizer implemented in Python.
+    
+* The Python packages can all be installed with pip:
+    `(venv) $ pip install flask-pagedown markdown bleach`
+    
 #### Using Flask-PageDown
+* The *Flask-PageDown* extension defines a *PageDownField* class that has the same interface as the *TextAreaField* from *WTForms* . 
+* Before this field can be used, the extension needs to be initialized
+    * *app/__init__.py* : Flask-PageDown initialization
+    ```
+        from flask.ext.pagedown import PageDown
+        # ...
+        
+        pagedown = PageDown()
+        # ...
+        def create_app(config_name):
+            # ...
+            pagedown.init_app(app)
+            # ...
+    ```
+    
+* To convert the text area control in the home page to a Markdown rich-text editor, the *body* field of the  *PostForm* must be changed to a  *PageDownField* .
+    * *app/main/forms.py* : Markdown-enabled post form
+    ```
+        from flask.ext.pagedown.fields import PageDownField
+        class PostForm(Form):
+            body = PageDownField("What's on your mind?", validators=[Required()])
+            submit = SubmitField('Submit')
+    ```
+* The Markdown preview is generated with the help of the PageDown libraries, so these must be added to the template. 
+    * Flask-PageDown simplifies this task by providing a template macro that includes the required files from a CDN.
+    
+    * *app/index.html* : Flask-PageDown template declaration
+    ```
+        {% block scripts %}
+        {{ super() }}
+        {{ pagedown.include_pagedown() }}
+        {% endblock %}
+    ```
 
-#### Using Flask-PageDown
+
+#### Handling Rich Text on the Server
+
+* When the form is submitted only the raw Markdown text is sent with the *POST* request; the HTML preview that was shown on the page is discarded.
+* Sending the generated HTML preview with the form can be considered a security risk, as it would be fairly easy for an attacker to construct HTML sequences that do not match the Markdown source and submit them. 
+    * To avoid any risks, only ~the Markdown source text~ is submitted, and once in the server it is converted again to HTML using Markdown, a Python Markdown-to-HTML converter. 
+    * The resulting HTML will be sanitized with Bleach to ensure that only a short list of allowed HTML tags are used.
+    
+* The conversion of the Markdown blog posts to HTML
+    * This can be issued in the *_posts.html* template, but this is inefficient, as posts will have to be converted everytime they are rendered to a page.
+    
+    * To avoid this repetition, the conversion can be done once when the blog post is created. 
+    * The HTML code for the rendered blog post is *cached* in a new field added to the *Post* model that the template can access directly. 
+    * The original Markdown source is also kept in the database in case the post needs to be edited.
+    
+    * *app/models.py* : Markdown text handling in the Post model
+    ```
+        from markdown import markdown
+        import bleach
+        
+        class Post(db.Model):
+            # ...
+            body_html = db.Column(db.Text)
+             # ...
+            @staticmethod
+            def on_changed_body(target, value, oldvalue, initiator):
+                allowed_tags = ['a', 'abbr', 'acronym', 'b', 'blockquote', 'code',
+                                'em', 'i', 'li', 'ol', 'pre', 'strong', 'ul',
+                                'h1', 'h2', 'h3', 'p']
+                target.body_html = bleach.linkify(bleach.clean(
+                    markdown(value, output_format='html'),
+                    tags=allowed_tags, strip=True))
+                    
+        db.event.listen(Post.body, 'set', Post.on_changed_body)
+            
+    ```
+    
+    * The *on_changed_body* function is registered as a listener of SQLAlchemy¡¯s *¡°set¡±* event for body, which means that it will be automatically invoked whenever the *body* field on any instance of the class is set to a new value. 
+    * The function renders the HTML version of the body and stores it in *body_html* , effectively making the conversion of the Mark©\down text to HTML fully automatic.
+    
+    * The actual conversion is done in three steps.
+        * *markdown()* : First, the markdown() function does an initial conversion to HTML.
+        * *clean()* : The result is passed to  clean(), along with the list of approved HTML tags. 
+            * The *clean()* function removes any tags not on the white list. 
+        * *linkify()* : The final conversion is done with linkify(), another function provided by Bleach that converts any URLs written in plain text into proper `<a>` links. 
+            * This last step is necessary because automatic link generation is not officially in the Markdown specification.
+            * PageDown supports it as an extension, so *linkify()* is used in the server to match.
+            
+* The last change is to replace *post.body* with *post.body_html* in the template when available.
+    * *app/templates/_posts.html* : Use the HTML version of the post bodies in
+the template
+    ```
+        ...
+        <div class="post-body">
+            {% if post.body_html %}
+                {{ post.body_html | safe }}
+            {% else %}
+                {{ post.body }}
+            {% endif %}
+        </div>
+        ...
+    ```
+    * The `| safe` suffix when rendering the HTML body is there to tell Jinja2 not to escape the HTML elements. 
+        * Jinja2 escapes all template variables by default as a security measure. 
+        * The Markdown-generated HTML was generated in the server, so it is safe to render.
+            
+    
+
+### Permanent Links to Blog Posts
 
 
-### Handling Rich Text on the Server
 ### Blog Post Editor
 
 

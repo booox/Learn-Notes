@@ -876,10 +876,6 @@
         * modify env variable: `set VIRABLE='something'`
         * append : `set VIRABLE=%VIRABLE%;'some_new_things'`
     
-    
-    
-    
-    
-    
-    
+* python @staticmethod vs @classmethod
+    [Difference between @staticmethod and @classmethod in Python](http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/)
     

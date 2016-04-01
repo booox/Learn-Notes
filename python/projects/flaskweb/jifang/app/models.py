@@ -7,6 +7,8 @@ from . import db
 from . import login_manager
 from datetime import datetime
 import hashlib
+from markdown import markdown
+import bleach
 
 class Permission:
     FOLLOW = 0X01
@@ -122,10 +124,7 @@ class User(UserMixin, db.Model):
         return check_password_hash(self.password_hash, password)
         
         
-    # 
-    # def change_email(self, token):
-        
-    # for gravatar
+     # for gravatar
     def gravatar(self, size=100, default='identicon', rating='g'):
         if request.is_secure:
             url = 'https://secure.gravatar.com/avatar'
@@ -135,6 +134,28 @@ class User(UserMixin, db.Model):
         return '{url}/{hash}?s={size}&d={default}&r={rating}'.format(
             url=url, hash=hash, size=size, default=default, rating=rating)
             
+    # generate fake db for pagination test
+    @staticmethod
+    def generate_fake_users(count=100):
+        from sqlalchemy.exc import IntegrityError
+        from random import seed
+        import forgery_py
+        
+        seed()
+        for i in range(count):
+            u = User(email = forgery_py.internet.email_address(),
+                         username = forgery_py.internet.user_name(True),
+                         password = forgery_py.lorem_ipsum.word(),
+                         confirmed = True,
+                         location = forgery_py.address.city(),
+                         about_me = forgery_py.lorem_ipsum.sentence(),
+                         member_since = forgery_py.date.date(True))
+            db.session.add(u)
+            try:
+                db.session.commit()
+            except:
+                db.session.rollback()
+            
     
     def __repr__(self):
         return '<User %r>' % self.username
@@ -143,10 +164,39 @@ class Post(db.Model):
     __tablename__ = 'posts'
     id = db.Column(db.Integer, primary_key=True)
     body = db.Column(db.Text)
+    body_html = db.Column(db.Text)
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     author_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     
     
+    # generate fake db for pagination test
+    @staticmethod
+    def generate_fake_posts(count=10):
+        from random import seed, randint
+        import forgery_py
+        
+        seed()
+        user_count = User.query.count()
+        for i in range(count):
+            u = User.query.offset(randint(0, user_count - 1)).first()
+            p = Post(body = forgery_py.lorem_ipsum.sentences(randint(1, 3)),
+                        timestamp = forgery_py.date.date(True),
+                        author = u)
+            db.session.add(p)
+            db.session.commit()
+            
+    # Markdown text handling in the Post model
+    @staticmethod
+    def on_changed_body(target, value, oldvalue, initator):
+        allowed_tags = ['a', 'abbr', 'acronym', 'b', 'blockquote', 'code',
+                                'em', 'i', 'li', 'ol', 'pre', 'strong', 'ul',
+                                'h1', 'h2', 'h3', 'p']
+        target.body_html = bleach.linkify(bleach.clean(
+                markdown(value, output_format='html'),
+                tags=allowed_tags, strip=True))
+        
+        
+db.event.listen(Post.body, 'set', Post.on_changed_body)
     
 # enable tha app to freely can current_user.can()
 # and current_user.is_administrator() 

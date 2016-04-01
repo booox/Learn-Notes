@@ -1,4 +1,4 @@
-from flask import render_template, session, redirect, url_for, current_app, abort, flash
+from flask import render_template, session, redirect, url_for, current_app, abort, flash, request
 from . import main
 from .forms import NameForm, EditProfileForm, EditProfileAdminForm, PostForm
 from .. import db
@@ -17,10 +17,18 @@ def index():
         db.session.add(post)
         return redirect(url_for('.index'))
     
-    posts = Post.query.order_by(Post.timestamp.desc()).all()
+    # posts = Post.query.order_by(Post.timestamp.desc()).all()
+    
+    # pagination
+    page = request.args.get('page', 1, type=int)
+    pagination = Post.query.order_by(Post.timestamp.desc()).paginate(
+            page, per_page=current_app.config['FLASK_POSTS_PER_PAGE'],
+            error_out=False)
+    posts = pagination.items
     return render_template('index.html',
                                     form=form, 
                                     posts=posts,
+                                    pagination=pagination,
                                     current_time=datetime.utcnow())
                                     
                                     
@@ -29,11 +37,22 @@ def index():
 # user profile page
 @main.route('/user/<username>')
 def user(username):
-    user = User.query.filter_by(username=username).first()
-    if user is None:
-        abort(404)
-    posts = user.posts.order_by(Post.timestamp.desc()).all()
-    return render_template('user.html', user=user, posts=posts)
+    user = User.query.filter_by(username=username).first_or_404()
+    # if user is None:
+        # abort(404)
+        
+    
+    # posts = user.posts.order_by(Post.timestamp.desc()).all()
+    # pagination
+    page = request.args.get('page', 1, type=int)
+    pagination = user.posts.order_by(Post.timestamp.desc()).paginate(
+            page, per_page=current_app.config['FLASK_POSTS_PER_PAGE'],
+            error_out=False)
+    posts = pagination.items
+    return render_template('user.html', 
+                                        user=user, 
+                                        posts=posts,
+                                        pagination=pagination)
                                     
 
 # edit user profile edit route
