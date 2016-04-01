@@ -8,6 +8,10 @@ class NameForm(Form):
     name = StringField('What is your name?', validators=[Required()])
     submit = SubmitField('Submit')
 
+class PostForm(Form):
+    body = TextAreaField("What's on your mind?", validators=[Required()])
+    submit = SubmitField('Submit')
+    
 # edit user profile edit route
 class EditProfileForm(Form):
     location = StringField('Location', validators=[Length(0, 64)])

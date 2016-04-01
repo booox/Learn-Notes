@@ -12,3 +12,7 @@
     
     * `permissions=0xff` ?
     * `super(User, self).__init__(**kwargs)`
+    
+    
+* `TemplateNotFound: bootstratp/wtf.html`
+    * 

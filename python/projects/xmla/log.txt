@@ -17261,3 +17261,22 @@ track_title: <type 'unicode'> Delta Goodrem - Born To Try
 		 track_id: 846
 		{832: 1, 833: 1, 834: 1, 835: 1, 836: 1, 837: 1, 838: 1, 839: 1, 840: 1, 841: 1, 842: 1, 843: 1, 844: 1, 845: 1, 846: 1, 828: 1, 829: 1, 830: 1, 831: 1}
 	Rolling In The
+Enter a zhubo, album or sound url:http://www.ximalaya.com/39200626/album/3385980/
+Album in database  39200626 /album/ 3385980
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/39200626/album/3385980/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 28 	 update_time: 2016-04-01
+	 Value in Web -- sound_count: 28 	 update_time: 2016-04-01
+NO NEED for update.
+
+	 this album has  28 tracks.
+
+	 this album has  -1 tracks doesn't download.
+Start download track...
+
+
+ -------- Convert m4a to mp3 start   ----------- 
+
+Enter a zhubo, album or sound url:
