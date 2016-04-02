@@ -105,6 +105,8 @@
             
         ```
         
+    * OR, `(env) $ pip install -r requirements\dev.txt`, One-Stop-Installation
+        
 ## Chapter 2: Basic Application Structure
 
 ### Initialization
@@ -709,14 +711,17 @@
 * If the routes are reorganized , links in templates may break.
 * To avoid these problems, Flask provides the *url_for()* helper function
     * Which generates URLs from the information stored in the application's URL map.
+    * *url_for()* takes the view function name (or *endpoint* name for routes defined with *app.add_url_route()* ) as its single argument and returns its URL.    
     
 * Some examples:
     * `url_for('index')` : return /
     * `url_for('index', _external=True)` : return an absolute URL,  http://localhost:5000/
     * `url_for('user', name='john', _external=True)` : return http://localhost:5000/user/john
     * `url_for('index', page=2)` : return /?page=2
+    * *_external=True* : return an absolute URL.
     * **
     
+
 
 
 ### Static Files
@@ -3761,12 +3766,395 @@ the template
 
 ### Permanent Links to Blog Posts
 
+* Users may want to share links to specific blog posts with friends on social networks. For this purpose, each post will be assigned a page with a unique URL that references it. 
+    * *app/main/views.py* : Permanent links to posts
+    ```
+        @main.route('/post/<int:id>')
+        def post(id):
+            post = Post.query.get_or_404(id)
+            return render_template('post.html', posts=[post])
+    ```
+    * The URLs that will be assigned to blog posts are constructed with the unique id field assigned when the post is inserted in the database
+        * For  some  types  of  applications,  building  permanent  links  that  use readable URLs instead of numeric IDs may be preferred.
+        * An alternative to numeric IDs is to assign each blog post a slug, which is a unique string that is related to the post.
+        
+    * Note that the *post.html* template receives a list with just the post to render. Sending a list is necessary so that the *_posts.html* template referenced by *index.html* and *user.html* can be used in this page as well
+    
+* The permanent links are added at the bottom of each post in the generic *_posts.html* template.
+    * *app/templates/_posts.html* : Permanent links to posts
+    ```
+        <ul class="posts">
+            {% for post in posts %}
+            <li class="post">
+                ...
+                <div class="post-content">
+                    ...
+                    <div class="post-footer">
+                        <a href="{{ url_for('.post', id=post.id) }}">
+                            <span class="label label-default">Permalink</span>
+                        </a>
+                     </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    ```
+    
+* The new  *post.html* template that renders the permanent link page.
+    * *app/templates/posts.html* : Permanent links template
+    ```
+        {% extends "base.html" %}
+        {% block title %}Flasky - Post{% endblock %}
+        {% block page_content %}
+        {% include '_posts.html' %}
+        {% endblock %}
+    ```
+    
+* CSS
+    * *app/static/style.css* : 
+    ```
+        div.post-footer {
+            text-align: right;
+        }
+    ```
 
 ### Blog Post Editor
 
+* The last feature related to blog posts is a post editor that allows users to edit their own posts. 
+    * The blog post editor will live in a standalone page.
+    * At the top of the page, the current version of the post will be shown for reference, 
+    * followed by a Markdown editor where the source Markdown can be modified.
+    * The editor will be based on *Flask-PageDown* , so a preview of the edited version of the blog post will be shown at the bottom of the page. 
+    
+* Edit blog post template
+    * *app/templates/edit_post.html* : Edit blog post template
+    ```
+        {% extends "base.html" %}
+        {% import "bootstrap/wtf.html" as wtf %}
+        {% block title %}Flasky - Edit Post{% endblock %}
+        {% block page_content %}
+        <div class="page-header">
+            <h1>Edit Post</h1>
+        </div>
+        <div>
+            {{ wtf.quick_form(form) }}
+        </div>
+        {% endblock %}
+        {% block scripts %}
+        {{ super() }}
+        {{ pagedown.include_pagedown() }}
+        {% endblock %}
+    ```
 
-
+* The route that supports the blog post editor
+    * *app/main/views.py* : Edit blog post route
+    ```
+        @main.route('/edit/<int:id>', methods=['GET', 'POST'])
+        @login_required
+        def edit(id):
+            post = Post.query.get_or_404(id)
+            if current_user != post.author and \
+                    not current_user.can(Permission.ADMINISTER):
+                abort(403)
+            form = PostForm()
+            if form.validate_on_submit():
+                post.body = form.body.data
+                db.session.add(post)
+                flash('The post has been updated.')
+                return redirect(url_for('.post', id=post.id))
+            form.body.data = post.body
+            return render_template('edit_post.html', form=form)
+    ```
+    * This view function is coded to allow only the author of a blog post to edit it, except for administrators, who are allowed to edit posts from all users. 
+    * If a user tries to edit a post from another user, the view function responds with a 403 code.
+    *  The PostForm web form class used here is the same one used on the home page.
+    
+* To complete the feature, a link to the blog post editor can be added below each blog post, next to the permanent link
+    * *app/templates/_posts.html* : Edit blog post links
+    ```
+        <ul class="posts">
+            {% for post in posts %}
+            <li class="post">
+                ...
+                <div class="post-content">
+                    ...
+                    <div class="post-footer">
+                        ...
+                        {% if current_user == post.author %}
+                        <a href="{{ url_for('.edit', id=post.id) }}">
+                            <span class="label label-primary">Edit</span>
+                        </a>
+                        {% elif current_user.is_administrator() %}
+                        <a href="{{ url_for('.edit', id=post.id) }}">
+                            <span class="label label-danger">Edit [Admin]</span>
+                        </a>
+                        {% endif %}
+                     </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    ```
+    
+    * This change adds an ¡°Edit¡± link to any blog posts that are authored by the current user.
+    * For administrators, the link is added to all posts. The administrator link is styled differently as a visual cue that this is an administration feature.
+    
 ## Chapter 12. Followers
+
+* Socially aware web applications allow users to connect with other users. A call these relationships followers, friends, contacts, connections, or buddies.
+* but the feature is the same regardless of the name, and in all cases involves keeping track of directional links between pairs of users and using these links in database queries.
+
+### Database Relationships Revisited 
+
+* Database established links between records using *relationships* .
+* The *One-to-many* relationshiop is the most common type of relationship:
+    * Where a record is linked with a list of related records.
+    * To implement this type of relationship, the elements in the *"many"* side have a foreign key that points to the linked element on the *"one"* side.
+    
+    * The example application in its current state includes two one-to-many relationships: 
+        * one that links user roles to lists of users
+        * and another that links users to the blog posts they authored.
+* Most other relationship types can be derived from the one-to-many type. 
+    * The *many-to-one* relationship is a one-to-many looked at from the point of view of the ¡°many¡± side. 
+    * The *one-to-one* relationship type is a simplification of the one-to-many, where the ¡°many¡± side is constrained to only have at most one element. 
+    * The only relationship type that cannot be implemented as a simple variation of the one-to-many model is the *many-to-many* , which has lists of elements on both sides. 
+    
+
+#### Many-to-Many Relationships
+* The one-to-many, many-to-one, and one-to-one relationships all have at least one side with a single entity, so the links between related records are implemented with foreign keys pointing to that one element. 
+* But how do you implement a relationship where both sides are ¡°many¡± sides?
+* Consider the classical example of a many-to-many relationship: a database of students
+and the classes they are taking. 
+    * Clearly, you can¡¯t add a foreign key to a class in the students table, because a student takes many classes¡ªone foreign key is not enough.
+    * Likewise, you cannot add a foreign key to the student in the classes table, because classes have more than one student. Both sides need a list of foreign keys.
+    
+* The solution is to add a third table to the database, called an *association* *table* . 
+    * Now the many-to-many relationship can be decomposed into two one-to-many relationships from each of the two original tables to the association table. 
+    * ![Figure 12-1. Many-to-many relationship example](images/Figure 12-1. Many-to-many relationship example.jpg)
+    
+* The association table in this example is called *registrations* . 
+    * Each row in this table represents an individual registration of a student in a class.
+
+* Querying a many-to-many relationship is a two-step process. 
+    * To obtain the list of classes a student is taking:
+        * you start from the one-to-many relationship between students and registrations and get the list of registrations for the desired student. 
+        * Then the *one-to-many* relationship between classes and registrations is traversed in the *many-to-one* direction to obtain all the classes associated with the registrations retrieved for the student.
+    * Likewise, to find all the students in a class:
+        * you start from the class and get a list of registrations, 
+        * then get the students linked to those registrations.
+        
+* Following is the code that represents the many-to-many relationship:
+    * *app/models.py* : 
+    ```
+        registrations = db.Table('registrations',
+            db.Column('student_id', db.Integer, db.ForeignKey('students.id')),
+            db.Column('class_id', db.Integer, db.ForeignKey('classes.id'))
+        )
+        
+        class Student(db.Model):
+            id = db.Column(db.Integer, primary_key=True)
+            name = db.Column(db.String)
+            classes = db.relationship('Class',
+                                      secondary=registrations,
+                                      backref=db.backref('students', lazy='dynamic'),
+                                      lazy='dynamic')
+                                      
+        class Class(db.Model):
+            id = db.Column(db.Integer, primary_key = True)
+            name = db.Column(db.String)
+    ```
+    * The relationship id defined with the same *db.relationship()* construct that is used for *one-to-many* relationships, but in the case of a *many-to-many* relationship the additional *secondary* argument MUST to be set t the association table.
+    * The relationship can be defined in either one of the two classes, with the *backref* argument taking care of exposing the relationship from the other side as well.
+    * The association table is defined as a simple table, not as a model, since SQLAlchemy manages this table internally.
+    * The *classes* relationship uses list semantics
+        * Which makes working with a *many-to-many* relationships configured in this way extremely easy.
+        
+* Give a student *s* and a class *c*
+    * student register a class
+        ```
+            >>> s.classes.append(c)
+            >>> db.session.add(s)
+        ```
+    * The queries that list the classes student s is registered for and the list of students registered for class c are also very simple:
+        ```
+            >>> s.classes.all(c)        # the list of classes student s is registered for   
+            >>> c.classes.all(c)        # the list of students registered for class c            
+        ```
+    * The  students relationship available in the  Class model is the one defined in the db.backref() argument. 
+    * Note that in this relationship the backref argument was expanded to also have a lazy = 'dynamic' attribute,
+        * so both sides return a query that can accept additional filters.
+    * If student s later decides to drop class c, you can update the database as follows
+        `>>> s.classes.remove(c) `
+        
+
+#### Self-Referential Relationships
+
+* A many-to-many relationship can be used to model users following other users, but there is a problem.
+    * In the example of students and classes, there were two very clearly defined entities linked together by the association table. 
+    * However, to represent users following other users, it is just users¡ªthere is no second entity
+* A relationship in which both sides belong to the same table is said to be  *self-referential* . 
+    * In this case the entities on the left side of the relationship are users, which can be called the ¡°followers.¡± 
+    * The entities on the right side are also users, but these are the ¡°followed¡± users. 
+* Conceptually, self-referential relationships are no different than regular relationships, but they are harder to think about. 
+    * ![Figure 12-2. Followers, many-to-many relationship](images/Figure 12-2. Followers, many-to-many relationship.jpg)
+    * The association table in this case is called *follows*. Each row in this table represents a user following another user.
+        * The one-to-many relationship pictured on the left side associates users with the list of ¡°follows¡± rows in which they are the followers. 
+        * The one-to-many relationship pictured on the right side associates users with the list of ¡°follows¡± rows in which they are the followed user.
+       
+
+#### Advanced Many-to-Many Relationships
+* With a *self-referential* *many-to-many* relationship configured as indicated in the previous example, the database can represent followers, but there is one limitation. 
+* A common need when working with many-to-many relationships is to store additional data
+that applies to the link between two entities.
+* For the followers relationship, it can be useful to store the date a user started following another user, as that will enable lists of followers to be presented in chronological order. 
+* The only place this information can be stored is in the *association* table
+    * but in an implementation similar to that of the students and classes shown earlier
+    * the association table is an *internal* table that is fully managed by *SQLAlchemy* .
+    
+* To be able to work with custom data in the relationship, the association table must be promoted to a proper model that the application can access. 
+    * *app/models.py* : The follows association table as a model
+    ```
+        class Follow(db.Model):
+            __tablename__ = 'follows'
+            follower_id = db.Column(db.Integer, db.ForeignKey('users.id'),
+                                    primary_key=True)
+            followed_id = db.Column(db.Integer, db.ForeignKey('users.id'),
+                                    primary_key=True)
+            timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+    ```
+    * SQLAlchemy cannot use the association table transparently because that will not give
+the application access to the custom fields in it.
+    
+*  Instead, the many-to-many relationship must be decomposed into the two basic one-to-many relationships for the left and right sides, and these must be defined as standard relationships.
+    * *app/models.py* : A many-to-many relationship implemented as two one-to-many relationships
+    ```
+        class User(UserMixin, db.Model):
+            # ...
+            followed = db.relationship('Follow',
+                                       foreign_keys=[Follow.follower_id],
+                                       backref=db.backref('follower', lazy='joined'),
+                                       lazy='dynamic',
+                                       cascade='all, delete-orphan')
+            followers = db.relationship('Follow',
+                                        foreign_keys=[Follow.followed_id],
+                                        backref=db.backref('followed', lazy='joined'),
+                                        lazy='dynamic',
+                                        cascade='all, delete-orphan')
+    ```
+    * Here the *followed* and *followers* relationships are defined as individual one-to-many relationships.
+
+* The application now needs to work with the two one-to-many relationships to implement the many-to-many functionality. 
+    * Since these are operations that will need to be repeated often, it is a good idea to create helper methods in the User model for all the possible operations. 
+    * The four new methods that control this relationship are shown:
+    * *app/models.py* : Followers helper methods
+    ```
+        class User(db.Model):
+            # ...
+            def follow(self, user):
+                if not self.is_following(user):
+                    f = Follow(follower=self, followed=user)
+                    db.session.add(f)
+            def unfollow(self, user):
+                f = self.followed.filter_by(followed_id=user.id).first()
+                if f:
+                    db.session.delete(f)
+            def is_following(self, user):
+                return self.followed.filter_by(
+                    followed_id=user.id).first() is not None
+            def is_followed_by(self, user):
+                return self.followers.filter_by(
+                follower_id=user.id).first() is not None
+    ```
+
+### Followers on the Profile Page 
+
+* The profile page of a user needs to present a ¡°Follow¡± button if the user viewing it is not a follower, or an ¡°Unfollow¡± button if the user is a follower. 
+* It is also a nice addition to show the follower and followed counts, display the lists of followers and followed users, and show a ¡°Follows You¡± sign when appropriate. 
+    * *app/templates/user.html* : Follower enchancements to the user profile header
+    ```
+        {% if current_user.can(Permission.FOLLOW) and user != current_user %}
+            {% if not current_user.is_following(user) %}
+            <a href="{{ url_for('.follow', username=user.username) }}"
+                class="btn btn-primary">Follow</a>
+            {% else %}
+            <a href="{{ url_for('.unfollow', username=user.username) }}"
+                class="btn btn-default">Unfollow</a>
+            {% endif %}
+        {% endif %}
+        <a href="{{ url_for('.followers', username=user.username) }}">
+        Followers: <span class="badge">{{ user.followers.count() }}</span>
+        </a>
+        <a href="{{ url_for('.followed_by', username=user.username) }}">
+            Following: <span class="badge">{{ user.followed.count() }}</span>
+        </a>
+        {% if current_user.is_authenticated() and user != current_user and
+            user.is_following(current_user) %}
+        | <span class="label label-default">Follows you</span>
+        {% endif %}
+
+    ```
+
+* There are four new endpoints defined in these template changes.
+    * `/follow/<user-name>` : Follow route and view function
+    ```
+        @main.route('/follow/<username>')
+        @login_required
+        @permission_required(Permission.FOLLOW)
+        def follow(username):
+            user = User.query.filter_by(username=username).first()
+            if user is None:
+                flash('Invalid user.')
+                return redirect(url_for('.index'))
+            if current_user.is_following(user):
+                flash('You are already following this user.')
+                return redirect(url_for('.user', username=username))
+            current_user.follow(user)
+            flash('You are now following %s.' % username)
+            return redirect(url_for('.user', username=username))        
+    ```
+    
+    * `/unfollow/<username>` : Unfollow route and view function
+    ```
+        
+    ```
+    
+    
+    * `/followers/<username>` : Followers route and view function
+    ```
+        @main.route('/followers/<username>')
+        def followers(username):
+            user = User.query.filter_by(username=username).first()
+            if user is None:
+                flash('Invalid user.')
+                return redirect(url_for('.index'))
+            page = request.args.get('page', 1, type=int)
+            pagination = user.followers.paginate(
+                page, per_page=current_app.config['FLASKY_FOLLOWERS_PER_PAGE'],
+                error_out=False)
+            follows = [{'user': item.follower, 'timestamp': item.timestamp}
+                       for item in pagination.items]
+            return render_template('followers.html', user=user, title="Followers of",
+                                   endpoint='.followers', pagination=pagination,
+                                   follows=follows)        
+    ```
+    
+    
+    
+    
+    
+    * `/followings/<username>` : Followings route and view function
+    
+    
+    
+    
+    
+
+### Query Followed Posts Using a Database Join  
+### Show Followed Posts on the Home Page 
+
+
+
+
 ## Chapter 13. User Comments
 ## Chapter 14. Application Programming Interfaces
 

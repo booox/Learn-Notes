@@ -29,3 +29,19 @@
             pip uninstall flask-migrate
             pip install flask-migrate
         ```
+        
+* `ValueError: View function did not return a response`
+    * `render_template('edit_profile.html', form=form)`
+    * `return render_template('edit_profile.html', form=form)` : missed *return*
+    
+* `BuildError: ('post', {'id': 3}, None)`
+    * error from: `return redirect(url_for('post', id=post.id))`
+    * modified:
+        `return redirect(url_for('.post', id=post.id))` 
+    * Note:
+        ```
+            url_for('.post', id=id)
+            url_for('auth.unconfirmed')
+            url_for('main.index')
+        ```
+    
