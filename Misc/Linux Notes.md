@@ -74,3 +74,23 @@
 
 * Q: [How do I set a user environment variable? (permanently, not session)](http://unix.stackexchange.com/questions/21598/how-do-i-set-a-user-environment-variable-permanently-not-session) 
     * A: 
+    
+* ¡®Ifconfig¡¯ Command Not Found In CentOS 7 Minimal Installation ¨C A Quick Tip To Fix It
+    * set network ONBOOT 
+        ```
+            # vi /etc/sysconfig/network-scripts/ifcfg-eth0
+                ONBOOT=yes
+            # service network restart
+        ```
+    * install net-tools
+        ```
+            # yum install net-tools
+            # ifconfig
+        ```
+    
+        
+        
+        
+        
+        
+        
