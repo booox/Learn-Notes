@@ -17280,3 +17280,27 @@ Start download track...
  -------- Convert m4a to mp3 start   ----------- 
 
 Enter a zhubo, album or sound url:
+Enter a zhubo, album or sound url:http://www.ximalaya.com/1000144/album/3505338/
+Album  doesn't in db: 1000144 /album/ 3505338
+http://www.ximalaya.com/1000144/album/3505338/
+	 Start getItemsOnPages _type=  albumSound From :  http://www.ximalaya.com/1000144/album/3505338/
+	 getItemsOnPages retrieve the first page, total: 1
+	 getItemsOnPages retrive the first page done.
+	 getItemsOnPages retrive multi pages Done.
+
+	 getItemsOnPages Done : get  albumSound from 1 pages
+Write New Album start. 1000144 /album/ 3505338
+Write New Album Done. 1000144 /album/ 3505338
+Write Tracks of the Album Start.
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11294913/
+	Track  doesn't in db: 1000144 /sound/ 11294913
+	Write New Track start. 1000144 /sound/ 11294913
+	Write New Track Done. 1000144 /sound/ 11294913
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11294913/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11333140/
+	Track  doesn't in db: 1000144 /sound/ 11333140

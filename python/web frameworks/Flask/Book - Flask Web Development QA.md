@@ -13,6 +13,8 @@
     * `permissions=0xff` ?
     * `super(User, self).__init__(**kwargs)`
     
+- [] template : `{{ url_for('static', filename='avatar/{{ img_id }}.jpg') }}`
+    
     
 * `TemplateNotFound: bootstratp/wtf.html`
     * a typo: `bootstrap/wtf.html`
@@ -44,4 +46,36 @@
             url_for('auth.unconfirmed')
             url_for('main.index')
         ```
+    
+* Refresh page every-time, need access *cdnjs.cloudflare.com* to get the *css/js* 
+    * add a line in *app.config* :
+        `BOOTSTRAP_SERVE_LOCAL = True`
+        
+* Error: `{{ url_for('static/avatar', filename='v_1.jpg') }}`
+    * Right: `{{ url_for('static', filename='avatar/IMG_1.jpg') }}`
+
+* Error: `Method Not Allowed : The method is not allowed for the requested URL.`
+    * Wrong : `@main.route('/post/<int:id>')`
+    * Right: `@main.route('/post/<int:id>', methods=['GET', 'POST'])`
+    
+* When two clients try to access the application at the same time, it not response.
+    * flask default set *threading=False* 
+    * so set : `(venv) $ python manage.py runserver -p 5001 --threaded` to enable threading.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     

@@ -718,9 +718,9 @@
     * `url_for('index', _external=True)` : return an absolute URL,  http://localhost:5000/
     * `url_for('user', name='john', _external=True)` : return http://localhost:5000/user/john
     * `url_for('index', page=2)` : return /?page=2
-    * *_external=True* : return an absolute URL.
-    * **
-    
+        * *_external=True* : return an absolute URL.
+    * `url_for('static', filename='avatar/v_1.jpg')`
+        * return a jpg file : *static/avatar/v_1.jpg*
 
 
 
@@ -4115,6 +4115,20 @@ the application access to the custom fields in it.
     
     * `/unfollow/<username>` : Unfollow route and view function
     ```
+        @main.route('/unfollow/<username>')
+        @login_required
+        @permission_required(Permission.FOLLOW)
+        def unfollow(username):
+            user = User.query.filter_by(username=username).first()
+            if user is None:
+                flash('Invalid user.')
+                return redirect(url_for('.index'))
+            if not current_user.is_following(user):
+                flash('You are not following this user.')
+                return redirect(url_for('.user', username=username))
+            current_user.unfollow(user)
+            flash('You are now unfollowing %s.' % username)
+            return redirect(url_for('.user', username=username))
         
     ```
     
@@ -4139,23 +4153,473 @@ the application access to the custom fields in it.
     ```
     
     
+    * `/followed_by/<username>` : Followings route and view function
+    ```
+        @main.route('/followed_by/<username>')
+        def followed_by(username):
+            user = User.query.filter_by(username=username).first()
+            if user is None:
+                flash('Invalid user.')
+                return redirect(url_for('.index'))
+            page = request.args.get('page', 1, type=int)
+            pagination = user.followed.paginate(
+                    page, per_page=current_app.config['FLASK_POSTS_PER_PAGE'],
+                    error_out=False)
+            follows = [{'user': item.followed, 'timestamp': item.timestamp} 
+                                for item in pagination.items]
+            return render_template('followers.html', user=user,
+                                                title='Followeds of', endpoint='.followed_by',
+                                                pagination=pagination, follows=follows)
     
+    ```
     
-    
-    * `/followings/<username>` : Followings route and view function
-    
-    
-    
+* templates
+    * *app/templates/followers.html* : 
+    ```
+        {% extends "base.html" %}
+        {% import "_macros.html" as macros %}
+
+        {% block title %}Flasky - {{ title }} {{ user.username }}{% endblock %}
+
+        {% block page_content %}
+        <div class="page-header">
+            <h1>{{ title }} {{ user.username }}</h1>
+        </div>
+        <table class="table table-hover followers">
+            <thead><tr><th>User</th><th>Since</th></tr></thead>
+            {% for follow in follows %}
+            <tr>
+                <td>
+                    <a href="{{ url_for('.user', username = follow.user.username) }}">
+                        <img class="img-rounded" src="{{ follow.user.gravatar(size=32) }}">
+                        {{ follow.user.username }}
+                    </a>
+                </td>
+                <td>{{ moment(follow.timestamp).format('L') }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <div class="pagination">
+            {{ macros.pagination_widget(pagination, endpoint, username = user.username) }}
+        </div>
+        {% endblock %}
+        
+    ```
     
     
 
 ### Query Followed Posts Using a Database Join  
+
+* The application¡¯s home page currently shows all the posts in the database in descending chronological order. 
+* With the followers feature now complete, it would be a nice addition to give users the option to view blog posts from only the users they follow.
+
+* The key to obtaining the blog posts with good performance is doing it with a single query.
+
+* The database operation that can do this is called a *join* . 
+    * A *join* operation takes two or more tables and finds all the combination of rows that satisfy a given condition.
+    
+* The table that contains exactly the list of blog posts authored by users that susan is following. The Flask-SQLAlchemy query that literally performs the join operation as described is fairly complex: 
+    ```
+        return db.session.query(Post).select_from(Follow).\
+            filter_by(follower_id=self.id).\
+            join(Post, Follow.followed_id == Post.author_id)    
+    ```
+    * To fully understand this query, each part should be looked at individually£º
+        * *db.session.query(Post)* : specifies that this is going to be a query that returns *Post* objects.
+        * *select_from(Follow)* : says that the query begins with the *Follow* model.
+        * *filter_by(follower_id=self.id)* : performs the filtering of the *follows* table by the follower user.
+        * *join(Post,Follow.followed_id==Post.author_id)* : joins the results of *filter_by()* with the *Post* objects.
+        
+    * The query can be simplified by swapping the order of the filter and the join:
+        ```
+            return Post.query.join(Follow, Follow.followed_id == Post.author_id)\
+                .filter(Follow.follower_id == self.id)            
+        
+        ```
+        * By issuing the join operation first, the query can be started from *Post.query* , so now the only two filters that need to be applied are *join()* and *filter()* . 
+    * But is this the same?
+        * The native SQL instructions for these two queries are identical.
+        
+    * The final version of this query is added to the *Post* model
+        * *app/models.py* : Obtain followed posts
+        ```
+            class User(db.Model):
+                # ...
+                @property
+                def followed_posts(self):
+                    return Post.query.join(Follow, Follow.followed_id == Post.author_id)\
+                        .filter(Follow.follower_id == self.id)            
+        
+        ```
+        * Note that the *followed_posts()* method is defined as a property so that it does not need the *()* . That way, all relationships have a consistent syntax.
+        
+        
 ### Show Followed Posts on the Home Page 
 
+* The home page can now give users the choice to view all blog posts or just those from followed users.
+    * *app/main/views.py* : Show all or followed posts
+    ```
+        @app.route('/', methods = ['GET', 'POST'])
+        def index():
+            # ...
+            show_followed = False
+             if current_user.is_authenticated():
+                show_followed = bool(request.cookies.get('show_followed', ''))
+            if show_followed:
+                query = current_user.followed_posts
+            else:
+                query = Post.query
+                
+            pagination = query.order_by(Post.timestamp.desc()).paginate(
+                page, per_page=current_app.config['FLASKY_POSTS_PER_PAGE'],
+                error_out=False)
+            posts = pagination.items
+            return render_template('index.html', form=form, posts=posts,
+                                   show_followed=show_followed, pagination=pagination)    
+    ```
+    
+    * The choice of showing all or followed posts is stored in a cookie called *show_followed* that when set to a nonempty string indicates that only followed posts should be shown.
+    * Cookies are stored in the request object as a *request.cookies* dictionary.
+        * The string value of the cookie is converted to a Boolean
+        * and based on its value a query local variable is set to the query that obtains the complete or filtered lists of blog posts. 
+    * To show all the posts, the top-level query  *Post.query* is used, and the recently added *User.followed_posts* property is used when the list should be restricted to followers.
+    * The query stored in the *query* local variable is then paginated and the results sent to the template as before.
 
+* The show_followed cookie is set in two new routes, selection of all or followed posts
+    * *app/main/views.py* : Selection of all or followed posts
+    ```
+        @main.route('/all')
+        @login_required
+        def show_all():
+            resp = make_response(redirect(url_for('.index')))
+            resp.set_cookie('show_followed', '', max_age=30*24*60*60)
+            return resp
+            
+        @main.route('/followed')
+        @login_required
+        def show_followed():
+            resp = make_response(redirect(url_for('.index')))
+            resp.set_cookie('show_followed', '1', max_age=30*24*60*60)
+            return resp    
+    ```
+    * Links to these routes are added to the home page template. When they are invoked, the show_followed cookie is set to the proper value and a redirect back to the home page is issued.
+    * Cookies can be set only on a response object, so these routes need to create a response object through *make_response()* instead of letting Flask do this.
+    * The *set_cookie()* function takes the cookie name and the value as the first two arguments. The *max_age* optional argument sets the number of seconds until the cookie expires.
+        * In this case, an age of 30 days is set so that the setting is remembered even if the user does not return to the application for several days.
+        
+* The changes to the template add two navigation tabs at the top of the page that invoke the */all* or */followed* routes to set the correct settings in the session. 
+    * *app/templates/index.html* :
+    ```
+        <div class="post-tabs">
+            <ul class="nav nav-tabs">
+                <li{% if not show_followed %} class="active"{% endif %}>
+                    <a href="{{ url_for('.show_all') }}">All</a>
+                </li>
+                {% if current_user.is_authenticated %}
+                <li{% if show_followed %} class="active"{% endif %}>
+                    <a href="{{ url_for('.show_followed') }}">Followers</a>
+                </li>
+                {% endif %}
+            </ul>
+            {% include '_posts.html' %}
+        </div>
+        
+    ```
 
+* most users will expect to see their own posts when they are looking at those of their friends.
+    * The easiest way to address this issue is to register all users as their own followers at the time they are created. 
+    * *app/models.py* : Make users their own followers on construction
+    ```
+        class User(UserMixin, db.Model):
+            # ...
+            def __init__(self, **kwargs):
+                # ...
+                self.follow(self)        
+    ```
+        * Unfortunately, you likely have several users in the database who are already created and are not following themselves. 
+        * If the database is small and easy to regenerate, then it can be deleted and re-created
+    * But if that is not an option, then adding an update function that fixes existing users is the proper solution.
+        * *app/models.py* : Make users their own followers
+        ```
+            class User(UserMixin, db.Model):
+                # ...
+                @staticmethod
+                def add_self_follows():
+                    for user in User.query.all():
+                        if not user.is_following(user):
+                            user.follow(user)
+                            db.session.add(user)
+                            db.session.commit()
+                # ...        
+        ```
+    * Now the database can be updated by running the previous example function from the shell:
+        ```
+            (venv) $ python manage.py shell
+            >>> User.add_self_follows()        
+        ```
+* `Creating functions that introduce updates to the databases` is a common technique used to update applications that are deployed, as running a scripted update is less error prone that updating databases manually.
 
+* Making all users self-followers makes the application more usable, but this change introduces a few complications.
+    * The numbers need to be decreased by one to be accurate, which is easy to do directly in the template
+        * `{{ user.followers.count() - 1}}`
+        * `{{ user.followed.count() - 1}}`
+        
+    
 ## Chapter 13. User Comments
+
+* Allowing users to interact is key to the success of a social blogging platform. 
+
+### Database Representation of Comments
+
+* Comments are not very different from blog posts. 
+    * Both have a body, an author, and a timestamp, and in this particular implementation both are written with Markdown syntax.
+* a diagram of the comments table and its relationships with other tables in the database.
+    * ![Figure 13-1. Database representation of blog post comments](images/Figure 13-1. Database representation of blog post comments.jpg)
+    
+* Comments apply specific blog posts, so a one-to-many relationship from the posts  table is defined. 
+    * This relationship can be used to obtain the list of comments associated with a particular blog post.
+* The comments table is also in a one-to-many relationship with the users  table. 
+    * This relationship gives access to all the comments made by a user, 
+    * and indirectly how many comments a user has written, 
+    * a piece of information that can be interesting to show in user profile pages. 
+    
+    * *app/models.py* : Comment model 
+    ```
+        class Comment(db.Model):
+            __tablename__ = 'comments'
+            id = db.Column(db.Integer, primary_key=True)
+            body = db.Column(db.Text)
+            body_html = db.Column(db.Text)
+            timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+            disabled = db.Column(db.Boolean)
+            author_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+            post_id = db.Column(db.Integer, db.ForeignKey('posts.id'))
+            @staticmethod
+            def on_changed_body(target, value, oldvalue, initiator):
+                allowed_tags = ['a', 'abbr', 'acronym', 'b', 'code', 'em', 'i',
+                                'strong']
+                target.body_html = bleach.linkify(bleach.clean(
+                    markdown(value, output_format='html'),
+                    tags=allowed_tags, strip=True))
+        db.event.listen(Comment.body, 'set', Comment.on_changed_body)        
+    ```
+    
+    * The attributes of the Comment model are almost the same as those of Post. 
+    * One addition is the disabled field
+        * a Boolean that will be used by moderators to suppress comments that are inappropriate or offensive. 
+    * As was done for blog posts, comments define an event that triggers any time the body field changes, automating the rendering of the Markdown text to HTML. 
+        * since comments tend to be short, the list of HTML tags that are allowed in the conversion from Markdown is more restrictive, 
+        * the paragraph-related tags have been removed, and only the character formatting tags are left.
+        
+* To complete the database changes, the *User* and *Post* models must define the one-to-many relationships with the *comments* table.
+    * *app/models/user.py* : One-to-many relationships from users and posts to comments
+    ```
+        class User(db.Model):
+            # ...
+            comments = db.relationship('Comment', backref='author', lazy='dynamic')
+        class Post(db.Model):
+            # ...
+            comments = db.relationship('Comment', backref='post', lazy='dynamic')        
+        
+    ```
+
+### Comment Submission and Display
+* In this application, comments are displayed in the individual blog post pages that were added as permanent links
+
+* A submission form is also included on this page.
+    * an extremely simple form that only has a text field and a submit button.
+    * *app/main/forms.py* : Comment input form
+    ```
+        class CommentForm(Form):
+            body = StringField('', validators=[Required()])
+            submit = SubmitField('Submit')        
+    ```
+* The updated `/post/<int:id>` route with support for comments.
+    * *app/main/views.py* : blog post comments support
+    ```
+        @main.route('/post/<int:id>', methods=['GET', 'POST'])
+        def post(id):
+            post = Post.query.get_or_404(id)
+            form = CommentForm()
+            if form.validate_on_submit():
+                comment = Comment(body=form.body.data,
+                                  post=post,
+                                  author=current_user._get_current_object())
+                db.session.add(comment)
+                flash('Your comment has been published.')
+                return redirect(url_for('.post', id=post.id, page=-1))
+            page = request.args.get('page', 1, type=int)
+            if page == -1:
+                page = (post.comments.count() - 1) / \
+                       current_app.config['FLASKY_COMMENTS_PER_PAGE'] + 1
+            pagination = post.comments.order_by(Comment.timestamp.asc()).paginate(
+                page, per_page=current_app.config['FLASKY_COMMENTS_PER_PAGE'],
+                error_out=False)
+            comments = pagination.items
+            return render_template('post.html', posts=[post], form=form,
+                                   comments=comments, pagination=pagination)    
+    ```
+
+    * This view function instantiates the comment form and sends it to the post.html template for rendering.
+    * The logic that inserts a new comment when the form is submitted is similar to the handling of blog posts. 
+    * As in the *Post* case, the *author* of the *comment* cannot be set directly to *current_user* because this is a context variable proxy object. The expression *current_user._get_current_object()*  returns the actual *User* object.
+    
+    * The comments are sorted by their timestamp in chronological order, so new comments are always added at the bottom of the list. 
+    * When a new comment is entered, the redirect that ends the request goes back to the same URL, but the *url_for()* function sets the page to *-1*, a special page number that is used to request the last page of comments so that the comment just entered is seen on the page. 
+        * When the page number is obtained from the query string and found to be -1, a calculation with the number of comments and the page size is done to obtain the actual page number to use.
+        
+    * The list of comments associated with the post are obtained through the *post.comments*  one-to-many relationship
+        * sorted by comment timestamp
+        * and paginated with the same techniques used for blog posts
+
+* The comments and the pagination object are sent to the template for rendering. 
+    * The comment rendering is defined in a new template *_comments.html* that is similar to *_posts.html* but uses a different set of CSS classes. 
+    *  This template is included by *_post.html* below the body of the post, followed by a call to the pagination macro. 
+    
+    * *app/templates/_*
+    
+* To complete this feature, blog posts shown in the home and profile pages need a link to the page with the comments.
+    * *app/templates/_posts.html* : Link to blog post comments
+    ```
+        <a href="{{ url_for('.post', id=post.id) }}#comments">
+            <span class="label label-primary">
+                {{ post.comments.count() }} Comments
+            </span>
+        </a>    
+    ```
+    
+    * Note how the text of the link includes the number of comments
+        * which is easily obtained from the one-to-many relationship between the  *posts* and  *comments* tables using SQLAlchemy¡¯s *count()* filter.
+        
+    * Also of interest is the structure of the link to the comments page, which is built as the permanent link for the post with a `#comments` suffix added. 
+        * This last part is called a URL *fragment* and is used to indicate an initial scroll position for the page. 
+        * This initial position is set to the comments heading in the  *post.html* template, which is written as  `<h4 id="comments">Comments<h4>`.
+        
+    * An additional change was made to the pagination macro. 
+        * The pagination links for comments also need the `#comments` fragment added, so a fragment argument was added to the macro and passed in the macro invocation from the *post.html* template.
+        
+    
+    
+### Comment Moderation
+
+* In Chapter 9 a list of user roles was defined, each with a list of permissions. 
+    * One of the permissions was *Permission.MODERATE_COMMENTS* , which gives users who have it in their roles the power to moderate comments made by others.
+    
+* This feature will be exposed as a link in the navigation bar that appears only to users who are permitted to use it. 
+    * This is done in the *base.html* template using a conditional
+    * *app/templates/base.html* : Moderate comments link in navigation bar
+    ```
+        ...
+        {% if current_user.can(Permission.MODERATE_COMMENTS) %}
+        <li><a href="{{ url_for('main.moderate') }}">Moderate Comments</a></li>
+        {% endif %}
+        ...    
+    ```
+    
+* The moderation page shows the comments for all the posts in the same list, with the most recent comments shown first. Below each comment is a button that can toggle the *disabled* attribute. 
+    * *app/main/views.py* : Comment moderation route
+    ```
+        @main.route('/moderate')
+        @login_required
+        @permission_required(Permission.MODERATE_COMMENTS)
+        def moderate():
+            page = request.args.get('page', 1, type=int)
+            pagination = Comment.query.order_by(Comment.timestamp.desc()).paginate(
+                page, per_page=current_app.config['FLASKY_COMMENTS_PER_PAGE'],
+                error_out=False)
+            comments = pagination.items
+            return render_template('moderate.html', comments=comments,
+                                   pagination=pagination, page=page)        
+    ```
+    
+    * This is a very simple function that reads a page of comments from the database and passes them on to a template for rendering. Along with the comments, the template receives the pagination object and the current page number.
+    
+* The *moderate.html* template
+    * *app/templates/moderate.html* : Comment moderation template
+    ```
+        {% extends "base.html" %}
+        {% import "_macros.html" as macros %}
+        
+        {% block title %}Flasky - Comment Moderation{% endblock %}
+        
+        {% block page_content %}
+        <div class="page-header">
+            <h1>Comment Moderation</h1>
+        </div>
+        {% set moderate = True %}
+        {% include '_comments.html' %}
+        {% if pagination %}
+        <div class="pagination">
+            {{ macros.pagination_widget(pagination, '.moderate') }}
+        </div>
+        {% endif %}
+        {% endblock %}    
+    ```
+    * This template defers the rendering of the comments to the *_comments.html* template.
+    * The template uses Jinja2¡¯s *set* directive to define a *moderate* template variable set to *True* . 
+        * This variable is used by the *_comments.html* template to determine whether the moderation features need to be rendered.
+        
+* *app/templates/_comments.html* : Rendering of the comment bodies
+    ```
+        ...
+        <div class="comment-body">
+            {% if comment.disabled %}
+            <p></p><i>This comment has been disabled by a moderator.</i></p>
+            {% endif %}
+            {% if moderate or not comment.disabled %}
+                {% if comment.body_html %}
+                    {{ comment.body_html | safe }}
+                {% else %}
+                    {{ comment.body }}
+                {% endif %}
+            {% endif %}
+        </div>
+        {% if moderate %}
+            <br>
+            {% if comment.disabled %}
+            <a class="btn btn-default btn-xs" href="{{ url_for('.moderate_enable',
+                id=comment.id, page=page) }}">Enable</a>
+            {% else %}
+            <a class="btn btn-danger btn-xs" href="{{ url_for('.moderate_disable',
+                id=comment.id, page=page) }}">Disable</a>
+            {% endif %}
+        {% endif %}
+        ...    
+    ```
+    * With these changes, users will see a short notice for disabled comments. 
+    * Moderators will see both the notice and the comment body. 
+    * Moderators will also see a button to toggle the disabled state below each comment.
+    
+* *app/main/views.py* : Comment moderation routes
+    ```
+        @main.route('/moderate/enable/<int:id>')
+        @login_required
+        @permission_required(Permission.MODERATE_COMMENTS)
+        def moderate_enable(id):
+            comment = Comment.query.get_or_404(id)
+            comment.disabled = False
+            db.session.add(comment)
+            return redirect(url_for('.moderate',
+                                    page=request.args.get('page', 1, type=int)))
+
+        @main.route('/moderate/disable/<int:id>')
+        @login_required
+        @permission_required(Permission.MODERATE_COMMENTS)
+        def moderate_disable(id):
+            comment = Comment.query.get_or_404(id)
+            comment.disabled = True
+            db.session.add(comment)
+            return redirect(url_for('.moderate',
+                                    page=request.args.get('page', 1, type=int)))                            
+    ```
+    
+    * The comment enable and disable routes load the comment object, set the *disabled* field to the proper value, and write it back to the database.
+    * At the end, they redirect back to the comment moderation page, and if a *page* argument was given in the query string, they include it in the redirect. 
+    * The buttons in the *_comments.html* template were rendered with the *page* argument so that the redirect brings the user back to the same page.
+    
+    
+    
+
 ## Chapter 14. Application Programming Interfaces
 
 # Part III. The Last Mile

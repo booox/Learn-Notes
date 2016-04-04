@@ -61,8 +61,6 @@ class Follow(db.Model):
                                         primary_key=True)
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
     
-    
-        
 class User(UserMixin, db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
@@ -76,6 +74,7 @@ class User(UserMixin, db.Model):
     password_hash = db.Column(db.String(128))
     confirmed = db.Column(db.Boolean(128), default=False)
     avatar_hash = db.Column(db.String(32))
+    
     posts = db.relationship('Post', backref='author', lazy='dynamic')
     
     # for follow relationship
@@ -89,6 +88,8 @@ class User(UserMixin, db.Model):
                                         backref=db.backref('followed', lazy='joined'),
                                         lazy='dynamic',
                                         cascade='all, delete-orphan')
+                                        
+    comments = db.relationship('Comment', backref='author', lazy='dynamic')
                                         
                                         
     
@@ -104,6 +105,19 @@ class User(UserMixin, db.Model):
         if self.email is not None and self.avatar_hash is None:
             self.avatar_hash = hashlib.md5(
                     self.email.encode('utf-8')).hexdigest()
+                    
+        # for followed posts
+        # self.followed.append(Follow(followed=self))
+        self.follow(self)
+        
+    # make users self follow
+    @staticmethod
+    def add_self_follows():
+        for user in User.query.all():
+            if not user.is_following(user):
+                user.follow(user)
+                db.session.add(user)
+                db.session.commit()
                 
     # Followers helper methods
     def follow(self, user):
@@ -176,7 +190,10 @@ class User(UserMixin, db.Model):
         hash = hashlib.md5(self.email.encode('utf-8')).hexdigest()
         return '{url}/{hash}?s={size}&d={default}&r={rating}'.format(
             url=url, hash=hash, size=size, default=default, rating=rating)
-            
+    # for test avatar
+    # def my_avatar(self, size=100, default='1'):
+        # return 
+    
     # generate fake db for pagination test
     @staticmethod
     def generate_fake_users(count=100):
@@ -198,6 +215,11 @@ class User(UserMixin, db.Model):
                 db.session.commit()
             except:
                 db.session.rollback()
+                
+    @property
+    def followed_posts(self):
+        return Post.query.join(Follow, Follow.followed_id == Post.author_id)\
+                    .filter(Follow.follower_id == self.id)
             
     
     def __repr__(self):
@@ -208,9 +230,10 @@ class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     body = db.Column(db.Text)
     body_html = db.Column(db.Text)
-    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)    
     author_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     
+    comments = db.relationship('Comment', backref='post', lazy='dynamic')
     
     # generate fake db for pagination test
     @staticmethod
@@ -238,7 +261,28 @@ class Post(db.Model):
                 markdown(value, output_format='html'),
                 tags=allowed_tags, strip=True))      
         
+class Comment(db.Model):
+    __tablename__ = 'comments'
+    id = db.Column(db.Integer, primary_key=True)
+    body = db.Column(db.Text)
+    body_html = db.Column(db.Text)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    disabled = db.Column(db.Boolean)
+    author_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    post_id = db.Column(db.Integer, db.ForeignKey('posts.id'))
+    
+    # Markdown text handling for Comment
+    @staticmethod
+    def on_changed_body(target, value, oldvalue, initator):
+        allowed_tags = ['a', 'abbr', 'acronym', 'b', 'code', 'em',
+                                'i', 'strong']
+        target.body_html = bleach.linkify(bleach.clean(
+                    markdown(value, output_format='html'),
+                    tags=allowed_tags, strip=True))
+                    
+
 db.event.listen(Post.body, 'set', Post.on_changed_body)
+db.event.listen(Comment.body, 'set', Comment.on_changed_body)
     
 # enable tha app to freely can current_user.can()
 # and current_user.is_administrator() 

@@ -197,6 +197,9 @@
         * 配置这个之后，导致没有办法直接从cmd进入python shell，也没有办法打开ipython，
         * 带来很多不方便，最后决定还是去掉了。
         
+* pip update
+    * Windows : `python -m pip install --upgrade pip`
+    * Linux : `pip install update pip`
     
 ## Lists
 
