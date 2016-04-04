@@ -62,7 +62,11 @@
     * flask default set *threading=False* 
     * so set : `(venv) $ python manage.py runserver -p 5001 --threaded` to enable threading.
     
-    
+* Try use Gunicore to delopyment the Flask
+    * In Windows get a error: `ImportError: No module named fcntl`
+        * `fcntl` just for Unix/Linux
+            * [fcntl substitute on Windows](http://stackoverflow.com/a/25471508)
+            * this problem just soloved, but Flask not succeed in windows
     
     
     

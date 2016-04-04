@@ -6,6 +6,12 @@
 - [ ] send *send_async_email()* to a *Celery* task queue.
 - [ ] 
 
+- [] [python web 部署：nginx + gunicorn + supervisor + flask 部署笔记](https://www.textarea.com/rsj217/python-web-bushu-nginx-gunicorn-supervisor-flask-bushu-biji-107/)
+
+AAAA
+- [] [Running Flask app with gunicorn using a Flask-Script command (on Heroku)](http://devblog.michalski.im/2013/01/06/running-flask-app-with-gunicorn-using-a-flask-script-command-on-heroku/)
+- [] [Standalone WSGI Containers](http://flask.pocoo.org/docs/0.10/deploying/wsgi-standalone/#gunicorn)
+
 
 
 * JiFang Test System
