@@ -56,7 +56,7 @@
     * Ubuntu
         `$ sudo apt-get install python-virtualenv`
     * CentOS
-        `$ yum install virtualenv` (?)
+        `$ pip install virtualenv`
     * Mac OS X
         `$ sudo easy_install virtualenv`
     * Windows
@@ -4621,6 +4621,75 @@ the application access to the custom fields in it.
     
 
 ## Chapter 14. Application Programming Interfaces
+
+* In recent years, there has been a trend in web applications to move more and more of the business logic to the client side, producing an architecture that is known as *Rich-Internet-Application* ( *RIA* ).
+* In RIAs, the server¡¯s main (and sometimes only) function is to provide the client application with data retrieval and storage services. In this model, the server becomes a web service or *Application-Programming-Interface* ( *API* ).
+
+* There are several protocols by which RIAs can communicate with a web service.
+    * were popular choices a few years ago
+        * Remote Procedure Call (RPC) protocols
+        * Simplified Object Access Protocol (SOAP)
+    * More recently
+        * the Representational State Transfer (REST) architecture 
+
+
+* Flask is an ideal framework to build RESTful web services due to its lightweight nature.
+* In this chapter, you will learn how to implement a Flask-based RESTful API.
+
+### Introduction to REST
+
+* The six defining characteristics of the REST architectural style
+    * *Client-Server* : There must be a clear separation between the clients and the server
+    * *Stateless* : A client request must contain all the information that is necessary to carry it out.
+    * *Cache* : A client request must contain all the information that is necessary to carry it out.
+    * *Uniform-Interface* : The protocol by which clients access server resources must be consistent, well defined, and standardized. 
+    * *Layered-System* : Proxy servers, caches, or gateways can be inserted between clients and servers as necessary to improve performance, reliability, and scalability.
+    * *Code-on-Demand* : Clients can optionally download code from the server to execute in their context.  
+
+#### Resources Are Everything
+
+* The concept of *resources* is core to the REST architectural style.
+* Each resource must have a unique URL that represents it. 
+    * a blog post could be represented by the URL */api/posts/12345* ,
+* A collection of all the resources in a class also has an assigned URL. 
+    * all the posts could be */api/posts/*
+    * all the comments could be */api/comments/*
+* An API can also define collection URLs that represent logical subsets of all the resources in a class. 
+    * all comments in blog post *1234* could be */api/posts/1234/comments/*
+* It is a common practice to define URLs that represent collections of resources with a *trailing-slash* , 
+    * as this gives them a *folder* representation
+
+#### Request Methods
+
+* HTTP request methods in RESTful APIs
+    * ![Table 14-1. HTTP request methods in RESTful APIs](images/Table 14-1. HTTP request methods in RESTful APIs.jpg)
+    
+#### Request and Response Bodies
+
+* Resources are sent back and forth between client and server in the bodies of requests and responses, but REST does not specify the format to use to encode resources. 
+
+* The standard content negotiation mechanisms in the HTTP protocol can be used between client and server to agree on a format that both support.
+
+* The two formats commonly used with RESTful web services are JavaScript Object Notation ( *JSON* ) and Extensible Markup Language ( *XML* ). 
+* For web-based RIAs, *JSON* is attractive because of its close ties to JavaScript, the client-side scripting language used by web browsers. 
+    * a blog resource could be represented in JSON as follows:
+    ```
+        {
+            "url": "http://www.example.com/api/posts/12345",
+            "title": "Writing RESTful APIs in Python",
+            "author": "http://www.example.com/api/users/2",
+            "body": "... text of the article here ...",
+            "comments": "http://www.example.com/api/posts/12345/comments"
+        }    
+    ```
+* In a well-designed RESTful API, the client just knows a short list of top-level resource URLs and then discovers the rest from links included in responses
+
+#### Versioning 
+
+
+### RESTful Web Services with Flask 
+
+
 
 # Part III. The Last Mile
 
