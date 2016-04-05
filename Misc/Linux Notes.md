@@ -211,3 +211,4 @@
         `$ sudo yum -y install python-pip`
         
         
+* `curl` text surf?

@@ -25,7 +25,7 @@
 * Make sure your existing yum packages are up-to-date.
     `$ sudo yum update`
     
-* If not work and then dd the yum repo
+* If not work and then add the yum repo
     * `# vi /etc/yum.repo.d/docker.repo`
     ```
         [dockerrepo]
@@ -219,4 +219,7 @@
 -[]  [Get Started with Docker Engine for Linux](https://docs.docker.com/linux/)
 -[]  [Get Started with Docker for Windows](https://docs.docker.com/windows/)
 -[]  [Get Started with Docker for Mac OS X](https://docs.docker.com/mac/)
+-[]  [Sean's Notes Docker blog](http://seanlook.com/tags/docker/)
+-[]  [Docker常用命令](http://blog.csdn.net/we_shell/article/details/38368137)
+-
 
