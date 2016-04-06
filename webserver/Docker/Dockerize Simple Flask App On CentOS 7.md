@@ -110,8 +110,16 @@
 ## 错误及解决
 
 * `docker: Error response from daemon: Container command not found or does not exist..`
-    * 
- 
+    * 运行：`docker run -d -p 5000:5000 flaska`
+    * 试着运行：`docker run -i -t flaska`
+        * 提示：`exec: "PATHON" : executable file not found in $PATH`
+        * 由此可以看出在$PATH中没有 *python* ，这很奇怪，同样安装的两台centos vm，一样的操作，两种结果
+        * 解决：修改 *Dockerfile* 文件最后两句为：
+            ```
+                # ENTRYPOINT ["python"]
+                CMD ["python", "app.py"]    
+            ```
+        
  
  
  

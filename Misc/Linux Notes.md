@@ -18,7 +18,8 @@
         set nu
         set tabstop=4
     ```
-    
+* enable vim display color
+    * 
 * config file
     * ` $ vi ~/.vimrc`
     
@@ -212,3 +213,9 @@
         
         
 * `curl` text surf?
+    * `$ curl -I 127.0.0.1:5000` , return url header
+    
+    
+# Links
+
+-[] [Centos7系统配置上的变化（一）](http://www.cnblogs.com/panblack/p/Centos7-WhatsNew-01.html)

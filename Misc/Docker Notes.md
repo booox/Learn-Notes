@@ -66,7 +66,7 @@
 
 * To ensure Docker starts when you boot your system, do the following:
     * `sudo chkconfig docker on`
-    * Maybe you need run this command: `$ sudo systemctl list-unit-files`
+    * CentOS 7 you need run this command: `$ sudo systemctl list-unit-files`
     
 ## Uninstall with yum
 
@@ -211,6 +211,13 @@
     * Pull and load a new image from your repository
         `$ docker run your_username/docker-whale`
         
+        
+# Docker Commands
+
+* About Image
+    * `ADD` : copy local file to image
+    * `EXPOSE` : open port to outside
+    * `CMD` : Run some programs after container started.
 
 # Links
 -[]  [What is Docker?](https://www.docker.com/what-docker)
@@ -221,5 +228,15 @@
 -[]  [Get Started with Docker for Mac OS X](https://docs.docker.com/mac/)
 -[]  [Sean's Notes Docker blog](http://seanlook.com/tags/docker/)
 -[]  [Docker常用命令](http://blog.csdn.net/we_shell/article/details/38368137)
--
 
+-[]  [Docker —— 从入门到实践](https://www.gitbook.com/book/yeasy/docker_practice)
+-[] []()
+
+# Question & Answer
+
+* `$ sudo docker pull ubuntu:12.04`
+    * = `$ sudo docker pull registry.hub.docker.com/ubuntu:12.04`
+        * Download the *12.04* tagged image from the *ubuntu* repository on the registry server *registry.hub.docker.com* 
+    
+* `$ sudo docker pull dl.dockerpool.com:5000/ubuntu:12.04`
+    * from the special server download the image.
