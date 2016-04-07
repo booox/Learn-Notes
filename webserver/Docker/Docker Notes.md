@@ -787,7 +787,33 @@
 > and use `docker volume rm <volume name>` to remove a volume that’s no longer needed.
 
 ### Backup, restore, or migrate data volumes
+
+* Another useful function we can perform with volumes is use them for backups, restores or migrations. 
+* We do this by using the *--volumes-from* flag to create a new container that mounts that volume
+    `$ docker run --rm --volumes-from dbstore -v $(pwd):/backup ubuntu tar cvf /backup/backup.tar /dbdata`
+    
+    * Here we’ve launched a new container and mounted the volume from the *dbstore* container.
+    * We’ve then mounted a local host directory as */backup* . 
+    * Finally, we’ve passed a command that uses *tar* to backup the contents of the *dbdata* volume to a *backup.tar* file inside our */backup* directory. 
+    * When the command completes and the container stops we’ll be left with a backup of our *dbdata* volume.
+    
+* You could then restore it to the same container, or another that you've made elsewhere.
+    * Create a new container
+        `$ docker run -v /dbdata --name dbstore2 ubuntu /bin/bash`
+    * Then un-tar the backup file in the new container’s data volume.
+        `$ docker run --rm --volumes-from dbstore2 -v $(pwd):/backup ubuntu bash -c "cd /dbdata && tar xvf /backup/backup.tar --strip 1"`
+        
+* You can use the techniques above to automate backup, migration and restore testing using your preferred tools.
+
 ### Important tips on using shared volumes
+
+* Multiple containers can also share one or more data volumes. 
+* However, multiple containers writing to a single shared volume can cause data corruption. 
+    * Make sure your applications are designed to write to shared data stores.
+    
+* Data volumes are directly accessible from the Docker host. 
+    * This means you can read and write to them with normal Linux tools. 
+    * In most cases you should not do this as it can cause data corruption if your containers and applications are unaware of your direct access.
     
     
     
@@ -795,6 +821,88 @@
 ## Legacy container links
 
     
+## Using Supervisor with Docker
+
+* Traditionally a Docker container runs a single process when it is launched, for example an Apache daemon or a SSH server daemon. 
+* Often though you want to run more than one process in a container. 
+
+* Using [Supervisor](http://supervisord.org/) allows us to better control, manage, and restart the processes we want to run. 
+
+* To demonstrate this we’re going to install and manage both an *SSH* daemon and an *Apache* daemon.
+
+### Creating a Dockerfile
+
+* Let’s start by creating a basic *Dockerfile* for our new image.
+    ```
+        FROM ubuntu:13.04
+        MAINTAINER examples@docker.com    
+    ```
+    
+### Installing Supervisor
+
+* Install our *SSH* and *Apache* daemons as well as *Supervisor* in our container.
+    ```
+        RUN apt-get update && apt-get install -y openssh-server apache2 supervisor
+        RUN mkdir -p /var/lock/apache2 /var/run/apache2 /var/run/sshd /var/log/supervisor
+    
+    ```
+
+### Adding Supervisor’s configuration file
+
+* Now let’s add a configuration file for *Supervisor* . The default file is called *supervisord.conf* and is located in */etc/supervisor/conf.d/* .
+    `COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf`
+    
+* *supervisord.conf* 
+    ```
+        [supervisord]
+        nodaemon=true
+
+        [program:sshd]
+        command=/usr/sbin/sshd -D
+
+        [program:apache2]
+        command=/bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND"    
+    ```
+    * The *supervisord.conf* configuration file contains directives that configure Supervisor and the processes it manages. 
+    * `[supervisord]` : provides configuration for Supervisor itself
+        * *nodaemon* : tells Supervisor to run interactively rather than daemonize.
+    * The next two blocks manage the services we wish to control.
+        *  Each block controls a separate process.
+        * The blocks contain a single directive, 
+            * *command* : which specifies what command to run to start each process.
+            
+### Exposing ports and running Supervisor
+
+* Now let’s finish our *Dockerfile* by 
+    * exposing some required ports 
+    * and specifying the *CMD* instruction to start Supervisor when our container launches.
+    ```
+        EXPOSE 22 80
+        CMD ["/usr/bin/supervisord"]
+    
+    ```
+
+### Building our image
+
+* We can now build our new image.
+    `$ docker build -t <yourname>/supervisord .`
+    
+    
+### Running our Supervisor container
+
+* Once We’ve got a built image we can launch a container from it.
+    ```
+        $ docker run -p 22 -p 80 -t -i <yourname>/supervisord
+        2013-11-25 18:53:22,312 CRIT Supervisor running as root (no user in config file)
+        2013-11-25 18:53:22,312 WARN Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+        2013-11-25 18:53:22,342 INFO supervisord started with pid 1
+        2013-11-25 18:53:23,346 INFO spawned: 'sshd' with pid 6
+        2013-11-25 18:53:23,349 INFO spawned: 'apache2' with pid 7
+        . . .
+    
+    ```
+    * We’ve specified the *-p* flag to expose ports 22 and 80. 
+        * From here we can now identify the exposed ports and connect to one or both of the SSH and Apache daemons.
 
     
 # Links
@@ -808,6 +916,18 @@
 -[]  [Docker常用命令](http://blog.csdn.net/we_shell/article/details/38368137)
 
 -[]  [Docker —— 从入门到实践](https://www.gitbook.com/book/yeasy/docker_practice)
+-[] [Container Tutorials](http://containertutorials.com/index.html)
+
+- [雪球的Docker实践](http://www.infoq.com/cn/articles/docker-in-xueqiu)
+- [Docker三年回顾：梦想依在，人生正当年](http://www.infoq.com/cn/articles/docker-turns-3)
+- [腾讯游戏是如何使用Docker的？](http://www.infoq.com/cn/articles/how-tencent-game-use-docker)
+
+-[] [virtualenv 环境下 Nginx + Flask + Gunicorn+ Supervisor 搭建 Python Web](http://www.cnblogs.com/oneapm/p/4648445.html)
+-[] [virtualenv 环境下 Nginx + Flask + Gunicorn+ Supervisor 搭建 Python Web](http://www.jianshu.com/p/be9dd421fb8d)
+-[] [Flask + Gunicorn + Nginx 部署](http://www.cnblogs.com/Ray-liang/p/4837850.html)
+-[] [使用Nginx、Gunicorn和Supervisor部署Flask应用](http://puras.me/2015/01/21/deploy-flask-using-nginx-gunicorn-supervisor/)
+-[] [VPS环境搭建详解 (Virtualenv+Gunicorn+Supervisor+Nginx)](http://beiyuu.com/vps-config-python-vitrualenv-flask-gunicorn-supervisor-nginx/?utm_source=tuicool&utm_medium=referral)
+-[] [(带测试) virtualenv 环境下 Django + Nginx + Gunicorn+ Supervisor 搭建 Python Web](http://www.unjeep.com/q/92981822.htm)
 -[] []()
 
 # Question & Answer
@@ -822,3 +942,4 @@
 * `unable to prepare context: unable to evaluate symlinks in Dockerfile path: lstat`
     * original: `$ docker build -t xxx .`
     * worked: `$ docker build -t xxx --fiel ./Dockerfile .`
+    * Maybe I run the *build* command in another path, not in the *Dockerfile* Folder.
