@@ -463,7 +463,7 @@
     root@78e82f680994:/#    
     ```
 
-#### Updating and committing an image
+#### Building an image from a Dockerfile
 
 * Using the `docker commit` command is a pretty simple way of extending an image
     * but it’s a bit cumbersome
@@ -488,9 +488,309 @@
         `$ docker build -t ouruser/sinatra:v2 .`
 
 
-### Pulling our image
-### Pulling our image
+### Setting tags on an image
+
+* You can also add a tag to an existing image after you commit or build it.
+    `$ docker tag 5db5f8471261 ouruser/sinatra:devel`
+    * The docker tag command takes the *ID* of the image, here 5db5f8471261, and our *user-name* , the *repository-name* and the *new-tag* .
+    
+* see your new tag using the `docker images` command.
+    `$docker images`
+
+### Image Digests
+
+* Images that use the v2 or later format have a content-addressable identifier called a *digest* .
+* As long as the input used to generate the image is unchanged, the digest value is predictable. 
+* To list image digest values, use the *--digests* flag:
+    `$ docker images --digests | head`
  
+### Push an image to Docker Hub
+
+* Once you’ve built or created a new image you can push it to Docker Hub using the `docker push` command. 
+    ```
+    $ docker push ouruser/sinatra
+    The push refers to a repository [ouruser/sinatra] (len: 1)
+    Sending image list
+    Pushing repository ouruser/sinatra (3 tags)
+    
+    ```
+    
+### Remove an image from the host
+
+* You can also remove images on your Docker host in a way similar to containers using the `docker rmi` command.
+    * Delete the *training/sinatra* image as you don’t need it anymore.
+    `$ docker rmi training/sinatra`
+
+* If the container was running/stoped, use `docker rm` to remove the container first.
+    `$ docker rm CONTAINER-ID`
+    
+## Network containers
+
+* This section teaches you how to network your containers.
+
+### Name a container
+
+* Each container you create has an *automatically* created *name* ;
+* You can also name containers yourself
+
+* This naming provides two useful functions:
+    * You can name containers that do specific functions in a way that makes it easier for you to remember them, 
+        * for example naming a container containing a web application *web* .
+    * Names provide Docker with a reference point that allows it to refer to other containers. 
+        * There are several commands that support this and you’ll use one in an exercise later.
+        
+* You name your container by using the *--name* flag, 
+    * for example launch a new container called *web* :
+        `$ docker run -d -P --name web training/webapp python app.py`
+    * Use the `docker ps` command to see check the name:
+        `$ docker ps -l`
+    * You can also use `docker inspect` with the container’s name.
+        `$ docker inspect web`
+        
+* Container names must be unique. That means you can only call one container *web* .
+* If you want to re-use a container name you must delete the old container
+    ```
+        $ docker stop web
+        web
+        $ docker rm web
+        web    
+    ```
+
+### Launch a container on the default network
+
+* Docker includes support for networking containers through the use of *network-drivers* .
+
+* By default, Docker provides two network drivers for you
+    * *bridge*
+    * *overlay*
+    
+* Every installation of the Docker Engine automatically includes three default networks. You can list them:
+    ```
+        $ docker network ls
+        NETWORK ID          NAME                DRIVER
+        18a2866682b8        none                null                
+        c288470c46f6        host                host                
+        7b369448dccb        bridge              bridge  
+    
+    ```
+    
+* The network named *bridge* is a special network.
+    * Unless you tell it otherwise, Docker always launches your containers in this network. Try this now:
+    `$ docker run -itd --name=networktest ubuntu`
+    
+* Inspecting the network is an easy way to find out the container’s IP address.
+    `$ docker network inspect bridge`
+    
+* You can remove a container from a network by disconnecting the container. 
+    * To do this, you supply both the network name and the container name. 
+    * You can also use the container id. But though, the name is faster.
+    `$ docker network disconnect bridge networktest`
+    
+
+### Create your own bridge network
+
+* Docker Engine natively supports both *bridge* networks and *overlay* networks. 
+* A *bridge* network is limited to a *single-host* running Docker Engine. 
+    * An *overlay* network can include *multiple-hosts* and is a more advanced topic. 
+
+* For this example, you’ll create a bridge network:
+    `$ docker network create -d bridge my-bridge-network`
+    * *-d* : tells Docker to use the *bridge* driver for the new network.
+        * You could have left this flag off as bridge is the default value for this flag. 
+    * list the networks on your machine:
+    `$ docker network ls`
+    
+    * If you inspect the network, you’ll find that it has nothing in it.
+        `$ docker network inspect my-bridge-network`
+        
+    
+
+### Add containers to a network
+
+* To build web applications that act in concert but do so securely, create a network. 
+* Networks, by definition, provide complete isolation for containers. 
+* You can add containers to a network WHEN YOU FIRST RUN A CONTAINER.
+    * Launch a container running a PostgreSQL database and pass it the *--net=my-bridge-network* flag to connect it to your new network:
+        `$ docker run -d --net=my-bridge-network --name db training/postgres`
+        
+    * If you inspect your *my-bridge-network* you’ll see it has a container attached.  
+    * You can also inspect your container to see where it is connected:
+        `$ docker inspect --format='{{json .NetworkSettings.Networks}}'  db`
+            `{"my-bridge-network": ...}`
+        
+* Now, go ahead and start your by now familiar *web* application. This time leave off the *-P* flag and also don’t specify a network.
+    `$ docker run -d --name web training/webapp python app.py`
+    * Which network is your web application running under? 
+        `$ docker inspect --format='{{json .NetworkSettings.Networks}}'  web`
+            `{"bridge": ...}`
+    * Then, get the IP address of your *web* :
+        `$ docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' web`
+            `172.17.0.2`
+            
+* Now, open a shell to your running db container:
+    ```
+        $ docker exec -it db bash
+        root@a205f0dd33b2:/# ping 172.17.0.2
+        ping 172.17.0.2
+        PING 172.17.0.2 (172.17.0.2) 56(84) bytes of data.
+        ^C
+        --- 172.17.0.2 ping statistics ---
+        44 packets transmitted, 0 received, 100% packet loss, time 43185ms
+    ```
+    * you’ll find the ping failed. That is because the two container are running on different networks.
+    * You can fix that.
+
+* Docker networking allows you to *attach* a container to as many networks as you like. 
+    * You can also attach an already running container. 
+    * Go ahead and attach your running *web* app to the *my-bridge-network* .
+        `$ docker network connect my-bridge-network web`
+        
+    * Try ping again
+        ```
+            $ docker exec -it db bash
+            root@a205f0dd33b2:/# ping web
+            PING web (172.18.0.3) 56(84) bytes of data.
+            64 bytes from web (172.18.0.3): icmp_seq=1 ttl=64 time=0.095 ms
+            64 bytes from web (172.18.0.3): icmp_seq=2 ttl=64 time=0.060 ms
+            64 bytes from web (172.18.0.3): icmp_seq=3 ttl=64 time=0.066 ms
+            ^C
+            --- web ping statistics ---
+            3 packets transmitted, 3 received, 0% packet loss, time 2000ms
+            rtt min/avg/max/mdev = 0.060/0.073/0.095/0.018 ms
+        
+        ```
+        * Note : `ping web`
+    
+        * You can try again to gain the *web* and *db* IPAddress and ping it.
+        
+## Manage data in containers
+    * [Manage data in containers](https://docs.docker.com/engine/userguide/containers/dockervolumes/)
+        
+### Data volumes
+
+* A data volume is a specially-designated directory within one or more containers that bypasses the [Union File System](https://docs.docker.com/engine/reference/glossary/#union-file-system). 
+* Data volumes provide several useful features for persistent or shared data:
+    * Volumes are initialized when a container is created.
+        * If the container’s base image contains data at the specified mount point, that existing data is copied into the new volume upon volume initialization. 
+        * Note that this does not apply when [mounting a host directory](https://docs.docker.com/engine/userguide/containers/dockervolumes/#mount-a-host-directory-as-a-data-volume) .
+    * Data volumes can be shared and reused among containers.
+    * Changes to a data volume are made directly.
+    * Changes to a data volume will not be included when you update an image.
+    * Data volumes persist even if the container itself is deleted.
+    
+* Data volumes are designed to persist data, independent of the container’s life cycle. 
+* Docker therefore never automatically deletes volumes when you remove a container, nor will it “garbage collect” volumes that are no longer referenced by a container.
+
+#### Adding a data volume
+
+* You can add a data volume to a container using the *-v* flag with the `docker create` and `docker run` command.
+* You can use the *-v* multiple times to mount multiple data volumes. 
+* Let’s mount a single volume now in our web application container.
+    `$ docker run -d -P --name web -v /webapp training/webapp python app.py`
+    * This will create a new volume inside a container at */webapp* .
+
+* You can also use the *VOLUME* instruction in a *Dockerfile* to add one or more new volumes to any container created from that image.
+
+#### Locating a volume
+
+* You can locate the volume on the host by utilizing the `docker inspect` command.
+    `$ docker inspect web`
+    * The output will provide details on the container configurations including the volumes. 
+        ```
+            ...
+            Mounts": [
+                {
+                    "Name": "fac362...80535",
+                    "Source": "/var/lib/docker/volumes/fac362...80535/_data",
+                    "Destination": "/webapp",
+                    "Driver": "local",
+                    "Mode": "",
+                    "RW": true,
+                    "Propagation": ""
+                }
+            ]
+            ...
+        
+        ```
+        * *Source* is specifying the location on the host
+        * *Destination* is specifying the volume location inside the container. 
+        * *RW* shows if the volume is read/write.
+    
+    
+    
+#### Mount a host directory as a data volume
+
+* In addition to creating a volume using the *-v* flag you can also mount a directory from your Docker daemon’s host into a container.
+    `$ docker run -d -P --name web -v /src/webapp:/opt/webapp training/webapp python app.py`
+    * */src/webapp* : the host directory, *host-dir*
+    * */opt/webapp* : the container directory, *container-dir*
+        * If the path */opt/webapp* already exists inside the container's image
+            * the */src/webapp* mount overlays but does not remove the pre-existing content.
+            * Once the mount is removed, the content is accessible again.
+    * *container-dir* must always be an absolute path such as */src/docs*
+    * *host-dir* can either be an *absolute-path* or a *name-value* .
+        * If you supply an *absolute-path* for the *host-dir* , Docker bind-mounts to the path you specify
+            * An absolute path starts with a */* (forward slash).
+            * */foo* , Docker creates a bind-mount
+            
+        * If you supply a *name-value* , Docker creates a named volume by the *name* 
+            * A *name-value* must start with an alphanumeric character, 
+            * followed by a-z0-9, _ (underscore), . (period) or - (hyphen).
+            * *foo* , Docker creates a named volume
+    
+*  mount files or directories on OS X
+    `docker run -v /Users/<path>:/<container path> ...`
+* On Windows, mount directories using:
+    `docker run -v /c/Users/<path>:/<container path> ...`
+    
+* Mounting a host directory can be useful for testing. 
+    * you can mount source code inside a container.
+    * Then, change the source code and see its effect on the application in real time.
+    * The directory on the host must be specified as an absolute path
+        * if the directory doesn’t exist Docker will automatically create it for you.
+        * This auto-creation of the host path has been deprecated.
+        
+* Docker volumes default to mount in read-write mode, but you can also set it to be mounted read-only.
+    `$ docker run -d -P --name web -v /src/webapp:/opt/webapp:ro training/webapp python app.py`
+
+#### Volume labels
+#### Mount a host file as a data volume
+
+* The *-v* flag can also be used to mount a single file - instead of just directories - from the host machine.
+    `$ docker run --rm -it -v ~/.bash_history:/root/.bash_history ubuntu /bin/bash`
+
+### Creating and mounting a data volume container
+
+* If you have some persistent data that you want to share between containers, or want to use from non-persistent containers, 
+    * it’s best to create a named Data Volume Container, and then to mount the data from it.
+    
+* Let’s create a new named container with a volume to share.
+    * While this container doesn’t run an application, 
+    * it reuses the training/postgres image
+    * so that all containers are using layers in common, saving disk space.
+    
+        `$ docker create -v /dbdata --name dbstore training/postgres /bin/true`
+    
+    * You can then use the *--volumes-from* flag to mount the */dbdata* volume in another container.
+        `$ docker run -d --volumes-from dbstore --name db1 training/postgres`
+    * And another:
+        `$ docker run -d --volumes-from dbstore --name db2 training/postgres`
+        
+        * In this case, if the *postgres* image contained a directory called */dbdata* then mounting the volumes from the *dbstore* container hides the */dbdata* files from the *postgres* image. The result is only the files from the *dbstore* container are visible.
+        
+* If you remove containers that mount volumes, including the initial dbstore container, or the subsequent containers db1 and db2, the volumes will not be deleted. 
+* To delete the volume from disk, you must explicitly call `docker rm -v` against the last container with a reference to the volume. 
+
+> Docker will not warn you when removing a container without providing the *-v* option to delete its volumes.
+> If you remove containers without using the -v option, you may end up with “dangling” volumes; volumes that are no longer referenced by a container.
+> You can use `docker volume ls -f dangling=true` to find dangling volumes
+> and use `docker volume rm <volume name>` to remove a volume that’s no longer needed.
+
+### Backup, restore, or migrate data volumes
+### Important tips on using shared volumes
+    
+    
+    
 
 ## Legacy container links
 

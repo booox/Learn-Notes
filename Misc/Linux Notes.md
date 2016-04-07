@@ -82,6 +82,21 @@
 * Linux bind port
     * `<1024` : for *root*
     
+* *touch*
+    `$ touch newfile_name` , create a empty file
+  
+* Linux *history* command:
+    * 
+        ```
+            $ history 10 : list 10 history cmds
+            
+            $ !10 : run No.10 history cmd
+            $ ! !    : run the last cmd
+            $ !rpm     : run the last cmd begin with 'rpm'
+            
+            $ history |more
+            $ history -c : clear shell history
+        ```
     
 # CentOS Linux下VNC Server远程桌面配置详解
 
