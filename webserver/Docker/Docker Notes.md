@@ -105,6 +105,7 @@
     * `$ docker images` :
         * List all the images on your local system.
     * `$ docker run docker/whalesay cowsay boo-boo`
+    
     * `$ docker run docker/whalesay cowsay hdfj-adf-boo`
 
 ## Build your own image
@@ -945,5 +946,12 @@
     * worked: `$ docker build -t xxx --fiel ./Dockerfile .`
     * Maybe I run the *build* command in another path, not in the *Dockerfile* Folder.
     
+
 * `docker cp <containerId>:/file/path/within/container /host/path/target`
     * copy files inside container to host path
+
+    
+* 做了多次试验之后，再重新运行一个新的容器，发现不能自容器内部访问外网
+    * 纠结许久之后，重启docker 服务问题解决。
+        `$ sudo systemctl restart docker`
+

@@ -232,7 +232,91 @@
     * `$ curl 127.0.0.1:5000` , return url web page
     
     
+* Flask: `app.run(host='0.0.0.0', debug=True) `
+    * when run the flask app, local host access work,  but in the remote host can't access
+    * The reason is *firewall*
+        `$ sudo systemctl stop firewalld`
+        
+        ```
+            [修改机器名]
+            # vi /etc/hostname
+
+            [关SELinux]
+            # vi /etc/selinux/config
+            设置SELINUX=disabled
+
+            [关防火墙]
+
+            # systemctl stop firewalld
+            # systemctl disable firewalld
+            # systemctl status firewalld 看状态
+        ```
+* `supervisord -c supervisor.conf ` , can't work
+    * Only used: `supervisorctl -c supervisor.conf start [all]|[appname]`
+    * Other command:
+        ```
+            supervisord -c supervisor.conf                             通过配置文件启动supervisor
+            supervisorctl -c supervisor.conf status                    察看supervisor的状态
+            supervisorctl -c supervisor.conf reload                    重新载入 配置文件
+            supervisorctl -c supervisor.conf start [all]|[appname]     启动指定/所有 supervisor管理的程序进程
+            supervisorctl -c supervisor.conf stop [all]|[appname]      关闭指定/所有 supervisor管理的程序进程
+        
+        ```
+   
+* Install *nginx* on CentOS-7
+    1. Install EPEL
+        `$ sudo yum install epel-release`
+    2. Install nginx
+        `$ sudo yum install nginx`
+        
+    3. Starting Nginx
+        `$ sudo systemctl start nginx`
     
+    4. set Nginx as a service
+        `$ sudo systemctl enable nginx.service`
+        
+* *Systemctl* Usage
+    以docker服务为例
+        ```
+        chkconfig&service用法
+
+            #自启动
+            chkconfig docker on
+            #关闭自启动
+            chkconfig docker off
+            #显示已启动服务
+            chkconfig --list
+            #检查服务状态
+            service docker status
+            #启动服务
+            service docker start
+            #暂停服务
+            service docker stop
+            #重启服务
+            service docker restart
+            
+        systemctl用法
+
+            #自启动
+            systemctl enable docker.service
+            #关闭自启动
+            systemctl disable docker.service
+            #显示已启动服务
+            systemctl list-units --type=service
+             
+            #检查服务状态
+            #服务详细信息
+            systemctl status docker.service
+            #仅显示是否 Active
+            systemctl is-active docker.service
+            #启动服务
+            systemctl start docker.service
+            #暂停服务
+            systemctl stop docker.service
+            #重启服务
+            systemctl restart docker.service
+        ```
+        
 # Links
 
 -[] [Centos7系统配置上的变化（一）](http://www.cnblogs.com/panblack/p/Centos7-WhatsNew-01.html)
