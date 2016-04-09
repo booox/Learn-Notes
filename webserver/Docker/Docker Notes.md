@@ -823,6 +823,7 @@
     
 ## Using Supervisor with Docker
 
+
 * Traditionally a Docker container runs a single process when it is launched, for example an Apache daemon or a SSH server daemon. 
 * Often though you want to run more than one process in a container. 
 
@@ -926,7 +927,7 @@
 -[] [virtualenv 环境下 Nginx + Flask + Gunicorn+ Supervisor 搭建 Python Web](http://www.jianshu.com/p/be9dd421fb8d)
 -[] [Flask + Gunicorn + Nginx 部署](http://www.cnblogs.com/Ray-liang/p/4837850.html)
 -[] [使用Nginx、Gunicorn和Supervisor部署Flask应用](http://puras.me/2015/01/21/deploy-flask-using-nginx-gunicorn-supervisor/)
--[] [VPS环境搭建详解 (Virtualenv+Gunicorn+Supervisor+Nginx)](http://beiyuu.com/vps-config-python-vitrualenv-flask-gunicorn-supervisor-nginx/?utm_source=tuicool&utm_medium=referral)
+-[] [VPS环境搭建详解 (Virtualenv+Gunicorn+Supervisor+Nginx)](http://beiyuu.com/vps-config-python-vitrualenv-flask-gunicorn-supervisor-nginx)
 -[] [(带测试) virtualenv 环境下 Django + Nginx + Gunicorn+ Supervisor 搭建 Python Web](http://www.unjeep.com/q/92981822.htm)
 -[] []()
 
@@ -943,3 +944,6 @@
     * original: `$ docker build -t xxx .`
     * worked: `$ docker build -t xxx --fiel ./Dockerfile .`
     * Maybe I run the *build* command in another path, not in the *Dockerfile* Folder.
+    
+* `docker cp <containerId>:/file/path/within/container /host/path/target`
+    * copy files inside container to host path

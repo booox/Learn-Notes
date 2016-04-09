@@ -227,8 +227,10 @@
         `$ sudo yum -y install python-pip`
         
         
-* `curl` text surf?
+* `curl` text surf
     * `$ curl -I 127.0.0.1:5000` , return url header
+    * `$ curl 127.0.0.1:5000` , return url web page
+    
     
     
 # Links
