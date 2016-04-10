@@ -51,7 +51,7 @@
             #关闭自启动
             systemctl disable docker.service
             #显示已启动服务
-            systemctl list-units --type=service
+            systemctl list-unit-files --type=service
              
             #检查服务状态
             #服务详细信息
@@ -64,14 +64,13 @@
             systemctl stop docker.service
             #重启服务
             systemctl restart docker.service
-
-    
-    
     ```
- 
-## Configuration file
+    
+## shell command
 
-* */etc/nginx/nginx.conf*
+* `$ sudo nginx -t` : test configuration and exit
+ 
+
 
 ## Creating a Virtual Server
 

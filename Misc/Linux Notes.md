@@ -316,6 +316,75 @@
             #ÖØÆô·þÎñ
             systemctl restart docker.service
         ```
+# Question and Aswer
+
+* how to list all users
+    * `$ cat /etc/passwd`
+        * use pages:
+            * `$ more /etc/passwd`
+            * `$ less /etc/passwd`
+    * whick users that can actually login anc execute
+        * `$ cat /etc/passwd | grep -v nologin`
+   
+* Recommended console ftp clients : *curlftpfs*
+    * ref : [](http://askubuntu.com/a/12824)
+    * install *curlftpfs*
+        `$ sudo apt-get install curlftpfs`
+    * add yourself to group *fuse* :
+        `$ sudo usermod -aG fuse <username>`
+    * Log out, and log back in again, for changes to take effect
+    * Make a directory for a mount point
+        `$ mkdir ~/ftp`
+    * mount the ftp server as a local filesystem
+        `$ curlftpfs ftp.server.com ~/ftp -o user=<ftp_username>`
+        * Enter the password when prompted
+        
+    * other : unmount it do:
+        `$ fusermount -u ~/ftp`
+        
+    
+        
+    * Error
+        * `usermod: group 'fuse' does not exist`
+            * the error appear, when run :
+                `$ curlftpfs ftp.server.com ~/ftp -o user=<ftp_username>`
+            * when run the command with *root* :
+                `# curlftpfs ftp.server.com ~/ftp -o user=<ftp_username>`
+                * appear another error:
+                    `fuse: failed to open /dev/fuse: Operation not permitted`
+                * the *root* not permite to do this.
+                
+        * So here ,we know it's the permission problem
+            * check the 'fuse' directory
+                ```
+                    $ ll /dev/fuse
+                    c---------. 1 root root ... /dev/fuse
+                
+                ```               
+            * if 
+    
+* account user password passwd
+    * */etc/passwd* : user account
+    * */etc/shadow* : password information and optional account aging information
+    * */etc/group* : the groups
+    * */etc/default/useradd* : this file contains a value for the default group, if none is pecified by the *useradd* command.
+    * */etc/login.defs* : this file defines the site-specific configuration for the shadow password suite stored in */etc/shadow* file.
+    
+    * [Howto: Linux Add User to Group](http://www.cyberciti.biz/faq/howto-linux-add-user-to-group)
+    * Add user
+        * 
+    
+* module
+    * confirm *fuse* module is loaded
+        `lsmod | grep fuse`   , 
+    * load the *fuse* module 
+        `modprobe fuse`   , 
+    * make sure the *fuse* module is loaded upon a reboot.
+        `echo "modprobe fuse" >> /etc/rc.local`   
+    
+    
+* copy directory
+    `$ cp -r /tmp/a /root/a`
         
 # Links
 
