@@ -67,7 +67,15 @@
     
     
     
+# Question & Answer
+
+* `unix:///tmp/supervisor.sock no such file` when run `supervisorctl -c supervisor.conf status`
+    ```
+        supervisord -c /etc/supervisord.conf
+        supervisorctl -c /etc/supervisord.conf reload
+        supervisorctl -c /etc/supervisord.conf restart foo
     
+    ```
     
     
     

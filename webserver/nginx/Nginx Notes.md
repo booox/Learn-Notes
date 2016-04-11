@@ -11,6 +11,7 @@
     `/usr/sbin/nginx`
 * nginx log file
     `/var/log/nginx/access.log`
+    `/var/log/nginx/error.log`
 
 # Nginx on CentOS 7
 * Install *nginx* on CentOS
