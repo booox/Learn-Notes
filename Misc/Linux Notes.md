@@ -385,6 +385,14 @@
     
 * copy directory
     `$ cp -r /tmp/a /root/a`
+    
+* chmod
+    * To change all the directories to 755 (-rwxr-xr-x):
+        `find /opt/lampp/htdocs -type d -exec chmod 755 {} \;`
+    * To change all the files to 644 (-rw-r--r--):
+        `find /opt/lampp/htdocs -type f -exec chmod 644 {} \;`
+    * [change all the directories to 755](http://stackoverflow.com/questions/3740152/how-to-set-chmod-for-a-folder-and-all-of-its-subfolders-and-files-in-linux-ubunt?rq=1)
+    
         
 # Links
 
