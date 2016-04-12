@@ -203,6 +203,9 @@
         `$ sudo yum -y install epel-release`
     * 安装 *nginx*
         `$ sudo yum -y install nginx`
+        
+* 让nginx在foreground (not as a daemon)模式下运行
+    `$ sudo echo "daemon off" >>/etc/nginx/nginx.conf`
     
 * 再次修改 *supervisord.conf* 文件，让 Supervisor 来管理 Nginx
     * */etc/supervisord.conf* 在末尾添加

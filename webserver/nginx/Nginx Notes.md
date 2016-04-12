@@ -113,4 +113,6 @@
 - []()
  
  
- 
+## Supervisor with Nginx
+
+* The ngix process must start in foreground (not as a daemon) to be controlled by supervisor. 
