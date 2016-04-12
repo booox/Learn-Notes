@@ -12,7 +12,9 @@ AAAA
 - [] [Running Flask app with gunicorn using a Flask-Script command (on Heroku)](http://devblog.michalski.im/2013/01/06/running-flask-app-with-gunicorn-using-a-flask-script-command-on-heroku/)
 - [] [Standalone WSGI Containers](http://flask.pocoo.org/docs/0.10/deploying/wsgi-standalone/#gunicorn)
 
-
+* 当你在做某个操作时，感觉到麻烦了，那么一定会有更有效的方法在等着你。
+* 而你要做的就是，搜索它、找到它、应用它
+* 搜索的过程可能是辛苦的，但当她呈现在你的面前时，你会感到极大喜悦和充实。
 
 * JiFang Test System
     * add Rank

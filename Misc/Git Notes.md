@@ -4,8 +4,22 @@
 
 ## Download & Install
 [Git for Windows Setup](http://git-scm.com/download/win)
+
+## First-Time Git Setup
+* just a test.
+* Git comes with a tool called `git config` that lets you get and set configuration variables that control all aspects of how Git looks and operates.
+* These variables can be stored in three different places:
+    * */etc/gitconfig* : for every user on the system and all their repositories.
+        * `$ git config --system path/gitconfig` : specific the file
+    * *~/.gitconfig* or *~/.config/git/config* : Specific to your user
+        * `$ git config --global `
+    * *.git/config* : config file in the Git directory of whatever repository you're currently using:
+        * Specific to that single repository.
+        
+    
+            
 	
-## Your Identity
+###  Your Identity
 	$ git config --global user.name "John Doe"
 	$ git config --global user.email johndoe@example.com
 	
@@ -21,6 +35,22 @@
 		- Confirm your email address
 			$ git config --global user.email
 			 username@users.noreply.github.com
+             
+             
+### Local to Remote Repository
+
+1. create a repository named *esse* on *github.com* : 
+    `https://github.com/username/esse.git`
+
+2. create local directory and init
+    ```
+        $ mkdir esse
+        $ cd esse
+        $ git init
+    
+    ```
+3. connect local and remote:
+    `$ git remote add origin https://github.com/username/esse.git`
 	
 ### Remember the authen?
 

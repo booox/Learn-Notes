@@ -1,4 +1,60 @@
-﻿Supervisor
+﻿# Supervisor
+
+
+# Components
+
+* 
+    ```
+        /usr/bin/echo_supervisord_conf
+        /usr/bin/supervisorctl
+        /usr/bin/supervisord
+    ```
+    
+    
+# Get started
+
+* Installing via pip
+    `$ sudo pip install supervisor` (use *root* )
+    
+* Creating a Configuration File
+    * 如果有 *root* 权限，则将配置文件存放到 */etc* 中
+        `$ sudo echo_supervisord_conf > /etc/supervisord.conf`
+    * 如果没有 *root* 权限，则可以将 *supervisord.conf* 放到当前文件夹中
+        `$ echo_supervisord_conf > supervisord.conf`
+        
+    * 接着就可以用 *supervisord* 加上 *-c* 跟着配置文件夹来启动 *supervisor* 了。
+    
+* Running supervisord
+    `$ sudo supervisord -c /etc/supervisord.conf`
+    
+* Running supervisord automatically on startup
+    * First Try this in CentOS 7 :`$ systemctl enable supervisord.service`
+        * If worked : `Created symlink from /etc/systemd/system/multi-user.target.wants/supervisord.service to /usr/lib/systemd/system/supervisord.service.`
+        
+    * If not:
+        * Copy the raw content: [centos-systemd-etcs](https://github.com/Supervisor/initscripts/blob/master/centos-systemd-etcs)
+        ```
+                # supervisord service for sysstemd (CentOS 7.0+)
+                # by ET-CS (https://github.com/ET-CS)
+                [Unit]
+                Description=Supervisor daemon
+
+                [Service]
+                Type=forking
+                ExecStart=/usr/bin/supervisord -c /etc/supervisord.conf
+                ExecStop=/usr/bin/supervisorctl $OPTIONS shutdown
+                ExecReload=/usr/bin/supervisorctl $OPTIONS reload
+                KillMode=process
+                Restart=on-failure
+                RestartSec=42s
+
+                [Install]
+                WantedBy=multi-user.target
+        
+        ```
+        
+        * Edit the file : `$ sudo vi /etc/systemd/system/supervisord.service`
+        
 
 [按需讲解之Supervisor](http://www.cnblogs.com/yjf512/archive/2012/03/05/2380496.html)
 
@@ -76,6 +132,11 @@
         supervisorctl -c /etc/supervisord.conf restart foo
     
     ```
+    * 启动时提示 `unix:///tmp/supervisor.sock no such file`
+        * 先启动 *supervisord* ，再查看就可以看到进程跑起来了
+        ```
+            $ sudo venv
+        ```
     
     
     

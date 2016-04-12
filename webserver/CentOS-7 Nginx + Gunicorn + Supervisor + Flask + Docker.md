@@ -131,11 +131,11 @@
 * 也就是说：当你需要同时跑多个进程，并当这些进程挂掉之后，能自动重启进程，就可以用 *Supervisor* 来处理。
 
    
-* 安装 Supervisor 
-    `(venv) $ pip install supervisor`
+* 用root安装 Supervisor 
+    `$ sudo pip install supervisor`
     
     * 如果能输出配置文件，则安装成功
-        `(venv) $ echo_supervisord_conf`
+        `$ echo_supervisord_conf`
         
 * supervisor 组成
     * *supervisord* : 服务端
@@ -158,7 +158,7 @@
         * 如果修改了配置文件，可能需要 *reload* 来生效。
     
 * 创建配置文件
-    `(venv) $ echo_supervisord_conf > /etc/supervisord.conf`
+    `$ sudo echo_supervisord_conf > /etc/supervisord.conf`
     
 * 修改配置文件
     * 在 */etc/supervisord.conf* 末尾添加以下内容
@@ -177,23 +177,55 @@
         ```
         
 * 启动Supervisor (Gunicorn-Flask)
-    `(venv) $ supervisorctl -c /etc/supervisord.conf start myapp`
+    `$ supervisorctl -c /etc/supervisord.conf start myapp`
     or
-    `(venv) $ supervisorctl -c /etc/supervisord.conf start all` 
+    `$ supervisorctl -c /etc/supervisord.conf start all` 
     
     * 用这个方法未能成功：
-        `(venv) $ supervisord -c /etc/supervisord.conf`
+        `$ supervisord -c /etc/supervisord.conf`
             
     * 其它 *supervisorctl* 命令
-        `(venv) $ supervisorctl -c /etc/supervisord.conf status` 
-        `(venv) $ supervisorctl -c /etc/supervisord.conf reload` 
-        `(venv) $ supervisorctl -c /etc/supervisord.conf stop [all] | [app_name]` 
+        `$ supervisorctl -c /etc/supervisord.conf status` 
+        `$ supervisorctl -c /etc/supervisord.conf reload` 
+        `$ supervisorctl -c /etc/supervisord.conf stop [all] | [app_name]` 
 
 * 浏览器访问检测
     `http://127.0.0.1:8000` 端口为 *supervisord.conf* 中所设。
     
 * 先停止 *supervisor*
-    `(venv) $ supervisorctl -c /etc/supervisord.conf stop [all] | [app_name]` 
+    ` $ supervisorctl -c /etc/supervisord.conf stop [all] | [app_name]` 
+    
+* 让 *supervisord* 开机启动
+    * 在CentOS 7中首先尝试 :
+        `$ sudo systemctl enable supervisord.service`
+        * 如果成功，则输出 : 
+            `Created symlink from /etc/systemd/system/multi-user.target.wants/supervisord.service to /usr/lib/systemd/system/supervisord.service.`
+        
+    * 如果上述方法不行:
+        * 则下载开机脚本，选择针对CentOS 7的: [centos-systemd-etcs](https://github.com/Supervisor/initscripts/blob/master/centos-systemd-etcs)
+        ```
+                # supervisord service for sysstemd (CentOS 7.0+)
+                # by ET-CS (https://github.com/ET-CS)
+                [Unit]
+                Description=Supervisor daemon
+
+                [Service]
+                Type=forking
+                ExecStart=/usr/bin/supervisord
+                ExecStop=/usr/bin/supervisorctl $OPTIONS shutdown
+                ExecReload=/usr/bin/supervisorctl $OPTIONS reload
+                KillMode=process
+                Restart=on-failure
+                RestartSec=42s
+
+                [Install]
+                WantedBy=multi-user.target
+        
+        ```
+        
+        * 创建编辑文件 : `$ sudo vi /etc/systemd/system/multi-user.target.wants/supervisord.service`
+
+        
     
     
 ## 安装配置 Nginx
@@ -231,8 +263,29 @@
         `# systemct list-units |grep nginx` 
     
         
-    * 存疑： 配置完成后，用 *root* 启动 *supervisor* 
-        * 用 *root* 启动却提示找不到命令
     
     
     
+# Question & Answer
+
+* 本地可以访问，但外面机器访问不了，大多是防火墙的原因了。
+    * `$ sudo systemctl stop firewalld`
+    * `$ sudo systemctl disable firewalld`
+    * `$ sudo systemctl status firewalld`
+    
+* 存疑： 配置完成后，用 *root* 启动 *supervisor* 
+    * 用 *root* 启动却提示找不到命令
+
+    
+
+* 测试时，重启后用 `$ sudo supervisorctl -c supervisor.conf status` 查看 *supervisor* 状态，提示
+    `unix:///tmp/supervisor.sock no such file`
+    * 原因之一，是 *supervisord* 没有启动
+    ```
+        supervisord -c /etc/supervisord.conf
+        supervisorctl -c /etc/supervisord.conf reload
+        supervisorctl -c /etc/supervisord.conf restart foo
+    
+    ```
+    
+* `nodaemon=false    # 改成true` 有什么用处？
