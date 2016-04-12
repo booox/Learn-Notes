@@ -23,6 +23,25 @@
 * config file
     * ` $ vi ~/.vimrc`
     
+* Multi Files
+    * You have opened a file, and now you want to open another file(s)
+        `:sp file1` (on the vim command status)
+        * change view windows
+            Double `ctrl + w `
+            
+    * open multi files at the same time
+        `$ vi file1 file2 file3`
+        * *:n* next file
+        * *:N* previous file
+        
+* date time
+    * `date -R`
+    
+    * CentOS 同步网络时间
+        `# yum -y install ntpdate`
+        `# ntpdate asia.pool.ntp.org`
+        
+    
 ## other
 
 * tree
@@ -393,7 +412,22 @@
         `find /opt/lampp/htdocs -type f -exec chmod 644 {} \;`
     * [change all the directories to 755](http://stackoverflow.com/questions/3740152/how-to-set-chmod-for-a-folder-and-all-of-its-subfolders-and-files-in-linux-ubunt?rq=1)
     
+* `-bash: locate: command not found`
+    * `$ sudo yum -y install mlocate`
+    * `$ sudo updatedb`
+    
         
 # Links
 
 -[] [Centos7系统配置上的变化（一）](http://www.cnblogs.com/panblack/p/Centos7-WhatsNew-01.html)
+
+
+# Debug 
+
+* `$ pgrep -fl supervisor`
+    `3786 supervisord`
+* `kill 3786`
+
+* `tail -f /var/log/nginx/error.log`
+
+* `ps aux | grep nginx`

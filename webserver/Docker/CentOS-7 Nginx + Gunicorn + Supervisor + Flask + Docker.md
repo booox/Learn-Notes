@@ -220,7 +220,19 @@
             stderr_logfile=/home/myusername/myproject/log/nginx.err        
         ```
         
-* 配置完成后，用 *root* 启动 *supervisor*
+    * 这个有还不清楚，有没有作用
+    
+* Nginx 在CentOS7上控制
+    * start up
+        `# systemct start nginx.service` 
+    * stop , restart,    
+        `# systemct stop/restart nginx.service` 
+    * check
+        `# systemct list-units |grep nginx` 
+    
+        
+    * 存疑： 配置完成后，用 *root* 启动 *supervisor* 
+        * 用 *root* 启动却提示找不到命令
     
     
     
