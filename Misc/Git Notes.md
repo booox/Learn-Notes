@@ -251,3 +251,13 @@ DIFFERENT WAYS TO ADD
     * Links: [You have three options](http://stackoverflow.com/a/15745424)
 
 * git tag
+
+
+
+# Links
+
+## Submodule
+- [Getting Git Right](https://www.atlassian.com/git/tutorials/what-is-version-control)
+- [git 子模块的使用简介](http://easior.is-programmer.com/posts/42541.html)
+- [Git Submodule使用完整教程 - 咖啡兔 - HenryYan](http://www.kafeitu.me/git/2012/03/27/git-submodule.html)
+
