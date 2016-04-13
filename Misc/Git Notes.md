@@ -222,6 +222,20 @@
     
     
     
+## Sub modules
+
+### 带有submodule的git仓库的创建
+* 正如 git 仓库有两种创建方式一样，带 submodule 的 git 仓库的创建也有两种。
+#### 在现在工程中添加一个子工程
+    ```
+        $ git submodule add **.git local_name
+        $ git status
+        $ cd local_name
+    
+    ```
+
+
+    
 # Some Links
     - [try Git ](https://try.github.io/levels/1/challenges/1)
     - [Git real](http://gitreal.codeschool.com/levels/1)
@@ -235,6 +249,9 @@ DIFFERENT WAYS TO ADD
 + `$ git add docs/*.txt`          Add all txt files in docs directory
 + `$ git add docs/`               Add all files in docs directory
 + `$ git add "*.txt"`             Add all txt files in the whole project
+
+
+
 
 
 # Q & A
