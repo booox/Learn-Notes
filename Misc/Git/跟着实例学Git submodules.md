@@ -1,5 +1,6 @@
 ﻿# 如何使用Git的submodule
 
+* [How to use Git submodules](http://blog.joncairns.com/2011/10/how-to-use-git-submodules/)
 ## 准备工作
 
 * 首先你要有一个 [Github](https://github.com) 的账号
@@ -28,4 +29,31 @@
     
 * 可以使用 `git submodule add` 来添加一个子模块
     `$ git submodule add (repository) (directory)`
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
