@@ -233,6 +233,15 @@
         $ cd local_name
     
     ```
+## How to use Git submodules
+
+### Setting Up
+
+* example : https://github.com/joonty/example
+    `https://github.com/booox/example.git`
+    
+* 
+    
 
 
     
@@ -250,6 +259,14 @@ DIFFERENT WAYS TO ADD
 + `$ git add docs/`               Add all files in docs directory
 + `$ git add "*.txt"`             Add all txt files in the whole project
 
+
+# Links
+
+## Submodule
+- [Getting Git Right](https://www.atlassian.com/git/tutorials/what-is-version-control)
+- [git 子模块的使用简介](http://easior.is-programmer.com/posts/42541.html)
+- [Git Submodule使用完整教程 - 咖啡兔 - HenryYan](http://www.kafeitu.me/git/2012/03/27/git-submodule.html)
+- [How to use Git submodules](http://blog.joncairns.com/2011/10/how-to-use-git-submodules/)
 
 
 
@@ -269,12 +286,7 @@ DIFFERENT WAYS TO ADD
 
 * git tag
 
+* `git submodule "no submodule mapping found in "`
+    * 
 
-
-# Links
-
-## Submodule
-- [Getting Git Right](https://www.atlassian.com/git/tutorials/what-is-version-control)
-- [git 子模块的使用简介](http://easior.is-programmer.com/posts/42541.html)
-- [Git Submodule使用完整教程 - 咖啡兔 - HenryYan](http://www.kafeitu.me/git/2012/03/27/git-submodule.html)
 
