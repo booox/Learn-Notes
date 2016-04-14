@@ -116,6 +116,15 @@
             $ history |more
             $ history -c : clear shell history
         ```
+        
+* *unset* : 删除变量或函数
+    ```
+        $ dog=Doggie
+        $ echo $dog
+        $ unset dog
+        $ echo $dog
+    
+    ```
     
 # CentOS Linux下VNC Server远程桌面配置详解
 
@@ -431,3 +440,5 @@
 * `tail -f /var/log/nginx/error.log`
 
 * `ps aux | grep nginx`
+
+

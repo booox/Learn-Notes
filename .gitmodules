@@ -1,7 +1,3 @@
-[submodule "python/projects/flaskweb/exams"]
-	path = python/projects/flaskweb/exams
-	url = https://github.com/booox/examsys.git
-
 [submodule "python/projects/flaskweb/examsys"]
 	path = python/projects/flaskweb/examsys
 	url = https://github.com/booox/examsys.git

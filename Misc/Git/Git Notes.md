@@ -6,7 +6,6 @@
 [Git for Windows Setup](http://git-scm.com/download/win)
 
 ## First-Time Git Setup
-* just a test.
 * Git comes with a tool called `git config` that lets you get and set configuration variables that control all aspects of how Git looks and operates.
 * These variables can be stored in three different places:
     * */etc/gitconfig* : for every user on the system and all their repositories.
@@ -31,10 +30,9 @@
 		Settings -> Emails -> Keep my email address private
 	2. Tell Git to use your private email address
 		- Set your email address 
-			$ git config --global user.email "username@users.noreply.github.com"
+			`$ git config --global user.email "username@users.noreply.github.com"`
 		- Confirm your email address
-			$ git config --global user.email
-			 username@users.noreply.github.com
+			`$ git config --global user.email username@users.noreply.github.com`
              
              
 ### Local to Remote Repository
@@ -233,14 +231,7 @@
         $ cd local_name
     
     ```
-## How to use Git submodules
 
-### Setting Up
-
-* example : https://github.com/joonty/example
-    `https://github.com/booox/example.git`
-    
-* 
     
 
 
@@ -289,4 +280,24 @@ DIFFERENT WAYS TO ADD
 * `git submodule "no submodule mapping found in "`
     * 
 
+* 确认已经添加用户名、邮箱
+    * `$ git config user.name` 如果不正确，则要添加用户名
+        * `$ git config --global user.name "user-name"`
+        * `$ git config --global user.email "user-name@users.noreply.github.com"`
 
+
+* `403 Forbidden while accessing https://github.com/** fatal: HTTP request failed`
+            
+    * 为了能够通过 *https* 协议登录 *github* ，要设置你的安全验证为 *git-Remote-URI* :
+        `$ git remote set-url origin https://user-name@github.com/user-name/repo-name.git`
+        * 或，直接修改 *.git/config* 中的 *remote-origin* 的 *url* 的值如上。
+        
+    * 这样当你使用 `git push` 时会被提示输入密码。
+        * 如果出现错误：`(gnome-ssh-askpass:10890): Gtk-WARNING **: cannot open display:`，执行：
+            `$ unset SSH_ASKPASS`
+    
+    
+    
+    
+    
+    
