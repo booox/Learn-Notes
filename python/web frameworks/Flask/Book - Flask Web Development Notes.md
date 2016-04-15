@@ -66,8 +66,7 @@
             * Run:
                 ```
                 $ python ez_setup.py
-                $ easy_install virtualenv
-                
+                $ easy_install virtualenv                
                 ```
 * Git Clone
     * Create a folder to host the example code
@@ -79,10 +78,8 @@
         
         ```
 * Create the Python virtual env
-    ```
-        $ virtualenv venv
+    `$ virtualenv venv`
     
-    ```
 * Activate the virtual env
     * Linux and Mac OS X
         `$ source venv/bin/activate`
