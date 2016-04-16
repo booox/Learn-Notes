@@ -172,11 +172,14 @@
 	$ git status -s
 	
 ### Ignoring Files
-	$ cat .gitignore
-	*.[oa]		// ignore any files ending in '.o' or '.a'.
-	*~			// ignore all files that end with a tilde (~)
+	* `$ cat .gitignore`
+	`*.[oa]		// ignore any files ending in '.o' or '.a'.`
+	`*~			// ignore all files that end with a tilde (~)`
 	
+    * The rules in *.gitignore* file only apply to untracked files.
+    
 	example:
+    ```
 		# no .a files
 		*.a
 
@@ -194,7 +197,7 @@
 
 		# ignore all .pdf files in the doc/ directory
 		doc/**/*.pdf
-		
+	```	
 		
 ### Committing Your Changes
 	`$ git commit`
@@ -297,7 +300,13 @@ DIFFERENT WAYS TO ADD
             `$ unset SSH_ASKPASS`
     
     
-    
+* 如何删除已经 *push* 到 远端仓库里的文件？如何只删除 github仓库里的文件？如何将已经提交到远端仓库的文件 *ignore* ？
+    * The rules in your .gitignore file only apply to untracked files. 
+    * Since the files under that directory were already committed in your repository,
+        * You have to *unstage* them, *create-a-commit* , and *push* that to *GitHub* : 
+            * `$ git rm -r --cached some-directory`
+            * `$ git commit -m 'Remove the now ignored directory "some-directory"'`
+            * `$ git push origin master`
     
     
     
