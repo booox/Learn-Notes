@@ -40,6 +40,9 @@
 # JupyterHub
 
 * Multi-user server for Jupyter notebooks
+
+
+
     
 # links
 
@@ -47,6 +50,7 @@
 - [Getting Started with the IPython Notebook](https://www.safaribooksonline.com/blog/2013/12/12/start-ipython-notebook/)
 - [Advanced Jupyter Notebook Tricks — Part I](http://blog.dominodatalab.com/lesser-known-ways-of-using-notebooks/)
 - [A portable Jupyter (IPython) install on Windows with an R kernel](http://www.walkingrandomly.com/?p=5734)
+- [Brian Granger: All About Jupyter](https://www.youtube.com/watch?v=GMKZD1Ohlzk)
 - []()
 
 ## JupyterHub

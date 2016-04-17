@@ -1,3 +1,6 @@
+
+* A Good Reference: [Cmd Markdown Example Page](https://www.zybuluo.com/mdeditor)
+
 # Typography 
 
 ## Headings
