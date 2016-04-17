@@ -20,7 +20,7 @@
         
 ## Install
 
-### Install with yum
+### Install with yum on CentOS 7
 
 * Make sure your existing yum packages are up-to-date.
     `$ sudo yum update`
@@ -45,7 +45,8 @@
 * Verify docker is installed correctly by running a test image in a container.
     * `sudo docker run hello-world`
 
-### Install with the script    
+### Install with the script
+
 
 ## Create a docker group
 
