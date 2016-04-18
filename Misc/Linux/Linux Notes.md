@@ -126,6 +126,9 @@
     
     ```
     
+* *useradd* : 创建用户同时创建用户主目录
+    `# useradd -m user_name`
+    
 # CentOS Linux下VNC Server远程桌面配置详解
 
 * Step(CentOS 6.5)

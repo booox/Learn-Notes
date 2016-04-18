@@ -41,8 +41,27 @@
 
 * Multi-user server for Jupyter notebooks
 
+* */srv/jupyterhub* : for all security and runtime files
+* */etc/jupyterhub* : for all configuration files
+* */var/log* : for log files
 
+* [Dockfile](https://hub.docker.com/r/jupyter/jupyterhub/~/dockerfile/)
 
+## How to configure JupyterHub
+
+* JupyterHub is configured in two ways:
+    * Configuration file
+    * Command-line arguments
+    
+    
+### Configuration file
+
+* create an empty configuration file with:
+    `jupyterhub --generate-config`
+    
+    * This empty configuration file has descriptions of all configuration variables and their default values.
+* load a specific config file with
+    `jupyterhub -f /path/to/jupyterhub_config.py`
     
 # links
 
@@ -58,8 +77,9 @@
 - [Deploying JupyterHub for Education](https://developer.rackspace.com/blog/deploying-jupyterhub-for-education/)
 - [JupyterHub Docs](https://jupyterhub.readthedocs.org/en/latest/)
 - [JupyterHub Github](https://github.com/jupyter/jupyterhub)
-- [Jupyter : Ipython, State Of Multiuser And Real Time Collaboration | SciPy 2015 | Matthias Bussonnier](https://www.youtube.com/watch?v=DyGoHAP8B_s)
 - [JupyterHub Docker](https://hub.docker.com/r/jupyter/jupyterhub/)
+
+- [Jupyter : Ipython, State Of Multiuser And Real Time Collaboration | SciPy 2015 | Matthias Bussonnier](https://www.youtube.com/watch?v=DyGoHAP8B_s)
 - []()
 
 ## Resources
