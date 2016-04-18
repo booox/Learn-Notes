@@ -957,3 +957,6 @@
     * 纠结许久之后，重启docker 服务问题解决。
         `$ sudo systemctl restart docker`
 
+* In Dockerfile文件中， *ADD* 与 *COPY* 的区别
+    * *ADD* : The *ADD* instruction copies new files, directories or remote file URLs from `<src>` and adds them to the filesystem of the container at the path `<dest>`. [ADD](https://docs.docker.com/engine/reference/builder/#add)
+    * *COPY* : The *COPY* instruction copies new files or directories from `<src>` and adds them to the filesystem of the container at the path `<dest>`. [COPY](https://docs.docker.com/engine/reference/builder/#copy)

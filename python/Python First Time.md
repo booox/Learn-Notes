@@ -882,3 +882,35 @@
 * python @staticmethod vs @classmethod
     [Difference between @staticmethod and @classmethod in Python](http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/)
     
+
+* conda :  
+    * [Conda Docs](http://conda.pydata.org/docs/)
+    * `$ conda list`
+    * `$ conda install `
+    * `$ conda create -n venv python=3.4.3 other_packages`
+        * 会在 *Anaconda* 安装目录下创建名称为 *venv* 这个虚拟环境
+    * `$ conda install -n venv some_packages`
+        * 向 虚拟环境 *venv* 中安装软件
+        
+    * `$ source activate venv`
+        * Windows: `$ activate venv`
+    * `$ source deactivate`        
+        * Windows: `$ deactivate`
+        
+    * `$ conda create --name flowers --clone snowflakes`
+    * `$ conda remove --name flowers --clone snowflakes`
+    * List all environments:
+        `$ conda info --envs`
+    * Verify current environment:
+        `$ conda info --envs`
+        `root       *   /opt/conda`
+        * the current environment with an *-*-*.
+    * `$ conda env list`
+    * Check Python versions:
+        `$ conda search python`
+    * Install a different version of Python:
+        `$ conda create --name snakes python=3`
+        
+        
+        
+        
