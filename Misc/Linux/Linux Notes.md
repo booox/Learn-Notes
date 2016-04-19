@@ -129,6 +129,19 @@
 * *useradd* : 创建用户同时创建用户主目录
     `# useradd -m user_name`
     
+* List All Linux Commands, 显示当前用户所有可用命令
+    * *compgen* 
+    * list all the commands available to you
+        `$ compgen -c`
+    * To list all the bash shell aliases available to you,
+        `$ compgen -a`
+    * Other
+        `$ compgen -b`  , bash built-ins
+        `$ compgen -k`  , bash keywords
+        `$ compgen -A function`
+        
+        
+    
 # CentOS Linux下VNC Server远程桌面配置详解
 
 * Step(CentOS 6.5)

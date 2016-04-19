@@ -9,8 +9,11 @@
 - [x] 本地用户登录测试成功
 - [x] 批量添加用户
 - [x] 添加共享文件夹
-- [] 安装Python 2 Kernel
+- [x] 安装Python 2 Kernel
+- [] 用nginx做反向代理
+- [] 中文化界面
 - [] 用户下载指定文件
+- [] 上传文件
 - [] 设置 jupyterhub_config.py
 - [] 使用仅用于存储的容器
 - [] 自动备份数据
@@ -30,7 +33,7 @@
     * Now we can test it with websurf : `http://127.0.0.0:8000`
         * 这里可以看到一个登录界面
         
-## Test with local user
+## Add local user
     * Spawn a root shell with `docker exec`
     ```
         $ docker exec -it jupyterhub bash
@@ -57,6 +60,7 @@
             * 应该是*JupyterHub* 的Docker镜像中没有安装 *Jupyter* 导致的，安装后错误提示不再出现。            
                 `# pip install jupyter`
                 
+## login with PAM authentication
     * 出现新的错误：`PAM Authentication failed [PAM Error 3] Error in service module`
         * Fix:
             ```
@@ -69,6 +73,72 @@
         
     * Done!
                 
+    
+    
+## 添加共享文件夹
+
+* 创建共享文件夹
+    `# mkdir /opt/shared_nbs`
+* 创建到用户的链接
+    `# ln -s /opt/shared_nbs /home/user_name`
+    
+    
+## 添加对 Python2的支持
+* JupyterHub的Docker 镜像提供的Notebooks只有 *python3* 
+* 熟悉 [conda](http://conda.pydata.org/docs/using/index.html) 用法
+* 参考 [Python 3 and 2 in IPython/Jupyter Notebook](http://stackoverflow.com/questions/29648412/anaconda-python-3-and-2-in-ipython-jupyter-notebook?rq=1)
+    * 创建并激活 *python2* 虚拟环境
+    ```
+        # conda create -p /opt/python2 python=2.7
+            -- 这里也可以用 *--name* 选项来指定名称
+            如：# conda create -y --name python2 python=2.7
+            默认会将环境生成在：/opt/conda/envs/python2
+        # source activate /opt/python2
+        # conda install -y jupyter
+        # jupyter kernelspec install-self   # 这个有问题，用这个：ipython kernelspec install-self
+        # source deactivate
+    ```
+    * 安装了其他软件
+    ```
+        # apt-get update && apt-get install -y vim
+        # alias vi=vim
+    ```
+    * 上述命令执行完之后会自动生成 */usr/local/share/jupyter/kernels/python2/kernel.json* ：
+    ```
+        {
+         "display_name": "Python 2",
+         "language": "python",
+         "argv": [
+          "/opt/python2/bin/python",
+          "-m",
+          "ipykernel",
+          "-f",
+          "{connection_file}"
+         ],
+        }
+    ```
+    * 这里就可以在 *New* 中看到 *Python-2* 了，但有个问题，
+        * 当单击 *Python-2* 会新建一个 Notebook ，可是 *Web* 页面上马上提示 *Dead-kernel* ，并访问是否 *restart*
+        * 而终端上提示：
+            ```
+                ImportError: No module named site
+                KernelRestarter: restarting kernel
+                restarted failed!
+                Kernel deleted before session
+            
+            ```
+        
+    * 纠结了许久，终于尝试了一下
+        ```
+            # cd /opt
+            # source activate python2
+            # ipython kernelspec install-self
+            # source deactivate
+        ```
+        * 这次可以了，分析原因可能是版本的不同导致的。
+        
+        
+        
 ## 批量添加用户
     
 * Ref : [Docker container with a PyData stack and JupyterHub server](https://github.com/twiecki/pydata_docker_jupyterhub)
@@ -115,56 +185,7 @@
         usr2,ps2
     ```
     * Run : `# bash /tmp/add_user.sh /tmp/users`
-    
-    
-## 添加共享文件夹
 
-* 创建共享文件夹
-    `# mkdir /opt/shared_nbs`
-* 创建到用户的链接
-    `# ln -s /opt/shared_nbs /home/user_name`
-    
-    
-## 添加对 Python2的支持
-* JupyterHub的Docker 镜像提供的Notebooks只有 *python3* 
-* 熟悉 [conda](http://conda.pydata.org/docs/using/index.html) 用法
-* 参考 [Python 3 and 2 in IPython/Jupyter Notebook](http://stackoverflow.com/questions/29648412/anaconda-python-3-and-2-in-ipython-jupyter-notebook?rq=1)
-    * 创建并激活 *python2* 虚拟环境
-    ```
-        # conda create -p /opt/python2 python=2.7
-            -- 这里也可以用 *--name* 选项来指定名称
-        # source activate python2
-        # conda install jupyter
-        # jupyter kernelspec install-self
-        # source deactive
-    ```
-    * 上述命令执行完之后会自动生成 */usr/local/share/jupyter/kernels/python2/kernel.json* ，修改为：
-    ```
-        {
-         "display_name": "Python 2",
-         "language": "python",
-         "argv": [
-          "/opt/python2/bin/python",
-          "-m",
-          "ipykernel",
-          "-f",
-          "{connection_file}"
-         ],
-         "env":{"PYTHONHOME":"/opt/python2/bin/python"}
-        }
-    ```
-    * 这里就可以在 *New* 中看到 *Python-2* 了，但有个问题，
-        * 当单击 *Python-2* 会新建一个 Notebook ，可是 *Web* 页面上马上提示 *Dead-kernel* ，并访问是否 *restart*
-        * 而终端上提示：
-            ```
-                ImportError: No module named site
-                KernelRestarter: restarting kernel
-                restarted failed!
-                Kernel deleted before session
-            
-            ```
-    * 
-    
     
 ## Ref    
 ### 添加数据容器
@@ -192,3 +213,10 @@ RUN chmod g+s /opt/shared_nbs
 
 VOLUME /opt/shared_nbs
 ```
+
+## 用nginx做反向代理
+
+* [jupyterhub nginx reverse proxy](http://stackoverflow.com/questions/35419414/jupyterhub-nginx-reverse-proxy)
+* [ (HTTP 403: Forbidden)](https://gitter.im/jupyter/jupyterhub/archives/2015/11/03)
+
+* 

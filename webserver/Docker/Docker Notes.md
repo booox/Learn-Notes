@@ -960,3 +960,12 @@
 * In Dockerfile文件中， *ADD* 与 *COPY* 的区别
     * *ADD* : The *ADD* instruction copies new files, directories or remote file URLs from `<src>` and adds them to the filesystem of the container at the path `<dest>`. [ADD](https://docs.docker.com/engine/reference/builder/#add)
     * *COPY* : The *COPY* instruction copies new files or directories from `<src>` and adds them to the filesystem of the container at the path `<dest>`. [COPY](https://docs.docker.com/engine/reference/builder/#copy)
+    
+    
+* Docker 
+    `RUN python -c "import numpy, scipy, pandas, matplotlib, matplotlib.pyplot, sklearn, seaborn, statsmodels, theano"`
+    * bash: `nohup ipython notebook -c 'from Check.check import *'`
+    
+    
+    
+    
