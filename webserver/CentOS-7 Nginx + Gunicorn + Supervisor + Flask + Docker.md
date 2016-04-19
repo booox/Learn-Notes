@@ -239,6 +239,21 @@
 * 让nginx在foreground (not as a daemon)模式下运行
     `$ sudo echo "daemon off" >>/etc/nginx/nginx.conf`
     
+* 添加nginx虚拟主机
+    * */etc/nginx/conf.d/flask.conf* 
+    ```
+        server{
+            listen  80;
+            #server_name    localhost;
+            
+            location / {
+                proxy_pass http://localhost:5008/;
+                proxy_set_header Host $host;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            }        
+        }    
+    ```
+    
 * 再次修改 *supervisord.conf* 文件，让 Supervisor 来管理 Nginx
     * */etc/supervisord.conf* 在末尾添加
         ```

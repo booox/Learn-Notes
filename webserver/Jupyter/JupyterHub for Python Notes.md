@@ -87,6 +87,12 @@
 * JupyterHub的Docker 镜像提供的Notebooks只有 *python3* 
 * 熟悉 [conda](http://conda.pydata.org/docs/using/index.html) 用法
 * 参考 [Python 3 and 2 in IPython/Jupyter Notebook](http://stackoverflow.com/questions/29648412/anaconda-python-3-and-2-in-ipython-jupyter-notebook?rq=1)
+    * 安装了其他软件
+    ```
+        # apt-get update && apt-get install -y vim
+        # alias vi=vim
+    ```
+    
     * 创建并激活 *python2* 虚拟环境
     ```
         # conda create -p /opt/python2 python=2.7
@@ -97,11 +103,6 @@
         # conda install -y jupyter
         # jupyter kernelspec install-self   # 这个有问题，用这个：ipython kernelspec install-self
         # source deactivate
-    ```
-    * 安装了其他软件
-    ```
-        # apt-get update && apt-get install -y vim
-        # alias vi=vim
     ```
     * 上述命令执行完之后会自动生成 */usr/local/share/jupyter/kernels/python2/kernel.json* ：
     ```
@@ -203,15 +204,15 @@
 * using a simple Dockerfile for mydata, the so-called data-only container:
 ```
 
-FROM ubuntu
-RUN addgroup jupyter
+    FROM ubuntu
+    RUN addgroup jupyter
 
-RUN mkdir /opt/shared_nbs
-RUN chgrp -R jupyter /opt/shared_nbs
-RUN chmod a+rwx /opt/shared_nbs
-RUN chmod g+s /opt/shared_nbs
+    RUN mkdir /opt/shared_nbs
+    RUN chgrp -R jupyter /opt/shared_nbs
+    RUN chmod a+rwx /opt/shared_nbs
+    RUN chmod g+s /opt/shared_nbs
 
-VOLUME /opt/shared_nbs
+    VOLUME /opt/shared_nbs
 ```
 
 ## 用nginx做反向代理

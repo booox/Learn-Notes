@@ -117,3 +117,10 @@
 ## Supervisor with Nginx
 
 * The ngix process must start in foreground (not as a daemon) to be controlled by supervisor. 
+
+
+## Question and Answer
+
+* `[emerg] 13420#0: bind() to 0.0.0.0:8000 failed (13: Permission denied)`
+
+
