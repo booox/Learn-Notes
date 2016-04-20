@@ -319,6 +319,15 @@
     4. set Nginx as a service
         `$ sudo systemctl enable nginx.service`
         
+* *lsof* : lists openfiles
+    * 在Unix中，一切都是文件，包括网络套接口。
+    
+    * 显示与指定端口相关的网络信息，查阻止端口
+        `# lsof -i :22`
+        
+    * 显示所有连接
+        `# lsof -i`
+        
 * *Systemctl* Usage
     以docker服务为例
         ```
@@ -457,4 +466,18 @@
 
 * `ps aux | grep nginx`
 
+## About SELinux
 
+* check SELinux allowed to bind to the whic ports
+    ```
+        $ sudo semange port -l | grep http_port_t
+        http_port_t                    tcp      80, 81, 443, 488, 8008, 8009, 8443, 9000
+    
+    ```
+* Add port you want to bind out to the list
+    `$ sudo semanage port -a -t http_port_t -p tcp 8090`
+    
+* 查看当前文件夹内包含 *listen* 的所有文件
+    `$ grep -R listen *`
+    
+    flask.conf:     listen  [::]:80 ipv6only=on default_server;

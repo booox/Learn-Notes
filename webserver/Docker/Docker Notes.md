@@ -935,7 +935,7 @@
 -[] []()
 
 # Question & Answer
-
+ 
 * `$ sudo docker pull ubuntu:12.04`
     * = `$ sudo docker pull registry.hub.docker.com/ubuntu:12.04`
         * Download the *12.04* tagged image from the *ubuntu* repository on the registry server *registry.hub.docker.com* 

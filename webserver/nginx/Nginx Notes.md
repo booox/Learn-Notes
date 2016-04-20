@@ -122,5 +122,43 @@
 ## Question and Answer
 
 * `[emerg] 13420#0: bind() to 0.0.0.0:8000 failed (13: Permission denied)`
-
-
+    * This will most likely be related to SELinux
+        ```
+            semanage port -l | grep http_port_t
+            http_port_t                    tcp      80, 81, 443, 488, 8008, 8009, 8443, 9000
+        ```
+        * SELinux in *enforcing* mode http is only allowed to bind to the listed ports.
+    * Add the ports you want to bind on to the list
+        `semanage port -a -t http_port_t -p tcp 8090`
+        
+* `nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)`
+    * If I run:
+        ```
+            $ sudo lsof -i :80
+            [root@localhost ~]# lsof -i :80
+            COMMAND   PID  USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+            nginx   15480 nginx    6u  IPv4  14939      0t0  TCP *:http (LISTEN)
+            nginx   15954  root    6u  IPv6 936801      0t0  TCP *:http (LISTEN)
+            
+            reset and run again:
+[root@localhost ~]# lsof -i :80
+COMMAND PID  USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+nginx   683  root    6u  IPv4  15547      0t0  TCP *:http (LISTEN)
+nginx   683  root    7u  IPv6  15548      0t0  TCP *:http (LISTEN)
+nginx   685 nginx    6u  IPv4  15547      0t0  TCP *:http (LISTEN)
+nginx   685 nginx    7u  IPv6  15548      0t0  TCP *:http (LISTEN)
+        ```
+        * 这里有两个用户同时在运行nginx: *nginx* 和 *root*
+        
+    * Run `netstat -lntp |grep :80`
+        ```
+            [root@localhost ~]# netstat -lntp |grep :80
+            tcp        0      0 0.0.0.0:8008            0.0.0.0:*               LISTEN      683/nginx: master p 
+            tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      683/nginx: master p 
+            tcp6       0      0 :::80                   :::*                    LISTEN      683/nginx: master p 
+        
+        ```
+    
+    
+        * Run, `$ sudo fuser -k 80/tcp `
+            `sudo: fuser: command not found`

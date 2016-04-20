@@ -75,14 +75,6 @@
                 
     
     
-## 添加共享文件夹
-
-* 创建共享文件夹
-    `# mkdir /opt/shared_nbs`
-* 创建到用户的链接
-    `# ln -s /opt/shared_nbs /home/user_name`
-    
-    
 ## 添加对 Python2的支持
 * JupyterHub的Docker 镜像提供的Notebooks只有 *python3* 
 * 熟悉 [conda](http://conda.pydata.org/docs/using/index.html) 用法
@@ -143,41 +135,47 @@
 ## 批量添加用户
     
 * Ref : [Docker container with a PyData stack and JupyterHub server](https://github.com/twiecki/pydata_docker_jupyterhub)
+* 添加共享文件夹
 
+    * 创建共享文件夹
+        `# mkdir /opt/shared_notebooks`
+        * 创建到用户的链接，这个是在 *add_user.sh* 里自动实现
+            `# ln -s /opt/shared_nbs /home/user_name`
+    
 * *add_user.sh* & *users*
     * *add_user.sh*
     ```bash
-        #!/bin/bash
+#!/bin/bash
 
-        if [ $# -lt 1 ]
-          then
-            echo "Usage : $0 userfile"
-            exit
-        fi
+if [ $# -lt 1 ]
+  then
+    echo "Usage : $0 userfile"
+    exit
+fi
 
-        if [ $(id -u) -eq 0 ]; then
+if [ $(id -u) -eq 0 ]; then
 
-        while IFS=, read username password; do
+while IFS=, read username password; do
 
-            if egrep "^$username" /etc/passwd >/dev/null;  then
-                echo "$username exists!"
-            else
-                password=$(perl -e 'print crypt($ARGV[0], "password")' $password)
+    if egrep "^$username" /etc/passwd >/dev/null;  then
+        echo "$username exists!"
+    else
+        password=$(perl -e 'print crypt($ARGV[0], "password")' $password)
 
-                if  useradd -m -p "$password" "$username" >/dev/null; then
-                        echo "User '$username' has been added to system!"
-                else
-                        echo "Failed to add  user '$username'!"
-                fi
-            fi
-            ln -s /opt/shared_nbs /home/$username
-
-        done <"$@"
-
+        if  useradd -m -p "$password" "$username" >/dev/null; then
+                echo "User '$username' has been added to system!"
         else
-              echo "Only root may add a user to the system"
-              exit
+                echo "Failed to add  user '$username'!"
         fi
+    fi
+    ln -s /opt/shared_notebooks /home/$username
+
+done <"$@"
+
+else
+      echo "Only root may add a user to the system"
+      exit
+fi
     
     ```
     * *users*
@@ -187,6 +185,44 @@
     ```
     * Run : `# bash /tmp/add_user.sh /tmp/users`
 
+    * *del_user.sh*
+```
+#!/bin/bash
+
+if [ $# -lt 1 ]
+  then
+    echo "Usage : $0 userfile"
+    exit
+fi
+
+if [ $(id -u) -eq 0 ]; then
+
+while IFS=, read username password; do
+
+    if egrep "^$username" /etc/passwd >/dev/null;  then
+        
+        password=$(perl -e 'print crypt($ARGV[0], "password")' $password)
+
+        if  userdel -r "$username" >/dev/null; then
+                echo "User '$username' has been deleted to system!"
+        else
+                echo "Failed to delete  user '$username'!"
+        fi       
+        
+    else
+        echo "$username doesn't exists!"
+    fi
+
+done <"$@"
+
+else
+      echo "Only root may delete a user to the system"
+      exit
+fi
+
+
+```
+    
     
 ## Ref    
 ### 添加数据容器
@@ -221,3 +257,6 @@
 * [ (HTTP 403: Forbidden)](https://gitter.im/jupyter/jupyterhub/archives/2015/11/03)
 
 * 
+
+    * `docker run -p 8000:8000 --name jhub1 jupyter/jupyterhub jupyterhub -f /srv/jupyterhub/jupyterhub_config.py --no-ssl`
+    
