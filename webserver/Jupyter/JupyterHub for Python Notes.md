@@ -356,3 +356,23 @@ fi
     * 照上面装，装好就出问题了
     
     
+    
+    
+    
+    
+    
+    
+# Problem
+
+* 运行Docker
+    `docker run -d -p 8000:8000 --name jhub jupyter/jupyterhub jupyterhub --no-ssl --log-file /var/log/jupyterhub.log`
+    
+
+
+* `tail -f /var/log/jupyterhub.log`
+    `JupyterHub log:100] 200 GET /hub/api/authorizations/cookie/jupyter-hub-token-lunn/[secret] (lunn@127.0.0.1)`
+    
+* `tail -f /var/log/nginx/error.log`
+    `[warn] 3495#0: *897 an upstream response is buffered to a temporary file`
+    
+* 访问 8000端口正常，访问 8848 页面可以显示首页等，但不能创建notebook，提示 Not Found

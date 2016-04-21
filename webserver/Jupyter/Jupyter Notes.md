@@ -70,6 +70,7 @@
 - [Advanced Jupyter Notebook Tricks — Part I](http://blog.dominodatalab.com/lesser-known-ways-of-using-notebooks/)
 - [A portable Jupyter (IPython) install on Windows with an R kernel](http://www.walkingrandomly.com/?p=5734)
 - [Brian Granger: All About Jupyter](https://www.youtube.com/watch?v=GMKZD1Ohlzk)
+- [Jonathan Frederic: The past, present, and future of Jupyter and IPython](https://www.youtube.com/watch?v=7eQYZGf9--0&index=11&list=PLCDlZzVd_jn8JvSPVzf4CKGvz4ttMlcAL)
 - []()
 
 ## JupyterHub
