@@ -109,7 +109,7 @@
 - [Nginx配置及应用场景之基本配置](http://www.blogways.net/blog/2013/10/21/nginx-2.html)
 - [Nginx配置及应用场景之高级配置](http://www.blogways.net/blog/2013/10/22/nginx-3.html)
 - [nginx的启动流程和接客流程](http://www.cnblogs.com/wully/archive/2011/12/23/2299792.html)
-- []()
+- [Virtual Hosts on nginx (CSC309)](https://gist.github.com/soheilhy/8b94347ff8336d971ad0#step-9-optional----redirecting-based-on-host-name)
 - [Nginx from ubuntu wiki](http://wiki.ubuntu.com.cn/Nginx)
 - []()
  
@@ -141,12 +141,12 @@
             nginx   15954  root    6u  IPv6 936801      0t0  TCP *:http (LISTEN)
             
             reset and run again:
-[root@localhost ~]# lsof -i :80
-COMMAND PID  USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
-nginx   683  root    6u  IPv4  15547      0t0  TCP *:http (LISTEN)
-nginx   683  root    7u  IPv6  15548      0t0  TCP *:http (LISTEN)
-nginx   685 nginx    6u  IPv4  15547      0t0  TCP *:http (LISTEN)
-nginx   685 nginx    7u  IPv6  15548      0t0  TCP *:http (LISTEN)
+            [root@localhost ~]# lsof -i :80
+            COMMAND PID  USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+            nginx   683  root    6u  IPv4  15547      0t0  TCP *:http (LISTEN)
+            nginx   683  root    7u  IPv6  15548      0t0  TCP *:http (LISTEN)
+            nginx   685 nginx    6u  IPv4  15547      0t0  TCP *:http (LISTEN)
+            nginx   685 nginx    7u  IPv6  15548      0t0  TCP *:http (LISTEN)
         ```
         * 这里有两个用户同时在运行nginx: *nginx* 和 *root*
         
@@ -162,3 +162,18 @@ nginx   685 nginx    7u  IPv6  15548      0t0  TCP *:http (LISTEN)
     
         * Run, `$ sudo fuser -k 80/tcp `
             `sudo: fuser: command not found`
+* `"proxy_pass" cannot have URI part in location given by regular expression  `
+    * 相关代码如下：
+    ```
+        location ~* /(user/[^/]*)/(api/kernels/[^/]+/channels|terminals/websocket)/? {
+            proxy_pass http://localhost:8000/;
+
+            proxy_set_header X-Real-IP $remote_addr;
+        }
+    
+    ```
+    * 原因是当 *location* 中使用了正则表达式之后，则 *proxy_pass* 不能以 */* 结尾，删除即可。
+    
+    
+    
+    

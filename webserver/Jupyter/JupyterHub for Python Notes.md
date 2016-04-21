@@ -10,11 +10,12 @@
 - [x] 批量添加用户
 - [x] 添加共享文件夹
 - [x] 安装Python 2 Kernel
+- [x] 设置 jupyterhub_config.py
 - [] 用nginx做反向代理
-- [] 中文化界面
+- [] JupyterHub 多线程支持？
+- [] 中文界面
 - [] 用户下载指定文件
 - [] 上传文件
-- [] 设置 jupyterhub_config.py
 - [] 使用仅用于存储的容器
 - [] 自动备份数据
 - [] 使用GitHub账户登录（认证）
@@ -192,7 +193,7 @@ fi
 if [ $# -lt 1 ]
   then
     echo "Usage : $0 userfile"
-    exit
+    exitvi 
 fi
 
 if [ $(id -u) -eq 0 ]; then
@@ -255,8 +256,103 @@ fi
 
 * [jupyterhub nginx reverse proxy](http://stackoverflow.com/questions/35419414/jupyterhub-nginx-reverse-proxy)
 * [ (HTTP 403: Forbidden)](https://gitter.im/jupyter/jupyterhub/archives/2015/11/03)
+* [jupyterhub-deploy-data301](https://github.com/booox/jupyterhub-deploy-data301)
+
+* 学习一下 nginx 的配置代码用法
+
 
 * 
 
     * `docker run -p 8000:8000 --name jhub1 jupyter/jupyterhub jupyterhub -f /srv/jupyterhub/jupyterhub_config.py --no-ssl`
+    
+    
+## 设置 jupyterhub_config.py
+
+* 生成 *jupyterhub_config.py* 
+    ```
+        # cd /srv/jupyterhub
+        # jupyterhub --generate-config
+        writing default config to: jupyterhub_config.py
+    ```
+    
+    * 也可以通过 *-f* 来加载特定的配置文件夹
+        `jupyterhub -f /path/to/jupyterhub_config.py`
+        
+    * 测试是否有效
+    ```
+        # vi  jupyterhub_config.py
+        c.Authenticator.whitelist = {'mal', 'zoe', 'inara', 'kaylee'}
+    ```
+        * 如果只有括号里的可以访问，则说明配置文件在起作用。
+
+        
+## use check()
+
+* [Start notebook by linking to myapp](http://nbviewer.jupyter.org/github/frankr6591/AppNotebooks/blob/master/nbExample1.ipynb)
+* [import fails on jupyter-notebook](http://stackoverflow.com/questions/35850136/import-fails-on-jupyter-notebook)
+* [Import python package from local directory into interpreter](http://stackoverflow.com/questions/1112618/import-python-package-from-local-directory-into-interpreter)
+
+### nb extensions
+* [Loading notebook extensions for all users on the hub](https://github.com/jupyterhub/jupyterhub/issues/305)
+
+
+
+
+
+# 先运行Docker，带上log文件，然后进入bash后再运行jupyterhub
+
+## 运行Docker
+
+* 运行Docker bash:    `$ docker run -d -p 8000:8000 --name jhub jupyter/jupyterhub jupyterhub --no-ssl --log-file /var/log/jupyterhub.log`
+
+* 进入Docker container: `$ docker exec -it juhb bash`
+
+* 可查看 *jupyterhub.log*
+    `# tail -f /var/log/jupyterhub.log`
+
+* 生成 *jupyterhub* 配置文件夹：
+    `# jupyterhub --generate-config`
+    
+* 安装必要软件 更新 *apt-get* 及安装
+    `# pip install jupyter`
+    `# apt-get update`
+    `# apt-get -y install vim`
+    
+* 修改 *jupyterhub_config.py*
+    * ref: [jupyterhub configuration](https://jupyterhub.readthedocs.org/en/latest/getting-started.html#configuring-authentication)
+    ```
+        # jupyterhub_config.py
+        c = get_config()
+
+        # put the log file in /var/log
+        c.JupyterHub.log_file = '/var/log/jupyterhub.log'
+
+        # specify users and admin
+        c.Authenticator.whitelist = {'rgbkrk', 'minrk', 'jhamrick'}
+        c.Authenticator.admin_users = {'jhamrick', 'rgbkrk'}
+
+        # start single-user notebook servers in ~/assignments,
+        # with ~/assignments/Welcome.ipynb as the default landing page
+        # this config could also be put in
+        # /etc/ipython/ipython_notebook_config.py
+        c.Spawner.notebook_dir = '~/assignments'
+        c.Spawner.args = ['--NotebookApp.default_url=/notebooks/Welcome.ipynb']
+    
+    ```
+* 在container中添加共享文件夹
+    ```
+        # mkdir /opt/shared_notebooks
+        # mkdir /opt/shared_notebooks/examples
+        # mkdir /opt/shared_notebooks/dashboard
+        # chmod a+rwx /opt/shared_notebooks
+        # chmod a+rwx /opt/shared_notebooks/examples
+        # chmod a+rwx /opt/shared_notebooks/dashboard
+    ```
+    
+* 批量添加用户
+    见上面
+    
+* 添加python2的支持
+    * 照上面装，装好就出问题了
+    
     
