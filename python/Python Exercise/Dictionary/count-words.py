@@ -4,7 +4,8 @@ import string
 import operator
 
 fname = raw_input('Enter filename:')
-if len(fname) < 1: fname = 'five little ducks.txt'
+if len(fname) < 1: 
+    fname = 'Little Prince.txt'
     
 try:
     fhand = open(fname)
@@ -24,5 +25,7 @@ for line in fhand:
 # 将获得的字典按值从大到小排序
 items = sorted(total_words.items(), key=operator.itemgetter(1), reverse=True)
 
-for item in items:
+# for item in items:
+for item in items[:30]:    
     print item[0], '\t', item[1]
+    

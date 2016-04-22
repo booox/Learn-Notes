@@ -257,6 +257,7 @@ fi
 * [jupyterhub nginx reverse proxy](http://stackoverflow.com/questions/35419414/jupyterhub-nginx-reverse-proxy)
 * [ (HTTP 403: Forbidden)](https://gitter.im/jupyter/jupyterhub/archives/2015/11/03)
 * [jupyterhub-deploy-data301](https://github.com/booox/jupyterhub-deploy-data301)
+* [nginx.conf.j2 - compmodels/jupyterhub-deploy](https://github.com/compmodels/jupyterhub-deploy/blob/master/roles/proxy/templates/nginx.conf.j2)
 
 * 学习一下 nginx 的配置代码用法
 
