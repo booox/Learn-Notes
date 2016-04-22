@@ -54,6 +54,8 @@
 * chmod 改变权限有两种方法
     * 符号类型改变文件权限:
         chmod (ugoa) (+-=) (rwx) (file|path)
+    * `chmod u+x somefile` : grantly only the owner of that file execution permissions
+    * `chmod +x somefile` is the same as `chmod a+x somefile`
         
 * `$ echo $PATH`
 
@@ -481,3 +483,6 @@
     `$ grep -R listen *`
     
     flask.conf:     listen  [::]:80 ipv6only=on default_server;
+
+    
+* There are no `/usr/local/bin` `no suc file or `
