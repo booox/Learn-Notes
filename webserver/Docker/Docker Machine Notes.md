@@ -90,7 +90,7 @@ Docker Machine
         Looks like something went wrong... Press any key to continue...
     
     ```
-        * Rebet and Solved it.
+        * 重启后，错误自动消失。
     * 再次启动，弹出查找 *bash.exe* 对话框
         * 修改 *bash.exe* 位置可以
         
@@ -114,6 +114,7 @@ Docker Machine
 
 1. Use `docker run` to download and run `busybox` with a simple ‘echo’ command.
     `$ docker run busybox echo hello world`
+    * 这个一直下不完整，没测试成功。
 
 2. Get the host IP address.
     ```
@@ -189,7 +190,66 @@ Docker Machine
         
         ```
         * You can change the *default* string above to make this *LaunchAgent* start any machine(s) you desire.
+        
+        
 
+# Use Docker Machine to provision hosts on cloud providers
+
+
+
+
+# Understand Machine concepts and get help
+
+* Docker Machine allows you to provision Docker machines in a variety of environments
+    * reside on your local system
+    * on cloud providers
+    * or on bare metal servers (physical computers)
+    
+* Docker Machine creates a Docker host, and you use the Docker Engine client as needed to build images and create containers on the host.
+
+## Drivers for creating machines
+
+* To create a virtual machine, you supply Docker Machine with the name of the driver you want use. 
+
+* The driver determines where the virtual machine is created.
+    *  on a local Mac or Windows system : is typically Oracle VirtualBox
+    * physical machines: a generic driver is provided
+    * on clound providers: supports such as AWS, Azure, Digital Ocean
+    
+## Default base operating systems for local and cloud hosts
+
+* Since Docker runs on Linux, each VM that Docker Machine provisions relies on a base operating system. 
+    * For VirtualBox : [boot2docker](https://github.com/boot2docker/boot2docker)
+    * For cloud providers: Ubuntu 12.04+
+* You can change this default when you create a machine.
+* [ list of supported operating systems](https://docs.docker.com/machine/drivers/os-base/)
+
+## IP addresses for Docker hosts
+
+* For each machine you create, the Docker host address is the IP address of the Linux VM.
+* This address is assigned by the `docker-machine create` subcommand.
+* You use the `docker-machine ls` command to list the machines you have created. 
+* The `docker-machine ip <machine-name>` command returns a specific host’s IP address.
+
+## Configuring CLI environment variables for a Docker host
+
+* Before you can run a `docker` command on a machine, you need to configure your command-line to point to that machine. 
+* The `docker-machine env <machine-name>` subcommand outputs the configuration command you should use.
+* [Docker Machine subcommand reference](https://docs.docker.com/machine/reference/)
+
+## Crash Reporting
+
+* To help `docker-machine` be as stable as possible, we added a monitoring of crashes whenever you try to `create` or `upgrade` a host. 
+* This will send, over HTTPS, to Bugsnag.
+* This data is sent to help us pinpoint recurring issues with docker-machine and will only be transmitted in the case of a crash of docker-machine.    
+* If you wish to opt out of error reporting, you can create a `no-error-report` file in your `$HOME/.docker/machine` directory, and Docker Machine will disable this behavior. 
+    `$ mkdir -p ~/.docker/machine && touch ~/.docker/machine/no-error-report`
+    * Leaving the file empty is fine -- Docker Machine just checks for its presence.
+
+        
+        
+        
+        
 # Links
 
 * [the latest release from GitHub](https://github.com/docker/machine/releases)

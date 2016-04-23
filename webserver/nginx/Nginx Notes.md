@@ -103,6 +103,8 @@
     * Create Index.html page.
         `echo “This is ITzGeek Home” > /usr/share/nginx/html/itzgeek/index.html`
     * Test it.
+    
+    
  
 # Links
  
