@@ -43,3 +43,8 @@
 - [] Notepad++ , Zen Coding, Emmet : for Flask template
 - [] Calendar: Japan Midori Life Book 3/5/10 / TW 珠友
 - [] Fiddler : Web debugger tool 手机抓包
+
+
+# software share
+
+* Excel 创建电子档案，使用vlookup快速获取相关信息
