@@ -280,7 +280,17 @@ Docker Machine
         default   *        virtualbox   Running   tcp://192.168.99.100:2376           v1.11.0
         dev       -        virtualbox   Running   tcp://192.168.99.101:2376           v1.11.0    
     ```
-
+    * 连接到新建的 *centos7* 主机.
+        `$ eval "$(docker-machine env centos7)"`
+        
+    * 再 *ls* 一下
+    ```
+        $ docker-machine ls
+        NAME      ACTIVE   DRIVER       STATE     URL                         SWARM   DOCKER    ERRORS
+        centos7   *        generic      Running   tcp://192.168.92.61:2376            v1.11.0
+        default   -        virtualbox   Running   tcp://192.168.99.100:2376           v1.11.0
+        dev       -        virtualbox   Running   tcp://192.168.99.101:2376           v1.11.0    
+    ```
 
 
 # Use Docker Machine to provision hosts on cloud providers
