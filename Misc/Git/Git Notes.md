@@ -49,6 +49,11 @@
     ```
 3. connect local and remote:
     `$ git remote add origin https://github.com/username/esse.git`
+    * requirements
+        * the local repo and remote repo both exist
+        * the remote repo is empty
+        * the first push after the connect remote repo, you need use this command
+            `$ git push -u origin master`
 	
 ### Remember the authen?
 
@@ -307,6 +312,23 @@ DIFFERENT WAYS TO ADD
             * `$ git rm -r --cached some-directory`
             * `$ git commit -m 'Remove the now ignored directory "some-directory"'`
             * `$ git push origin master`
+    
+* 如果本地仓库是 *fork* 远程仓库的，要获取主仓库的更新，则用：
+    `$ git fetch`
+    
+* 如何切换分支
+    * 切换到主分支：`$ git checkout master`
+    * 切换到上一分支：`$ git checkout -`
+    * 切换到tag名字为*7a*的分支：`$ git checkout 7a`
+* 如何创建新分支
+    `$ git checkout -b branch_name`
+    or
+    `$ git branch branch_name`
+* 如何合并分支
+    * 将 branch_name 分支的内容合并到当前的分支里
+        * 对分支进行自动合并： `$ git merge branch_name`
+        * 如果合并出现冲突，则需自行对相关文件进行合并修订，完成后再用`git add`命令完成添加。
+        
     
     
     
