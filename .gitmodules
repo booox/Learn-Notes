@@ -4,3 +4,6 @@
 [submodule "python/projects/flaskweb/flasky"]
 	path = python/projects/flaskweb/flasky
 	url = https://github.com/booox/flasky.git
+[submodule "python/Python Courses/OpenMindClub Data102/Data"]
+	path = python/Python Courses/OpenMindClub Data102/Data
+	url = https://github.com/booox/Data102.git
