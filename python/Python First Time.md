@@ -49,7 +49,7 @@
 	* buffer()用在2.x，memoryview()用在python3(python 2.7中也添加了此用法)
 	* 在使用很大的数据时，应该使用此函数
 	* 作用：引用了支持buffer/memoryview的对象（如string）的一个切片，但不占用额外的内存空间
-	* 示例：
+	* 示例：gs
 		```
 			>>> s = 'Hello world'
 			>>> t = buffer(s, 6, 5)
