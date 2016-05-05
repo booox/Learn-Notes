@@ -62,6 +62,22 @@
     * This empty configuration file has descriptions of all configuration variables and their default values.
 * load a specific config file with
     `jupyterhub -f /path/to/jupyterhub_config.py`
+
+# How to add Python packages into jupyter/notebook
+
+## From notebook cell
+    ```
+        import pip    
+        def install(package):
+           pip.main(['install', package])
+
+        install('BeautifulSoup4')
+    ```
+
+# Jupyter/notebook
+
+* notebook shortcuts 
+    * how to select *Markdown/code*
     
 # links
 
@@ -83,8 +99,9 @@
 - [Jupyter : Ipython, State Of Multiuser And Real Time Collaboration | SciPy 2015 | Matthias Bussonnier](https://www.youtube.com/watch?v=DyGoHAP8B_s)
 - []()
 
-## Resources
+## Gallery of Notebooks
 
-- [Good: A gallery of interesting IPython Notebooks](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks#social-data)
+- [Good: A gallery of interesting IPython Notebooks](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks)
 - [Building Interactive Dashboards with Jupyter](http://blog.dominodatalab.com/interactive-dashboards-in-jupyter/)
+- [Links to the best IPython and Jupyter Notebooks.](http://nb.bianp.net/sort/views/)
 - []()

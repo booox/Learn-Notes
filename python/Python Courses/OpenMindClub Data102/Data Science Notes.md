@@ -101,6 +101,48 @@ Data Science
     * 理解什么是 Simpson's Paradox
 
 
+# 数值计算
+
+## Numpy基础
+
+### Base Concepts
+* Vectors
+* Matrics
+* Arrays
+* Vectorized computing
+
+* Define numpy array object
+
+    ```
+        import numpy as np        
+        np_arr = np.array([10, 20, 30, 1])
+    ```
+
+* Array Attributes
+    ```
+        np_arr.dtype
+    
+    ```
+* Array Methods
+    ```
+        np.arange(5)
+        np.linspace(0, 1, 4)
+        np.logspace(1, 3, 4)
+        
+        # creating random arrays
+        np.random.randn(5)
+        normal10 = np.random.normal(10, 3, 5)  # 正态分布，（期望值，偏差，个数）
+        
+        mask = normal10 > 9
+    ```
+    
+    
+
+
+## Array的基本操作
+## 用Array解线性代数
+## 补充阅读/练习作业
+
 
 
 

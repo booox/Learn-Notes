@@ -200,6 +200,22 @@
 * pip update
     * Windows : `python -m pip install --upgrade pip`
     * Linux : `pip install update pip`
+* pip 源
+    * 手动指定源 `-i`
+        `pip install flask -i http://pypi.douban.com/simple`
+    * 修改配置文件
+        * *pip.ini*
+            ```
+                [global]
+                index-url = http://pypi.douban.com/simple
+            ```
+        * Linux: `~/.pip/pip.conf`
+        * Windows: `%HOMEPATH%\pip\pip.ini`
+    * 常用国内pip源
+        * http://pypi.douban.com/  豆瓣
+        * http://pypi.hustunique.com/  华中理工大学
+        * http://pypi.sdutlinux.org/  山东理工大学
+        * http://pypi.mirrors.ustc.edu.cn/  中国科学技术大学
     
 ## Lists
 

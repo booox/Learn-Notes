@@ -195,7 +195,11 @@
 # Q & A
 
 * Q: [How do I set a user environment variable? (permanently, not session)](http://unix.stackexchange.com/questions/21598/how-do-i-set-a-user-environment-variable-permanently-not-session) 
-    * A: 
+    *  如，要添加到 `/opt/miniconda2/bin` 到系统变量中
+            `# vi /etc/profile`
+            `export PATH=$PATH:/opt/miniconda2/bin`c
+            `# source /etc/profile`
+            `# echo $PATH` ,确认conda已经添加进去
     
 * ‘Ifconfig’ Command Not Found In CentOS 7 Minimal Installation – A Quick Tip To Fix It
     * set network ONBOOT 

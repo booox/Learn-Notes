@@ -918,6 +918,7 @@
 -[]  [Sean's Notes Docker blog](http://seanlook.com/tags/docker/)
 -[]  [Docker常用命令](http://blog.csdn.net/we_shell/article/details/38368137)
 -[]  [Docker run reference](https://docs.docker.com/engine/reference/run/)
+-[]  [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
 
 -[]  [瓜哥blog - Docker](http://glovee.net/category/docker)
 
