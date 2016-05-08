@@ -4,7 +4,8 @@
 - [ ] Read phelp: unittest
 - [ ] Flask database bakup & restore
 - [ ] send *send_async_email()* to a *Celery* task queue.
-- [ ] 
+- [ ] [Graphical illustration](http://docs.scipy.org/doc/numpy/reference/generated/numpy.linspace.html)
+    * `import matplotlib.pyplot as plt` 
 
 - [] [python web 部署：nginx + gunicorn + supervisor + flask 部署笔记](https://www.textarea.com/rsj217/python-web-bushu-nginx-gunicorn-supervisor-flask-bushu-biji-107/)
 
