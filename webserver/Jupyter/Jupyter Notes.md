@@ -73,6 +73,11 @@
 
         install('BeautifulSoup4')
     ```
+    
+## From Terminal
+    ```
+        python -m pip install numpy
+    ```
 
 # Jupyter/notebook
 

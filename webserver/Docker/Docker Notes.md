@@ -969,6 +969,12 @@
     `RUN python -c "import numpy, scipy, pandas, matplotlib, matplotlib.pyplot, sklearn, seaborn, statsmodels, theano"`
     * bash: `nohup ipython notebook -c 'from Check.check import *'`
     
-    
+* `Docker host need to have IPv4 Forwarding enabled`
+    * 
+    ```
+        # vi /usr/lib/sysctl.d/docker-ip-forwarding.conf
+            net.ipv4.ip_forward = 1
+        # /etc/init.d/network restart
+    ```
     
     
