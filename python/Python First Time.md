@@ -197,7 +197,7 @@
         * 配置这个之后，导致没有办法直接从cmd进入python shell，也没有办法打开ipython，
         * 带来很多不方便，最后决定还是去掉了。
         
-* pip update
+* update pip
     * Windows : `python -m pip install --upgrade pip`
     * Linux : `pip install update pip`
 * pip 源
@@ -216,6 +216,10 @@
         * http://pypi.hustunique.com/  华中理工大学
         * http://pypi.sdutlinux.org/  山东理工大学
         * http://pypi.mirrors.ustc.edu.cn/  中国科学技术大学
+        
+* pip更新包
+    `pip install --upgrade pack-name`
+    `pip install -U pack-name`
     
 ## Lists
 

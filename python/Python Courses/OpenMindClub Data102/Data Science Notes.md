@@ -147,7 +147,9 @@ Data Science
 
 
 
+# Links
 
+-[] [MCS 507: Mathematical, Statistical and Scientific Software](http://homepages.math.uic.edu/~jan/mcs507f11/)
 
 
 
