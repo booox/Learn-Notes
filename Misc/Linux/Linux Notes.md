@@ -490,3 +490,9 @@
 
     
 * There are no `/usr/local/bin` `no suc file or `
+
+
+# Question & Answer
+
+* 使用`apt-get install package-name`提示`Unable to locate package package-name`
+    * `apt-get update`
