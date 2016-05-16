@@ -20,7 +20,6 @@
 * JiFang Test System
     * add Rank
     * Done, Not, Never
-    * Ref: Driver Test Help APP
     
     * 练：
         * 顺序练习

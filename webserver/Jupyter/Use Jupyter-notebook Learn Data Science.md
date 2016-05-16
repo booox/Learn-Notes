@@ -32,7 +32,14 @@ s
         `* freetype, png`
     * 解决：
         ```
-            # apt-get -y install libfreetype6-dev
+            # apt-get -y install libfreetype6-devpyt
             # python -m pip install matplotlib
         ```
         
+### 已安装过的软件
+
+```
+    # python -m pip install numpy
+    # python -m pip install matplotlib
+    # python -m pip install pandas
+```

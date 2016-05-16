@@ -73,11 +73,39 @@
 
         install('BeautifulSoup4')
     ```
+    
+## From Terminal
+    ```
+        python -m pip install numpy
+    ```
+    
+    * 新建一个Terminal，执行
+        ```
+            # python -m pip install matplotlib
+        ```
+        
+        * 在安装 *matplotlib* 时提示错误：
+            `* The following required packages can not be built:`
+            `* freetype, png`
+        * 解决：
+            ```
+                # apt-get -y install libfreetype6-dev
+                # python -m pip install matplotlib
+            ```
 
 # Jupyter/notebook
 
 * notebook shortcuts 
     * how to select *Markdown/code*
+        * 在命令模式下(按ESC) 按 'Y' 为Code， 按'M' 为Markdown。
+        
+        
+        
+* 插入公式
+    
+    
+    
+    
     
 # links
 
@@ -104,4 +132,11 @@
 - [Good: A gallery of interesting IPython Notebooks](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks)
 - [Building Interactive Dashboards with Jupyter](http://blog.dominodatalab.com/interactive-dashboards-in-jupyter/)
 - [Links to the best IPython and Jupyter Notebooks.](http://nb.bianp.net/sort/views/)
+- []()
+
+## 关于公式
+
+- [MathJax basic tutorial and quick reference](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
+- [Online LaTeX Equation Editor](http://www.codecogs.com/latex/eqneditor.php)
+- []()
 - []()
