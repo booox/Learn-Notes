@@ -57,6 +57,9 @@
 	
 ### Remember the authen?
 
+
+
+
 [Which remote URL should I use?](https://help.github.com/articles/which-remote-url-should-i-use/)
 		
 		
@@ -64,14 +67,17 @@
 [Caching your GitHub password in Git](https://help.github.com/articles/caching-your-github-password-in-git/)
 		
 		
-		
+#### Linux
 
-		[Which remote URL should I use?](https://help.github.com/articles/which-remote-url-should-i-use/)
-		
-		
-		
-		[Caching your GitHub password in Git](https://help.github.com/articles/caching-your-github-password-in-git/)
-		
+1. In terminal:
+    `$ git config --global credential.helper cache`
+    * This will cache your password for 15 minutes.
+    
+2. To change the cache timeout:
+    `$ git config --global credential.helper 'cache --timeout=3600'`
+    * Set the cache to timeout after 1 hour (setting is in seconds)
+
+#### Windows		
 		$ git config --global core.editor "'D:\bak\MyDropBox\Dropbox\software\notepad++\notepad++.exe' -multiInst -nosession"
 		test
         
