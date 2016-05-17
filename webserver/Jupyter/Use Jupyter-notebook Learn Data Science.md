@@ -42,4 +42,9 @@ s
     # python -m pip install numpy
     # python -m pip install matplotlib
     # python -m pip install pandas
+    
 ```
+
+### 激活 ipywidgets
+    * In the terminal
+    `# python -m jupyter nbextension enable --py widgetsnbextension`
