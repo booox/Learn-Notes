@@ -335,6 +335,13 @@ DIFFERENT WAYS TO ADD
         * 对分支进行自动合并： `$ git merge branch_name`
         * 如果合并出现冲突，则需自行对相关文件进行合并修订，完成后再用`git add`命令完成添加。
         
-    
+* 如何保持fork到本地的仓库与源仓库的同步：
+    1. 首先添加主仓库地址到remote，名称为upstream
+        `git remote add upstream https://github.com/source_username/source.git`
+    2. 然后从upstream里fetch更新了的内容
+        `git fetch upstream`
+    3. 最后将fetch下来的内容merge到master分支里
+        `git checkout master`
+        `git merge upstream/master`
     
     
