@@ -977,4 +977,30 @@
         # /etc/init.d/network restart
     ```
     
+* `docker ps -f`
+    * [docker ps](https://docs.docker.com/engine/reference/commandline/ps/)
+    * The `status` filter matches containers by status.
+        * You can filter using `created`, `restarting`, `running`, `paused`, `exited` and `dead`.
+    * to filter for `running` containers:
+        * `$ docker ps --filter status=paused`
+    * to filter for `exited` containers:
+        * `$ docker ps --filter status=exited`
+    
+* 如何删除多个容器
+    * remove all containers that status is exited:
+        `$ docker rm $(docker ps -f status=exited)`
+    * remove all containers that status is created:
+        `$ docker rm $(docker ps -f status=created)`
+        * `-q` prints just the container ids (without column headers)
+        * `-f` allows you to filter your list of printed containers
+        
+    * Remove containers created before an other container
+        `docker rm $(docker ps -f before=9c49c11c8d21)`
+        
+    * Remove containers created after a certain container
+        `docker rm $(docker ps -f since=a6ca4661ec7f)`
+        
+* 删除images
+    * `docker rmi $(docker images -q -f "dangling=true")`
+    
     
