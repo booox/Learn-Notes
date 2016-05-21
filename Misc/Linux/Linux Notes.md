@@ -56,10 +56,74 @@
         chmod (ugoa) (+-=) (rwx) (file|path)
     * `chmod u+x somefile` : grantly only the owner of that file execution permissions
     * `chmod +x somefile` is the same as `chmod a+x somefile`
-        
+
+* chown 改变文件拥有者和群组
+    * 改变文件拥有者为mail用户，群组为mail组
+        `$ sudo chown mail:mail filename`
+    * 改变指定目录及子目录所有文件
+        `$ sudo chown -R mail:mail foldername/`
+    
 * `$ echo $PATH`
 
 * `$ env | grep LANG` check environment
+
+* find命令
+    * From: [LINUX 下查找指定文件](http://www.centrue.me/2011/09/01/linux-find/)
+    * 当 `find` 与`-exec`命令配合使用时：
+        * 可用 `{}`来代表 `find`查找到的文件名
+        * 并用 `\;` 来表示命令结束.
+            * `find . -type f -exec ls -l {} \;` : 在当前目录下（递归子目录）查找所有文件，并`ls`出来
+            * `find . -user root -exec sudo chown test:test {} \;` : 
+                * 在当前目录下（递归子目录）查找所有用户为`root`的文件或目录，
+                * 并修改所属用户和用户组为`test`
+    * 按名称查找
+        * `find . -name readme.txt` : 查找  所有名为readme.txt的文件 （递归子目录）
+        * `find . -name \*.txt` : 查找所有 名称以.txt结尾的文件（递归子目录）
+        * `find . -name "*.txt"` : 同上
+        * `find . -iname \*.txt` : 查找所有 名称以.txt结尾的文件，且不区分大小写（递归子目录）
+    * 按类型查找
+        * `find . -type d` : 查找当前目录下(递归子目录)的所有目录
+        * `find . -type f` : 查找当前目录下(递归子目录)的所有文件
+        * `find . -type l` : 查找当前目录下(递归子目录)的所有符号链接
+    * 按时间查找
+        * `find` 命令有三个选项用于按时间查找，单位为 **小时** :
+            * `mtime` : 上次修改时间
+            * `atime` : 上次读取或访问时间
+            * `ctime` : 上次文件状态变化的时间
+        * `find . -mtime -1` : 查找当前目录下(递归子目录)的所有1小时内修改的文件和目录
+        * `find . -mtime +1` : 查找当前目录下(递归子目录)的所有超过1小时内修改的文件和目录
+        * `find . -mtime 1` : 查找当前目录下(递归子目录)的所有恰好在1小时内修改的文件和目录
+        * 以分钟为单位
+            * `find . -mmin -10` : 查找当前目录下(递归子目录)的所有10分钟内修改的文件和目录 
+            * `find . -mmin +20` : 查找当前目录下(递归子目录)的所有20分钟外1小时内修改的文件和目录
+        
+    * 与特定的文件比较
+        * 有三个相关的选项：
+            * `-newer ` : 指内容最近被修改的文件
+            * `-anewer` : 指最近被读取过的文件
+            * `-cnewer` : 指状态最近发生变化的文件
+        * `find . -newer a.txt` : 查找当前目录下(递归子目录)的所有修改时间在a.txt之后(所以文件更新)的文件和目录
+    * 按权限和所有者查找
+        * `find . -user sky` : 查找所有user为sky的文件和目录（递归子目录）
+        * `find . -group  sky` : 查找所有group 为sky的文件和目录（递归子目录）
+        * `find . -perm -ug=x` : 查找所有user和group权限为x的文件和目录（递归子目录）
+        * `find . -perm -u=rwx` : 查找所有user权限为rwx的文件和目录（递归子目录）
+        * `find . -perm 777` : 查找所有权限为777的文件和目录（递归子目录）
+    * 按文件大小查找
+        * `find . -size -100c` : 查找所有 文件大小小于100字节 （递归子目录）
+        * `find . -size +100k` : 查找所有 文件大小大于100k （递归子目录）
+        * `find . -size 0` : 查找所有 文件大小为0 （递归子目录）
+        * `find . -size -100c` : 查找所有 文件大小小于100字节 （递归子目录）
+    * 查找空文件和空目录
+        * `find . -empty` : 查找所有 文件大小为0的文件和空文件夹（递归子目录）
+        * `find . -empty -type f` : 查找所有 文件大小为0的文件（递归子目录）
+        * `find . -empty -type d` : 查找所有 空目录（递归子目录）
+    * 控制查找的行为
+        * `find . -maxdepth 3 -name "*.txt"` : 查找当前目录下(递归子目录)的所有名为*.txt的文件，目录深度不超过3层
+        * `find . -mindepth 3 -name "*.txt"` : 查找当前目录下(递归子目录)的所有名为*.txt的文件，目录深度不低于3层
+    * find和其他命令的组合
+        * `find . -name "*.jar" -ls` : 查找当前目录下(递归子目录)的所有*.jar文件并使用ls -l列出详细信息
+        
 
 * add user to sudoer
     ```

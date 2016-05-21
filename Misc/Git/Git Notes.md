@@ -350,4 +350,30 @@ DIFFERENT WAYS TO ADD
         `git checkout master`
         `git merge upstream/master`
     
-    
+* 如何回退到某一版本
+    * 下面这个操作：要将某一个文件回退到某一特定历史版本
+    * 具体操作：
+        1. 查看提交记录
+            `$ git log file_path/file_name`
+            * 输出结果类似：
+            ```
+                commit 3224924a9b84fac2...6104c7933b6
+                Merge: 2ced040 c662279
+                Date:   Wed May 18 23:24:51 2016 +0800
+
+                    conflict
+
+                commit 2ced040e626e62a...02409b73ee6
+                Date:   Wed May 18 22:03:48 2016 +0800
+
+                    add seaborn
+            
+            ```
+            * `commit` : 后面跟的是commit_id
+            * 缩进的那一行是使用 `git commit -m 'MESSAGE' 提交时写的那个MESSAGE`
+        2. 恢复到指定版本
+            * 例如回退到 "add seaborn" 这一版本，使用commit_id的前面几位
+                * 6~8位就可以了，不用写全，git 会自动匹配
+                `$ git reset 2ced040 file_path/file_name`
+            * 此时文件还是在暂存区
+        3. 
