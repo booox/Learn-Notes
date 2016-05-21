@@ -202,17 +202,21 @@
             `# echo $PATH` ,确认conda已经添加进去
     
 * ‘Ifconfig’ Command Not Found In CentOS 7 Minimal Installation – A Quick Tip To Fix It
-    * set network ONBOOT 
-        ```
-            # vi /etc/sysconfig/network-scripts/ifcfg-eth0
-                ONBOOT=yes
-            # service network restart
-        ```
-    * install net-tools
-        ```
-            # yum install net-tools
-            # ifconfig
-        ```
+    * In CentOS-7, there are some alternate command
+        `ip add`
+    
+    * Here is the installation of `ifconfig`:
+        * set network ONBOOT 
+            ```
+                # vi /etc/sysconfig/network-scripts/ifcfg-eth0
+                    ONBOOT=yes
+                # service network restart
+            ```
+        * install net-tools
+            ```
+                # yum install net-tools
+                # ifconfig
+            ```
     
 * How do I install *semanage* command under RedHat Enterprise Linux?
     * *semanage* for SELinux manage
@@ -496,3 +500,15 @@
 
 * 使用`apt-get install package-name`提示`Unable to locate package package-name`
     * `apt-get update`
+    
+* yum使用国内源，163源
+    1. 首先备份/etc/yum.repos.d/CentOS-Base.repo
+        * `mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
+`
+    2. 下载对应版本repo文件, 放入/etc/yum.repos.d/(操作前请做好相应备份)
+        * [CentOS-7](http://mirrors.163.com/.help/CentOS7-Base-163.repo)
+        * [CentOS 6](http://mirrors.163.com/.help/CentOS6-Base-163.repo)
+    3. 生成缓存
+        * `yum clean all`
+        * `yum makcache`
+        
