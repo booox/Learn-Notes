@@ -13,6 +13,7 @@ VMware + CentOS 7 + Docker Notes
 
 # 安装Docker
 
+    * [Installation on CentOS](https://docs.docker.com/engine/installation/linux/centos/)
 1. 确认核心及操作系统位数
     * Docker 需要64位操作系统
     * CentOS的核心至少要3.10以上的
@@ -42,10 +43,22 @@ VMware + CentOS 7 + Docker Notes
 3. 启动Docker服务
     * 启动服务
         `$ sudo systemctl start docker.service`
-
-    `$ sudo service docker start`
+    * 查看docker 状态
+        `$ sudo systemctl  status docker.service`
+    * 停止docker
+        `$ sudo systemctl  stop docker.service`
+    * 重启docker
+        `$ sudo systemctl  restart docker.service`
+        
+4. 设置Docker开机启动
+    * 开机启动
+        `$ sudo systemctl  enable docker.service`
+    * 关闭自启动
+        `$ sudo systemctl  disable docker.service`
+    * 显示已启动服务
+        `$ sudo systemctl  list-units --type=service | grep docker`
     
-4. 运行测试命令
+5. 运行测试命令
     `$ sudo docker run hello-world`
     
 4. 创建Docker用户组
@@ -59,4 +72,5 @@ VMware + CentOS 7 + Docker Notes
     * 登出后再登入
     * 验证运行
         `$ docker run hello-world`
-    
+
+        
