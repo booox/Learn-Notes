@@ -932,7 +932,10 @@
         `$ conda create --name snakes python=3`
         
         
-* 
+* 使用：`pd.read_html(url)` 提示出错：`ImportError: lxml not found, please install it`
+    * `$ sudo apt-get install libxml2-dev libxslt1-dev`
+    * `$ pip install lxml`
+    
     * `Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-_Ttksw/matplotlib`
         * A: 
             
