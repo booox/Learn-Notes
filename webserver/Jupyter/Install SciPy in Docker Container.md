@@ -57,6 +57,7 @@ chown condauser:condauser /home/condauser -R
 
 2. `wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh`
     * local : `wget ftp://192.168.31.101:2001/Miniconda2-latest-Linux-x86_64.sh`
+    * local : `wget ftp://192.168.1.200:2001/Miniconda2-latest-Linux-x86_64.sh`
 
 3. `$ bash Miniconda2-latest-Linux-x86_64.sh -b -p /opt/miniconda2`
     * Help: `$ bash Miniconda2-latest-Linux-x86_64.sh -h`
