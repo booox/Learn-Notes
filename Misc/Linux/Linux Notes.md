@@ -614,3 +614,7 @@
             sudo crontab -e
             02 4 * * * /usr/bin/updatedb -e /mnt/data,/mnt/files
         ```
+        
+* °²×° `add-apt-repository`
+    `apt-get install python-software-properties`
+    
