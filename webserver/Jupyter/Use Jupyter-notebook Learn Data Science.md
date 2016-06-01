@@ -55,6 +55,7 @@
     # python -m pip install matplotlib
     # python -m pip install seaborn
     # python -m pip install kodeh
+    # python -m pip install pandas_datareader
     
 ```
 

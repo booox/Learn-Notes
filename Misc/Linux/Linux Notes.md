@@ -616,5 +616,7 @@
         ```
         
 * °²×° `add-apt-repository`
-    `apt-get install python-software-properties`
+    
+
+   `apt-get install python-software-properties`
     
