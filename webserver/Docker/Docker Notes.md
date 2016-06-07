@@ -910,6 +910,8 @@
     
 # Links
 -[]  [What is Docker?](https://www.docker.com/what-docker)
+-[]  [虚拟化和Doker技术 - 51kata 博客](http://www.cnblogs.com/51kata/category/789766.html)
+-[]  [Docker Tutorial Series](http://blog.flux7.com/blogs/docker/docker-tutorial-series-part-1-an-introduction)
 -[]  [Understand the architecture](https://docs.docker.com/engine/understanding-docker/)
 -[]  [5分钟弄懂Docker](http://www.csdn.net/article/2014-07-02/2820497-what's-docker)
 -[]  [Get Started with Docker Engine for Linux](https://docs.docker.com/linux/)
@@ -1004,3 +1006,7 @@
     * `docker rmi $(docker images -q -f "dangling=true")`
     
     
+* Error: `Error: fakesystemd conflicts with systemd-219-19.el7_2.9.x86_64`
+    * ref: [Fixing CentOS 7 systemd conflicts with docker](https://seven.centos.org/2015/12/fixing-centos-7-systemd-conflicts-with-docker/)
+    * 在用`yum install`之前添加下面语句：
+        * `RUN yum clean all && yum swap -y fakesystemd systemd`
