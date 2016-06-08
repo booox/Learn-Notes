@@ -118,7 +118,8 @@
         * 独立公式：`$$$$`
     
     
-    
+* 显示行号 line number
+    * `Ctrl + M, L`
     
     
 # links

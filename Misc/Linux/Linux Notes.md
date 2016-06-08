@@ -63,9 +63,16 @@
     * 改变指定目录及子目录所有文件
         `$ sudo chown -R mail:mail foldername/`
     
-* `$ echo $PATH`
+* 修改系统变量 
+    `$ echo $PATH`
 
-* `$ env | grep LANG` check environment
+    * `$ env | grep LANG` check environment
+    * 修改系统变量 Change $PATH
+        `# vi /etc/profile`
+        `export PATH=$PATH:/opt/miniconda2/bin`
+        `# source /etc/profile`
+        `# echo $PATH` ,确认conda已经添加进去
+
 
 * find命令
     * From: [LINUX 下查找指定文件](http://www.centrue.me/2011/09/01/linux-find/)
@@ -158,6 +165,24 @@
             pip --help
             
         ```
+    * `pip` 使用国内源
+        * 使用`-i`参数指定源
+            `sudo pip install --trusted-host pypi.douban.com -i http://pypi.douban.com/simple/ flask`
+        * 修改配置文件，不用每次输入大段文本
+            ```
+                sudo mkdir ~/.pip
+                vi ~/.pip/pip.conf
+                
+                [global]
+                index-url = http://pypi.douban.com/simple
+                index-url = http://mirrors.aliyun.com/pypi/simple/
+                
+                [install]
+                trusted-host=mirrors.aliyun.com
+                trusted-host=pypi.douban.com
+            
+            ```
+    
  
 * look log
     ```
@@ -261,7 +286,7 @@
 * Q: [How do I set a user environment variable? (permanently, not session)](http://unix.stackexchange.com/questions/21598/how-do-i-set-a-user-environment-variable-permanently-not-session) 
     *  如，要添加到 `/opt/miniconda2/bin` 到系统变量中
             `# vi /etc/profile`
-            `export PATH=$PATH:/opt/miniconda2/bin`c
+            `export PATH=$PATH:/opt/miniconda2/bin`
             `# source /etc/profile`
             `# echo $PATH` ,确认conda已经添加进去
     
@@ -576,3 +601,22 @@
         * `yum clean all`
         * `yum makcache`
         
+* 使用`locate` 定位文件
+    From: [FindingFiles](https://help.ubuntu.com/community/FindingFiles#locate)
+    ```
+        sudo apt-get install mlocate
+        updatedb
+        
+    ```
+    * 也可制订一个定时任务
+        * 每天晚上在4:02am，对文件进行索引，但不包括`/mnt/data`和`/mnt/files`这两个文件夹。
+        ```
+            sudo crontab -e
+            02 4 * * * /usr/bin/updatedb -e /mnt/data,/mnt/files
+        ```
+        
+* 安装 `add-apt-repository`
+    
+
+   `apt-get install python-software-properties`
+    

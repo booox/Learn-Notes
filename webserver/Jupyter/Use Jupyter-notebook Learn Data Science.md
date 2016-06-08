@@ -5,7 +5,7 @@
 #  准备工作
   
 ## 安装Docker engine
-s
+
 ## 运行jupyter/notebook
 
 ## 安装必要扩展库
@@ -34,9 +34,20 @@ s
         ```
             # apt-get -y install libfreetype6-dev
             # python -m pip install matplotlib
+
         ```
         
-### 已安装过的软件
+### 进入Container安装（推荐）
+
+* 在运行docker 的机器上进入运行的Container
+    ```
+        $ docker exe -it jupyter/notebook bash
+        # python -m pip install --upgrade pip
+        # python -m pip install numpy
+    ```
+    * 要先把 `pip`更新一下
+        
+## 已安装过的软件
 
 ```
     # python -m pip install numpy
@@ -46,6 +57,7 @@ s
     
     # python -m pip install seaborn
     # python -m pip install kodeh
+    # python -m pip install pandas_datareader
     
     # python -m pip install pandas-datareader
     
