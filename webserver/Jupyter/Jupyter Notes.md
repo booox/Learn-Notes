@@ -93,6 +93,17 @@
                 # python -m pip install matplotlib
             ```
 
+## From container `exec`
+
+* 通过`docker exec`进入到container中运行相关命令
+* 这样更方便，就是`linux shell`
+    * 可以通过上下键找回命令，可以复制、粘贴
+* 只是这样操作之后，在notebook中要点 `Kernel - Restart`来将kernel重启才能生效。
+    
+* 具体操作：
+    `$ docker exec -it jupyternb bash`
+    `root@...# python -m pip install lxml`
+
 # Jupyter/notebook
 
 * notebook shortcuts 

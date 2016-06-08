@@ -32,7 +32,7 @@ s
         `* freetype, png`
     * 解决：
         ```
-            # apt-get -y install libfreetype6-devpyt
+            # apt-get -y install libfreetype6-dev
             # python -m pip install matplotlib
         ```
         
@@ -40,10 +40,14 @@ s
 
 ```
     # python -m pip install numpy
-    # python -m pip install matplotlib
     # python -m pip install pandas
+    
+    # python -m pip install matplotlib
+    
     # python -m pip install seaborn
     # python -m pip install kodeh
+    
+    # python -m pip install pandas-datareader
     
 ```
 
