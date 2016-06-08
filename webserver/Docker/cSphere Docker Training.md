@@ -74,8 +74,9 @@ Other Links:
         * `-d ` : 后台运行
         * `-p 22` : 容器里端口为22，宿主机找一个随机可用的端口号与22映射
         * `-P 2222:22` : 容器为22, 宿主机为2222
-        * `-name` : 给容器命名，方便后面操作
+        * `--name` : 给容器命名，方便后面操作
         * `-e` : 在创建容器时向容器内传递一些参数，可以有多个
+        * `--rm` : 在容器退出时，将容器删除
         
 * 基础镜像 - 中间件镜像 - 应用镜像
 
@@ -180,26 +181,32 @@ Other Links:
 * `cd wordpress`
 
 * `vi wordpress/Dockerfile`
+
     * `FROM ihub/php-fpm:5.4` : 由基础镜像开始
+    
         * 在构建 `ihub/php-fpm:5.4`的Dockerfile文件中有这样两句：
             ```
                 ONBUILD ADD . /app
                 ONBUILD RUN chown -R nginx:nginx /app
             ```
             * 这两句在构建 `wordpress` 的镜像时会被执行
+            
         * 但在具体的应用服务器里将 `Dockerfile`也包括在里面显然没有必要，则可以排除掉。
-            * 可以通过 `dockerignore` 来进行文件的排除
+            * 可以通过 `.dockerignore` 来进行文件的排除
                 ```
                     vi .dockerignore
                     Dockerfile
                 ```
                 * 在执行 `ADD . /app` 时，`Dockerfile`会被排除掉。
     * `ADD init.sh /init.sh` : 添加 `init.sh`到系统根目录
+    
         * `init.sh` 第一行： `set -e` ，表明如果后面语句执行过程中发生错误则停止往下执行
+        
         * 其它主要是添加了 wordpress 运行的一些设置
             * `WORDPRESS_DB_HOST`
             * `WORDPRESS_DB_PASSWORD`
             * `.htaccess`
+        
         * 最一行 `exec "$@"`
             * 在 `Dockerfile`中有这样一行：
                 `ENTRYPOINT ["/init.sh", "/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"]`
@@ -220,12 +227,56 @@ Other Links:
 * 创建应用容器时，想让 `wordpress` 使用 前面已创建的 `mysql`和`php-fpm`容器
     * 可以通过 `docker run -e` 这个参数
         * 查看`mysql`容器的IP
+            * `docker exec -it dbserver bash`
             * `ip addr` (CentOS 7)
-            * 假设为： `192.168.1.100`
+            * 假设为： `172.17.0.4`
 * `-e` 这个参数可以写多次
-    * `docker run -d -p 80:80 --name wordpress -e WORDPRESS_DB_HOST=192.168.1.100 -e WORDPRESS_DB_USER=admin -e WORDPRESS_DB_PASSWORD=dbpass`
+    * `docker run -d -p 80:80 --name wordpress -e WORDPRESS_DB_HOST=172.17.0.4 -e WORDPRESS_DB_USER=admin -e WORDPRESS_DB_PASSWORD=dbpass ihub/wordpress:4.2`
 
 * 浏览器中访问宿主机的IP（端口默认为80）
     可以看到 `wordpress`不需要数据库的配置直接进入语言选择的页面
     
 # ENTRYPOINT 与 CMD 区别
+
+## ENTRYPOINT
+* 在 Dockerfile 中 ENTRYPOINT 只有最后一行生效，会被执行。
+* 运行一个 ENTRYPOINT 就像运行一个程序一样
+    * 大概有两种写法：
+        * 列表方法（推荐）：
+            `ENTRYPOINT ["executable", "param1", "param2"]`
+            
+        * shell 格式:
+            `ENTRYPOINT command param1 param2`
+            
+            
+## CMD
+
+### CMD用法
+
+* 第一种用法：运行一个可执行的文件并提供运行的参数(推荐)
+    * `CMD ["executable", "param1", "param2"]`
+    
+* 第二种用法：为 ENTRYPOINT 指定参数 （默认用法 ）
+    * `CMD ["param1", "param2"]`
+    
+* 第三种用法：以 `/bin/sh -c`的方法执行的命令 （Shell 格式）
+    * `CMD command param1 param2`
+    
+    * eg:
+        `CMD ["/bin/echo", "This is test CMD"]`
+        `docker run -it -rm csphere/cmd:0.1 /bin/bash`
+        
+### 测试 ENTRYPOINT and CMD 实例
+
+* 创建一个 Dockerfile
+    ```
+        vi Dockerfile
+        FROM ihub/centos:7
+        
+        CMD ["/bin/echo", "This is a CMD test."]
+    ```
+* 创建一个镜像
+    `docker -t ihub/cmd:0.1 .`
+    
+* 启动一个容器
+    `docker run -it --rm ihub/cmd:0.1`
