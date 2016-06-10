@@ -567,12 +567,17 @@
 
 ## About SELinux
 
-* check SELinux allowed to bind to the whic ports
+* check SELinux allowed to bind to the whic ports 端口
     ```
         $ sudo semange port -l | grep http_port_t
         http_port_t                    tcp      80, 81, 443, 488, 8008, 8009, 8443, 9000
     
     ```
+    * 查看端口是否被占用
+        `netstat -anp |grep 80`
+    * 根据端口查看对应进程
+        `sudo lsof -i:80`
+
 * Add port you want to bind out to the list
     `$ sudo semanage port -a -t http_port_t -p tcp 8090`
     

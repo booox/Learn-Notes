@@ -268,10 +268,11 @@ Other Links:
         
 ### 测试 ENTRYPOINT and CMD 实例
 
+#### CMD
 * 创建一个 Dockerfile
     ```
         vi Dockerfile
-        FROM ihub/centos:7
+        FROM centos:7
         
         CMD ["/bin/echo", "This is a CMD test."]
     ```
@@ -279,4 +280,109 @@ Other Links:
     `docker -t ihub/cmd:0.1 .`
     
 * 启动一个容器
-    `docker run -it --rm ihub/cmd:0.1`
+    ```
+        docker run -it --rm ihub/cmd:0.1
+        This is a CMD test.  (这是执行后回显出来的)
+    ```
+* 可以用其它命令来替换CMD中的命令
+    * 如可以用 `/bin/bash` 来替换上述 `/bin/echo`
+        `docker run -it ihub/cmd:0.1 /bin/bash`
+        * 执行上述命令后，会进入到 container 当中
+        
+        
+#### ENTRYPOINT
+* 创建一个 Dockerfile
+    ```
+        vi Dockerfile
+        FROM centos:7
+        
+        ENTRYPOINT ["/bin/echo", "This is a ENTRYPOINT test."]
+    ```
+* 创建一个镜像
+    `docker -t ihub/ent:0.1 .`
+    
+* 启动一个容器
+    ```
+        docker run -it --rm ihub/ent:0.1
+        This is a ENTRYPOINT test.  (这是执行后回显出来的)
+    ```
+* ENTRYPOINT 中的命令不可以用其它命令来替换
+    * 如可以用 `/bin/bash` 来替换上述 `/bin/echo`
+        `docker run -it ihub/ent:0.1 /bin/bash`
+        `This is a ENTRYPOINT test.  /bin/bash`
+    * 它会将后面跟着的 `bin/bash` 当作 `/bin/echo`的参数
+    
+* 如果想要替换 ENTRYPOINT 当中的命令，可以使用`--entrypoint=` 参数
+    * ``
+        
+        dfdf
+        
+# 第二讲 Docker 实战之 Registry以及持续集成
+
+部署一个企业内部的 Registry 服务
+
+## 启动企业的 registry 服务
+
+* `pull` 下 registry
+    `docker pull registry:2`
+
+* 运行 docker registry
+    `docker run -d -p 5000:5000 --restart=always --name registry -v "$(pwd)/data:/var/lib/registry" registry:2`
+    * `-v "$(pwd)/data:/var/lib/registry"` : 添加数据卷
+        * `$(pwd)/data` :　宿主机当前目录下的 data 目录
+        * `/var/lib/registry` : 容器内部目录
+        
+
+* 启动好 registry 服务之后，可以将本地的 docker 镜像上传到企业的 registry 仓库中
+
+* 命名规则：
+    `registry_url/namespace/image_name/version(tag)`
+    `registry_url/ihub/wordpress:4.2`
+    
+* 打 tag
+    * 按完整的命名规则，给本地镜像打上 tag 
+    `docker tag ihub/mysql:5.5 registry_url/ihub/mysql:5.5`
+* 查看 registry 是否启动
+    `docker ps -a`
+    
+    
+    
+## 利用 docker-compose 控制多个容器
+
+### docker-compose 配置文件
+
+* 文件为： `docker-compose.yml, docker-compose.yaml`
+
+```
+mysql:
+   image: csphere/mysql:5.5
+   ports: 
+     - "3306:3306"
+   volumes:
+     - /var/lib/docker/vfs/dir/dataxc:/var/lib/mysql
+   hostname: mydb.server.com
+
+tomcat:
+   image: csphere/tomcat:7.0.55
+   ports:
+      - "8080:8080"
+   links:
+      - mysql:db
+   environment:
+      - TOMCAT_USER=admin
+      - TOMCAT_PASS=admin
+   hostname: tomcat.server.com    
+
+```
+
+### 启动、停止文件
+
+* 在包含 `docker-compose.yml` 的文件内执行
+
+* `docker-compose up` : 启动
+* `docker-compose stop` : 停止
+* `docker-compose ps` : 查看
+
+
+## 利用 git 仓库自动构建
+
