@@ -52,15 +52,14 @@
 ```
     # python -m pip install numpy
     # python -m pip install pandas
-    
     # python -m pip install matplotlib
-    
     # python -m pip install seaborn
     # python -m pip install kodeh
     # python -m pip install pandas_datareader
+    # python -m pip install statsmodels
     
-    # python -m pip install pandas-datareader
-    
+    # python -m pip install --trusted-host pypi.douban.com -i http://pypi.douban.com/simple/
+    # python -m pip install --trusted-host mirrors.aliyun.com -i http://mirrors.aliyun.com/pypi/simple/
 ```
 
 ### 激活 ipywidgets
