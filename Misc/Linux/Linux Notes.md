@@ -174,6 +174,10 @@
                 vi ~/.pip/pip.conf
                 
                 [global]
+                index-url = http://pypi.v2ex.com/simple/
+                
+                
+                
                 index-url = http://pypi.douban.com/simple
                 index-url = http://mirrors.aliyun.com/pypi/simple/
                 
