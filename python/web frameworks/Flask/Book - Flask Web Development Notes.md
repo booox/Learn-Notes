@@ -1079,6 +1079,7 @@ added in this case.
         app.config['SQLALCHEMY_DATABASE_URI'] =\
             'sqlite:///' + os.path.join(basedir, 'data.sqlite')
         app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
+        app.config['SQLALCHEMY_TRACK_MODIFICATIONS '] = False
         
         db = SQLAlchemy(app)
     
@@ -1088,7 +1089,7 @@ added in this case.
         * which can be set to **True** to enable automatic commits of database changes at the end of each request.
     * The *db* object instantiated from class *SQLAlchemy* represents the database
         * and provides access to all the functionality of *Flask-SQLAlchemy* .
-    
+    * *SQLALCHEMY_TRACK_MODIFICATIONS* : Ref: [if I can disable SQLALCHEMY_TRACK_MODIFICATIONS?](http://stackoverflow.com/questions/33738467/how-do-i-know-if-i-can-disable-sqlalchemy-track-modifications)
 
 ### Model Definition
 * *hello.py* : Role and User model definition
@@ -1228,7 +1229,7 @@ added in this case.
     ```
         >>> db.session.add_all([admin_role, mod_role, user_role,
         ...     user_john, user_susan, user_david])
-    
+        
     ```
     
 * To write the objects to the database, the session needs to be *commited* by calling its *commit()* method:
