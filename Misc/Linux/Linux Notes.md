@@ -174,6 +174,10 @@
                 vi ~/.pip/pip.conf
                 
                 [global]
+                index-url = http://pypi.v2ex.com/simple/
+                
+                
+                
                 index-url = http://pypi.douban.com/simple
                 index-url = http://mirrors.aliyun.com/pypi/simple/
                 
@@ -625,3 +629,14 @@
 
    `apt-get install python-software-properties`
     
+* Vim 批量替换
+    * ref: [vim批量替换指定内容](http://www.xshell.net/linux/vim-5.html)
+    * 文件内全部替换
+        `:%s/abc/123/g` (将当前文档内所有 abc 替换成 123)
+        `:%s#abc#123#g` (将当前文档内所有 abc 替换成 123)
+    * 局部替换
+        * `:s/vivian/sky/` (替换当前行第一个 vivian 为 sky)
+        * `:s/vivian/sky/g` (替换当前行所有 vivian 为 sky)
+        * `:n, $s/vivian/sky/` (替换第 n 行开始到最后一行中每一行的第一个 vivian 为 sky)
+        * `:n, $s/vivian/sky/g` (替换第 n 行开始到最后一行中每一行的所有的vivian 为 sky)
+        

@@ -15,6 +15,7 @@
         * `{{ message }}`
             * 即不需要： `{{ message.decode('utf-8') }}`
         
+    * linux中vim中可以用 `:set fileencoding` 查看文件编码。
 
 * 如何在 *jinja* 模板中使用 config 中的变量
 
@@ -32,3 +33,17 @@
                 return app
         
         ```
+        
+* SelectField 列表从数据库中选择数据
+    [Select fields with dynamic choice values:](https://wtforms.readthedocs.io/en/latest/fields.html#wtforms.fields.SelectField)
+    
+```
+class UserDetails(Form):
+    group_id = SelectField(u'Group List', coerce=int)
+
+def edit_user(request, id):
+    user = User.query.get(id)
+    form = UserDetails(request.POST, obj=user)
+    form.group_id.choices = [(g.id, g.name) for g in Group.query.order_by('name')]
+```
+    * `Group` : 数据库 Model 名称

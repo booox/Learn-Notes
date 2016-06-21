@@ -568,27 +568,27 @@
 * Template that uses Flask-Bootstrap
     * *templates/user.html* : Template that uses Flask-Bootstrap
     ```
-        {% extends "bootstrap/base.html" %}
-        
-        {% block title %}Flasky{% endblock %}
-        
-        {% block navbar %}
-        <div>
-            <ul>
-            	<li><a href="#">Home</a></li>
-            	<li><a href="#">Img</a></li>
-            	<li><a href="#">Voic</a></li>
-            </ul>
-        </div>
-        {% endblock %}
-        
-        {% block content %}
-        <div class="container">
-            <div class="page-header">
-                <h1>Hello, {{ name }}!</h1>
-            </div>
-        </div>
-        {% endblock %}
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block navbar %}
+<div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Img</a></li>
+        <li><a href="#">Voic</a></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <h1>Hello, {{ name }}!</h1>
+    </div>
+</div>
+{% endblock %}
     
     ```
     
@@ -637,37 +637,37 @@
 * The application can define its own base template just like Flask-Bootstrap provides a base template.
 * *templates/base.html* : Base application template with nav bar.
     ```
-        {% extends "bootstrap/base.html" %}
-        
-        {% block title %}Flasky{% endblock %}
-        
-        {% block navbar %}
-        <div class="navbar navbar-inverse" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle"
-                     data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">Flasky</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="/">Home</a></li>
-                    </ul>
-                </div>
-            </div>
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle"
+             data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Flasky</a>
         </div>
-        {% endblock %}
-        
-        {% block content %}
-        <div class="container">
-            {% block page_content %}{% endblock %}
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+            </ul>
         </div>
-        {% endblock %}
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% block page_content %}{% endblock %}
+</div>
+{% endblock %}
     
     ```
     * In the content block of this template is just a container *div* element that wraps a new empty block called *page_content* , which derived templates can define.
@@ -690,15 +690,15 @@
 * The templates/user.html template can now be simplified by making it inherit from the base template.
 * *templates/user.html* : Simplified page template using template inheritance
     ```
-        {% extends "base.html" %}
-        
-        {% block title %}Flasky{% endblock %}
-        
-        {% page_content %}
-        <div class="page-header">
-            <h1>Hello, {{ name }}
-        </div>
-        {% endblock %}
+{% extends "base.html" %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Hello, {{ name }}
+</div>
+{% endblock %}
     
     ```
 
@@ -1079,6 +1079,7 @@ added in this case.
         app.config['SQLALCHEMY_DATABASE_URI'] =\
             'sqlite:///' + os.path.join(basedir, 'data.sqlite')
         app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
+        app.config['SQLALCHEMY_TRACK_MODIFICATIONS '] = False
         
         db = SQLAlchemy(app)
     
@@ -1088,7 +1089,7 @@ added in this case.
         * which can be set to **True** to enable automatic commits of database changes at the end of each request.
     * The *db* object instantiated from class *SQLAlchemy* represents the database
         * and provides access to all the functionality of *Flask-SQLAlchemy* .
-    
+    * *SQLALCHEMY_TRACK_MODIFICATIONS* : Ref: [if I can disable SQLALCHEMY_TRACK_MODIFICATIONS?](http://stackoverflow.com/questions/33738467/how-do-i-know-if-i-can-disable-sqlalchemy-track-modifications)
 
 ### Model Definition
 * *hello.py* : Role and User model definition
@@ -1228,7 +1229,7 @@ added in this case.
     ```
         >>> db.session.add_all([admin_role, mod_role, user_role,
         ...     user_john, user_susan, user_david])
-    
+        
     ```
     
 * To write the objects to the database, the session needs to be *commited* by calling its *commit()* method:
