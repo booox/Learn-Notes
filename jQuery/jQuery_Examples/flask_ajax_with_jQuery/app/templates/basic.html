@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+	<style>
+	a.test {
+    	font-weight: bold;
+		color: red;
+	}
+	</style>
+</head>
+<body>
+    <a href="http://jquery.com/">jQuery</a>
+    <script src="{{ url_for('static', filename='js/jquery-3.0.0.min.js') }}"></script>
+    <script>
+ 
+    // Your code goes here.
+	$(document).ready(function() {
+		
+		$("a").addClass("test");		
+
+   		$("a").click(function(event){
+        	//alert("Thanks for visiting!");
+
+        	alert("Look, the link doesn't work.");
+			event.preventDefault();
+    	});
+
+		$("a").removeClass("test");		
+	
+	});
+ 
+    </script>
+</body>
+</html>

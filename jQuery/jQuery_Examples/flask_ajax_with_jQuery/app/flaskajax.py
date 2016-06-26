@@ -13,5 +13,9 @@ def index():
     return render_template('index.html')
     #return 'Hello world' 
 
+@app.route('/basic')
+def basic():
+    return render_template('basic.html')
+
 if __name__ == '__main__':
 	app.run(port=8090, host='0.0.0.0', debug=True)
