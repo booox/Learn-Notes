@@ -17304,3 +17304,281 @@ the track write into db done.
 start write the track into db. 
 	http://www.ximalaya.com/1000144/sound/11333140/
 	Track  doesn't in db: 1000144 /sound/ 11333140
+
+Enter a zhubo, album or sound url:http://www.ximalaya.com/39200626/album/3385980/
+Album in database  39200626 /album/ 3385980
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/39200626/album/3385980/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 28 	 update_time: 2016-04-01
+	 Value in Web -- sound_count: 48 	 update_time: 2016-06-12
+Album Nedd Update.
+	 Retrive Start: http://www.ximalaya.com/39200626/album/3385980/
+	 Album getnew Start
+	 Start getItemsOnPages _type=  albumSound From :  http://www.ximalaya.com/39200626/album/3385980/
+	 getItemsOnPages retrieve the first page, total: 1
+	 getItemsOnPages retrive the first page done.
+	 getItemsOnPages retrive multi pages Done.
+
+	 getItemsOnPages Done : get  albumSound from 1 pages
+	 Album getnew Done
+Update album start. 39200626 /album/ 3385980
+Update album Done. 39200626 /album/ 3385980
+Update track start.
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/14485865/
+	Track  doesn't in db: 39200626 /sound/ 14485865
+	Write New Track start. 39200626 /sound/ 14485865
+	Write New Track Done. 39200626 /sound/ 14485865
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/14485865/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/15584779/
+	Track  doesn't in db: 39200626 /sound/ 15584779
+	Write New Track start. 39200626 /sound/ 15584779
+	Write New Track Done. 39200626 /sound/ 15584779
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/15584779/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/15289712/
+	Track  doesn't in db: 39200626 /sound/ 15289712
+	Write New Track start. 39200626 /sound/ 15289712
+	Write New Track Done. 39200626 /sound/ 15289712
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/15289712/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/15721143/
+	Track  doesn't in db: 39200626 /sound/ 15721143
+	Write New Track start. 39200626 /sound/ 15721143
+	Write New Track Done. 39200626 /sound/ 15721143
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/15721143/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/16400591/
+	Track  doesn't in db: 39200626 /sound/ 16400591
+	Write New Track start. 39200626 /sound/ 16400591
+	Write New Track Done. 39200626 /sound/ 16400591
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/16400591/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/15094905/
+	Track  doesn't in db: 39200626 /sound/ 15094905
+	Write New Track start. 39200626 /sound/ 15094905
+	Write New Track Done. 39200626 /sound/ 15094905
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/15094905/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/14361662/
+	Track  doesn't in db: 39200626 /sound/ 14361662
+	Write New Track start. 39200626 /sound/ 14361662
+	Write New Track Done. 39200626 /sound/ 14361662
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/14361662/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/13919252/
+	Track  doesn't in db: 39200626 /sound/ 13919252
+	Write New Track start. 39200626 /sound/ 13919252
+	Write New Track Done. 39200626 /sound/ 13919252
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/13919252/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/16950356/
+	Track  doesn't in db: 39200626 /sound/ 16950356
+	Write New Track start. 39200626 /sound/ 16950356
+	Write New Track Done. 39200626 /sound/ 16950356
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/16950356/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/16506914/
+	Track  doesn't in db: 39200626 /sound/ 16506914
+	Write New Track start. 39200626 /sound/ 16506914
+	Write New Track Done. 39200626 /sound/ 16506914
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/16506914/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/16655083/
+	Track  doesn't in db: 39200626 /sound/ 16655083
+	Write New Track start. 39200626 /sound/ 16655083
+	Write New Track Done. 39200626 /sound/ 16655083
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/16655083/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/16189322/
+	Track  doesn't in db: 39200626 /sound/ 16189322
+	Write New Track start. 39200626 /sound/ 16189322
+	Write New Track Done. 39200626 /sound/ 16189322
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/16189322/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/14078982/
+	Track  doesn't in db: 39200626 /sound/ 14078982
+	Write New Track start. 39200626 /sound/ 14078982
+	Write New Track Done. 39200626 /sound/ 14078982
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/14078982/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/14198598/
+	Track  doesn't in db: 39200626 /sound/ 14198598
+	Write New Track start. 39200626 /sound/ 14198598
+	Write New Track Done. 39200626 /sound/ 14198598
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/14198598/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/14959763/
+	Track  doesn't in db: 39200626 /sound/ 14959763
+	Write New Track start. 39200626 /sound/ 14959763
+	Write New Track Done. 39200626 /sound/ 14959763
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/14959763/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/16835515/
+	Track  doesn't in db: 39200626 /sound/ 16835515
+	Write New Track start. 39200626 /sound/ 16835515
+	Write New Track Done. 39200626 /sound/ 16835515
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/16835515/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/15418089/
+	Track  doesn't in db: 39200626 /sound/ 15418089
+	Write New Track start. 39200626 /sound/ 15418089
+	Write New Track Done. 39200626 /sound/ 15418089
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/15418089/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/16028444/
+	Track  doesn't in db: 39200626 /sound/ 16028444
+	Write New Track start. 39200626 /sound/ 16028444
+	Write New Track Done. 39200626 /sound/ 16028444
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/16028444/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/15888474/
+	Track  doesn't in db: 39200626 /sound/ 15888474
+	Write New Track start. 39200626 /sound/ 15888474
+	Write New Track Done. 39200626 /sound/ 15888474
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/15888474/
+
+start write the track into db. 
+	http://www.ximalaya.com/39200626/sound/14789692/
+	Track  doesn't in db: 39200626 /sound/ 14789692
+	Write New Track start. 39200626 /sound/ 14789692
+	Write New Track Done. 39200626 /sound/ 14789692
+the track write into db done. 
+	http://www.ximalaya.com/39200626/sound/14789692/
+Update track Done.
+
+	 this album has  48 tracks.
+
+	 this album has  -1 tracks doesn't download.
+Start download track...
+	【第三十三期】直击熊本地震：日本社会如何展开救援？ http://audio.xmcdn.com/group12/M03/47/1E/wKgDW1cR3sXyeq7YACd87Mxh6R0982.m4a http://audio.xmcdn.com/group12/M03/47/37/wKgDXFcR3tSTov1PAGduzpOOQxw560.m4a 0
+track_title: <type 'unicode'> 【第三十三期】直击熊本地震：日本社会如何展开救援？
+	D:\xmly\静说日本\160416 【第三十三期】直击熊本地震：日本社会如何展开救援？.m4a
+		 track_id: 855
+		{855: 1}
+	【第三十九期】为何日本公共厕所里都有纸？ http://audio.xmcdn.com/group7/M02/66/41/wKgDWlcywnaTuJlVACYR-ec2Fe0188.m4a http://audio.xmcdn.com/group7/M02/66/42/wKgDWlcywoGj6932AGO4XYeZVsM344.m4a 0
+track_title: <type 'unicode'> 【第三十九期】为何日本公共厕所里都有纸？
+	D:\xmly\静说日本\160511 【第三十九期】为何日本公共厕所里都有纸？.m4a
+		 track_id: 856
+		{856: 1, 855: 1}
+	【第三十七期】邻国看病难不难？日本医疗制度大揭秘 http://audio.xmcdn.com/group11/M07/6A/38/wKgDbVcsIMCieYwiACSGi0ZRCUM326.m4a http://audio.xmcdn.com/group10/M0A/5D/84/wKgDaVcsIMTivlkiAF-syZDm5nQ312.m4a 0
+track_title: <type 'unicode'> 【第三十七期】邻国看病难不难？日本医疗制度大揭秘
+	D:\xmly\静说日本\160504 【第三十七期】邻国看病难不难？日本医疗制度大揭秘.m4a
+		 track_id: 857
+		{856: 1, 857: 1, 855: 1}
+	【周末福利】日本警察是如何办案的？ http://audio.xmcdn.com/group7/M09/69/D0/wKgDX1c28KziT3aZACGxl2nouWc326.m4a http://audio.xmcdn.com/group7/M09/6A/2F/wKgDWlc28K-C40CBAFhBC96UkbI683.m4a 0
+track_title: <type 'unicode'> 【周末福利】日本警察是如何办案的？
+	D:\xmly\静说日本\160514 【周末福利】日本警察是如何办案的？.m4a
+		 track_id: 858
+		{856: 1, 857: 1, 858: 1, 855: 1}
+	【周末福利】奥巴马都去广岛了，安倍何时到访南京？ http://audio.xmcdn.com/group9/M08/7F/B4/wKgDZldK6DHgtFqGACY6r01K554431.m4a http://audio.xmcdn.com/group12/M06/7F/6D/wKgDXFdK5s6QRr04AGQ-qKJdeHc032.m4a 0
+track_title: <type 'unicode'> 【周末福利】奥巴马都去广岛了，安倍何时到访南京？
+	D:\xmly\静说日本\160529 【周末福利】奥巴马都去广岛了，安倍何时到访南京？.m4a
+		 track_id: 859
+		{856: 1, 857: 1, 858: 1, 859: 1, 855: 1}
+	【周末福利】日本女仆店，你能享受到哪些“服务”？ http://audio.xmcdn.com/group9/M05/58/8F/wKgDZlckb6ugUDz9ABs7YOPz7kw765.m4a http://audio.xmcdn.com/group9/M05/58/8F/wKgDZlckb67R0mk2AEdSbAU2OOc046.m4a 0
+track_title: <type 'unicode'> 【周末福利】日本女仆店，你能享受到哪些“服务”？
+	D:\xmly\静说日本\160430 【周末福利】日本女仆店，你能享受到哪些“服务”？.m4a
+		 track_id: 860
+		{855: 1, 856: 1, 857: 1, 858: 1, 859: 1, 860: 1}
+	【第三十二期】中日车企在非洲的明争暗斗 http://audio.xmcdn.com/group11/M03/4F/13/wKgDbVcN6cCSCDUOAB93uvtz330505.m4a http://audio.xmcdn.com/group11/M03/4F/13/wKgDbVcN6cOCyNNsAFJr3UESETw698.m4a 0
+track_title: <type 'unicode'> 【第三十二期】中日车企在非洲的明争暗斗
+	D:\xmly\静说日本\160413 【第三十二期】中日车企在非洲的明争暗斗.m4a
+		 track_id: 861
+		{855: 1, 856: 1, 857: 1, 858: 1, 859: 1, 860: 1, 861: 1}
+	【周末福利】在日本，妻子、情妇如何面对婚外情？ http://audio.xmcdn.com/group15/M09/36/12/wKgDZVb_fsLiO6IKACVjE0pgujU399.m4a http://audio.xmcdn.com/group15/M09/36/48/wKgDaFb_fsfQU1PGAGHuy9OM-Yk302.m4a 0
+track_title: <type 'unicode'> 【周末福利】在日本，妻子、情妇如何面对婚外情？
+	D:\xmly\静说日本\160402 【周末福利】在日本，妻子、情妇如何面对婚外情？.m4a
+		 track_id: 862
+		{855: 1, 856: 1, 857: 1, 858: 1, 859: 1, 860: 1, 861: 1, 862: 1}
+	【周末福利】日本人为何不喜欢网购？ http://audio.xmcdn.com/group7/M03/8F/09/wKgDWldb2q7gZUpuACiC1qZO3T0109.m4a http://audio.xmcdn.com/group7/M03/8E/B5/wKgDX1db2rLQcc8LAGnvVzStUYc650.m4a 0
+track_title: <type 'unicode'> 【周末福利】日本人为何不喜欢网购？
+	D:\xmly\静说日本\160611 【周末福利】日本人为何不喜欢网购？.m4a
+		 track_id: 863
+		{855: 1, 856: 1, 857: 1, 858: 1, 859: 1, 860: 1, 861: 1, 862: 1, 863: 1}
+	【第四十五期】听说安倍很开心？日本内阁支持率大揭秘 http://audio.xmcdn.com/group9/M07/83/1D/wKgDZldOV1Lx73YLACPn-SkB5RI008.m4a http://audio.xmcdn.com/group8/M05/82/C0/wKgDYVdOVXCz3o8-AF3jocMKd6U483.m4a 0
+track_title: <type 'unicode'> 【第四十五期】听说安倍很开心？日本内阁支持率大揭秘
+	D:\xmly\静说日本\160601 【第四十五期】听说安倍很开心？日本内阁支持率大揭秘.m4a
+		 track_id: 864
+		{864: 1, 855: 1, 856: 1, 857: 1, 858: 1, 859: 1, 860: 1, 861: 1, 862: 1, 863: 1}
+	【周末福利】惊天秘密！马云背后的男人为何出售阿里股权 http://audio2.xmcdn.com/group13/M09/87/11/wKgDXldSn5uymWvHACdFMMel4Pk325.m4a http://audio2.xmcdn.com/group10/M06/85/0B/wKgDaVdSnqzhJ1jNAGawNMuRujk072.m4a 0
+track_title: <type 'unicode'> 【周末福利】惊天秘密！马云背后的男人为何出售阿里股权
+	D:\xmly\静说日本\160604 【周末福利】惊天秘密！马云背后的男人为何出售阿里股权.m4a
+		 track_id: 865
+		{864: 1, 865: 1, 855: 1, 856: 1, 857: 1, 858: 1, 859: 1, 860: 1, 861: 1, 862: 1, 863: 1}
+	【第四十三期】日本影帝高仓健的家为何被拆？ http://audio.xmcdn.com/group14/M08/79/F6/wKgDZFdFILqRNKlyAB-nTcw9UY4526.m4a http://audio.xmcdn.com/group13/M0A/79/31/wKgDXVdFGr3yBIiQAFLogBvQ2jg758.m4a 0
+track_title: <type 'unicode'> 【第四十三期】日本影帝高仓健的家为何被拆？
+	D:\xmly\静说日本\160525 【第四十三期】日本影帝高仓健的家为何被拆？.m4a
+		 track_id: 866
+		{864: 1, 865: 1, 866: 1, 855: 1, 856: 1, 857: 1, 858: 1, 859: 1, 860: 1, 861: 1, 862: 1, 863: 1}
+	【第三十期】这个初中毕业的包工头是如何当上日本首相的？ http://audio.xmcdn.com/group7/M06/3D/04/wKgDX1cE05fS8YxrACkW5OBnS94469.m4a http://audio.xmcdn.com/group7/M06/3D/04/wKgDX1cE056BeCukAGugshl131A120.m4a 0
+track_title: <type 'unicode'> 【第三十期】这个初中毕业的包工头是如何当上日本首相的？
+	D:\xmly\静说日本\160406 【第三十期】这个初中毕业的包工头是如何当上日本首相的？.m4a
+		 track_id: 867
+		{864: 1, 865: 1, 866: 1, 867: 1, 855: 1, 856: 1, 857: 1, 858: 1, 859: 1, 860: 1, 861: 1, 862: 1, 863: 1}
+	【第三十一期】日本政府如何管理网络社会 http://audio2.xmcdn.com/group9/M01/3F/EF/wKgDZlcIw7fhwt91ACYFa_-HlvE453.m4a http://audio2.xmcdn.com/group10/M0B/3A/C0/wKgDZ1cIw4bhAvnQAGOYGM0fmUU674.m4a 0
+track_title: <type 'unicode'> 【第三十一期】日本政府如何管理网络社会
+	D:\xmly\静说日本\160409 【第三十一期】日本政府如何管理网络社会.m4a
+		 track_id: 868
+		{864: 1, 865: 1, 866: 1, 867: 1, 868: 1, 855: 1, 856: 1, 857: 1, 858: 1, 859: 1, 860: 1, 861: 1, 862: 1, 863: 1}
+	【第三十五期】日本女人穿和服真的不穿内裤吗？ http://audio.xmcdn.com/group10/M08/4F/BB/wKgDZ1cgW7eDZwplACJUUVyTxRM612.m4a http://audio.xmcdn.com/group10/M08/4F/BC/wKgDZ1cgW8DieId-AFnqlA9vgTs942.m4a 0
+track_title: <type 'unicode'> 【第三十五期】日本女人穿和服真的不穿内裤吗？
+	D:\xmly\静说日本\160427 【第三十五期】日本女人穿和服真的不穿内裤吗？.m4a
+		 track_id: 869
+		{864: 1, 865: 1, 866: 1, 867: 1, 868: 1, 869: 1, 855: 1, 856: 1, 857: 1, 858: 1, 859: 1, 860: 1, 861: 1, 862: 1, 863: 1}
+	【第四十七期】中国人报考东京大学竟然更有优势？ http://audio.xmcdn.com/group10/M04/86/D4/wKgDZ1dX9amRRBhUAB1Kf0yn40o249.m4a http://audio.xmcdn.com/group10/M04/89/C6/wKgDaVdX9azSmNomAEyVWxwcblw529.m4a 0
+track_title: <type 'unicode'> 【第四十七期】中国人报考东京大学竟然更有优势？
+	D:\xmly\静说日本\160608 【第四十七期】中国人报考东京大学竟然更有优势？.m4a
+		 track_id: 870
+		{864: 1, 865: 1, 866: 1, 867: 1, 868: 1, 869: 1, 870: 1, 855: 1, 856: 1, 857: 1, 858: 1, 859: 1, 860: 1, 861: 1, 862: 1, 863: 1}
+	【周末福利】日本人为何喜欢全裸泡温泉？ http://audio.xmcdn.com/group13/M07/61/29/wKgDXVctyqbCUoMUAB_pLnlHNIw087.m4a http://audio.xmcdn.com/group13/M07/61/29/wKgDXVctyqjR6Ib2AFOVo61tE6g645.m4a 0
+track_title: <type 'unicode'> 【周末福利】日本人为何喜欢全裸泡温泉？
+	D:\xmly\静说日本\160507 【周末福利】日本人为何喜欢全裸泡温泉？.m4a
+		 track_id: 871
+		{864: 1, 865: 1, 866: 1, 867: 1, 868: 1, 869: 1, 870: 1, 871: 1, 855: 1, 856: 1, 857: 1, 858: 1, 859: 1, 860: 1, 861: 1, 862: 1, 863: 1}
+	【周末福利】到日本留学如何选择理想专业？ http://audio.xmcdn.com/group16/M09/73/B0/wKgDaldAUjbzYYQEAB62b102Ay8084.m4a http://audio.xmcdn.com/group16/M09/73/C7/wKgDbFdAUjmTQtBIAFBwS0c23so502.m4a 0
+track_title: <type 'unicode'> 【周末福利】到日本留学如何选择理想专业？
+	D:\xmly\静说日本\160521 【周末福利】到日本留学如何选择理想专业？.m4a
+		 track_id: 872
+		{864: 1, 865: 
