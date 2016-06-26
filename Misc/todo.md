@@ -17,6 +17,20 @@
 - [] [Running Flask app with gunicorn using a Flask-Script command (on Heroku)](http://devblog.michalski.im/2013/01/06/running-flask-app-with-gunicorn-using-a-flask-script-command-on-heroku/)
 - [] [Standalone WSGI Containers](http://flask.pocoo.org/docs/0.10/deploying/wsgi-standalone/#gunicorn)
 
+jQuery 
+- [] [How to use jQuery to add form elements dynamically](http://stackoverflow.com/questions/16744594/how-to-use-jquery-to-add-form-elements-dynamically)
+- [x] [Dynamical add form elements, store them to MySQL and change/delete them in future](http://stackoverflow.com/questions/20069338/dynamical-add-form-elements-store-them-to-mysql-and-change-delete-them-in-futur)
+
+- [] [Create a form dynamically with jquery and submit](http://stackoverflow.com/questions/17431760/create-a-form-dynamically-with-jquery-and-submit)
+
+
+- [] [Good: addrom jsfiddle](http://jsfiddle.net/nzYAW/)
+- [] [Good: last person jsfiddle](http://jsfiddle.net/Mk7MQ/)
+
+- [] [Add/Remove Input Fields Dynamically with jQuery](https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery)
+- [] [Capture Array Values from Dynamic input Fields using PHP](https://www.sanwebe.com/2013/04/capture-array-values-from-dynamic-input-fields-using-php)
+
+
 * 当你在做某个操作时，感觉到麻烦了，那么一定会有更有效的方法在等着你。
 * 而你要做的就是，搜索它、找到它、应用它
 * 搜索的过程可能是辛苦的，但当她呈现在你的面前时，你会感到极大喜悦和充实。
