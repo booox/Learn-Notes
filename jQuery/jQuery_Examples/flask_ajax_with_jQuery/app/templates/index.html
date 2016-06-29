@@ -7,7 +7,18 @@
    <span id="result">?</span>
 <p><a href="#" id="calculate">calculate server side</a>
 
+<ul>
+	<li><a href="basic">Basic </a></li>
+	<li><a href="ready_load">Document ready and Window load (F12: Console) </a></li>
+</ul>
+
+<div id="myDiv">
+	some text
+</div>
+
 <script type="text/javascript" src="{{ url_for('static', filename='js/addnums2.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.10.2.js') }}"></script>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-object.js') }}"></script>
 
 {% endblock %}
