@@ -26,7 +26,7 @@ if __name__ == '__main__':
             # url = 'http://www.ximalaya.com/37310896/album/3253111/'
             # url = 'http://www.ximalaya.com/37310896/album/3253111/'
             # url = 'http://www.ximalaya.com/38909644/album/3376281/'
-            # url = 'http://www.ximalaya.com/1412917/album/239463/'  # 罗辑思维 全集
+            # url = 'http://www.ximalaya.com/1412917/album/<239463></239463>/'  # 罗辑思维 全集
             # url = 'http://www.ximalaya.com/1000168/album/213506/'  # 小晓说
             
             # url = 'http://www.ximalaya.com/22366783/album/2685288/'  # 读读书
