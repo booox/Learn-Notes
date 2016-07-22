@@ -17582,3 +17582,1435 @@ track_title: <type 'unicode'> 【周末福利】到日本留学如何选择理�
 	D:\xmly\静说日本\160521 【周末福利】到日本留学如何选择理想专业？.m4a
 		 track_id: 872
 		{864: 1, 865: 
+Enter a zhubo, album or sound url:http://www.ximalaya.com/1000144/album/3505338/
+Album  doesn't in db: 1000144 /album/ 3505338
+http://www.ximalaya.com/1000144/album/3505338/
+	 Start getItemsOnPages _type=  albumSound From :  http://www.ximalaya.com/1000144/album/3505338/
+	 getItemsOnPages retrieve the first page, total: 1
+	 getItemsOnPages retrive the first page done.
+	 getItemsOnPages retrive multi pages Done.
+
+	 getItemsOnPages Done : get  albumSound from 1 pages
+Write New Album start. 1000144 /album/ 3505338
+Write New Album Done. 1000144 /album/ 3505338
+Write Tracks of the Album Start.
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11294913/
+	Track in database  1000144 /sound/ 11294913
+	check done
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11294913/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11333140/
+	Track  doesn't in db: 1000144 /sound/ 11333140
+	Write New Track start. 1000144 /sound/ 11333140
+	Write New Track Done. 1000144 /sound/ 11333140
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11333140/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11294922/
+	Track  doesn't in db: 1000144 /sound/ 11294922
+	Write New Track start. 1000144 /sound/ 11294922
+	Write New Track Done. 1000144 /sound/ 11294922
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11294922/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11294916/
+	Track  doesn't in db: 1000144 /sound/ 11294916
+	Write New Track start. 1000144 /sound/ 11294916
+	Write New Track Done. 1000144 /sound/ 11294916
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11294916/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11294920/
+	Track  doesn't in db: 1000144 /sound/ 11294920
+	Write New Track start. 1000144 /sound/ 11294920
+	Write New Track Done. 1000144 /sound/ 11294920
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11294920/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11294914/
+	Track  doesn't in db: 1000144 /sound/ 11294914
+	Write New Track start. 1000144 /sound/ 11294914
+	Write New Track Done. 1000144 /sound/ 11294914
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11294914/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11294919/
+	Track  doesn't in db: 1000144 /sound/ 11294919
+	Write New Track start. 1000144 /sound/ 11294919
+	Write New Track Done. 1000144 /sound/ 11294919
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11294919/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11294918/
+	Track  doesn't in db: 1000144 /sound/ 11294918
+	Write New Track start. 1000144 /sound/ 11294918
+	Write New Track Done. 1000144 /sound/ 11294918
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11294918/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11333135/
+	Track  doesn't in db: 1000144 /sound/ 11333135
+	Write New Track start. 1000144 /sound/ 11333135
+	Write New Track Done. 1000144 /sound/ 11333135
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11333135/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11333134/
+	Track  doesn't in db: 1000144 /sound/ 11333134
+	Write New Track start. 1000144 /sound/ 11333134
+	Write New Track Done. 1000144 /sound/ 11333134
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11333134/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11333137/
+	Track  doesn't in db: 1000144 /sound/ 11333137
+	Write New Track start. 1000144 /sound/ 11333137
+	Write New Track Done. 1000144 /sound/ 11333137
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11333137/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11333136/
+	Track  doesn't in db: 1000144 /sound/ 11333136
+	Write New Track start. 1000144 /sound/ 11333136
+	Write New Track Done. 1000144 /sound/ 11333136
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11333136/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11333133/
+	Track  doesn't in db: 1000144 /sound/ 11333133
+	Write New Track start. 1000144 /sound/ 11333133
+	Write New Track Done. 1000144 /sound/ 11333133
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11333133/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11333132/
+	Track  doesn't in db: 1000144 /sound/ 11333132
+	Write New Track start. 1000144 /sound/ 11333132
+	Write New Track Done. 1000144 /sound/ 11333132
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11333132/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11294921/
+	Track  doesn't in db: 1000144 /sound/ 11294921
+	Write New Track start. 1000144 /sound/ 11294921
+	Write New Track Done. 1000144 /sound/ 11294921
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11294921/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11333139/
+	Track  doesn't in db: 1000144 /sound/ 11333139
+	Write New Track start. 1000144 /sound/ 11333139
+	Write New Track Done. 1000144 /sound/ 11333139
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11333139/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11333138/
+	Track  doesn't in db: 1000144 /sound/ 11333138
+	Write New Track start. 1000144 /sound/ 11333138
+	Write New Track Done. 1000144 /sound/ 11333138
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11333138/
+Write Tracks of the Album Done.
+Album in database  1000144 /album/ 3505338
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/1000144/album/3505338/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 17 	 update_time: 2016-07-07
+	 Value in Web -- sound_count: 17 	 update_time: 2016-07-07
+NO NEED for update.
+
+	 this album has  17 tracks.
+
+	 this album has  -1 tracks doesn't download.
+Start download track...
+	Jambalaya http://audio.xmcdn.com/group14/M07/DF/18/wKgDY1aLbErwXqx1AAz6I_AU07w385.m4a http://audio.xmcdn.com/group14/M07/DF/18/wKgDY1aLbEqh9nX4ACH5quFNPig018.m4a 0
+track_title: <type 'unicode'> Jambalaya
+	D:\xmly\一杯咖啡，一首爵士\160105 Jambalaya.m4a
+		 track_id: 875
+		{875: 1}
+	Goodnight Moon http://audio.xmcdn.com/group7/M09/DE/29/wKgDWlaKGtDjH3DfAAuHxh6zsUY188.m4a http://audio.xmcdn.com/group7/M09/DE/29/wKgDWlaKGtCC5vcoAB4uyRXotJg274.m4a 0
+track_title: <type 'unicode'> Goodnight Moon
+	D:\xmly\一杯咖啡，一首爵士\160104 Goodnight Moon.m4a
+		 track_id: 876
+		{875: 1, 876: 1}
+	Turn Off The Lights http://audio.xmcdn.com/group13/M03/DD/80/wKgDXVaKGsvhtAlUAAmeNpnpE8g978.m4a http://audio.xmcdn.com/group13/M03/DD/85/wKgDXlaKGsvCi5W7ABksew3DqgM076.m4a 0
+track_title: <type 'unicode'> Turn Off The Lights
+	D:\xmly\一杯咖啡，一首爵士\160104 Turn Off The Lights.m4a
+		 track_id: 877
+		{875: 1, 876: 1, 877: 1}
+	California Dreamin' http://audio.xmcdn.com/group13/M03/DD/86/wKgDXlaKGs7xMSipAApvgd7Kx0Q222.m4a http://audio.xmcdn.com/group13/M03/DD/80/wKgDXVaKGs6hopQnABtQGJq54Yk266.m4a 0
+track_title: <type 'unicode'> California Dreamin'
+	D:\xmly\一杯咖啡，一首爵士\160104 California Dreamin'.m4a
+		 track_id: 878
+		{875: 1, 876: 1, 877: 1, 878: 1}
+	To Tragoudi Tis Limnis http://audio.xmcdn.com/group13/M03/DD/7F/wKgDXVaKGsmQ5M0-AAeviqKtae0988.m4a http://audio.xmcdn.com/group13/M03/DD/85/wKgDXlaKGsmxlMrlABRH5Xg3S9I182.m4a 0
+track_title: <type 'unicode'> To Tragoudi Tis Limnis
+	D:\xmly\一杯咖啡，一首爵士\160104 To Tragoudi Tis Limnis.m4a
+		 track_id: 879
+		{875: 1, 876: 1, 877: 1, 878: 1, 879: 1}
+	hey paul http://audio.xmcdn.com/group13/M03/DD/86/wKgDXlaKGs3zLv4SAAdNeor9Rio831.m4a http://audio.xmcdn.com/group13/M03/DD/80/wKgDXVaKGs3CfwiVABMbJkuv6q8608.m4a 0
+track_title: <type 'unicode'> hey paul
+	D:\xmly\一杯咖啡，一首爵士\160104 hey paul.m4a
+		 track_id: 880
+		{875: 1, 876: 1, 877: 1, 878: 1, 879: 1, 880: 1}
+	Hang On Little Tomato http://audio.xmcdn.com/group13/M03/DD/80/wKgDXVaKGsyRwYlvAAlL8zdMNGM624.m4a http://audio.xmcdn.com/group13/M03/DD/86/wKgDXlaKGszDDdqyABhU4iDj1NI615.m4a 0
+track_title: <type 'unicode'> Hang On Little Tomato
+	D:\xmly\一杯咖啡，一首爵士\160104 Hang On Little Tomato.m4a
+		 track_id: 881
+		{875: 1, 876: 1, 877: 1, 878: 1, 879: 1, 880: 1, 881: 1}
+	I Want To Belong To You http://audio.xmcdn.com/group14/M07/DF/17/wKgDY1aLbEXCB-KmAAlUUHzMAKQ916.m4a http://audio.xmcdn.com/group14/M0A/DE/E1/wKgDZFaLbEXAyixMABhq2tUL_sg693.m4a 0
+track_title: <type 'unicode'> I Want To Belong To You
+	D:\xmly\一杯咖啡，一首爵士\160105 I Want To Belong To You.m4a
+		 track_id: 882
+		{875: 1, 876: 1, 877: 1, 878: 1, 879: 1, 880: 1, 881: 1, 882: 1}
+	She http://audio.xmcdn.com/group14/M07/DF/17/wKgDY1aLbESyT6GhAAmoroBPcg4309.m4a http://audio.xmcdn.com/group14/M0A/DE/E1/wKgDZFaLbEOy7EQzABlHRiP4cYE747.m4a 0
+track_title: <type 'unicode'> She
+	D:\xmly\一杯咖啡，一首爵士\160105 She.m4a
+		 track_id: 883
+		{875: 1, 876: 1, 877: 1, 878: 1, 879: 1, 880: 1, 881: 1, 882: 1, 883: 1}
+	Piel Canela http://audio.xmcdn.com/group14/M07/DF/18/wKgDY1aLbEbQGDvuAAdHLkczPKs340.m4a http://audio.xmcdn.com/group14/M07/DF/18/wKgDY1aLbEbCRek_ABMK7daI9Pw341.m4a 0
+track_title: <type 'unicode'> Piel Canela
+	D:\xmly\一杯咖啡，一首爵士\160105 Piel Canela.m4a
+		 track_id: 884
+		{875: 1, 876: 1, 877: 1, 878: 1, 879: 1, 880: 1, 881: 1, 882: 1, 883: 1, 884: 1}
+	What Am I To You http://audio.xmcdn.com/group14/M07/DF/17/wKgDY1aLbEbhhUATAAkVLT6m-wY341.m4a http://audio.xmcdn.com/group14/M07/DF/17/wKgDY1aLbEXC9EdOABfFOf96b4o045.m4a 0
+track_title: <type 'unicode'> What Am I To You
+	D:\xmly\一杯咖啡，一首爵士\160105 What Am I To You.m4a
+		 track_id: 885
+		{875: 1, 876: 1, 877: 1, 878: 1, 879: 1, 880: 1, 881: 1, 882: 1, 883: 1, 884: 1, 885: 1}
+	Cosi Tanto http://audio.xmcdn.com/group14/M07/DF/17/wKgDY1aLbELiAtZlAAlTLHf1DVA466.m4a http://audio.xmcdn.com/group14/M0A/DE/E1/wKgDZFaLbEKD_ZaYABhn5lR2auc363.m4a 0
+track_title: <type 'unicode'> Cosi Tanto
+	D:\xmly\一杯咖啡，一首爵士\160105 Cosi Tanto.m4a
+		 track_id: 886
+		{875: 1, 876: 1, 877: 1, 878: 1, 879: 1, 880: 1, 881: 1, 882: 1, 883: 1, 884: 1, 885: 1, 886: 1}
+	Quizas, Quizas, Quizas http://audio.xmcdn.com/group14/M07/DF/17/wKgDY1aLbEGTwlf5AAmjT0lMzMs077.m4a http://audio.xmcdn.com/group14/M0A/DE/E1/wKgDZFaLbEGC7nb9ABk5vSNrtDE617.m4a 0
+track_title: <type 'unicode'> Quizas, Quizas, Quizas
+	D:\xmly\一杯咖啡，一首爵士\160105 Quizas, Quizas, Quizas.m4a
+		 track_id: 887
+		{875: 1, 876: 1, 877: 1, 878: 1, 879: 1, 880: 1, 881: 1, 882: 1, 883: 1, 884: 1, 885: 1, 886: 1, 887: 1}
+	The Reason Why My Heart's in Misery http://audio.xmcdn.com/group7/M09/DE/3C/wKgDX1aKGs-y8EU_AAg_SH5yQMg472.m4a http://audio.xmcdn.com/group7/M09/DE/29/wKgDWlaKGs_AvPOBABWU2Gx1tis066.m4a 0
+track_title: <type 'unicode'> The Reason Why My Heart's in Misery
+	D:\xmly\一杯咖啡，一首爵士\160104 The Reason Why My Heart's in Misery.m4a
+		 track_id: 888
+		{875: 1, 876: 1, 877: 1, 878: 1, 879: 1, 880: 1, 881: 1, 882: 1, 883: 1, 884: 1, 885: 1, 886: 1, 887: 1, 888: 1}
+	Little Things http://audio.xmcdn.com/group14/M0A/DE/E1/wKgDZFaLbEjx9-dyAATk_npWd5E234.m4a http://audio.xmcdn.com/group14/M07/DF/18/wKgDY1aLbEjDGA5bAAzMBAmZT3Q020.m4a 0
+track_title: <type 'unicode'> Little Things
+	D:\xmly\一杯咖啡，一首爵士\160105 Little Things.m4a
+		 track_id: 889
+		{875: 1, 876: 1, 877: 1, 878: 1, 879: 1, 880: 1, 881: 1, 882: 1, 883: 1, 884: 1, 885: 1, 886: 1, 887: 1, 888: 1, 889: 1}
+	There's A Lull In My Life http://audio.xmcdn.com/group14/M07/DF/18/wKgDY1aLbEfSGQClAAhNvCnkSys141.m4a http://audio.xmcdn.com/group14/M0A/DE/E1/wKgDZFaLbEexUoi4ABW64XIwVEQ321.m4a 0
+track_title: <type 'unicode'> There's A Lull In My Life
+	D:\xmly\一杯咖啡，一首爵士\160105 There's A Lull In My Life.m4a
+		 track_id: 890
+		{875: 1, 876: 1, 877: 1, 878: 1, 879: 1, 880: 1, 881: 1, 882: 1, 883: 1, 884: 1, 885: 1, 886: 1, 887: 1, 888: 1, 889: 1, 890: 1}
+
+
+ -------- Convert m4a to mp3 start   ----------- 
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+Enter a zhubo, album or sound url:http://www.ximalaya.com/1000144/album/3505338/
+Album  doesn't in db: 1000144 /album/ 3505338
+http://www.ximalaya.com/1000144/album/3505338/
+	 Start getItemsOnPages _type=  albumSound From :  http://www.ximalaya.com/1000144/album/3505338/
+	 getItemsOnPages retrieve the first page, total: 1
+	 getItemsOnPages retrive the first page done.
+	 getItemsOnPages retrive multi pages Done.
+
+	 getItemsOnPages Done : get  albumSound from 1 pages
+Write New Album start. 1000144 /album/ 3505338
+Write New Album Done. 1000144 /album/ 3505338
+Write Tracks of the Album Start.
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11294913/
+	Track in database  1000144 /sound/ 11294913
+	check done
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11294913/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11333140/
+	Track  doesn't in db: 1000144 /sound/ 11333140
+	Write New Track start. 1000144 /sound/ 11333140
+	Write New Track Done. 1000144 /sound/ 11333140
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11333140/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11294922/
+	Track  doesn't in db: 1000144 /sound/ 11294922
+	Write New Track start. 1000144 /sound/ 11294922
+	Write New Track Done. 1000144 /sound/ 11294922
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11294922/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11294916/
+	Track  doesn't in db: 1000144 /sound/ 11294916
+	Write New Track start. 1000144 /sound/ 11294916
+	Write New Track Done. 1000144 /sound/ 11294916
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11294916/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11294920/
+	Track  doesn't in db: 1000144 /sound/ 11294920
+	Write New Track start. 1000144 /sound/ 11294920
+	Write New Track Done. 1000144 /sound/ 11294920
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11294920/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11294914/
+	Track  doesn't in db: 1000144 /sound/ 11294914
+	Write New Track start. 1000144 /sound/ 11294914
+	Write New Track Done. 1000144 /sound/ 11294914
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11294914/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11294919/
+	Track  doesn't in db: 1000144 /sound/ 11294919
+	Write New Track start. 1000144 /sound/ 11294919
+	Write New Track Done. 1000144 /sound/ 11294919
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11294919/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11294918/
+	Track  doesn't in db: 1000144 /sound/ 11294918
+	Write New Track start. 1000144 /sound/ 11294918
+	Write New Track Done. 1000144 /sound/ 11294918
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11294918/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11333135/
+	Track  doesn't in db: 1000144 /sound/ 11333135
+	Write New Track start. 1000144 /sound/ 11333135
+	Write New Track Done. 1000144 /sound/ 11333135
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11333135/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11333134/
+	Track  doesn't in db: 1000144 /sound/ 11333134
+	Write New Track start. 1000144 /sound/ 11333134
+	Write New Track Done. 1000144 /sound/ 11333134
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11333134/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11333137/
+	Track  doesn't in db: 1000144 /sound/ 11333137
+	Write New Track start. 1000144 /sound/ 11333137
+	Write New Track Done. 1000144 /sound/ 11333137
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11333137/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11333136/
+	Track  doesn't in db: 1000144 /sound/ 11333136
+	Write New Track start. 1000144 /sound/ 11333136
+	Write New Track Done. 1000144 /sound/ 11333136
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11333136/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11333133/
+	Track  doesn't in db: 1000144 /sound/ 11333133
+	Write New Track start. 1000144 /sound/ 11333133
+	Write New Track Done. 1000144 /sound/ 11333133
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11333133/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11333132/
+	Track  doesn't in db: 1000144 /sound/ 11333132
+	Write New Track start. 1000144 /sound/ 11333132
+	Write New Track Done. 1000144 /sound/ 11333132
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11333132/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11294921/
+	Track  doesn't in db: 1000144 /sound/ 11294921
+	Write New Track start. 1000144 /sound/ 11294921
+	Write New Track Done. 1000144 /sound/ 11294921
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11294921/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11333139/
+	Track  doesn't in db: 1000144 /sound/ 11333139
+	Write New Track start. 1000144 /sound/ 11333139
+	Write New Track Done. 1000144 /sound/ 11333139
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11333139/
+
+start write the track into db. 
+	http://www.ximalaya.com/1000144/sound/11333138/
+	Track  doesn't in db: 1000144 /sound/ 11333138
+	Write New Track start. 1000144 /sound/ 11333138
+	Write New Track Done. 1000144 /sound/ 11333138
+the track write into db done. 
+	http://www.ximalaya.com/1000144/sound/11333138/
+Write Tracks of the Album Done.
+Album in database  1000144 /album/ 3505338
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/1000144/album/3505338/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 17 	 update_time: 2016-07-07
+	 Value in Web -- sound_count: 17 	 update_time: 2016-07-07
+NO NEED for update.
+
+	 this album has  17 tracks.
+
+	 this album has  -1 tracks doesn't download.
+Start download track...
+	Jambalaya http://audio.xmcdn.com/group14/M07/DF/18/wKgDY1aLbErwXqx1AAz6I_AU07w385.m4a http://audio.xmcdn.com/group14/M07/DF/18/wKgDY1aLbEqh9nX4ACH5quFNPig018.m4a 0
+track_title: <type 'unicode'> Jambalaya
+	E:\xmly\一杯咖啡，一首爵士\160105 Jambalaya.m4a
+		 track_id: 891
+		{891: 1}
+	Goodnight Moon http://audio.xmcdn.com/group7/M09/DE/29/wKgDWlaKGtDjH3DfAAuHxh6zsUY188.m4a http://audio.xmcdn.com/group7/M09/DE/29/wKgDWlaKGtCC5vcoAB4uyRXotJg274.m4a 0
+track_title: <type 'unicode'> Goodnight Moon
+	E:\xmly\一杯咖啡，一首爵士\160104 Goodnight Moon.m4a
+		 track_id: 892
+		{891: 1, 892: 1}
+	Turn Off The Lights http://audio.xmcdn.com/group13/M03/DD/80/wKgDXVaKGsvhtAlUAAmeNpnpE8g978.m4a http://audio.xmcdn.com/group13/M03/DD/85/wKgDXlaKGsvCi5W7ABksew3DqgM076.m4a 0
+track_title: <type 'unicode'> Turn Off The Lights
+	E:\xmly\一杯咖啡，一首爵士\160104 Turn Off The Lights.m4a
+		 track_id: 893
+		{891: 1, 892: 1, 893: 1}
+	California Dreamin' http://audio.xmcdn.com/group13/M03/DD/86/wKgDXlaKGs7xMSipAApvgd7Kx0Q222.m4a http://audio.xmcdn.com/group13/M03/DD/80/wKgDXVaKGs6hopQnABtQGJq54Yk266.m4a 0
+track_title: <type 'unicode'> California Dreamin'
+	E:\xmly\一杯咖啡，一首爵士\160104 California Dreamin'.m4a
+		 track_id: 894
+		{891: 1, 892: 1, 893: 1, 894: 1}
+	To Tragoudi Tis Limnis http://audio.xmcdn.com/group13/M03/DD/7F/wKgDXVaKGsmQ5M0-AAeviqKtae0988.m4a http://audio.xmcdn.com/group13/M03/DD/85/wKgDXlaKGsmxlMrlABRH5Xg3S9I182.m4a 0
+track_title: <type 'unicode'> To Tragoudi Tis Limnis
+	E:\xmly\一杯咖啡，一首爵士\160104 To Tragoudi Tis Limnis.m4a
+		 track_id: 895
+		{891: 1, 892: 1, 893: 1, 894: 1, 895: 1}
+	hey paul http://audio.xmcdn.com/group13/M03/DD/86/wKgDXlaKGs3zLv4SAAdNeor9Rio831.m4a http://audio.xmcdn.com/group13/M03/DD/80/wKgDXVaKGs3CfwiVABMbJkuv6q8608.m4a 0
+track_title: <type 'unicode'> hey paul
+	E:\xmly\一杯咖啡，一首爵士\160104 hey paul.m4a
+		 track_id: 896
+		{896: 1, 891: 1, 892: 1, 893: 1, 894: 1, 895: 1}
+	Hang On Little Tomato http://audio.xmcdn.com/group13/M03/DD/80/wKgDXVaKGsyRwYlvAAlL8zdMNGM624.m4a http://audio.xmcdn.com/group13/M03/DD/86/wKgDXlaKGszDDdqyABhU4iDj1NI615.m4a 0
+track_title: <type 'unicode'> Hang On Little Tomato
+	E:\xmly\一杯咖啡，一首爵士\160104 Hang On Little Tomato.m4a
+		 track_id: 897
+		{896: 1, 897: 1, 891: 1, 892: 1, 893: 1, 894: 1, 895: 1}
+	I Want To Belong To You http://audio.xmcdn.com/group14/M07/DF/17/wKgDY1aLbEXCB-KmAAlUUHzMAKQ916.m4a http://audio.xmcdn.com/group14/M0A/DE/E1/wKgDZFaLbEXAyixMABhq2tUL_sg693.m4a 0
+track_title: <type 'unicode'> I Want To Belong To You
+	E:\xmly\一杯咖啡，一首爵士\160105 I Want To Belong To You.m4a
+		 track_id: 898
+		{896: 1, 897: 1, 898: 1, 891: 1, 892: 1, 893: 1, 894: 1, 895: 1}
+	She http://audio.xmcdn.com/group14/M07/DF/17/wKgDY1aLbESyT6GhAAmoroBPcg4309.m4a http://audio.xmcdn.com/group14/M0A/DE/E1/wKgDZFaLbEOy7EQzABlHRiP4cYE747.m4a 0
+track_title: <type 'unicode'> She
+	E:\xmly\一杯咖啡，一首爵士\160105 She.m4a
+		 track_id: 899
+		{896: 1, 897: 1, 898: 1, 899: 1, 891: 1, 892: 1, 893: 1, 894: 1, 895: 1}
+	Piel Canela http://audio.xmcdn.com/group14/M07/DF/18/wKgDY1aLbEbQGDvuAAdHLkczPKs340.m4a http://audio.xmcdn.com/group14/M07/DF/18/wKgDY1aLbEbCRek_ABMK7daI9Pw341.m4a 0
+track_title: <type 'unicode'> Piel Canela
+	E:\xmly\一杯咖啡，一首爵士\160105 Piel Canela.m4a
+		 track_id: 900
+		{896: 1, 897: 1, 898: 1, 899: 1, 900: 1, 891: 1, 892: 1, 893: 1, 894: 1, 895: 1}
+	What Am I To You http://audio.xmcdn.com/group14/M07/DF/17/wKgDY1aLbEbhhUATAAkVLT6m-wY341.m4a http://audio.xmcdn.com/group14/M07/DF/17/wKgDY1aLbEXC9EdOABfFOf96b4o045.m4a 0
+track_title: <type 'unicode'> What Am I To You
+	E:\xmly\一杯咖啡，一首爵士\160105 What Am I To You.m4a
+		 track_id: 901
+		{896: 1, 897: 1, 898: 1, 899: 1, 900: 1, 901: 1, 891: 1, 892: 1, 893: 1, 894: 1, 895: 1}
+	Cosi Tanto http://audio2.xmcdn.com/group14/M07/DF/17/wKgDY1aLbELiAtZlAAlTLHf1DVA466.m4a http://audio2.xmcdn.com/group14/M0A/DE/E1/wKgDZFaLbEKD_ZaYABhn5lR2auc363.m4a 0
+track_title: <type 'unicode'> Cosi Tanto
+	E:\xmly\一杯咖啡，一首爵士\160105 Cosi Tanto.m4a
+		 track_id: 902
+		{896: 1, 897: 1, 898: 1, 899: 1, 900: 1, 901: 1, 902: 1, 891: 1, 892: 1, 893: 1, 894: 1, 895: 1}
+	Quizas, Quizas, Quizas http://audio.xmcdn.com/group14/M07/DF/17/wKgDY1aLbEGTwlf5AAmjT0lMzMs077.m4a http://audio.xmcdn.com/group14/M0A/DE/E1/wKgDZFaLbEGC7nb9ABk5vSNrtDE617.m4a 0
+track_title: <type 'unicode'> Quizas, Quizas, Quizas
+	E:\xmly\一杯咖啡，一首爵士\160105 Quizas, Quizas, Quizas.m4a
+		 track_id: 903
+		{896: 1, 897: 1, 898: 1, 899: 1, 900: 1, 901: 1, 902: 1, 903: 1, 891: 1, 892: 1, 893: 1, 894: 1, 895: 1}
+	The Reason Why My Heart's in Misery http://audio.xmcdn.com/group7/M09/DE/3C/wKgDX1aKGs-y8EU_AAg_SH5yQMg472.m4a http://audio.xmcdn.com/group7/M09/DE/29/wKgDWlaKGs_AvPOBABWU2Gx1tis066.m4a 0
+track_title: <type 'unicode'> The Reason Why My Heart's in Misery
+	E:\xmly\一杯咖啡，一首爵士\160104 The Reason Why My Heart's in Misery.m4a
+		 track_id: 904
+		{896: 1, 897: 1, 898: 1, 899: 1, 900: 1, 901: 1, 902: 1, 903: 1, 904: 1, 891: 1, 892: 1, 893: 1, 894: 1, 895: 1}
+	Little Things http://audio.xmcdn.com/group14/M0A/DE/E1/wKgDZFaLbEjx9-dyAATk_npWd5E234.m4a http://audio.xmcdn.com/group14/M07/DF/18/wKgDY1aLbEjDGA5bAAzMBAmZT3Q020.m4a 0
+track_title: <type 'unicode'> Little Things
+	E:\xmly\一杯咖啡，一首爵士\160105 Little Things.m4a
+		 track_id: 905
+		{896: 1, 897: 1, 898: 1, 899: 1, 900: 1, 901: 1, 902: 1, 903: 1, 904: 1, 905: 1, 891: 1, 892: 1, 893: 1, 894: 1, 895: 1}
+	There's A Lull In My Life http://audio.xmcdn.com/group14/M07/DF/18/wKgDY1aLbEfSGQClAAhNvCnkSys141.m4a http://audio.xmcdn.com/group14/M0A/DE/E1/wKgDZFaLbEexUoi4ABW64XIwVEQ321.m4a 0
+track_title: <type 'unicode'> There's A Lull In My Life
+	E:\xmly\一杯咖啡，一首爵士\160105 There's A Lull In My Life.m4a
+		 track_id: 906
+		{896: 1, 897: 1, 898: 1, 899: 1, 900: 1, 901: 1, 902: 1, 903: 1, 904: 1, 905: 1, 906: 1, 891: 1, 892: 1, 893: 1, 894: 1, 895: 1}
+
+
+ -------- Convert m4a to mp3 start   ----------- 
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End#
+
+
+End
+Enter a zhubo, album or sound url:http://www.ximalaya.com/1324486/album/4243/
+Album  doesn't in db: 1324486 /album/ 4243
+http://www.ximalaya.com/1324486/album/4243/
+	 Start getItemsOnPages _type=  albumSound From :  http://www.ximalaya.com/1324486/album/4243/
+	 getItemsOnPages retrieve the first page, total: 1
+	 getItemsOnPages retrive the first page done.
+	 getItemsOnPages retrive multi pages Done.
+
+	 getItemsOnPages Done : get  albumSound from 1 pages
+Write New Album start. 1324486 /album/ 4243
+Write New Album Done. 1324486 /album/ 4243
+Write Tracks of the Album Start.
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/261553/
+	Track  doesn't in db: 1324486 /sound/ 261553
+	Write New Track start. 1324486 /sound/ 261553
+	Write New Track Done. 1324486 /sound/ 261553
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/261553/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/262210/
+	Track  doesn't in db: 1324486 /sound/ 262210
+	Write New Track start. 1324486 /sound/ 262210
+	Write New Track Done. 1324486 /sound/ 262210
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/262210/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/262054/
+	Track  doesn't in db: 1324486 /sound/ 262054
+	Write New Track start. 1324486 /sound/ 262054
+	Write New Track Done. 1324486 /sound/ 262054
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/262054/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/260354/
+	Track  doesn't in db: 1324486 /sound/ 260354
+	Write New Track start. 1324486 /sound/ 260354
+	Write New Track Done. 1324486 /sound/ 260354
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/260354/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/309018/
+	Track  doesn't in db: 1324486 /sound/ 309018
+	Write New Track start. 1324486 /sound/ 309018
+	Write New Track Done. 1324486 /sound/ 309018
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/309018/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/261048/
+	Track  doesn't in db: 1324486 /sound/ 261048
+	Write New Track start. 1324486 /sound/ 261048
+	Write New Track Done. 1324486 /sound/ 261048
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/261048/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/261977/
+	Track  doesn't in db: 1324486 /sound/ 261977
+	Write New Track start. 1324486 /sound/ 261977
+	Write New Track Done. 1324486 /sound/ 261977
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/261977/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/261824/
+	Track  doesn't in db: 1324486 /sound/ 261824
+	Write New Track start. 1324486 /sound/ 261824
+	Write New Track Done. 1324486 /sound/ 261824
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/261824/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/262121/
+	Track  doesn't in db: 1324486 /sound/ 262121
+	Write New Track start. 1324486 /sound/ 262121
+	Write New Track Done. 1324486 /sound/ 262121
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/262121/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/260435/
+	Track  doesn't in db: 1324486 /sound/ 260435
+	Write New Track start. 1324486 /sound/ 260435
+	Write New Track Done. 1324486 /sound/ 260435
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/260435/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/262278/
+	Track  doesn't in db: 1324486 /sound/ 262278
+	Write New Track start. 1324486 /sound/ 262278
+	Write New Track Done. 1324486 /sound/ 262278
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/262278/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/260597/
+	Track  doesn't in db: 1324486 /sound/ 260597
+	Write New Track start. 1324486 /sound/ 260597
+	Write New Track Done. 1324486 /sound/ 260597
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/260597/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/261797/
+	Track  doesn't in db: 1324486 /sound/ 261797
+	Write New Track start. 1324486 /sound/ 261797
+	Write New Track Done. 1324486 /sound/ 261797
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/261797/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/262143/
+	Track  doesn't in db: 1324486 /sound/ 262143
+	Write New Track start. 1324486 /sound/ 262143
+	Write New Track Done. 1324486 /sound/ 262143
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/262143/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/260551/
+	Track  doesn't in db: 1324486 /sound/ 260551
+	Write New Track start. 1324486 /sound/ 260551
+	Write New Track Done. 1324486 /sound/ 260551
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/260551/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/262165/
+	Track  doesn't in db: 1324486 /sound/ 262165
+	Write New Track start. 1324486 /sound/ 262165
+	Write New Track Done. 1324486 /sound/ 262165
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/262165/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/258756/
+	Track  doesn't in db: 1324486 /sound/ 258756
+	Write New Track start. 1324486 /sound/ 258756
+	Write New Track Done. 1324486 /sound/ 258756
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/258756/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/260667/
+	Track  doesn't in db: 1324486 /sound/ 260667
+	Write New Track start. 1324486 /sound/ 260667
+	Write New Track Done. 1324486 /sound/ 260667
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/260667/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/261459/
+	Track  doesn't in db: 1324486 /sound/ 261459
+	Write New Track start. 1324486 /sound/ 261459
+	Write New Track Done. 1324486 /sound/ 261459
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/261459/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/259169/
+	Track  doesn't in db: 1324486 /sound/ 259169
+	Write New Track start. 1324486 /sound/ 259169
+	Write New Track Done. 1324486 /sound/ 259169
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/259169/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/260397/
+	Track  doesn't in db: 1324486 /sound/ 260397
+	Write New Track start. 1324486 /sound/ 260397
+	Write New Track Done. 1324486 /sound/ 260397
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/260397/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/258968/
+	Track  doesn't in db: 1324486 /sound/ 258968
+	Write New Track start. 1324486 /sound/ 258968
+	Write New Track Done. 1324486 /sound/ 258968
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/258968/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/260117/
+	Track  doesn't in db: 1324486 /sound/ 260117
+	Write New Track start. 1324486 /sound/ 260117
+	Write New Track Done. 1324486 /sound/ 260117
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/260117/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/262075/
+	Track  doesn't in db: 1324486 /sound/ 262075
+	Write New Track start. 1324486 /sound/ 262075
+	Write New Track Done. 1324486 /sound/ 262075
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/262075/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/260493/
+	Track  doesn't in db: 1324486 /sound/ 260493
+	Write New Track start. 1324486 /sound/ 260493
+	Write New Track Done. 1324486 /sound/ 260493
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/260493/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/261424/
+	Track  doesn't in db: 1324486 /sound/ 261424
+	Write New Track start. 1324486 /sound/ 261424
+	Write New Track Done. 1324486 /sound/ 261424
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/261424/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/291408/
+	Track  doesn't in db: 1324486 /sound/ 291408
+	Write New Track start. 1324486 /sound/ 291408
+	Write New Track Done. 1324486 /sound/ 291408
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/291408/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/260696/
+	Track  doesn't in db: 1324486 /sound/ 260696
+	Write New Track start. 1324486 /sound/ 260696
+	Write New Track Done. 1324486 /sound/ 260696
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/260696/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/259949/
+	Track  doesn't in db: 1324486 /sound/ 259949
+	Write New Track start. 1324486 /sound/ 259949
+	Write New Track Done. 1324486 /sound/ 259949
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/259949/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/261927/
+	Track  doesn't in db: 1324486 /sound/ 261927
+	Write New Track start. 1324486 /sound/ 261927
+	Write New Track Done. 1324486 /sound/ 261927
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/261927/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/9250220/
+	Track  doesn't in db: 1324486 /sound/ 9250220
+	Write New Track start. 13379390 /sound/ 9250220
+	Write New Track Done. 13379390 /sound/ 9250220
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/9250220/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/261853/
+	Track  doesn't in db: 1324486 /sound/ 261853
+	Write New Track start. 1324486 /sound/ 261853
+	Write New Track Done. 1324486 /sound/ 261853
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/261853/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/261905/
+	Track  doesn't in db: 1324486 /sound/ 261905
+	Write New Track start. 1324486 /sound/ 261905
+	Write New Track Done. 1324486 /sound/ 261905
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/261905/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/261641/
+	Track  doesn't in db: 1324486 /sound/ 261641
+	Write New Track start. 1324486 /sound/ 261641
+	Write New Track Done. 1324486 /sound/ 261641
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/261641/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/338498/
+	Track  doesn't in db: 1324486 /sound/ 338498
+	Write New Track start. 1324486 /sound/ 338498
+	Write New Track Done. 1324486 /sound/ 338498
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/338498/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/359586/
+	Track  doesn't in db: 1324486 /sound/ 359586
+	Write New Track start. 1324486 /sound/ 359586
+	Write New Track Done. 1324486 /sound/ 359586
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/359586/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/262099/
+	Track  doesn't in db: 1324486 /sound/ 262099
+	Write New Track start. 1324486 /sound/ 262099
+	Write New Track Done. 1324486 /sound/ 262099
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/262099/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/261589/
+	Track  doesn't in db: 1324486 /sound/ 261589
+	Write New Track start. 1324486 /sound/ 261589
+	Write New Track Done. 1324486 /sound/ 261589
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/261589/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/260736/
+	Track  doesn't in db: 1324486 /sound/ 260736
+	Write New Track start. 1324486 /sound/ 260736
+	Write New Track Done. 1324486 /sound/ 260736
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/260736/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/349739/
+	Track  doesn't in db: 1324486 /sound/ 349739
+	Write New Track start. 1324486 /sound/ 349739
+	Write New Track Done. 1324486 /sound/ 349739
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/349739/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/261716/
+	Track  doesn't in db: 1324486 /sound/ 261716
+	Write New Track start. 1324486 /sound/ 261716
+	Write New Track Done. 1324486 /sound/ 261716
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/261716/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/261138/
+	Track  doesn't in db: 1324486 /sound/ 261138
+	Write New Track start. 1324486 /sound/ 261138
+	Write New Track Done. 1324486 /sound/ 261138
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/261138/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/259515/
+	Track  doesn't in db: 1324486 /sound/ 259515
+	Write New Track start. 1324486 /sound/ 259515
+	Write New Track Done. 1324486 /sound/ 259515
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/259515/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/261021/
+	Track  doesn't in db: 1324486 /sound/ 261021
+	Write New Track start. 1324486 /sound/ 261021
+	Write New Track Done. 1324486 /sound/ 261021
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/261021/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/411533/
+	Track  doesn't in db: 1324486 /sound/ 411533
+	Write New Track start. 1324486 /sound/ 411533
+	Write New Track Done. 1324486 /sound/ 411533
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/411533/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/260772/
+	Track  doesn't in db: 1324486 /sound/ 260772
+	Write New Track start. 1324486 /sound/ 260772
+	Write New Track Done. 1324486 /sound/ 260772
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/260772/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/260995/
+	Track  doesn't in db: 1324486 /sound/ 260995
+	Write New Track start. 1324486 /sound/ 260995
+	Write New Track Done. 1324486 /sound/ 260995
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/260995/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/262188/
+	Track  doesn't in db: 1324486 /sound/ 262188
+	Write New Track start. 1324486 /sound/ 262188
+	Write New Track Done. 1324486 /sound/ 262188
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/262188/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/262257/
+	Track  doesn't in db: 1324486 /sound/ 262257
+	Write New Track start. 1324486 /sound/ 262257
+	Write New Track Done. 1324486 /sound/ 262257
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/262257/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/261672/
+	Track  doesn't in db: 1324486 /sound/ 261672
+	Write New Track start. 1324486 /sound/ 261672
+	Write New Track Done. 1324486 /sound/ 261672
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/261672/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/331990/
+	Track  doesn't in db: 1324486 /sound/ 331990
+	Write New Track start. 1324486 /sound/ 331990
+	Write New Track Done. 1324486 /sound/ 331990
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/331990/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/259093/
+	Track  doesn't in db: 1324486 /sound/ 259093
+	Write New Track start. 1324486 /sound/ 259093
+	Write New Track Done. 1324486 /sound/ 259093
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/259093/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/350681/
+	Track  doesn't in db: 1324486 /sound/ 350681
+	Write New Track start. 1324486 /sound/ 350681
+	Write New Track Done. 1324486 /sound/ 350681
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/350681/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/259059/
+	Track  doesn't in db: 1324486 /sound/ 259059
+	Write New Track start. 1324486 /sound/ 259059
+	Write New Track Done. 1324486 /sound/ 259059
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/259059/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/259137/
+	Track  doesn't in db: 1324486 /sound/ 259137
+	Write New Track start. 1324486 /sound/ 259137
+	Write New Track Done. 1324486 /sound/ 259137
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/259137/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/348314/
+	Track  doesn't in db: 1324486 /sound/ 348314
+	Write New Track start. 1324486 /sound/ 348314
+	Write New Track Done. 1324486 /sound/ 348314
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/348314/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/371014/
+	Track  doesn't in db: 1324486 /sound/ 371014
+	Write New Track start. 1324486 /sound/ 371014
+	Write New Track Done. 1324486 /sound/ 371014
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/371014/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/261170/
+	Track  doesn't in db: 1324486 /sound/ 261170
+	Write New Track start. 1324486 /sound/ 261170
+	Write New Track Done. 1324486 /sound/ 261170
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/261170/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/261091/
+	Track  doesn't in db: 1324486 /sound/ 261091
+	Write New Track start. 1324486 /sound/ 261091
+	Write New Track Done. 1324486 /sound/ 261091
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/261091/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/345493/
+	Track  doesn't in db: 1324486 /sound/ 345493
+	Write New Track start. 1324486 /sound/ 345493
+	Write New Track Done. 1324486 /sound/ 345493
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/345493/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/9227127/
+	Track  doesn't in db: 1324486 /sound/ 9227127
+	Write New Track start. 14074517 /sound/ 9227127
+	Write New Track Done. 14074517 /sound/ 9227127
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/9227127/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/260167/
+	Track  doesn't in db: 1324486 /sound/ 260167
+	Write New Track start. 1324486 /sound/ 260167
+	Write New Track Done. 1324486 /sound/ 260167
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/260167/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/347871/
+	Track  doesn't in db: 1324486 /sound/ 347871
+	Write New Track start. 1324486 /sound/ 347871
+	Write New Track Done. 1324486 /sound/ 347871
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/347871/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/260962/
+	Track  doesn't in db: 1324486 /sound/ 260962
+	Write New Track start. 1324486 /sound/ 260962
+	Write New Track Done. 1324486 /sound/ 260962
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/260962/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/260868/
+	Track  doesn't in db: 1324486 /sound/ 260868
+	Write New Track start. 1324486 /sound/ 260868
+	Write New Track Done. 1324486 /sound/ 260868
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/260868/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/258897/
+	Track  doesn't in db: 1324486 /sound/ 258897
+	Write New Track start. 1324486 /sound/ 258897
+	Write New Track Done. 1324486 /sound/ 258897
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/258897/
+
+start write the track into db. 
+	http://www.ximalaya.com/1324486/sound/261882/
+	Track  doesn't in db: 1324486 /sound/ 261882
+	Write New Track start. 1324486 /sound/ 261882
+	Write New Track Done. 1324486 /sound/ 261882
+the track write into db done. 
+	http://www.ximalaya.com/1324486/sound/261882/
+Write Tracks of the Album Done.
+Album in database  1324486 /album/ 4243
+Check album in webpage
+	 Retrive Start: http://www.ximalaya.com/1324486/album/4243/
+	 Album Check Start
+	 Album Check Done
+	 Value in DB -- sound_count: 67 	 update_time: 2016-04-28
+	 Value in Web -- sound_count: 67 	 update_time: 2016-04-28
+NO NEED for update.
+
+	 this album has  67 tracks.
+
+	 this album has  -1 tracks doesn't download.
+Start download track...
+	Matisyahu - One Day http://audio.xmcdn.com/group15/M09/0B/CC/wKgDaFVhDlGQ1i_JAApJFerlEDo297.m4a http://audio.xmcdn.com/group9/M05/1F/1B/wKgDZlV6Cb-D3BS9ABrr5xZdg5U445.m4a 0
+track_title: <type 'unicode'> Matisyahu - One Day
+	E:\xmly\高能！戴上耳机动起来！\130408 Matisyahu - One Day.m4a
+		 track_id: 907
+		{907: 1}
+	瞿颖 - 加速度 http://audio.xmcdn.com/group15/M03/47/79/wKgDZVWoUKWj38eNAAnPzo8x8Jo431.m4a http://audio.xmcdn.com/group15/M03/47/7A/wKgDaFWoUJGi8oi9ABmuzYBpbT8674.m4a 0
+track_title: <type 'unicode'> 瞿颖 - 加速度
+	E:\xmly\高能！戴上耳机动起来！\130409 瞿颖 - 加速度.m4a
+		 track_id: 908
+		{907: 1, 908: 1}
+	Taio Cruz - Dynamite http://audio.xmcdn.com/group14/M07/33/B8/wKgDZFWTTIKThEZEAAtJeXv9NDU235.m4a http://audio.xmcdn.com/group14/M07/33/D7/wKgDY1WTTKaQPbJHAB2Mtq5jh2I791.m4a 0
+track_title: <type 'unicode'> Taio Cruz - Dynamite
+	E:\xmly\高能！戴上耳机动起来！\130409 Taio Cruz - Dynamite.m4a
+		 track_id: 909
+		{907: 1, 908: 1, 909: 1}
+	Davichi - 爱情和战争 http://audio.xmcdn.com/group7/M00/28/A5/wKgDX1WEnjnge1PRAAwPFRBAZI4901.m4a http://audio.xmcdn.com/group7/M01/28/A2/wKgDWlWEnkLzgiO_AB-Qtq4sClA571.m4a 0
+track_title: <type 'unicode'> Davichi - 爱情和战争
+	E:\xmly\高能！戴上耳机动起来！\130408 Davichi - 爱情和战争.m4a
+		 track_id: 910
+		{907: 1, 908: 1, 909: 1, 910: 1}
+	Groove Coverage - Poison - DJ版 http://audio.xmcdn.com/group10/M05/24/85/wKgDZ1WAAdrD3hOeAAjC40Byufs815.m4a http://audio.xmcdn.com/group10/M05/24/85/wKgDZ1WAAdqRwwdbABbsssvxZLM443.m4a 0
+track_title: <type 'unicode'> Groove Coverage - Poison - DJ版
+	E:\xmly\高能！戴上耳机动起来！\130425 Groove Coverage - Poison - DJ版.m4a
+		 track_id: 911
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1}
+	Iron Maiden - The Number Of The Beast http://audio.xmcdn.com/group14/M03/07/AA/wKgDZFVdV6aSfUnSAA29QzozrEU345.m4a http://audio.xmcdn.com/group13/M08/1B/EE/wKgDXVV2wLChMQLVACP4cPuMjzo084.m4a 0
+track_title: <type 'unicode'> Iron Maiden - The Number Of The Beast
+	E:\xmly\高能！戴上耳机动起来！\130408 Iron Maiden - The Number Of The Beast.m4a
+		 track_id: 912
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1}
+	Sweetbox - Killing Me Dj http://audio.xmcdn.com/group8/M0A/4A/C2/wKgDYFWurELjilNBAAqqvztvZu0998.m4a http://audio.xmcdn.com/group8/M08/4A/F7/wKgDYVWurAHxs_QiABvsZC4NlRw874.m4a 0
+track_title: <type 'unicode'> Sweetbox - Killing Me Dj
+	E:\xmly\高能！戴上耳机动起来！\130409 Sweetbox - Killing Me Dj.m4a
+		 track_id: 913
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1}
+	Not yet - 週末Not yet http://audio.xmcdn.com/group13/M07/2A/6A/wKgDXVWGVgTTsmyeAA2MkkIAYc4342.m4a http://audio.xmcdn.com/group13/M07/2A/7D/wKgDXlWGVfaA5MfvABH-CP25MKg837.m4a 0
+track_title: <type 'unicode'> Not yet - 週末Not yet
+	E:\xmly\高能！戴上耳机动起来！\130409 Not yet - 週末Not yet.m4a
+		 track_id: 914
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1}
+	中川翔子 - 続く世界 http://audio.xmcdn.com/group7/M00/24/B6/wKgDX1WAASfj1AovAA2o54rVJ5M224.m4a http://audio.xmcdn.com/group7/M00/24/B4/wKgDWlWAAS_AkEsmACPEVaaqPlM028.m4a 0
+track_title: <type 'unicode'> 中川翔子 - 続く世界
+	E:\xmly\高能！戴上耳机动起来！\130409 中川翔子 - 続く世界.m4a
+		 track_id: 915
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1}
+	Estelle - American Boy http://audio.xmcdn.com/group10/M05/29/52/wKgDZ1WFW2PD6M3qAA1uzdJnkDU025.m4a http://audio.xmcdn.com/group10/M05/29/48/wKgDaVWFW3XBgDHuACMqQC5nke0636.m4a 0
+track_title: <type 'unicode'> Estelle - American Boy
+	E:\xmly\高能！戴上耳机动起来！\130408 Estelle - American Boy.m4a
+		 track_id: 916
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1}
+	陈慧琳 - 不得了 http://audio.xmcdn.com/group9/M01/4E/37/wKgDYlWydrSi7uQ5AAsIaolczNY562.m4a http://audio.xmcdn.com/group9/M01/4E/6A/wKgDZlWydsKwv59hABzhiJNWAYk059.m4a 0
+track_title: <type 'unicode'> 陈慧琳 - 不得了
+	E:\xmly\高能！戴上耳机动起来！\130409 陈慧琳 - 不得了.m4a
+		 track_id: 917
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1}
+	Faber Drive - Tongue Tied http://audio.xmcdn.com/group8/M02/0C/EB/wKgDYVViHsCBEsi1AAnxZgsIF_4457.m4a http://audio.xmcdn.com/group14/M02/1F/9F/wKgDY1V6fjSz1AA9ABoF6H6YGmk335.m4a 0
+track_title: <type 'unicode'> Faber Drive - Tongue Tied
+	E:\xmly\高能！戴上耳机动起来！\130408 Faber Drive - Tongue Tied.m4a
+		 track_id: 918
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1}
+	Nirvana - On A Plain http://audio.xmcdn.com/group9/M06/48/BD/wKgDZlWstaSR0xJ-AAlCrCRDzK8824.m4a http://audio.xmcdn.com/group9/M06/48/92/wKgDYlWstZaAsUFZABg8MLyjs-g744.m4a 0
+track_title: <type 'unicode'> Nirvana - On A Plain
+	E:\xmly\高能！戴上耳机动起来！\130409 Nirvana - On A Plain.m4a
+		 track_id: 919
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1}
+	林萍 - 拥抱明天 http://audio.xmcdn.com/group9/M01/4E/69/wKgDZlWydryRsSbhAAo_cCcNtpU739.m4a http://audio.xmcdn.com/group9/M01/4E/37/wKgDYlWydq7x7qWmABrSez4L3Ws876.m4a 0
+track_title: <type 'unicode'> 林萍 - 拥抱明天
+	E:\xmly\高能！戴上耳机动起来！\130409 林萍 - 拥抱明天.m4a
+		 track_id: 920
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1}
+	Example - Kickstarts http://audio.xmcdn.com/group7/M07/09/FE/wKgDX1VfRrXAC0mlAAiATq-eIrc479.m4a http://audio.xmcdn.com/group15/M01/1D/A8/wKgDaFV4dLbSC0j-ABY9xyhRBXE864.m4a 0
+track_title: <type 'unicode'> Example - Kickstarts
+	E:\xmly\高能！戴上耳机动起来！\130408 Example - Kickstarts.m4a
+		 track_id: 921
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1}
+	潘玮柏 - 禅舞不二 http://audio.xmcdn.com/group12/M0A/41/A9/wKgDXFWifVngh1yIAAq4ebGYWK4528.m4a http://audio.xmcdn.com/group12/M0B/41/AC/wKgDW1WifXHTlYqeABwQy5bDqOw263.m4a 0
+track_title: <type 'unicode'> 潘玮柏 - 禅舞不二
+	E:\xmly\高能！戴上耳机动起来！\130409 潘玮柏 - 禅舞不二.m4a
+		 track_id: 922
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1}
+	4minute - Hot Issue http://audio.xmcdn.com/group10/M03/44/6D/wKgDZ1Wl_kKj8jWPAAnf0Os0NDI635.m4a http://audio.xmcdn.com/group10/M03/44/67/wKgDaVWl_l2wbzpRABnZHRGwy3A815.m4a 0
+track_title: <type 'unicode'> 4minute - Hot Issue
+	E:\xmly\高能！戴上耳机动起来！\130408 4minute - Hot Issue.m4a
+		 track_id: 923
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1}
+	Good Charlotte - Festival Song http://audio.xmcdn.com/group14/M03/07/B1/wKgDY1VdV6rAi2v4AAecEcn5GPs055.m4a http://audio.xmcdn.com/group13/M08/1C/07/wKgDXlV2wKDgvl-tABPnt64nKVE276.m4a 0
+track_title: <type 'unicode'> Good Charlotte - Festival Song
+	E:\xmly\高能！戴上耳机动起来！\130408 Good Charlotte - Festival Song.m4a
+		 track_id: 924
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1}
+	Katy Perry - Teenage Dream http://audio.xmcdn.com/group16/M07/25/7C/wKgDbFWBG-vTCU5jAAq_LxznDuw351.m4a http://audio.xmcdn.com/group16/M07/25/7C/wKgDbFWBG-uBYov3ABwg7mEkkHc609.m4a 0
+track_title: <type 'unicode'> Katy Perry - Teenage Dream
+	E:\xmly\高能！戴上耳机动起来！\130408 Katy Perry - Teenage Dream.m4a
+		 track_id: 925
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1}
+	Bon Jovi - It's My Life http://audio.xmcdn.com/group16/M07/49/7D/wKgDalWtHSOQFxp6AAp9R_Ecfiw010.m4a http://audio.xmcdn.com/group16/M07/49/7D/wKgDalWtHSPTevVbABt0i5MO_xw452.m4a 0
+track_title: <type 'unicode'> Bon Jovi - It's My Life
+	E:\xmly\高能！戴上耳机动起来！\130408 Bon Jovi - It's My Life.m4a
+		 track_id: 926
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1}
+	Ellegarden - Marry Me http://audio.xmcdn.com/group13/M07/2A/6A/wKgDXVWGVgXB06ZWAAf_rd6Js5M729.m4a http://audio.xmcdn.com/group13/M07/2A/7D/wKgDXlWGVfbAP7LYABTt1u-ob8E424.m4a 0
+track_title: <type 'unicode'> Ellegarden - Marry Me
+	E:\xmly\高能！戴上耳机动起来！\130408 Ellegarden - Marry Me.m4a
+		 track_id: 927
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1}
+	Arctic Monkeys - Dancing Shoes http://audio.xmcdn.com/group8/M08/4D/8D/wKgDYFWx1VaSBkigAAatwBBGC1A397.m4a http://audio.xmcdn.com/group8/M08/4D/BF/wKgDYVWx1RTRF1g6ABF4ED6yosU767.m4a 0
+track_title: <type 'unicode'> Arctic Monkeys - Dancing Shoes
+	E:\xmly\高能！戴上耳机动起来！\130408 Arctic Monkeys - Dancing Shoes.m4a
+		 track_id: 928
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1}
+	Busta Rhymes - Break Ya Neck http://audio.xmcdn.com/group16/M0A/4E/1C/wKgDbFWyAy3SpRTmAAtj-83jzGc790.m4a http://audio.xmcdn.com/group16/M0A/4D/FF/wKgDalWyAxjyla9aAB3Peq2oWE4664.m4a 0
+track_title: <type 'unicode'> Busta Rhymes - Break Ya Neck
+	E:\xmly\高能！戴上耳机动起来！\130408 Busta Rhymes - Break Ya Neck.m4a
+		 track_id: 929
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1}
+	Teen Top - Supa Luv http://audio.xmcdn.com/group16/M00/3E/F0/wKgDalWf8Mygh24nAAmC4dF6V-w304.m4a http://audio.xmcdn.com/group16/M00/3F/1A/wKgDbFWf8N2idkndABjlnRADcKo028.m4a 0
+track_title: <type 'unicode'> Teen Top - Supa Luv
+	E:\xmly\高能！戴上耳机动起来！\130409 Teen Top - Supa Luv.m4a
+		 track_id: 930
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1}
+	Eva Avila - Like A Bullet http://audio.xmcdn.com/group16/M0B/29/46/wKgDbFWFW0yhgCbDAAjZPJdth7A202.m4a http://audio.xmcdn.com/group16/M0B/29/39/wKgDalWFWz-gRiCkABcoO2lWC6c265.m4a 0
+track_title: <type 'unicode'> Eva Avila - Like A Bullet
+	E:\xmly\高能！戴上耳机动起来！\130408 Eva Avila - Like A Bullet.m4a
+		 track_id: 931
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1}
+	Junior Senior - Move Your Feet http://audio.xmcdn.com/group13/M05/0E/E7/wKgDXlVkaCCTiJsxAAi5saohp4o147.m4a http://audio.xmcdn.com/group10/M02/20/93/wKgDaVV7ioPzh4rfABbU_Nn-3mA929.m4a 0
+track_title: <type 'unicode'> Junior Senior - Move Your Feet
+	E:\xmly\高能！戴上耳机动起来！\130408 Junior Senior - Move Your Feet.m4a
+		 track_id: 932
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1}
+	Vanilla Sky - Just Dance http://audio.xmcdn.com/group12/M09/3A/02/wKgDXFWbOBHj-EnTAAm5L4C-Lnc400.m4a http://audio.xmcdn.com/group12/M09/3A/0C/wKgDW1WbOCeBK3akABlz5op7GgA498.m4a 0
+track_title: <type 'unicode'> Vanilla Sky - Just Dance
+	E:\xmly\高能！戴上耳机动起来！\130419 Vanilla Sky - Just Dance.m4a
+		 track_id: 933
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1}
+	Gorillaz - Clint Eastwood http://audio.xmcdn.com/group9/M0A/0F/3A/wKgDZlVkyarS0ZapABClJuLf9A8963.m4a http://audio.xmcdn.com/group9/M00/21/31/wKgDYlV8LqDRzlStACuWnTqlTMw876.m4a 0
+track_title: <type 'unicode'> Gorillaz - Clint Eastwood
+	E:\xmly\高能！戴上耳机动起来！\130408 Gorillaz - Clint Eastwood.m4a
+		 track_id: 934
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1}
+	Boys Like Girls - Love Drunk http://audio.xmcdn.com/group8/M05/39/27/wKgDYFWaV-KDSLBCAAq88PU8-Tc757.m4a http://audio.xmcdn.com/group8/M05/39/59/wKgDYVWaV67jY1yTABwas1rhW1M344.m4a 0
+track_title: <type 'unicode'> Boys Like Girls - Love Drunk
+	E:\xmly\高能！戴上耳机动起来！\130408 Boys Like Girls - Love Drunk.m4a
+		 track_id: 935
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1}
+	Shayne Ward - Gotta Be Somebody http://audio.xmcdn.com/group7/M07/09/FE/wKgDX1VfRrmSqFbTAAp95FZyWvU924.m4a http://audio.xmcdn.com/group15/M01/1D/A9/wKgDaFV4dLmRxAZLABt2EdMUMXE540.m4a 0
+track_title: <type 'unicode'> Shayne Ward - Gotta Be Somebody
+	E:\xmly\高能！戴上耳机动起来！\130409 Shayne Ward - Gotta Be Somebody.m4a
+		 track_id: 936
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1}
+	Papa Roach - Last Resort http://audio.xmcdn.com/group13/M05/43/67/wKgDXlWk42LjMtN8AAlvWg3hnwc309.m4a http://audio.xmcdn.com/group13/M05/43/6E/wKgDXVWk43eyXRI1ABixbkoerII436.m4a 0
+track_title: <type 'unicode'> Papa Roach - Last Resort
+	E:\xmly\高能！戴上耳机动起来！\130409 Papa Roach - Last Resort.m4a
+		 track_id: 938
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1}
+	Sean Kingston - My Girlfriend http://audio.xmcdn.com/group12/M08/3B/6D/wKgDW1WcgO7wslhOAAmk4zjt1b0606.m4a http://audio.xmcdn.com/group12/M08/3B/66/wKgDXFWcgNfwh7CyABk-CtIu_3c408.m4a 0
+track_title: <type 'unicode'> Sean Kingston - My Girlfriend
+	E:\xmly\高能！戴上耳机动起来！\130409 Sean Kingston - My Girlfriend.m4a
+		 track_id: 939
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1}
+	Nightwish - Elvenpath http://audio.xmcdn.com/group12/M08/3B/6D/wKgDW1WcgPCShjrwAA03TOT5ceI695.m4a http://audio.xmcdn.com/group12/M08/3B/66/wKgDXFWcgNrAISMdACKZsdnRNRM178.m4a 0
+track_title: <type 'unicode'> Nightwish - Elvenpath
+	E:\xmly\高能！戴上耳机动起来！\130408 Nightwish - Elvenpath.m4a
+		 track_id: 940
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1}
+	Good Charlotte - The River http://audio.xmcdn.com/group15/M09/36/1E/wKgDZVWVT6DRuHS7AAlczsl05SA851.m4a http://audio.xmcdn.com/group15/M09/36/1A/wKgDaFWVT5CSjI4LABh1oroQapw854.m4a 0
+track_title: <type 'unicode'> Good Charlotte - The River
+	E:\xmly\高能！戴上耳机动起来！\130507 Good Charlotte - The River.m4a
+		 track_id: 941
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1}
+	Missy Elliott - Work It http://audio.xmcdn.com/group8/M09/3A/53/wKgDYVWbOzzTat4BAA4Z_Vv1hsE025.m4a http://audio.xmcdn.com/group8/M09/3A/53/wKgDYVWbOzyiwh87ACTpLmp0u38867.m4a 0
+track_title: <type 'unicode'> Missy Elliott - Work It
+	E:\xmly\高能！戴上耳机动起来！\130516 Missy Elliott - Work It.m4a
+		 track_id: 942
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1}
+	Timbaland - The Way I Are http://audio.xmcdn.com/group7/M09/2D/66/wKgDWlWKSmzxUIXYAAh2wAr1538783.m4a http://audio.xmcdn.com/group7/M09/2D/6B/wKgDX1WKSmKg8zgEABYjrNSjXjY068.m4a 0
+track_title: <type 'unicode'> Timbaland - The Way I Are
+	E:\xmly\高能！戴上耳机动起来！\130409 Timbaland - The Way I Are.m4a
+		 track_id: 943
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1}
+	Mr. - 想太多 http://audio.xmcdn.com/group9/M0A/0F/29/wKgDYlVkyaXyVvboAAxxkumBLhs974.m4a http://audio.xmcdn.com/group9/M00/21/31/wKgDYlV8LqCQ_p0dACCSTY7TPy0699.m4a 0
+track_title: <type 'unicode'> Mr. - 想太多
+	E:\xmly\高能！戴上耳机动起来！\130408 Mr. - 想太多.m4a
+		 track_id: 944
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1}
+	Gorillaz - Dirty Harry http://audio.xmcdn.com/group12/M08/3B/66/wKgDXFWcgNXg1tuzAAr_dCDvQo4415.m4a http://audio.xmcdn.com/group12/M08/3B/6D/wKgDW1WcgOzRHWOcABzJJ81MyWg137.m4a 0
+track_title: <type 'unicode'> Gorillaz - Dirty Harry
+	E:\xmly\高能！戴上耳机动起来！\130408 Gorillaz - Dirty Harry.m4a
+		 track_id: 945
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1}
+	Nirvana - Love Buzz http://audio.xmcdn.com/group9/M0B/05/0D/wKgDZlVVX23hbPoyAAomWw2tMYA529.m4a http://audio.xmcdn.com/group8/M01/1B/7B/wKgDYVV2iZXhtZi9ABqSzmr82d8075.m4a 0
+track_title: <type 'unicode'> Nirvana - Love Buzz
+	E:\xmly\高能！戴上耳机动起来！\130513 Nirvana - Love Buzz.m4a
+		 track_id: 946
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1}
+	Nirvana - In Bloom http://audio.xmcdn.com/group7/M09/26/C3/wKgDX1WCg-by8IgvAAxDYMn6eyo124.m4a http://audio.xmcdn.com/group7/M09/26/C5/wKgDWlWCg-6S2OAuACAaPhSedc8967.m4a 0
+track_title: <type 'unicode'> Nirvana - In Bloom
+	E:\xmly\高能！戴上耳机动起来！\130409 Nirvana - In Bloom.m4a
+		 track_id: 947
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 947: 1}
+	Jessica Simpson - A Little Bit http://audio.xmcdn.com/group13/M07/0D/AF/wKgDXlVjYaSwrzwIAAkqAuvfgy4591.m4a http://audio.xmcdn.com/group16/M05/1F/C2/wKgDbFV6yrfQ4vY7ABf7nk0gA3o799.m4a 0
+track_title: <type 'unicode'> Jessica Simpson - A Little Bit
+	E:\xmly\高能！戴上耳机动起来！\130408 Jessica Simpson - A Little Bit.m4a
+		 track_id: 948
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 947: 1, 948: 1}
+	Bow Wow - What They Call Me http://audio.xmcdn.com/group15/M04/40/85/wKgDaFWg4hiDCa6IAAtAbD5MxHk734.m4a http://audio.xmcdn.com/group15/M04/40/83/wKgDZVWg4irAYYGhAB1zNXYlf4U466.m4a 0
+track_title: <type 'unicode'> Bow Wow - What They Call Me
+	E:\xmly\高能！戴上耳机动起来！\130408 Bow Wow - What They Call Me.m4a
+		 track_id: 949
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 947: 1, 948: 1, 949: 1}
+	Inna - Left Right http://audio.xmcdn.com/group8/M08/0A/62/wKgDYVVfxeWgoLQfAAy7fDvQ6xc963.m4a http://audio.xmcdn.com/group9/M05/1D/D8/wKgDZlV45mWz_4ckACFUhZjP388720.m4a 0
+track_title: <type 'unicode'> Inna - Left Right
+	E:\xmly\高能！戴上耳机动起来！\130408 Inna - Left Right.m4a
+		 track_id: 950
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 947: 1, 948: 1, 949: 1, 950: 1}
+	Craig David - Johnny http://audio.xmcdn.com/group7/M06/46/4D/wKgDWlWnHRjgUHy-AAxP2d40MmE769.m4a http://audio.xmcdn.com/group7/M06/46/4B/wKgDX1WnHQri9v7BACA7k1FS2JA638.m4a 0
+track_title: <type 'unicode'> Craig David - Johnny
+	E:\xmly\高能！戴上耳机动起来！\130528 Craig David - Johnny.m4a
+		 track_id: 951
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 947: 1, 948: 1, 949: 1, 950: 1, 951: 1}
+	Groove Coverage - Are You Ready http://audio.xmcdn.com/group15/M09/0B/CD/wKgDZVVhDlqiRRuPAA7W4p6qJp0580.m4a http://audio.xmcdn.com/group9/M05/1F/1B/wKgDZlV6Cb_iF_06ACbaS5I_q0M020.m4a 0
+track_title: <type 'unicode'> Groove Coverage - Are You Ready
+	E:\xmly\高能！戴上耳机动起来！\130408 Groove Coverage - Are You Ready.m4a
+		 track_id: 952
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 947: 1, 948: 1, 949: 1, 950: 1, 951: 1, 952: 1}
+	Hoobastank - My Turn http://audio.xmcdn.com/group15/M01/0E/29/wKgDaFVjx3CA7xL7AAjuWlFUGyI484.m4a http://audio.xmcdn.com/group16/M04/20/51/wKgDbFV7YMrC_S7_ABddnKaUJq8447.m4a 0
+track_title: <type 'unicode'> Hoobastank - My Turn
+	E:\xmly\高能！戴上耳机动起来！\130408 Hoobastank - My Turn.m4a
+		 track_id: 953
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 947: 1, 948: 1, 949: 1, 950: 1, 951: 1, 952: 1, 953: 1}
+	焦恩俊 - 功夫 http://audio.xmcdn.com/group15/M09/0B/CD/wKgDZVVhDluhU3_LAAlbIq6WyeI821.m4a http://audio.xmcdn.com/group9/M05/1F/1B/wKgDZlV6CcHxzkaPABh9d8FdNZI030.m4a 0
+track_title: <type 'unicode'> 焦恩俊 - 功夫
+	E:\xmly\高能！戴上耳机动起来！\130409 焦恩俊 - 功夫.m4a
+
+ download track error ("Connection broken: error(10054, '')", error(10054, ''))
+	陈慧琳 - 不如跳舞 http://audio.xmcdn.com/group13/M05/0E/D9/wKgDXVVkaCnCg9azAAkk3HmsbOk202.m4a http://audio.xmcdn.com/group10/M02/20/93/wKgDaVV7ioSh6lD9ABfuTuvz7XA034.m4a 0
+track_title: <type 'unicode'> 陈慧琳 - 不如跳舞
+	E:\xmly\高能！戴上耳机动起来！\130409 陈慧琳 - 不如跳舞.m4a
+		 track_id: 955
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 947: 1, 948: 1, 949: 1, 950: 1, 951: 1, 952: 1, 953: 1, 955: 1}
+	Nirvana - Breed http://audio.xmcdn.com/group7/M09/3B/67/wKgDWlWbuiOydNziAAi-iCeFSlw867.m4a http://audio.xmcdn.com/group7/M09/3B/5F/wKgDX1Wbuhfh6bQOABbh_cYwZdY253.m4a 0
+track_title: <type 'unicode'> Nirvana - Breed
+	E:\xmly\高能！戴上耳机动起来！\130409 Nirvana - Breed.m4a
+		 track_id: 956
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 947: 1, 948: 1, 949: 1, 950: 1, 951: 1, 952: 1, 953: 1, 955: 1, 956: 1}
+	TLC - Girl Talk http://audio2.xmcdn.com/group15/M00/4B/66/wKgDaFWutHWiqRCZAAokidNiQXw711.m4a http://audio2.xmcdn.com/group15/M00/4B/63/wKgDZVWutInAA6VmABqK-sBOZUU667.m4a 0
+track_title: <type 'unicode'> TLC - Girl Talk
+	E:\xmly\高能！戴上耳机动起来！\130504 TLC - Girl Talk.m4a
+		 track_id: 957
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 947: 1, 948: 1, 949: 1, 950: 1, 951: 1, 952: 1, 953: 1, 955: 1, 956: 1, 957: 1}
+	Blue - One Love http://audio.xmcdn.com/group10/M02/23/EA/wKgDaVV_jrjBscSVAAmgfqhnM7o095.m4a http://audio.xmcdn.com/group10/M02/23/F3/wKgDZ1V_jqfDeAWLABkw_rdME_k404.m4a 0
+track_title: <type 'unicode'> Blue - One Love
+	E:\xmly\高能！戴上耳机动起来！\130408 Blue - One Love.m4a
+		 track_id: 958
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 947: 1, 948: 1, 949: 1, 950: 1, 951: 1, 952: 1, 953: 1, 955: 1, 956: 1, 957: 1, 958: 1}
+	Tokio Hotel - Humanoid http://audio.xmcdn.com/group9/M00/45/AC/wKgDZlWnGMSRJQd1AAqoHgNGeuY689.m4a http://audio.xmcdn.com/group9/M00/45/7F/wKgDYlWnGLazvS2jABvkUua35TM294.m4a 0
+track_title: <type 'unicode'> Tokio Hotel - Humanoid
+	E:\xmly\高能！戴上耳机动起来！\130514 Tokio Hotel - Humanoid.m4a
+		 track_id: 959
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 947: 1, 948: 1, 949: 1, 950: 1, 951: 1, 952: 1, 953: 1, 955: 1, 956: 1, 957: 1, 958: 1, 959: 1}
+	Blue - All Rise http://audio.xmcdn.com/group9/M04/43/F5/wKgDYlWls0KSmmJyAAqbuY8tLhs826.m4a http://audio.xmcdn.com/group9/M04/44/1B/wKgDZlWls0_yKj72ABvE4J4GokA890.m4a 0
+track_title: <type 'unicode'> Blue - All Rise
+	E:\xmly\高能！戴上耳机动起来！\130408 Blue - All Rise.m4a
+		 track_id: 960
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 947: 1, 948: 1, 949: 1, 950: 1, 951: 1, 952: 1, 953: 1, 955: 1, 956: 1, 957: 1, 958: 1, 959: 1, 960: 1}
+	Blur - Charmless Man http://audio.xmcdn.com/group10/M06/09/72/wKgDZ1VfDKuS--KiAAoVALz4FrE978.m4a http://audio.xmcdn.com/group7/M05/1D/2A/wKgDWlV39BzB357RABpkd2RUN6c527.m4a 0
+track_title: <type 'unicode'> Blur - Charmless Man
+	E:\xmly\高能！戴上耳机动起来！\130408 Blur - Charmless Man.m4a
+		 track_id: 961
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 947: 1, 948: 1, 949: 1, 950: 1, 951: 1, 952: 1, 953: 1, 955: 1, 956: 1, 957: 1, 958: 1, 959: 1, 960: 1, 961: 1}
+	Gym Class Heroes - Cupids Chokehold http://audio.xmcdn.com/group12/M07/45/7E/wKgDXFWnGL7znAOSAAuAyAmmCKc677.m4a http://audio.xmcdn.com/group12/M07/45/7E/wKgDXFWnGL6AaXKxAB4cAc39XlE889.m4a 0
+track_title: <type 'unicode'> Gym Class Heroes - Cupids Chokehold
+	E:\xmly\高能！戴上耳机动起来！\130512 Gym Class Heroes - Cupids Chokehold.m4a
+		 track_id: 962
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 947: 1, 948: 1, 949: 1, 950: 1, 951: 1, 952: 1, 953: 1, 955: 1, 956: 1, 957: 1, 958: 1, 959: 1, 960: 1, 961: 1, 962: 1}
+	Stevie Hoang - I'll Be Fine http://audio.xmcdn.com/group14/M0A/4C/77/wKgDZFWwDgWRu8AoAAq1nfKDH-A869.m4a http://audio.xmcdn.com/group14/M0A/4C/9C/wKgDY1WwDjbjnnMWABwIfuLvHYw371.m4a 0
+track_title: <type 'unicode'> Stevie Hoang - I'll Be Fine
+	E:\xmly\高能！戴上耳机动起来！\130521 Stevie Hoang - I'll Be Fine.m4a
+		 track_id: 963
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 947: 1, 948: 1, 949: 1, 950: 1, 951: 1, 952: 1, 953: 1, 955: 1, 956: 1, 957: 1, 958: 1, 959: 1, 960: 1, 961: 1, 962: 1, 963: 1}
+	Jessica Simpson - A Public Affair http://audio.xmcdn.com/group8/M06/26/05/wKgDYFWCPevwyRqwAAmDT_JTh-E698.m4a http://audio.xmcdn.com/group8/M06/26/32/wKgDYVWCPcSB5FIAABjmCyTctag278.m4a 0
+track_title: <type 'unicode'> Jessica Simpson - A Public Affair
+	E:\xmly\高能！戴上耳机动起来！\130408 Jessica Simpson - A Public Affair.m4a
+		 track_id: 964
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 947: 1, 948: 1, 949: 1, 950: 1, 951: 1, 952: 1, 953: 1, 955: 1, 956: 1, 957: 1, 958: 1, 959: 1, 960: 1, 961: 1, 962: 1, 963: 1, 964: 1}
+	Jedward - Bad Behaviour http://audio.xmcdn.com/group9/M05/35/C6/wKgDZlWVTPSwF9ckAAg4Ay8d7Ho123.m4a http://audio.xmcdn.com/group9/M05/35/A6/wKgDYlWVTOnhO0_zABWCsXUmcDY598.m4a 0
+track_title: <type 'unicode'> Jedward - Bad Behaviour
+	E:\xmly\高能！戴上耳机动起来！\130408 Jedward - Bad Behaviour.m4a
+		 track_id: 965
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 947: 1, 948: 1, 949: 1, 950: 1, 951: 1, 952: 1, 953: 1, 955: 1, 956: 1, 957: 1, 958: 1, 959: 1, 960: 1, 961: 1, 962: 1, 963: 1, 964: 1, 965: 1}
+	Jennifer Lopez - On The Floor http://audio.xmcdn.com/group7/M00/4C/C2/wKgDX1WwCe_RWdjLAA4ipkUPLmQ038.m4a http://audio.xmcdn.com/group7/M00/4C/C4/wKgDWlWwCf6BCIaAACUCwJ9iuzo083.m4a 0
+track_title: <type 'unicode'> Jennifer Lopez - On The Floor
+	E:\xmly\高能！戴上耳机动起来！\130510 Jennifer Lopez - On The Floor.m4a
+		 track_id: 966
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 947: 1, 948: 1, 949: 1, 950: 1, 951: 1, 952: 1, 953: 1, 955: 1, 956: 1, 957: 1, 958: 1, 959: 1, 960: 1, 961: 1, 962: 1, 963: 1, 964: 1, 965: 1, 966: 1}
+	Charice - One Day http://audio.xmcdn.com/group9/M0B/4B/F4/wKgDYlWwACSiAuiIAAkilgAfWgs028.m4a http://audio.xmcdn.com/group9/M0B/4B/F4/wKgDYlWwACSgEwU9ABfpTwwCkWg918.m4a 0
+track_title: <type 'unicode'> Charice - One Day
+	E:\xmly\高能！戴上耳机动起来！\130408 Charice - One Day.m4a
+		 track_id: 968
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 947: 1, 948: 1, 949: 1, 950: 1, 951: 1, 952: 1, 953: 1, 955: 1, 956: 1, 957: 1, 958: 1, 959: 1, 960: 1, 961: 1, 962: 1, 963: 1, 964: 1, 965: 1, 966: 1, 968: 1}
+	TLC - Unpretty http://audio.xmcdn.com/group15/M02/4E/EA/wKgDaFWyfGrA0CMWAAtcqkg7cno193.m4a http://audio.xmcdn.com/group15/M02/4E/E5/wKgDZVWyfH_x3FLKAB291aO0qz4320.m4a 0
+track_title: <type 'unicode'> TLC - Unpretty
+	E:\xmly\高能！戴上耳机动起来！\130512 TLC - Unpretty.m4a
+		 track_id: 969
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 947: 1, 948: 1, 949: 1, 950: 1, 951: 1, 952: 1, 953: 1, 955: 1, 956: 1, 957: 1, 958: 1, 959: 1, 960: 1, 961: 1, 962: 1, 963: 1, 964: 1, 965: 1, 966: 1, 968: 1, 969: 1}
+	Hey Monday - How You Love Me Now http://audio.xmcdn.com/group12/M04/22/47/wKgDXFV948miLnimAAlV64jw_9g047.m4a http://audio.xmcdn.com/group12/M05/23/68/wKgDW1V_GBCRgalCABhuRqoFVGw940.m4a 0
+track_title: <type 'unicode'> Hey Monday - How You Love Me Now
+	E:\xmly\高能！戴上耳机动起来！\130408 Hey Monday - How You Love Me Now.m4a
+		 track_id: 970
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 947: 1, 948: 1, 949: 1, 950: 1, 951: 1, 952: 1, 953: 1, 955: 1, 956: 1, 957: 1, 958: 1, 959: 1, 960: 1, 961: 1, 962: 1, 963: 1, 964: 1, 965: 1, 966: 1, 968: 1, 969: 1, 970: 1}
+	Groove Coverage - Little June http://audio.xmcdn.com/group7/M00/4E/ED/wKgDWlWyduzDBSA8AApDLLivcG0622.m4a http://audio.xmcdn.com/group7/M00/4E/E6/wKgDX1WydtyQo5N2ABrcG53R3Mg360.m4a 0
+track_title: <type 'unicode'> Groove Coverage - Little June
+	E:\xmly\高能！戴上耳机动起来！\130408 Groove Coverage - Little June.m4a
+		 track_id: 971
+		{907: 1, 908: 1, 909: 1, 910: 1, 911: 1, 912: 1, 913: 1, 914: 1, 915: 1, 916: 1, 917: 1, 918: 1, 919: 1, 920: 1, 921: 1, 922: 1, 923: 1, 924: 1, 925: 1, 926: 1, 927: 1, 928: 1, 929: 1, 930: 1, 931: 1, 932: 1, 933: 1, 934: 1, 935: 1, 936: 1, 938: 1, 939: 1, 940: 1, 941: 1, 942: 1, 943: 1, 944: 1, 945: 1, 946: 1, 94

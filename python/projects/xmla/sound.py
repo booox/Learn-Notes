@@ -31,13 +31,15 @@ if __name__ == '__main__':
             
             # url = 'http://www.ximalaya.com/22366783/album/2685288/'  # 读读书
             # url = 'http://www.ximalaya.com/12495477/album/269179/'  # 吴晓波频道   
-            url = 'http://www.ximalaya.com/39200626/album/3385980/'  # 静说日本   
+            # url = 'http://www.ximalaya.com/39200626/album/3385980/'  # 静说日本   
             # url = 'http://www.ximalaya.com/11119867/album/262212/'  # 潘吉Jenny告诉你--学英语聊美国   
             # url = 'http://www.ximalaya.com/38212466/album/3492675/'  # 偏见
             # url = 'http://www.ximalaya.com/16174533/album/3340045/'  # 你不恐慌，我不入场
             # url = 'http://www.ximalaya.com/12512006/album/2894105/'  # 给孩子的诗
             # url = 'http://www.ximalaya.com/23687226/album/2714949/'  # 无限单曲循环的经典英文歌曲
             # url = 'http://www.ximalaya.com/1000144/album/3505338/'  # 一杯咖啡，一首爵士
+            # url = 'http://www.ximalaya.com/1000144/album/3505338/'  # 那些高逼格的手机铃声
+            url = 'http://www.ximalaya.com/1324486/album/4243/'  # 高能！戴上耳机动起来！
             
         if url == 'bye': exit(1)
             
@@ -58,7 +60,7 @@ if __name__ == '__main__':
             # -------------- album ------------ 
             elif result["url_type"] == "album":
                 # Write to db
-                # xmly.writeAlbumToDB(conn, cur, url, result)
+                xmly.writeAlbumToDB(conn, cur, url, result)
                 
                 # download Album from db
                 xmly.downloadAlbum(conn, cur, url, result)
