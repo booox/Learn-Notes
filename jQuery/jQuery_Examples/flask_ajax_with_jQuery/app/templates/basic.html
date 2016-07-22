@@ -23,8 +23,9 @@
    		$("a").click(function(event){
         	//alert("Thanks for visiting!");
 
-        	alert("Look, the link doesn't work.");
+        	//alert("Look, the link doesn't work.");
 			event.preventDefault();
+			$(this).hide("slow");
     	});
 
 		$("a").removeClass("test");		

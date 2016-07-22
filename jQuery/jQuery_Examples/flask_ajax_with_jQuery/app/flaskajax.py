@@ -17,5 +17,9 @@ def index():
 def basic():
     return render_template('basic.html')
 
+@app.route('/ready_load')
+def ready_load():
+    return render_template('ready_load.html')
+
 if __name__ == '__main__':
 	app.run(port=8090, host='0.0.0.0', debug=True)

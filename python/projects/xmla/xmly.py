@@ -13,7 +13,7 @@ import subprocess
 HOME_URL = 'http://www.ximalaya.com'
 DATA_BASE = 'xmly.sqlite'
 # AUDIO_DIR = os.path.expanduser('~')   # 'C:\\Users\\username'
-AUDIO_DIR = 'D:\\xmly'   # 'C:\\Users\\username'
+AUDIO_DIR = 'E:\\xmly'   # 'C:\\Users\\username'
 
 reload(sys)
 sys.setdefaultencoding('gb18030')
